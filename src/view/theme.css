@@ -1,0 +1,110 @@
+body {}
+
+.messages {
+    width: 480px;
+    margin: auto;
+    box-shadow: 1px 1px 1px #e2d9d9, -1px -1px 1px #e2d9d9;
+    background: whitesmoke;
+    padding: 16px;
+    box-sizing: border-box;
+}
+
+.chat-type {
+	border: 4px solid #efe6e6;
+	width: 484px;
+	display: block;
+    box-sizing: border-box;
+	margin: auto;
+	position: fixed;
+	left: calc(50vw - 242px);
+	top: 0;
+	z-index: 2;
+}
+
+
+li {
+	border-bottom: 1px solid #efe6e6;
+	list-style-type: none;
+	padding: 4px;
+	margin: 2px 0;
+	display: flex;
+	flex-wrap: nowrap;
+	flex-direction: column;
+	position: relative;
+}
+
+.connect {
+    text-align: center;
+    opacity: 0.5;
+}
+
+.self {
+	border-radius: 8px;
+	background: wheat;
+}
+
+.send b {
+	top: 0.5em;
+	left: 8px;
+}
+.received b{
+	top: 0.5em;
+	right: 8px;
+}
+.send b,
+.received b{
+	opacity: 0.5;
+	font-size:0.7em;
+	display: none;
+	position:absolute;
+}
+.send:hover b,
+.received:hover b{
+	display: block;
+}
+
+.state:before{
+	content: "" !important;
+}
+.state {
+	text-align: center !important;
+}
+
+.send i{
+	margin-right: 1.2em;
+}
+.received i{
+	margin-left: 1.2em;
+}
+
+.send:after {
+	padding:0 8px;
+	margin-left: 4px;
+	background: green;
+	background-image: radial-gradient(white 40%, transparent 90%);
+    border-radius: 16px;
+    transform: scale(0.7);
+    content: "!";
+    color: transparent;
+    position: absolute;
+    right: 0;
+}
+.send {
+    text-align: right;
+}
+
+.received:before {
+	padding:0 8px;
+	margin-right: 4px;
+	background: red;
+	background-image: radial-gradient(transparent 20%, white 40%, transparent 90%), radial-gradient(#ecd422 10%, transparent 50%);
+    border-radius: 16px;
+    transform: scale(0.7);
+    content: "!";
+    color: transparent;
+    position: absolute;
+    left: 0;
+}
+.received {
+    text-align: left;
+}
