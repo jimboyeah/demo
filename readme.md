@@ -8,6 +8,8 @@ Demo 这个仓库原本是坚果用来学 Git 版本管理用的，随着演示�
 
 - go-my-websocket 《造轮子 Websocket 现在就 Go》  https://github.com/jimboyeah/demo/tree/go-my-websocket
 
+		git clone -b go-my-websocket https://github.com/jimboyeah/demo.git
+
 
 # 造轮子 Websocket 现在就 Go
 MD: 2019‎年‎12‎月17‎日，‏‎03:45:10
@@ -49,4 +51,4 @@ Golang 虽然它已经有 10 岁大了，最早接触也是 2012 年左右，但
 > by Jeangowhy 微信同名(jimboyeah◉gmail.com) 
 > Tue Dec 17 2019 04:23:08 GMT+0800 (深圳宝安)
 
-![gitchat](https://p1-tt.byteimg.com/img/tos-cn-i-0022/ea3b5c026e7940f2827feaac33164b88~noop_750x1298.jpeg)
+![gitchat](go-my-websocket.jpg)
