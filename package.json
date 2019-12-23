@@ -1,0 +1,23 @@
+{
+  "name": "go-my-websocket",
+  "version": "1.0.0",
+  "description": "just a tutorial",
+  "main": "server.js",
+  "dependencies": {
+    "socket.io": "^2.1.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "go-my-websocket"
+  },
+  "keywords": [
+    "socket.io"
+  ],
+  "author": "Jeango",
+  "license": "ISC"
+}
