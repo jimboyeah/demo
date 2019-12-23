@@ -9,7 +9,8 @@
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node src/server.js"
+    "start": "node src/server.js",
+    "gostart": "go run src/go-my-websocket/main.go"
   },
   "repository": {
     "type": "git",
