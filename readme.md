@@ -6,7 +6,8 @@ Demo 这个仓库原本是坚果用来学 Git 版本管理用的，随着演示�
 
 演示项目列表：
 
-- go-my-websocket 《造轮子 Websocket 现在就 Go》  https://github.com/jimboyeah/demo/tree/go-my-websocket
+- go-my-websocket
+	《造轮子 Websocket 现在就 Go》 https://github.com/jimboyeah/demo/tree/go-my-websocket
 
 		git clone -b go-my-websocket https://github.com/jimboyeah/demo.git
 
