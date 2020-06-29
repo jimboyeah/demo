@@ -3,9 +3,11 @@
 	[
 		{
 			"env":{
-				"PATH":"c:/CodeBlocks/MinGW/bin/;%PATH%"
+				// "CC":"gcc",
+				// "CXX":"gcc",
+				// "PATH":"c:/CodeBlocks/MinGW/bin/;%PATH%"
 			},
-			"encoding": "utf8",
+			"encoding": "gbk",
 			"file_regex": "^  (.+)\\((\\d+)\\)(): ((?:fatal )?(?:error|warning) \\w+\\d\\d\\d\\d: .*) \\[.*$",
 			"name": "MinGW Build (Windows)",
 			"quiet": true,
@@ -32,10 +34,16 @@
 					"shell_cmd": "make install"
 				}, {
 					"name": "Obj Dump",
-					"shell_cmd": "objdump -p ../bin/libpoint.dll"
+					"shell_cmd": "objdump -p ../bin/libhello.dll"
 				}, {
 					"name": "Make PointTest",
 					"shell_cmd": "make PointTest"
+				}, {
+					"name": "Java Hello",
+					"shell_cmd": "cd ../java && javac Hello.java & java Hello"
+				}, {
+					"name": "C# Hello",
+					"shell_cmd": "cd ../csharp && csc /platform:x86 Hello.cs /out:../bin/hello.exe & ..\\bin\\hello.exe"
 				}
 			],
 			"working_dir": "${project_path}/build"
