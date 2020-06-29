@@ -55,4 +55,4 @@ Golang 虽然它已经有 10 岁大了，最早接触也是 2012 年左右，但
 > by Jeangowhy 微信同名(jimboyeah◉gmail.com) 
 > Tue Dec 17 2019 04:23:08 GMT+0800 (深圳宝安)
 
-![gitchat](go-my-websocket.jpg)
+![gitchat](https://github.com/jimboyeah/demo/blob/go-my-websocket/go-my-websocket.jpg)
