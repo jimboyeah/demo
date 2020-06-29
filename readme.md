@@ -10,6 +10,10 @@ Demo 这个仓库原本是坚果用来学 Git 版本管理用的，随着演示�
 
 		git clone -b go-my-websocket https://github.com/jimboyeah/demo.git
 
+- 《DLL with MinGW》 https://github.com/jimboyeah/demo/tree/dllDemo
+
+        git clone -b dllDemo https://github.com/jimboyeah/demo.git
+
 
 # 造轮子 Websocket 现在就 Go
 MD: 2019‎年‎12‎月17‎日，‏‎03:45:10

@@ -5,7 +5,7 @@
 			"env":{
 				"PATH":"c:/CodeBlocks/MinGW/bin/;%PATH%"
 			},
-			"encoding": "utf8",
+			"encoding": "gkb",
 			"file_regex": "^  (.+)\\((\\d+)\\)(): ((?:fatal )?(?:error|warning) \\w+\\d\\d\\d\\d: .*) \\[.*$",
 			"name": "Git Demo",
 			"quiet": true,
