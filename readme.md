@@ -12,6 +12,8 @@ Demo 这个仓库原本是坚果用来学 Git 版本管理用的，随着演示�
 
 - 《DLL with MinGW》 https://github.com/jimboyeah/demo/tree/dllDemo
 
+    此项目演示如何使用 MinGW 编译器来构建 DLL 动态链接库，使用 CMake 构建工具。
+
         git clone -b dllDemo https://github.com/jimboyeah/demo.git
 
 
