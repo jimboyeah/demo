@@ -6,7 +6,7 @@ Demo 这个仓库原本是坚果用来学 Git 版本管理用的，随着演示�
 
 演示项目列表：
 
-- 造轮子 Websocket 现在就 Go》 
+- 造轮子 Websocket 现在就 Go
 
     https://github.com/jimboyeah/demo/tree/go-my-websocket
 
@@ -22,12 +22,12 @@ Demo 这个仓库原本是坚果用来学 Git 版本管理用的，随着演示�
 
 - CPP with MinGW
 
-    https://github.com/jimboyeah/demo/tree/cppDemo
+    https://github.com/jimboyeah/demo/tree/cppDemos
 
     此项目演示如何使用 CMake 自动编译和 MinGW 编译器来编写 C++
      程序。
 
-        git clone -b cppDemo https://github.com/jimboyeah/demo.git
+        git clone -b cppDemos https://github.com/jimboyeah/demo.git
 
 
 
