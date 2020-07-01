@@ -47,3 +47,8 @@ SET_TESTS_PROPERTIES(string-funcs
     "strcpy\\( str3, str1\\) : Hello[\n\r]*strcat\\( str1, str2\\): HelloWorld[\n\r]*strlen\\(str1\\) : 10[\n\r]*")
 
 
+ADD_TEST(NAME string COMMAND string.cpp)
+SET_TESTS_PROPERTIES(string
+    PROPERTIES PASS_REGULAR_EXPRESSION 
+    # "[\n\r.]*[\n\r.]*[\n\r.]*")
+    "str3 : Hello[\n\r]*str1 \\+ str2 : HelloWorld[\n\r]*str3.size\\(\\) :  10[\n\r]*")
