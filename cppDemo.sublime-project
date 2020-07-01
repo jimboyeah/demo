@@ -39,7 +39,7 @@
 				},
 				{
 					"name": "Make test",
-					"shell_cmd": "make test"
+					"shell_cmd": "make -j 4 && make test"
 				}
 			],
 			"working_dir": "${project_path}/build"

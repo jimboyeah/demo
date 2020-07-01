@@ -34,10 +34,16 @@ foreach(item ${src})
 endforeach(item)
 
 enable_testing()
+
 ADD_TEST(NAME string-null-tm COMMAND string-null-tm.cpp)
 SET_TESTS_PROPERTIES(string-null-tm
-    PROPERTIES PASS_REGULAR_EXPRESSION "Greeting message: Hello \nShanghai")
+    PROPERTIES PASS_REGULAR_EXPRESSION 
+    "Greeting message: Hello[\n\r]Shanghai")
+
 ADD_TEST(NAME string-funcs COMMAND string-funcs.cpp)
 SET_TESTS_PROPERTIES(string-funcs
-    PROPERTIES PASS_REGULAR_EXPRESSION "strcpy( str3, str1) : Hello\nstrcat( str1, str2): HelloWorld\nstrlen(str1) : 10")
+    PROPERTIES PASS_REGULAR_EXPRESSION 
+    # "[\n\r.]*[\n\r.]*[\n\r.]*")
+    "strcpy\\( str3, str1\\) : Hello[\n\r]*strcat\\( str1, str2\\): HelloWorld[\n\r]*strlen\\(str1\\) : 10[\n\r]*")
+
 
