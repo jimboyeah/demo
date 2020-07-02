@@ -23,6 +23,5 @@ target_link_libraries( PointTest point )
 # add_executable(PointTest pointTest.cpp)
 # target_link_libraries( PointTest libpoint.a )
 
-
-# add_executable(app app.cpp)
-# target_link_libraries( app AddLib )
+add_executable(app app.cpp)
+target_link_libraries( app AddLib )
