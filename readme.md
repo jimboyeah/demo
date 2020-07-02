@@ -24,10 +24,13 @@ Demo 这个仓库原本是坚果用来学 Git 版本管理用的，随着演示�
 
     https://github.com/jimboyeah/demo/tree/cppDemos
 
-    此项目演示如何使用 CMake 自动编译和 MinGW 编译器来编写 C++
-     程序。
+    此项目演示如何使用 CMake 自动编译和 MinGW 编译器来编写 C++ 程序。
 
         git clone -b cppDemos https://github.com/jimboyeah/demo.git
+
+    以下网站可以下载 MinGW-x64 GCC 9.2.0：
+
+    - [MinGW Distro](https://nuwen.net/mingw.html)
 
 
 
