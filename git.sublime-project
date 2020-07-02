@@ -2,10 +2,11 @@
 	"build_systems":
 	[
 		{
-			"env":{
-				"PATH":"c:/CodeBlocks/MinGW/bin/;%PATH%"
-			},
 			"encoding": "gkb",
+			"env":
+			{
+				"PATH": "c:/CodeBlocks/MinGW/bin/;%PATH%"
+			},
 			"file_regex": "^  (.+)\\((\\d+)\\)(): ((?:fatal )?(?:error|warning) \\w+\\d\\d\\d\\d: .*) \\[.*$",
 			"name": "Git Demo",
 			"quiet": true,
@@ -15,13 +16,16 @@
 				{
 					"name": "Git help",
 					"shell_cmd": "git --help"
-				}, {
+				},
+				{
 					"name": "Branch List",
 					"shell_cmd": "git branch -a"
-				}, {
+				},
+				{
 					"name": "Branch List remote",
 					"shell_cmd": "git branch -r --list"
-				}, {
+				},
+				{
 					"name": "git show",
 					"shell_cmd": "git show"
 				}
@@ -32,9 +36,18 @@
 	"folders":
 	[
 		{
-			"path": ".",
-			"binary_file_patterns":["*.noting"],
+			"binary_file_patterns":
+			[
+				"*.noting"
+			],
 			"name": "Git Demo Project",
+			"path": "."
+		},
+		{
+			"path": "C:\\coding\\md-code\\cppDemos"
+		},
+		{
+			"path": "C:\\coding\\md-code\\dllDemo"
 		}
 	],
 	"settings":

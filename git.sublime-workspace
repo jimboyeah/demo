@@ -1,0 +1,1157 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"_",
+				"_serviceProvider"
+			],
+			[
+				"cli",
+				"on_button_clicked"
+			],
+			[
+				"height",
+				"max-height\tproperty"
+			],
+			[
+				"so",
+				"socket.io-client"
+			],
+			[
+				"S",
+				"SocketioEventEmit\tfunc(event string, text string) ·ƒ"
+			],
+			[
+				"En",
+				"EncodeToString\tfunc(src []byte) string ·ƒ"
+			],
+			[
+				"st",
+				"StdEncoding\t*base64.Encoding ·ν"
+			],
+			[
+				"Engin",
+				"EngineioMessage\tfunc(text string) ·ƒ"
+			],
+			[
+				"EIO",
+				"EIO_Message\tEngineioPacket ·Ɩ"
+			],
+			[
+				"SIO_Bin",
+				"SIO_Binary_Event\tSocketioPacket ·Ɩ"
+			],
+			[
+				"SIO",
+				"SIO_Event\tSocketioPacket ·Ɩ"
+			],
+			[
+				"U",
+				"Uint16\tfunc(b []byte) uint16 ·ƒ"
+			],
+			[
+				"Error",
+				"ErrorNil\tErrorCode ·Ɩ"
+			],
+			[
+				"Err",
+				"ErrorNil\tErrorCode ·Ɩ"
+			],
+			[
+				"Messa",
+				"MessageType\tbyte ·ʈ"
+			],
+			[
+				"E",
+				"Err\terror ·ν"
+			],
+			[
+				"e",
+				"Err\terror ·ν"
+			],
+			[
+				"b",
+				"brw\t*bufio.ReadWriter ·ν"
+			],
+			[
+				"Mi",
+				"Millisecond\ttime.Duration ·Ɩ"
+			],
+			[
+				"Webs",
+				"github.com/gorilla/websocket\t ·ʂ"
+			],
+			[
+				"Set",
+				"SetReadDeadline\tfunc(t time.Time) error ·ƒ"
+			],
+			[
+				"B",
+				"BrokenMessage\tMessageType ·Ɩ"
+			],
+			[
+				"R",
+				"RemoteAddr\tfunc() net.Addr ·ƒ"
+			],
+			[
+				"P",
+				"parsed\tbool ·ν"
+			],
+			[
+				"utf",
+				"unicode/utf8\t ·ʂ"
+			],
+			[
+				"Mask",
+				"Masking\tbool ·ν"
+			],
+			[
+				"Mess",
+				"MessageType\tbyte ·ʈ"
+			],
+			[
+				"int",
+				"int64\tint64 ·ʈ"
+			],
+			[
+				"Ma",
+				"Maskingkey\t[4]byte ·ν"
+			],
+			[
+				"Masking",
+				"Masking\tbool ·ν"
+			],
+			[
+				"M",
+				"Maskingkey\t[4]byte ·ν"
+			],
+			[
+				"CloseMe",
+				"CloseMessageCode\tuint ·ʈ"
+			],
+			[
+				"Ti",
+				"PingTimeout\ttime.Duration ·Ɩ"
+			],
+			[
+				"Ping",
+				"PingTimeout\ttime.Duration ·Ɩ"
+			],
+			[
+				"r",
+				"SetReadDeadline\tfunc(t time.Time) error ·ƒ"
+			],
+			[
+				"Read",
+				"ReadWriter\tstruct ·ʈ"
+			],
+			[
+				"StatusIn",
+				"StatusInternalServerError\tuntyped int ·Ɩ"
+			],
+			[
+				"net",
+				"netConn\tnet.Conn ·ν"
+			],
+			[
+				"enc",
+				"encoding/base64\t ·ʂ"
+			],
+			[
+				"Re",
+				"RequestURI\tstring ·ν"
+			],
+			[
+				"Respn",
+				"ResponseWriter\tinterface ·ʈ"
+			],
+			[
+				"Ha",
+				"Handler\tinterface ·ʈ"
+			],
+			[
+				"L",
+				"GetLabel\tfunc() string ·ƒ"
+			],
+			[
+				"test",
+				"test_pb.js"
+			],
+			[
+				"react",
+				"react-quill/"
+			],
+			[
+				"el",
+				"element-ui/"
+			],
+			[
+				"rel",
+				"icedesign-qrcode.rel.js"
+			],
+			[
+				"get",
+				"getCroppedCanvas\twarning"
+			],
+			[
+				"cl",
+				"className"
+			],
+			[
+				"hex",
+				"hex2decimal"
+			],
+			[
+				"flex",
+				"flex-wrap\tproperty"
+			],
+			[
+				"in",
+				"MarshalIndent\tfunc(v interface{}, prefix string, indent string) []byte, error ·ƒ"
+			],
+			[
+				"io",
+				"io/ioutil\t ·ʂ"
+			],
+			[
+				"re",
+				"ReadDir\tfunc(dirname string) []os.FileInfo, error ·ƒ"
+			],
+			[
+				"init",
+				"initQueue"
+			],
+			[
+				"thread",
+				"threadID"
+			],
+			[
+				"exit",
+				"exitFlag"
+			],
+			[
+				"con",
+				"content_encoding"
+			],
+			[
+				"content",
+				"content_length"
+			],
+			[
+				"name",
+				"nameKey"
+			],
+			[
+				"work",
+				"workQueue"
+			],
+			[
+				"en",
+				"enqueue"
+			],
+			[
+				"none",
+				"None"
+			],
+			[
+				"Mo",
+				"ModeExclusive\tos.FileMode ·Ɩ"
+			],
+			[
+				"encod",
+				"encoding/json\t ·ʂ"
+			],
+			[
+				"Cmd",
+				"Command\tfunc(name string, arg ...string) *exec.Cmd ·ƒ"
+			],
+			[
+				"next",
+				"next.min.js"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"package",
+				"Package Control: Install Package"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"utf",
+				"ConvertToUTF8: Reload with Encoding"
+			],
+			[
+				"TypesCript",
+				"TypeScript: Signature Info"
+			],
+			[
+				"preview",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"markdown",
+				"Set Syntax: MultiMarkdown"
+			],
+			[
+				"debug",
+				"SublimeCodeIntel: Enable Debug Mode"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"theme",
+				"UI: Select Color Scheme"
+			],
+			[
+				"them",
+				"UI: Select Theme"
+			],
+			[
+				"new pro",
+				"Project Manager: Add New Project"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 302.0,
+		"history":
+		[
+			"shell",
+			"sys",
+			"ls",
+			"dir",
+			"cwd"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/coding/md-code/git-demo"
+	],
+	"file_history":
+	[
+		"/C/coding/md-code/wpf/obj/Debug/netcoreapp3.1/App.g.cs",
+		"/C/coding/md-code/wpf/wpf.csproj",
+		"/C/coding/md-code/wpf/App.xaml.cs",
+		"/C/coding/md-code/blazorWasmWebApp/wwwroot/sample-data/weather.json",
+		"/C/coding/md-code/blazorWasmWebApp/bw.sublime-project",
+		"/C/coding/md-code/blazorWasmWebApp/s.sublime-workspace",
+		"/C/coding/md-code/blazorServerWebApp/Properties/launchSettings.json",
+		"/C/coding/md-code/myWebApp/myWebApp.csproj",
+		"/C/coding/md-code/myWebApp/cs.sublime-project",
+		"/C/coding/md-code/myWebApp/Properties/launchSettings.json",
+		"/C/coding/md-code/myWebApp/Pages/Error.cshtml.cs",
+		"/C/coding/md-code/myWebApp/cs.sublime-workspace",
+		"/C/coding/md-code/cs.sublime-workspace",
+		"/C/coding/md-code/myWebApp/obj/myWebApp.csproj.nuget.g.props",
+		"/C/coding/md/readme_java.md",
+		"/C/coding/md/readme_python.md",
+		"/C/Program Files (x86)/Crytek/CRYENGINE Launcher/Crytek/CRYENGINE_5.0/cryengine.cryengine",
+		"/C/Program Files (x86)/Crytek/CRYENGINE Launcher/Crytek/CRYENGINE_5.0/cry_waf.sh",
+		"/C/Program Files (x86)/Crytek/CRYENGINE Launcher/Crytek/CRYENGINE_5.0/editor.cfg",
+		"/C/Program Files (x86)/Crytek/CRYENGINE Launcher/Crytek/CRYENGINE_5.0/wscript",
+		"/C/Program Files (x86)/Crytek/CRYENGINE Launcher/Crytek/CRYENGINE_5.0/system.cfg",
+		"/C/Program Files (x86)/Crytek/CRYENGINE Launcher/Crytek/CRYENGINE_5.6/cryengine.cryengine",
+		"/C/Users/OCEAN/AppData/Roaming/Sublime Text 3/Packages/User/C#.sublime-build",
+		"/C/coding/md-code/csdemo/src/Program.cs",
+		"/C/coding/md/coding.cs",
+		"/C/coding/md/readme_sublime.md",
+		"/C/coding/md-code/csdemo/Program.cs",
+		"/C/coding/md-code/md-code.csproj",
+		"/C/coding/md-code/Class1.cs",
+		"/C/coding/md/coding.js",
+		"/C/Program Files (x86)/Crytek/CRYENGINE Launcher/Crytek/CRYENGINE_5.6/Templates/cs/Blank/Code/Game/Program.cs",
+		"/C/coding/src/flex/yuetai/Run.bat",
+		"/C/coding/src/flex/JSocket/readme.txt",
+		"/C/coding/md/readme_chromeos.md",
+		"/C/download/Header Editor.crx/options/options.js",
+		"/C/download/Header Editor.crx/background.js",
+		"/C/Users/OCEAN/AppData/Local/Temp/Rar$DIa12996.7663/网盘下载地址.txt",
+		"/C/Users/OCEAN/AppData/Local/Temp/Rar$DIa476.25542/软件说明.txt",
+		"/C/download/FastStonecapture_9.3/Readme.txt",
+		"/C/download/wxapkg/readme.txt",
+		"/C/download/pac.txt",
+		"/C/coding/md/OpenToonz/flstudio.md",
+		"/C/php7.2.6/php.ini",
+		"/C/coding/md/readme_php.md",
+		"/C/coding/拼了个音/script.php",
+		"/C/coding/md/coding.php",
+		"/C/Users/OCEAN/Music/to_mp3.bat",
+		"/C/download/CG/Krita 4 Brushes/Krita 4 Brushes.html",
+		"/C/download/CG/Krita 4 Brushes/theme.css",
+		"/C/download/CG/Virtual Audio Cable/setup.ini",
+		"/C/download/CG/Virtual Audio Cable/file_id.diz",
+		"/C/download/CG/Virtual Audio Cable/632816vac460/setup.ini",
+		"/C/download/CG/Virtual Audio Cable/632816vac460/readme.txt",
+		"/C/Users/OCEAN/Videos/ZARD What a beautiful memory/demo.srt",
+		"/C/coding/md/readme_win.md",
+		"/C/Users/OCEAN/Music/Izumi Sakai/lyrics.md",
+		"/C/coding/md/mtd/mtd.py",
+		"/C/Users/OCEAN/AppData/Local/Temp/Rar$DIa8748.39862/readme.txt",
+		"/C/Users/OCEAN/AppData/Local/Temp/Rar$DIa16540.19888/READ ME.txt",
+		"/C/pictures/a/陆萱萱/地铁.html",
+		"/C/Windows/System32/DriverStore/FileRepository/64zh6472.inf_amd64_4c9e39c00e7ab352/ocl_cpu_readme.txt",
+		"/C/coding/md/OpenToonz/ffmpeg.md",
+		"/C/coding/md/readme_ffmpeg.md",
+		"/C/coding/md/readme_ips.md",
+		"/C/coding/md/OpenToonz/OpenToonz.md",
+		"/C/Users/OCEAN/AppData/Local/Microsoft/Windows/INetCache/IE/MY1298YB/index[1].json",
+		"/C/Users/OCEAN/AppData/Local/Microsoft/Windows/INetCache/IE/7D59MFGE/entry[1].json",
+		"/C/model/basic/render/apple/readme.md",
+		"/C/Users/OCEAN/AppData/Local/Temp/Rar$DIa8344.20495/注册码使用说明.txt",
+		"/C/Users/OCEAN/AppData/Local/Temp/Rar$DIa15012.49362/Houdini 17下载地址.txt",
+		"/C/coding/md/flstudio.md",
+		"/C/download/blender/addons/filmic-blender-master/README.md",
+		"/C/download/blender/addons/filmic-blender-master/index.md",
+		"/C/model/basic/render/readme.txt",
+		"/C/Program Files/PureRef/THIRD-PARTY-LICENSES.txt",
+		"/C/download/blender/readme.md",
+		"/C/coding/md/3dmax.md",
+		"/C/download/CG/SpeedTree/SpeedTree 8.4.2 Cinema Edition Win/SpeedTree Modeler 8.4.2 Cinema Edition Win/安装步骤.txt",
+		"/C/Users/OCEAN/AppData/Local/Temp/Rar$DIa15052.7589/ViVAX.txt",
+		"/C/model/3DMaxTextures/readme.txt",
+		"/C/coding/md/coding.py",
+		"/C/coding/md/laravel-docs-5.8/redis.md",
+		"/C/coding/md/readme_redis.md",
+		"/C/Anaconda3/pkgs/mkl-2019.0-118/info/about.json",
+		"/C/runout.txt",
+		"/C/aow_drv.log",
+		"/C/Windows/System32/DriverStore/FileRepository/64zh6472.inf_amd64_4c9e39c00e7ab352/ocl_cpu_llvm_release_license.txt",
+		"/C/Program Files/Blender Foundation/blender-2.83-839fe335d2d6-windows64/2.83/datafiles/studiolights/matcap/license.txt",
+		"/C/STM32Cube/LED_DEMO/Core/Src/main.c",
+		"/C/coding/md/STM/STM32_Nucleo.md",
+		"/C/STM32Cube/FW_F4_V1.24.1/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h",
+		"/C/coding/md/readme_android.md",
+		"/C/Users/OCEAN/Videos/The Animator's Survival Kit Animated/readme.md",
+		"/C/coding/md/readme_node.md",
+		"/C/model/render/readme.txt",
+		"/C/download/blender/blender-v2.83-release/doc/guides/blender-guardedalloc.txt",
+		"/C/coding/md/readme_git.md",
+		"/C/Program Files/Blender Foundation/blender-2.90-b7bcd0a87c9d-windows64/2.90/scripts/startup/bl_operators/view3d.py",
+		"/C/Program Files/Blender Foundation/blender-2.90-b7bcd0a87c9d-windows64/2.90/scripts/startup/bl_operators/mesh.py",
+		"/C/Program Files/Blender Foundation/blender-2.90-b7bcd0a87c9d-windows64/2.90/scripts/freestyle/styles/anisotropic_diffusion.py",
+		"/C/model/2.81 fluid.blend",
+		"/C/download/blender/Steinberg Hypersonicv2.0.md",
+		"/C/coding/md/coding.lua",
+		"/C/coding/md/coding.png",
+		"/C/Users/OCEAN/Videos/movies/[老人与海].Old.Man.And.The.Sea.DVDRip.DivX.AC3.Cn(ED2000.COM).srt",
+		"/C/coding/md/readme_curl.md",
+		"/C/Users/OCEAN/AppData/Local/Temp/Rar$DIa18968.10871/readme.txt",
+		"/C/download/CG/ComicStudio/ComicStudio.v3.1.4.SN.txt",
+		"/C/OpenToonz stuff/sandbox/scripts/demo.js",
+		"/C/coding/md/PLC.md",
+		"/C/OpenToonz stuff/sandbox/outputs/scenes.xml",
+		"/C/OpenToonz stuff/sandbox/sample/README.md",
+		"/C/Users/OCEAN/Music/mp3.bat",
+		"/C/OpenToonz stuff/OpenToonz_sample/README.md",
+		"/C/Users/OCEAN/AppData/Local/Temp/Rar$DIa19340.37540/README.md",
+		"/E/ComicStudio4.1.5EX中文版/序列号.txt",
+		"/C/Users/OCEAN/AppData/Local/Temp/Rar$DIa8740.19036/序列号.txt",
+		"/C/download/CG/TVPaint Animation Pro 10.0.16 (32 Bit) [ChingLiu]/How To Open Nfo Files.txt",
+		"/C/download/CG/ToonBoom/Toon Boom Storyboard Pro 2.5 v10.2.0.7798 64Bit/readme.txt",
+		"/C/Users/OCEAN/Videos/The Animator's Survival Kit Animated/readme.MD",
+		"/C/download/CG/ToonBoom/templates/3_Little_Pigs_Trial_Sample/Storyboard_Sample_Scene/3lp_script.txt",
+		"/C/download/CG/ToonBoom/Toon Boom Storyboard Pro 3D SP1 V9.6.0.7142 - Consulting Edition - Lomex/Manuals/version.txt",
+		"/C/download/CG/ToonBoom/Toon Boom Storyboard Pro 3D SP1 V9.6.0.7142 - Consulting Edition - Lomex/Release Info.txt",
+		"/D/Sim_EKB_Install_2017_08_10_PCS7_v9/Sim_EKB_Install_2017_08_10.txt",
+		"/C/Users/OCEAN/Videos/The Animator's Survival Kit Animated-Richard Williams Animation Masterclass/readme.MD",
+		"/C/download/editors/vim/vimtutor.md",
+		"/C/download/代谢增长论.txt",
+		"/C/download/PLC/S7-PLCSIM/瑗胯タ杞欢鍥_txt"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 451.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": true,
+		"regex": true,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 153.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.sftp":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "git.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"Servy",
+				"Shared\\SurveyPrompt.razor"
+			],
+			[
+				"proj",
+				"myWebApp.csproj"
+			],
+			[
+				"cs",
+				"cs.sublime-project"
+			],
+			[
+				"java.md",
+				"md\\readme_java.md"
+			],
+			[
+				"python",
+				"md\\readme_python.md"
+			],
+			[
+				"sublime",
+				"md\\readme_sublime.md"
+			],
+			[
+				"chrome",
+				"md\\readme_chromeos.md"
+			],
+			[
+				"fl",
+				"md\\OpenToonz\\flstudio.md"
+			],
+			[
+				"coding.php",
+				"md\\coding.php"
+			],
+			[
+				"php",
+				"md\\readme_php.md"
+			],
+			[
+				"FLstu",
+				"md\\OpenToonz\\flstudio.md"
+			],
+			[
+				"mt",
+				"md\\mtd\\mtd.py"
+			],
+			[
+				"win.md",
+				"md\\readme_win.md"
+			],
+			[
+				"ffmpeg",
+				"md\\OpenToonz\\ffmpeg.md"
+			],
+			[
+				"ff",
+				"md\\readme_ffmpeg.md"
+			],
+			[
+				"mtd",
+				"md\\mtd\\mtd.py"
+			],
+			[
+				"FFMPEG",
+				"md\\readme_ffmpeg.md"
+			],
+			[
+				"pyt",
+				"md\\readme_python.md"
+			],
+			[
+				"coding.py",
+				"md\\coding.py"
+			],
+			[
+				"redis",
+				"md\\readme_redis.md"
+			],
+			[
+				"git",
+				"md\\readme_git.md"
+			],
+			[
+				"curl",
+				"md\\readme_curl.md"
+			],
+			[
+				"node",
+				"md\\readme_node.md"
+			],
+			[
+				"coding.js",
+				"md\\coding.js"
+			],
+			[
+				"android",
+				"md\\readme_android.md"
+			],
+			[
+				"subime",
+				"md\\readme_sublime.md"
+			],
+			[
+				"blender",
+				"C:\\download\\blender\\readme.md"
+			],
+			[
+				"plc",
+				"md\\PLC.md"
+			],
+			[
+				"md.py",
+				"md\\mtd\\mtd.py"
+			],
+			[
+				"win",
+				"md\\readme_win.md"
+			],
+			[
+				"CMSIS stm32f4xx.h",
+				"FW_F4_V1.24.1\\Drivers\\CMSIS\\Device\\ST\\STM32F4xx\\Include\\stm32f4xx.h"
+			],
+			[
+				"mark",
+				"md\\readme_markdown.md"
+			],
+			[
+				"vue",
+				"md\\c-daystep\\readme_vue.md"
+			],
+			[
+				"react",
+				"md\\readme_react.md"
+			],
+			[
+				"rea",
+				"md\\readme.md"
+			],
+			[
+				"daystep",
+				"md\\c-daystep\\readme_vue.md"
+			],
+			[
+				"git.md",
+				"md\\readme_git.md"
+			],
+			[
+				"node.",
+				"md\\readme_node.md"
+			],
+			[
+				"webpack.md",
+				"md\\readme_webpack.md"
+			],
+			[
+				"websocket",
+				"md\\socket.io\\readme_websocket.md"
+			],
+			[
+				"net",
+				"md\\readme_net.md"
+			],
+			[
+				"es6",
+				"md\\readme_es6.md"
+			],
+			[
+				"ips",
+				"md\\readme_ips.md"
+			],
+			[
+				"markdown.md",
+				"md\\readme_markdown.md"
+			],
+			[
+				"ng.",
+				"md\\readme_ng.md"
+			],
+			[
+				"c-daystep.md",
+				"md\\c-daystep\\readme.md"
+			],
+			[
+				"fiddler",
+				"md\\http\\http_fiddler.md"
+			],
+			[
+				"ch5/title3",
+				"md\\go\\gopl.io-master\\ch5\\title3\\title.go"
+			],
+			[
+				"ch5/title1",
+				"md\\go\\gopl.io-master\\ch5\\title1\\title.go"
+			],
+			[
+				"ips.",
+				"md\\readme_ips.md"
+			],
+			[
+				"gopl/8",
+				"md\\go\\gopl.io-master\\ch8\\chat\\chat.go"
+			],
+			[
+				"php.md",
+				"md\\readme_php.md"
+			],
+			[
+				"gopl",
+				"md\\readme_gopl.md"
+			],
+			[
+				"golang",
+				"md\\readme_golang.md"
+			],
+			[
+				"rsa.md",
+				"md\\rsa\\readme_rsa.md"
+			],
+			[
+				"css.md",
+				"md\\readme_css.md"
+			],
+			[
+				"websocket.md",
+				"md\\socket.io\\readme_websocket.md"
+			],
+			[
+				"vue.md",
+				"md\\c-daystep\\readme_vue.md"
+			],
+			[
+				"node.md",
+				"md\\readme_node.md"
+			],
+			[
+				"pwa.md",
+				"webpack.js.org-master\\src\\content\\guides\\progressive-web-application.md"
+			],
+			[
+				"mysql.md",
+				"md\\readme_mysql.md"
+			],
+			[
+				"E",
+				"md\\laravel-docs-5.8\\eloquent.md"
+			],
+			[
+				"mtd.py",
+				"md\\mtd\\mtd.py"
+			],
+			[
+				"util",
+				"md\\icework\\js\\utils.js"
+			],
+			[
+				"QuillRichTextEditor",
+				"md\\icework\\react-materials\\blocks\\QuillRichTextEditor\\src\\index.jsx"
+			],
+			[
+				"",
+				"md\\icework\\js\\utils.js"
+			],
+			[
+				"ing.js",
+				"md\\coding.js"
+			],
+			[
+				"ConfigProvider",
+				"md\\icework\\next-master\\src\\config-provider\\index.jsx"
+			],
+			[
+				"ice-qr",
+				"md\\icework\\ice-qrcode.html"
+			],
+			[
+				"uploaddra",
+				"md\\icework\\demos\\upload-drag.jsx"
+			],
+			[
+				"net.md",
+				"md\\readme_net.md"
+			],
+			[
+				"readme.md",
+				"md\\readme.md"
+			],
+			[
+				"ing.php",
+				"md\\coding.php"
+			],
+			[
+				"flutter.md",
+				"md\\dart-flutter\\readme.md"
+			],
+			[
+				"go.md",
+				"md\\readme_gopl.md"
+			],
+			[
+				"demo.go",
+				"md\\go\\demo.go"
+			],
+			[
+				"cssmd",
+				"md\\readme_css.md"
+			],
+			[
+				"curl.",
+				"md\\readme_curl.md"
+			],
+			[
+				"mysql",
+				"md\\readme_mysql.md"
+			],
+			[
+				"react.md",
+				"md\\readme_react.md"
+			],
+			[
+				"echarts.md",
+				"md\\echart\\readme_echarts.md"
+			],
+			[
+				"ing.py",
+				"md\\coding.py"
+			],
+			[
+				"ing.html",
+				"md\\coding.html"
+			],
+			[
+				"babelloader",
+				"md\\icework\\webpack.js.org-cn\\src\\content\\loaders\\babel-loader.md"
+			],
+			[
+				"css",
+				"readme_css.md"
+			],
+			[
+				"webpac",
+				"readme_webpack.md"
+			],
+			[
+				"web",
+				"readme_webpack.md"
+			],
+			[
+				"ing.ts",
+				"coding.ts"
+			],
+			[
+				"typescgenerators",
+				"TypeScript-Handbook\\pages\\Iterators and Generators.md"
+			],
+			[
+				"decorat",
+				"TypeScript-Handbook\\pages\\Decorators.md"
+			],
+			[
+				"typescript/pages/",
+				"TypeScript-Handbook\\pages\\declaration files\\Introduction.md"
+			],
+			[
+				"types/react/",
+				"icework\\next-master\\node_modules\\@types\\react\\index.d.ts"
+			],
+			[
+				"basic type",
+				"TypeScript-Handbook\\pages\\Basic Types.md"
+			],
+			[
+				"class.md",
+				"TypeScript-Handbook\\pages\\Classes.md"
+			],
+			[
+				"handbook\\pages\\",
+				"TypeScript-Handbook\\pages\\Classes.md"
+			],
+			[
+				"Advanced Types.md",
+				"TypeScript-Handbook\\pages\\Advanced Types.md"
+			],
+			[
+				"readme",
+				"readme.md"
+			],
+			[
+				"ts.md",
+				"readme_ts.md"
+			],
+			[
+				"demos.",
+				"icework\\demos.html"
+			],
+			[
+				"upload-c",
+				"icework\\demos\\upload-crop.jsx"
+			],
+			[
+				"python.",
+				"readme_python.md"
+			],
+			[
+				"css-",
+				"icework\\css-standardcolors.html"
+			],
+			[
+				"stand",
+				"icework\\css-standardcolors.html"
+			],
+			[
+				"ice-icon",
+				"icework\\ice-icon.html"
+			],
+			[
+				"biz.md",
+				"bizcharts\\readme_bizCharts.md"
+			],
+			[
+				"mtd.",
+				"mtd\\mtd.py"
+			],
+			[
+				"demos",
+				"icework\\demos.html"
+			],
+			[
+				"step.html",
+				"icework\\ice-step.html"
+			],
+			[
+				"webpack",
+				"readme_webpack.md"
+			],
+			[
+				"webp",
+				"readme_webpack.md"
+			],
+			[
+				"next.",
+				"icework\\alifd-next-1.16.6\\next.css"
+			],
+			[
+				"next.min",
+				"icework\\alifd-next-1.16.6\\next.min.css"
+			],
+			[
+				"step",
+				"icework\\step.html"
+			],
+			[
+				"aria",
+				"icework\\demos\\upload-aria.jsx"
+			],
+			[
+				"switch.html",
+				"icework\\switch.html"
+			],
+			[
+				"icswitch",
+				"icework\\demos\\ice-switch.md"
+			],
+			[
+				"demo",
+				"icework\\demos.html"
+			],
+			[
+				"switch.md",
+				"icework\\demos\\ice-switch.md"
+			],
+			[
+				"demo.og",
+				"go\\demo.go"
+			],
+			[
+				"gola",
+				"readme_golang.md"
+			],
+			[
+				"fine",
+				"icework\\pure-fine.html"
+			],
+			[
+				"datestep",
+				"c-daystep\\c-daystep.html"
+			],
+			[
+				"pure",
+				"icework\\pure-list.html"
+			],
+			[
+				"ser",
+				"icework\\server-demo.go"
+			],
+			[
+				"ts.m",
+				"readme_ts.md"
+			],
+			[
+				"py",
+				"readme_python.md"
+			],
+			[
+				"ice-s",
+				"icework\\demos\\ice-switch.md"
+			],
+			[
+				"we",
+				"readme_webpack.md"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "cpp",
+		"selected_items":
+		[
+			[
+				"cpp",
+				"C:\\coding\\md-code\\cppDemos\\cppDemo.sublime-project"
+			],
+			[
+				"git",
+				"C:\\coding\\md-code\\git-demo\\git.sublime-project"
+			],
+			[
+				"mvc",
+				"C:\\coding\\md-code\\WebMVC\\wm.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 357.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"Main"
+			]
+		],
+		"width": 586.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 193.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
