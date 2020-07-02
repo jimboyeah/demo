@@ -1,0 +1,1797 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"Open",
+				"OpenCV_LIBS"
+			],
+			[
+				"msyh",
+				"msyh.ttf"
+			],
+			[
+				"lena",
+				"lena_thresh"
+			],
+			[
+				"chapp",
+				"ch_app.erl"
+			],
+			[
+				"wxMen",
+				"wxMenuBar"
+			],
+			[
+				"create",
+				"create_test_menu"
+			],
+			[
+				"ge",
+				"GenerateNames"
+			],
+			[
+				"I",
+				"IsStatic"
+			],
+			[
+				"lo",
+				"localhost.pfx"
+			],
+			[
+				"Hook",
+				"KeyboardHook"
+			],
+			[
+				"Hoo",
+				"HookStop"
+			],
+			[
+				"Ho",
+				"HookStart"
+			],
+			[
+				"int",
+				"Int32"
+			],
+			[
+				"PlaySoun",
+				"PlaySoundFlags"
+			],
+			[
+				"O",
+				"OpenFileDialog"
+			],
+			[
+				"From",
+				"Form1_Load"
+			],
+			[
+				"Form1",
+				"Form1_Load"
+			],
+			[
+				"Do",
+				"DoWorkStatic"
+			],
+			[
+				"S",
+				"Singletons"
+			],
+			[
+				"Test",
+				"TestClass"
+			],
+			[
+				"_",
+				"_count"
+			],
+			[
+				"Con",
+				"Contacts"
+			],
+			[
+				"up",
+				"upperCase"
+			],
+			[
+				"cli",
+				"on_button_clicked"
+			],
+			[
+				"height",
+				"max-height\tproperty"
+			],
+			[
+				"so",
+				"socket.io-client"
+			],
+			[
+				"En",
+				"EncodeToString\tfunc(src []byte) string ·ƒ"
+			],
+			[
+				"st",
+				"StdEncoding\t*base64.Encoding ·ν"
+			],
+			[
+				"Engin",
+				"EngineioMessage\tfunc(text string) ·ƒ"
+			],
+			[
+				"EIO",
+				"EIO_Message\tEngineioPacket ·Ɩ"
+			],
+			[
+				"SIO_Bin",
+				"SIO_Binary_Event\tSocketioPacket ·Ɩ"
+			],
+			[
+				"SIO",
+				"SIO_Event\tSocketioPacket ·Ɩ"
+			],
+			[
+				"U",
+				"Uint16\tfunc(b []byte) uint16 ·ƒ"
+			],
+			[
+				"Error",
+				"ErrorNil\tErrorCode ·Ɩ"
+			],
+			[
+				"Err",
+				"ErrorNil\tErrorCode ·Ɩ"
+			],
+			[
+				"Messa",
+				"MessageType\tbyte ·ʈ"
+			],
+			[
+				"E",
+				"Err\terror ·ν"
+			],
+			[
+				"e",
+				"Err\terror ·ν"
+			],
+			[
+				"b",
+				"brw\t*bufio.ReadWriter ·ν"
+			],
+			[
+				"Mi",
+				"Millisecond\ttime.Duration ·Ɩ"
+			],
+			[
+				"Webs",
+				"github.com/gorilla/websocket\t ·ʂ"
+			],
+			[
+				"Set",
+				"SetReadDeadline\tfunc(t time.Time) error ·ƒ"
+			],
+			[
+				"B",
+				"BrokenMessage\tMessageType ·Ɩ"
+			],
+			[
+				"R",
+				"RemoteAddr\tfunc() net.Addr ·ƒ"
+			],
+			[
+				"P",
+				"parsed\tbool ·ν"
+			],
+			[
+				"utf",
+				"unicode/utf8\t ·ʂ"
+			],
+			[
+				"Mask",
+				"Masking\tbool ·ν"
+			],
+			[
+				"Mess",
+				"MessageType\tbyte ·ʈ"
+			],
+			[
+				"Ma",
+				"Maskingkey\t[4]byte ·ν"
+			],
+			[
+				"Masking",
+				"Masking\tbool ·ν"
+			],
+			[
+				"M",
+				"Maskingkey\t[4]byte ·ν"
+			],
+			[
+				"CloseMe",
+				"CloseMessageCode\tuint ·ʈ"
+			],
+			[
+				"Ti",
+				"PingTimeout\ttime.Duration ·Ɩ"
+			],
+			[
+				"Ping",
+				"PingTimeout\ttime.Duration ·Ɩ"
+			],
+			[
+				"r",
+				"SetReadDeadline\tfunc(t time.Time) error ·ƒ"
+			],
+			[
+				"Read",
+				"ReadWriter\tstruct ·ʈ"
+			],
+			[
+				"StatusIn",
+				"StatusInternalServerError\tuntyped int ·Ɩ"
+			],
+			[
+				"net",
+				"netConn\tnet.Conn ·ν"
+			],
+			[
+				"enc",
+				"encoding/base64\t ·ʂ"
+			],
+			[
+				"Re",
+				"RequestURI\tstring ·ν"
+			],
+			[
+				"Respn",
+				"ResponseWriter\tinterface ·ʈ"
+			],
+			[
+				"Ha",
+				"Handler\tinterface ·ʈ"
+			],
+			[
+				"L",
+				"GetLabel\tfunc() string ·ƒ"
+			],
+			[
+				"test",
+				"test_pb.js"
+			],
+			[
+				"react",
+				"react-quill/"
+			],
+			[
+				"el",
+				"element-ui/"
+			],
+			[
+				"rel",
+				"icedesign-qrcode.rel.js"
+			],
+			[
+				"get",
+				"getCroppedCanvas\twarning"
+			],
+			[
+				"cl",
+				"className"
+			],
+			[
+				"hex",
+				"hex2decimal"
+			],
+			[
+				"flex",
+				"flex-wrap\tproperty"
+			],
+			[
+				"in",
+				"MarshalIndent\tfunc(v interface{}, prefix string, indent string) []byte, error ·ƒ"
+			],
+			[
+				"io",
+				"io/ioutil\t ·ʂ"
+			],
+			[
+				"re",
+				"ReadDir\tfunc(dirname string) []os.FileInfo, error ·ƒ"
+			],
+			[
+				"init",
+				"initQueue"
+			],
+			[
+				"thread",
+				"threadID"
+			],
+			[
+				"exit",
+				"exitFlag"
+			],
+			[
+				"con",
+				"content_encoding"
+			],
+			[
+				"content",
+				"content_length"
+			],
+			[
+				"name",
+				"nameKey"
+			],
+			[
+				"work",
+				"workQueue"
+			],
+			[
+				"en",
+				"enqueue"
+			],
+			[
+				"none",
+				"None"
+			],
+			[
+				"Mo",
+				"ModeExclusive\tos.FileMode ·Ɩ"
+			],
+			[
+				"encod",
+				"encoding/json\t ·ʂ"
+			],
+			[
+				"Cmd",
+				"Command\tfunc(name string, arg ...string) *exec.Cmd ·ƒ"
+			],
+			[
+				"next",
+				"next.min.js"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"contents": "{\n\t\"build_systems\":\n\t[\n\t\t{\n\t\t\t\"env\":{\n\t\t\t\t\"PATH\":\"c:/CodeBlocks/MinGW/bin/;%PATH%\"\n\t\t\t},\n\t\t\t\"encoding\": \"utf8\",\n\t\t\t\"file_regex\": \"^  (.+)\\\\((\\\\d+)\\\\)(): ((?:fatal )?(?:error|warning) \\\\w+\\\\d\\\\d\\\\d\\\\d: .*) \\\\[.*$\",\n\t\t\t\"name\": \"OpenCV Demos (Windows)\",\n\t\t\t\"quiet\": true,\n\t\t\t\"shell_cmd\": \"cmake --build .\",\n\t\t\t\"variants\":\n\t\t\t[\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"Unix Makefiles\",\n\t\t\t\t\t\"shell_cmd\": \"cmake .. -G \\\"Unix Makefiles\\\"\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"clean\",\n\t\t\t\t\t\"shell_cmd\": \"make clean\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"clear all\",\n\t\t\t\t\t\"shell_cmd\": \"del * /s /q\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"Make\",\n\t\t\t\t\t\"shell_cmd\": \"where make && where g++ && make BUILD_SHARED_LIBS=ON\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"Clean & Make\",\n\t\t\t\t\t\"shell_cmd\": \"make clean && make BUILD_SHARED_LIBS=ON\"\n\t\t\t\t}\n\t\t\t],\n\t\t\t\"working_dir\": \"${project_path}/build\"\n\t\t}\n\t],\n\t\"folders\":\n\t[\n\t\t{\n\t\t\t\"path\": \"C:\\\\download\\\\OpenCV\\\\MinGW-OpenCV-4.1.1-x64\"\n\t\t},\n\t\t{\n\t\t\t\"path\": \"C:\\\\download\\\\OpenCV\\\\opencv-4.3.0-docs\"\n\t\t},\n\t\t{\n\t\t\t\"path\": \"C:\\\\download\\\\OpenCV\\\\opencv\"\n\t\t},\n\t\t{\n\t\t\t\"path\": \"C:\\\\Anaconda3\\\\Lib\\\\site-packages\\\\pydicom\"\n\t\t},\n\t\t{\n\t\t\t\"path\": \"C:\\\\download\\\\OpenCV\\\\OpenCV-MinGW64-GCC810\"\n\t\t},\n\t\t{\n\t\t\t\"path\": \"C:\\\\download\\\\OpenCV\\\\opencv_contrib-4.2.0\"\n\t\t},\n\t\t{\n\t\t\t\"path\": \".\"\n\t\t}\n\t],\n\t\"settings\":\n\t{\n\t\t\"cmake\":\n\t\t{\n\t\t\t\"build_folder\": \"${project_path}/build\"\n\t\t}\n\t}\n}\n",
+			"file": "opencv.sublime-project",
+			"file_size": 1321,
+			"file_write_time": 132377787991179199,
+			"settings":
+			{
+				"buffer_size": 1321,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/C/download/OpenCV/OpenCV-MinGW64-GCC810/freetype-2.10.0/builds/vms/ftconfig.h",
+			"settings":
+			{
+				"buffer_size": 17692,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "CMakeLists.txt",
+			"settings":
+			{
+				"buffer_size": 1389,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "OpenCV Demos (Windows)",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"MyProject (Windows)",
+					""
+				],
+				[
+					"MyProject (Windows)",
+					"Test"
+				]
+			],
+			[
+				"MyProject (Windows)",
+				"Test"
+			]
+		],
+		[
+			[
+				[
+					"MyProject (Windows)",
+					""
+				],
+				[
+					"MyProject (Windows)",
+					"Unix Makefiles"
+				],
+				[
+					"MyProject (Windows)",
+					"clean"
+				],
+				[
+					"MyProject (Windows)",
+					"clear all"
+				],
+				[
+					"MyProject (Windows)",
+					"Make"
+				],
+				[
+					"MyProject (Windows)",
+					"Clean & Make"
+				]
+			],
+			[
+				"MyProject (Windows)",
+				"Make"
+			]
+		],
+		[
+			[
+				[
+					"MyProject (Windows)",
+					""
+				],
+				[
+					"MyProject (Windows)",
+					"Unix Makefiles"
+				],
+				[
+					"MyProject (Windows)",
+					"clean"
+				],
+				[
+					"MyProject (Windows)",
+					"clear all"
+				],
+				[
+					"MyProject (Windows)",
+					"Make"
+				],
+				[
+					"MyProject (Windows)",
+					"Clean & Make"
+				],
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					""
+				],
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					"Run"
+				],
+				[
+					"Packages/User/C++ MinGW.sublime-build",
+					""
+				],
+				[
+					"Packages/User/C++ MinGW.sublime-build",
+					"(-std=c++17)"
+				],
+				[
+					"Packages/User/C++ MinGW.sublime-build",
+					"(-std=c++14)"
+				],
+				[
+					"Packages/User/C++ MinGW.sublime-build",
+					"(-std=c++11)"
+				],
+				[
+					"Packages/User/C++ MinGW.sublime-build",
+					"(-std=c++11) with ENV"
+				],
+				[
+					"Packages/User/C++ MinGW.sublime-build",
+					"(-std=c++11) Release with ENV"
+				],
+				[
+					"Packages/User/C++ MinGW.sublime-build",
+					"(-std=c++0x) with ENV"
+				],
+				[
+					"Packages/User/C++ MinGW.sublime-build",
+					"(-std=c++98) with ENV"
+				],
+				[
+					"Packages/User/C++ MinGW.sublime-build",
+					"(-ansi) with ENV"
+				],
+				[
+					"Packages/User/C++ MinGW.sublime-build",
+					"(-std=c11) with ENV"
+				],
+				[
+					"Packages/User/C++ MinGW.sublime-build",
+					"(-std=c99) with ENV"
+				],
+				[
+					"Packages/User/C++ MinGW.sublime-build",
+					"(-std=c90) with ENV"
+				],
+				[
+					"Packages/User/C++ MinGW.sublime-build",
+					"控制台中运行"
+				]
+			],
+			[
+				"Packages/User/C++ MinGW.sublime-build",
+				"(-std=c++11) with ENV"
+			]
+		],
+		[
+			[
+				[
+					"OpenCV Demos (Windows)",
+					""
+				],
+				[
+					"OpenCV Demos (Windows)",
+					"Unix Makefiles"
+				],
+				[
+					"OpenCV Demos (Windows)",
+					"clean"
+				],
+				[
+					"OpenCV Demos (Windows)",
+					"clear all"
+				],
+				[
+					"OpenCV Demos (Windows)",
+					"Make"
+				],
+				[
+					"OpenCV Demos (Windows)",
+					"Clean & Make"
+				]
+			],
+			[
+				"OpenCV Demos (Windows)",
+				"Make"
+			]
+		],
+		[
+			[
+				[
+					"opencv (Windows)",
+					""
+				],
+				[
+					"opencv (Windows)",
+					"Unix Makefiles"
+				],
+				[
+					"opencv (Windows)",
+					"clean"
+				],
+				[
+					"opencv (Windows)",
+					"clear all"
+				],
+				[
+					"opencv (Windows)",
+					"Make"
+				],
+				[
+					"opencv (Windows)",
+					"Clean & Make"
+				]
+			],
+			[
+				"opencv (Windows)",
+				"Make"
+			]
+		]
+	],
+	"build_varint": "Make",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"make",
+				"Set Syntax: Makefile"
+			],
+			[
+				"editp",
+				"Project: Edit Project"
+			],
+			[
+				"e",
+				"Project: Edit Project"
+			],
+			[
+				"edi",
+				"Project: Edit Project"
+			],
+			[
+				"new ",
+				"Project Manager: Add New Project"
+			],
+			[
+				"add pro",
+				"Project: Add Folder"
+			],
+			[
+				"enable",
+				"Package Control: Enable Package"
+			],
+			[
+				"disa",
+				"Package Control: Disable Package"
+			],
+			[
+				"cmake",
+				"CMakeBuilder: New Project"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"niaja",
+				"Set Syntax: Ninja"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"html",
+				"HTMLPrettify"
+			],
+			[
+				"erlang",
+				"Set Syntax: Erlang"
+			],
+			[
+				"diff",
+				"Set Syntax: Diff"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"dis",
+				"Package Control: Disable Package"
+			],
+			[
+				"remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"in",
+				"Package Control: Install Package"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"package",
+				"Package Control: Install Package"
+			],
+			[
+				"utf",
+				"ConvertToUTF8: Reload with Encoding"
+			],
+			[
+				"TypesCript",
+				"TypeScript: Signature Info"
+			],
+			[
+				"preview",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"markdown",
+				"Set Syntax: MultiMarkdown"
+			],
+			[
+				"debug",
+				"SublimeCodeIntel: Enable Debug Mode"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"theme",
+				"UI: Select Color Scheme"
+			],
+			[
+				"them",
+				"UI: Select Theme"
+			],
+			[
+				"new pro",
+				"Project Manager: Add New Project"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 302.0,
+		"history":
+		[
+			"r = os.system(\"cmd /k echo >>c:/coding/md/log.txt\")",
+			"r = os.system(\"cmd /k \\\"echo c:/coding/md/log.txt mkdir c:\\mkdir\\\"\")",
+			"r = os.system(\"cmd /k echo \\\"c:/coding/md/log.txt mkdir c:\\mkdir\\\"\")",
+			"r = os.system(\"cmd /k echo c:/coding/md/log.txt mkdir c:\\mkdir'\")",
+			"r = os.system(\"cmd /k 'echo c:/coding/md/log.txt mkdir c:\\mkdir'\")",
+			"r = os.system(\"cmd -k echo c:/coding/md/log.txt mkdir c:\\mkdir\")",
+			"r = os.system(\"echo c:/coding/md/log.txt mkdir c:\\mkdir\")",
+			"r = os.system(\"echo c:/log.txt mkdir c:\\mkdir\")",
+			"r = os.system(\"echo c:\\\\log.txt mkdir c:\\mkdir\")",
+			"r = os.system(\"mkdir c:\\mkdir\")",
+			"r = os.system(\"cwd .\")",
+			"print(r)",
+			"r = os.system(\"dir .\")",
+			"print(r)",
+			"pring(r)",
+			"r = os.system(\"dir\")",
+			"os.system(\"dir\")",
+			"subprocess.run(\"ls\")",
+			"subprocess.run()",
+			"import subprocess",
+			"subprocess.run()",
+			"import commands",
+			"for i in val.readlines()",
+			"for i in val.readlines(): &  print(i)",
+			"for i in val.readlines()  print(i)",
+			"for i in val.readlines(): print(i)",
+			"for i in val.readlines():",
+			"val = os.popen('ls -al')",
+			"val = os.ppopen('ls -al')",
+			"val = os.Ppopen('ls -al')",
+			"import os",
+			"val = os.Ppopen('ls -al')",
+			"cwd"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/download/OpenCV/MinGW-OpenCV-4.1.1-x64",
+		"/C/download/OpenCV/OpenCV-MinGW64-GCC810",
+		"/C/download/OpenCV/OpenCV-MinGW64-GCC810/freetype-2.10.0",
+		"/C/coding/md-code/opencv",
+		"/C/coding/md-code/opencv/build"
+	],
+	"file_history":
+	[
+		"/C/coding/md-code/opencv/build/CMakeFiles/Makefile2",
+		"/C/coding/md-code/opencv/build/Makefile",
+		"/C/coding/md-code/opencv/display/CMakeLists.txt",
+		"/C/download/OpenCV/opencv/sources/CMakeLists.txt",
+		"/C/coding/md-code/opencv/build/list.txt",
+		"/C/coding/md-code/opencv/opencv.sublime-project",
+		"/C/Users/OCEAN/AppData/Roaming/Sublime Text 3/Packages/User/Projects/MinGW-OpenCV-x64.sublime-project",
+		"/C/download/OpenCV/opencv/sources/3rdparty/protobuf/src/google/protobuf/stubs/common.cc",
+		"/C/download/OpenCV/OpenCV-MinGW64-GCC810/freetype-2.10.0/Makefile",
+		"/C/download/OpenCV/OpenCV-MinGW64-GCC810/freetype/CMakeLists.txt",
+		"/C/coding/md-code/opencv/display/freetype.cpp",
+		"/C/coding/md-code/opencv/display/display.cpp",
+		"/C/download/OpenCV/opencv/sources/samples/cpp/tutorial_code/core/discrete_fourier_transform/discrete_fourier_transform.cpp",
+		"/C/download/OpenCV/opencv/build/include/opencv2/core/mat.hpp",
+		"/C/download/OpenCV/opencv/b/cmake_install.cmake",
+		"/C/download/OpenCV/opencv-4.3.0-docs/javadoc/org/opencv/imgproc/Imgproc.html",
+		"/C/download/OpenCV/opencv/build/include/opencv2/imgproc.hpp",
+		"/C/download/OpenCV/OpenCV-MinGW64-GCC810/freetype/build/Makefile",
+		"/C/download/OpenCV/OpenCV-MinGW64-GCC810/freetype/build/FindPNG.rst",
+		"/C/download/OpenCV/OpenCV-MinGW64-GCC810/freetype/build/findpng",
+		"/C/download/OpenCV/OpenCV-MinGW64-GCC810/freetype/build/CMakeCache.txt",
+		"/C/download/OpenCV/opencv/b/modules/.firstpass/freetype/RUN_TESTS.vcxproj",
+		"/C/download/OpenCV/opencv/b/modules/.firstpass/freetype/INSTALL.vcxproj",
+		"/C/download/OpenCV/opencv/b/modules/core/vs_version.rc",
+		"/C/download/OpenCV/opencv/build/OpenCVConfig.cmake",
+		"/C/download/OpenCV/opencv-4.3.0-docs/javadoc/script.js",
+		"/C/download/OpenCV/opencv-4.3.0-docs/javadoc/search.js",
+		"/C/download/OpenCV/opencv-4.3.0-docs/opencv.js",
+		"/C/download/OpenCV/opencv/sources/samples/python/deconvolution.py",
+		"/C/download/OpenCV/opencv/sources/samples/python/stitching.py",
+		"/C/download/OpenCV/opencv/sources/modules/imgproc/include/opencv2/imgproc.hpp",
+		"/C/download/OpenCV/opencv/sources/3rdparty/protobuf/src/google/protobuf/util/internal/default_value_objectwriter.cc",
+		"/C/download/OpenCV/opencv/sources/samples/dnn/js_face_recognition.html",
+		"/C/download/OpenCV/opencv/sources/samples/cpp/tutorial_code/core/discrete_fourier_transform/In file included from C",
+		"/C/download/OpenCV/opencv/sources/samples/cpp/tutorial_code/core/discrete_fourier_transform/                 from C",
+		"/C/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/stddef.h",
+		"/C/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/stdfix.h",
+		"/C/download/OpenCV/opencv/sources/README.md",
+		"/C/CodeBlocks/MinGW/mingw-w64.bat",
+		"/C/download/OpenCV/opencv/sources/samples/python/stereo_match.py",
+		"/C/Anaconda3/Lib/site-packages/cv2/__init__.py",
+		"/C/Anaconda3/Lib/site-packages/pydicom/data/test_files/README.txt",
+		"/C/Anaconda3/Lib/site-packages/pydicom/data/test_files/dicomdirtests/README.txt",
+		"/C/Anaconda3/Lib/site-packages/pydicom/data/palettes/README.md",
+		"/C/Anaconda3/Lib/site-packages/pydicom/__init__.py",
+		"/C/Anaconda3/Lib/bdb.py",
+		"/C/Users/OCEAN/AppData/Roaming/Sublime Text 3/Packages/User/Python.sublime-build",
+		"/C/Users/OCEAN/AppData/Roaming/Sublime Text 3/Packages/User/C#.sublime-build",
+		"/C/coding/md-code/erlang/ch_app/localhost_capture.pcap",
+		"/C/download/erlang/otp_src_23.0/lib/os_mon/ebin/os_mon.app",
+		"/C/Program Files/erl10.4/lib/os_mon-2.5/ebin/os_mon.app",
+		"/C/coding/md-code/coding/erlang/ch_sup.erl",
+		"/C/coding/md-code/coding/erlang/coding.S",
+		"/C/coding/md-code/coding/erlang/ch_app.erl",
+		"/C/coding/md-code/coding/erlang/hot_update.erl",
+		"/C/download/erlang/learn-you-some-erlang/reminder/src/evserv.erl",
+		"/C/download/erlang/otp_src_23.0/lib/jinterface/java_src/com/ericsson/otp/erlang/OtpServerTransport.java",
+		"/C/download/erlang/learn-you-some-erlang/reminder/Emakefile",
+		"/C/download/erlang/learn-you-some-erlang/pool/ppool_nagger.erl",
+		"/C/download/erlang/learn-you-some-erlang/ct/demo/basic_SUITE.erl",
+		"/C/download/erlang/learn-you-some-erlang/ppool-1.0/test/ppool_nagger.erl",
+		"/C/download/erlang/learn-you-some-erlang/pool/ppool_serv.erl",
+		"/C/download/erlang/learn-you-some-erlang/ppool-1.0/src/ppool_serv.erl",
+		"/C/coding/md-code/coding/erlang/code_lock2.erl",
+		"/C/coding/md-code/coding/erlang/code_lock.erl",
+		"/C/download/erlang/otp_doc_html_23.0/doc/index.html",
+		"/C/download/erlang/otp_src_23.0/lib/erl_docgen/priv/js/flipmenu/flipmenu.js",
+		"/C/coding/md-code/coding/erlang/rb/src/myapp_sup.erl",
+		"/C/coding/md-code/coding/erlang/rb/rebar.config",
+		"/C/coding/md-code/coding/erlang/rb/test/myapp_app_tests.erl",
+		"/C/coding/md-code/coding/erlang/rb/test/myapp_test.hrl",
+		"/C/coding/md-code/coding/erlang/rb/rel/reltool.config",
+		"/C/coding/md-code/coding/erlang/rb/src/myapp_app.erl",
+		"/C/coding/md-code/coding/erlang/rb/test/myapp_tests.erl",
+		"/C/coding/md-code/coding/erlang/rb/test/myapp_tests .erl",
+		"/C/coding/md-code/coding/erlang/rb/ebin/myapp.app",
+		"/C/coding/md-code/coding/erlang/rb/src/myapp.app.src",
+		"/C/Users/OCEAN/AppData/Roaming/Sublime Text 3/Packages/User/GoLang.sublime-build",
+		"/C/coding/md-code/coding/erlang/rb/.rebar/erlcinfo",
+		"/C/download/erlang/rebar-master/rebar.cmd",
+		"/C/coding/md/readme_golang.md",
+		"/C/coding/md-code/coding/main.go",
+		"/C/coding/md-code/coding/erlang/test.config",
+		"/C/download/erlang/otp_src_23.0/lib/kernel/test/ch_sup.erl",
+		"/C/coding/md-code/coding/erlang/efficiency_guide.erl",
+		"/C/download/erlang/otp_src_23.0/system/doc/efficiency_guide/efficiency_guide.erl",
+		"/C/coding/md-code/elixir/demo/binpp.erl",
+		"/C/Users/OCEAN/.mix/archives/phx_new-1.5.3/phx_new-1.5.3/ebin/phx_new.app",
+		"/C/coding/md-code/elixir/README.md",
+		"/C/coding/md/OpenToonz/Blender.md",
+		"/C/download/erlang/learn-erlang-in-30-mins-master/chat/chat_server.erl",
+		"/C/coding/md-code/coding/coding.py",
+		"/C/coding/md/readme_python.md",
+		"/C/download/erlang/otp_src_23.0/lib/wx/examples/sudoku/sudoku.erl",
+		"/C/download/erlang/otp_src_23.0/lib/wx/examples/sudoku/sudoku_game.erl",
+		"/C/download/erlang/otp_src_23.0/lib/wx/examples/sudoku/sudoku_board.erl",
+		"/C/download/erlang/otp_src_23.0/lib/wx/examples/sudoku/sudoku_gui.erl",
+		"/C/download/erlang/otp_src_23.0/lib/wx/examples/sudoku/Makefile",
+		"/C/download/erlang/otp_src_23.0/erts/emulator/internal_doc/dec.erl",
+		"/C/download/erlang/otp_src_23.0/erts/preloaded/src/erlang.erl",
+		"/C/download/erlang/otp_src_23.0/lib/wx/examples/sudoku/sudoku.hrl",
+		"/C/download/erlang/otp_src_23.0/lib/wx/src/wx_object.erl",
+		"/C/download/erlang/otp_src_23.0/lib/wx/examples/demo/Makefile",
+		"/C/download/erlang/otp_src_23.0/make/otp_release_targets.mk",
+		"/C/download/erlang/otp_src_23.0/make/target.mk",
+		"/c/coding/md/STM/STM32_Nucleo.md",
+		"/C/coding/md-code/coding/erlang/pushbutton.erl",
+		"/C/download/erlang/otp_src_23.0/lib/wx/examples/simple/hello2.erl",
+		"/c/coding/md/writing/bmp/bitmap.md",
+		"/c/coding/md/ccpp.md",
+		"/C/coding/md/writing/casting.md",
+		"/C/coding/md/writing/watcom/dos_stub.md",
+		"/C/coding/md/writing/TODO/waves/sound_waves.md",
+		"/C/coding/md/writing/TODO/speech.md",
+		"/C/coding/md/writing/TODO/medeed.md",
+		"/C/coding/md/writing/TODO/free_wired.md",
+		"/C/coding/md/writing/sorrow/sorrow.md",
+		"/C/coding/md/writing/Mathica/mywife.cc.md",
+		"/C/coding/md/writing/Mathica/imagine.md",
+		"/C/coding/md/writing/foundations_ee/电气工程学概论 第二版 美 J.G. Cogdell 著 贾洪峰 译.md",
+		"/C/coding/md/writing/fiddler/fiddler_breakpoint.md",
+		"/C/coding/md/writing/ds/从代码的视角看DOS时代的通配符.md",
+		"/C/coding/md/Qt/readme.md",
+		"/C/coding/md/writing/bmp/bitmap.md",
+		"/C/coding/md/writing/cb/gdb_settings.md",
+		"/C/coding/md/writing/cb/flags_register.md",
+		"/C/coding/md/writing/cb/define_initialization_4.md",
+		"/C/coding/md/writing/cb/define_initialization_1.md"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 451.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			"cpp",
+			"make.exe",
+			"    opencv_calib3d411\n    opencv_core411\n    opencv_dnn411\n    opencv_features2d411\n    opencv_flann411\n    opencv_gapi411\n    opencv_highgui411\n    opencv_imgcodecs411\n    opencv_imgproc411\n    opencv_ml411\n    opencv_objdetect411\n    opencv_photo411\n    opencv_stitching411\n    opencv_video411\n    opencv_videoio411",
+			"opencv_calib3d411 \nopencv_core411 \nopencv_dnn411 \nopencv_features2d411 \nopencv_flann411 \nopencv_gapi411 \nopencv_highgui411 \nopencv_imgcodecs411 \nopencv_imgproc411 \nopencv_ml411 \nopencv_objdetect411 \nopencv_photo411 \nopencv_stitching411 \nopencv_video411 \nopencv_videoio411",
+			"opencv_videoio411",
+			"-l",
+			"C:/download/OpenCV/MinGW-OpenCV-4.1.1-x64",
+			"OpenCV-MinGW-Build-OpenCV",
+			"cmake_echo_color",
+			"include_directories",
+			"DisplayImage",
+			"alph",
+			"trackBarMax",
+			"trackBarValue",
+			"OpenCV_INCLUDE_DIRS",
+			"OpenCV_COMPUTE_CAPABILITIES",
+			"OpenCV_LIBS",
+			"location",
+			"search",
+			"COLOR_BGR2GRAY",
+			"COLOR_GR2GRAY",
+			"COLOR_BGR2RGB",
+			"magnitude"
+		],
+		"highlight": false,
+		"in_selection": false,
+		"preserve_case": true,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "opencv.sublime-project",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1321,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								484,
+								484
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"is_init_dirty_state": false,
+							"origin_encoding": "ASCII",
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/C/download/OpenCV/OpenCV-MinGW64-GCC810/freetype-2.10.0/builds/vms/ftconfig.h",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 17692,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1837,
+								1837
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"origin_encoding": "ASCII",
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/C++/C++.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 368.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "CMakeLists.txt",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1389,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1389,
+								1389
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"origin_encoding": "ASCII",
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/CMake/CMake.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 742.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 153.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 195.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.sftp":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "OpenCV-Demos.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"ftconfig.h",
+				"OpenCV-MinGW64-GCC810\\freetype-2.10.0\\builds\\vms\\ftconfig.h"
+			],
+			[
+				"cmakelist",
+				"opencv\\sources\\CMakeLists.txt"
+			],
+			[
+				"cmake",
+				"opencv\\b\\cmake_install.cmake"
+			],
+			[
+				"findpng",
+				"OpenCV-MinGW64-GCC810\\freetype\\build\\FindPNG.rst"
+			],
+			[
+				"find",
+				"OpenCV-MinGW64-GCC810\\freetype\\build\\findpng"
+			],
+			[
+				"vs_version",
+				"opencv\\b\\modules\\core\\vs_version.rc"
+			],
+			[
+				"protobuf\\stubs\\common.cc",
+				"opencv\\sources\\3rdparty\\protobuf\\src\\google\\protobuf\\stubs\\common.cc"
+			],
+			[
+				"OpenCVConfig.cmake",
+				"opencv\\build\\OpenCVConfig.cmake"
+			],
+			[
+				"search",
+				"opencv-4.3.0-docs\\javadoc\\search.js"
+			],
+			[
+				"script.js",
+				"opencv-4.3.0-docs\\javadoc\\script.js"
+			],
+			[
+				"Imgproc.html",
+				"opencv-4.3.0-docs\\javadoc\\org\\opencv\\imgproc\\Imgproc.html"
+			],
+			[
+				"deconv",
+				"opencv\\sources\\samples\\python\\deconvolution.py"
+			],
+			[
+				"stitching.py",
+				"opencv\\sources\\samples\\python\\stitching.py"
+			],
+			[
+				"opencv.js",
+				"opencv-4.3.0-docs\\opencv.js"
+			],
+			[
+				"discrete_fourier_transform",
+				"sources\\samples\\cpp\\tutorial_code\\core\\discrete_fourier_transform\\discrete_fourier_transform.cpp"
+			],
+			[
+				"py",
+				"User\\Python.sublime-build"
+			],
+			[
+				"python",
+				"md\\readme_python.md"
+			],
+			[
+				"cbuild",
+				"User\\C#.sublime-build"
+			],
+			[
+				"pybuild",
+				"User\\Python.sublime-build"
+			],
+			[
+				"coding.py",
+				"coding\\coding.py"
+			],
+			[
+				"os_mon.app",
+				"otp_src_23.0\\lib\\os_mon\\ebin\\os_mon.app"
+			],
+			[
+				"OtpServerTransport\t",
+				"otp_src_23.0\\lib\\jinterface\\java_src\\com\\ericsson\\otp\\erlang\\OtpServerTransport.java"
+			],
+			[
+				"flipmenu",
+				"otp_src_23.0\\lib\\erl_docgen\\priv\\js\\flipmenu\\flipmenu.js"
+			],
+			[
+				"gol",
+				"md\\readme_golang.md"
+			],
+			[
+				"go.build",
+				"User\\GoLang.sublime-build"
+			],
+			[
+				"coding.go",
+				"coding\\main.go"
+			],
+			[
+				"test.config",
+				"coding\\erlang\\test.config"
+			],
+			[
+				"ch_sup",
+				"otp_src_23.0\\lib\\kernel\\test\\ch_sup.erl"
+			],
+			[
+				"coding.erl",
+				"coding\\erlang\\coding.erl"
+			],
+			[
+				"efficiency_guide",
+				"otp_src_23.0\\system\\doc\\efficiency_guide\\efficiency_guide.erl"
+			],
+			[
+				"python.",
+				"md\\readme_python.md"
+			],
+			[
+				"wx_object",
+				"otp_src_23.0\\lib\\wx\\src\\wx_object.erl"
+			],
+			[
+				"otp_release_targets",
+				"otp_src_23.0\\make\\otp_release_targets.mk"
+			],
+			[
+				"make/target.mk",
+				"otp_src_23.0\\make\\target.mk"
+			],
+			[
+				"codeLock",
+				"coding\\erlang\\code_lock.erl"
+			],
+			[
+				"bif.c",
+				"otp_src_23.0\\erts\\emulator\\beam\\bif.c"
+			],
+			[
+				"calendar",
+				"otp_src_23.0\\lib\\stdlib\\src\\calendar.erl"
+			],
+			[
+				"erlbuild",
+				"User\\erlang.sublime-build"
+			],
+			[
+				"erl_main",
+				"otp_src_23.0\\erts\\emulator\\sys\\win32\\erl_main.c"
+			],
+			[
+				"start_erl.c",
+				"otp_src_23.0\\erts\\etc\\win32\\start_erl.c"
+			],
+			[
+				"erlexec.c",
+				"otp_src_23.0\\erts\\etc\\common\\erlexec.c"
+			],
+			[
+				"beam_emu",
+				"otp_src_23.0\\erts\\emulator\\beam\\beam_emu.c"
+			],
+			[
+				"ProcBin",
+				"otp_src_23.0\\lib\\observer\\src\\cdv_bin_cb.erl"
+			],
+			[
+				"genop",
+				"otp_src_23.0\\lib\\compiler\\src\\genop.tab"
+			],
+			[
+				"erl_ptab",
+				"otp_src_23.0\\erts\\emulator\\beam\\erl_ptab.h"
+			],
+			[
+				"coding.js",
+				"coding\\coding.js"
+			],
+			[
+				"erl_term",
+				"otp_src_23.0\\erts\\emulator\\beam\\erl_term.h"
+			],
+			[
+				"java",
+				"md\\readme_java.md"
+			],
+			[
+				"golang",
+				"md\\readme_golang.md"
+			],
+			[
+				"cpp.md",
+				"md\\ccpp.md"
+			],
+			[
+				"port d",
+				"code\\ports\\port_driver.c"
+			],
+			[
+				"run_erl",
+				"otp_src_23.0\\erts\\etc\\unix\\run_erl.c"
+			],
+			[
+				"escript",
+				"otp_src_23.0\\erts\\etc\\common\\escript.c"
+			],
+			[
+				"erlsrv",
+				"otp_src_23.0\\erts\\etc\\win32\\erlsrv\\erlsrv_main.c"
+			],
+			[
+				"erlexec",
+				"otp_src_23.0\\erts\\etc\\common\\erlexec.c"
+			],
+			[
+				"erl_bif_lists.c",
+				"otp_src_23.0\\erts\\emulator\\beam\\erl_bif_lists.c"
+			],
+			[
+				"lists.erl",
+				"otp_src_23.0\\lib\\stdlib\\src\\lists.erl"
+			],
+			[
+				"BeamInstr",
+				"otp_src_23.0\\lib\\hipe\\test\\basic_SUITE_data\\basic_beam_instrs.erl"
+			],
+			[
+				"sys.c",
+				"otp_src_23.0\\erts\\emulator\\sys\\win32\\sys.c"
+			],
+			[
+				"big.c",
+				"otp_src_23.0\\erts\\emulator\\beam\\big.c"
+			],
+			[
+				"erl_term.h",
+				"otp_src_23.0\\erts\\emulator\\beam\\erl_term.h"
+			],
+			[
+				"beamsys",
+				"otp_src_23.0\\erts\\emulator\\beam\\sys.h"
+			],
+			[
+				"bif.tab",
+				"otp_src_23.0\\erts\\emulator\\beam\\bif.tab"
+			],
+			[
+				"erl_process",
+				"otp_src_23.0\\erts\\emulator\\beam\\erl_process.h"
+			],
+			[
+				"sdzmmo client ",
+				"sdzmmo\\test_client\\client.erl"
+			],
+			[
+				"io.erl",
+				"otp_src_23.0\\lib\\stdlib\\src\\io.erl"
+			],
+			[
+				"gen_server",
+				"otp_src_23.0\\lib\\stdlib\\src\\gen_server.erl"
+			],
+			[
+				"acc",
+				"md\\accme.md"
+			],
+			[
+				"win",
+				"md\\readme_win.md"
+			],
+			[
+				"cbuil",
+				"User\\C#.sublime-build"
+			],
+			[
+				"Net",
+				"md\\readme_net.md"
+			],
+			[
+				"Python",
+				"md\\readme_python.md"
+			],
+			[
+				"PastelMatrixPage",
+				"samples\\xamarin-forms-samples-master\\SkiaSharpForms\\Demos\\Demos\\SkiaSharpFormsDemos\\Effects\\PastelMatrixPage.cs"
+			],
+			[
+				"GrayScaleMatrixPage",
+				"samples\\xamarin-forms-samples-master\\SkiaSharpForms\\Demos\\Demos\\SkiaSharpFormsDemos\\Effects\\GrayScaleMatrixPage.cs"
+			],
+			[
+				"SkiaLightExperiment",
+				"samples\\xamarin-forms-samples-master\\SkiaSharpForms\\Demos\\Demos\\SkiaSharpFormsDemos\\Effects\\DistanceLightExperimentPage.xaml.cs"
+			],
+			[
+				"BlueBananaPage",
+				"samples\\xamarin-forms-samples-master\\SkiaSharpForms\\Demos\\Demos\\SkiaSharpFormsDemos\\Effects\\BlueBananaPage.cs"
+			],
+			[
+				"PorterDuffCanvasView",
+				"samples\\xamarin-forms-samples-master\\SkiaSharpForms\\Demos\\Demos\\SkiaSharpFormsDemos\\Effects\\PorterDuffCanvasView.cs"
+			],
+			[
+				"SkiaSharpFormsDemos",
+				"samples\\xamarin-forms-samples-master\\SkiaSharpForms\\Demos\\SkiaSharpFormsDemos.sln"
+			],
+			[
+				"PhotoLibrary",
+				"samples\\xamarin-forms-samples-master\\SkiaSharpForms\\Demos\\Demos\\SkiaSharpFormsDemos.Droid\\PhotoLibrary.cs"
+			],
+			[
+				"IPhotoLibrary",
+				"samples\\xamarin-forms-samples-master\\SkiaSharpForms\\Demos\\Demos\\SkiaSharpFormsDemos\\IPhotoLibrary.cs"
+			],
+			[
+				"ScalingModesPageg",
+				"samples\\xamarin-forms-samples-master\\SkiaSharpForms\\Demos\\Demos\\SkiaSharpFormsDemos\\obj\\Debug\\netstandard2.0\\Bitmaps\\ScalingModesPage.xaml.g.cs"
+			],
+			[
+				"git",
+				"md\\readme_git.md"
+			],
+			[
+				"markdown",
+				"md\\readme_markdown.md"
+			],
+			[
+				"Claim",
+				"source\\Security-master\\src\\Microsoft.AspNetCore.Authentication.OAuth\\Claims\\ClaimAction.cs"
+			],
+			[
+				"Claims",
+				"source\\AspNetCore.Docs-master\\aspnetcore\\security\\authorization\\claims.md"
+			],
+			[
+				"AuthenticationManager",
+				"source\\aspnetcore-master\\src\\Servers\\HttpSys\\src\\AuthenticationManager.cs"
+			],
+			[
+				"net",
+				"md\\readme_net.md"
+			],
+			[
+				"ActionFilter",
+				"source\\aspnetcore-master\\src\\Mvc\\Mvc.Core\\src\\Filters\\ControllerActionFilter.cs"
+			],
+			[
+				"ControllerBase",
+				"source\\Mvc-master\\src\\Microsoft.AspNetCore.Mvc.Core\\ControllerBase.cs"
+			],
+			[
+				"ApiController",
+				"source\\Mvc-master\\test\\Mvc.Api.Analyzers.Test\\ApiControllerFactsTest.cs"
+			],
+			[
+				"mvc ApiController",
+				"source\\Mvc-master\\test\\WebSites\\WebApiCompatShimWebSite\\Controllers\\MvcController.cs"
+			],
+			[
+				"ApiController.cs",
+				"source\\aspnetcore-master\\src\\Mvc\\Mvc.Api.Analyzers\\test\\ApiControllerFactsTest.cs"
+			],
+			[
+				"curl",
+				"md\\readme_curl.md"
+			],
+			[
+				"sublime",
+				"md\\readme_sublime.md"
+			],
+			[
+				"win.",
+				"md\\readme_win.md"
+			],
+			[
+				"rsa.md",
+				"md\\rsa\\readme_rsa.md"
+			],
+			[
+				"android",
+				"md\\readme_android.md"
+			],
+			[
+				"csproj",
+				"coding\\Console.csproj"
+			],
+			[
+				"server",
+				"coding\\bs-server.cs"
+			],
+			[
+				"bs",
+				"coding\\bs-server.cs"
+			],
+			[
+				"stm32",
+				"md\\STM\\STM32_Nucleo.md"
+			],
+			[
+				"cbui",
+				"User\\C#.sublime-build"
+			],
+			[
+				"PHP.md",
+				"md\\readme_php.md"
+			],
+			[
+				"KeyEventArgs",
+				"source\\aspnetcore-master\\src\\Components\\Web\\src\\Web\\KeyboardEventArgs.cs"
+			],
+			[
+				"TagHelperComponent",
+				"source\\Razor-master\\src\\Microsoft.AspNetCore.Razor\\TagHelpers\\TagHelperComponent.cs"
+			],
+			[
+				"BodyTagHelper",
+				"source\\aspnetcore-master\\src\\Mvc\\Mvc.Razor\\src\\TagHelpers\\BodyTagHelper.cs"
+			],
+			[
+				"HeadTag",
+				"source\\Mvc-master\\src\\Microsoft.AspNetCore.Mvc.Razor\\TagHelpers\\HeadTagHelper.cs"
+			],
+			[
+				"TagMode",
+				"source\\Razor-master\\src\\Microsoft.AspNetCore.Razor.Language\\TagMode.cs"
+			],
+			[
+				"TagStructure",
+				"source\\Razor-master\\src\\Microsoft.AspNetCore.Razor.Language\\TagStructure.cs"
+			],
+			[
+				"TagHelperContext",
+				"source\\Razor-master\\src\\Microsoft.AspNetCore.Razor\\TagHelpers\\TagHelperContext.cs"
+			],
+			[
+				"TagHelperContent",
+				"source\\Razor-master\\src\\Microsoft.AspNetCore.Razor\\TagHelpers\\TagHelperContent.cs"
+			],
+			[
+				"IHtmlContentContainer",
+				"source\\aspnetcore-master\\src\\Html\\Abstractions\\src\\IHtmlContentContainer.cs"
+			],
+			[
+				"TagHelperOutput",
+				"source\\Razor-master\\src\\Microsoft.AspNetCore.Razor\\TagHelpers\\TagHelperOutput.cs"
+			],
+			[
+				"tag-helpers ",
+				"source\\AspNetCore.Docs-master\\aspnetcore\\mvc\\views\\tag-helpers\\th-components.md"
+			],
+			[
+				"TagHelperAttribute",
+				"source\\Razor-master\\src\\Microsoft.AspNetCore.Razor\\TagHelpers\\TagHelperAttribute.cs"
+			],
+			[
+				"TagHelperAttributeList",
+				"source\\Razor-master\\src\\Microsoft.AspNetCore.Razor\\TagHelpers\\TagHelperAttributeList.cs"
+			],
+			[
+				"TagHelperComponentTagHelper",
+				"source\\Mvc-master\\src\\Microsoft.AspNetCore.Mvc.Razor\\TagHelpers\\TagHelperComponentTagHelper.cs"
+			],
+			[
+				"IHtmlContentBuilder",
+				"source\\aspnetcore-master\\src\\Html\\Abstractions\\src\\HtmlContentBuilder.cs"
+			],
+			[
+				"TagHelperA",
+				"source\\Razor-master\\src\\Microsoft.AspNetCore.Razor\\TagHelpers\\TagHelperAttribute.cs"
+			],
+			[
+				"SelectHelper",
+				"source\\Mvc-master\\src\\Microsoft.AspNetCore.Mvc.TagHelpers\\SelectTagHelper.cs"
+			],
+			[
+				"HtmlHelper",
+				"source\\Mvc-master\\src\\Microsoft.AspNetCore.Mvc.ViewFeatures\\HtmlHelper.cs"
+			],
+			[
+				"IHtmlHelper",
+				"source\\Mvc-master\\src\\Microsoft.AspNetCore.Mvc.ViewFeatures\\Rendering\\IHtmlHelper.cs"
+			],
+			[
+				"Cbui",
+				"User\\C#.sublime-build"
+			],
+			[
+				"coding.cpp",
+				"coding\\coding.cpp"
+			],
+			[
+				"node",
+				"md\\readme_node.md"
+			],
+			[
+				"webpack.md",
+				"md\\readme_webpack.md"
+			],
+			[
+				"webpackmd",
+				"md\\readme_webpack.md"
+			],
+			[
+				"webpack",
+				"webpack.js.org-master\\src\\content\\concepts\\why-webpack.md"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"C:\\coding\\md-code\\csdemo\\cs.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 133.0,
+		"last_filter": "AdaptiveThresholdTypes",
+		"selected_items":
+		[
+			[
+				"AdaptiveThresholdTypes",
+				"AdaptiveThresholdTypes"
+			],
+			[
+				"ColorConversionCodes",
+				"ColorConversionCodes"
+			],
+			[
+				"COLOR_BGR2RGB",
+				"cv.cvtColor(faceResized, faceResized, cv.COLOR_BGR2RGB)"
+			],
+			[
+				"convertTo",
+				"convertTo"
+			],
+			[
+				"dft",
+				"dft"
+			],
+			[
+				"Function: element",
+				"Function: element"
+			],
+			[
+				"element",
+				"Function: element"
+			],
+			[
+				"spawn",
+				"Function: spawn"
+			],
+			[
+				"start_timer",
+				"Function: start_timer"
+			],
+			[
+				"ethr_atomic_read",
+				"ethr_atomic_read"
+			],
+			[
+				"erts_atomic64_read_nob",
+				"erts_atomic64_read_nob"
+			],
+			[
+				"now_",
+				"now_0"
+			],
+			[
+				"erl_start",
+				"erl_start"
+			],
+			[
+				"process_main",
+				"process_main"
+			],
+			[
+				"bs_init2",
+				"Function: do_bs_init_2"
+			],
+			[
+				"ErlSub",
+				"ErlSubBin"
+			],
+			[
+				"ProcBin",
+				"ProcBin"
+			],
+			[
+				"SMALL",
+				"small"
+			],
+			[
+				"Process",
+				"Process"
+			],
+			[
+				"TAG_PRIMARY_LIST",
+				"TAG_PRIMARY_LIST"
+			],
+			[
+				"ErlDrvEntry",
+				"ErlDrvEntry"
+			],
+			[
+				"driver_entry",
+				"add_driver_entry"
+			],
+			[
+				"driver_select",
+				"driver_select"
+			],
+			[
+				"ready_output",
+				"ready_output"
+			],
+			[
+				"main",
+				"main"
+			],
+			[
+				"AddSingleTon",
+				"TryAddSingleton"
+			]
+		],
+		"width": 614.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 213.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

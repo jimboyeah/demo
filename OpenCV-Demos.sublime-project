@@ -1,0 +1,86 @@
+{
+	"build_systems":
+	[
+		{
+			"encoding": "utf8",
+			"env":
+			{
+				"PATH": "c:/CodeBlocks/MinGW/bin/;%PATH%"
+			},
+			"file_regex": "^  (.+)\\((\\d+)\\)(): ((?:fatal )?(?:error|warning) \\w+\\d\\d\\d\\d: .*) \\[.*$",
+			"name": "OpenCV Demos (Windows)",
+			"quiet": true,
+			"shell_cmd": "cmake --build .",
+			"variants":
+			[
+				{
+					"name": "Unix Makefiles",
+					"shell_cmd": "cmake .. -G \"Unix Makefiles\""
+				},
+				{
+					"name": "clean",
+					"shell_cmd": "make clean"
+				},
+				{
+					"name": "clear all",
+					"shell_cmd": "del * /s /q"
+				},
+				{
+					"name": "Make",
+					"shell_cmd": "make -j 4 BUILD_SHARED_LIBS=ON"
+				},
+				{
+					"name": "Clean & Make",
+					"shell_cmd": "make clean && make BUILD_SHARED_LIBS=ON"
+				}
+			],
+			"working_dir": "${project_path}/build"
+		}
+	],
+	"folders":
+	[
+		{
+			"path": "C:\\download\\OpenCV\\MinGW-OpenCV-4.1.1-x64"
+		},
+		{
+			"path": "C:\\download\\OpenCV\\opencv-4.3.0-docs"
+		},
+		{
+			"path": "C:\\Anaconda3\\Lib\\site-packages\\pydicom"
+		},
+		{
+			"path": "C:\\download\\OpenCV\\OpenCV-MinGW64-GCC810"
+		},
+		{
+			"path": "C:\\download\\OpenCV\\opencv_contrib-4.2.0"
+		},
+		{
+			"path": "."
+		},
+		{
+			"path": "C:\\download\\OpenCV\\redbook"
+		},
+		{
+			"path": "C:\\download\\OpenCV\\glfw-3.3.2"
+		},
+		{
+			"path": "C:\\download\\OpenCV\\glew-2.1.0"
+		},
+		{
+			"path": "C:\\download\\OpenCV\\freeglut-3.2.1"
+		},
+		{
+			"path": "C:\\download\\OpenCV\\glut-master"
+		},
+		{
+			"path": "C:\\download\\OpenCV\\OGLPG-9th-Edition"
+		}
+	],
+	"settings":
+	{
+		"cmake":
+		{
+			"build_folder": "${project_path}/build"
+		}
+	}
+}
