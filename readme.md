@@ -1,4 +1,5 @@
 
+![Loading and unloading DLLs at runtime](https://github.com/jimboyeah/demo/blob/dllDemo/dll-image-base.jpg)
 
 # GCC - GNU Compiler Collection
 - [MinGW](http://www.mingw.org/)

@@ -1,6 +1,7 @@
 #include <windows.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include "hello.h"
 
 /* Function signature of the function exported from the DLL. */
 typedef int (__cdecl *AddFunc)(int a, int b);
@@ -10,10 +11,12 @@ int main(int argc, char** argv)
 	HMODULE hAddLib;
 	AddFunc Add;
 
+	// printf("Sub(1,2) = %d \n", Sub(1,2));
+
 	/* Attempt to load the DLL into the process's address space. */
-	if (! (hAddLib = LoadLibrary(TEXT("AddLib.dll"))))
+	if (! (hAddLib = LoadLibrary(TEXT("libhello.dll"))))
 	{
-		fprintf(stderr, "Error loading \"AddLib.dll\".\n");
+		fprintf(stderr, "Error loading \"libhello.dll\".\n");
 		return EXIT_FAILURE;
 	}
 

@@ -2,6 +2,8 @@
 #include <jni.h>
 /* Header for class Hello */
 
+int Sub(int, int);
+
 #ifndef _Included_Hello
 #define _Included_Hello
 #ifdef __cplusplus
@@ -20,5 +22,6 @@ __declspec(dllexport) int __cdecl Add(int, int);
 
 #ifdef __cplusplus
 }
+
 #endif
 #endif
