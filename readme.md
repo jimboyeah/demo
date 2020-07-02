@@ -33,6 +33,142 @@ Demo 这个仓库原本是坚果用来学 Git 版本管理用的，随着演示�
     - [MinGW Distro](https://nuwen.net/mingw.html)
 
 
+# GCC - GNU Compiler Collection
+- [MinGW](http://www.mingw.org/)
+- [GCC 参数详解](https://www.runoob.com/w3cnote/gcc-parameter-detail.html)
+- [GCC 5 Release Series](https://gcc.gnu.org/gcc-5/)
+- [GCC - the GNU Compiler Collection](https://gcc.gnu.org/)
+- [mingw-w64 GCC for Windows 64 & 32 bits](http://mingw-w64.org/doku.php)
+- [GCC Invocation](https://gcc.gnu.org/onlinedocs/gcc-5.5.0/cpp/Invocation.html)
+- [C++ Standards Support in GCC](http://gcc.gnu.org/projects/cxx-status.html)
+- [GCC 版本的发布](http://gcc.gnu.org/releases.html)
+- [C++ compiler support](https://en.cppreference.com/w/cpp/compiler_support)
+- [MinGW Distro](https://nuwen.net/mingw.html)
+
+GNU 编译器套件 GNU Compiler Collection 包括 C、C++、Objective-C、Fortran、Java、Ada 和 Go 语言的前端，也包括了这些语言的库，如 libstdc++、libgcj 等等。GCC 的初衷是为GNU操作系统专门编写的一款编译器。GNU 系统是彻底的自由软件。此处，自由的含义是它尊重用户的自由。
+
+对于后缀为 `.c` 的文件 gcc 把它当作是 C 程序，而 g++ 当作是 c++ 程序。后缀为 `.cpp` 的，两者都会认为是 C++ 程序，虽然 C++ 是 C 的超集，但是两者对语法的要求是有区别的。在编译阶段，g++ 会调用 gcc，对于 C++ 代码，两者是等价的，但是因为 gcc 命令不能自动和 C++ 程序使用的库联接，所以通常用 g++ 来完成链接，为了统一起见，干脆编译链接统统用 g++。
+
+此外，TCC - Tiny C Compiler 是一个小巧的编译器，用来研究编译原理是不错的目标。
+
+MinGW 就是 GCC 的 Windows 移植版。
+
+MinGW - Minimalist GNU on Windows 是将经典的开源 C/C++ 语言编译器 GCC 移植到了 Windows 平台下，并且包含了 Win32API ，因此可以将源代码编译为可在 Windows 中运行的可执行程序。而且还可以使用一些 Windows 不具备的，Linux 平台下的开发工具。
+
+MinGW 包含 32-bit 和 64-bit 两种，MinGW-w64 可以编译生成 64-bit 或 32-bit 可执行程序，使用 `-m32` 选项。
+正因为如此，MinGW 32-bit 版本现已被 MinGW-w64 所取代，且 MinGW 也早已停止了更新，内置的 GCC 停滞在了 4.8.1 版本，而 MinGW-w64 内置的 GCC 则持续更新。
+
+使用 MinGW-w64 的优势：
+
+- MinGW-w64 是开源软件，可以免费使用。
+- MinGW-w64 由一个活跃的开源社区在持续维护，因此不会过时。
+- MinGW-w64 支持最新的 C/C++ 语言标准。
+- MinGW-w64 使用 Windows 的 C 语言运行库，因此，可以编译出无 DLL 依赖的 Windows 程序。
+- 许多开源 IDE 集成 MinGW-w64，如 CodeBlocks，使它拥有友好的图形化界面。
+
+MinGW-w64 是稳定可靠的、持续更新的 C/C++ 编译器，使用它可以免去很多麻烦，不用担心跟不上时代，也不用担心编译器本身有bug，可以放心的去编写程序。
+
+GCC 有多个 Windows 移植版本，比较出名的就是 MinGW 和 TDM-GCC，最新版本 MinGW-W64 GCC-8.1.0：
+
+- MinGW：http://www.mingw.org/
+- TDM-GCC: http://tdm-gcc.tdragon.net/download
+- Cygwin：http://www.cygwin.com/
+
+MinGW Distro 是提供了一个开箱即用的打包,提供最新的 MinGW 17.1 包含以下常用部件:
+
+| Essentials    | Libraries     | Utilities     | Utilities     |
+| :-----------  | :-----------  | :-----------  | :-----------  |
+| binutils 2.33.1| Boost 1.71.0 | coreutils 8.31| 7-Zip 19.00   |
+| GCC 9.2.0     | FreeType 2.10.1| gdb 8.3.1    | git 2.24.1.2  |
+| mingw-w64 7.0 | glbinding 3.1.0| grep 3.3 |               |
+|               | GLFW 3.3      | LAME 3.100    |               |
+|               | GLM 0.9.9.6   | make 4.2.1    |               |
+|               | libjpeg-turbo 2.0.3| OptiPNG 0.7.7    |       |
+|               | libogg 1.3.4  | pngcheck 2.3.0    |           |
+|               | libpng 1.6.37 | sed 4.7       |               |
+|               | libvorbis 1.3.6| vorbis-tools 1.4.0   |       |
+|               | PCRE 8.43**   |               |               |
+|               | PCRE2 10.34** |               |               |
+|               | SDL 2.0.10    |               |               |
+|               | SDL_mixer 2.0.4|              |               |
+|               | zlib 1.2.11   |               |               |
+|               | zstd 1.4.4    |               |               |
+
+
+GCC 环境变量：
+
+| 变量名       | 功能    |
+| :-------  | :-------  |
+| `CPATH`   | 搜索目录列表，也可以使用命令选项，如 -I. -I/special/include |
+| `C_INCLUDE_PATH`  | 搜索目录列表，分隔符号由 PATH_SEPARATOR 变量指定，通常是分号或冒号 |
+| `CPLUS_INCLUDE_PATH`  | 搜索目录列表 |
+| `OBJC_INCLUDE_PATH`   | 搜索目录列表 |
+| `DEPENDENCIES_OUTPUT` | 非系统依赖的输出，相当命令选项 -MM、-MT 和 -MF 结合 |
+| `SUNPRO_DEPENDENCIES` | 类似 DEPENDENCIES_OUTPUT，除了系统头文件不被忽略，相当 -M 选项 |
+
+
+GCC 命令的常用选项：
+
+| 选项        | 解释    |
+| :-------  | :-------  |
+| -ansi     | 只支持 ANSI 标准的 C 语法。这一选项将禁止 GNU C 的某些特色， 例如 asm 或 typeof 关键词。 |
+| -c        | 只编译并生成目标文件。 |
+| -DMACRO   | 以字符串"1"定义 MACRO 宏。 |
+| -DMACRO   | DEFN    以字符串"DEFN"定义 MACRO 宏。 |
+| -E        | 只运行 C 预编译器。 |
+| -g        | 生成调试信息。GNU 调试器可利用该信息。 |
+| -IDIRECTORY   | 指定 DIRECTORY 为额外的头文件搜索路径。 |
+| -LDIRECTORY   | 指定 DIRECTORY 为额外的函数库搜索路径。 |
+| -lLIBRARY     | 连接时搜索指定的函数库LIBRARY。 |
+| -m486     | 针对 486 进行代码优化。 |
+| -o        | FILE 生成指定的输出文件。用在生成可执行文件时。 |
+| -O0       | 不进行优化处理。 |
+| -O        | 或 -O1    优化生成代码。 |
+| -O2       | 进一步优化。 |
+| -O3       | 比 -O2 更进一步优化，包括 inline 函数。 |
+| -shared   | 生成共享目标文件。通常用在建立共享库时。 |
+| -static   | 禁止使用共享连接。 |
+| -UMACRO   | 取消对 MACRO 宏的定义。 |
+| -w        | 不生成任何警告信息。 |
+| -Wall     | 生成所有警告信息。 |
+
+
+目前 C 语言的标准有：C89(ANSI C)、C90、C95、C99(ISO C)、C11（C1x）。
+
+目前 C++ 语言的标准有：C++98、C++03（对98小幅修改）、C++11（全面进化）、C++14、C++17、C++18、C++20。
+
+目前来说 C++11 是普及标准。
+
+高版本的 GCC 向下兼容，支持低版本的 C++ 标准：
+
+| GCC 版本    | 发布日期  | C++ 标准    |
+| :-------  | :-------  | :-------  |
+| GCC 4.3   | Mar 2008  | C++11 部分支持，C++14 部分支持 |
+| GCC 4.8.1 | May 2013  | C++11 完全支持，C++14 部分支持 |
+| GCC 5.3   | Dec 2015  | C++14 完全支持，C++17 部分支持 |
+| GCC 6.1   | Apr 2016  | C++14 完全支持，C++17 部分支持 |
+| GCC 7.1   | May 2017  | C++17 完全支持    |
+| GCC 8.1   | May 2018  | C++2a 部分支持    |
+| GCC 10.1  | May 2020  | C++20 基本支持    |
+
+
+Microsoft Visual C++，版本对应 C++ 标准关系如下所示：
+
+| VS 版本 | 编译器版本 | C++ 标准    |
+| :-------  | :-------  | :-------  |
+| Visual Studio 6    | vc6 | |
+| Visual Studio 2003 | vc7 | |
+| Visual Studio 2005 | vc8 | |
+| Visual Studio 2008 | vc9 | |
+| Visual Studio 2010 | vc10 | |
+| Visual Studio 2012 | vc11 | C++11 基本支持 |
+| Visual Studio 2013 | vc12 | C++11 基本支持，C++14 部分支持 |
+| Visual Studio 2015 | vc14 | C++17 部分支持 |
+| Visual Studio 2017 | vc15| C++14 完全支持，C++17 基本支持 |
+| Visual Studio 2019 | vc16| C++14 完全支持，C++17 基本支持 |
+
+
+
 
 # 造轮子 Websocket 现在就 Go
 MD: 2019‎年‎12‎月17‎日，‏‎03:45:10
