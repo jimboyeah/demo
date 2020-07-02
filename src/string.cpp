@@ -16,6 +16,7 @@ int main ()
    str3 = str1 + str2;
    cout << "str1 + str2 : " << str3 << endl;
  
+   // str3.resize(5);
    len = str3.size();
    cout << "str3.size() :  " << len << endl;
  

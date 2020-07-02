@@ -5,7 +5,7 @@
 			"encoding": "gbk",
 			"env":
 			{
-				"PATH": "c:/CodeBlocks/MinGW/bin/;%PATH%"
+				"PATH": "c:/MinGW/bin/;c:/CodeBlocks/MinGW/bin/;%PATH%"
 			},
 			"file_regex": "^  (.+)\\((\\d+)\\)(): ((?:fatal )?(?:error|warning) \\w+\\d\\d\\d\\d: .*) \\[.*$",
 			"name": "MinGW Build (Windows)",
@@ -15,7 +15,7 @@
 			[
 				{
 					"name": "Make help",
-					"shell_cmd": "make help"
+					"shell_cmd": "make --version && g++ --version && make help"
 				},
 				{
 					"name": "MinGW Makefiles",
