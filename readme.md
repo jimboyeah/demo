@@ -6,11 +6,11 @@ Demo 这个仓库原本是坚果用来学 Git 版本管理用的，随着演示�
 
 演示项目列表：
 
-- 造轮子 Websocket 现在就 Go
+- OpenGL & OpenCV 进行中
 
-    https://github.com/jimboyeah/demo/tree/go-my-websocket
+    https://github.com/jimboyeah/demo/tree/OpenGL_demos
 
-		git clone -b go-my-websocket https://github.com/jimboyeah/demo.git
+		git clone -b OpenGL_demos https://github.com/jimboyeah/demo.git
 
 - DLL with MinGW
 
@@ -31,6 +31,12 @@ Demo 这个仓库原本是坚果用来学 Git 版本管理用的，随着演示�
     以下网站可以下载 MinGW-x64 GCC 9.2.0：
 
     - [MinGW Distro](https://nuwen.net/mingw.html)
+
+- 造轮子 Websocket 现在就 Go
+
+    https://github.com/jimboyeah/demo/tree/go-my-websocket
+
+        git clone -b go-my-websocket https://github.com/jimboyeah/demo.git
 
 
 # GCC - GNU Compiler Collection
