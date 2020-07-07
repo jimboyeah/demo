@@ -43,16 +43,19 @@
     warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 
 
+
+
 # GCC - GNU Compiler Collection
-- [MinGW](http://www.mingw.org/)
-- [GCC 参数详解](https://www.runoob.com/w3cnote/gcc-parameter-detail.html)
-- [GCC 5 Release Series](https://gcc.gnu.org/gcc-5/)
 - [GCC - the GNU Compiler Collection](https://gcc.gnu.org/)
-- [mingw-w64 GCC for Windows 64 & 32 bits](http://mingw-w64.org/doku.php)
-- [GCC Invocation](https://gcc.gnu.org/onlinedocs/gcc-5.5.0/cpp/Invocation.html)
+- [GCC Releases](http://gcc.gnu.org/releases.html)
+- [GCC 5 Release Series](https://gcc.gnu.org/gcc-5/)
 - [C++ Standards Support in GCC](http://gcc.gnu.org/projects/cxx-status.html)
-- [GCC 版本的发布](http://gcc.gnu.org/releases.html)
 - [C++ compiler support](https://en.cppreference.com/w/cpp/compiler_support)
+- [GCC 8.1.0 Doucmentation](https://gcc.gnu.org/onlinedocs/gcc-8.1.0/gcc/)
+- [GCC Invocation](https://gcc.gnu.org/onlinedocs/gcc-5.5.0/cpp/Invocation.html)
+- [GCC 参数详解](https://www.runoob.com/w3cnote/gcc-parameter-detail.html)
+- [mingw-w64 GCC for Windows 64 & 32 bits](http://mingw-w64.org/doku.php)
+- [MinGW](http://www.mingw.org/)
 - [MinGW Distro](https://nuwen.net/mingw.html)
 
 GNU 编译器套件 GNU Compiler Collection 包括 C、C++、Objective-C、Fortran、Java、Ada 和 Go 语言的前端，也包括了这些语言的库，如 libstdc++、libgcj 等等。GCC 的初衷是为GNU操作系统专门编写的一款编译器。GNU 系统是彻底的自由软件。此处，自由的含义是它尊重用户的自由。
@@ -105,44 +108,6 @@ MinGW Distro 是提供了一个开箱即用的打包,提供最新的 MinGW 17.1 
 |               | zstd 1.4.4    |               |               |
 
 
-GCC 环境变量：
-
-| 变量名       | 功能    |
-| :-------  | :-------  |
-| `CPATH`   | 搜索目录列表，也可以使用命令选项，如 -I. -I/special/include |
-| `C_INCLUDE_PATH`  | 搜索目录列表，分隔符号由 PATH_SEPARATOR 变量指定，通常是分号或冒号 |
-| `CPLUS_INCLUDE_PATH`  | 搜索目录列表 |
-| `OBJC_INCLUDE_PATH`   | 搜索目录列表 |
-| `DEPENDENCIES_OUTPUT` | 非系统依赖的输出，相当命令选项 -MM、-MT 和 -MF 结合 |
-| `SUNPRO_DEPENDENCIES` | 类似 DEPENDENCIES_OUTPUT，除了系统头文件不被忽略，相当 -M 选项 |
-
-
-GCC 命令的常用选项：
-
-| 选项        | 解释    |
-| :-------  | :-------  |
-| -ansi     | 只支持 ANSI 标准的 C 语法。这一选项将禁止 GNU C 的某些特色， 例如 asm 或 typeof 关键词。 |
-| -c        | 只编译并生成目标文件。 |
-| -DMACRO   | 以字符串"1"定义 MACRO 宏。 |
-| -DMACRO   | DEFN    以字符串"DEFN"定义 MACRO 宏。 |
-| -E        | 只运行 C 预编译器。 |
-| -g        | 生成调试信息。GNU 调试器可利用该信息。 |
-| -IDIRECTORY   | 指定 DIRECTORY 为额外的头文件搜索路径。 |
-| -LDIRECTORY   | 指定 DIRECTORY 为额外的函数库搜索路径。 |
-| -lLIBRARY     | 连接时搜索指定的函数库LIBRARY。 |
-| -m486     | 针对 486 进行代码优化。 |
-| -o        | FILE 生成指定的输出文件。用在生成可执行文件时。 |
-| -O0       | 不进行优化处理。 |
-| -O        | 或 -O1    优化生成代码。 |
-| -O2       | 进一步优化。 |
-| -O3       | 比 -O2 更进一步优化，包括 inline 函数。 |
-| -shared   | 生成共享目标文件。通常用在建立共享库时。 |
-| -static   | 禁止使用共享连接。 |
-| -UMACRO   | 取消对 MACRO 宏的定义。 |
-| -w        | 不生成任何警告信息。 |
-| -Wall     | 生成所有警告信息。 |
-
-
 目前 C 语言的标准有：C89(ANSI C)、C90、C95、C99(ISO C)、C11（C1x）。
 
 目前 C++ 语言的标准有：C++98、C++03（对98小幅修改）、C++11（全面进化）、C++14、C++17、C++18、C++20。
@@ -161,21 +126,175 @@ GCC 命令的常用选项：
 | GCC 8.1   | May 2018  | C++2a 部分支持    |
 | GCC 10.1  | May 2020  | C++20 基本支持    |
 
+使用 `g++ -v --help` 可以查询当前版本支持的标准：
+
+|       Standard      | GCC 9.2 | GCC 8.1 | GCC 5.3 |                            Note                            |
+|---------------------|---------|---------|---------|------------------------------------------------------------|
+| -std=c++03          | ✅       | ✅       | ✅       | ✓ ISO 1998 C++ 2003 修订版，同 `-std=c++98`                |
+| -std=c++0x          | ✅       | ✅       | ✅       | ✗ 弃用，`-std=c++11` 替代，同 `-std=c++11`                 |
+| -std=c++11          | ✅       | ✅       | ✅       | ✓ ISO 2011 C++                                             |
+| -std=c++14          | ✅       | ✅       | ✅       | ✓ ISO 2014 C++                                             |
+| -std=c++17          | ✅       | ✅       | ✅       | ✓ ISO 2017 C++                                             |
+| -std=c++1y          | ✅       | ✅       | ✅       | ✗ 弃用，`-std=c++14` 替代，同 `-std=c++14`                 |
+| -std=c++1z          | ✅       | ✅       | ✅       | ✗ 弃用，`-std=c++17` 替代，同 `-std=c++17`                 |
+| -std=c++2a          | ✅       | ✅       | ❌       | ✓ ISO 2020(?) C++ draft [体验]                             |
+| -std=c++98          | ✅       | ✅       | ✅       | ✓ ISO 1998 C++ 2003 修订版                                 |
+| -std=c11            | ✅       | ✅       | ✅       | ✓ ISO 2011 C                                               |
+| -std=c17            | ✅       | ✅       | ❌       | ✓ ISO 2017 C (2018)                                        |
+| -std=c18            | ✅       | ✅       | ❌       | ✓ ISO 2017 C (2018)，同 `-std=c17`                         |
+| -std=c1x            | ✅       | ✅       | ✅       | ✗ 弃用，`-std=c11` 替代，同 `-std=c11`                     |
+| -std=c2x            | ✅       | ❌       | ❌       | ✓ ISO 202X C 标准草案 [体验]                               |
+| -std=c89            | ✅       | ✅       | ✅       | ✓ ISO 1990 C 标准，同 `-std=c90`                           |
+| -std=c90            | ✅       | ✅       | ✅       | ✓ ISO 1990 C                                               |
+| -std=c99            | ✅       | ✅       | ✅       | ✓ ISO 1999 C                                               |
+| -std=c9x            | ✅       | ✅       | ✅       | ✗ 弃用，`-std=c99` 替代，同 `-std=c99`                     |
+| -std=gnu++03        | ✅       | ✅       | ✅       | ✓ ISO 1998 C++ 2003 修订版，带 GNU 扩展，同 `-std=gnu++98` |
+| -std=gnu++0x        | ✅       | ✅       | ✅       | ✗ 弃用，`-std=gnu++11` 替代，同 `-std=gnu++11`             |
+| -std=gnu++11        | ✅       | ✅       | ✅       | ✓ ISO 2011 C++ 标准，带 GNU 扩展                           |
+| -std=gnu++14        | ✅       | ✅       | ✅       | ✓ ISO 2014 C++ 标准，带 GNU 扩展                           |
+| -std=gnu++17        | ✅       | ✅       | ✅       | ✓ ISO 2017 C++ 标准，带 GNU 扩展                           |
+| -std=gnu++1y        | ✅       | ✅       | ✅       | ✗ 弃用，`-std=gnu++14` 替代，同 std=gnu++14                |
+| -std=gnu++1z        | ✅       | ✅       | ✅       | ✗ 弃用，`-std=gnu++17` 替代，同 std=gnu++17                |
+| -std=gnu++2a        | ✅       | ✅       | ❌       | ✓ ISO 2020(?) C++ draft 标准，带 GNU 扩展 [体验]           |
+| -std=gnu++98        | ✅       | ✅       | ✅       | ✓ ISO 1998 C++ 2003 修订版，带 GNU 扩展                    |
+| -std=gnu11          | ✅       | ✅       | ✅       | ✓ ISO 2011 C 标准，带 GNU 扩展                             |
+| -std=gnu17          | ✅       | ✅       | ❌       | ✓ ISO 2017 C (2018)，带 GNU 扩展                           |
+| -std=gnu18          | ✅       | ✅       | ❌       | ✓ ISO 2017 C (2018)，带 GNU 扩展，同 std=gnu17             |
+| -std=gnu1x          | ✅       | ✅       | ✅       | ✗ 弃用，`-std=gnu11` 替代，同 std=gnu11                    |
+| -std=gnu2x          | ✅       | ❌       | ❌       | ✓ ISO 202X C 标准草案，带 GNU 扩展  [体验]                 |
+| -std=gnu89          | ✅       | ✅       | ✅       | ✓ ISO 1990 C 标准，带 GNU 扩展，同 std=gnu90               |
+| -std=gnu90          | ✅       | ✅       | ✅       | ✓ ISO 1990 C 标准，带 GNU 扩展                             |
+| -std=gnu99          | ✅       | ✅       | ✅       | ✓ ISO 1999 C 标准，带 GNU 扩展                             |
+| -std=gnu9x          | ✅       | ✅       | ✅       | ✗ 弃用，`-std=gnu99` 替代，同 std=gnu99                    |
+| -std=iso9899:1990   | ✅       | ✅       | ✅       | ✓ ISO 1990 C 标准，同 std=c90                              |
+| -std=iso9899:199409 | ✅       | ✅       | ✅       | ✓ ISO 1990 C as amended in 1994                            |
+| -std=iso9899:1999   | ✅       | ✅       | ✅       | ✓ ISO 1999 C 标准，同 std=c99                              |
+| -std=iso9899:199x   | ✅       | ✅       | ✅       | ✗ 弃用，`-std=iso9899:1999` 替代，同 std=c99               |
+| -std=iso9899:2011   | ✅       | ✅       | ✅       | ✓ ISO 2011 C 标准，同 std=c11                              |
+| -std=iso9899:2017   | ✅       | ✅       | ❌       | ✓ ISO 2017 C (2018)，同 `-std=c17`                         |
+| -std=iso9899:2018   | ✅       | ✅       | ❌       | ✓ ISO 2017 C (2018)，同 `-std=c17`                         |
+
+
+GCC 环境变量：
+
+| 变量名                | 功能                                                               |
+| :-------              | :-------                                                           |
+| `CPATH`               | 搜索目录列表，也可以使用命令选项，如 -I. -I/special/include        |
+| `C_INCLUDE_PATH`      | 搜索目录列表，分隔符号由 PATH_SEPARATOR 变量指定，通常是分号或冒号 |
+| `CPLUS_INCLUDE_PATH`  | 搜索目录列表                                                       |
+| `OBJC_INCLUDE_PATH`   | 搜索目录列表                                                       |
+| `DEPENDENCIES_OUTPUT` | 非系统依赖的输出，相当命令选项 -MM、-MT 和 -MF 结合                |
+| `SUNPRO_DEPENDENCIES` | 类似 DEPENDENCIES_OUTPUT，除了系统头文件不被忽略，相当 -M 选项     |
+
+
+GCC 命令的常用选项：
+
+|     选项     |                                           解释                                           |
+|--------------|------------------------------------------------------------------------------------------|
+| -ansi        | 只支持 ANSI 标准的 C 语法。这一选项将禁止 GNU C 的某些特色， 例如 asm 或 typeof 关键词。 |
+| -c           | 只编译并生成目标文件。                                                                   |
+| -DMACRO      | 以字符串"1"定义 MACRO 宏。                                                               |
+| -DMACRO DEFN | 以字符串"DEFN"定义 MACRO 宏。                                                            |
+| -E           | 只运行 C 预编译器。                                                                      |
+| -g           | 生成调试信息，一般用于生成 Debug 版本程序，GNU 调试器可利用该信息。                      |
+| -IDIRECTORY  | 指定 DIRECTORY 为额外的头文件搜索路径。                                                  |
+| -LDIRECTORY  | 指定 DIRECTORY 为额外的函数库搜索路径。                                                  |
+| -lLIBRARY    | 连接时搜索指定的函数库LIBRARY。                                                          |
+| -m486        | 针对 486 进行代码优化。                                                                  |
+| -o           | FILE 生成指定的输出文件。用在生成可执行文件时。                                          |
+| -O0          | 不进行优化处理。                                                                         |
+| -O           | 或 -O1    优化生成代码。                                                                 |
+| -O2          | 进一步优化。                                                                             |
+| -O3          | 比 -O2 更进一步优化，包括 inline 函数。                                                  |
+| -s           | 清理符号 --strip-all 生成更小的可执行程序文件                                            |
+| -shared      | 生成共享目标文件。通常用在建立共享库时。                                                 |
+| -static      | 禁止使用共享连接。                                                                       |
+| -UMACRO      | 取消对 MACRO 宏的定义。                                                                  |
+| -w           | 不生成任何警告信息。                                                                     |
+| -Wall        | 生成所有警告信息。                                                                       |
+
 
 Microsoft Visual C++，版本对应 C++ 标准关系如下所示：
 
-| VS 版本 | 编译器版本 | C++ 标准    |
-| :-------  | :-------  | :-------  |
-| Visual Studio 6    | vc6 | |
-| Visual Studio 2003 | vc7 | |
-| Visual Studio 2005 | vc8 | |
-| Visual Studio 2008 | vc9 | |
-| Visual Studio 2010 | vc10 | |
-| Visual Studio 2012 | vc11 | C++11 基本支持 |
-| Visual Studio 2013 | vc12 | C++11 基本支持，C++14 部分支持 |
-| Visual Studio 2015 | vc14 | C++17 部分支持 |
-| Visual Studio 2017 | vc15| C++14 完全支持，C++17 基本支持 |
-| Visual Studio 2019 | vc16| C++14 完全支持，C++17 基本支持 |
+| VS 版本            | 编译器版本 | C++ 标准                       |
+| :-------           | :-------   | :-------                       |
+| Visual Studio 6    | vc6        |                                |
+| Visual Studio 2003 | vc7        |                                |
+| Visual Studio 2005 | vc8        |                                |
+| Visual Studio 2008 | vc9        |                                |
+| Visual Studio 2010 | vc10       |                                |
+| Visual Studio 2012 | vc11       | C++11 基本支持                 |
+| Visual Studio 2013 | vc12       | C++11 基本支持，C++14 部分支持 |
+| Visual Studio 2015 | vc14       | C++17 部分支持                 |
+| Visual Studio 2017 | vc15       | C++14 完全支持，C++17 基本支持 |
+| Visual Studio 2019 | vc16       | C++14 完全支持，C++17 基本支持 |
+
+CodeBlocks 工程 GCC 生成 Debug/Release 的配置，注意 `-g` 调试选项和 `-s`、`-O` 优化选项的使用:
+
+    <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+    <CodeBlocks_project_file>
+        <FileVersion major="1" minor="6" />
+        <Project>
+            <Option title="multithread" />
+            <Option pch_mode="2" />
+            <Option compiler="gcc" />
+            <Build>
+                <Target title="Debug">
+                    <Option output="bin/Debug/multithread" prefix_auto="1" extension_auto="1" />
+                    <Option object_output="obj/Debug/" />
+                    <Option type="1" />
+                    <Option compiler="gcc" />
+                    <Compiler>
+                        <Add option="-g" />
+                    </Compiler>
+                </Target>
+                <Target title="Release">
+                    <Option output="bin/Release/multithread" prefix_auto="1" extension_auto="1" />
+                    <Option object_output="obj/Release/" />
+                    <Option type="1" />
+                    <Option compiler="gcc" />
+                    <Compiler>
+                        <Add option="-O2" />
+                    </Compiler>
+                    <Linker>
+                        <Add option="-s" />
+                    </Linker>
+                </Target>
+            </Build>
+            <Compiler>
+                <Add option="-Wall" />
+            </Compiler>
+            <Unit filename="main.c">
+                <Option compilerVar="CC" />
+            </Unit>
+            <Extensions>
+                <code_completion />
+                <envvars />
+                <debugger />
+                <lib_finder disable_auto="1" />
+            </Extensions>
+        </Project>
+    </CodeBlocks_project_file>
+
+
+## GCC Warning
+
+❌ warning: no return statement in function returning non-void [-Wreturn-type]
+
+一个函数需要返回一个 non-void 数据，但没有返回语句，可以 `return NULL;`。
+
+❌ warning: 'xxx' is deprecated [-Wdeprecated-declarations]
+
+使用了过时的符号定义，更正使用最新的替代符号。
+
+
+
+## GCC Error
+
+❌ error: 'xxx' was not declared in this scope
+
+常见原因，名称写错，或是没有给编译器指定引用的导入库，又或者导入库的版本不对导致链接程序找不到符号定义。
+
 
 
 

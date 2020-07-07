@@ -1,10 +1,20 @@
 cmake_minimum_required(VERSION 2.8)
+# SET(CMAKE_C_COMPILER "c:/Qt/Tools/mingw530_32/bin/gcc.exe")
+# SET(CMAKE_CXX_COMPILER "c:/Qt/Tools/mingw530_32/bin/g++.exe")
+
 project( cppDemo )
 
 # set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -m64 -g -Wall -O2")
 # set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -m64 -g -Wall -O2 -std=c++11")
+set(CMAKE_C_FLAGS "-std=c99 -ffunction-sections -fdata-sections")
+set(CMAKE_C_STANDARD 99)
+set(CMAKE_C_STANDARD_REQUIRED True)
+set(CMAKE_CXX_FLAGS "-std=c++11 -Wl,-Map=object.map,--cref,--gc-section" )
 
-set(CMAKE_CXX_FLAGS "-w" )
+set(BUILD_SHARED_LIBS ON)
+option(BUILD_SHARED_LIBS "Build using shared libraries" ON)
+
+# set(CMAKE_CXX_FLAGS "-w" )
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD 20)
 # set(CMAKE_CXX_STANDARD_REQUIRED True)
@@ -20,15 +30,12 @@ include_directories(
     "./include/" 
     )
 
-# find_library(OpenGL)
-FIND_PACKAGE(OpenGL REQUIRED)
-
 macro(AddDemo name)
     message(STATUS AddDemo=${name})
     add_executable(${name} ${ARGN})
 endmacro()
 
-message(DEMOS LIST:)
+message("DEMOS LIST:")
 aux_source_directory("src/" src)
 foreach(item ${src})
     string(REGEX REPLACE ".*/\(.*\)" "\\1" name ${item})
@@ -40,6 +47,7 @@ endforeach(item)
 # execute_process(COMMAND ${PROJECT_SOURCE_DIR}/bin/lambda.cpp.exe)
 # message(CHECK_PASS Check End)
 
+# add_subdirectory(QtDemos)
 
 enable_testing()
 # set(ENV{CTEST_OUTPUT_ON_FAILURE} 1)
