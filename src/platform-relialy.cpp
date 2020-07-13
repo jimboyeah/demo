@@ -1,6 +1,9 @@
 #include <iostream>
 // https://stackoverflow.com/questions/5919996/how-to-detect-reliably-mac-os-x-ios-linux-windows-in-c-preprocessor
 
+// #include <stdio.h>
+// printf ("\033[5;46;37m%s\033[0m\n", "hello");
+
 #ifdef _WIN32
     //define something for Windows (32-bit and 64-bit, this part is common)
     #ifdef _WIN64

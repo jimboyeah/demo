@@ -39,7 +39,7 @@
 				},
 				{
 					"name": "Make",
-					"shell_cmd": "make -j 8 all"
+					"shell_cmd": "make -j 10 all"
 				},
 				{
 					"name": "Make install",
@@ -47,68 +47,68 @@
 				},
 				{
 					"name": "Make test",
-					"shell_cmd": "make -j 8 && make test"
+					"shell_cmd": "make -j 10 && make test"
 				}
 			],
 			"working_dir": "${project_path}/build"
 		},
 		{
+			"name": "Ninja Make(Windows)",
 			"encoding": "utf8",
 			"env":
 			{
 				"PATH": "c:/MinGW/bin/;%PATH%"
 			},
 			"file_regex": "^  (.+)\\((\\d+)\\)(): ((?:fatal )?(?:error|warning) \\w+\\d\\d\\d\\d: .*) \\[.*$",
-			"name": "Ninja (Windows)",
 			"quiet": true,
 			"cmd": ["cmake", "..", "-G", "Sublime Text 2 - Ninja"],
 			// "shell_cmd": "cmake .. -G \"Sublime Text 2 - Ninja\"",
 			"working_dir": "${project_path}/ninja"
 		},
 		{
-			"name": "cppDemo - free.cpp",
+			"name": "Ninja - free.cpp",
 			"cmd": ["C:/MinGW/bin/ninja.exe", "-f", "build.ninja", "free.cpp"],
 			"working_dir": "${project_path}/ninja",
 			"quiet": true,
 			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)"
 		},
 		{
-			"name": "cppDemo - string-null-tm.cpp",
+			"name": "Ninja - string-null-tm.cpp",
 			"cmd": ["C:/MinGW/bin/ninja.exe", "-f", "build.ninja", "string-null-tm.cpp"],
 			"working_dir": "${project_path}/ninja",
 			"quiet": true,
 			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)"
 		},
 		{
-			"name": "cppDemo - all",
+			"name": "Ninja - all",
 			"cmd": ["C:/MinGW/bin/ninja.exe", "-f", "build.ninja", "all"],
 			"working_dir": "${project_path}/ninja",
 			"quiet": true,
 			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)"
 		},
 		{
-			"name": "cppDemo - clean",
+			"name": "Ninja - clean",
 			"cmd": ["C:/MinGW/bin/ninja.exe", "-f", "build.ninja", "clean"],
 			"working_dir": "${project_path}/ninja",
 			"quiet": true,
 			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)"
 		},
 		{
-			"name": "cppDemo - rebuild_cache",
+			"name": "Ninja - rebuild_cache",
 			"cmd": ["C:/MinGW/bin/ninja.exe", "-f", "build.ninja", "rebuild_cache"],
 			"working_dir": "${project_path}/ninja",
 			"quiet": true,
 			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)"
 		},
 		{
-			"name": "cppDemo - test",
+			"name": "Ninja - test",
 			"cmd": ["C:/MinGW/bin/ninja.exe", "-f", "build.ninja", "test"],
 			"working_dir": "${project_path}/ninja",
 			"quiet": true,
 			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)"
 		},
 		{
-			"name": "cppDemo - edit_cache",
+			"name": "Ninja - edit_cache",
 			"cmd": ["C:/MinGW/bin/ninja.exe", "-f", "build.ninja", "edit_cache"],
 			"working_dir": "${project_path}/ninja",
 			"quiet": true,
