@@ -11,7 +11,7 @@
 			"file_regex": "^  (.+)\\((\\d+)\\)(): ((?:fatal )?(?:error|warning) \\w+\\d\\d\\d\\d: .*) \\[.*$",
 			"name": "MinGW Build (Windows)",
 			"quiet": true,
-			"shell_cmd": "cmake --build .",
+			"cmd": ["cmake", "--help"],
 			"variants":
 			[
 				{
@@ -20,6 +20,9 @@
 				}, {
 					"name": "MinGW Makefiles",
 					"shell_cmd": "cmake .. -G \"MinGW Makefiles\""
+				}, {
+					"name": "Make Sublime Text 2 - Ninja",
+					"shell_cmd": "cmake .. -G \"Sublime Text 2 - Ninja\""
 				}, {
 					"name": "clean",
 					"shell_cmd": "make clean"

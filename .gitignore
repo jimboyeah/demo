@@ -1,5 +1,8 @@
 # .gitignore
 
 # bin
-lib
+# lib
 build
+ninja/bin
+ninja/CMakeFiles
+# ninja

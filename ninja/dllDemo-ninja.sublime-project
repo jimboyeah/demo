@@ -1,0 +1,107 @@
+{
+	"folders":
+	[
+		{
+			"path": "../"
+		}
+	],
+	"build_systems":
+	[
+		{
+			"name": "dllDemo - all",
+			"cmd": ["C:/MinGW/bin/ninja.exe", "-f", "build.ninja", "all"],
+			"working_dir": "${project_path}",
+			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)"
+		},
+		{
+			"name": "dllDemo - clean",
+			"cmd": ["C:/MinGW/bin/ninja.exe", "-f", "build.ninja", "clean"],
+			"working_dir": "${project_path}",
+			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)"
+		},
+		{
+			"name": "dllDemo - install/strip",
+			"cmd": ["C:/MinGW/bin/ninja.exe", "-f", "build.ninja", "install/strip"],
+			"working_dir": "${project_path}",
+			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)"
+		},
+		{
+			"name": "dllDemo - point",
+			"cmd": ["C:/MinGW/bin/ninja.exe", "-f", "build.ninja", "point"],
+			"working_dir": "${project_path}",
+			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)"
+		},
+		{
+			"name": "dllDemo - point/fast",
+			"cmd": ["C:/MinGW/bin/ninja.exe", "-f", "build.ninja", "point/fast"],
+			"working_dir": "${project_path}",
+			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)"
+		},
+		{
+			"name": "dllDemo - hello",
+			"cmd": ["C:/MinGW/bin/ninja.exe", "-f", "build.ninja", "hello"],
+			"working_dir": "${project_path}",
+			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)"
+		},
+		{
+			"name": "dllDemo - hello/fast",
+			"cmd": ["C:/MinGW/bin/ninja.exe", "-f", "build.ninja", "hello/fast"],
+			"working_dir": "${project_path}",
+			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)"
+		},
+		{
+			"name": "dllDemo - install/local",
+			"cmd": ["C:/MinGW/bin/ninja.exe", "-f", "build.ninja", "install/local"],
+			"working_dir": "${project_path}",
+			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)"
+		},
+		{
+			"name": "dllDemo - install",
+			"cmd": ["C:/MinGW/bin/ninja.exe", "-f", "build.ninja", "install"],
+			"working_dir": "${project_path}",
+			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)"
+		},
+		{
+			"name": "dllDemo - edit_cache",
+			"cmd": ["C:/MinGW/bin/ninja.exe", "-f", "build.ninja", "edit_cache"],
+			"working_dir": "${project_path}",
+			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)"
+		},
+		{
+			"name": "dllDemo - rebuild_cache",
+			"cmd": ["C:/MinGW/bin/ninja.exe", "-f", "build.ninja", "rebuild_cache"],
+			"working_dir": "${project_path}",
+			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)"
+		},
+		{
+			"name": "dllDemo - list_install_components",
+			"cmd": ["C:/MinGW/bin/ninja.exe", "-f", "build.ninja", "list_install_components"],
+			"working_dir": "${project_path}",
+			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)"
+		},
+		{
+			"name": "dllDemo - PointTest",
+			"cmd": ["C:/MinGW/bin/ninja.exe", "-f", "build.ninja", "PointTest"],
+			"working_dir": "${project_path}",
+			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)"
+		},
+		{
+			"name": "dllDemo - PointTest/fast",
+			"cmd": ["C:/MinGW/bin/ninja.exe", "-f", "build.ninja", "PointTest/fast"],
+			"working_dir": "${project_path}",
+			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)"
+		},
+		{
+			"name": "dllDemo - app",
+			"cmd": ["C:/MinGW/bin/ninja.exe", "-f", "build.ninja", "app"],
+			"working_dir": "${project_path}",
+			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)"
+		},
+		{
+			"name": "dllDemo - app/fast",
+			"cmd": ["C:/MinGW/bin/ninja.exe", "-f", "build.ninja", "app/fast"],
+			"working_dir": "${project_path}",
+			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)"
+		}
+	]
+}
