@@ -371,7 +371,7 @@
 			"file": "dllDemo.sublime-project",
 			"settings":
 			{
-				"buffer_size": 1554,
+				"buffer_size": 1596,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -415,7 +415,7 @@
 			"file": ".gitignore",
 			"settings":
 			{
-				"buffer_size": 29,
+				"buffer_size": 65,
 				"line_ending": "Windows"
 			}
 		}
@@ -423,6 +423,66 @@
 	"build_system": "MinGW Build (Windows)",
 	"build_system_choices":
 	[
+		[
+			[
+				[
+					"MinGW Build (Windows)",
+					""
+				],
+				[
+					"MinGW Build (Windows)",
+					"Make HELP"
+				],
+				[
+					"MinGW Build (Windows)",
+					"MinGW Makefiles"
+				],
+				[
+					"MinGW Build (Windows)",
+					"Make Sublime Text 2 - Ninja"
+				],
+				[
+					"MinGW Build (Windows)",
+					"clean"
+				],
+				[
+					"MinGW Build (Windows)",
+					"clear all"
+				],
+				[
+					"MinGW Build (Windows)",
+					"Make"
+				],
+				[
+					"MinGW Build (Windows)",
+					"Make install"
+				],
+				[
+					"MinGW Build (Windows)",
+					"Obj Dump"
+				],
+				[
+					"MinGW Build (Windows)",
+					"Make PointTest"
+				],
+				[
+					"MinGW Build (Windows)",
+					"Java Hello"
+				],
+				[
+					"MinGW Build (Windows)",
+					"C# Hello"
+				],
+				[
+					"Packages/SublimeREPL/sublimerepl_build_system_hack.sublime-build",
+					""
+				]
+			],
+			[
+				"MinGW Build (Windows)",
+				"Make HELP"
+			]
+		],
 		[
 			[
 				[
@@ -1336,6 +1396,10 @@
 		"selected_items":
 		[
 			[
+				"staus",
+				"Git: Status"
+			],
+			[
 				"gitstat",
 				"Git: Status"
 			],
@@ -1570,8 +1634,6 @@
 	"expanded_folders":
 	[
 		"/C/coding/md-code/dllDemo",
-		"/C/coding/md-code/dllDemo/example",
-		"/C/coding/md-code/dllDemo/include",
 		"/C/coding/md-code/dllDemo/src"
 	],
 	"file_history":
@@ -1766,20 +1828,21 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1554,
+						"buffer_size": 1596,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1347,
-								1342
+								365,
+								365
 							]
 						],
 						"settings":
 						{
 							"incomplete_sync": null,
+							"is_init_dirty_state": false,
 							"origin_encoding": "ASCII",
 							"remote_loading": false,
 							"synced": false,
@@ -1787,7 +1850,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 350.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -1813,6 +1876,8 @@
 						"settings":
 						{
 							"incomplete_sync": null,
+							"is_init_dirty_state": false,
+							"origin_encoding": "ASCII",
 							"remote_loading": false,
 							"synced": false,
 							"syntax": "Packages/CMake/CMake.sublime-syntax",
@@ -1846,6 +1911,7 @@
 						"settings":
 						{
 							"incomplete_sync": null,
+							"is_init_dirty_state": false,
 							"origin_encoding": "ASCII",
 							"remote_loading": false,
 							"synced": false,
@@ -1878,6 +1944,7 @@
 						"settings":
 						{
 							"incomplete_sync": null,
+							"is_init_dirty_state": false,
 							"origin_encoding": "ASCII",
 							"remote_loading": false,
 							"synced": false,
@@ -1910,6 +1977,7 @@
 						"settings":
 						{
 							"incomplete_sync": null,
+							"is_init_dirty_state": false,
 							"origin_encoding": "ASCII",
 							"remote_loading": false,
 							"synced": false,
@@ -1927,10 +1995,10 @@
 				{
 					"buffer": 5,
 					"file": ".gitignore",
-					"semi_transient": true,
+					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 29,
+						"buffer_size": 65,
 						"regions":
 						{
 						},
@@ -1944,6 +2012,7 @@
 						"settings":
 						{
 							"incomplete_sync": null,
+							"is_init_dirty_state": false,
 							"origin_encoding": "ASCII",
 							"remote_loading": false,
 							"synced": false,

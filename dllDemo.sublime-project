@@ -22,7 +22,9 @@
 					"shell_cmd": "cmake .. -G \"MinGW Makefiles\""
 				}, {
 					"name": "Make Sublime Text 2 - Ninja",
+					"working_dir": "${project_path}/ninja",
 					"shell_cmd": "cmake .. -G \"Sublime Text 2 - Ninja\""
+
 				}, {
 					"name": "clean",
 					"shell_cmd": "make clean"
