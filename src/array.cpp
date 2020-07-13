@@ -17,6 +17,10 @@ int main()
                       std::ostream_iterator<int>(std::cout, " "));
  
     std::cout << '\n';
+
+    // int a[3];
+    // int b[] = {1,2,3};
+    // a = b;
  
     // ranged for loop is supported
     for(const auto& s: a3)

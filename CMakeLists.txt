@@ -28,6 +28,8 @@ endif()
 
 include_directories( 
     "./include/" 
+    "c:/boost_1_73_0/" 
+    "c:/boost_1_73_0/boost/" 
     )
 
 macro(AddDemo name)
@@ -38,6 +40,13 @@ endmacro()
 message("DEMOS LIST:")
 aux_source_directory("src/" src)
 foreach(item ${src})
+    string(REGEX REPLACE ".*/\(.*\)" "\\1" name ${item})
+    AddDemo(${name} ${item})
+endforeach(item)
+
+message("BOOST DEMOS LIST:")
+aux_source_directory("boost/" boost)
+foreach(item ${boost})
     string(REGEX REPLACE ".*/\(.*\)" "\\1" name ${item})
     AddDemo(${name} ${item})
 endforeach(item)

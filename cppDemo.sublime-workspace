@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"boo",
+				"boost_1_73_0/"
+			],
+			[
+				"link",
+				"link_libraries\tcommand"
+			],
+			[
 				"m1",
 				"m1_Iter"
 			],
@@ -371,36 +379,55 @@
 			"file": "cppDemo.sublime-project",
 			"settings":
 			{
-				"buffer_size": 1356,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
+				"buffer_size": 1433,
+				"line_ending": "Unix"
 			}
 		},
 		{
 			"file": "CMakeLists.txt",
 			"settings":
 			{
-				"buffer_size": 1983,
+				"buffer_size": 2385,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "src/macro.cpp",
+			"file": "boost/smart-pointer.cpp",
 			"settings":
 			{
-				"buffer_size": 831,
+				"buffer_size": 614,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "src/file-binary.cpp",
+			"file": "src/free.cpp",
 			"settings":
 			{
-				"buffer_size": 533,
+				"buffer_size": 1233,
+				"encoding": "UTF-8",
+				"line_ending": "Windows",
+				"name": "#include <cstdlib>"
+			}
+		},
+		{
+			"file": "src/multithread.cpp",
+			"settings":
+			{
+				"buffer_size": 1355,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "Microsoft Windows [版本 10.0.18362.900]\n(c) 2019 Microsoft Corporation。保留所有权利。\n\nC:\\coding\\md-code\\cppDemos\\build>dir\n 驱动器 C 中的卷没有标签。\n 卷的序列号是 2235-9063\n\n C:\\coding\\md-code\\cppDemos\\build 的目录\n\n2020-07-11  03:49    <DIR>          .\n2020-07-11  03:49    <DIR>          ..\n2020-07-07  19:48            16,086 CMakeCache.txt\n2020-07-11  03:50    <DIR>          CMakeFiles\n2020-07-07  19:48             1,566 cmake_install.cmake\n2020-07-11  03:49             1,314 CTestTestfile.cmake\n2020-07-11  03:49            46,127 Makefile\n2020-07-11  03:50           239,784 object.map\n2020-07-07  19:38    <DIR>          QtDemos\n               5 个文件        304,877 字节\n               4 个目录 59,730,931,712 可用字节\n\nC:\\coding\\md-code\\cppDemos\\build>cd ..\\bin\n\nC:\\coding\\md-code\\cppDemos\\bin>smart-pointer.cpp\nsmart-pointer.cpp <data>\n\nC:\\coding\\md-code\\cppDemos\\bin>smart-pointer.cpp\nsmart-pointer.cpp <data>\n\nC:\\coding\\md-code\\cppDemos\\bin>",
+			"settings":
+			{
+				"buffer_size": 918,
+				"line_ending": "Windows",
+				"name": "*REPL* [shell]",
+				"scratch": true
 			}
 		}
 	],
@@ -448,7 +475,7 @@
 			],
 			[
 				"MinGW Build (Windows)",
-				"MinGW Makefiles"
+				"Make"
 			]
 		],
 		[
@@ -552,7 +579,55 @@
 			],
 			[
 				"MinGW Build (Windows)",
-				"MinGW Makefiles"
+				"Make"
+			]
+		],
+		[
+			[
+				[
+					"MinGW Build (Windows)",
+					""
+				],
+				[
+					"MinGW Build (Windows)",
+					"Make help"
+				],
+				[
+					"MinGW Build (Windows)",
+					"MinGW Makefiles"
+				],
+				[
+					"MinGW Build (Windows)",
+					"WSL demo"
+				],
+				[
+					"MinGW Build (Windows)",
+					"clean"
+				],
+				[
+					"MinGW Build (Windows)",
+					"clear all"
+				],
+				[
+					"MinGW Build (Windows)",
+					"Make"
+				],
+				[
+					"MinGW Build (Windows)",
+					"Make install"
+				],
+				[
+					"MinGW Build (Windows)",
+					"Make test"
+				],
+				[
+					"Packages/SublimeREPL/sublimerepl_build_system_hack.sublime-build",
+					""
+				]
+			],
+			[
+				"MinGW Build (Windows)",
+				"Make"
 			]
 		],
 		[
@@ -792,7 +867,7 @@
 			]
 		]
 	],
-	"build_varint": "MinGW Makefiles",
+	"build_varint": "",
 	"command_palette":
 	{
 		"height": 0.0,
@@ -800,12 +875,24 @@
 		"selected_items":
 		[
 			[
-				"edit",
-				"Project: Edit Project"
-			],
-			[
 				"push",
 				"Git: Push Current Branch"
+			],
+			[
+				"comm\t",
+				"Git: Commit"
+			],
+			[
+				"status",
+				"Git: Status"
+			],
+			[
+				"adda",
+				"Git: Add All"
+			],
+			[
+				"edit",
+				"Project: Edit Project"
 			],
 			[
 				"com",
@@ -814,10 +901,6 @@
 			[
 				"add",
 				"Git: Add All"
-			],
-			[
-				"status",
-				"Git: Status"
 			],
 			[
 				"chang",
@@ -866,10 +949,6 @@
 			[
 				"disb",
 				"Package Control: Disable Package"
-			],
-			[
-				"comm\t",
-				"Git: Commit"
 			],
 			[
 				"aadd",
@@ -1034,22 +1113,56 @@
 	"expanded_folders":
 	[
 		"/C/coding/md-code/cppDemos",
-		"/C/coding/md-code/cppDemos/src"
+		"/C/coding/md-code/cppDemos/bin",
+		"/C/coding/md-code/cppDemos/QtDemos",
+		"/C/boost_1_73_0",
+		"/C/boost_1_73_0/boost"
 	],
 	"file_history":
 	[
+		"/C/coding/md-code/cppDemos/QtDemos/qtDemo.sublime-project",
+		"/C/boost_1_73_0/boost/scoped_array.hpp",
+		"/C/coding/src/base_struct/bitmap.cpp",
+		"/C/coding/md-code/cppDemos/src/file-binary.cpp",
+		"/C/coding/src/dynamic-memory/main.cpp",
+		"/C/coding/src/hardware/int1a.cpp",
+		"/C/coding/src/makefile/nmake.md",
+		"/C/coding/src/makefile/makefile.md",
+		"/C/coding/src/makefile/dlfcn/dlfcn.h",
+		"/C/coding/src/mysql/main.cpp",
+		"/C/coding/src/mysql/mysql.md",
+		"/C/coding/src/mfcDemo/res/demo.rc2",
+		"/C/coding/src/mfcDemo/Release/demo.res",
+		"/C/coding/src/makefile/dlfcn/test.txt",
+		"/C/coding/src/makefile/dlfcn/dlfcn.c",
+		"/C/coding/src/makefile/dlfcn/README.md",
+		"/C/coding/src/makefile/libtool/libtool-2.4-1-mingw32.RELEASE_NOTES.txt",
+		"/C/coding/src/makefile/libltdl.txt",
+		"/C/coding/src/flex/yuetai/readme.txt",
+		"/C/coding/src/flex/yuetai/sniffer/SharpPcap_3.0.0_ReleaseNotes.txt",
+		"/C/coding/md-code/cppDemos/src/array.cpp",
+		"/C/coding/md-code/cppDemos/src/virtual.cpp",
+		"/C/coding/cpp/virtual.cpp",
+		"/C/coding/md-code/cppDemos/QtDemos/CMakeLists.txt",
+		"/C/coding/md-code/cppDemos/.gitignore",
+		"/C/coding/cpp/qt5/main.cpp",
+		"/C/coding/cpp/qt/main.cpp",
+		"/C/coding/md-code/cppDemos/src/../QtDemos/demo.cpp",
+		"/C/coding/md-code/cppDemos/readme.md",
+		"/C/coding/cpp/rvalue.cpp",
+		"/C/coding/cpp/singleton.cpp",
+		"/C/coding/cpp/multithread/main.c",
+		"/C/coding/md-code/cppDemos/src/macro.cpp",
+		"/C/coding/cpp/multithread/multithread.cbp",
 		"/C/coding/md-code/cppDemos/src/template-class.cpp",
 		"/C/coding/md-code/cppDemos/src/ReadFile.cpp",
-		"/C/coding/md-code/cppDemos/readme.md",
 		"/C/MinGW/set_distro_paths.bat",
 		"/C/coding/md-code/cppDemos/src/default-args.cpp",
 		"/C/coding/md-code/cppDemos/src/platform-relialy.c",
-		"/C/coding/md-code/cppDemos/.gitignore",
 		"/C/coding/md-code/cppDemos/src/file-text.cpp",
 		"/C/coding/md-code/cppDemos/src/template-func.cpp",
 		"/C/coding/md-code/cppDemos/autogit.bat",
 		"/C/coding/md-code/cppDemos/src/string.cpp",
-		"/C/coding/md-code/cppDemos/src/array.cpp",
 		"/C/coding/md-code/cppDemos/src/set.cpp",
 		"/C/coding/md-code/cppDemos/src/reference.cpp",
 		"/C/coding/md-code/cppDemos/src/list.cpp",
@@ -1134,42 +1247,11 @@
 		"/C/Qt/5.9/mingw53_32/lib/pkgconfig/Qt5UiTools.pc",
 		"/C/Qt/Examples/Qt-5.9/examples.pro",
 		"/C/Qt/Examples/Qt-5.9/activeqt/shared.pri",
-		"/C/Qt/5.9/Src/qtdoc/doc/src/snippets/widgets-tutorial/notepad/notepad.cpp",
-		"/C/Qt/5.9/Src/qtmultimedia/examples/multimedia/video/qmlvideofx/qmlapplicationviewer/qmlapplicationviewer.h",
-		"/C/Qt/Examples/Qt-5.9/activeqt/simpleqml/main.qml",
-		"/C/Qt/5.9/Src/qtdoc/doc/src/snippets/widgets-tutorial/build/notepad.creator",
-		"/C/Qt/5.9/Src/qtdoc/doc/src/snippets/widgets-tutorial/build/.moc/release/moc_notepad.cpp",
-		"/C/Qt/5.9/Src/qtdoc/doc/src/snippets/widgets-tutorial/notepad/main.cpp",
-		"/C/Qt/n/qtqm/Notepad.cpp",
-		"/C/Qt/n/qtqm/Makefile",
-		"/C/Qt/n/qt3d/main.qml",
-		"/C/Qt/5.9/Src/qtwebengine/src/3rdparty/chromium/third_party/protobuf/csharp/src/AddressBook/AddressBook.csproj",
-		"/C/Qt/n/build/release/qrc_qml.cpp",
-		"/C/Qt/n/qtq/main.cpp",
-		"/C/Qt/n/qt3d/CMakeLists.txt",
-		"/C/Qt/n/build/Makefile",
-		"/C/Qt/n/qtq/qml.qrc",
-		"/C/Qt/5.9/mingw53_32/lib/cmake/Qt5/Qt5Config.cmake",
-		"/C/Qt/5.9/mingw53_32/include/QtWidgets/qapplication.h",
-		"/C/Qt/5.9/mingw53_32/include/QtWidgets/QApplication",
-		"/C/Users/OCEAN/AppData/Local/Temp/QtCreator-P1XkOA/qtc-cmake-XXa80ffn/CMakeFiles/CMakeOutput.log",
-		"/C/coding/md/ccpp.md",
-		"/C/coding/md-code/coding/                 from C",
-		"/C/coding/md-code/opencv/display/mingw/Makefile",
-		"/C/Users/OCEAN/AppData/Roaming/Sublime Text 3/Packages/User/MinGW.sublime-build",
-		"/C/Users/OCEAN/AppData/Roaming/Sublime Text 3/Packages/User/Qt+MinGW.sublime-build",
-		"/C/coding/md-code/coding/g++.exe",
-		"/C/coding/md-code/coding/ std",
-		"/C/download/OpenCV/OpenCV-MinGW64-GCC810/Makefile",
-		"/C/download/cuda_11.0.1_win10_network.exe",
-		"/C/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v10.1/extras/CUPTI/samples/cupti_query/cupti_query.cpp",
-		"/C/Users/OCEAN/AppData/Local/Temp/Rar$DIa15028.40092/README.md",
-		"/C/download/OpenCV/opencv/b/CMakeVars.txt",
-		"/C/download/OpenCV/opencv/b/CMakeDownloadLog.txt"
+		"/C/Qt/5.9/Src/qtdoc/doc/src/snippets/widgets-tutorial/notepad/notepad.cpp"
 	],
 	"find":
 	{
-		"height": 40.0
+		"height": 22.0
 	},
 	"find_in_files":
 	{
@@ -1186,6 +1268,18 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"src",
+			"void *",
+			"sleep",
+			"Qt/Tools/mingw530_32",
+			"\")",
+			"/usr/bin/",
+			"src",
+			"AddDemo",
+			"-l",
+			"Qt53DCore",
+			"* ",
+			"4",
 			"std::cerr",
 			"NULL",
 			"?",
@@ -1280,15 +1374,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1356,
+						"buffer_size": 1433,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								71,
-								71
+								837,
+								837
 							]
 						],
 						"settings":
@@ -1302,7 +1396,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 118.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 2,
@@ -1314,15 +1408,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1983,
+						"buffer_size": 2385,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								232,
-								232
+								853,
+								853
 							]
 						],
 						"settings":
@@ -1337,7 +1431,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 189.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 3,
@@ -1345,29 +1439,30 @@
 				},
 				{
 					"buffer": 2,
-					"file": "src/macro.cpp",
+					"file": "boost/smart-pointer.cpp",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 831,
+						"buffer_size": 614,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								167,
-								80
+								472,
+								472
 							]
 						],
 						"settings":
 						{
 							"incomplete_sync": null,
+							"is_init_dirty_state": false,
 							"origin_encoding": "ASCII",
 							"remote_loading": false,
 							"synced": false,
 							"syntax": "Packages/C++/C++.sublime-syntax",
-							"tab_size": 4,
+							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
@@ -1379,23 +1474,24 @@
 				},
 				{
 					"buffer": 3,
-					"file": "src/file-binary.cpp",
+					"file": "src/free.cpp",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 533,
+						"buffer_size": 1233,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								74,
-								74
+								1146,
+								1146
 							]
 						],
 						"settings":
 						{
+							"auto_name": "#include <cstdlib>",
 							"incomplete_sync": null,
 							"is_init_dirty_state": false,
 							"origin_encoding": "ASCII",
@@ -1406,7 +1502,126 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
+						"translation.y": 141.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "src/multithread.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1355,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								158,
+								153
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"is_init_dirty_state": false,
+							"origin_encoding": "UTF-8",
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/C++/C++.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
 						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 5,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 918,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								918,
+								918
+							]
+						],
+						"settings":
+						{
+							"auto_complete": true,
+							"auto_indent": false,
+							"detect_indentation": false,
+							"gutter": false,
+							"history_arrows": true,
+							"incomplete_sync": null,
+							"indent_subsequent_lines": false,
+							"is_init_dirty_state": false,
+							"line_numbers": false,
+							"repl": true,
+							"repl_external_id": "shell",
+							"repl_id": "848fb89a530e4e67bea00dfa93a60ced",
+							"repl_restart_args":
+							{
+								"cmd":
+								{
+									"linux":
+									[
+										"bash",
+										"-i"
+									],
+									"osx":
+									[
+										"bash",
+										"-i"
+									],
+									"windows":
+									[
+										"cmd.exe"
+									]
+								},
+								"cmd_postfix": "\n",
+								"cwd": "$file_path",
+								"encoding":
+								{
+									"linux": "utf-8",
+									"osx": "utf-8",
+									"windows": "$win_cmd_encoding"
+								},
+								"env":
+								{
+								},
+								"external_id": "shell",
+								"suppress_echo": true,
+								"syntax": "Packages/Text/Plain text.tmLanguage",
+								"type": "subprocess"
+							},
+							"repl_sublime2": false,
+							"smart_indent": false,
+							"spell_check": false,
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 250.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
@@ -1417,7 +1632,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 24.0
+		"height": 22.0
 	},
 	"input":
 	{
@@ -1432,6 +1647,12 @@
 				0,
 				1,
 				1
+			],
+			[
+				0,
+				1,
+				1,
+				2
 			]
 		],
 		"cols":
@@ -1442,6 +1663,7 @@
 		"rows":
 		[
 			0.0,
+			0.747181964573,
 			1.0
 		]
 	},
@@ -1466,7 +1688,7 @@
 	"project": "cppDemo.sublime-project",
 	"replace":
 	{
-		"height": 44.0
+		"height": 40.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -1475,6 +1697,14 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"scoped_array.hpp",
+				"boost_1_73_0\\boost\\scoped_array.hpp"
+			],
+			[
+				"readme",
+				"CPP Demo Project\\readme.md"
+			],
 			[
 				"la",
 				"CPP Demo Project\\src\\lambda.cpp"
@@ -1978,14 +2208,6 @@
 			[
 				"TagHelperContent",
 				"source\\Razor-master\\src\\Microsoft.AspNetCore.Razor\\TagHelpers\\TagHelperContent.cs"
-			],
-			[
-				"IHtmlContentContainer",
-				"source\\aspnetcore-master\\src\\Html\\Abstractions\\src\\IHtmlContentContainer.cs"
-			],
-			[
-				"TagHelperOutput",
-				"source\\Razor-master\\src\\Microsoft.AspNetCore.Razor\\TagHelpers\\TagHelperOutput.cs"
 			]
 		],
 		"width": 0.0
@@ -1993,9 +2215,21 @@
 	"select_project":
 	{
 		"height": 500.0,
-		"last_filter": "",
+		"last_filter": "ogl",
 		"selected_items":
 		[
+			[
+				"ogl",
+				"C:\\download\\OpenCV\\ogldev-source\\ogldev.sublime-project"
+			],
+			[
+				"opencv",
+				"C:\\coding\\md-code\\opencv\\OpenCV-Demos.sublime-project"
+			],
+			[
+				"free",
+				"C:\\download\\OpenCV\\freeglut-3.2.1\\freeglut-3.2.1.sublime-project"
+			],
 			[
 				"",
 				"C:\\download\\OpenCV\\ogl-master\\OpenGL-tutorial.sublime-project"
@@ -2017,7 +2251,7 @@
 	},
 	"select_symbol":
 	{
-		"height": 325.0,
+		"height": 392.0,
 		"last_filter": "createTrackbar",
 		"selected_items":
 		[
@@ -2126,7 +2360,7 @@
 				"TryAddSingleton"
 			]
 		],
-		"width": 610.0
+		"width": 796.0
 	},
 	"selected_group": 0,
 	"settings":

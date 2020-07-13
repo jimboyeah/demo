@@ -1,6 +1,8 @@
 # 仓库说明
 
-此分支演示 CPP 程序，还有 CMake 自动编译，及 CMake Test 的使用。
+此分支演示 CPP 程序，还有 CMake + Ninja + GNU Make 自动编译，及 CMake Test 的使用。
+
+![gitchat](https://github.com/jimboyeah/demo/blob/cppDemos/sublime-cmake-ninja.jpg)
 
 使用 Sublime 工程管理，Ctrl-Shift-B 选择编译命令，要求安装 MinGW 编译器。
 
@@ -41,7 +43,6 @@
     Copyright (C) 2019 Free Software Foundation, Inc.
     This is free software; see the source for copying conditions.  There is NO
     warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
-
 
 
 
@@ -174,6 +175,7 @@ MinGW Distro 是提供了一个开箱即用的打包,提供最新的 MinGW 17.1 
 | -std=iso9899:2017   | ✅       | ✅       | ❌       | ✓ ISO 2017 C (2018)，同 `-std=c17`                         |
 | -std=iso9899:2018   | ✅       | ✅       | ❌       | ✓ ISO 2017 C (2018)，同 `-std=c17`                         |
 
+## GCC CLI 命令
 
 GCC 环境变量：
 
@@ -207,8 +209,8 @@ GCC 命令的常用选项：
 | -O2          | 进一步优化。                                                                             |
 | -O3          | 比 -O2 更进一步优化，包括 inline 函数。                                                  |
 | -s           | 清理符号 --strip-all 生成更小的可执行程序文件                                            |
-| -shared      | 生成共享目标文件。通常用在建立共享库时。                                                 |
-| -static      | 禁止使用共享连接。                                                                       |
+| -shared      | 生成共享目标文件，通常用在建立共享库时。                                                 |
+| -static      | 使用静态共享连接。                                                                       |
 | -UMACRO      | 取消对 MACRO 宏的定义。                                                                  |
 | -w           | 不生成任何警告信息。                                                                     |
 | -Wall        | 生成所有警告信息。                                                                       |
@@ -277,6 +279,17 @@ CodeBlocks 工程 GCC 生成 Debug/Release 的配置，注意 `-g` 调试选项�
     </CodeBlocks_project_file>
 
 
+GCC 编译命令与链接命令使用，加 `-shared` 链接选项生成动态链接库：
+
+    >gcc -c -o add_basic.o add_basic.c
+    >gcc -o add_basic.dll -s -shared add_basic.o -Wl,--subsystem,windows
+
+以上分步演示了编译和链接两个过程，但是 GCC 可以一步执行：
+
+    gcc -o add_basic.dll -s -shared add_basic.c -Wl,--subsystem,windows
+
+
+
 ## GCC Warning
 
 ❌ warning: no return statement in function returning non-void [-Wreturn-type]
@@ -296,1358 +309,710 @@ CodeBlocks 工程 GCC 生成 Debug/Release 的配置，注意 `-g` 调试选项�
 常见原因，名称写错，或是没有给编译器指定引用的导入库，又或者导入库的版本不对导致链接程序找不到符号定义。
 
 
+❌ undefined reference to `xxx`
 
+找不到引用符号的定义，链接程序没有大指定的链接库中找到对应符号，可能是导入库文件没在给链接程序指定。如果确实已经指定导入库文件，那需要确实，依赖使用的动态链接库和导入库版本是不一致，要确保编译器一致和编译的架构一致，尽量版本号也一致。
 
-# STL - Standard Template Library
+提示一下，像 VCpkg 会自动查找依赖的库，像本系统一样，编译 libpng 进出现 zlib 库的各种函数无定义：
 
-STL - Standard Template Library 标准模板库，提供了通用的函数模板和类模板。
+    undefined reference to `deflateEnd'
+    undefined reference to `crc32'
 
-STL 有六大组件类型：
+这是因为编译依赖库时找到的 zlib 是来自 Anaconda 中安装的库文件，而在自己编写的程序中引用的是另一个版本的库，前后不一致而导致找不到符号：
 
-- 容器 Containers
+    C:/Anaconda3/Library/include
+    C:/Anaconda3/Library/lib/z.lib
 
-    STL 容器是一种类模板 Class Template，主要分为`关联式容器` Associated containers 和`序列式容器` Sequence containers，存放各种数据结构，如 Vector，List，Deque，Set，Map。就体积而言，这一部分很像冰山载海面的比率。
-
-- 算法 Algorithms
-
-    各种常用算法，如Sort，Search，Copy，Erase。从实现的角度来看，STL 算法是一种函数模板 Function Templates。
-
-- 迭代器 Iterators
-
-    扮演容器与算法之间的胶合剂，是所谓的泛型指针，共有五种，以及其它衍生变化。从实现的角度来看，迭代器是一种将 `Operators*`, `Operator->`, `Operator++`, `Operator–` 等相关操作予以重载的 Class Template。所有 STL 容器都附带有自己专属的迭代器。是的，只有容器设计者才知道如何遍历自己的元素，原生指针 Native pointer 也是一种迭代器。
-
-- 仿函数 Functors
-
-    **行为类似函数，可作为算法的某种策略 Policy。**从实现的角度来看，仿函数是一种重载了 `Operator()` 的 Class 或 Class Template。一般函数指针可视为狭义的仿函数。
-
-- 适配器 Adapters
-
-    **一种用来修饰容器 Containers 或仿函数 Functors 或迭代器 Iterators 接口的东西，**例如：STL 提供的 Queue 和 Stack，虽然看似容器，其实只能算是一种容器配接器，因为它们的底部完全借助 Deque，所有操作由底层 Deque 供应。改变 Functor 接口者，称为 Function Adapter；改变 Container 接口者，称为 Container Adapter；改变 Iterator 接口者，称为 Iterator Adapter。配接器的实现技术很难一言蔽之，必须逐一分析。
-
-- 分配器 Allocators
-
-    负责空间配置与管理，从实现的角度来看，配置器是一个实现了动态空间配置、空间管理、空间释放的 Class Template。
-
-C++ STL 中最基本以及最常用的类或容器 string、vector、set、list、map 等等。
-
-顺序访问容器 Sequence containers 实现按顺序的访问容器元素，能快速插入新元素。
-
-- `array` 模板类实现，(since C++11) static contiguous array
-- `vector` 模板类实现，dynamic contiguous array
-- `deque` 模板类实现，double-ended queue
-- `forward_list` 模板类实现，(since C++11) singly-linked list
-- `list` 模板类实现，doubly-linked list
- 
-关联容器 Associative containers 实现有序的数据结构，能实现快速查找，时间复杂度 (O(log n)。
-
-- `set` collection of unique keys, sorted by keys
-- `map` collection of key-value pairs, sorted by keys, keys are unique
-- `multiset` collection of keys, sorted by keys
-- `multimap` collection of key-value pairs, sorted by keys
-
-(since C++11) 提供无序关联容器 Unordered associative containers 实现松散哈希 hashed 数据结构，实现快速查找，时间复杂度平均为常数 O(1)，最差为 O(n)。
-
-- `unordered_set` collection of unique keys, hashed by keys
-- `unordered_map` collection of key-value pairs, hashed by keys, keys are unique
-- `unordered_multiset` collection of keys, hashed by keys
-- `unordered_multimap` collection of key-value pairs, hashed by keys
-
-容器适配 Container adaptors 
-Container adaptors provide a different interface for sequential containers.
-
-- `stack` adapts a container to provide stack (LIFO data structure)
-- `queue` adapts a container to provide queue (FIFO data structure)
-- `priority_queue` adapts a container to provide priority queue
+这里的问题就很隐秘，因为自己的程序中使用的 libpng 是使用 Anaconda 中的 zlib 编译的，而在编译程序时使用了另一个 zlib 版本，这就是版本不一致导致的引用未定义符号。
 
 
 
-## template 模板泛型
-- https://www.runoob.com/cplusplus/cpp-templates.html
-- [C++ 模板和 C# 泛型之间的区别](https://docs.microsoft.com/zh-cn/dotnet/csharp/programming-guide/generics/differences-between-cpp-templates-and-csharp-generics)
-
-泛型编程 Generic 这个概念最早就是来源于 C++ 当初设计 STL 时所引入的模板 Template 概念，而为什么要引入模板呢，因为 STL 要完成这样一个目标：
-
-设计一套通用的，不依赖类型的，高效的的算法和数据结构，例如 std::sort 和 std::list。
-
-关于通用性，运行时多态 Polymorphism 可以做到，高级语言的继承 Inheritance 机制，接口 Interface 机制，但是 C++ 作为一门相对底层的语言，对运行效率的要求是很严格的，而运行时多态会影响效率。例如成员函数只有在运行时才知道调用哪个，所以设计 STL 的人就创造了一种编译时多态技术，即模板。
-
-那什么又是编译时多态呢，简单点说就是让编译器帮我确定类型，我写程序时只要标记下这里我要用某种类型的对象，至于具体是什么类型我不关心，你编译器帮我确定，编译完成后在运行时绝对是类型确定的，这样就大大提高了运行效率，反之对编译就增加了很多工作，而且生成的目标代码也会大大增加。
-
-所以对 C++ 来说，所谓泛型 Generics，并不是说编译器不知道类型，而是针对程序员来说的，这也正是通用性的体现。C++ 的模板在刚出来的时候并没有想到会演化成今天这样，其他高级语言，如 Java，C# 在使用的时候带给了程序员极大的便利，就考虑支持这样一种功能，但是也仅仅是借用了 C++ 的模板理念，而没有完全照抄模板的实现方法，所以对于大部分程序员来说，只要使用起来差不多，并不关心实现。
-
-所以最后总结下，泛型是只是一个概念，具体实现有 C++ 的模板，Java 的泛型等，但实现方法大不相同，只是提供给语言使用者相同的使用方法而已。
-
-C++ 模板与 Java 泛型的比较：
-
-- C++ template 是 reified generic，Java generic 是 type erasure。
-- C++ 是在 call site 做 instantiate type，Java 是在 call site 插入 cast。
-- C++ template 在 call site 可以做 inline，Java generic 因为并没有在 call site 生成代码所以不行。
-- C++ 在 runtime 没有额外的开销，Java 在 runtime 有 cast 的开销。
-- C++ 的每个 reified generic type 都有一份独立的代码，Java 只有一份 type erased 之后的代码。
-- C++ 的 type check 在编译时完成，Java 的 type check 在编译期和运行期都要做一些工作。
-
-总的来说 C++ 的 template 会生成更大的二进制代码，但会执行的比较快，但大个的二进制代码可能会导致更多的 I/O，所以也不一定完全是优势。Java 生成的代码只有一份，运行时会有一些 type cast 开销，但可以在运行时支持新类型，比如用 ClassLoader 动态加载进来的类。
-
-C++ 模板和 C# 泛型之间的主要差异：
-
-- C# 泛型的灵活性与 C++ 模板不同。 例如，虽然可以调用 C# 泛型类中的用户定义的运算符，但是无法调用算术运算符。
-- C# 不允许使用非类型模板参数，如 template C<int i> {}。
-- C# 不支持显式定制化；即特定类型模板的自定义实现。
-- C# 不支持部分定制化：部分类型参数的自定义实现。
-- C# 不允许将类型参数用作泛型类型的基类。
-- C# 不允许类型参数具有默认类型。
-- C# 泛型类型参数本身不能是泛型，但是构造类型可以用作泛型。 C++ 允许使用模板参数。
-- C++ 允许在模板中使用可能并非对所有类型参数有效的代码，随后针对用作类型参数的特定类型检查此代码。 C# 要求类中编写的代码可处理满足约束的任何类型。 例如，在 C++ 中可以编写一个函数，此函数对类型参数的对象使用算术运算符 + 和 -，在实例化具有不支持这些运算符的类型的模板时，此函数将产生错误。 C# 不允许此操作；唯一允许的语言构造是可以从约束中推断出来的构造。
-
-C++ 模板和 C# 泛型在语法层次，C# 泛型是参数化类型的一个更简单的方法，而不具有 C++ 模板的复杂性。 此外，C# 不试图提供 C++ 模板所具有的所有功能。 在实现层次，主要区别在于 C# 泛型类型的替换在运行时执行，从而为实例化对象保留了泛型类型信息。
+# Makefile 自动化编译
+- http://www.ruanyifeng.com/blog/2015/02/make.html
+- https://www.gnu.org/software/make/manual/make.html
+- http://erlang.org/doc/man/make.html#emakefile
+- Programming Erlang 2nd - 10.3 Automating Compilation with Makefiles
 
 
-模板函数定义的一般形式如下所示：
+Make 是最常用的构建工具，诞生于 1977 年，主要用于 C 语言的项目。但是实际上 ，任何只要某个文件有变化，就要重新构建的项目，都可以用 Make 构建。
 
-    template <typename type> ret-type func-name(parameter list)
-    {
-       // body
-    }
+Erlang 命令本身也实现了 Emakefile 的功能，执行编译 `erl -make` 相当执行 `make:all()`，编译后的字节文件会保存到 `ebin` 目录，执行时使用 `erl -pa ebin` 就可以自动加载字节码。erl -make 也兼容 GNU make。
 
-C++ 的模板定义的是一类具有相似行为的对象：
+Emakefile 规则定义语法：
 
-- `class template` a family of classes, which may be nested classes 
-- `function template` a family of functions, which may be member functions 
-- `alias template` an alias to a family of types (since C++11) 
-- `variable template` a family of variables (since C++14) 
+    Modules.
+    {Modules,Options}.    
+
+其中 Modules 是原子类型，可以是以下：
+
+- 一个模块名，如 file1，又或者在其它目录中 `../foo/file1`
+- 一组模块，通过熊通配符号指定，如 `'file*'`
+- 全通配，当前目录下的所有模块 `'*'`
+- 由以上项目任意组合的列表，比如 `['file*','../foo/file3','File4']`
+
+选项 Options 指定了编译选项，Emakefile 文件是从上到下读取的，如果多条匹配设置出现，开头的一条生效。如下 `'file1'` 模块的编译选项是 `[debug_info,{i,"../foo"}]`，它指定了编译输出调试信息，如以下 Emakefile 文件：
+
+    {'src/*', [debug_info,
+               {i, "src"},
+               {i, "include"},
+               {outdir, "ebin"}]}.
+
+    {'file1',[debug_info,{i,"../foo"}]}.
+    {'*',[debug_info]}.    
 
 
-函数模板示例：
+GNU 的 Make 工具可以替代手工的编译工作，通过 Makefile 脚本实现工程级别的编译工作自动化。
 
-    #include <iostream>
-    #include <string>
+列如，以下一个 Makefile：
+
+    .SUFFIXES: .erl .beam
      
-    using namespace std;
+    .erl.beam:
+        erlc -W $<
+    ERL = erl -boot start_clean 
      
-    template <typename T>
-    inline T const& Max (T const& a, T const& b) 
-    { 
-        return a < b ? b:a; 
-    } 
-
-    int main ()
-    {
-        int i = 39;
-        int j = 20;
-        cout << "Max(i, j): " << Max(i, j) << endl; 
-     
-        double f1 = 13.5; 
-        double f2 = 20.7; 
-        cout << "Max(f1, f2): " << Max(f1, f2) << endl; 
-     
-        string s1 = "Hello"; 
-        string s2 = "World"; 
-        cout << "Max(s1, s2): " << Max(s1, s2) << endl; 
-     
-       return 0;
-    }
-
-类模板示例：
-
-    #include <iostream>
-    #include <vector>
-    #include <cstdlib>
-    #include <string>
-    #include <stdexcept>
-
-    using namespace std;
-
-    template <class T>
-    class Stack 
-    {
-    private:
-        vector<T> elems;
-
-    public:
-        Stack<T>& push(T const&);
-        T pop();
-        T top() const;
-        bool empty() const {
-            return elems.empty();
-        }
-        int size() const {
-            return elems.size();
-        }
-    };
-
-    template<class T>
-    Stack<T>& Stack<T>::push(T const& elem)
-    {
-        elems.push_back(elem);
-        return *this;
-    }
-
-    template<class T>
-    T Stack<T>::pop()
-    {
-        if (elems.empty())
-        {
-            throw out_of_range("<Stack<T>::pop() with empty stack");
-        }
-        T back = elems.back();
-        elems.pop_back();
-        return back;
-    }
-
-    template <class T>
-    T Stack<T>::top() const
-    {
-        if (elems.empty())
-        {
-            throw out_of_range("<Stack<T>::top() with empty stack");
-        }
-        return elems.back();
-    }
-
-    int main()
-    {
-        try
-        {
-            Stack<int> iStack;
-            Stack<string> sStack;
-
-            iStack.push(7).push(8);
-            cout << iStack.pop() << endl;
-            cout << iStack.top() << endl;
-
-            sStack.push("hello").push("world");
-            cout << sStack.pop() << sStack.pop()  << endl;
-            sStack.pop();
-        } catch (exception const& ex)
-        {
-            cerr << "Exception: " << ex.what() << endl;
-            return -1;
-        }
-    }
-
-
-## map 映射容器
-- https://www.w3cschool.cn/cpp/cpp-fu8l2ppt.html
-- https://docs.microsoft.com/zh-cn/cpp/standard-library/map
-- https://docs.microsoft.com/zh-cn/cpp/standard-library/multimap-class
-
-Map 是 C++ 标准容器，提供了很好 Key-Value 一对一的关系。用于存储和检索集合中的数据，此集合中的每个元素均为包含数据值和排序键的元素对。 键的值是唯一的，用于自动排序数据，可以直接更改映射中的元素值。 键值是常量，不能更改。 必须先删除与旧元素关联的键值，才能为新元素插入新键值。
-
-C++ 标准库 map 类为：
-
-- 大小可变的关联容器，基于关联键值高效检索元素值。
-- 可逆，因为它提供双向迭代器来访问其元素。
-- 有序，因为它的元素根据指定的比较函数按键值排序。
-- 唯一。 因为它的每个元素必须具有唯一键。
-- 关联容器对，因为它的元素数据值与其键值不同。
-- 类模板实现，是泛型的，独立于元素或键类型。
-
-C++ 标准库多重映射类 multimap 用于存储和检索集合中的数据，此集合中的每个元素均为包含数据值和排序键的元素对。 键值不需要唯一，用于自动排序数据。 可以直接更改多重映射中的元素值，但不能直接更改其关联键值。 必须先删除与旧元素关联的键值，才能插入与新元素关联的新键值。
-
-C++ 标准库多重映射类：
-
-- 大小可变的关联容器，支持基于关联键值高效检索元素值。
-- 可逆，因为它提供双向迭代器来访问其元素。
-- 有序，因为它的元素在容器中根据指定的比较函数按键值排序。
-- 多个，它的元素不需要具有唯一键，因此一个键值可具有多个相关联的元素数据值。
-- 关联容器对，因为它的元素数据值与其键值不同。
-- 类模板实现，是泛型的，因此与作为元素或键包含的特定数据类型无关。
-
-
-构造函数用法；
-
-    map<char, int> mapchar;
-    map<char, string> mapchar;
-    map<int, char> mapint；
-    map<int, string> mapint;
-    map<sring, char> mapstring;
-    map<string, int> mapstring;
-
-添加数据；
-
-    map<int ,string> maplive;  
-    maplive.insert(pair<int,string>(102,"aclive"));
-    maplive.insert(map<int,string>::value_type(321,"hai"));
-    maplive[112]="April";
-
-成员类型：
-
-| Member type   |  Definition  |
-| :-------- | :-------- |
-| key_type  | Key  |
-| mapped_type   | T  |
-| value_type    | std::pair<const Key, T>  |
-| size_type | Unsigned integer type (usually std::size_t)  |
-| difference_type   | Signed integer type (usually std::ptrdiff_t)  |
-| key_compare   | Compare  |
-| allocator_type    | Allocator  |
-| reference | Allocator::reference (until C++11), value_type& (since C++11) |
-| const_reference   | Allocator::const_reference (until C++11), const value_type& (since C++11) |
-| pointer   | Allocator::pointer (until C++11), std::allocator_traits<Allocator>::pointer (since C++11) |
-| const_pointer | Allocator::const_pointer (until C++11), std::allocator_traits<Allocator>::const_pointer (since C++11) |
-| iterator  | BidirectionalIterator  |
-| const_iterator    | Constant bidirectional iterator  |
-| reverse_iterator  | std::reverse_iterator<iterator>  |
-| const_reverse_iterator    | std::reverse_iterator<const_iterator>  |
-| node_type | a specialization of node handle representing a container node (since C++17)  |
-| insert_return_type    | instantiated with template arguments iterator and node_type. (since C++17)  |
-
-基本操作函数：
-
-- `at`             查找具有指定键值的元素。
-- `begin`          返回指向 map 头部的迭代器
-- `begin`          返回指向 map 头部的迭代器
-- `clear`          删除所有元素
-- `count`          返回指定元素出现的次数
-- `empty`          如果 map 为空则返回 true
-- `emplace`        将就地构造的元素插入到映射。
-- `end`            返回指向 map 末尾的迭代器
-- `equal_range`    返回特殊条目的迭代器对
-- `erase`          删除一个元素
-- `find`           查找一个元素
-- `get_allocator`  返回 map 的配置器
-- `insert`         插入元素
-- `key_comp`       返回比较元素 key 的函数
-- `lower_bound`    返回键值 >= 给定元素的第一个位置
-- `max_size`       返回可以容纳的最大元素个数
-- `rbegin`         返回一个指向 map 尾部的逆向迭代器
-- `rend`           返回一个指向 map 头部的逆向迭代器
-- `size`           返回 map 中元素的个数
-- `swap`           交换两个 map
-- `upper_bound`    返回键值 > 给定元素的第一个位置
-- `value_comp`     返回比较元素 value 的函数
-
-示例程序：
-
-    #include <map>
-    #include <iostream>
-
-    int main( )
-    {
-        using namespace std;
-        map <int, int> m1;
-
-        map <int, int> :: iterator m1_Iter;
-        map <int, int> :: const_iterator m1_cIter;
-        map <int, int> :: const_iterator m1_eIter;
-        typedef pair <int, int> Int_Pair;
-
-        m1.insert ( Int_Pair ( 0, 0 ) );
-        m1.insert ( Int_Pair ( 1, 1 ) );
-        m1.insert ( Int_Pair ( 1, 3 ) );
-        m1.insert ( Int_Pair ( 2, 4 ) );
-
-        m1_cIter = m1.begin ( );
-        cout << "The first element of m1 is " << m1_cIter -> first << endl;
-        cout << "The second element of m1 is " << m1_cIter -> second << endl;
-        // cout << "The third element of m1 is " << m1_cIter -> third << endl; // no third
-
-        m1_Iter = m1.begin ( );
-        m1.erase ( m1_Iter );
-
-        // The following 2 lines would err because the iterator is const
-        // m1_cIter = m1.begin ( );
-        // m1.erase ( m1_cIter );
-
-        m1_cIter = m1.begin( );
-        cout << "The first element of m1 is now " << m1_cIter -> first << endl;
-
-        // Keys must be unique in map, so duplicates are ignored
-        int i = m1.count(1);
-        cout << "The number of elements in m1 with a sort key of 1 is: " << i << "." << endl;
-
-        i = m1.count(2);
-        cout << "The number of elements in m1 with a sort key of 2 is: " << i << "." << endl;
-
-        m1_Iter = m1.begin( );
-        m1_eIter = m1.end();
-        cout << "double each element in map:\n<key -> value>\n";
-        while ( m1_Iter != m1_eIter)
-        {
-            m1_Iter -> second *= 2;
-            cout << m1_Iter -> first << " -> " << m1_Iter -> second << "\n";
-            m1_Iter++;
-        }
-        cout << "The number of element in map with a key 2 is: " << m1[2] << endl;
-
-        i = m1.size();
-        m1.clear();
-        cout << "The size of the map after clearing is " << m1.size() << ", whcih before is " << i << "." << endl;
-    }
-
-注意，map 取值主要有 at 和下标 [] 两种操作，(C++11) 引入的 at 会作下标检查。map 可使用类似数组下标的方式访问元素。multimap 不可以这样访问元素，它需要通过迭代器访问：
-
-    m1_Iter = m1.find(2);
-    cout << "The number of element in map with a key 2 is: " << m1_Iter->second << endl;
-
-
-
-## vector 向量容器
-- https://www.runoob.com/w3cnote/cpp-vector-container-analysis.html
-- https://www.w3cschool.cn/cpp/cpp-i6da2pq0.html
-
-向量 Vector 封装了动态大小数组的序列容器 Sequence Container。跟任意其它类型容器一样，它能够存放各种类型的对象。可以简单的认为，向量是一个能够存放任意类型的动态数组。
-
-容器特性：
-
-- `顺序序列` 顺序容器中的元素按照严格的线性顺序排序。可以通过元素在序列中的位置访问对应的元素。
-- `动态数组` 支持对序列中的任意元素进行快速直接访问，甚至可以通过指针算述进行该操作。操供了在序列末尾相对快速地添加/删除元素的操作。
-- `内存分配感知` Allocator-aware 容器使用一个内存分配器对象来动态地处理它的存储需求。
-
-Vector 是 C++ STL的一个重要成员。
-
-定义：
-
-    template<
-        class T,
-        class Allocator = std::allocator<T>
-    > class vector; (1)  
-
-    namespace pmr {
-        template <class T>
-        using vector = std::vector<T, std::pmr::polymorphic_allocator<T>>;
-    } (2) (since C++17) 
-
-1) std::vector is a sequence container that encapsulates dynamic size arrays.
-2) std::pmr::vector is an alias template that uses a polymorphic allocator
-
-vector 有五种构造方式：
-
-    #include<vector>;
-
-    int a[7]={1,2,3,4,5,9,8};
-    vector<int> v(a,a+7); // 从数组中获得初值
-    vector<int> b(10);    // 定义了 10 个整型元素的向量，但没有给出初值。
-    vector<int> b(10,1);  // 定义了 10 个整型元素的向量初值为 1
-    vector<int> c(b);     // 整体复制 b 向量
-    vector<int> c(b.begin(),b.begin+3); // 从 b 向量中提取元素
- 
-vector 对象的增删改遍历等重要操作：
-
-    a.at(pos < size())
-    a.back();  // 返回最后一个元素
-    a.front(); // 返回第一个元素
-    a[i];      // 返回第 i 个元素，a[i] 必须存在才可以访问
-
-    a.assign(4,2); // 定义 a 含 4 个元素，初始值 2
-    a.assign(b.begin(), b.begin()+3); // b 为向量，将 b 的 0~2 个元素构成的向量赋给a
-    a.capacity(); // 返回向量对象现有的容量，即可容纳的元素个数
-    a.clear(); // 清空元素
-    a.empty(); // 判断是否为空，返回 ture、false
-    a.erase(a.begin()+1, a.begin()+3); // 删除元素，但不包括 a.begin()+3
-    a.insert(a.begin()+1,3,5); // 在 1 索引位置插入 3 个数，其值都为5
-    a.insert(a.begin()+1,5);   // 在 1 索引位置插入数值 5
-    a.insert(a.begin()+1,b+3,b+6); // 在 1 索引位置插入数组 b 的第3个元素到第5个元素
-    a.pop_back(); // 删除向量的最后一个元素
-    a.push_back(5); // 在向量最后插入一个元素，值为 5
-    a.reserve(100); // 保留并扩容，如果容量少于 100 则扩充至 100，大于 100 则保留原容量
-    a.resize(10); // 调整容量为 10 个，元素多则删，少则补，其值随机
-    a.resize(10,2); // 调整空间为 10 个，多则删，少则补，其值为 2
-    a.size(); // 返回向量元素的个数；
-    a.swap(b); // 两向量元素整体进行交换
-    a==b;  // 向量的比较操作，还有!=,>=,<=,>,<
-
-示例：
-
-    #include <iostream>
-    #include <vector>
-    #include <algorithm>
-
-    int main()
-    {
-        // Create a vector containing integers
-        std::vector<int> v = {7, 5, 16, 8};
-     
-        // Add two more integers to vector
-        v.push_back(25);
-        v.push_back(13);
-        sort(v.begin(),v.end());
-
-        // Iterate and print values of vector
-        for(int n : v) {
-            std::cout << n << '\n';
-        }
-    }
-
-Output:
-
-    7
-    5
-    16
-    8
-    25
-    13
-
-利用数组下标遍历 & 迭代器遍历：
-
-    #include <string.h>
-    #include <vector>
-    #include <iostream>
-    #include <algorithm>
-    using namespace std;
-     
-    int main()
-    {
-        vector<int>obj;
-        for(int i=0;i<10;i++)
-        {
-            obj.push_back(i);   
-        } 
-     
-        for(int i=0;i<10;i++)
-        {
-            cout << obj[i] << " ";
-        }
-     
-        cout<<endl; 
-        vector<int>::iterator it;
-        for(it=obj.begin();it!=obj.end();it++)
-        {
-            cout<<*it<<" ";
-        }
-        return 0;
-    }
-
-使用 vector 注意事项：
-
-1、如果你要表示的向量长度较长，容易导致内存泄漏，而且效率会很低；
-2、Vector作为函数的参数或者返回值时，需要注意它的写法：
-
-    double Distance(vector<int>&a, vector<int>&b)
-
-其中的“&”绝对不能少！！！
-
-
-## set 有序集合
-
-set 跟 vector 类似，唯一区别就是，set 里面的元素是有序的且唯一的，往 set 里添加元素，它就会自动排序，而且，对于已经存在数据就忽略添加操作。
-
-    #include <iostream>
-    #include <iomanip>
-    #include <set>
-    #include <string>
-
-    using namespace std;
-
-    template <typename T>
-    void showset(set<T> v)
-    {
-        for (typename set<T>::iterator it = v.begin(); it != v.end(); it++)
-        {
-            cout << setw(10) << left << *it;
-        }
-        cout << endl;
-    }
-
-    int main()
-    {
-        set<int> nums{9,8,1,2,3,4,5,5,5,6,7,7 };
-        showset(nums);
-        set<string> fruits{ "pineapple", "apple", "melon", "peach" };
-        showset(fruits);
-
-        nums.insert(9); // do nothing for existing one
-        fruits.insert("berry");
-        showset(fruits);
-        
-        // system("pause");
-        return 0;
-    } 
-
-
-
-## list 链表
-
-list 就是双向链表数据结构，C 语言中经常需要自己实现链表，但是，花时间实现高效的链表，这种重复造轮子并不这个讨好。
-
-除了 list 双向链表，还有单链表容器 foward_list。
-
-list 双向链表的优点是插入和删除元素都比较快捷，缺点是不能随机访问元素。
-
-    #include <list>
-    #include <iostream>
-    #include <iomanip>
-    #include <list>
-    #include <string>
-
-    using namespace std;
-
-    template <typename T>
-    void showlist(list<T> v)
-    {
-        for (list<T>::iterator it = v.begin(); it != v.end(); it++)
-        {
-            cout << setw(4) << left << *it;
-        }
-        cout << endl;
-    }
-
-    int main()
-    {
-        list<int> l1{ 1,2,3,4,5,5,6,7,7 };
-        l1.sort();
-        l1.reverse();
-        showlist(l1);
-        list<double> l2;
-        list<char> l3(10);
-        list<int> l4(5, 10); // 将元素都初始化为10
-        showlist(l4);
-
-        // system("pause");
-        return 0;
-    } 
-
-
-值得注意的是，list 容器不能调用 algorithm 下的 sort 函数进行排序，因为 sort 函数要求容器必须可以随机存储。所以，list 内部实现了排序函数。
-
-GCC 编译程序时候提示如下错误：
-
-    error: need 'typename' before 'std::list<T>::iterator' because 'std::list<T>' is a dependent scope|
-
-提示的意思是说在 list<T> 前面需要用 typename 限定一下，因为编译器不知道 list<T>::iterator 是代表一个类型，更改代码：
-
-    list<T>::iterator it; => typename std::list<T>::iterator it;
-
-
-
-# stream format
-- https://en.cppreference.com/w/cpp/utility/format/format
-- https://en.cppreference.com/w/cpp/header/iomanip
-
-C++ 的 `<cstdio>` 头文件定义替代 C 的 `<stdio.h>`：
-
-    int printf( const char* format, ... ); (1)  
-    int fprintf( std::FILE* stream, const char* format, ... ); (2)  
-    int sprintf( char* buffer, const char* format, ... ); (3)  
-    int snprintf( char* buffer, std::size_t buf_size, const char* format, ... ); (4) (since C++11) 
-
-    const char *fmt = "sqrt(2) = %f";
-    int sz = std::snprintf(nullptr, 0, fmt, std::sqrt(2));
-    std::vector<char> buf(sz + 1); // note +1 for null terminator
-    std::snprintf(&buf[0], buf.size(), fmt, std::sqrt(2));
-
-Formatting library (C++20)，对没错老妖怪这时才提供格式化函数库，在头文件 `<format>` 中定义，但是这个功能边 GCC 10.1 也没支持：
+    MODS = hello shop
     
-    #include <iostream>
-    #include <format>
+    all: compile 
      
-    int main() {
-        std::format("{} {}!", "Hello", "world", "something"); // OK, produces "Hello world!"
-        std::cout << std::format("Hello {}!\n", "world");
-    }
+    compile: ${MODS:%=%.beam}
+        @echo "make clean - clean up"
+     
+    clean:  
+        rm -rf *.beam erl_crash.dump 
 
-示范，利用字符串打印函数 `_vsnprintf` 实现一个 format 函数：
+保存到源代码 hello.erl、shop.erl 同一文件夹下，执行 `erl -make`，编译成功就会出现源代码对应的 .beam。
 
-    // #include <boost/format.hpp>
-    // #include <format> // C++20
+在 Windows 系统使用 Gnu make 命令，需要 ComSpec 这个环境变量指向 cmd.exe，或者设置 `SHELL=cmd.exe` 否则 shell 会执行失败：
 
-    #include <string>
-    #include <vector>
-    #include <cstdarg>
+    process_begin: CreateProcess(NULL,gcc -c test.c, ...)failed. 
+    make(e=2): 系统找不到指定的文件 
+    make:*** [test.o] 错误2 
 
-    std::string format(const char *pszFmt, ...)
-    {
-        std::string str;
-        va_list args;
-        va_start(args, pszFmt);
-        {
-            int nLength = _vscprintf(pszFmt, args);
-            nLength += 1;  // plus 1 for null-terminator
-            std::vector<char> vectorChars(nLength);
-            _vsnprintf(vectorChars.data(), nLength, pszFmt, args);
-            str.assign(vectorChars.data());
-        }
-        va_end(args);
-        return str;
-    }
+列如，Erlang 源代码中提供了 wxErlang 模块的示例，其编译脚本 otp_src_23.0\lib\wx\examples\demo\Makefile 是为 Linux 系统准备的，在 Windows 系统上使用需要修改一下；
 
-    int main()
-    {
-        char c = 'A';
-        std::string str = format("c=%c", c);  // c=A
-             
-        int i = 10;
-        str = format("i=%c", i);  // i=10
-         
-        double d = 1.5;
-        str = format("d=%f", d);  // d = 1.500000
-         
-        std::string strName = ("txdy");
-        str = format("I am %s", strName.c_str());  // I am txdy
-    }
+    SHELL=cmd.exe
 
+    ERL_TOP = ..\..\..\..
+    TOPDIR   = ..\..
+    SRC = .
+    BIN = .
+    ERLINC = $(TOPDIR)/include
+    ERLC = erlc
+    TESTMODS = \
+        demo \
+        demo_html_tagger \
+        ...
+        ex_graphicsContext
 
-C 库定义的宏 va_start 初始化 ap 变量，变量类型 va_list 是参数列表。此宏与 va_arg、va_end 搭配使用，并在它们之前调用。last_arg 是最后一个传递给函数的命名参数，即省略号之前的最后一个参数。
+    TESTTARGETS = $(TESTMODS:%=%.beam)
+    TESTSRC = $(TESTMODS:%=%.erl)
 
-    void va_start(va_list ap, last_arg);
+    # Targets
+    $(TESTTARGETS):$(TESTSRC)
+    opt debug:  $(TESTTARGETS)
+        ERLC -o $(TOPDIR)/ebin  $(TESTSRC)
+    clean:
+        del $(TOPDIR)\ebin\*.beam
+        del "$(TOPDIR)\ebin\erl_crash.dump"
+    #   del $(TESTTARGETS:%="$(TOPDIR)/ebin/%")
+    #   rm -f $(TESTTARGETS)
+    #   rm -f *~ core erl_crash.dump
 
+    # docs:
 
+    run: opt
+        erl -smp -detached -pa $(TOPDIR)\ebin -s demo
 
-C++ 中常用的输出流操纵算子都是在头文件 `<iomanip>` 中定义的。
+然后执行编译，运行测试：
 
-C++ 流操纵算子
+    $ make
+    $ erl -noshell -s demo start -s init stop
 
-| 流操纵算子 | 作  用 |
-| :-------- | :-------- |
-| dec       | 以十进制形式输出整数 |
-| hex       | 以十六进制形式输出整数 |
-| oct       | 以八进制形式输出整数 |
-| fixed     | 以普通小数形式输出浮点数 |
-| scientific| 以科学计数法形式输出浮点数 |
-| left      | 左对齐，即在宽度不足时将填充字符添加到右边 |
-| right     | 右对齐，即在宽度不足时将填充字符添加到左边 |
-| setbase(b)| 设置输出整数时的进制，b=8、10 或 16 |
-| setw(w)   | 指定输出宽度为 w 个字符，或输人字符串时读入 w 个字符 |
-| setfill(c)| 在指定输出宽度的情况下，输出的宽度不足时用字符 c 填充（默认情况是用空格填充） |
-| setprecision(n)   | 设置输出浮点数的精度为 n。 |
-| setiosflags(flag) | 将某个输出格式标志置为 1 |
-| resetiosflags(flag)   | 将某个输出格式标志置为 0 |
-| boolapha  | 把 true 和 false 输出为字符串 |
-| *noboolalpha  | 把 true 和 false 输出为 0、1 |
-| showbase  | 输出表示数值的进制的前缀 |
-| *noshowbase   | 不输出表示数值的进制.的前缀 |
-| showpoint | 总是输出小数点 |
-| *noshowpoint  | 只有当小数部分存在时才显示小数点 |
-| showpos   | 在非负数值中显示 + |
-| *noshowpos| 在非负数值中不显示 + |
-| *skipws   | 输入时跳过空白字符 |
-| noskipws  | 输入时不跳过空白字符 |
-| uppercase | 十六进制数中使用 A~E。若输出前缀，则前缀输出 0X，科学计数法中输出 E |
-| *nouppercase  | 十六进制数中使用 a~e。若输出前缀，则前缀输出 0x，科学计数法中输出 e。 |
-| internal  | 数值的符号（正负号）在指定宽度内左对齐，数值右对 齐，中间由填充字符填充。 |
+make 命令只是一个根据指定的 Shell 命令进行构建的工具，它的规则很简单：
 
+- Target 规定要构建哪个文件，用什么命令；
+- Dependence 它依赖哪些源文件；
+- Update 当那些文件有变动时，如何重新构建它。
 
-使用这些算子的方法是将算子用 << 和 cout 连用。例如：
+构建规则都写在 Makefile 文件里面，这个文件由一系列规则 rules 构成：
 
-    cout << hex << 12 << "," << 24;
+    <target> : <prerequisites> 
+    [tab]  <commands>
 
-这条语句的作用是指定以十六进制形式输出后面两个数，因此输出结果是：
+- 第一行冒号前面的部分，叫做`目标` Target，多目标用空格隔开，冒号后面的部分叫做`前置条件` prerequisites。
+- 第二行必须由一个 tab 键起首，后面跟着`命令` commands。
+- 目标是必需的，不可省略，前置条件和命令都是可选的，但是两者之中必须至少存在一个。
+- 每条规则就明确两件事：构建目标的前置条件是什么，以及如何构建。
 
-    c, 18
+目标通常是文件名，指明 Make 命令所要构建的对象，除了文件名，目标还可以是某个操作的名字，这称为`伪目标` phony target。
 
-在使用非 fixed 且非 scientific 方式输出的情况下，n 即为有效数字最多的位数，如果有效数字位数超过 n，则小数部分四舍五人，或自动变为科学计 数法输出并保留一共 n 位有效数字。
+在定义目标时，如果当前目录中，正好有一个文件同名，比如，目标叫做 `clean`，Make 执行时发现 clean 文件已经存在，而且是最新的状态，就认为没有必要重新构建了，就不会执行指定的命令。为了避免这种情况，可以明确声明 clean 是伪目标，写法如下：
 
-在使用 fixed 方式和 scientific 方式输出的情况下，n 是小数点后面应保留的位数。
+    .PHONY: clean
+    clean:
+            rm *.o temp
+
+声明 clean 是伪目标之后，make 就不会去检查是否存在一个叫做 clean 的文件，而是每次运行都执行对应的命令。像 `.PHONY` 这样的内置目标名还有不少，伪目标以句点开头跟大写字母，可以查看手册。
+
+前置条件通常是一组文件名，之间用空格分隔。它指定了目标是否重新构建的判断标准： 只要有一个`前置文件`不存在，或者有过更新，前置文件的 last-modification 时间戳比`目标`的时间戳新，目标就需要重新构建。
+
+命令 commands 表示如何更新目标文件，由一行或多行的 Shell 命令组成。它是构建目标的具体指令，它的运行结果通常就是生成目标文件。
+
+Make 有`隐含规则` implict rule，比如：
+
+    foo : foo.o bar.o
+            cc -o foo foo.o bar.o $(CFLAGS) $(LDFLAGS)
+
+上面的规则中，没有定义 foo.o 目标，make 会自动使用隐含规则，选检查 foo.o 文件是不存在，然后检查目录下对应的源代码，比如 foo.c 文件就会执行 C 编译器，如果是 foo.p 文件则执行 Pascal 编译器，如此。
+
+隐含规则和隐含变量是配套的，C compiler，对应的隐含变量就是 cc 命令，可以直接调用，$(CC)、$(CFLAGS)、$(CPPFLAGS) 等。
 
 
-setiosflags() 算子实际上是一个库函数，它以一些标志作为参数，这些标志可以是在 iostream 头文件中定义的以下几种取值，它们的含义和同名算子一样。
+Make 的一些编程能力：
 
-| 标 志       | 作 用 |
+- Make 支持命令换行，在换行符前加反斜杠 `\` 转义，$$ 表示转义 $ 符号。
+- 井号 # 在 Makefile 中表示其后面的内容是注释。
+- 支持 `*`、`?`、`[...]`  通配符用来指定一组符合条件的文件名。
+- 支持匹配符，`%`，如 `%.o: %.c` 为当前目录下源码文件定义相应的目标。
+- 支持变量，如 `v1 = Hi!` 定义了 v1 变量，`${v1}` 或 `$(v1)` 使用变量，例如 `@echo $(v1)`，或者 `v2 = $(v1)`。
+- 支持 shell 命令，如 `contents := $(shell cat foo)`。
+- 变量高级引用，`$(var:a=b)` 或者 `${var:a=b}`，例如以下 bar 变量最后的值是 `a.c b.c l.a c.c`：
+
+        foo := a.o b.o l.a c.o
+        bar := $(foo:.o=.c)
+
+- 内置变量，如`$(CC)` 指向当前使用的编译器，`$(MAKE)` 指向当前使用的 Make 工具。
+- 自动变量：
+
+    - `$@` 指代当前 Make 命令当前构建的那个目标。
+    - `$<` 指代第一个前置条件。
+    - `$?` 指代比目标更新的所有前置条件，之间以空格分隔。比如，规则为 t: p1 p2，其中 p2 的时间戳比 t 新，$? 就指代 p2。
+    - `$^` 指代所有前置条件，之间以空格分隔。
+    - `$*` 指代匹配符 % 匹配的部分， 比如 % 匹配 f1.txt 中的 f1，$* 就表示 f1。
+    - `$(@D)` 和 `$(@F)` 分别指向 $@ 自动变量的目录名和文件名部分。
+    - `$(<D)` 和 `$(<F)` 分别指向 $< 自动变量的目录名和文件名部分。
+
+- 支持 if-else 条件判断结构：
+
+        ifeq ($(CC),gcc)
+            libs=$(libs_for_gcc)
+        else
+            libs=$(normal_libs)
+        endif
+
+- 支持循环结构：
+
+        LIST = one two three
+
+        all:
+            for i in $(LIST); do \
+                echo $$i; \
+            done
+
+        # 等同于
+
+        all:
+            for i in one two three; do \
+                echo $i; \
+            done
+
+- 支持使用函数：
+
+        $(function arguments)
+        # 或者
+        ${function arguments}
+
+Makefile 提供了许多内置函数，可供调用。下面是几个常用的内置函数。
+
+Text Functions
+
+| 格式        | 示范        |
 | :-------  | :-------  |
-| ios::left | 输出数据在本域宽范围内向左对齐 |
-| ios::right    | 输出数据在本域宽范围内向右对齐 |
-| ios::internal | 数值的符号位在域宽内左对齐，数值右对齐，中间由填充字符填充 |
-| ios::dec  | 设置整数的基数为 10 |
-| ios::oct  | 设置整数的基数为 8 |
-| ios::hex  | 设置整数的基数为 16 |
-| ios::showbase | 强制输出整数的基数（八进制数以 0 开头，十六进制数以 0x 打头） |
-| ios::showpoint    | 强制输出浮点数的小点和尾数 0 |
-| ios::uppercase    | 在以科学记数法格式 E 和以十六进制输出字母时以大写表示 |
-| ios::showpos  | 对正数显示“+”号 |
-| ios::scientific   | 浮点数以科学记数法格式输出 |
-| ios::fixed    | 浮点数以定点格式（小数形式）输出 |
-| ios::unitbuf  | 每次输出之后刷新所有的流 |
-| ios::stdio    | 每次输出之后清除 stdout, stderr |
-
-这些标志实际上都是仅有某比特位为 1，而其他比特位都为 0 的整数。
-
-多个标志可以用|运算符连接，表示同时设置。例如：
-
-    cout << setiosflags(ios::scientific|ios::showpos) << 12.34;
-
-    +1.234000e+001
-
-如果两个相互矛盾的标志同时被设置，如先设置 setiosflags(ios::fixed)，然后又设置 setiosflags(ios::scientific)，那么结果可能就是两个标志都不起作用。因此，在设置了某标志，又要设置其他与之矛盾的标志时，就应该用 resetiosflags 清除原先的标志。例如下面三条语句：
-
-    cout << setiosflags(ios::fixed) << 12.34 << endl;
-    cout << resetiosflags(ios::fixed) << setiosflags(ios::scientific | ios::showpos) << 12.34 << endl;
-    cout << resetiosflags(ios::showpos) << 12.34 << endl;  //清除要输出正号的标志
-
-输出结果是：
-
-    12.340000
-    +1.234000e+001
-    1.234000e+001
-
-关于流操纵算子的使用，来看下面的程序。
-
-    #include <iostream>
-    #include <iomanip>
-    using namespace std;
-    int main()
-    {
-        int n = 141;
-        //1) 分别以十六进制、十进制、八进制先后输出 n
-        cout << "1)" << hex << n << " " << dec << n << " " << oct << n << endl;
-        double x = 1234567.89, y = 12.34567;
-        //2)保留5位有效数字
-        cout << "2)" << setprecision(5) << x << " " << y << " " << endl;
-        //3)保留小数点后面5位
-        cout << "3)" << fixed << setprecision(5) << x << " " << y << endl;
-        //4)科学计数法输出，且保留小数点后面5位
-        cout << "4)" << scientific << setprecision(5) << x << " " << y << endl;
-        //5)非负数显示正号，输出宽度为12字符，宽度不足则用 * 填补
-        cout << "5)" << showpos << fixed << setw(12) << setfill('*') << 12.1 << endl;
-        //6)非负数不显示正号，输出宽度为12字符，宽度不足则右边用填充字符填充
-        cout << "6)" << noshowpos << setw(12) << left << 12.1 << endl;
-        //7)输出宽度为 12 字符，宽度不足则左边用填充字符填充
-        cout << "7)" << setw(12) << right << 12.1 << endl;
-        //8)宽度不足时，负号和数值分列左右，中间用填充字符填充
-        cout << "8)" << setw(12) << internal << -12.1 << endl;
-        cout << "9)" << 12.1 << endl;
-        return 0;
-    }
-
-程序的输出结果是：
-
-    1)8d 141 215
-    2)1.2346e+06 12.346
-    3)1234567.89000 12.34567
-    4)1.23457e+06 1.23457e+01
-    5)***+12.10000
-    6)12.10000****
-    7)****12.10000
-    8)-***12.10000
-    9)12.10000
-
-需要注意的是，setw() 算子所起的作用是一次性的，即只影响下一次输出。每次需要指定输出宽度时都要使用 setw()。因此可以看到，第 9) 行的输出因为没有使用 setw()，输出的宽度就不再是前面指定的 12 个字符。
-
-在读入字符串时，setw() 还能影响 cin 的行为。例如下面的程序：
-
-    #include <iostream>
-    #include <iomanip>
-    using namespace std;
-    int main()
-    {
-        string s1, s2;
-        cin >> setw(4) >> s1 >> setw(3) >> s2;
-        cout << s1 << "," << s2 << endl;
-        return 0;
-    }
-
-输入：
-
-    1234567890↙
-
-程序的输出结果是：
-
-    1234,567
-
-说明setw(4)使得读入 s1 时，只读入 4 个字符，其后的setw(3)使得读入 s2 时只读入 3 个字符。
-
-setw() 用于 cin 时，同样只影响下一次的输入。
-
-思考题：setw() 究竟是如何实现的，以至于能和 cout 连用来指定输出宽度？自行查看编译器所带的 iomanip 头文件，然后写一个功能和 setw() 完全相同的 mysetw()。
-
-调用cout的成员函数
-
-ostream 类有一些成员函数，通过 cout 调用它们也能用于控制输出的格式，其作用和流操纵算子相同，如表 3 所示。
-
-| 成员函数  | 作用相同的流操纵算子    | 说明 |
-| :-------- | :-------- | :-------- |
-| precision(n)  | setprecision(n)   | 设置输出浮点数的精度为 n。 |
-| width(w)  | setw(w)   | 指定输出宽度为 w 个字符。 |
-| fill(c)   | setfill(c)    | 在指定输出宽度的情况下，输出的宽度不足时用字符 c 填充（默认情况是用空格填充）。|
-| setf(flag)    | setiosflags(flag) | 将某个输出格式标志置为 1。 |
-| unsetf(flag)  | resetiosflags(flag)   | 将某个输出格式标志置为 0。 |
-
-setf 和 unsetf 函数用到的flag，与 setiosflags 和 resetiosflags 用到的完全相同。
-
-这些成员函数的用法十分简单。例如下面的三行程序：
-
-    cout.setf(ios::scientific);
-    cout.precision(8);
-    cout << 12.23 << endl;
-
-
-# string
-- https://www.runoob.com/cplusplus/cpp-strings.html
-
-C++ 提供了以下两种类型的字符串表示形式：
-
-- C 风格字符串 `#include <cstring>`
-- C++ 引入的 string 类类型 `#include <string>`
-
-C 风格的字符串起源于 C 语言，并在 C++ 中继续得到支持。字符串实际上是使用 null 终止的一维字符数组 Null-terminated。是一个以 null 结尾的字符串，包含了组成字符串的字符。
-
-下面的声明和初始化创建了一个 "Hello" 字符串。由于在数组的末尾存储了空字符，所以字符数组的大小比单词 "Hello" 的字符数多一个。
-
-    char greeting[6] = {'H', 'e', 'l', 'l', 'o', ''};
-    char greeting[] = "Hello";
-
-不需要把 null 字符放在字符串常量的末尾。C++ 编译器会在初始化数组时，自动添加在末尾。
-
-示例：
-
-    #include <iostream>
-    #include <string>
-     
-    // using std::string;
-    // using std::cout;
-    using namespace std;
-     
-    int main ()
-    {
-        char greeting[6] = {'H', 'e', 'l', 'l', 'o', '\0'};
-
-        cout << "Greeting message: ";
-        cout << greeting << endl;
-
-        string ss [] = {"Beijing", "Shanghai", "Chengdu"};
-        cout << ss[1];
-
-        return 0;
-    }
-
-C 风格函数：
-
-    #include <iostream>
-    #include <cstring>
-     
-    using namespace std;
-     
-    int main ()
-    {
-       char str1[11] = "Hello";
-       char str2[11] = "World";
-       char str3[11];
-       int  len ;
-     
-       strcpy( str3, str1);
-       cout << "strcpy( str3, str1) : " << str3 << endl;
-     
-       strcat( str1, str2);
-       cout << "strcat( str1, str2): " << str1 << endl;
-     
-       len = strlen(str1);
-       cout << "strlen(str1) : " << len << endl;
-     
-       return 0;
-    }
-
-C++ 字符串对象：
-
-    #include <iostream>
-    #include <string>
-     
-    using namespace std;
-     
-    int main ()
-    {
-       string str1 = "Hello";
-       string str2 = "World";
-       string str3;
-       int  len ;
-     
-       // 复制 str1 到 str3
-       str3 = str1;
-       cout << "str3 : " << str3 << endl;
-     
-       // 连接 str1 和 str2
-       str3 = str1 + str2;
-       cout << "str1 + str2 : " << str3 << endl;
-     
-       // 连接后，str3 的总长度
-       len = str3.size();
-       cout << "str3.size() :  " << len << endl;
-     
-       return 0;
-    }
-
-
-C++ `<string>` 提供以下类型定义： 
-
-| Type      | Definition    |
-| :-------- | :-------- |
-| `std::string` | std::basic_string<char>  |
-| `std::wstring`    | std::basic_string<wchar_t>  |
-| `std::u16string` (C++11)  | std::basic_string<char16_t>  |
-| `std::u32string` (C++11)  | std::basic_string<char32_t>  |
-| `std::pmr::string` (C++17)    | std::pmr::basic_string<char>  |
-| `std::pmr::wstring` (C++17)   | std::pmr::basic_string<wchar_t>  |
-| `std::pmr::u16string` (C++17) | std::pmr::basic_string<char16_t>  |
-| `std::pmr::u32string` (C++17) | std::pmr::basic_string<char32_t  |
-
-
-C++ 字符串类成员类型 String Member types
-
-| member type   | definition    |
-| :----------   | :----------   |
-| value_type    | char |
-| traits_type   | char_traits<char> |
-| allocator_type| allocator<char> |
-| reference     | char& |
-| const_reference   | const char& |
-| pointer       | char* |
-| const_pointer | const char* |
-| iterator      | a random access iterator to char (convertible to const_iterator) |
-| const_iterator    | a random access iterator to const char |
-| reverse_iterator  | reverse_iterator<iterator> |
-| const_reverse_iterator    | reverse_iterator<const_iterator> |
-| difference_type   | ptrdiff_t |
-| size_type     | size_t |
-
-C++ 字符串成员方法 Member functions
-
-- (constructor) constructs a basic_string
-- (destructor) destroys the string, deallocating internal storage if used
-- `operator=` assigns values to the string
-- `assign` assign characters to a string
-- `get_allocator` returns the associated allocator
-
-Element access 
-
-- `at` access specified character with bounds checking
-- `operator[]` access specified character
-- `front` (C++11) accesses the first character
-- `back` (C++11) accesses the last character
-- `data` returns a pointer to the first character of a string
-- `c_str` returns a non-modifiable standard C character array version of the string
-- `operator basic_string_view` (C++17) returns a non-modifiable string_view into the entire string
-
-Iterators 
-
-- `begincbegin` (C++11) returns an iterator to the beginning
-- `end` `cend` (C++11) returns an iterator to the end
-- `rbegin` `crbegin` (C++11) returns a reverse iterator to the beginning
-- `rend` `crend` (C++11) returns a reverse iterator to the end
-
-Capacity 
-
-- `empty` checks whether the string is empty
-- `sizelength` returns the number of characters
-- `max_size` returns the maximum number of characters
-- `reserve` reserves storage
-- `capacity` returns the number of characters that can be held in currently allocated storage
-- `shrink_to_fit` (C++11) reduces memory usage by freeing unused memory
-
-Operations 
-
-- `clear` clears the contents
-- `insert` inserts characters
-- `erase` removes characters
-- `push_back` appends a character to the end
-- `pop_back` (C++11) removes the last character
-- `append` appends characters to the end
-- `operator`+= appends characters to the end
-- `compare` compares two strings
-- `replace` replaces specified portion of a string
-- `substr` returns a substring
-- `copy` copies characters
-- `resize` changes the number of characters stored
-- `swap` swaps the contents
-
-Search 
-
-- `find` find characters in the string
-- `rfind` find the last occurrence of a substring
-- `find_first_of` find first occurrence of characters
-- `find_first_not_of` find first absence of characters
-- `find_last_of` find last occurrence of characters
-- `find_last_not_of` find last absence of characters
-
-
-
-
-## string split
-
-C++11之前只能自己写，我目前发现的史上最优雅的一个实现是这样的：
-    
-    void split(const string& s, vector<string>& tokens, const string& delimiters = " ")
-    {
-        string::size_type lastPos = s.find_first_not_of(delimiters, 0);
-        string::size_type pos = s.find_first_of(delimiters, lastPos);
-        while (string::npos != pos || string::npos != lastPos) {
-            tokens.push_back(s.substr(lastPos, pos - lastPos));//use emplace_back after C++11
-            lastPos = s.find_first_not_of(delimiters, pos);
-            pos = s.find_first_of(delimiters, lastPos);
-        }
-    }
-
-从C++11开始，标准库中提供了regex，regex用来做split就是小儿科了，比如：
-    
-    std::string text = "Quick brown fox.";
-    std::regex ws_re("\\s+"); // whitespace
-    std::vector<std::string> v(std::sregex_token_iterator(text.begin(), text.end(), ws_re, -1), 
-        std::sregex_token_iterator());
-    for(auto&& s: v)
-        std::cout<<s<<"\n";
-
-结合 C++17 提供的 string_view 实现，减少拷贝，性能有不小提升，参看此文：
-Speeding Up string_view String Split Implementation。
-https://www.bfilipek.com/2018/07/string-view-perf-followup.html
-
-从 C++20 开始，标准库中提供了 ranges，有专门的 split view，只要写 `str|split(' ')` 就可以切分字符串，如果要获取结果 `vector<string>` 可以这样用(随手写的，可能不是最简)：
-    
-    string str("hello world test split");
-    auto sv = str
-        | ranges::views::split(' ') 
-        | ranges::views::transform([](auto&& i){
-            return i | ranges::to<string>(); }) 
-        | ranges::to<vector>();
-        
-    for(auto&& s: sv) {
-        cout<<s<<"\n";
-    }
-
-其实 C 语言里面也有一个函数 strtok 用于 char* 的 split，例如：
-    
-    #include <string.h>
-    #include <iostream>
-    #include <string>
-    using namespace std;
-    int main() 
-    {
-        string str = "one two three four five";
-        char *token = strtok(str.data(), " ");// non-const data() needs c++17
-        while (token != NULL) {
-            std::cout << token << '\n';
-            token = strtok(NULL, " ");
-        }
-    }
-
-这里要注意的是 strtok 的第一个参数类型是 char* 而不是 const char* 实际上 strtok 的确会改变输入的字符串。
-
-
-## string literal
-
-在C++中，
-
-    char* p = "abc";　　// valid in C, invalid in C++
-
-会跳出警告：
-
-    warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
-
-等号两边的变量类型不一样，进行了隐式类型转换 implicit conversion。
-
-等号右边的 "abc" 是一个 string literal 字面常量，是 `const char*`，而 p 则是一个 `char*`。将右边的常量强制类型转换成一个指针，结果就是我们在修改一个 const 常量。编译运行的结果会因编译器和操作系统共同决定，有的编译器会通过，有的会抛异常，就算过了也可能因为操作系统的敏感性而被杀掉。
-
-像这种直接将 string literal 赋值给指针的操作被开发者们认为是 deprecated，只不过由于以前很多代码都有这种习惯，为了兼容，就保留下来了。更规矩的写法：
-
-    char* p = (char*)"abc";  // OK
-    char const *p = "abc";　　// OK
-
-
-# iostream & file
-- [Input/output library](https://en.cppreference.com/w/cpp/io#Stream-based_I.2FO)
-- [std::basic_fstream](https://en.cppreference.com/w/cpp/io/basic_fstream)
-- https://docs.microsoft.com/zh-cn/cpp/standard-library/iostream
-- https://docs.microsoft.com/zh-cn/cpp/standard-library/fstream
-
-C++ 两个 I/O 库，现代的基于流的 Stream-based I/O，以及兼容的 C-style I/O。
-
-基于流的 I/O，由高度抽象的 ios_base -> basic_ios 类型作为文件流、内存流或其它流的接口适配。再了继承生成 basic_ostream、basic_istream、basic_iostream 等一系列的明确输入或输出方向的流对象。再按具体流设备的差异，实现各种不同的流对象类型，如下：
-
-- File I/O implementation `<fstream>`
-
-    - basic_filebuf 
-    - basic_ifstream
-    - basic_ofstream
-    - basic_fstream
- 
-- String I/O implementation `<sstream>`
-
-    - basic_stringbuf
-    - basic_istringstream
-    - basic_ostringstream
-    - basic_stringstream
-
-- Array I/O implementations `<strstream>`
-
-    - strstreambuf 已经在 C++98 标准弃用
-    - istrstream 已经在 C++98 标准弃用
-    - ostrstream 已经在 C++98 标准弃用
-    - strstream 已经在 C++98 标准弃用
-
-
-在 (since C++11) 引用 `<iostream>` 头文件后，相当引用了以下四个：
-
-    #include <ios>
-    #include <streambuf>
-    #include <istream>
-    #include <ostream>
-
-基本流对象 `<iostream>` 定义了标准的输入输出流：
-
-| 标准流对象 | 流对象类型 | 说明    |
+| $(subst from,to,text) | $(subst ee,EE,feet on the street) |
+| $(lastword names…)    | $(lastword foo bar) |
+| $(patsubst pattern,replacement,text)  | $(patsubst %.c,%.o,x.c.c bar.c) |
+| $(strip string)   | $(strip a b c ) |
+| $(findstring find,in) | $(findstring a,a b c) |
+| $(filter pattern…,text)   | $(filter %.c %.s,$(sources)) |
+| $(sort list)  | $(sort foo bar lose) |
+| $(word n,text)    | $(word 2, foo bar baz) |
+| $(wordlist s,e,text)  | $(wordlist 2, 3, foo bar baz) |
+
+File Name Functions
+
+| 格式        | 示范    |
+| :-------  | :-------  |
+| $(dir names…) | $(dir src/foo.c hacks)    |
+| $(notdir names…)  | $(notdir src/foo.c hacks) |
+| $(suffix names…)  | $(suffix src/foo.c src-1.0/bar.c hacks)   |
+| $(basename names…)    | $(basename src/foo.c src-1.0/bar hacks)   |
+| $(addsuffix suffix,names…)    | $(addsuffix .c,foo bar)   |
+| $(addprefix prefix,names…)    | $(addprefix src/,foo bar) |
+| $(join list1,list2)   | $(join a b,.c .o) |
+| $(wildcard pattern)   |   |
+| $(realpath names…)    |   |
+| $(abspath names…) |   |
+
+Conditional Functions
+
+| 格式        | 示范    |
+| :-------  | :-------  |
+| $(if condition,then-part[,else-part]) |   |
+| $(or condition1[,condition2[,condition3…]])   |   |
+| $(and condition1[,condition2[,condition3…]])  |   |
+
+Make Control Functions
+
+| 格式        | 示范    |
+| :-------  | :-------  |
+| $(error text…)    | $(error error is $(ERROR1))   |
+| $(info text…) |   |
+| $(warning text…)  |   |
+
+其它函数 
+
+| 函数        | 格式        | 作用    |
 | :-------  | :-------  | :-------  |
-| std::cin  | istream   | standard input |
-| std::cout | ostream   | standard output |
-| std::cerr | ostream   | standard error |
-| std::clog | ostream   | standard log |
-| std::wcin | wistream  | standard input |
-| std::wcout| wostream  | standard output |
-| std::wcerr| wostream  | standard error |
-| std::wclog| wostream  | standard log |
-
-这些标准流对象的基础类型：
-
-    typedef basic_istream<char>         istream;
-    typedef basic_istream<wchar_t>     wistream;
-    typedef basic_ostream<char>         ostream;
-    typedef basic_ostream<wchar_t>     wostream;
-    typedef basic_iostream<char>       iostream;
-    typedef basic_iostream<wchar_t>   wiostream;
-
-在控制台程序中，cin 和 cout 可以用来在字符界面输入输出。
-
-基本文件流 `<fstream>` 定义了：
-
-| 流对象类型 | 基础类型  |
-| :------   | :------   |
-| basic_filebuf | 实现低层文件设备 |
-| basic_ifstream| 实现高级文件流输入操作 |
-| basic_ofstream| 实现高级文件流输出操作 |
-| basic_fstream | 实现高级文件流输入输出操作 |
-
-类型定义 Typedefs：
-
-| 流对象类型 | 基础类型  |
-| :------   | :------   |
-| filebuf   | basic_filebuf<char>   |
-| wfilebuf  | basic_filebuf<wchar_t>    |
-| ifstream  | basic_ifstream<char>  |
-| wifstream | basic_ifstream<wchar_t>   |
-| ofstream  | basic_ofstream<char>  |
-| wofstream | basic_ofstream<wchar_t>   |
-| fstream   | basic_fstream<char>   |
-| wfstream  | basic_fstream<wchar_t>    |
-
-基本文件流对象：
-
-| class     | 默认模式  |
-| :-------- | :-------- |
-| ofstream  | ios::out  |
-| ifstream  | ios::in   |
-| fstream   | ios::in or ios::out   |
-
-常用文件流模式：
-
-| 文件模式      | 说明    |
-| :-------- | :-------- |
-| ios::in   | 读取    |
-| ios::out  | 写入    |
-| ios::binary| 二进制  |
-| ios::ate  | 初始化读写游标到文件末端 at end   ，默认会在文件开头|
-| ios::app  | 附加内容 append   |
-| ios::trunc| 截断清空文件，如果文件存在 |
-
-读写操作的数据由读写游标位置决定，默认是文件开头 ios::beg：
-
-| 游标位置  | 说明    |
-| :-------- | :-------- |
-| ios::beg  | 在文件开头 |
-| ios::cur  | 在当前位置 |
-| ios::end  | 在文件结尾 |
+| Foreach Function  | $(foreach var,list,text)  | Repeat some text with controlled variation. |
+| File Function     | $(file op filename[,text])    | Write text to a file. |
+| Call Function     | $(call variable,param,param,…)    | Expand a user-defined function. |
+| Value Function    | $(value variable) | Return the un-expanded value of a variable. |
+| Eval Function     | $(eval $(call PROGRAM_template,$(prog))   | Evaluate the arguments as makefile syntax. |
+| Origin Function   | $(origin variable)    | Find where a variable got its value. |
+| Flavor Function   | $(flavor variable)    | Find out the flavor of a variable. |
+| Shell Function    | $(shell echo *.c) | Substitute the output of a shell command. |
+| Guile Function    |   | Use GNU Guile embedded scripting language. |
 
 
-文件状态标志检查：
+脚本模板 Makefile.template：
 
-- bad() 检查文件操作是否失败；
-- fail() 同 bad() 并且包括文件格式错误等，如试图读取数值时得到字符；
-- eof() 检查是不否读取到了文件末尾；
-- good() 一般状态检查，注意和 bad() 并不是相反关系；
-- clear() 重置状态标记；
+    # leave these lines alone
+    .SUFFIXES: .erl .beam .yrl
+
+    .erl.beam:
+        erlc -W $<
+
+    .yrl.erl:
+        erlc -W $<
+
+    ERL = erl -boot start_clean
+
+    # Here's a list of the erlang modules you want compiling
+    # If the modules don't fit onto one line add a \ character
+    # to the end of the line and continue on the next line
+    # Edit the lines below
+    
+    MODS = module1 module2 \
+        module3 ... special1 \
+        ...
+        moduleN
+    
+    # The first target in any makefile is the default target.
+    # If you just type "make" then "make all" is assumed (because
+    # "all" is the first target in this makefile)
+
+    all: compile
+
+    compile: ${MODS:%=%.beam} subdirs
+
+    ## special compilation requirements are added here
+
+    special1.beam: special1.erl
+        ${ERL} -Dflag1 -W0 special1.erl
+
+    ## run an application from the makefile
+
+    application1: compile
+        ${ERL} -pa Dir1 -s application1 start Arg1 Arg2
+
+    # the subdirs target compiles any code in sub-directories
+
+    subdirs:
+        cd dir1; $(MAKE)
+        cd dir2; $(MAKE)
+        ...
+
+    # remove all the code
+
+    clean:
+        rm -rf *.beam erl_crash.dump
+        cd dir1; $(MAKE) clean
+        cd dir2; $(MAKE) clean
+
+最重要的是：
+
+    MODS = module1 module2 module3 ... special1 ...
+
+它定义了需要编译的目标模块，然后使用 `${MODS:%=%.beam}` 转换成 beam 扩展名，执行 make 可以指定编译的目标：
+
+    make [Target]
+
+就会将模块编译生成脚本定义目标文件。
 
 
-文件读写操作示范：
+# Ninja 快速构建工具
+- [Ninja - a speedy and small build system](https://ninja-build.org/)
+- [The Ninja build system v1.10.0](https://ninja-build.org/manual.html)
 
-    #include <iostream>
-    #include <fstream>
+Ninja 是 Chrome 项目的构建工具，用来替换经典工具 make，目前这个开源工具已经被很多其它项目采用。据项目作者描述，创建这个新的构建工具，主要是为了提升大型项目的编译速度。
 
-    using namespace std;
+由于 Ninja 的设计目标之一是“必须易于嵌入大型构建系统”，所以，像写 Makfile 那样手写规则文件，并不是它的目标； Ninja 的项目作者说，Ninja 构建文件使用的语言“简单到了不便于人类书写”的程度。Ninja 的规则文件中，并没有条件语句或是基于文件后缀的规则，相反，有的仅仅是一个个列表。这些列表记录了确切的输入文件路径，以及所产生的确切结果。因为这种简单的表达并不需要额外的解释，所以，在运行时，这些规则文件能够被快速载入。 
 
-    int main () {
-      ofstream myfile;
-      myfile.open ("example.txt");
-      myfile << "Writing this to a file.\n";
-      myfile.close();
-      return 0;
-    }
+Ninja 规则脚本默认名称 build.ninja，简单到只需要三个基本概念：
 
-binary 文件读取：
+- Variables 变量设置
+- Rules 规则设置
+- Build 构建设置
 
-    #include <iostream>
-    #include <fstream>
-    using namespace std;
+假设有一个 demo.cpp 程序要编译，以下示范 Ninja 的脚本编写：
 
-    int main () {
-      streampos size;
-      char * memblock;
+    # Version required
+    ninja_required_version = 1.5
 
-      ifstream file ("file-binary.cpp.exe", ios::in|ios::binary|ios::ate);
-      if (file.is_open())
-      {
-        size = file.tellg();
-        memblock = new char [size];
-        file.seekg (0, ios::beg);
-        file.read (memblock, size);
-        file.close();
+    # build output
+    builddir = bin
 
-        cout << "the entire file content is in memory: " << size;
+    # variables
+    GCC = C:\MinGW\bin\g++.exe
+    cflags = -Wall
 
-        delete[] memblock;
-      }
-      else cout << "Unable to open file";
-      return 0;
-    }
+    # compile rules depfile ---> ninja_deps files
+    rule compile_demo
+      command = $GCC -c $cflags -MD -MF $out.d $in -o $out
+      description = Compiling $in for $out
+      depfile = $out.d
+      deps = gcc
 
-文本文件读写：
+    # link rules
+    rule link_demo
+      command = $GCC $DEFINES $INCLUDES $cflags $in -o $out
+      description = Linking $in for $out
 
-    #include <iostream>
-    #include <fstream>
-    #include <string>
+    # build
+    build demo.o : compile_demo src/demo.cpp
+    build demo.exe : link_demo demo.o
+    build all: phony demo.exe
 
-    using namespace std;
+    default all
 
-    int write (string file) {
-        try
-        {
-            fstream myfile (file, ios::app|ios::ate);
-            // myfile.open (file, ios::app);
-            myfile.exceptions(myfile.failbit);
-            int size = myfile.tellg();
-            myfile.seekg (0, ios::beg);
-            myfile << "// write comments by myself\n";
-            myfile.close();
-            cerr << "done!" << endl;
-            return size;
-        } catch (exception const& ex) {
-            cerr << "Exception: " << ex.what() << endl;
-            return -1;
-        } catch (const std::ios_base::failure& e) {
-            std::cout << "Caught an ios_base::failure.\n"
-                      << "Error code: " << e.code().value() 
-                      << " (" << e.code().message() << ")\n"
-                      << "Error category: " << e.code().category().name() << '\n';
+其中 phony 是一条特殊的规则，用来创建目标别名：
 
-        }
-        return 0;
-    }
+    build foo: phony some/file/in/a/faraway/subdir/foo
 
-    int read(string file)
-    {
-        string line;
-        ifstream myfile (file, ios::ate);
-        int size = myfile.tellg();
-        myfile.seekg (0, ios::beg);
-        if (!myfile.is_open())
-        {
-            cout << "Unable to open file: " << file; 
-            return 0;
-        }
-        while ( getline (myfile, line) )
-        {
-            cout << line << '\n';
-        }
-        myfile.close();
-        return size;
-    }
+规则中，只有 command 变量是必须的，这指定要运行的命令。
 
-    int main()
-    {
-        string file = "../src/\tfile-text.cpp";
-        cout << write(file) << endl;
-        cout << read(file) << endl;
-    }
+在 Ninja 1.3 引入 deps 规则变量，它可以指定 gcc 或 msvc 依赖文件处理方式。
+
+Ninja 处理三类的依赖：
+
+- Explicit dependencies 显式依赖，在 build 规则罗列的依赖文件，包括 $in 变量，改变显式依赖文件就会导致重新构建。
+- Implicit dependencies 隐式依赖，在 build 规则后面 `| dep1 dep2` 指定，或者从 depfile 文件解释得到的依赖。
+- Order-only dependencies 顺序依赖，在 build 规则后面 `|| dep1 dep2 ` 指定，会依据日期状态重新构建。
+
+为了正确构建 C/C++ 代码，一个构建系统必需能感知头文件间的依赖。假定 foo.c 包含一行 #inclue “foo.h” 。而 foo.h 自身又包含一行 #include “bar.h”。所有的三个文件都会影响后续编译，例如，bar.h 的改变也会触发 foo.o 的重新构建。
+
+一些构建系统使用一个“头文件扫描器”在构建时提取这部分依赖信息。但这个方法太慢，而且很难精确处理有 #ifdef 指令出现的情形。另一种选择是要求构建文件正确地报告所有依赖，包括头文件的依赖，但这对开发人员来说十分笨重：每次你添加或删除 #include 语句时，都需要修改或重新生成构建文件。
+
+一个有用的方法依赖于这样的事实：在编译时，GCC 以及 MSVC 可以给出在构建输出时用到了哪些头文件。这份信息文件，如同用于生成输出的信息，可以被构建系统记录和加载，由此，依赖可以被精确追踪。在第一次编译时，因为还未有输出，所有文件都会被编译，故不需头文件依赖。第一次编译后，对于被某个输出用到的任何文件如果发生更改包括增加或删除额外的依赖，就会导致重新构建，这保证了依赖信息的更新。
+
+在编译时，gcc 以 Makefile 的格式记下头文件依赖。Ninja 包括一个解析器处理 depfile 指定的这一 Makefile 语法文件，只是 Makefile 简化子集，并在下一次构建时载入这份依赖信息。
+
+Ninja 文件由记录的序列组成，而记录要么是一个路径，要么是一个依赖列表。每个写入文件的路径都被赋于了一个整数序列号，故而依赖就是一列整数。为了向文件添加依赖，Ninja 首先记录下还没有序列号的路径，然后用这些序列号记录依赖。在后续的构建载入这一文件时，Ninja 可以简单地使用一个数组将序列号映射到对应的 Node 指针。
+
+
+安装 Ninja ：
+
+- Ninja binary https://github.com/ninja-build/ninja/releases
+- build from source:
+
+        $ git clone git://github.com/ninja-build/ninja.git && cd ninja
+        $ git checkout release
+        $ cat README
+
+环境变量 NINJA_STATUS 可以控制 ninja 打印进度状态的样式，有几个占位符：
+
+| 占位符号    | 说明                                             |
+| ----------: | :----------------------------------------------- |
+|          %s | 起始 edges 的数量。                              |
+|          %t | 完成构建必须运行的 edges 总数。                  |
+|          %p | 起始 edges 的百分比。                            |
+|          %r | 当前运行的 edges 数。                            |
+|          %u | 要开始的剩余 edges 数。                          |
+|          %f | 完成的 edges 数。                                |
+|          %o | 每秒完成 edges 数                                |
+|          %c | 当前每秒完成 edges 数，由 -j 指定构建的平均值    |
+|          %e | 经过的时间，以秒为单位。自 Ninja 1.2 起可用。    |
+|          %% | 一个普通的 % 字符。                              |
+
+默认进度状态为 "[%f/%t] " 请注意尾随空格以与构建规则分开。可能的进度状态的另一个示例可能是 "[%u/%r/%f] "。
+尝试改为
+
+    export NINJA_STATUS="[%p/%f/%t %e] "（Windows下set NINJA_STATUS="[%p/%f/%t %e] "）
+
+
+规则文件一般是通过 cmake/gn 来生成 ninja 的配置，再进行编译：
+
+    # 示例
+    cmake . -G "Ninja" 
+    cmake . -G "CodeBlocks - Ninja"
+    cmake . -G "Sublime Text 2 - Ninja"
+    ninja 
+
+
+
+# VCpkg 开源库管理工具
+- [Manage C and C++ libraries on Windows](https://github.com/Microsoft/vcpkg/)
+- [Tips for VCpkg](https://vvingerfly.github.io/2018/05-08-Tips4vcpkg/)
+
+Windows 下开发 C/C++ 程序，少不了编译开源的第三方库。比如用于网络连接的高性能库 libcurl、用于压缩解压的 zlib 等等。使用这些库开发极大的方便了程序员，使得我们不必重复造轮子。由于这些开源库绝大部分都来源于 Linux 系统，其工程文件、编译系统都使用 gnu 系列工具，使得将其移植到 Windows 的 VC 开发环境下一直是难点。
+
+还需要考虑预先编译出哪种类型的开源库程序，比如：Debug 还是 Release、动态库还是静态库、MD 还是 MT、32 位还是 64 位。光是这三种组合就有 16 种可能性。如果像 libcurl 这种还要考虑是否引用其他开源库的功能，那么编译类型的组合会更多。
+
+VCpkg 就是解决这个问题的：
+
+- 自动调用 git 等工具下载开源库源代码；
+- 源码包的缓存管理和版本管理，可以升级版本；
+- 紧密结合 CMake 轻松编译；
+- 依赖关系检查，比如编译 libcurl，会自动下载 zlib、openssl 进行编译；
+- 无缝集成 Visual Studio，不需要设置库文件、头文件的所在目录，自动集成。
+- Visual Studio 全平台支持，支持 Debug/Release、x86/x64 编译，还支持 UWP、ARM 平台的编译。
+
+一般使用流程：
+
+- 执行 vcpkg 安装模块，等待编译动作完成；
+- 执行 vcpkg integrate 集成到项目或者 Visual Studio，又或者全局集成；
+- 在代码中通过头文件使用安装好的模块；
+
+
+vcpkg 主目录文件夹结构：
+
+| buildtrees | 所有下载好的 library 源代码和构建目录         |
+| docs       | 文档与示例                                    |
+| downloads  | 下载缓冲文件夹，执行安装命令时会先查询这里    |
+| installed  | 编译好 library 后安装头文件和编译生成的文件   |
+| packages   | 内部文件夹，在工程安装依赖时用到              |
+| ports      | 包含分类中的库描述文件，包含版本、下载地址等  |
+| scripts    | 脚本目录，如 cmake, powershell 脚本           |
+| toolsrc    | VcPkg C++ 源代码和组件                        |
+| triplets   | 包含支持架构配置文件，如 x86-windows、x64-uwp |
+
+  
+vcpkg 安装依赖模块的基本执行流程：
+
+- 环境初始化
+- 下载源代码，如果已经在 cache 中，则跳过下载环节
+- 校验文件有效性
+- 解压缩源代码
+- 利用配套工具配置源码工程，如 cmake，如果是 ffmpeg 则用 msys2
+- 执行 MSBuild 编译源码，一般会同时编译 Release 和 Debug 版本。
+- 把编译好的文件拷贝到相关目录中去，一般是 installed 目录
+
+如果没有在 vcpkg 主目录运行，可能会遇到 Error: Could not detect vcpkg-root。
+
+
+使用 PowerShell 执行 Vcpkg 工程目录下的 bootstrap-vcpkg.bat 进行编译，会在同级目录下生成 vcpkg.exe 文件。
+
+命令使用示范：
+
+    >vcpkg --help
+    Commands:
+      vcpkg search [pat]              Search for packages available to be built
+      vcpkg install <pkg>...          Install a package
+      vcpkg remove <pkg>...           Uninstall a package
+      vcpkg remove --outdated         Uninstall all out-of-date packages
+      vcpkg list                      List installed packages
+      vcpkg update                    Display list of packages for updating
+      vcpkg upgrade                   Rebuild all outdated packages
+      vcpkg x-history <pkg>           (Experimental) Shows the history of CONTROL versions of a package
+      vcpkg hash <file> [alg]         Hash a file by specific algorithm, default SHA512
+      vcpkg help topics               Display the list of help topics
+      vcpkg help <topic>              Display help for a specific topic
+
+      vcpkg integrate install         Make installed packages available user-wide. Requires admin
+                                      privileges on first use
+      vcpkg integrate remove          Remove user-wide integration
+      vcpkg integrate project         Generate a referencing nuget package for individual VS project use
+      vcpkg integrate powershell      Enable PowerShell tab-completion
+
+      vcpkg export <pkg>... [opt]...  Exports a package
+      vcpkg edit <pkg>                Open up a port for editing (uses %EDITOR%, default 'code')
+      vcpkg import <pkg>              Import a pre-built library
+      vcpkg create <pkg> <url> [archivename]
+                                      Create a new package
+      vcpkg owns <pat>                Search for files in installed packages
+      vcpkg depend-info <pkg>...      Display a list of dependencies for packages
+      vcpkg env                       Creates a clean shell environment for development or compiling
+      vcpkg version                   Display version information
+      vcpkg contact                   Display contact information to send feedback
+      ...
+
+    >vcpkg search assimp
+    >vcpkg search | findstr assimp
+    assimp               5.0.1            The Open Asset import library
+    magnum-plugins[assimpimporter]        AssimpImporter plugin
+
+    >vcpkg search | findstr glu
+    aws-sdk-cpp[glue]                     C++ SDK for the AWS glue service
+    freeglut             3.2.1-4          Open source implementation of GLUT with source and binary backwards compatibil...
+    glui                 2019-11-30       GLUI is a GLUT-based C++ user interface library
+    mathgl[glut]                          glut module
+
+    >vcpkg install assimp:
+    Computing installation plan...
+    The following packages will be built and installed:
+        assimp[core]:x86-windows
+      * minizip[core]:x86-windows
+      * rapidjson[core]:x86-windows
+      * zlib[core]:x86-windows
+    Additional packages (*) will be modified to complete this operation.
+    Warning: The following VS instances are excluded because the English language pack is unavailable.
+        C:\Program Files (x86)\Microsoft Visual Studio\2019\Community
+    Please install the English language pack.
+
+安装具有 Cuda 加速的 opencv 库：
+
+    vcpkg search opencv
+    vcpkg install opencv[cuda]:x64-windows 
+    vcpkg --triplet x64-windows install opencv[cuda]
+
+支持的架构组合查询：
+
+    >vcpkg help triplet
+
+| VCPKG built-in triplets | VCPKG community triplets |
+|-------------------------|--------------------------|
+| arm-uwp                 | arm-ios                  |
+| arm64-windows           | arm-mingw                |
+| x64-linux               | arm-windows              |
+| x64-osx                 | arm64-ios                |
+| x64-uwp                 | arm64-mingw              |
+| x64-windows-static      | arm64-uwp                |
+| x64-windows             | arm64-windows-static     |
+| x86-windows             | wasm32-emscripten        |
+|                         | x64-ios                  |
+|                         | x64-mingw                |
+|                         | x64-osx-dynamic          |
+|                         | x64-windows-static-md    |
+|                         | x86-ios                  |
+|                         | x86-mingw                |
+|                         | x86-uwp                  |
+|                         | x86-windows-static-md    |
+|                         | x86-windows-static       |
+
+
+作为 MinGW 的用户，我非愿意看到 triplet 列表中有 x64-mingw 和 x86-mingw 的身影。
+
+可以设置默认的架构：
+
+    VCPKG_DEFAULT_TRIPLET=x64-windows
+
+vcpkg 的 Triplet files 是用来记录和库相关的 OS、CPU、Compiler、Runtime 等信息的文件，它包含了编译模块时使用的工具链。
+
+安装第三方的 MinGW 架构依赖库时出现错误：
+
+    >vcpkg install assimp:x64-mingw
+    Computing installation plan...
+    The following packages will be built and installed:
+        assimp[core]:x64-mingw
+      * minizip[core]:x64-mingw
+      * rapidjson[core]:x64-mingw
+      * zlib[core]:x64-mingw
+    Additional packages (*) will be modified to complete this operation.
+    Unable to determine toolchain to use for triplet x64-mingw with CMAKE_SYSTEM_NAME MinGW
+
+提示信息表明，vcpkg 无法从 CMAKE_SYSTEM_NAME 指定的 x64-mingw 架构确定需要用到的工具链：
+
+    triplets/community/x64-mingw.cmake
+
+这个问题有点恶心，因为 vcpkg 的源代码忽略了 MinGW，解决方法是修改 build.cpp 重新编译 vcpkg：
+
+    diff --git a/toolsrc/src/vcpkg/build.cpp b/toolsrc/src/vcpkg/build.cpp
+    index c61c6b7..d7c78aa 100644
+    --- a/toolsrc/src/vcpkg/build.cpp
+    +++ b/toolsrc/src/vcpkg/build.cpp
+    @@ -558,6 +558,10 @@ namespace vcpkg::Build
+             else if (cmake_system_name == "Android")
+             {
+                 return m_paths.scripts / fs::u8path("toolchains/android.cmake");
+    +        }
+    +        else if (cmake_system_name == "MinGW")
+    +        {
+    +            return m_paths.scripts / fs::u8path("toolchains/mingw.cmake");
+             }
+             else if (cmake_system_name.empty() || cmake_system_name == "Windows" || cmake_system_name == "WindowsStore")
+             {
+    --
+
+参考 https://github.com/microsoft/vcpkg/issues/12065
+
+
+安装好依赖模块后，接着是将 vcpkg 集成到项目或进行全局集成：
+
+    >vcpkg integrate install
+    Applied user-wide integration for this vcpkg root.
+
+    All MSBuild C++ projects can now #include any installed libraries.
+    Linking will be handled automatically.
+    Installing new libraries will make them instantly available.
+
+    CMake projects should use: "-DCMAKE_TOOLCHAIN_FILE=C:/vcpkg/scripts/buildsystems/vcpkg.cmake"
+
+使用 CMake 的编译项目中使用 vcpkg 安装的库，最佳方式指定 CMake (Toolchain File) 工具链文件 `scripts/buildsystems/vcpkg.cmake`，让 `find_package()` 命令发现安装的库。
+
+要使用这个文件，通过命令参数传入 CMake 即可：
+
+    cmake .. -DCMAKE_TOOLCHAIN_FILE=vcpkg/scripts/buildsystems/vcpkg.cmake (Linux/MacOS)
+    cmake .. -DCMAKE_TOOLCHAIN_FILE=vcpkg\scripts\buildsystems\vcpkg.cmake (Windows)
+
+再比如，如果要用 VS2017 编译器，输入下面命令即可：
+
+    cmake .. -DCMAKE_TOOLCHAIN_FILE=D:\vcpkg\scripts\buildsystems\vcpkg.cmake -G "Visual Studio 15 2017 Win64"
+
+还有一种方法，直接在 CMakeLists.txt 文件中指定 `CMAKE_TOOLCHAIN_FILE` 变量，即：
+
+    set(CMAKE_TOOLCHAIN_FILE "D:\vcpkg\scripts\buildsystems\vcpkg.cmake")
+    project(PROJECT_NAME)
+
+注意，要在 `project()` 命令之前设置。另外，类似 `CMAKE_SYSTEM_NAME`,`CMAKE_C_COMPILER` 等这些变量都要在 `project()`命令之前设定，不然 CMake 会按照默认的设置处理。
+
+如果电脑中没有安装 cmake，vcpkg 会自动下载 cmake portable 版本。
+
+
+集成安装：
+
+|            命令            |               说明              |
+|----------------------------|---------------------------------|
+| vcpkg integrate install    | 为所有用户集成安装依赖包        |
+| vcpkg integrate remove     | 为所有用户移除集成安装          |
+| vcpkg integrate project    | 为独立 VS 项目创建 nuget 包引用 |
+| vcpkg integrate powershell | 为 PowerShell Tab 自动完成集成  |
+|----------------------------|---------------------------------|
+
+
+依赖包的管理：
+
+    vcpkg.exe remove assimp
+    vcpkg.exe remove --outdated
+    vcpkg.exe list
+    vcpkg.exe export assimp --7zip
+
+导出时必须指定导出的包格式。vcpkg支持5种导出包格式，有：
+
+| 参数        | 格式                     |
+| :---------- | ------------------------ |
+| –raw        | 以不打包的目录格式导出   |
+| –nuget      | 以 nuget 包形式导出      |
+| –ifw        | 基于 IFW 的安装包        |
+| –zip        | 以 zip 压缩包形式导出    |
+| –7zip       | 以 7z 压缩包形式导出     |
+
+最后，提示一下，VCpkg 会自动查找依赖的库，像本系统一样，编译 libpng 进出现 zlib 库的各种函数无定义：
+
+    undefined reference to `deflateEnd'
+    undefined reference to `crc32'
+
+这是因为编译依赖库时找到的 zlib 是来自 Anaconda 中安装的库文件，而在自己编写的程序中引用的是另一个版本的库，前后不一致而导致找不到符号：
+
+    C:/Anaconda3/Library/include
+    C:/Anaconda3/Library/lib/z.lib
