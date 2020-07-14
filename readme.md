@@ -6,11 +6,27 @@ Demo 这个仓库原本是坚果用来学 Git 版本管理用的，随着演示�
 
 演示项目列表：
 
+- .NetCore Web 服务开发
+
+    https://github.com/jimboyeah/demo/tree/DotNetCoreWebw
+
+		git clone -b DotNetCoreWebw https://github.com/jimboyeah/demo.git
+
+- Xarmarin 跨平台开发
+
+    https://github.com/jimboyeah/demo/tree/XamarinVS2019
+
+        git clone -b XamarinVS2019 https://github.com/jimboyeah/demo.git
+
 - OpenGL & OpenCV 进行中
 
     https://github.com/jimboyeah/demo/tree/OpenGL_demos
 
-		git clone -b OpenGL_demos https://github.com/jimboyeah/demo.git
+        git clone -b OpenGL_demos https://github.com/jimboyeah/demo.git
+
+    OpenGL 红宝书例程讲解在此仓库：
+
+    https://github.com/jimboyeah/The-OpenGL-Redbook-Samples-MinGW.git
 
 - DLL with MinGW
 
