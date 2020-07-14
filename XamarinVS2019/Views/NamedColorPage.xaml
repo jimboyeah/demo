@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="XamarinVS2019.Views.NamedColorPage"
+             xmlns:local="clr-namespace:XamarinVS2019"
+             xmlns:model="clr-namespace:XamarinVS2019.ViewModels"
+             xmlns:vm="clr-namespace:XamarinVS2019.ViewModels"
+             Title="{Binding Title}">
+    
+    <ContentPage.BindingContext>
+        <vm:AboutViewModel />
+    </ContentPage.BindingContext>
+
+    <NavigationPage.TitleView>
+        <Label Text="{Binding Title}"
+	       FontSize="Large"
+         TextColor="AliceBlue"
+	       HorizontalOptions="Start"
+	       VerticalOptions="Center">
+            <Label.BindingContext>
+                <model:NamedColor/>
+            </Label.BindingContext>
+        </Label>
+    </NavigationPage.TitleView>
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <OnPlatform x:Key="boxSize"
+                        x:TypeArguments="x:Double">
+                <On Platform="iOS, Android, UWP" Value="50" />
+            </OnPlatform>
+
+            <OnPlatform x:Key="rowHeight"
+                        x:TypeArguments="x:Int32">
+                <On Platform="iOS, Android, UWP" Value="60" />
+            </OnPlatform>
+
+            <model:DoubleToIntConverter x:Key="intConverter" />
+
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ListView ItemsSource="{Static model:NamedColor.All}"
+              ItemTapped="OnTapped"
+              RowHeight="{x:StaticResource rowHeight}">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <StackLayout VerticalOptions="Center" Orientation="Horizontal" Padding="8">
+                        <Frame BorderColor="AliceBlue" CornerRadius="24" Padding="0">
+                            <BoxView 
+                            HeightRequest="48" 
+                            WidthRequest="16" BackgroundColor="{Binding Color}" />
+                        </Frame>
+                        <StackLayout VerticalOptions="Start" Padding="0">
+                            <Label Text="{Binding FriendlyName}" />
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="{Binding ColorHex}"  />
+                                <Label Text="{Binding Name}"  />
+                                <Label Text="{Binding DateTime}"  />
+                            </StackLayout>
+                        </StackLayout>
+                    </StackLayout>
+
+        <ViewCell.ContextActions>
+            <MenuItem Clicked="OnMore"
+                      CommandParameter="More"
+                      Text="More" />
+            <MenuItem Clicked="OnDelete"
+                      CommandParameter="{Binding .}"
+                      Text="Delete" IsDestructive="True" />
+        </ViewCell.ContextActions>
+
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+</ContentPage>

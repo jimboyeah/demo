@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="XamarinVS2019.Views.SessionDataPage"
+    >
+    <ContentPage.Resources>
+        <ResourceDictionary>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ScrollView>
+        <AbsoluteLayout>
+            <Image Source="avatar.jpg">
+                <Image.GestureRecognizers>
+                    <PanGestureRecognizer PanUpdated="PanUpdated" />
+                </Image.GestureRecognizers>
+            </Image>
+            <Label>Test DataPages</Label>
+        </AbsoluteLayout>
+    </ScrollView>
+</ContentPage>

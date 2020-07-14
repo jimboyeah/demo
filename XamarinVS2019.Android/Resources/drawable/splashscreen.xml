@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" ?>
+    <bitmap 
+        android:gravity="fill" 
+        android:layout_gravity="center" 
+        android:src="@drawable/xamarin_logo" 
+        xmlns:android="http://schemas.android.com/apk/res/android">
+</bitmap>

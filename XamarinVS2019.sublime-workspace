@@ -1,0 +1,2051 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"_co",
+				"_colors"
+			],
+			[
+				"Stack",
+				"StackLayout"
+			],
+			[
+				"abso",
+				"AbsoluteLayout"
+			],
+			[
+				"Named",
+				"NamedColor"
+			],
+			[
+				"Pro",
+				"PropertyChangedEventHandler"
+			],
+			[
+				"Prop",
+				"OnPropertyChanged"
+			],
+			[
+				"col",
+				"_color"
+			],
+			[
+				"B",
+				"FromBody"
+			],
+			[
+				"_",
+				"_serviceProvider"
+			],
+			[
+				"cli",
+				"on_button_clicked"
+			],
+			[
+				"height",
+				"max-height\tproperty"
+			],
+			[
+				"so",
+				"socket.io-client"
+			],
+			[
+				"S",
+				"SocketioEventEmit\tfunc(event string, text string) ·ƒ"
+			],
+			[
+				"En",
+				"EncodeToString\tfunc(src []byte) string ·ƒ"
+			],
+			[
+				"st",
+				"StdEncoding\t*base64.Encoding ·ν"
+			],
+			[
+				"Engin",
+				"EngineioMessage\tfunc(text string) ·ƒ"
+			],
+			[
+				"EIO",
+				"EIO_Message\tEngineioPacket ·Ɩ"
+			],
+			[
+				"SIO_Bin",
+				"SIO_Binary_Event\tSocketioPacket ·Ɩ"
+			],
+			[
+				"SIO",
+				"SIO_Event\tSocketioPacket ·Ɩ"
+			],
+			[
+				"U",
+				"Uint16\tfunc(b []byte) uint16 ·ƒ"
+			],
+			[
+				"Error",
+				"ErrorNil\tErrorCode ·Ɩ"
+			],
+			[
+				"Err",
+				"ErrorNil\tErrorCode ·Ɩ"
+			],
+			[
+				"Messa",
+				"MessageType\tbyte ·ʈ"
+			],
+			[
+				"E",
+				"Err\terror ·ν"
+			],
+			[
+				"e",
+				"Err\terror ·ν"
+			],
+			[
+				"b",
+				"brw\t*bufio.ReadWriter ·ν"
+			],
+			[
+				"Mi",
+				"Millisecond\ttime.Duration ·Ɩ"
+			],
+			[
+				"Webs",
+				"github.com/gorilla/websocket\t ·ʂ"
+			],
+			[
+				"Set",
+				"SetReadDeadline\tfunc(t time.Time) error ·ƒ"
+			],
+			[
+				"R",
+				"RemoteAddr\tfunc() net.Addr ·ƒ"
+			],
+			[
+				"P",
+				"parsed\tbool ·ν"
+			],
+			[
+				"utf",
+				"unicode/utf8\t ·ʂ"
+			],
+			[
+				"Mask",
+				"Masking\tbool ·ν"
+			],
+			[
+				"Mess",
+				"MessageType\tbyte ·ʈ"
+			],
+			[
+				"int",
+				"int64\tint64 ·ʈ"
+			],
+			[
+				"Ma",
+				"Maskingkey\t[4]byte ·ν"
+			],
+			[
+				"Masking",
+				"Masking\tbool ·ν"
+			],
+			[
+				"M",
+				"Maskingkey\t[4]byte ·ν"
+			],
+			[
+				"CloseMe",
+				"CloseMessageCode\tuint ·ʈ"
+			],
+			[
+				"Ti",
+				"PingTimeout\ttime.Duration ·Ɩ"
+			],
+			[
+				"Ping",
+				"PingTimeout\ttime.Duration ·Ɩ"
+			],
+			[
+				"r",
+				"SetReadDeadline\tfunc(t time.Time) error ·ƒ"
+			],
+			[
+				"Read",
+				"ReadWriter\tstruct ·ʈ"
+			],
+			[
+				"StatusIn",
+				"StatusInternalServerError\tuntyped int ·Ɩ"
+			],
+			[
+				"net",
+				"netConn\tnet.Conn ·ν"
+			],
+			[
+				"enc",
+				"encoding/base64\t ·ʂ"
+			],
+			[
+				"Re",
+				"RequestURI\tstring ·ν"
+			],
+			[
+				"Respn",
+				"ResponseWriter\tinterface ·ʈ"
+			],
+			[
+				"Ha",
+				"Handler\tinterface ·ʈ"
+			],
+			[
+				"L",
+				"GetLabel\tfunc() string ·ƒ"
+			],
+			[
+				"test",
+				"test_pb.js"
+			],
+			[
+				"react",
+				"react-quill/"
+			],
+			[
+				"el",
+				"element-ui/"
+			],
+			[
+				"rel",
+				"icedesign-qrcode.rel.js"
+			],
+			[
+				"get",
+				"getCroppedCanvas\twarning"
+			],
+			[
+				"cl",
+				"className"
+			],
+			[
+				"hex",
+				"hex2decimal"
+			],
+			[
+				"flex",
+				"flex-wrap\tproperty"
+			],
+			[
+				"in",
+				"MarshalIndent\tfunc(v interface{}, prefix string, indent string) []byte, error ·ƒ"
+			],
+			[
+				"io",
+				"io/ioutil\t ·ʂ"
+			],
+			[
+				"re",
+				"ReadDir\tfunc(dirname string) []os.FileInfo, error ·ƒ"
+			],
+			[
+				"init",
+				"initQueue"
+			],
+			[
+				"thread",
+				"threadID"
+			],
+			[
+				"exit",
+				"exitFlag"
+			],
+			[
+				"con",
+				"content_encoding"
+			],
+			[
+				"content",
+				"content_length"
+			],
+			[
+				"name",
+				"nameKey"
+			],
+			[
+				"work",
+				"workQueue"
+			],
+			[
+				"en",
+				"enqueue"
+			],
+			[
+				"none",
+				"None"
+			],
+			[
+				"Mo",
+				"ModeExclusive\tos.FileMode ·Ɩ"
+			],
+			[
+				"encod",
+				"encoding/json\t ·ʂ"
+			],
+			[
+				"Cmd",
+				"Command\tfunc(name string, arg ...string) *exec.Cmd ·ƒ"
+			],
+			[
+				"next",
+				"next.min.js"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "XamarinVS2019.Web/Startup.cs",
+			"settings":
+			{
+				"buffer_size": 1414,
+				"encoding": "UTF-8 with BOM",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "XamarinVS2019.Web/appsettings.json",
+			"settings":
+			{
+				"buffer_size": 262,
+				"encoding": "UTF-8 with BOM",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "XamarinVS2019/ViewModels/LifeCell.cs",
+			"settings":
+			{
+				"buffer_size": 1435,
+				"encoding": "UTF-8",
+				"line_ending": "Windows",
+				"name": "using System;"
+			}
+		},
+		{
+			"file": "XamarinVS2019/ViewModels/LifeGrid.cs",
+			"settings":
+			{
+				"buffer_size": 4289,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "XamarinVS2019/Views/GameOfLife.xaml",
+			"settings":
+			{
+				"buffer_size": 4590,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "XamarinVS2019/Views/GameOfLife.xaml.cs",
+			"settings":
+			{
+				"buffer_size": 5668,
+				"encoding": "UTF-8",
+				"line_ending": "Windows",
+				"name": "using System;"
+			}
+		},
+		{
+			"file": "XamarinVS2019/Views/MenuPage.xaml.cs",
+			"settings":
+			{
+				"buffer_size": 2086,
+				"encoding": "UTF-8 with BOM",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "XamarinVS2019.Android/TouchEffect.Droid.cs",
+			"settings":
+			{
+				"buffer_size": 7946,
+				"encoding": "UTF-8 with BOM",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "XamarinVS2019/TouchPoint.cs",
+			"settings":
+			{
+				"buffer_size": 2451,
+				"encoding": "UTF-8",
+				"line_ending": "Windows",
+				"name": "using System;"
+			}
+		},
+		{
+			"contents": "using System;\nusing System.Drawing;\nusing Xamarin.Forms;\nusing System.Collections.Generic;\n\nusing XamarinVS2019.ViewModels;\n\nnamespace SkiaSharpFormsDemos.Basics\n{\n    public class TapToggleFillModel : BaseViewModel\n    {\n\n        private int _colorswitch;\n        private float _strokewidth;\n        private List<Xamarin.Forms.Color> _colors;\n\n        public TapToggleFillModel()\n        {\n            Title = \"Tap Toggle Fill\";\n            _colors = new List<Xamarin.Forms.Color> {\n                Xamarin.Forms.Color.Red,\n                Xamarin.Forms.Color.Green,\n                Xamarin.Forms.Color.Blue,\n                Xamarin.Forms.Color.Yellow,\n                Xamarin.Forms.Color.AliceBlue,\n                Xamarin.Forms.Color.Aqua\n            };\n        }\n\n        public int ColorSwitch \n        {\n            get { return _colorswitch; }\n            set\n            {\n                SetProperty(ref _colorswitch, value);\n                OnPropertyChanged(nameof(Color));\n            }\n        }\n\n        public Xamarin.Forms.Color Color \n        {\n            get { \n                return _colors[_colorswitch];\n            }\n        }\n\n        public float StrokeWidth \n        {\n            get { return _strokewidth; }\n            set\n            {\n                SetProperty(ref _strokewidth, value);\n                Console.WriteLine(\"StrokeWidth {0}\", StrokeWidth);\n            }\n        }\n\n    }\n\n    \n}\n",
+			"file": "XamarinVS2019/ViewModels/TapToggleFillModel.cs",
+			"file_size": 1487,
+			"file_write_time": 132363788478742449,
+			"settings":
+			{
+				"buffer_size": 1427,
+				"line_ending": "Windows",
+				"scratch": true
+			}
+		},
+		{
+			"file": "XamarinVS2019/Views/TouchPage.xaml",
+			"settings":
+			{
+				"buffer_size": 728,
+				"encoding": "UTF-8 with BOM",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "<ContentPage xmlns=\"http://xamarin.com/schemas/2014/forms\"\n             xmlns:x=\"http://schemas.microsoft.com/winfx/2009/xaml\"\n             xmlns:skia=\"clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms\"\n             x:Class=\"SkiaSharpFormsDemos.Basics.TapToggleFillPage\"\n             xmlns:local=\"clr-namespace:SkiaSharpFormsDemos.Basics\"\n             Title=\"Tap Toggle Fill\">\n\n    <ContentPage.BindingContext>\n        <local:TapToggleFillModel  />\n    </ContentPage.BindingContext>\n    <StackLayout Padding=\"24\">\n\n        <skia:SKCanvasView PaintSurface=\"OnCanvasViewPaintSurface\" VerticalOptions=\"CenterAndExpand\">\n            <skia:SKCanvasView.GestureRecognizers>\n                <TapGestureRecognizer Tapped=\"OnCanvasViewTapped\" />\n            </skia:SKCanvasView.GestureRecognizers>\n        </skia:SKCanvasView>\n\n        <Label FontSize=\"Medium\">\n            <Label.FormattedText>\n                <FormattedString>\n                    <Span Text=\"Color Select\" BackgroundColor=\"{Binding Color}\" />\n                </FormattedString>\n            </Label.FormattedText>\n        </Label>\n        <Slider Minimum=\"0\" Maximum=\"5\" Value=\"{Binding ColorSwitch, Mode=TwoWay}\" />\n        <Label FontSize=\"{Binding StrokeWidth}\">Stroke Width</Label>\n        <Slider Minimum=\"0\" Maximum=\"50\" Value=\"{Binding StrokeWidth, Mode=TwoWay}\" />\n    \n    </StackLayout>\n</ContentPage>",
+			"file": "XamarinVS2019/Views/TapToggleFillPage.xaml",
+			"file_size": 1390,
+			"file_write_time": 132363789394861521,
+			"settings":
+			{
+				"buffer_size": 1388,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "using System;\nusing System.ComponentModel;\nusing System.Windows.Input;\nusing Xamarin.Forms;\n\nnamespace XamarinVS2019.ViewModels\n{\n    class KeypadViewModel : INotifyPropertyChanged\n    {\n        string inputString = \"\";\n        string displayText = \"\";\n        char[] specialChars = { '*', '#' };\n\n        public event PropertyChangedEventHandler PropertyChanged;\n\n        public KeypadViewModel()\n        {\n            AddCharCommand = new Command<string>((key) =>\n                {\n                    InputString += key;\n                });\n\n            DeleteCharCommand = new Command(() =>\n                {\n                    InputString = InputString.Substring(0, InputString.Length - 1);\n                },\n                () =>\n                {\n                    return InputString.Length > 0;\n                });\n        }\n\n        public string InputString\n        {\n            protected set\n            {\n                if (inputString != value)\n                {\n                    inputString = value;\n                    OnPropertyChanged(\"InputString\");\n                    DisplayText = FormatText(inputString);\n\n                    // Perhaps the delete button must be enabled/disabled.\n                    ((Command)DeleteCharCommand).ChangeCanExecute();\n                }\n            }\n\n            get { return inputString; }\n        }\n\n        public string DisplayText\n        {\n            protected set\n            {\n                if (displayText != value)\n                {\n                    displayText = value;\n                    OnPropertyChanged(\"DisplayText\");\n                }\n            }\n            get { return displayText; }\n        }\n\n        public ICommand AddCharCommand { protected set; get; }\n\n        public ICommand DeleteCharCommand { protected set; get; }\n\n        string FormatText(string str)\n        {\n            bool hasNonNumbers = str.IndexOfAny(specialChars) != -1;\n            string formatted = str;\n\n            if (hasNonNumbers || str.Length < 4 || str.Length > 10)\n            {\n            }\n            else if (str.Length < 8)\n            {\n                formatted = String.Format(\"{0}-{1}\",\n                                          str.Substring(0, 3),\n                                          str.Substring(3));\n            }\n            else\n            {\n                formatted = String.Format(\"({0}) {1}-{2}\",\n                                          str.Substring(0, 3),\n                                          str.Substring(3, 3),\n                                          str.Substring(6));\n            }\n            return formatted;\n        }\n\n        protected void OnPropertyChanged(string propertyName)\n        {\n            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));\n        }\n    }\n}",
+			"file": "XamarinVS2019/ViewModels/KeypadViewModel.cs",
+			"file_size": 2914,
+			"file_write_time": 132362002592012480,
+			"settings":
+			{
+				"buffer_size": 2818,
+				"line_ending": "Windows",
+				"scratch": true
+			}
+		},
+		{
+			"contents": "using System;\nusing System.Reflection;\nusing System.Text;\nusing Xamarin.Forms;\nusing System.Collections.Generic;\nusing System.Globalization;\nusing System.ComponentModel;\nusing System.Runtime.CompilerServices;\n\nnamespace XamarinVS2019.ViewModels\n{\n    public class NamedColor : BaseViewModel\n    {\n        public string Name { private set; get; }\n        public string FriendlyName { private set; get; }\n        public Color Color { private set; get; }\n        public String ColorHex { private set; get; }\n\n        public static List<NamedColor> All { private set; get; }\n        public static List<String> AllName { private set; get; }\n\n        // new string Title = \"Named Color List\";\n        public NamedColor()\n        {\n            Title = \"Named Color List\";\n            this.DateTime = DateTime.Now;\n            Device.StartTimer(TimeSpan.FromSeconds(5), () =>\n            {\n                Console.WriteLine(\"Device Timer... {0:mm:ss.fff}ms\", this.DateTime);\n                this.DateTime = DateTime.Now;\n                return true;\n            });\n        }\n        \n        private DateTime _datetime;\n        public DateTime DateTime\n        {\n            get { return _datetime; }\n            set\n            {\n                if (_datetime != value)\n                {\n                    _datetime = value;\n                    OnPropertyChanged();\n                }\n            }\n        }\n\n        static NamedColor()\n        {\n            All = new List<NamedColor>();\n            AllName = new List<string>();\n            Color color = new Color();\n\n            //var fields = color.GetType().GetFields();\n            var props = color.GetType().GetRuntimeFields();\n            StringBuilder builder = new StringBuilder();\n            foreach (FieldInfo pi in props)\n            {\n                if (pi.FieldType != typeof(Color))\n                {\n                    continue;\n                }\n\n                int idx = 0;\n                builder.Clear();\n                builder.Append($\"[{All.Count,2}] \");\n                AllName.Add($\"[{AllName.Count,2}] \" + pi.Name);\n                foreach (char ch in pi.Name)\n                {\n                    if (idx++ != 0 && char.IsUpper(ch)) builder.Append(' ');\n                    builder.Append(ch);\n                }\n                All.Add(new NamedColor {\n                    Name = pi.Name,\n                    FriendlyName = builder.ToString(),\n                    Color = (Color)pi.GetValue(null),\n                    ColorHex = ((Color)pi.GetValue(null)).ToHex()\n                });\n                // if (All.Count > 50)\n                // {\n                //     break;\n                // }\n            }\n        }\n\n        //public new event PropertyChangedEventHandler PropertyChanged;\n\n        //private void OnPropertyChanged([CallerMemberName] string name=null)\n        //{\n        //    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));\n        //}\n    }\n\n\n    class DoubleToIntConverter : IValueConverter\n    {\n        public object Convert(object value, Type targetType,\n                              object parameter, CultureInfo culture)\n        {\n            double multiplier;\n\n            if (!Double.TryParse(parameter as string, out multiplier))\n                multiplier = 1;\n\n            return (int)Math.Round(multiplier * (double)value);\n        }\n\n        public object ConvertBack(object value, Type targetType,\n                                  object parameter, CultureInfo culture)\n        {\n            double divider;\n\n            if (!Double.TryParse(parameter as string, out divider))\n                divider = 1;\n\n            return ((double)(int)value) / divider;\n        }\n    }\n    \n}\n",
+			"file": "XamarinVS2019/ViewModels/NamedColor.cs",
+			"file_size": 3841,
+			"file_write_time": 132361921832489508,
+			"settings":
+			{
+				"buffer_size": 3720,
+				"line_ending": "Windows",
+				"scratch": true
+			}
+		}
+	],
+	"build_system": "Packages/User/C#.sublime-build",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/User/C#.sublime-build",
+					""
+				],
+				[
+					"Packages/User/C#.sublime-build",
+					"Build Exe & Run ..."
+				],
+				[
+					"Packages/User/C#.sublime-build",
+					"Build DLL"
+				],
+				[
+					"Packages/User/C#.sublime-build",
+					"Run"
+				],
+				[
+					"Packages/User/C#.sublime-build",
+					".Net New"
+				],
+				[
+					"Packages/User/C#.sublime-build",
+					".Net Run"
+				],
+				[
+					"Packages/User/C#.sublime-build",
+					".Net Watch"
+				],
+				[
+					"Packages/User/C#.sublime-build",
+					".Net Run Project"
+				],
+				[
+					"Packages/User/C#.sublime-build",
+					".Net Watch Project"
+				],
+				[
+					"Packages/User/C#.sublime-build",
+					"Run with Test Arguments"
+				],
+				[
+					"Packages/User/Dart 2.2.sublime-build",
+					""
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					""
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go build"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go build Window GUI App"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go Release Window GUI App"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go Release App"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go run"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go install"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go run with Test Arguments"
+				],
+				[
+					"Packages/User/php.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/User/C#.sublime-build",
+				".Net Watch"
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"dis",
+				"Package Control: Disable Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"package",
+				"Package Control: Install Package"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"utf",
+				"ConvertToUTF8: Reload with Encoding"
+			],
+			[
+				"TypesCript",
+				"TypeScript: Signature Info"
+			],
+			[
+				"preview",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"markdown",
+				"Set Syntax: MultiMarkdown"
+			],
+			[
+				"debug",
+				"SublimeCodeIntel: Enable Debug Mode"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"theme",
+				"UI: Select Color Scheme"
+			],
+			[
+				"them",
+				"UI: Select Theme"
+			],
+			[
+				"new pro",
+				"Project Manager: Add New Project"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 302.0,
+		"history":
+		[
+			"shell",
+			"sys",
+			"ls",
+			"dir",
+			"cwd"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/coding/md-code/XamarinVS2019",
+		"/C/coding/md-code/XamarinVS2019/XamarinVS2019",
+		"/C/coding/md-code/XamarinVS2019/XamarinVS2019/Views",
+		"/C/coding/md-code/XamarinVS2019/XamarinVS2019.Web",
+		"/C/coding/md-code/XamarinVS2019/XamarinVS2019.Web/Controllers",
+		"/C/coding/md-code/XamarinVS2019/XamarinVS2019.Web/Models",
+		"/C/coding/md-code/XamarinVS2019/XamarinVS2019.Web/Properties"
+	],
+	"file_history":
+	[
+		"/C/coding/md-code/XamarinVS2019/XamarinVS2019/bin/Debug/netstandard2.0/XamarinVS2019.deps.json",
+		"/C/coding/md-code/XamarinVS2019/XamarinVS2019/obj/Debug/netstandard2.0/Views/TouchPage.xaml.g.cs",
+		"/C/coding/md-code/XamarinVS2019/XamarinVS2019/Views/SkiaPage.xaml.cs",
+		"/C/coding/md-code/XamarinVS2019/XamarinVS2019/Views/SkiaPage.xaml",
+		"/C/coding/md-code/XamarinVS2019/XamarinVS2019/ViewModels/NamedColor.cs",
+		"/C/coding/md-code/XamarinVS2019/XamarinVS2019/ViewModels/TapToggleFillModel.cs",
+		"/C/coding/md-code/XamarinVS2019/XamarinVS2019/XamarinVS2019.csproj",
+		"/C/coding/md-code/XamarinVS2019/XamarinVS2019/obj/Debug/netstandard2.0/Views/SkiaPage.xaml.g.cs",
+		"/C/coding/md-code/XamarinVS2019/XamarinVS2019/Views/TouchPage.xaml",
+		"/C/coding/md-code/XamarinVS2019/XamarinVS2019/Views/HSLViewPage.xaml",
+		"/C/coding/md-code/XamarinVS2019/XamarinVS2019/ViewModels/HSLViewModel.cs",
+		"/C/coding/md-code/XamarinVS2019/XamarinVS2019/Views/MenuPage.xaml",
+		"/C/coding/md-code/XamarinVS2019/XamarinVS2019/Views/SessionDataPage.xaml",
+		"/C/coding/md-code/XamarinVS2019/XamarinVS2019/Views/SessionDataPage.xaml.cs",
+		"/C/coding/md-code/XamarinVS2019/TouchEffect.UWP.cs",
+		"/C/coding/md-code/XamarinVS2019/XamarinVS2019/obj/Debug/netstandard2.0/Views/SessionDataPage.xaml.g.cs",
+		"/C/coding/md-code/XamarinVS2019/XamarinVS2019.Android/XamarinVS2019.Android.csproj",
+		"/C/coding/md-code/XamarinVS2019/XamarinVS2019/Views/MainPage.xaml.cs",
+		"/C/coding/md-code/XamarinVS2019/XamarinVS2019/Models/HomeMenuItem.cs",
+		"/C/coding/md-code/XamarinVS2019/XamarinVS2019/App.xaml",
+		"/C/coding/md-code/XamarinVS2019/XamarinVS2019/Views/ItemsPage.xaml",
+		"/C/coding/md-code/XamarinVS2019/XamarinVS2019.Web/Models/ItemRepository.cs",
+		"/C/coding/md-code/XamarinVS2019/XamarinVS2019.Web/Controllers/ItemController.cs",
+		"/C/coding/md-code/XamarinVS2019/XamarinVS2019/Views/AboutPage.xaml.cs",
+		"/C/coding/md-code/XamarinVS2019/XamarinVS2019.iOS/AppDelegate.cs",
+		"/C/coding/md-code/XamarinVS2019/XamarinVS2019/Views/MenuPage.xaml.cs",
+		"/C/coding/md-code/XamarinVS2019/XamarinVS2019.Android/MainActivity.cs",
+		"/C/coding/md-code/XamarinVS2019/XamarinVS2019/ViewModels/AboutViewModel.cs",
+		"/C/coding/md-code/XamarinVS2019/XamarinVS2019/ViewModels/KeypadViewModel.cs",
+		"/C/coding/md-code/XamarinVS2019/XamarinVS2019/Views/KeypadPage.xaml",
+		"/C/coding/md-code/XamarinVS2019/XamarinVS2019/Views/AboutPage.xaml",
+		"/C/coding/md-code/XamarinVS2019/XamarinVS2019/Views/KeypadPage.xaml.cs",
+		"/C/coding/md-code/XamarinVS2019/XamarinVS2019/Views/HSLViewPage.xaml.cs",
+		"/C/coding/md-code/XamarinVS2019/XamarinVS2019/Views/NewItemPage.xaml.cs",
+		"/C/coding/md-code/XamarinVS2019/XamarinVS2019/Views/ItemsPage.xaml.cs",
+		"/C/coding/md-code/XamarinVS2019/XamarinVS2019/Views/ItemDetailPage.xaml",
+		"/C/coding/md-code/XamarinVS2019/XamarinVS2019/Views/NamedColorPage.xaml",
+		"/C/coding/md-code/XamarinVS2019/XamarinVS2019/ViewModels/ItemsViewModel.cs",
+		"/C/coding/md-code/XamarinVS2019/XamarinVS2019/obj/Debug/netstandard2.0/Views/HSLViewPage.xaml.g.cs",
+		"/C/coding/md-code/XamarinVS2019/XamarinVS2019/Views/NamedColorPage.xaml.cs",
+		"/C/coding/md-code/XamarinVS2019/XamarinVS2019/Views/MainPage.xaml",
+		"/C/coding/md-code/XamarinVS2019/XamarinVS2019/obj/Debug/netstandard2.0/Views/MainPage.xaml.g.cs",
+		"/C/coding/md-code/XamarinVS2019/XamarinVS2019/Models/Item.cs",
+		"/C/coding/md-code/XamarinVS2019/XamarinVS2019/App.xaml.cs",
+		"/C/coding/md-code/XamarinVS2019/XamarinVS2019.Android/Resources/drawable/splashscreen.xml",
+		"/C/coding/md-code/XamarinVS2019/XamarinVS2019.Android/Resources/layout/Tabbar.xml",
+		"/C/coding/md-code/XamarinVS2019/XamarinVS2019/Views/NewItemPage.xaml",
+		"/C/coding/md-code/XamarinVS2019/XamarinVS2019.Android/LoadingScreen.cs",
+		"/C/coding/md-code/XamarinVS2019/XamarinVS2019.Android/Resources/values/styles.xml",
+		"/C/coding/md-code/XamarinVS2019/XamarinVS2019.Android/Resources/Resource.designer.cs",
+		"/C/coding/md-code/XamarinVS2019/XamarinVS2019/obj/Debug/netstandard2.0/Views/AboutPage.xaml.g.cs",
+		"/C/coding/md-code/XamarinVS2019/XamarinVS2019.Android/obj/Debug/90/android/src/crc643f46942d9dd1fff9/FormsSeekBar.java",
+		"/C/coding/md-code/XamarinVS2019/XamarinVS2019/obj/Debug/netstandard2.0/App.xaml.g.cs",
+		"/C/coding/md-code/XamarinVS2019/XamarinVS2019.iOS/Assets.xcassets/AppIcon.appiconset/Icon60.png",
+		"/C/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Xamarin/Android/Version.rev",
+		"/C/coding/md-code/XamarinVS2019/XamarinVS2019.Web/XamarinVS2019.Web.csproj",
+		"/C/coding/md-code/wpf/MainWindow.xaml",
+		"/C/coding/md-code/wpf/MainWindow.xaml.cs",
+		"/C/coding/md-code/wpf/App.xaml.cs",
+		"/C/coding/md-code/wpf/App.xaml",
+		"/C/coding/md-code/wpf/obj/Debug/netcoreapp3.1/App.g.cs",
+		"/C/coding/md-code/wpf/wpf.csproj",
+		"/C/coding/md-code/blazorWasmWebApp/wwwroot/sample-data/weather.json",
+		"/C/coding/md-code/blazorWasmWebApp/bw.sublime-project",
+		"/C/coding/md-code/blazorWasmWebApp/s.sublime-workspace",
+		"/C/coding/md-code/blazorServerWebApp/Properties/launchSettings.json",
+		"/C/coding/md-code/myWebApp/myWebApp.csproj",
+		"/C/coding/md-code/myWebApp/cs.sublime-project",
+		"/C/coding/md-code/myWebApp/Properties/launchSettings.json",
+		"/C/coding/md-code/myWebApp/Pages/Error.cshtml.cs",
+		"/C/coding/md-code/myWebApp/cs.sublime-workspace",
+		"/C/coding/md-code/cs.sublime-workspace",
+		"/C/coding/md-code/myWebApp/obj/myWebApp.csproj.nuget.g.props",
+		"/C/coding/md/readme_java.md",
+		"/C/coding/md/readme_python.md",
+		"/C/Program Files (x86)/Crytek/CRYENGINE Launcher/Crytek/CRYENGINE_5.0/cryengine.cryengine",
+		"/C/Program Files (x86)/Crytek/CRYENGINE Launcher/Crytek/CRYENGINE_5.0/cry_waf.sh",
+		"/C/Program Files (x86)/Crytek/CRYENGINE Launcher/Crytek/CRYENGINE_5.0/editor.cfg",
+		"/C/Program Files (x86)/Crytek/CRYENGINE Launcher/Crytek/CRYENGINE_5.0/wscript",
+		"/C/Program Files (x86)/Crytek/CRYENGINE Launcher/Crytek/CRYENGINE_5.0/system.cfg",
+		"/C/Program Files (x86)/Crytek/CRYENGINE Launcher/Crytek/CRYENGINE_5.6/cryengine.cryengine",
+		"/C/Users/OCEAN/AppData/Roaming/Sublime Text 3/Packages/User/C#.sublime-build",
+		"/C/coding/md-code/csdemo/src/Program.cs",
+		"/C/coding/md/coding.cs",
+		"/C/coding/md/readme_sublime.md",
+		"/C/coding/md-code/csdemo/Program.cs",
+		"/C/coding/md-code/md-code.csproj",
+		"/C/coding/md-code/Class1.cs",
+		"/C/coding/md/coding.js",
+		"/C/Program Files (x86)/Crytek/CRYENGINE Launcher/Crytek/CRYENGINE_5.6/Templates/cs/Blank/Code/Game/Program.cs",
+		"/C/coding/src/flex/yuetai/Run.bat",
+		"/C/coding/src/flex/JSocket/readme.txt",
+		"/C/coding/md/readme_chromeos.md",
+		"/C/download/Header Editor.crx/options/options.js",
+		"/C/download/Header Editor.crx/background.js",
+		"/C/Users/OCEAN/AppData/Local/Temp/Rar$DIa12996.7663/网盘下载地址.txt",
+		"/C/Users/OCEAN/AppData/Local/Temp/Rar$DIa476.25542/软件说明.txt",
+		"/C/download/FastStonecapture_9.3/Readme.txt",
+		"/C/download/wxapkg/readme.txt",
+		"/C/download/pac.txt",
+		"/C/coding/md/OpenToonz/flstudio.md",
+		"/C/php7.2.6/php.ini",
+		"/C/coding/md/readme_php.md",
+		"/C/coding/拼了个音/script.php",
+		"/C/coding/md/coding.php",
+		"/C/Users/OCEAN/Music/to_mp3.bat",
+		"/C/download/CG/Krita 4 Brushes/Krita 4 Brushes.html",
+		"/C/download/CG/Krita 4 Brushes/theme.css",
+		"/C/download/CG/Virtual Audio Cable/setup.ini",
+		"/C/download/CG/Virtual Audio Cable/file_id.diz",
+		"/C/download/CG/Virtual Audio Cable/632816vac460/setup.ini",
+		"/C/download/CG/Virtual Audio Cable/632816vac460/readme.txt",
+		"/C/Users/OCEAN/Videos/ZARD What a beautiful memory/demo.srt",
+		"/C/coding/md/readme_win.md",
+		"/C/Users/OCEAN/Music/Izumi Sakai/lyrics.md",
+		"/C/coding/md/mtd/mtd.py",
+		"/C/Users/OCEAN/AppData/Local/Temp/Rar$DIa8748.39862/readme.txt",
+		"/C/Users/OCEAN/AppData/Local/Temp/Rar$DIa16540.19888/READ ME.txt",
+		"/C/pictures/a/陆萱萱/地铁.html",
+		"/C/Windows/System32/DriverStore/FileRepository/64zh6472.inf_amd64_4c9e39c00e7ab352/ocl_cpu_readme.txt",
+		"/C/coding/md/OpenToonz/ffmpeg.md",
+		"/C/coding/md/readme_ffmpeg.md",
+		"/C/coding/md/readme_ips.md",
+		"/C/coding/md/OpenToonz/OpenToonz.md",
+		"/C/Users/OCEAN/AppData/Local/Microsoft/Windows/INetCache/IE/MY1298YB/index[1].json",
+		"/C/Users/OCEAN/AppData/Local/Microsoft/Windows/INetCache/IE/7D59MFGE/entry[1].json",
+		"/C/model/basic/render/apple/readme.md",
+		"/C/Users/OCEAN/AppData/Local/Temp/Rar$DIa8344.20495/注册码使用说明.txt"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 451.0,
+		"where_history":
+		[
+			"C:\\coding\\md-code\\XamarinVS2019\\",
+			"C:\\coding\\md-code\\XamarinVS2019\\XamarinVS2019\\",
+			"C:\\coding\\md-code\\XamarinVS2019\\XamarinVS2019\\Views",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			"green_apple_colored_pencil_drawing",
+			"StrokeWitdh",
+			"StrokeWidth",
+			"SkiaSharpFormsDemos.Basics",
+			"TapToggleFillModel",
+			"setProperty",
+			"_strokewidth",
+			"saturation",
+			"NamedColor",
+			"BindableContext",
+			"ContentPage",
+			"XamarinVS2019.Views",
+			"XamarinVS2019",
+			"OnCanvasViewPaintSurface",
+			"SkiaPage",
+			"TouchPage",
+			"InitializeComponent  ();",
+			"InitializeComponent ();",
+			"}\n复制代码\nnamespace TouchTracking\n{",
+			"TouchTracking",
+			"App1",
+			"_ratationZ",
+			"RotationZ",
+			"Rotation",
+			"X",
+			"Rotation",
+			"{\n",
+			"RotationX",
+			"image",
+			"absoluteLayout",
+			"avatar",
+			"ContentPage",
+			"Mininum",
+			"Maxinum",
+			"Frme",
+			"_luminosity",
+			"Frme",
+			"LoadApplication",
+			"TargetPaltform",
+			"TargetPlatform",
+			"Label",
+			"ScrollView",
+			"gesture",
+			"OnSwiped",
+			"PinchUpdated",
+			"Empty",
+			"SwipedEventArgs",
+			"gesture",
+			"OnSwiped",
+			"OnPinchUpdated",
+			"Tapped",
+			"Taped",
+			"Tap",
+			"Launcher",
+			"Wrap",
+			"KeypadPage",
+			"MainPage",
+			"local",
+			"Text",
+			"StackLayout",
+			"Row",
+			"Grid",
+			"StackLayout",
+			" Grid.Column=\"0\"",
+			" Grid.Column=",
+			"MenuPage",
+			"ICommand",
+			"setProperty",
+			"hue",
+			"ListItemTextStyle",
+			"(int)",
+			"int",
+			"MenuPages",
+			"Browse",
+			"id",
+			"int",
+			"NavigateFromMenu",
+			"public partial class",
+			"Resource.Id",
+			":",
+			"android",
+			"Async",
+			"CopyTo",
+			"IsPresented",
+			"mytitle",
+			"AddItem",
+			"JsonConvert",
+			"client.",
+			"updateColor()",
+			"App1",
+			"AboutPage",
+			" {\n    \t\tget",
+			"Navigation",
+			"event}",
+			"event",
+			"async",
+			"event)",
+			"event",
+			"{",
+			"Item_",
+			"TargetType",
+			"FadeBackgroundBrush",
+			"\n\n",
+			"Page.Resources",
+			"<Page.Resources",
+			"Page",
+			"WpfVS2019",
+			"InitializeComponent",
+			"WpfVS2019",
+			" Style=\"{StaticResource}\"",
+			" SampleHeaderTextStyle",
+			" Style=\"{StaticResource}\"",
+			"ITextService"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": true,
+		"regex": true,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "XamarinVS2019.Web/Startup.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1414,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								462,
+								462
+							]
+						],
+						"settings":
+						{
+							"in_converting": true,
+							"incomplete_sync": null,
+							"is_init_dirty_state": false,
+							"origin_content": "using System;\nusing System.Threading.Tasks;\nusing Microsoft.AspNetCore.Builder;\nusing Microsoft.AspNetCore.Hosting;\nusing Microsoft.AspNetCore.Mvc;\nusing Microsoft.Extensions.Configuration;\nusing Microsoft.Extensions.DependencyInjection;\nusing Microsoft.Extensions.Hosting;\nusing Microsoft.Extensions.Logging;\nusing XamarinVS2019.Models;\n\nnamespace XamarinVS2019.Web\n{\n    public class Startup\n    {\n        public Startup(IConfiguration configuration)\n        {\n            Configuration = configuration;\n        }\n\n        public IConfiguration Configuration { get; }\n\n        // This method gets called by the runtime. Use this method to add services to the container.\n        public void ConfigureServices(IServiceCollection services)\n        {\n            services.AddControllers();\n            services.AddSingleton<IItemRepository, ItemRepository>();\n            Console.WriteLine(\"Configure Services for Web...\");\n        }\n\n        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)\n        {\n            if (env.IsDevelopment())\n            {\n                app.UseDeveloperExceptionPage();\n            }\n\n            // app.UseHttpsRedirection();\n            app.UseRouting();\n\n            app.UseDefaultFiles();\n            app.UseStaticFiles();\n\n            app.UseEndpoints(endpoints =>\n            {\n                endpoints.MapControllers();\n            });\n        }\n    }\n}",
+							"origin_encoding": "UTF-8-SIG",
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/C#/C#.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "XamarinVS2019.Web/appsettings.json",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 262,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								262,
+								262
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "XamarinVS2019/ViewModels/LifeCell.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1435,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								586,
+								586
+							]
+						],
+						"settings":
+						{
+							"auto_name": "using System;",
+							"incomplete_sync": null,
+							"is_init_dirty_state": false,
+							"origin_encoding": "ASCII",
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/C#/C#.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 13,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "XamarinVS2019/ViewModels/LifeGrid.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4289,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3216,
+								3216
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"is_init_dirty_state": false,
+							"origin_encoding": "ASCII",
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/C#/C#.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 11,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "XamarinVS2019/Views/GameOfLife.xaml",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4590,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								940,
+								444
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"is_init_dirty_state": false,
+							"origin_encoding": "ASCII",
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/XML/XML.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 12,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "XamarinVS2019/Views/GameOfLife.xaml.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5668,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1519,
+								1519
+							]
+						],
+						"settings":
+						{
+							"auto_name": "using System;",
+							"incomplete_sync": null,
+							"is_init_dirty_state": false,
+							"origin_encoding": "ASCII",
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/C#/C#.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1865.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "XamarinVS2019/Views/MenuPage.xaml.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2086,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1129,
+								1155
+							]
+						],
+						"settings":
+						{
+							"in_converting": true,
+							"incomplete_sync": null,
+							"is_init_dirty_state": false,
+							"origin_content": "using XamarinVS2019.Models;\nusing System;\nusing System.Collections.Generic;\nusing System.ComponentModel;\nusing Xamarin.Forms;\nusing SkiaSharpFormsDemos.Basics;\n\nnamespace XamarinVS2019.Views\n{\n    // Learn more about making custom code visible in the Xamarin.Forms previewer\n    // by visiting https://aka.ms/xamarinforms-previewer\n    [DesignTimeVisible(false)]\n    public partial class MenuPage : ContentPage\n    {\n        MainPage RootPage { get => Application.Current.MainPage as MainPage; }\n        List<HomeMenuItem> menuItems;\n        public MenuPage()\n        {\n            InitializeComponent();\n\n            menuItems = new List<HomeMenuItem>\n            {\n                new HomeMenuItem {Id = MenuItemType.Browse, Title=\"Browse\" },\n                new HomeMenuItem {Id = MenuItemType.About, Title=\"About\" },\n                new HomeMenuItem {Tag = typeof(GameOfLife.GameOfLife), Title=\"GameOfLife\" },\n                new HomeMenuItem {Tag = typeof(SessionDataPage), Title=\"DataPages Demo\" },\n                new HomeMenuItem {Tag = typeof(TouchPage), Title=\"TouchPage Demo\" },\n                new HomeMenuItem {Tag = typeof(TapToggleFillPage), Title=\"SkiaSharp GDI Demo\" },\n                new HomeMenuItem {Tag = typeof(KeypadPage), Title=\"KeypadPage\" },\n                new HomeMenuItem {Tag = typeof(HSLViewPage), Title=\"HSL View\" },\n                new HomeMenuItem {Tag = typeof(NamedColorPage), Title=\"Named Color\" }\n            };\n            Console.WriteLine(\"Menu Item add {0}\", menuItems.Count);\n\n            ListViewMenu.ItemsSource = menuItems;\n\n            ListViewMenu.SelectedItem = menuItems[0];\n            ListViewMenu.ItemSelected += async (sender, e) =>\n            {\n                if (e.SelectedItem == null)\n                    return;\n\n                var item = (HomeMenuItem)e.SelectedItem;\n                if (item.Tag == null)\n                {\n                    await RootPage.NavigateFromMenu(item.Id);\n                }else{\n                    await RootPage.NavigateFromMenu(item.Tag);\n                }\n            };\n        }\n    }\n}",
+							"origin_encoding": "UTF-8-SIG",
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/C#/C#.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "XamarinVS2019.Android/TouchEffect.Droid.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7946,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								274,
+								263
+							]
+						],
+						"settings":
+						{
+							"in_converting": true,
+							"incomplete_sync": null,
+							"is_init_dirty_state": false,
+							"origin_content": "using System;\nusing System.Collections.Generic;\nusing System.Linq;\n\nusing Xamarin.Forms;\nusing Xamarin.Forms.Platform.Android;\n\nusing Android.Views;\n\n[assembly: ResolutionGroupName(\"XamarinDocs\")]\n[assembly: ExportEffect(typeof(TouchTracking.Droid.TouchEffect), \"TouchEffect\")]\n\nnamespace TouchTracking.Droid\n{\n    public class TouchEffect : PlatformEffect\n    {\n        Android.Views.View view;\n        Element formsElement;\n        TouchTracking.TouchEffect libTouchEffect;\n        bool capture;\n        Func<double, double> fromPixels;\n        int[] twoIntArray = new int[2];\n\n        static Dictionary<Android.Views.View, TouchEffect> viewDictionary = \n            new Dictionary<Android.Views.View, TouchEffect>();\n\n        static Dictionary<int, TouchEffect> idToEffectDictionary = \n            new Dictionary<int, TouchEffect>();\n\n        protected override void OnAttached()\n        {\n            // Get the Android View corresponding to the Element that the effect is attached to\n            view = Control == null ? Container : Control;\n\n            // Get access to the TouchEffect class in the .NET Standard library\n            TouchTracking.TouchEffect touchEffect = \n                (TouchTracking.TouchEffect)Element.Effects.\n                    FirstOrDefault(e => e is TouchTracking.TouchEffect);\n\n            if (touchEffect != null && view != null)\n            {\n                viewDictionary.Add(view, this);\n\n                formsElement = Element;\n\n                libTouchEffect = touchEffect;\n\n                // Save fromPixels function\n                fromPixels = view.Context.FromPixels;\n\n                // Set event handler on View\n                view.Touch += OnTouch;\n            }\n        }\n\n        protected override void OnDetached()\n        {\n            if (viewDictionary.ContainsKey(view))\n            {\n                viewDictionary.Remove(view);\n                view.Touch -= OnTouch;\n            }\n        }\n\n        void OnTouch(object sender, Android.Views.View.TouchEventArgs args)\n        {\n            // Two object common to all the events\n            Android.Views.View senderView = sender as Android.Views.View;\n            MotionEvent motionEvent = args.Event;\n\n            // Get the pointer index\n            int pointerIndex = motionEvent.ActionIndex;\n\n            // Get the id that identifies a finger over the course of its progress\n            int id = motionEvent.GetPointerId(pointerIndex);\n\n\n            senderView.GetLocationOnScreen(twoIntArray);\n            Point screenPointerCoords = new Point(twoIntArray[0] + motionEvent.GetX(pointerIndex),\n                                                  twoIntArray[1] + motionEvent.GetY(pointerIndex));\n\n\n            // Use ActionMasked here rather than Action to reduce the number of possibilities\n            switch (args.Event.ActionMasked)\n            {\n                case MotionEventActions.Down:\n                case MotionEventActions.PointerDown:\n                    FireEvent(this, id, TouchActionType.Pressed, screenPointerCoords, true);\n\n                    idToEffectDictionary.Add(id, this);\n\n                    capture = libTouchEffect.Capture;\n                    break;\n\n                case MotionEventActions.Move:\n                    // Multiple Move events are bundled, so handle them in a loop\n                    for (pointerIndex = 0; pointerIndex < motionEvent.PointerCount; pointerIndex++)\n                    {\n                        id = motionEvent.GetPointerId(pointerIndex);\n\n                        if (capture)\n                        {\n                            senderView.GetLocationOnScreen(twoIntArray);\n\n                            screenPointerCoords = new Point(twoIntArray[0] + motionEvent.GetX(pointerIndex),\n                                                            twoIntArray[1] + motionEvent.GetY(pointerIndex));\n\n                            FireEvent(this, id, TouchActionType.Moved, screenPointerCoords, true);\n                        }\n                        else\n                        {\n                            CheckForBoundaryHop(id, screenPointerCoords);\n\n                            if (idToEffectDictionary[id] != null)\n                            {\n                                FireEvent(idToEffectDictionary[id], id, TouchActionType.Moved, screenPointerCoords, true);\n                            }\n                        }\n                    }\n                    break;\n\n                case MotionEventActions.Up:\n                case MotionEventActions.Pointer1Up:\n                    if (capture)\n                    {\n                        FireEvent(this, id, TouchActionType.Released, screenPointerCoords, false);\n                    }\n                    else\n                    {\n                        CheckForBoundaryHop(id, screenPointerCoords);\n\n                        if (idToEffectDictionary[id] != null)\n                        {\n                            FireEvent(idToEffectDictionary[id], id, TouchActionType.Released, screenPointerCoords, false);\n                        }\n                    }\n                    idToEffectDictionary.Remove(id);\n                    break;\n\n                case MotionEventActions.Cancel:\n                    if (capture)\n                    {\n                        FireEvent(this, id, TouchActionType.Cancelled, screenPointerCoords, false);\n                    }\n                    else\n                    {\n                        if (idToEffectDictionary[id] != null)\n                        {\n                            FireEvent(idToEffectDictionary[id], id, TouchActionType.Cancelled, screenPointerCoords, false);\n                        }\n                    }\n                    idToEffectDictionary.Remove(id);\n                    break;\n            }\n        }\n\n        void CheckForBoundaryHop(int id, Point pointerLocation)\n        { \n            TouchEffect touchEffectHit = null;\n\n            foreach (Android.Views.View view in viewDictionary.Keys)\n            {\n                // Get the view rectangle\n                try\n                {\n                    view.GetLocationOnScreen(twoIntArray);\n                }\n                catch // System.ObjectDisposedException: Cannot access a disposed object.\n                {\n                    continue;\n                }\n                Rectangle viewRect = new Rectangle(twoIntArray[0], twoIntArray[1], view.Width, view.Height);\n\n                if (viewRect.Contains(pointerLocation))\n                {\n                    touchEffectHit = viewDictionary[view];\n                }\n            }\n\n            if (touchEffectHit != idToEffectDictionary[id])\n            {\n                if (idToEffectDictionary[id] != null)\n                {\n                    FireEvent(idToEffectDictionary[id], id, TouchActionType.Exited, pointerLocation, true);\n                }\n                if (touchEffectHit != null)\n                {\n                    FireEvent(touchEffectHit, id, TouchActionType.Entered, pointerLocation, true);\n                }\n                idToEffectDictionary[id] = touchEffectHit;\n            }\n        }\n\n        void FireEvent(TouchEffect touchEffect, int id, TouchActionType actionType, Point pointerLocation, bool isInContact)\n        {\n            // Get the method to call for firing events\n            Action<Element, TouchActionEventArgs> onTouchAction = touchEffect.libTouchEffect.OnTouchAction;\n\n            // Get the location of the pointer within the view\n            touchEffect.view.GetLocationOnScreen(twoIntArray);\n            double x = pointerLocation.X - twoIntArray[0];\n            double y = pointerLocation.Y - twoIntArray[1];\n            Point point = new Point(fromPixels(x), fromPixels(y));\n\n            // Call the method\n            onTouchAction(touchEffect.formsElement,\n                new TouchActionEventArgs(id, actionType, point, isInContact));\n        }\n    }\n}\n",
+							"origin_encoding": "UTF-8-SIG",
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/C#/C#.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "XamarinVS2019/TouchPoint.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2451,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								63,
+								96
+							]
+						],
+						"settings":
+						{
+							"auto_name": "using System;",
+							"incomplete_sync": null,
+							"is_init_dirty_state": false,
+							"origin_encoding": "ASCII",
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/C#/C#.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "XamarinVS2019/ViewModels/TapToggleFillModel.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1427,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								924,
+								924
+							]
+						],
+						"settings":
+						{
+							"in_converting": true,
+							"incomplete_sync": null,
+							"is_init_dirty_state": false,
+							"origin_content": "using System;\nusing System.Drawing;\nusing Xamarin.Forms;\nusing System.Collections.Generic;\n\nusing XamarinVS2019.ViewModels;\n\nnamespace SkiaSharpFormsDemos.Basics\n{\n    public class TapToggleFillModel : BaseViewModel\n    {\n\n        private int _colorswitch;\n        private float _strokewidth;\n        private List<Xamarin.Forms.Color> _colors;\n\n        public TapToggleFillModel()\n        {\n            Title = \"Tap Toggle Fill\";\n            _colors = new List<Xamarin.Forms.Color> {\n                Xamarin.Forms.Color.Red,\n                Xamarin.Forms.Color.Green,\n                Xamarin.Forms.Color.Blue,\n                Xamarin.Forms.Color.Yellow,\n                Xamarin.Forms.Color.AliceBlue,\n                Xamarin.Forms.Color.Aqua\n            };\n        }\n\n        public int ColorSwitch \n        {\n            get { return _colorswitch; }\n            set\n            {\n                SetProperty(ref _colorswitch, value);\n                OnPropertyChanged(nameof(Color));\n            }\n        }\n\n        public Xamarin.Forms.Color Color \n        {\n            get { \n                return _colors[_colorswitch];\n            }\n        }\n\n        public float StrokeWidth \n        {\n            get { return _strokewidth; }\n            set\n            {\n                SetProperty(ref _strokewidth, value);\n                Console.WriteLine(\"StrokeWidth {0}\", StrokeWidth);\n            }\n        }\n\n    }\n\n    \n}\n",
+							"origin_encoding": "GBK",
+							"remote_loading": false,
+							"revert_to_scratch": true,
+							"synced": false,
+							"syntax": "Packages/C#/C#.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 200.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "XamarinVS2019/Views/TouchPage.xaml",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 728,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								536,
+								536
+							]
+						],
+						"settings":
+						{
+							"in_converting": true,
+							"incomplete_sync": null,
+							"is_init_dirty_state": false,
+							"origin_content": "<?xml version=\"1.0\" encoding=\"utf-8\" ?>\n<ContentPage xmlns=\"http://xamarin.com/schemas/2014/forms\"\n             xmlns:x=\"http://schemas.microsoft.com/winfx/2009/xaml\"\n             xmlns:local=\"clr-namespace:XamarinVS2019\"\n             xmlns:tt=\"clr-namespace:TouchTracking\"\n             x:Class=\"XamarinVS2019.Views.TouchPage\">\n\n    <Grid x:Name=\"p1\" BackgroundColor=\"Aquamarine\">\n        <Grid.Effects>\n            <tt:TouchEffect Capture=\"True\" TouchAction=\"OnTouchEffectAction\" />\n        </Grid.Effects>\n        <!--<Image Source=\"avatar\" />-->\n        <!--<Button Clicked=\"OnTouchEffectAction\" Text=\"Click Me\"></Button>-->\n        <Image Source=\"Assets/green_apple_colored_pencil_drawing.jpg\" />\n    </Grid>\n\n</ContentPage>",
+							"origin_encoding": "UTF-8-SIG",
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/XML/XML.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "XamarinVS2019/Views/TapToggleFillPage.xaml",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1388,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1193,
+								1193
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"is_init_dirty_state": true,
+							"origin_encoding": "ASCII",
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/XML/XML.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"file": "XamarinVS2019/ViewModels/KeypadViewModel.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2818,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"in_converting": true,
+							"incomplete_sync": null,
+							"is_init_dirty_state": false,
+							"origin_content": "using System;\nusing System.ComponentModel;\nusing System.Windows.Input;\nusing Xamarin.Forms;\n\nnamespace XamarinVS2019.ViewModels\n{\n    class KeypadViewModel : INotifyPropertyChanged\n    {\n        string inputString = \"\";\n        string displayText = \"\";\n        char[] specialChars = { '*', '#' };\n\n        public event PropertyChangedEventHandler PropertyChanged;\n\n        public KeypadViewModel()\n        {\n            AddCharCommand = new Command<string>((key) =>\n                {\n                    InputString += key;\n                });\n\n            DeleteCharCommand = new Command(() =>\n                {\n                    InputString = InputString.Substring(0, InputString.Length - 1);\n                },\n                () =>\n                {\n                    return InputString.Length > 0;\n                });\n        }\n\n        public string InputString\n        {\n            protected set\n            {\n                if (inputString != value)\n                {\n                    inputString = value;\n                    OnPropertyChanged(\"InputString\");\n                    DisplayText = FormatText(inputString);\n\n                    // Perhaps the delete button must be enabled/disabled.\n                    ((Command)DeleteCharCommand).ChangeCanExecute();\n                }\n            }\n\n            get { return inputString; }\n        }\n\n        public string DisplayText\n        {\n            protected set\n            {\n                if (displayText != value)\n                {\n                    displayText = value;\n                    OnPropertyChanged(\"DisplayText\");\n                }\n            }\n            get { return displayText; }\n        }\n\n        public ICommand AddCharCommand { protected set; get; }\n\n        public ICommand DeleteCharCommand { protected set; get; }\n\n        string FormatText(string str)\n        {\n            bool hasNonNumbers = str.IndexOfAny(specialChars) != -1;\n            string formatted = str;\n\n            if (hasNonNumbers || str.Length < 4 || str.Length > 10)\n            {\n            }\n            else if (str.Length < 8)\n            {\n                formatted = String.Format(\"{0}-{1}\",\n                                          str.Substring(0, 3),\n                                          str.Substring(3));\n            }\n            else\n            {\n                formatted = String.Format(\"({0}) {1}-{2}\",\n                                          str.Substring(0, 3),\n                                          str.Substring(3, 3),\n                                          str.Substring(6));\n            }\n            return formatted;\n        }\n\n        protected void OnPropertyChanged(string propertyName)\n        {\n            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));\n        }\n    }\n}",
+							"origin_encoding": "GBK",
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/C#/C#.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 13,
+					"file": "XamarinVS2019/ViewModels/NamedColor.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3720,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1341,
+								1358
+							]
+						],
+						"settings":
+						{
+							"in_converting": true,
+							"incomplete_sync": null,
+							"is_init_dirty_state": false,
+							"origin_content": "using System;\nusing System.Reflection;\nusing System.Text;\nusing Xamarin.Forms;\nusing System.Collections.Generic;\nusing System.Globalization;\nusing System.ComponentModel;\nusing System.Runtime.CompilerServices;\n\nnamespace XamarinVS2019.ViewModels\n{\n    public class NamedColor : BaseViewModel\n    {\n        public string Name { private set; get; }\n        public string FriendlyName { private set; get; }\n        public Color Color { private set; get; }\n        public String ColorHex { private set; get; }\n\n        public static List<NamedColor> All { private set; get; }\n        public static List<String> AllName { private set; get; }\n\n        // new string Title = \"Named Color List\";\n        public NamedColor()\n        {\n            Title = \"Named Color List\";\n            this.DateTime = DateTime.Now;\n            Device.StartTimer(TimeSpan.FromSeconds(5), () =>\n            {\n                Console.WriteLine(\"Device Timer... {0:mm:ss.fff}ms\", this.DateTime);\n                this.DateTime = DateTime.Now;\n                return true;\n            });\n        }\n        \n        private DateTime _datetime;\n        public DateTime DateTime\n        {\n            get { return _datetime; }\n            set\n            {\n                if (_datetime != value)\n                {\n                    _datetime = value;\n                    OnPropertyChanged();\n                }\n            }\n        }\n\n        static NamedColor()\n        {\n            All = new List<NamedColor>();\n            AllName = new List<string>();\n            Color color = new Color();\n\n            //var fields = color.GetType().GetFields();\n            var props = color.GetType().GetRuntimeFields();\n            StringBuilder builder = new StringBuilder();\n            foreach (FieldInfo pi in props)\n            {\n                if (pi.FieldType != typeof(Color))\n                {\n                    continue;\n                }\n\n                int idx = 0;\n                builder.Clear();\n                builder.Append($\"[{All.Count,2}] \");\n                AllName.Add($\"[{AllName.Count,2}] \" + pi.Name);\n                foreach (char ch in pi.Name)\n                {\n                    if (idx++ != 0 && char.IsUpper(ch)) builder.Append(' ');\n                    builder.Append(ch);\n                }\n                All.Add(new NamedColor {\n                    Name = pi.Name,\n                    FriendlyName = builder.ToString(),\n                    Color = (Color)pi.GetValue(null),\n                    ColorHex = ((Color)pi.GetValue(null)).ToHex()\n                });\n                // if (All.Count > 50)\n                // {\n                //     break;\n                // }\n            }\n        }\n\n        //public new event PropertyChangedEventHandler PropertyChanged;\n\n        //private void OnPropertyChanged([CallerMemberName] string name=null)\n        //{\n        //    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));\n        //}\n    }\n\n\n    class DoubleToIntConverter : IValueConverter\n    {\n        public object Convert(object value, Type targetType,\n                              object parameter, CultureInfo culture)\n        {\n            double multiplier;\n\n            if (!Double.TryParse(parameter as string, out multiplier))\n                multiplier = 1;\n\n            return (int)Math.Round(multiplier * (double)value);\n        }\n\n        public object ConvertBack(object value, Type targetType,\n                                  object parameter, CultureInfo culture)\n        {\n            double divider;\n\n            if (!Double.TryParse(parameter as string, out divider))\n                divider = 1;\n\n            return ((double)(int)value) / divider;\n        }\n    }\n    \n}\n",
+							"origin_encoding": "GBK",
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/C#/C#.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 82.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 153.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 246.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.sftp":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "XamarinVS2019.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"TouchPage",
+				"XamarinVS2019\\Views\\TouchPage.xaml"
+			],
+			[
+				"TouchPagegs",
+				"XamarinVS2019\\obj\\Debug\\netstandard2.0\\Views\\TouchPage.xaml.g.cs"
+			],
+			[
+				"SkiaPage.g",
+				"XamarinVS2019\\obj\\Debug\\netstandard2.0\\Views\\SkiaPage.xaml.g.cs"
+			],
+			[
+				"sessions",
+				"XamarinVS2019\\obj\\Debug\\netstandard2.0\\Views\\SessionDataPage.xaml.g.cs"
+			],
+			[
+				"Mainac",
+				"XamarinVS2019.Android\\MainActivity.cs"
+			],
+			[
+				"ic",
+				"XamarinVS2019.Web\\Controllers\\ItemController.cs"
+			],
+			[
+				"menu",
+				"XamarinVS2019\\Views\\MenuPage.xaml.cs"
+			],
+			[
+				"Men",
+				"XamarinVS2019\\Views\\MenuPage.xaml.cs"
+			],
+			[
+				"Menu",
+				"XamarinVS2019\\Views\\MenuPage.xaml"
+			],
+			[
+				"About",
+				"XamarinVS2019\\Views\\AboutPage.xaml"
+			],
+			[
+				"ItemsViewModel",
+				"XamarinVS2019\\ViewModels\\ItemsViewModel.cs"
+			],
+			[
+				"HSLg",
+				"XamarinVS2019\\obj\\Debug\\netstandard2.0\\Views\\HSLViewPage.xaml.g.cs"
+			],
+			[
+				"MainPagegs",
+				"XamarinVS2019\\obj\\Debug\\netstandard2.0\\Views\\MainPage.xaml.g.cs"
+			],
+			[
+				"ItemCont",
+				"XamarinVS2019.Web\\Controllers\\ItemController.cs"
+			],
+			[
+				"appgcs",
+				"XamarinVS2019\\obj\\Debug\\netstandard2.0\\App.xaml.g.cs"
+			],
+			[
+				"s",
+				"XamarinVS2019.Web\\Startup.cs"
+			],
+			[
+				"AboutPage.xaml ",
+				"XamarinVS2019\\obj\\Debug\\netstandard2.0\\Views\\AboutPage.xaml.g.cs"
+			],
+			[
+				"AboutPage",
+				"XamarinVS2019\\Views\\AboutPage.xaml.cs"
+			],
+			[
+				"Abou",
+				"XamarinVS2019\\Views\\AboutPage.xaml"
+			],
+			[
+				"n",
+				"XamarinVS2019\\ViewModels\\NamedColor.cs"
+			],
+			[
+				"start",
+				"XamarinVS2019.Web\\Startup.cs"
+			],
+			[
+				"Servy",
+				"Shared\\SurveyPrompt.razor"
+			],
+			[
+				"proj",
+				"myWebApp.csproj"
+			],
+			[
+				"cs",
+				"cs.sublime-project"
+			],
+			[
+				"java.md",
+				"md\\readme_java.md"
+			],
+			[
+				"python",
+				"md\\readme_python.md"
+			],
+			[
+				"sublime",
+				"md\\readme_sublime.md"
+			],
+			[
+				"chrome",
+				"md\\readme_chromeos.md"
+			],
+			[
+				"fl",
+				"md\\OpenToonz\\flstudio.md"
+			],
+			[
+				"coding.php",
+				"md\\coding.php"
+			],
+			[
+				"php",
+				"md\\readme_php.md"
+			],
+			[
+				"FLstu",
+				"md\\OpenToonz\\flstudio.md"
+			],
+			[
+				"mt",
+				"md\\mtd\\mtd.py"
+			],
+			[
+				"win.md",
+				"md\\readme_win.md"
+			],
+			[
+				"ffmpeg",
+				"md\\OpenToonz\\ffmpeg.md"
+			],
+			[
+				"ff",
+				"md\\readme_ffmpeg.md"
+			],
+			[
+				"mtd",
+				"md\\mtd\\mtd.py"
+			],
+			[
+				"FFMPEG",
+				"md\\readme_ffmpeg.md"
+			],
+			[
+				"pyt",
+				"md\\readme_python.md"
+			],
+			[
+				"coding.py",
+				"md\\coding.py"
+			],
+			[
+				"redis",
+				"md\\readme_redis.md"
+			],
+			[
+				"git",
+				"md\\readme_git.md"
+			],
+			[
+				"curl",
+				"md\\readme_curl.md"
+			],
+			[
+				"node",
+				"md\\readme_node.md"
+			],
+			[
+				"coding.js",
+				"md\\coding.js"
+			],
+			[
+				"android",
+				"md\\readme_android.md"
+			],
+			[
+				"subime",
+				"md\\readme_sublime.md"
+			],
+			[
+				"blender",
+				"C:\\download\\blender\\readme.md"
+			],
+			[
+				"plc",
+				"md\\PLC.md"
+			],
+			[
+				"md.py",
+				"md\\mtd\\mtd.py"
+			],
+			[
+				"win",
+				"md\\readme_win.md"
+			],
+			[
+				"CMSIS stm32f4xx.h",
+				"FW_F4_V1.24.1\\Drivers\\CMSIS\\Device\\ST\\STM32F4xx\\Include\\stm32f4xx.h"
+			],
+			[
+				"mark",
+				"md\\readme_markdown.md"
+			],
+			[
+				"vue",
+				"md\\c-daystep\\readme_vue.md"
+			],
+			[
+				"react",
+				"md\\readme_react.md"
+			],
+			[
+				"rea",
+				"md\\readme.md"
+			],
+			[
+				"daystep",
+				"md\\c-daystep\\readme_vue.md"
+			],
+			[
+				"git.md",
+				"md\\readme_git.md"
+			],
+			[
+				"node.",
+				"md\\readme_node.md"
+			],
+			[
+				"webpack.md",
+				"md\\readme_webpack.md"
+			],
+			[
+				"websocket",
+				"md\\socket.io\\readme_websocket.md"
+			],
+			[
+				"net",
+				"md\\readme_net.md"
+			],
+			[
+				"es6",
+				"md\\readme_es6.md"
+			],
+			[
+				"ips",
+				"md\\readme_ips.md"
+			],
+			[
+				"markdown.md",
+				"md\\readme_markdown.md"
+			],
+			[
+				"ng.",
+				"md\\readme_ng.md"
+			],
+			[
+				"c-daystep.md",
+				"md\\c-daystep\\readme.md"
+			],
+			[
+				"fiddler",
+				"md\\http\\http_fiddler.md"
+			],
+			[
+				"ch5/title3",
+				"md\\go\\gopl.io-master\\ch5\\title3\\title.go"
+			],
+			[
+				"ch5/title1",
+				"md\\go\\gopl.io-master\\ch5\\title1\\title.go"
+			],
+			[
+				"ips.",
+				"md\\readme_ips.md"
+			],
+			[
+				"gopl/8",
+				"md\\go\\gopl.io-master\\ch8\\chat\\chat.go"
+			],
+			[
+				"php.md",
+				"md\\readme_php.md"
+			],
+			[
+				"gopl",
+				"md\\readme_gopl.md"
+			],
+			[
+				"golang",
+				"md\\readme_golang.md"
+			],
+			[
+				"rsa.md",
+				"md\\rsa\\readme_rsa.md"
+			],
+			[
+				"css.md",
+				"md\\readme_css.md"
+			],
+			[
+				"websocket.md",
+				"md\\socket.io\\readme_websocket.md"
+			],
+			[
+				"vue.md",
+				"md\\c-daystep\\readme_vue.md"
+			],
+			[
+				"node.md",
+				"md\\readme_node.md"
+			],
+			[
+				"pwa.md",
+				"webpack.js.org-master\\src\\content\\guides\\progressive-web-application.md"
+			],
+			[
+				"mysql.md",
+				"md\\readme_mysql.md"
+			],
+			[
+				"E",
+				"md\\laravel-docs-5.8\\eloquent.md"
+			],
+			[
+				"mtd.py",
+				"md\\mtd\\mtd.py"
+			],
+			[
+				"util",
+				"md\\icework\\js\\utils.js"
+			],
+			[
+				"QuillRichTextEditor",
+				"md\\icework\\react-materials\\blocks\\QuillRichTextEditor\\src\\index.jsx"
+			],
+			[
+				"",
+				"md\\icework\\js\\utils.js"
+			],
+			[
+				"ing.js",
+				"md\\coding.js"
+			],
+			[
+				"ConfigProvider",
+				"md\\icework\\next-master\\src\\config-provider\\index.jsx"
+			],
+			[
+				"ice-qr",
+				"md\\icework\\ice-qrcode.html"
+			],
+			[
+				"uploaddra",
+				"md\\icework\\demos\\upload-drag.jsx"
+			],
+			[
+				"net.md",
+				"md\\readme_net.md"
+			],
+			[
+				"readme.md",
+				"md\\readme.md"
+			],
+			[
+				"ing.php",
+				"md\\coding.php"
+			],
+			[
+				"flutter.md",
+				"md\\dart-flutter\\readme.md"
+			],
+			[
+				"go.md",
+				"md\\readme_gopl.md"
+			],
+			[
+				"demo.go",
+				"md\\go\\demo.go"
+			],
+			[
+				"cssmd",
+				"md\\readme_css.md"
+			],
+			[
+				"curl.",
+				"md\\readme_curl.md"
+			],
+			[
+				"mysql",
+				"md\\readme_mysql.md"
+			],
+			[
+				"react.md",
+				"md\\readme_react.md"
+			],
+			[
+				"echarts.md",
+				"md\\echart\\readme_echarts.md"
+			],
+			[
+				"ing.py",
+				"md\\coding.py"
+			],
+			[
+				"ing.html",
+				"md\\coding.html"
+			],
+			[
+				"babelloader",
+				"md\\icework\\webpack.js.org-cn\\src\\content\\loaders\\babel-loader.md"
+			],
+			[
+				"css",
+				"readme_css.md"
+			],
+			[
+				"webpac",
+				"readme_webpack.md"
+			],
+			[
+				"web",
+				"readme_webpack.md"
+			],
+			[
+				"ing.ts",
+				"coding.ts"
+			],
+			[
+				"typescgenerators",
+				"TypeScript-Handbook\\pages\\Iterators and Generators.md"
+			],
+			[
+				"decorat",
+				"TypeScript-Handbook\\pages\\Decorators.md"
+			],
+			[
+				"typescript/pages/",
+				"TypeScript-Handbook\\pages\\declaration files\\Introduction.md"
+			],
+			[
+				"types/react/",
+				"icework\\next-master\\node_modules\\@types\\react\\index.d.ts"
+			],
+			[
+				"basic type",
+				"TypeScript-Handbook\\pages\\Basic Types.md"
+			],
+			[
+				"class.md",
+				"TypeScript-Handbook\\pages\\Classes.md"
+			],
+			[
+				"handbook\\pages\\",
+				"TypeScript-Handbook\\pages\\Classes.md"
+			],
+			[
+				"Advanced Types.md",
+				"TypeScript-Handbook\\pages\\Advanced Types.md"
+			],
+			[
+				"readme",
+				"readme.md"
+			],
+			[
+				"ts.md",
+				"readme_ts.md"
+			],
+			[
+				"demos.",
+				"icework\\demos.html"
+			],
+			[
+				"upload-c",
+				"icework\\demos\\upload-crop.jsx"
+			],
+			[
+				"python.",
+				"readme_python.md"
+			],
+			[
+				"css-",
+				"icework\\css-standardcolors.html"
+			],
+			[
+				"stand",
+				"icework\\css-standardcolors.html"
+			],
+			[
+				"ice-icon",
+				"icework\\ice-icon.html"
+			],
+			[
+				"biz.md",
+				"bizcharts\\readme_bizCharts.md"
+			],
+			[
+				"mtd.",
+				"mtd\\mtd.py"
+			],
+			[
+				"demos",
+				"icework\\demos.html"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "mvc",
+		"selected_items":
+		[
+			[
+				"mvc",
+				"C:\\coding\\md-code\\WebMVC\\wm.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 69.0,
+		"last_filter": "IsPre",
+		"selected_items":
+		[
+			[
+				"IsPre",
+				"isPressed"
+			],
+			[
+				"AddItem",
+				"AddItemAsync"
+			],
+			[
+				"",
+				"Main"
+			]
+		],
+		"width": 583.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 196.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

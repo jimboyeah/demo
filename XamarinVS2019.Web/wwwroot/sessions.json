@@ -1,0 +1,12 @@
+
+[{
+  "end": "2016-04-27T18:00:00Z",
+  "start": "2016-04-27T17:15:00Z",
+  "abstract": "The new Apple TV has been released, and YOU can be one of the first developers to write apps for it. To make things even better, you can build these apps in C#! This session will introduce the basics of how to create a tvOS app with Xamarin, including: differences between tvOS and iOS APIs, TV user interface best practices, responding to user input, as well as the capabilities and limitations of building apps for a television. Grab some popcorn—this is going to be good!",
+  "title": "As Seen On TV … Bringing C# to the Living Room",
+  "presenter": "Matthew Soucoup",
+  "biography": "Matthew is a Xamarin MVP and Certified Xamarin Developer from Madison, WI. He founded his company Code Mill Technologies and started the Madison Mobile .Net Developers Group.  Matt regularly speaks on .Net and Xamarin development at user groups, code camps and conferences throughout the Midwest. Matt gardens hot peppers, rides bikes, and loves Wisconsin micro-brews and cheese.",
+  "image": "https://tpc.googlesyndication.com/simgad/5119815311592575680",
+  "avatar": "https://avatar.csdnimg.cn/A/5/0/1_winsenjiansbomber.jpg",
+  "room": "Crick"
+}]

@@ -1,0 +1,41 @@
+﻿<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:XamarinVS2019.ViewModels"
+             x:Class="XamarinVS2019.Views.HSLViewPage"
+             Title="{Binding Title}">
+    <ContentPage.BindingContext>
+        <local:HSLViewModel Color="Aqua" />
+    </ContentPage.BindingContext>
+
+    <StackLayout>
+        <BoxView Color="{Binding Color}" VerticalOptions="FillAndExpand" />
+        <BoxView Color="{Binding Color}" VerticalOptions="FillAndExpand"
+                 Rotation="{Binding RotationZ}" 
+                 RotationX="{Binding RotationX}" 
+                 RotationY="{Binding RotationY, StringFormat='RotationY {0}'}" />
+
+        <Label Text="{Binding RotationX}" HorizontalOptions="Center" />
+        <Slider Minimum="0" Maximum="360" Value="{Binding RotationX, Mode=TwoWay, StringFormat='RotationX {0}'}" />
+
+        <Label Text="{Binding RotationZ}" HorizontalOptions="Center" />
+        <Slider Minimum="0" Maximum="360" Value="{Binding RotationZ, Mode=TwoWay, StringFormat='RotationZ {0}'}" />
+
+        <Label Text="{Binding RotationY}" HorizontalOptions="Center" />
+        <Slider Minimum="0" Maximum="360" Value="{Binding RotationY, Mode=TwoWay}" />
+
+        <Label Text="{Binding Hue, StringFormat='Hue = {0:F2}'}"
+               HorizontalOptions="Center" />
+
+        <Slider Value="{Binding Hue, Mode=TwoWay}" />
+
+        <Label Text="{Binding Saturation, StringFormat='Saturation = {0:F2}'}"
+               HorizontalOptions="Center" />
+
+        <Slider Value="{Binding Saturation, Mode=TwoWay}" />
+
+        <Label Text="{Binding Luminosity, StringFormat='Luminosity = {0:F2}'}"
+               HorizontalOptions="Center" />
+
+        <Slider Value="{Binding Luminosity, Mode=TwoWay}" Margin="0,0,0,32"/>
+    </StackLayout>
+</ContentPage>

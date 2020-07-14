@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" 
+	android:targetSandboxVersion="1"
+	android:versionCode="1" 
+	android:versionName="1.0"
+    android:networkSecurityConfig="@xml/network_security_config"
+	package="com.companyname.xamarinvs2019" 
+	android:installLocation="auto">
+	<uses-sdk android:minSdkVersion="17" android:targetSdkVersion="28" />
+	<application android:label="XamarinVS2019.Android" 
+	    android:usesCleartextTraffic="true"
+		android:icon="@mipmap/launcher_foreground"></application>
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	<uses-permission android:name="android.permission.INTERNET" />
+</manifest>

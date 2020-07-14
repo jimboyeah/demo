@@ -1,0 +1,31 @@
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:skia="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms"
+             x:Class="SkiaSharpFormsDemos.Basics.TapToggleFillPage"
+             xmlns:local="clr-namespace:SkiaSharpFormsDemos.Basics"
+             Title="Tap Toggle Fill">
+
+    <ContentPage.BindingContext>
+        <local:TapToggleFillModel  />
+    </ContentPage.BindingContext>
+    <StackLayout Padding="24">
+
+    <skia:SKCanvasView PaintSurface="OnCanvasViewPaintSurface" VerticalOptions="CenterAndExpand">
+        <skia:SKCanvasView.GestureRecognizers>
+            <TapGestureRecognizer Tapped="OnCanvasViewTapped" />
+        </skia:SKCanvasView.GestureRecognizers>
+    </skia:SKCanvasView>
+
+        <Label FontSize="Medium">
+            <Label.FormattedText>
+                <FormattedString>
+                    <Span Text="Color Select" BackgroundColor="{Binding Color}" />
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+        <Slider Minimum="0" Maximum="5" Value="{Binding ColorSwitch, Mode=TwoWay}" />
+    <Label FontSize="{Binding StrokeWidth}">Stroke Width</Label>
+    <Slider Minimum="0" Maximum="50" Value="{Binding StrokeWidth, Mode=TwoWay}" />
+    
+    </StackLayout>
+</ContentPage>
