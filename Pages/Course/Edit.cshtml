@@ -1,0 +1,55 @@
+@page
+@model AppWeb.Pages.Courses.EditModel
+
+@addTagHelper *, AppWeb
+<!-- addTagHelper AppWeb.TagHelpers.EmailTagHelper, AppWeb -->
+
+@{
+    ViewData["Title"] = "Edit";
+}
+<me asp-href="demo.css">Test Me</me>
+
+<email to="abc@gamil.com" data="ViewData">Mail ME</email>
+<email to="jimbo@gamil.com" data="ViewData">Mail ME</email>
+<email to="jeango@gamil.com" data="ViewData">Mail ME</email>
+
+<h1>Edit</h1>
+<h4>Course</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Course.CourseID" />
+            <div class="form-group">
+                <label asp-for="Course.Title" class="control-label"></label>
+                <input asp-for="Course.Title" class="form-control" />
+                <span asp-validation-for="Course.Title" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Course.Credits" class="control-label"></label>
+                <input asp-for="Course.Credits" class="form-control" />
+                <span asp-validation-for="Course.Credits" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Course.Enrollments" class="control-label"></label>
+                <input asp-for="Course.Enrollments" class="form-control" />
+                <span asp-validation-for="Course.Enrollments" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Course.IsMajor" class="control-label"></label>
+                <!-- <select asp-for="Course.IsMajor" asp-options="Model.items" class="form-control"></select> -->
+                <input asp-for="Course.IsMajor" class="form-control" />
+                <span asp-validation-for="Course.IsMajor" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+

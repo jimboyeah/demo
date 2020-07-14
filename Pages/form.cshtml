@@ -1,0 +1,31 @@
+﻿@page "{handler?}"
+@model FormModel
+@{
+}
+
+
+<div class="jumbotron bg-success text-white">
+    <p> Enter your name: @Model.Name @Model.Age</p>
+    <p> Model Class: @Model </p>
+    <p asp-validation-summary="ModelOnly"> validation? </p>
+    <form method="POST" class="d-md-flex flex-column col-md-6 align-content-end">
+        <p class="d-md-flex flex-row justify-content-sm-between">Name: <input asp-for="Name" /></p>
+        <p class="d-md-flex flex-row justify-content-sm-between"> Age: <input asp-for="Age" /></p>
+        <p class="d-md-flex flex-row justify-content-sm-between"> ID: <input asp-for="id" /></p>
+
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+        <p class="d-md-flex flex-row justify-content-sm-between">
+            <input type="submit" asp-page-handler="JoinList" value="Join" />
+            <span class="text-hide">.</span>
+            <input type="submit" asp-page-handler="JoinListUC" value="JOIN UC" />
+        </p>
+        <span asp-validation-for="Age" class="text-danger"></span>
+    </form>
+</div>
+
+@section Scripts
+{
+    <script src="/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+}

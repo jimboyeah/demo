@@ -1,0 +1,43 @@
+﻿@using AppWeb
+@using AppWeb.Data
+@{
+    ViewData["Title"] = "/GetUserDTO.cshtml";
+    Layout = "_Layout";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>GetUserDTO.cshtml<p>
+    <div class="jumbotron bg-warning">
+<table class="table table-striped table-hover table-condensed">
+    <tbody>
+	@foreach (var item in ViewData["data"] as List<UserDTO>) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.nickname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.level)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.created_at)
+            </td>
+            <td>
+                <a asp-area="" asp-route="api_edit" asp-route-id="@item.Id" asp-route-n="@item.name">Edit</a> |
+                <a asp-area="" asp-controller="hello" asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-area="" asp-controller="hello" asp-action="Details" asp-route-id="@item.Id" asp-route-n="@item.name">Details</a> |
+                <a asp-area="" asp-controller="hello" asp-action="Delete" asp-route-id="@item.Id" asp-route-n="@item.name">Delete</a>
+            </td>
+        </tr>
+	}
+    </tbody>
+</table>
+
+    </div>
+</div>

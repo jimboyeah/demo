@@ -1,0 +1,1676 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"L",
+				"LinkStyleTag"
+			],
+			[
+				"Or",
+				"OrdinalIgnoreCase"
+			],
+			[
+				"Summa",
+				"Summaries"
+			],
+			[
+				"Temp",
+				"TemperatureC"
+			],
+			[
+				"Servi",
+				"ServiceProvider"
+			],
+			[
+				"Htt",
+				"HttpContext"
+			],
+			[
+				"F",
+				"FormModel"
+			],
+			[
+				"con",
+				"Console"
+			],
+			[
+				"Sess",
+				"SessionKeyCount"
+			],
+			[
+				"contex",
+				"HttpContext"
+			],
+			[
+				"cli",
+				"on_button_clicked"
+			],
+			[
+				"height",
+				"max-height\tproperty"
+			],
+			[
+				"so",
+				"socket.io-client"
+			],
+			[
+				"S",
+				"SocketioEventEmit\tfunc(event string, text string) ·ƒ"
+			],
+			[
+				"En",
+				"EncodeToString\tfunc(src []byte) string ·ƒ"
+			],
+			[
+				"st",
+				"StdEncoding\t*base64.Encoding ·ν"
+			],
+			[
+				"Engin",
+				"EngineioMessage\tfunc(text string) ·ƒ"
+			],
+			[
+				"EIO",
+				"EIO_Message\tEngineioPacket ·Ɩ"
+			],
+			[
+				"SIO_Bin",
+				"SIO_Binary_Event\tSocketioPacket ·Ɩ"
+			],
+			[
+				"SIO",
+				"SIO_Event\tSocketioPacket ·Ɩ"
+			],
+			[
+				"U",
+				"Uint16\tfunc(b []byte) uint16 ·ƒ"
+			],
+			[
+				"Error",
+				"ErrorNil\tErrorCode ·Ɩ"
+			],
+			[
+				"Err",
+				"ErrorNil\tErrorCode ·Ɩ"
+			],
+			[
+				"Messa",
+				"MessageType\tbyte ·ʈ"
+			],
+			[
+				"E",
+				"Err\terror ·ν"
+			],
+			[
+				"e",
+				"Err\terror ·ν"
+			],
+			[
+				"b",
+				"brw\t*bufio.ReadWriter ·ν"
+			],
+			[
+				"Mi",
+				"Millisecond\ttime.Duration ·Ɩ"
+			],
+			[
+				"Webs",
+				"github.com/gorilla/websocket\t ·ʂ"
+			],
+			[
+				"Set",
+				"SetReadDeadline\tfunc(t time.Time) error ·ƒ"
+			],
+			[
+				"B",
+				"BrokenMessage\tMessageType ·Ɩ"
+			],
+			[
+				"R",
+				"RemoteAddr\tfunc() net.Addr ·ƒ"
+			],
+			[
+				"P",
+				"parsed\tbool ·ν"
+			],
+			[
+				"utf",
+				"unicode/utf8\t ·ʂ"
+			],
+			[
+				"Mask",
+				"Masking\tbool ·ν"
+			],
+			[
+				"Mess",
+				"MessageType\tbyte ·ʈ"
+			],
+			[
+				"int",
+				"int64\tint64 ·ʈ"
+			],
+			[
+				"Ma",
+				"Maskingkey\t[4]byte ·ν"
+			],
+			[
+				"Masking",
+				"Masking\tbool ·ν"
+			],
+			[
+				"M",
+				"Maskingkey\t[4]byte ·ν"
+			],
+			[
+				"CloseMe",
+				"CloseMessageCode\tuint ·ʈ"
+			],
+			[
+				"Ti",
+				"PingTimeout\ttime.Duration ·Ɩ"
+			],
+			[
+				"Ping",
+				"PingTimeout\ttime.Duration ·Ɩ"
+			],
+			[
+				"r",
+				"SetReadDeadline\tfunc(t time.Time) error ·ƒ"
+			],
+			[
+				"Read",
+				"ReadWriter\tstruct ·ʈ"
+			],
+			[
+				"StatusIn",
+				"StatusInternalServerError\tuntyped int ·Ɩ"
+			],
+			[
+				"net",
+				"netConn\tnet.Conn ·ν"
+			],
+			[
+				"enc",
+				"encoding/base64\t ·ʂ"
+			],
+			[
+				"Re",
+				"RequestURI\tstring ·ν"
+			],
+			[
+				"Respn",
+				"ResponseWriter\tinterface ·ʈ"
+			],
+			[
+				"Ha",
+				"Handler\tinterface ·ʈ"
+			],
+			[
+				"test",
+				"test_pb.js"
+			],
+			[
+				"react",
+				"react-quill/"
+			],
+			[
+				"el",
+				"element-ui/"
+			],
+			[
+				"rel",
+				"icedesign-qrcode.rel.js"
+			],
+			[
+				"get",
+				"getCroppedCanvas\twarning"
+			],
+			[
+				"cl",
+				"className"
+			],
+			[
+				"hex",
+				"hex2decimal"
+			],
+			[
+				"flex",
+				"flex-wrap\tproperty"
+			],
+			[
+				"in",
+				"MarshalIndent\tfunc(v interface{}, prefix string, indent string) []byte, error ·ƒ"
+			],
+			[
+				"io",
+				"io/ioutil\t ·ʂ"
+			],
+			[
+				"re",
+				"ReadDir\tfunc(dirname string) []os.FileInfo, error ·ƒ"
+			],
+			[
+				"init",
+				"initQueue"
+			],
+			[
+				"thread",
+				"threadID"
+			],
+			[
+				"exit",
+				"exitFlag"
+			],
+			[
+				"content",
+				"content_length"
+			],
+			[
+				"name",
+				"nameKey"
+			],
+			[
+				"work",
+				"workQueue"
+			],
+			[
+				"en",
+				"enqueue"
+			],
+			[
+				"none",
+				"None"
+			],
+			[
+				"Mo",
+				"ModeExclusive\tos.FileMode ·Ɩ"
+			],
+			[
+				"encod",
+				"encoding/json\t ·ʂ"
+			],
+			[
+				"Cmd",
+				"Command\tfunc(name string, arg ...string) *exec.Cmd ·ƒ"
+			],
+			[
+				"next",
+				"next.min.js"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "Program.cs",
+			"settings":
+			{
+				"buffer_size": 2627,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "obj/Debug/netcoreapp3.1/AppWeb.AssemblyInfo.cs",
+			"settings":
+			{
+				"buffer_size": 912,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "appsettings.json",
+			"settings":
+			{
+				"buffer_size": 829,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "AppWeb.csproj",
+			"settings":
+			{
+				"buffer_size": 1398,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Startup.cs",
+			"settings":
+			{
+				"buffer_size": 4778,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "Packages/MarkdownPreview/Markdown.sublime-build",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/MarkdownPreview/Markdown.sublime-build",
+					""
+				],
+				[
+					"Packages/User/Dart 2.2.sublime-build",
+					""
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					""
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go build"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go build Window GUI App"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go Release Window GUI App"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go Release App"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go run"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go install"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go run with Test Arguments"
+				],
+				[
+					"Packages/User/php.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/MarkdownPreview/Markdown.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/User/C#.sublime-build",
+					""
+				],
+				[
+					"Packages/User/C#.sublime-build",
+					"Build Exe & Run ..."
+				],
+				[
+					"Packages/User/C#.sublime-build",
+					"Build DLL"
+				],
+				[
+					"Packages/User/C#.sublime-build",
+					"Run"
+				],
+				[
+					"Packages/User/C#.sublime-build",
+					".Net New"
+				],
+				[
+					"Packages/User/C#.sublime-build",
+					".Net Run"
+				],
+				[
+					"Packages/User/C#.sublime-build",
+					".Net Watch"
+				],
+				[
+					"Packages/User/C#.sublime-build",
+					".Net Run Project"
+				],
+				[
+					"Packages/User/C#.sublime-build",
+					".Net Watch Project"
+				],
+				[
+					"Packages/User/C#.sublime-build",
+					"Run with Test Arguments"
+				],
+				[
+					"Packages/User/Dart 2.2.sublime-build",
+					""
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					""
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go build"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go build Window GUI App"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go Release Window GUI App"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go Release App"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go run"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go install"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go run with Test Arguments"
+				],
+				[
+					"Packages/User/php.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/User/C#.sublime-build",
+				".Net Watch"
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"package",
+				"Package Control: Install Package"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"utf",
+				"ConvertToUTF8: Reload with Encoding"
+			],
+			[
+				"TypesCript",
+				"TypeScript: Signature Info"
+			],
+			[
+				"preview",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"markdown",
+				"Set Syntax: MultiMarkdown"
+			],
+			[
+				"debug",
+				"SublimeCodeIntel: Enable Debug Mode"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"theme",
+				"UI: Select Color Scheme"
+			],
+			[
+				"them",
+				"UI: Select Theme"
+			],
+			[
+				"new pro",
+				"Project Manager: Add New Project"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 302.0,
+		"history":
+		[
+			"cwd"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/coding/md-code/WebApp",
+		"/C/coding/md-code/WebApp/Controllers",
+		"/C/coding/md-code/WebApp/Misc",
+		"/C/coding/md-code/WebApp/Models",
+		"/C/coding/md-code/WebApp/Properties",
+		"/C/coding/md-code/WebApp/Shared"
+	],
+	"file_history":
+	[
+		"/C/coding/md-code/WebApp/bin/Debug/netcoreapp3.1/logs/20200602.txt",
+		"/C/coding/md-code/WebApp/Pages/Course/Edit.cshtml",
+		"/C/coding/md-code/WebApp/Misc/LinkTagHelper.cs",
+		"/C/coding/md-code/csdemo/Properties/launchSettings.json",
+		"/C/coding/md-code/Properties/launchSettings.json",
+		"/C/coding/md-code/WebApp/Data/reverse/ReverDBContext.cs",
+		"/C/coding/md-code/WebApp/Data/SchoolContext.cs",
+		"/C/coding/md-code/WebApp/Migrations/20200601221856_update_2.0.cs",
+		"/C/coding/md-code/WebApp/appsettings.json",
+		"/C/coding/md-code/WebApp/Pages/Course/Edit.cshtml.cs",
+		"/C/coding/md-code/WebApp/Models/Course.cs",
+		"/C/coding/md-code/WebApp/wwwroot/demo.css",
+		"/C/coding/md-code/WebApp/AppWeb.csproj",
+		"/C/coding/md-code/WebApp/Pages/Course/Index.cshtml",
+		"/C/coding/md-code/WebApp/Data/SchoolDbInitializer.cs",
+		"/C/coding/md-code/WebApp/Migrations/20200531105034_InitialCreate.Designer.cs",
+		"/C/coding/md-code/WebApp/Migrations/20200531105213_upgrade_1.0.cs",
+		"/C/coding/md-code/WebApp/Migrations/20200531105034_InitialCreate.cs",
+		"/C/coding/md-code/WebApp/Migrations/20200531105213_upgrade_1.0.Designer.cs",
+		"/C/coding/md-code/WebApp/Pages/form.cshtml.cs",
+		"/C/coding/md-code/WebApp/Properties/launchSettings.json",
+		"/C/coding/md-code/WebApp/Pages/form.cshtml",
+		"/C/coding/md-code/WebApp/Pages/Index.cshtml.cs",
+		"/C/coding/md-code/WebApp/Data/UserDC.cs",
+		"/C/coding/md-code/WebApp/Data/UserContext.cs",
+		"/C/coding/md-code/WebApp/Migrations/20200531020712_minor.cs",
+		"/C/coding/md-code/WebApp/Models/Student.cs",
+		"/C/coding/md-code/WebApp/Migrations/20200531022257_major.Designer.cs",
+		"/C/coding/md-code/WebApp/Migrations/20200531020712_minor.Designer.cs",
+		"/C/coding/md-code/WebApp/Models/Enrollment.cs",
+		"/C/coding/md-code/WebApp/Migrations/20200531021359_major.cs",
+		"/C/coding/md-code/WebApp/obj/project.assets.json",
+		"/C/coding/md-code/WebApp/CU.db-shm",
+		"/C/coding/md-code/WebApp/CU.db-wal",
+		"/C/coding/md-code/WebApp/Migrations/SchoolContextModelSnapshot.cs",
+		"/C/coding/md-code/WebApp/Pages/Course/Delete.cshtml",
+		"/C/coding/md-code/WebApp/Pages/Students/Edit.cshtml",
+		"/C/coding/md-code/WebApp/Pages/Course/Create.cshtml",
+		"/C/coding/md-code/WebApp/Pages/Course/Details.cshtml",
+		"/C/coding/md-code/WebApp/Pages/Students/Index.cshtml",
+		"/C/coding/md-code/WebApp/Pages/Students/Create.cshtml",
+		"/C/coding/md-code/WebApp/Pages/Students/Delete.cshtml",
+		"/C/coding/md-code/WebApp/Pages/Students/Details.cshtml",
+		"/C/coding/md-code/WebApp/Pages/Course/Details.cshtml.cs",
+		"/C/coding/md-code/WebApp/Pages/Course/Create.cshtml.cs",
+		"/C/coding/md-code/WebApp/Pages/Course/Delete.cshtml.cs",
+		"/C/coding/md-code/WebApp/Pages/Course/Index.cshtml.cs",
+		"/C/coding/md-code/WebApp/wwwroot/index.html",
+		"/C/coding/md-code/WebApp/Program.cs",
+		"/C/coding/md-code/WebApp/Startup.cs",
+		"/C/coding/md-code/WebApp/src/index.ts",
+		"/C/coding/md-code/WebApp/Misc/ChatHub.cs",
+		"/C/coding/md-code/WebApp/Pages/Students/Index.cshtml.cs",
+		"/C/coding/md-code/WebApp/Pages/Shared/_Layout.cshtml",
+		"/C/coding/md-code/WebApp/Migrations/20200530232228_InitialCreate.Designer.cs",
+		"/C/coding/md-code/WebApp/Migrations/20200530232431_InitialCreate.cs",
+		"/C/coding/md-code/WebApp/Data/Student.cs",
+		"/C/coding/md-code/WebApp/Pages/SignalR.cshtml",
+		"/C/coding/md-code/WebApp/wwwroot/js/site.js",
+		"/C/coding/md-code/WebApp/webpack.config.js",
+		"/C/coding/md-code/WebApp/Misc/EventBus.cs",
+		"/C/coding/md-code/WebApp/src/index.html",
+		"/C/coding/md-code/WebApp/wwwroot/lib/signalr/dist/browser/signalr.js",
+		"/C/coding/md-code/WebApp/Razors/ComponentChild.razor",
+		"/C/coding/md-code/WebApp/Razors/Counter.razor",
+		"/C/coding/md-code/WebApp/Razors/ComponentParent.razor",
+		"/C/coding/md-code/WebApp/Shared/NavMenu.razor",
+		"/C/coding/md-code/WebApp/wwwroot/lib/open-iconic/font/css/open-iconic-bootstrap.min.css",
+		"/C/coding/md-code/WebApp/obj/Debug/netcoreapp3.1/RazorDeclaration/Razors/ComponentParent.razor.g.cs",
+		"/C/coding/md-code/WebApp/obj/Debug/netcoreapp3.1/Razor/Razors/ComponentParent.razor.g.cs",
+		"/C/coding/md-code/WebApp/Data/WeatherForecastService.cs",
+		"/C/coding/md-code/WebApp/Models/WeatherForecast.cs",
+		"/C/coding/md-code/WebApp/Razors/FeatchData.razor",
+		"/C/coding/md-code/WebApp/wwwroot/lib/bootstrap/dist/css/bootstrap.css",
+		"/C/coding/md-code/WebApp/Shared/MainLayout.razor",
+		"/C/coding/md-code/WebApp/Pages/_Host.cshtml",
+		"/C/coding/md-code/WebApp/src/js/site.js",
+		"/C/coding/md-code/WebApp/ChatHub.cs",
+		"/C/coding/md-code/WebApp/src/css/site.css",
+		"/C/coding/md-code/WebApp/package.json",
+		"/C/coding/md-code/WebApp/src/tsconfig.json",
+		"/C/coding/md-code/WebApp/Pages/Students/Create.cshtml.cs",
+		"/C/coding/md-code/WebApp/Pages/Students/Delete.cshtml.cs",
+		"/C/coding/md-code/WebApp/Pages/Students/Details.cshtml.cs",
+		"/C/coding/md-code/WebApp/Pages/Students/Edit.cshtml.cs",
+		"/C/coding/md-code/WebApp/Controllers/HomeController.cs",
+		"/C/coding/md-code/WebApp/Views/Hello/GetUserDTO.cshtml",
+		"/C/coding/md-code/WebApp/Models/ErrorViewModel.cs",
+		"/C/coding/md-code/WebApp/Controllers/Hello.cs",
+		"/C/coding/md-code/WebApp/Models/Cursor.cs",
+		"/C/coding/md-code/WebApp/UserContext.cs",
+		"/C/coding/md-code/WebApp/Views/Hello/Details.cshtml",
+		"/C/coding/md-code/WebApp/obj/Debug/netcoreapp3.1/Razor/Pages/_Host.cshtml.g.cs",
+		"/C/coding/md-code/WebApp/Pages/Index.cshtml",
+		"/C/coding/md-code/WebApp/Views/Home/Privacy.cshtml",
+		"/C/coding/md-code/WebApp/Views/hello/GetUserDTO.cshtml",
+		"/C/coding/md-code/WebApp/Views/Home/Welcome.cshtml",
+		"/C/coding/md-code/WebApp/obj/Debug/netcoreapp3.1/Razor/Pages/form.cshtml.g.cs",
+		"/C/coding/md-code/WebApp/Views/Home/_ViewStart.cshtml",
+		"/C/coding/md-code/WebApp/Pages/Privacy.cshtml",
+		"/C/coding/md-code/WebApp/Views/Hello/_ViewStart.cshtml",
+		"/C/coding/md-code/WebApp/Views/_ViewImports.cshtml",
+		"/C/coding/md-code/WebApp/Views/_ViewStart.cshtml",
+		"/C/coding/md-code/WebApp/obj/Debug/netcoreapp3.1/Razor/Views/Hello/GetUserDTO.cshtml.g.cs",
+		"/C/coding/md-code/WebApp/obj/Debug/netcoreapp3.1/Razor/Pages/Shared/GetUserDTO.cshtml.g.cs",
+		"/C/coding/md-code/WebApp/Pages/Shared/../GetUserDTO.cshtml",
+		"/C/coding/md-code/WebApp/bin/Debug/netcoreapp3.1/logs/20200528.txt",
+		"/C/coding/md-code/WebApp/_Imports.razor",
+		"/C/coding/md-code/WebApp/Pages/_ViewImports.cshtml",
+		"/C/coding/md-code/WebApp/Pages/Error.cshtml",
+		"/C/coding/md-code/WebApp/obj/Debug/netcoreapp3.1/Razor/Pages/Form.cshtml.g.cs",
+		"/C/coding/md-code/WebApp/Hello.cs",
+		"/C/coding/md-code/WebApp/App.razor",
+		"/C/coding/md-code/WebApp/Pages/ComponentC.razor",
+		"/C/coding/md-code/WebApp/Pages/ComponentA.razor",
+		"/C/coding/md-code/WebApp/EventBus.cs",
+		"/C/coding/md-code/WebApp/Pages/View.cshtml",
+		"/C/coding/md-code/WebApp/Shared/SurveyPrompt.razor",
+		"/C/coding/md-code/WebApp/Pages/Indexd.cshtml.cs",
+		"/C/coding/md-code/WebApp/Pages/Indexd.cshtml",
+		"/C/coding/md-code/WebApp/Pages/View.razor",
+		"/C/coding/md-code/WebApp/Pages/Index.razor",
+		"/C/coding/md-code/WebApp/obj/Debug/netcoreapp3.1/Razor/Pages/ComponentC.razor.g.cs",
+		"/C/coding/md-code/WebApp/ComponentParent.razor",
+		"/C/coding/md-code/WebApp/ComponentChild.razor",
+		"/C/coding/md-code/WebApp/Pages/ComponentB.razor",
+		"/C/coding/md-code/WebApp/obj/Debug/netcoreapp3.1/Razor/ComponentChild.razor.g.cs",
+		"/C/coding/md-code/WebApp/obj/Debug/netcoreapp3.1/RazorDeclaration/Pages/ComponentA.razor.g.cs"
+	],
+	"find":
+	{
+		"height": 40.0
+	},
+	"find_in_files":
+	{
+		"height": 451.0,
+		"where_history":
+		[
+			"C:\\coding\\md-code\\WebApp\\",
+			"C:\\coding\\md-code\\WebApp\\Pages\\Course",
+			"C:\\coding\\md-code\\WebApp\\Pages\\Students",
+			"C:\\coding\\md-code\\WebApp\\Pages\\Course",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			"wwwroot",
+			"style",
+			"linkstyle",
+			"LinkStyleTagComponentHelper",
+			"LinkStyleTag",
+			"Test",
+			"GetChildContent",
+			"b",
+			"object",
+			"mailto",
+			"linkstyle",
+			"TagHelperContent",
+			"Microsoft.AspNetCore.Razor.TagHelpers.TagHelperContent",
+			"LinkStyleTag",
+			"content",
+			"LinkStyleTag",
+			"componentManager",
+			"RazorPagesSample",
+			"Enrollments",
+			"UseRequestCulture",
+			"5011",
+			"\\",
+			"MySqlConnection",
+			"Keyword",
+			"Course2",
+			"Course",
+			"IsMinor",
+			"IsMajor",
+			"Major",
+			"\\",
+			"Major",
+			"IsMajor",
+			"Enrollmentss",
+			"Course.ID",
+			"item.ID",
+			"Enrollmentss",
+			"EnrollmentsDate",
+			"Enrollment",
+			"EnrollmentsDate",
+			"Enrollment",
+			".ID",
+			"EnrollmentDate",
+			"FirstMidName",
+			"LastName",
+			"Student",
+			"EnrollmentDate",
+			"FirstMidName",
+			"LastName",
+			"Student",
+			"LastName",
+			"FirstMidName",
+			"EnrollmentDate",
+			"Student",
+			".ID",
+			"Student",
+			".ID",
+			"EnrollmentDate",
+			"FirstMidName",
+			"LastName",
+			"Student",
+			".ID",
+			"Course.ID",
+			"Student",
+			"Course",
+			"Student",
+			"item",
+			"0]",
+			"model.Student",
+			".Student",
+			"Student",
+			"Students",
+			"NewMessage",
+			"newmessage",
+			"ReceiveMessage",
+			"NewMessage",
+			"\t\tservices.AddSignalR();",
+			"\\",
+			"bool",
+			"foreacst",
+			"WebApp",
+			"featchdata",
+			"username",
+			"blazorServerWebApp",
+			"bootstrap",
+			"compiler",
+			"~/",
+			"Courses",
+			"CreateScope",
+			"_context.Student",
+			"AppWeb.Models",
+			"Logging",
+			"text",
+			"display: flex",
+			"ProtectedBrowserStorage",
+			"BrowserStorage",
+			"protectedBrowserStorage",
+			"asp-area=\"\" ",
+			"MyModel",
+			"OnHead",
+			"api/",
+			"asp-area=\"api\"",
+			"api",
+			"Console.WriteLine($\"",
+			"Index",
+			"Age",
+			"Async",
+			"area=\"\"",
+			"Console.WriteLine($\"GetUserDTO",
+			"controller",
+			"GetUserDTO",
+			"asp-route-id",
+			"PageContext",
+			"FormModel",
+			"ViewData",
+			"Model",
+			"@Model",
+			"ViewData",
+			"FormModel",
+			"Keys,",
+			"RouteValues",
+			"Post",
+			"Async",
+			"page-handler",
+			"[\"Name\"]",
+			".req",
+			"req.RouteValues[\"Name\"],",
+			"{1}",
+			"Httpreq"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": true,
+		"regex": false,
+		"replace_history":
+		[
+			"Enrollments",
+			"Courses",
+			"_context.Students",
+			"AppWeb",
+			";",
+			"using AppWeb；",
+			"namespace AppWeb"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 3,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "Program.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2627,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1556,
+								1556
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"is_init_dirty_state": false,
+							"origin_encoding": "ASCII",
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/C#/C#.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 227.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "obj/Debug/netcoreapp3.1/AppWeb.AssemblyInfo.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 912,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								912,
+								912
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/C#/C#.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "appsettings.json",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 829,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								712,
+								707
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"is_init_dirty_state": false,
+							"origin_encoding": "ASCII",
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "AppWeb.csproj",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 1398,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1398,
+								1398
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"origin_encoding": "ASCII",
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/XML/XML.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "Startup.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4778,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1869,
+								1869
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"is_init_dirty_state": false,
+							"origin_encoding": "ASCII",
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/C#/C#.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 481.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 24.0
+	},
+	"input":
+	{
+		"height": 153.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.doc":
+	{
+		"height": 0.0
+	},
+	"output.exec":
+	{
+		"height": 185.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.markdown":
+	{
+		"height": 97.0
+	},
+	"output.sftp":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "webapp.sublime-project",
+	"replace":
+	{
+		"height": 44.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"AssemblyInfo.cs\t",
+				"obj\\Debug\\netcoreapp3.1\\AppWeb.AssemblyInfo.cs"
+			],
+			[
+				"apps",
+				"appsettings.json"
+			],
+			[
+				"appset",
+				"appsettings.json"
+			],
+			[
+				"csproj",
+				"AppWeb.csproj"
+			],
+			[
+				"Prog",
+				"Program.cs"
+			],
+			[
+				"appseting",
+				"appsettings.json"
+			],
+			[
+				"form.c",
+				"Pages\\form.cshtml"
+			],
+			[
+				"Userdc",
+				"Data\\UserDC.cs"
+			],
+			[
+				"user",
+				"Data\\UserContext.cs"
+			],
+			[
+				"star",
+				"Startup.cs"
+			],
+			[
+				"cou",
+				"Models\\Course.cs"
+			],
+			[
+				"school",
+				"Data\\SchoolContext.cs"
+			],
+			[
+				"lay",
+				"Pages\\Shared\\_Layout.cshtml"
+			],
+			[
+				"wwwhtml",
+				"wwwroot\\index.html"
+			],
+			[
+				"index",
+				"wwwroot\\index.html"
+			],
+			[
+				"signalr",
+				"wwwroot\\lib\\signalr\\dist\\browser\\signalr.js"
+			],
+			[
+				"ComponentParent",
+				"obj\\Debug\\netcoreapp3.1\\RazorDeclaration\\Razors\\ComponentParent.razor.g.cs"
+			],
+			[
+				"parent",
+				"Razors\\ComponentParent.razor"
+			],
+			[
+				"counter",
+				"Razors\\Counter.razor"
+			],
+			[
+				"WeatherForecast",
+				"Models\\WeatherForecast.cs"
+			],
+			[
+				"fetchdata",
+				"Razors\\FeatchData.razor"
+			],
+			[
+				"boot",
+				"wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+			],
+			[
+				"_Host",
+				"Pages\\_Host.cshtml"
+			],
+			[
+				"site.js",
+				"wwwroot\\js\\site.js"
+			],
+			[
+				"site",
+				"src\\js\\site.js"
+			],
+			[
+				"ChatHub",
+				"Misc\\ChatHub.cs"
+			],
+			[
+				"index.ts",
+				"src\\index.ts"
+			],
+			[
+				"inde",
+				"src\\index.html"
+			],
+			[
+				"layout.",
+				"Pages\\Shared\\_Layout.cshtml"
+			],
+			[
+				"Start",
+				"Startup.cs"
+			],
+			[
+				"start",
+				"Startup.cs"
+			],
+			[
+				"layout",
+				"Pages\\Shared\\_Layout.cshtml"
+			],
+			[
+				"appsetting",
+				"appsettings.json"
+			],
+			[
+				"settingjson",
+				"appsettings.json"
+			],
+			[
+				"sta",
+				"Startup.cs"
+			],
+			[
+				"dto.html",
+				"Views\\Hello\\GetUserDTO.cshtml"
+			],
+			[
+				"form.",
+				"Pages\\form.cshtml.cs"
+			],
+			[
+				"hello",
+				"Controllers\\Hello.cs"
+			],
+			[
+				"form",
+				"obj\\Debug\\netcoreapp3.1\\Razor\\Pages\\form.cshtml.g.cs"
+			],
+			[
+				"index.",
+				"Pages\\Index.cshtml"
+			],
+			[
+				"GetUserDTO",
+				"obj\\Debug\\netcoreapp3.1\\Razor\\Views\\Hello\\GetUserDTO.cshtml.g.cs"
+			],
+			[
+				"indexcs",
+				"Pages\\Index.cshtml.cs"
+			],
+			[
+				"form.cshtml",
+				"obj\\Debug\\netcoreapp3.1\\Razor\\Pages\\form.cshtml.g.cs"
+			],
+			[
+				"boots",
+				"wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+			],
+			[
+				"UserContext",
+				"UserContext.cs"
+			],
+			[
+				"ComponentChild",
+				"obj\\Debug\\netcoreapp3.1\\Razor\\ComponentChild.razor.g.cs"
+			],
+			[
+				"app",
+				"App.razor"
+			],
+			[
+				"Servy",
+				"Shared\\SurveyPrompt.razor"
+			],
+			[
+				"proj",
+				"myWebApp.csproj"
+			],
+			[
+				"cs",
+				"cs.sublime-project"
+			],
+			[
+				"java.md",
+				"md\\readme_java.md"
+			],
+			[
+				"python",
+				"md\\readme_python.md"
+			],
+			[
+				"sublime",
+				"md\\readme_sublime.md"
+			],
+			[
+				"chrome",
+				"md\\readme_chromeos.md"
+			],
+			[
+				"fl",
+				"md\\OpenToonz\\flstudio.md"
+			],
+			[
+				"coding.php",
+				"md\\coding.php"
+			],
+			[
+				"php",
+				"md\\readme_php.md"
+			],
+			[
+				"FLstu",
+				"md\\OpenToonz\\flstudio.md"
+			],
+			[
+				"mt",
+				"md\\mtd\\mtd.py"
+			],
+			[
+				"win.md",
+				"md\\readme_win.md"
+			],
+			[
+				"ffmpeg",
+				"md\\OpenToonz\\ffmpeg.md"
+			],
+			[
+				"ff",
+				"md\\readme_ffmpeg.md"
+			],
+			[
+				"mtd",
+				"md\\mtd\\mtd.py"
+			],
+			[
+				"FFMPEG",
+				"md\\readme_ffmpeg.md"
+			],
+			[
+				"pyt",
+				"md\\readme_python.md"
+			],
+			[
+				"coding.py",
+				"md\\coding.py"
+			],
+			[
+				"redis",
+				"md\\readme_redis.md"
+			],
+			[
+				"git",
+				"md\\readme_git.md"
+			],
+			[
+				"curl",
+				"md\\readme_curl.md"
+			],
+			[
+				"node",
+				"md\\readme_node.md"
+			],
+			[
+				"coding.js",
+				"md\\coding.js"
+			],
+			[
+				"android",
+				"md\\readme_android.md"
+			],
+			[
+				"subime",
+				"md\\readme_sublime.md"
+			],
+			[
+				"blender",
+				"C:\\download\\blender\\readme.md"
+			],
+			[
+				"plc",
+				"md\\PLC.md"
+			],
+			[
+				"md.py",
+				"md\\mtd\\mtd.py"
+			],
+			[
+				"win",
+				"md\\readme_win.md"
+			],
+			[
+				"CMSIS stm32f4xx.h",
+				"FW_F4_V1.24.1\\Drivers\\CMSIS\\Device\\ST\\STM32F4xx\\Include\\stm32f4xx.h"
+			],
+			[
+				"mark",
+				"md\\readme_markdown.md"
+			],
+			[
+				"vue",
+				"md\\c-daystep\\readme_vue.md"
+			],
+			[
+				"react",
+				"md\\readme_react.md"
+			],
+			[
+				"rea",
+				"md\\readme.md"
+			],
+			[
+				"daystep",
+				"md\\c-daystep\\readme_vue.md"
+			],
+			[
+				"git.md",
+				"md\\readme_git.md"
+			],
+			[
+				"node.",
+				"md\\readme_node.md"
+			],
+			[
+				"webpack.md",
+				"md\\readme_webpack.md"
+			],
+			[
+				"websocket",
+				"md\\socket.io\\readme_websocket.md"
+			],
+			[
+				"net",
+				"md\\readme_net.md"
+			],
+			[
+				"es6",
+				"md\\readme_es6.md"
+			],
+			[
+				"ips",
+				"md\\readme_ips.md"
+			],
+			[
+				"markdown.md",
+				"md\\readme_markdown.md"
+			],
+			[
+				"ng.",
+				"md\\readme_ng.md"
+			],
+			[
+				"c-daystep.md",
+				"md\\c-daystep\\readme.md"
+			],
+			[
+				"fiddler",
+				"md\\http\\http_fiddler.md"
+			],
+			[
+				"ch5/title3",
+				"md\\go\\gopl.io-master\\ch5\\title3\\title.go"
+			],
+			[
+				"ch5/title1",
+				"md\\go\\gopl.io-master\\ch5\\title1\\title.go"
+			],
+			[
+				"ips.",
+				"md\\readme_ips.md"
+			],
+			[
+				"gopl/8",
+				"md\\go\\gopl.io-master\\ch8\\chat\\chat.go"
+			],
+			[
+				"php.md",
+				"md\\readme_php.md"
+			],
+			[
+				"gopl",
+				"md\\readme_gopl.md"
+			],
+			[
+				"golang",
+				"md\\readme_golang.md"
+			],
+			[
+				"rsa.md",
+				"md\\rsa\\readme_rsa.md"
+			],
+			[
+				"css.md",
+				"md\\readme_css.md"
+			],
+			[
+				"websocket.md",
+				"md\\socket.io\\readme_websocket.md"
+			],
+			[
+				"vue.md",
+				"md\\c-daystep\\readme_vue.md"
+			],
+			[
+				"node.md",
+				"md\\readme_node.md"
+			],
+			[
+				"pwa.md",
+				"webpack.js.org-master\\src\\content\\guides\\progressive-web-application.md"
+			],
+			[
+				"mysql.md",
+				"md\\readme_mysql.md"
+			],
+			[
+				"E",
+				"md\\laravel-docs-5.8\\eloquent.md"
+			],
+			[
+				"mtd.py",
+				"md\\mtd\\mtd.py"
+			],
+			[
+				"util",
+				"md\\icework\\js\\utils.js"
+			],
+			[
+				"QuillRichTextEditor",
+				"md\\icework\\react-materials\\blocks\\QuillRichTextEditor\\src\\index.jsx"
+			],
+			[
+				"",
+				"md\\icework\\js\\utils.js"
+			],
+			[
+				"ing.js",
+				"md\\coding.js"
+			],
+			[
+				"ConfigProvider",
+				"md\\icework\\next-master\\src\\config-provider\\index.jsx"
+			],
+			[
+				"ice-qr",
+				"md\\icework\\ice-qrcode.html"
+			],
+			[
+				"uploaddra",
+				"md\\icework\\demos\\upload-drag.jsx"
+			],
+			[
+				"net.md",
+				"md\\readme_net.md"
+			],
+			[
+				"readme.md",
+				"md\\readme.md"
+			],
+			[
+				"ing.php",
+				"md\\coding.php"
+			],
+			[
+				"flutter.md",
+				"md\\dart-flutter\\readme.md"
+			],
+			[
+				"go.md",
+				"md\\readme_gopl.md"
+			],
+			[
+				"demo.go",
+				"md\\go\\demo.go"
+			],
+			[
+				"cssmd",
+				"md\\readme_css.md"
+			],
+			[
+				"curl.",
+				"md\\readme_curl.md"
+			],
+			[
+				"mysql",
+				"md\\readme_mysql.md"
+			],
+			[
+				"react.md",
+				"md\\readme_react.md"
+			],
+			[
+				"echarts.md",
+				"md\\echart\\readme_echarts.md"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 392.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 539.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 252.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

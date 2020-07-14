@@ -1,0 +1,38 @@
+﻿
+<!-- ComponentA.razor -->
+<div class="bg-white p-3" style="color: #000;">
+    <h3>ComponentA</h3>
+    <p>Value: @Value</p>
+    <p>Name: @Name</p>
+    <p>dp: @dp.value</p>
+    <p class="btn btn-primary" @onclick="tick">@cb</p>
+</div>
+
+@code {
+
+	private void tick(){
+		Name = DateTime.Now.Second.ToString();
+
+    	EventBus.Dispatch("myevent", "EventBus" + Name);
+
+		cb.Invoke("Callback" + Name);
+		dp.StateHasChanged?.Invoke();
+		
+		System.Threading.Thread.Sleep(1000);
+		dp.value = "DataPopup" + Name;
+	}
+
+    [CascadingParameter(Name="callback")]
+    Action<string> cb {get; set;}
+
+    [CascadingParameter]
+    ComponentC.DataPopup dp {get; set;}
+
+    [CascadingParameter(Name = "Value")]
+    string Value { get; set; }
+    
+    [CascadingParameter]
+    string Name { get; set; }
+    
+}
+

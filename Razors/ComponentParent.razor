@@ -1,0 +1,33 @@
+﻿
+@page "/ParentComponent"
+
+@code {
+    private string messageText;
+
+    private void ShowMessage(MouseEventArgs e)
+    {
+    	Console.WriteLine($"ComponentParent ShowMessage(e={e})");
+        messageText = $"Blaze a new trail with Blazor! ({e.ScreenX}, {e.ScreenY})";
+    }
+
+    private bool ShowMove(MouseEventArgs e)
+    {
+    	Console.WriteLine($"ComponentParent ShowMove(e={e})");
+        messageText = $"Mouse moving! ({e.ScreenX}, {e.ScreenY})";
+        return true;
+    }
+}
+
+<div class="jumbotron" @onmousemove:stopPropagation @onmousemove="e=>ShowMove(e)">
+
+	<h1>Parent-child example</h1>
+
+	<ComponentChild Title="Panel Title from Parent"
+	                OnClickCallback="@ShowMessage">
+	    Content of the child component is supplied
+	    by the parent component.
+	</ComponentChild>
+
+	<p><b>@messageText</b></p>
+
+</div>

@@ -1,0 +1,43 @@
+﻿@page "/"
+
+<h1>Hello, world!</h1>
+
+Welcome to your new app. 
+
+<SurveyPrompt Title="How is Blazor working for you?" Content="@message" />
+
+
+<input value="@count" @onkeypress="KeyHandler" @onkeypress:preventDefault="false" />
+
+@code {
+    private int count = 0;
+
+    private void KeyHandler(KeyboardEventArgs e)
+    {
+        Console.WriteLine($"Key {e.Key}");
+        if (e.Key == "=")
+        {
+            count++;
+        }
+    }
+}
+
+@for (var i = 1; i < 4; i++)
+{
+    var buttonNumber = i;
+
+    <button class="btn btn-primary"
+            @onclick="@(e => UpdateHeading(e, buttonNumber))">
+        Button #@i
+    </button>
+}
+
+@code {
+    private string message = "Select a button to learn its position.";
+
+    private void UpdateHeading(MouseEventArgs e, int buttonNumber)
+    {
+        message = $"You selected Button #{buttonNumber} at " +
+            $"mouse position: {e.ClientX} X {e.ClientY}.";
+    }
+}

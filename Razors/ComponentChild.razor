@@ -1,0 +1,23 @@
+﻿
+<div class="jumbotron bg-info">
+    <h2>@Title</h2>
+    <div class="panel-body">
+        <p>@ChildContent</p>
+    </div>
+
+    <button class="btn btn-primary" @onclick="@(e => OnClickCallback.InvokeAsync(e))">
+        Trigger a Parent component method
+    </button>
+</div>
+
+@code {
+
+    [Parameter]
+    public string Title { get; set; }
+
+    [Parameter]
+    public RenderFragment ChildContent { get; set; }
+
+    [Parameter]
+    public EventCallback<MouseEventArgs> OnClickCallback { get; set; }
+}

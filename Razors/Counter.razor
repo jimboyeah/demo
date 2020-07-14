@@ -1,0 +1,16 @@
+@page "/counter"
+@code
+{
+	private int currentCount = 0;
+
+	private void Increase(int step = 1)
+	{
+		currentCount ++;
+	}
+}
+
+<div class="jumbotron">
+	<h1>Counter</h1>
+	<p>Current count: @currentCount</p>
+	<button class="btn btn-primary" @onclick="()=>Increase()">Increase count</button>
+</div>

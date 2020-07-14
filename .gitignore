@@ -1,0 +1,5 @@
+# .gitignore
+bin
+obj
+ca-test
+node_modules

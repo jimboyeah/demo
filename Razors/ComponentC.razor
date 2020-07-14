@@ -1,0 +1,47 @@
+﻿<!-- ComponentC -->
+<div class="bg-primary alert alert-info text-white">
+
+	<h3>ComponentC</h3>
+	<p>Name: @_name</p>
+	<p>dp: @_dp.value</p>
+	<CascadingValue Value="@_dp">
+		<CascadingValue Value="@_callback" Name="callback">
+		<CascadingValue Value="@_name">
+		    <ComponentB />
+		</CascadingValue>
+		</CascadingValue>
+	</CascadingValue>
+
+</div>
+
+@code {
+    private string _name = "Abo";
+    private DataPopup _dp;
+    private Action<object> _callback;
+
+    public void _cb(object v)
+    {
+    	_dp.value = v as string;
+    }
+
+    protected override void OnInitialized()
+    {
+    	base.OnInitialized();
+    	_callback = _cb;
+    	EventBus.Add("myevent", _callback);
+    	// EventBus.Add("myevent", e => _name = e as string);
+    	// EventBus.Add("myevent", delegate(string e){ _cb(e); });
+    	_dp = new DataPopup(StateHasChanged);
+    }
+
+    public class DataPopup
+    { 
+    	public Action StateHasChanged;
+    	public string value {get; set;}
+
+    	public DataPopup( Action shc )
+    	{
+    		StateHasChanged += shc;
+    	}
+    }
+}

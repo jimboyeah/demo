@@ -1,0 +1,48 @@
+﻿@page "/Index/Session/{name?}"
+@using Microsoft.AspNetCore.Http
+@model IndexModel
+@{
+    ViewData["Title"] = "Home /Index.cshtml";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+
+    <p> @IndexModel.SessionKeyName: @HttpContext.Session.GetString(IndexModel.SessionKeyName) </p>
+    <p> @IndexModel.SessionKeyCount: @HttpContext.Session.GetInt32(IndexModel.SessionKeyCount) </p>
+
+    <p>@Model.HttpContext.Session</p>
+
+    <div class="jumbotron">
+<table class="table table-striped table-hover table-condensed">
+    <tbody>
+	@foreach (var item in Model.data) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.nickname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.level)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.created_at)
+            </td>
+            <td>
+                <a asp-controller="Home" asp-action="Edit" asp-route-id="@item.Id" asp-route-n="@item.name">Edit</a> |
+                <a asp-controller="Home" asp-action="Detail" asp-route-id="@item.Id" asp-route-n="@item.name">Details</a> |
+                <a asp-controller="Home" asp-action="Delete" asp-route-id="@item.Id" asp-route-n="@item.name">Delete</a>
+            </td>
+        </tr>
+	}
+    </tbody>
+</table>
+
+    </div>
+</div>
