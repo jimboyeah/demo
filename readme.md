@@ -1,8 +1,8 @@
 #  Xamarin 跨平台开发
 
-开发软件：Visual Studio 2019 社区版
-工作系统：Windows 10
-代码仓库：https://github.com/jimboyeah/demo/tree/XamarinVS2019
+- 开发软件：Visual Studio 2019 社区版
+- 工作系统：Windows 10
+- 代码仓库：https://github.com/jimboyeah/demo/tree/XamarinVS2019
 
 Xamarin.Forms 是一个开放源代码跨平台的 UI 框架。 Xamarin.Forms 使开发人员可以从单个共享基本代码生成 Android、iOS 和 Windows 应用程序。Xamarin.Forms 提供了一个公共 API，它可跨平台呈现本机控件，但特定平台的功能可能在其他平台上不存在。 例如，Android 平台具有用于在 ListView 中快速滚动的本机功能，但 iOS 却没有。 通过 Xamarin.Forms 平台特定内容可以使用仅在特定平台上提供的功能。
 
