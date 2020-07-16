@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<wxsmith>
+	<object class="wxFrame" name="overloadFrame">
+		<title>C++ Overload, Redefine, Override &amp; Virtual </title>
+		<size>308,472</size>
+		<id_arg>0</id_arg>
+		<object class="wxBoxSizer" variable="BoxSizer1" member="yes">
+			<object class="sizeritem">
+				<object class="wxAuiNotebook" name="ID_AUINOTEBOOK1" variable="AuiNotebook1" member="yes">
+					<pos>0,0</pos>
+					<size>228,160</size>
+					<minsize>-1,-1</minsize>
+					<maxsize>-1,-1</maxsize>
+					<object class="AuiNotebookPage">
+						<object class="wxAnimationCtrl" name="ID_ANIMATIONCTRL1" variable="AnimationCtrl1" member="yes">
+							<animation>..\\asts\\cloudy.gif</animation>
+							<inactive_bitmap stock_id="wxART_COPY" stock_client="wxART_CMN_DIALOG" />
+							<play>1</play>
+							<pos>100,73</pos>
+							<size>122,128</size>
+							<extra_code>//wxMessageBox(wxString(__T(&quot;Extra code&quot;)));</extra_code>
+						</object>
+						<label>animation</label>
+					</object>
+					<object class="AuiNotebookPage">
+						<object class="wxTextCtrl" name="ID_TEXTCTRL1" variable="TextCtrl1" member="yes">
+							<value>&#x0A;class Food&#x0A;{&#x0A;    public:&#x0A;        Food(){ weight = 1; nutrition = string(&quot;raw&quot;); }&#x0A;        string taste() { return string(&quot;raw food.&quot;);}&#x0A;        virtual string cook() { return string(&quot;not very smelly&quot;); }&#x0A;    protected:&#x0A;        string nutrition;&#x0A;    private:&#x0A;        double weight;&#x0A;};&#x0A;class Pancake : public Food&#x0A;{&#x0A;    public:&#x0A;        Pancake(){ nutrition = string(&quot;sugar &amp; powder&quot;);}&#x0A;        string taste(){ return string(&quot;fine food.&quot;); }&#x0A;        string taste(string mix){ return string(&quot;well, pancake with &quot;)+mix; }&#x0A;        string cook(){ return string(&quot;ancient dilicious&quot;); }&#x0A;};&#x0A;</value>
+							<pos>0,0</pos>
+							<size>179,328</size>
+							<style>wxTE_MULTILINE</style>
+						</object>
+						<label>Textpad</label>
+					</object>
+				</object>
+				<flag>wxEXPAND|wxFIXED_MINSIZE</flag>
+				<minsize>560,-1</minsize>
+				<option>4</option>
+			</object>
+			<object class="sizeritem">
+				<object class="wxBoxSizer" variable="BoxSizer2" member="yes">
+					<orient>wxVERTICAL</orient>
+					<object class="sizeritem">
+						<object class="wxButton" name="ID_BTN_EXIT" variable="Button1" member="yes">
+							<label>Exit</label>
+							<pos>328,160</pos>
+							<size>85,82</size>
+							<handler function="OnQuit" entry="EVT_BUTTON" />
+						</object>
+						<flag>wxEXPAND</flag>
+						<minsize>-1,-1</minsize>
+						<option>2</option>
+					</object>
+					<object class="sizeritem">
+						<object class="wxButton" name="ID_BTN_SAY" variable="Button2" member="yes">
+							<label>test</label>
+							<size>85,13</size>
+							<handler function="OnButton2Click" entry="EVT_BUTTON" />
+						</object>
+						<flag>wxEXPAND</flag>
+						<option>3</option>
+					</object>
+				</object>
+				<flag>wxALIGN_LEFT</flag>
+			</object>
+		</object>
+		<object class="wxMenuBar" variable="MenuBar1" member="no">
+			<object class="wxMenu" variable="Menu1" member="no">
+				<label>&amp;File</label>
+				<object class="wxMenuItem" name="idMenuQuit" variable="MenuItem1" member="no">
+					<label>Quit</label>
+					<accel>Alt-F4</accel>
+					<help>Quit the application</help>
+					<handler function="OnQuit" entry="EVT_MENU" />
+				</object>
+			</object>
+			<object class="wxMenu" variable="Menu2" member="no">
+				<label>Help</label>
+				<object class="wxMenuItem" name="idMenuAbout" variable="MenuItem2" member="no">
+					<label>About</label>
+					<accel>F1</accel>
+					<help>Show info about this application</help>
+					<handler function="OnAbout" entry="EVT_MENU" />
+				</object>
+			</object>
+		</object>
+		<object class="wxStatusBar" name="ID_STATUSBAR1" variable="StatusBar1" member="yes">
+			<fields>1</fields>
+			<widths>-1</widths>
+			<styles>wxSB_NORMAL</styles>
+		</object>
+	</object>
+</wxsmith>

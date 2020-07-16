@@ -6,8 +6,8 @@ project( cppDemo )
 
 # set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -m64 -g -Wall -O2")
 # set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -m64 -g -Wall -O2 -std=c++11")
-set(CMAKE_C_FLAGS "-std=c99 -ffunction-sections -fdata-sections")
-set(CMAKE_C_STANDARD 99)
+# set(CMAKE_C_FLAGS "-std=c99 -ffunction-sections -fdata-sections")
+# set(CMAKE_C_STANDARD 99)
 set(CMAKE_C_STANDARD_REQUIRED True)
 set(CMAKE_CXX_FLAGS "-std=c++11 -Wl,-Map=object.map,--cref,--gc-section" )
 
@@ -30,10 +30,16 @@ include_directories(
     "./include/" 
     "c:/boost_1_73_0/" 
     "c:/boost_1_73_0/boost/" 
+    "C:/vcpkg/installed/x64-mingw/include/"
+    "C:/vcpkg/buildtrees/freetype/src/2.10.1-ea10bbeefe/src/raster/"
+    )
+
+link_directories(
+    "C:/vcpkg/installed/x64-mingw/lib/"
     )
 
 macro(AddDemo name)
-    message(STATUS AddDemo=${name})
+    message(STATUS "AddDemo = [${name}]")
     add_executable(${name} ${ARGN})
 endmacro()
 
@@ -41,6 +47,10 @@ message("DEMOS LIST:")
 aux_source_directory("src/" src)
 foreach(item ${src})
     string(REGEX REPLACE ".*/(.*)\\..*$" "\\1" name ${item})
+    if(name STREQUAL "bin")
+        message(STATUS "----------------------> ${item}")
+        continue()
+    endif(name STREQUAL "bin")
     AddDemo(${name} ${item})
 endforeach(item)
 
@@ -49,6 +59,24 @@ aux_source_directory("boost/" boost)
 foreach(item ${boost})
     string(REGEX REPLACE ".*/(.*)\\..*$" "\\1" name ${item})
     AddDemo(${name} ${item})
+endforeach(item)
+
+message("Win32 DEMOS LIST:")
+aux_source_directory("win32/" win32)
+foreach(item ${win32})
+    string(REGEX REPLACE ".*/(.*)\\..*$" "\\1" name ${item})
+    AddDemo(${name} ${item})
+    target_link_libraries( ${name} kernel32 user32 Winmm gdi32 winspool comdlg32 advapi32 shell32 ole32 oleaut32 uuid odbc32 odbccp32 )
+    # set_target_properties (${name} PROPERTIES LINK_OPTIONS "LINKER:--subsystem,console")
+    # target_link_options( ${name} PUBLIC LINKER:--subsystem,console)
+endforeach(item)
+
+message("Base Lib DEMOS LIST:")
+aux_source_directory("base/" base)
+foreach(item ${base})
+    string(REGEX REPLACE ".*/(.*)\\..*$" "\\1" name ${item})
+    AddDemo(${name} ${item})
+    target_link_libraries( ${name} freetype png z bz2 )
 endforeach(item)
 
 

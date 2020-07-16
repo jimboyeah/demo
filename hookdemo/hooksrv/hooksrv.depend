@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1385398402 source:c:\codeblocks\hooksrv\main.cpp
+	"main.h"
+
+1385397591 c:\codeblocks\hooksrv\main.h
+	<windows.h>
+	<sstream>
+

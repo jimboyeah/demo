@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "WinMacro", "WinMacro.vcproj", "{305D84EE-6EFA-458A-B444-F925B67CBDD0}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{305D84EE-6EFA-458A-B444-F925B67CBDD0}.Debug.ActiveCfg = Debug|Win32
+		{305D84EE-6EFA-458A-B444-F925B67CBDD0}.Debug.Build.0 = Debug|Win32
+		{305D84EE-6EFA-458A-B444-F925B67CBDD0}.Release.ActiveCfg = Release|Win32
+		{305D84EE-6EFA-458A-B444-F925B67CBDD0}.Release.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

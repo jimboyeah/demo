@@ -1,0 +1,59 @@
+#
+#  GNU makefile demo by Jimbowhy @ 2016/3/18 14:56:39
+#  Usage:
+#       mingw32-make BUILD=RELEASE mouse
+#       mingw32-make BUILD=RELEASE all
+#       mingw32-make all
+
+MC=@mc.exe
+RC=@windres.exe
+
+CC=@g++
+CFLAGS:=-g
+libs:=-lwinmm -lgdi32 -lkernel32 -lmsimg32
+
+ifeq "$(BUILD)" "RELEASE"
+CFLAGS:=-s -O3
+endif
+
+ifeq "$(BUILD)" "DYNAMIC"
+CFLAGS:=-s -Wl,-Bdynamic
+endif
+
+CFLAGS:=$(CFLAGS) -I"." -L"C:\sdks\PSDK2k3SP1\Lib"
+
+
+all : array base64 bitmap hanoi mouse rc4 record resource runtime Serializer setTimer vector wildcard
+
+array:
+	$(CC) $(CFLAGS) -o array array.cpp $(LFLAGS) 
+base64:
+	$(CC) $(CFLAGS) -o base64 base64.cpp $(LFLAGS)
+bitmap:
+	$(CC) $(CFLAGS) -o bitmap bitmap.cpp $(LFLAGS) $(libs)
+hanoi:
+	$(CC) $(CFLAGS) -o hanoi hanoi.cpp $(LFLAGS)
+mouse:
+	$(CC) $(CFLAGS) -o mouse mouse.cpp $(LFLAGS) $(libs)
+rc4:
+	$(CC) $(CFLAGS) -o rc4 rc4.cpp $(LFLAGS)
+record:
+	$(CC) $(CFLAGS) -o record record.cpp $(LFLAGS)
+resource:
+	$(MC) -u -U -r .\res -h .\res res\resource.mc
+	$(RC) -c=65001 -J rc -O coff -i res\res.rc -o res.obj
+	$(CC) $(CFLAGS) -o resource resource.cpp res.obj $(libs)
+Serializer:
+	$(CC) $(CFLAGS) Serializer.cpp $(LFLAGS)
+runtime:
+	$(CC) $(CFLAGS) runtime.cpp $(LFLAGS)
+setTimer:
+	$(CC) $(CFLAGS) -o setTimer setTimer.cpp $(LFLAGS) $(libs)
+vector:
+	$(CC) $(CFLAGS) -o vector vector.cpp $(LFLAGS)
+wildcard:
+	$(CC) $(CFLAGS) -o wildcard wildcard.cpp $(LFLAGS)
+
+clean:
+	del *.obj
+

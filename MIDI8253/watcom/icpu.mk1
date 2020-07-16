@@ -1,0 +1,17 @@
+!define BLANK ""
+C:\c\src\MIDI8253\watcom\icpu.obj : C:\c\src\MIDI8253\watcom\icpu.c .AUTODEP&
+END
+ @C:
+ cd C:\c\src\MIDI8253\watcom
+ *wcc386 icpu.c -i=C:\WATCOM\h -w4 -e25 -zq -od -d2 -fp6 -fpc -6r -bt=dos -m&
+f
+
+C:\c\src\MIDI8253\watcom\icpu.exe : C:\c\src\MIDI8253\watcom\icpu.obj .AUTOD&
+EPEND
+ @C:
+ cd C:\c\src\MIDI8253\watcom
+ @%write icpu.lk1 FIL icpu.obj
+ @%append icpu.lk1 
+ *wlink name icpu d all SYS dos4g op inc op m op maxe=25 op q op symf @icpu.&
+lk1
+

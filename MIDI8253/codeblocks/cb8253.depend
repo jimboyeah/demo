@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1398645555 source:c:\c\src\midi8253\codeblocks\main.cpp
+	<windows.h>
+	<iostream>
+

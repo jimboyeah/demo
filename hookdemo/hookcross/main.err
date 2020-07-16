@@ -1,0 +1,17 @@
+c:\program files (x86)\devstudio\vc\include\sstream(10): Error! E336: col(1) declaration specifiers are required to declare '_STD_BEGIN'
+c:\program files (x86)\devstudio\vc\include\sstream(10): Note! N393: col(1) included from ../hooksrv/main.h(5)
+c:\program files (x86)\devstudio\vc\include\sstream(10): Note! N393: col(1) included from main.cpp(1)
+c:\program files (x86)\devstudio\vc\include\sstream(10): Error! E121: col(1) syntax error
+c:\program files (x86)\devstudio\vc\include\sstream(11): Error! E498: col(10) syntax error before '__Strstate'; probable cause: incorrectly spelled type name
+c:\program files (x86)\devstudio\vc\include\sstream(12): Error! E498: col(14) syntax error before '__Strstate'; probable cause: incorrectly spelled type name
+../hooksrv/main.h(7): Error! E336: col(1) declaration specifiers are required to declare '_STD_END'
+../hooksrv/main.h(7): Error! E121: col(1) syntax error
+main.cpp(69): Error! E336: col(16) declaration specifiers are required to declare 'string'
+main.cpp(69): Error! E498: col(8) syntax error before 'tipText'; probable cause: incorrectly spelled type name
+main.cpp(78): Error! E029: col(9) symbol 'tipText' has not been declared
+main.cpp(87): Error! E006: col(12) syntax error; probable cause: missing ';'
+main.cpp(91): Error! E029: col(30) symbol 'txt' has not been declared
+main.cpp(98): Error! E006: col(18) syntax error; probable cause: missing ';'
+main.cpp(99): Error! E029: col(8) symbol 'ss' has not been declared
+main.cpp(105): Error! E006: col(12) syntax error; probable cause: missing ';'
+main.cpp(106): Error! E133: col(26) too many errors: compilation aborted

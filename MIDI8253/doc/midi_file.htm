@@ -1,0 +1,426 @@
+<html>
+
+<head>
+<meta http-equiv="content-type" content="text/html; charset=gb2312">
+<title>standard midi file formatdustin caldwellthe standard midi file format is a very
+strange beast</title>
+<meta name="generator" content="microsoft frontpage 3.0">
+</head>
+
+<body>
+
+<p align="center"><font size="6" color="#0000ff">standard midi file format</font></p>
+<div align="center"><center>
+
+<table border="0" width="88%">
+  <tr>
+    <td width="100%">dustin caldwell<br>
+    <br>
+    the standard midi file format is a very strange beast. when viewed as a<br>
+    whole, it can be quite overwhelming. of course, no matter how you look at it,<br>
+    describing a piece of music in enough detail to be able to reproduce it<br>
+    accurately is no small task. so, while complicated, the structure of the midi<br>
+    file format is fairly intuitive when understood. <br>
+    i must insert a disclaimer here that i am by no means an expert with<br>
+    midi nor midi files. i recently obtained a gravis ultrasound board for my pc,<br>
+    and upon hearing a few midi files (.mid) thought, &quot;gee, i'd like to be able to<br>
+    make my own .mid files.&quot; well, many aggravating hours later, i discovered that<br>
+    this was no trivial task. but, i couldn't let a stupid file format stop me.<br>
+    (besides, i once told my wife that computers aren't really that hard to use,<br>
+    and i'd hate to be a hypocrite) so if any errors are found in this<br>
+    information, please let me know and i will fix it. also, this document's scope<br>
+    does not extend to every type of midi command and every possible file<br>
+    configuration. it is a basic guide that should enable the reader (with a<br>
+    moderate investment in time) to generate a quality midi file.<br>
+    <br>
+    1. overview<br>
+    <br>
+    a midi (.mid) file contains basically 2 things, header chunks and track<br>
+    chunks. section 2 explains the header chunks, and section 3 explains the track<br>
+    chunks. a midi file contains one header chunk describing the file format,<br>
+    etc., and any number of track chunks. a track may be thought of in the same<br>
+    way as a track on a multi-track tape deck. you may assign one track to each<br>
+    voice, each staff, each instrument or whatever you want. <br>
+    <br>
+    2. header chunk<br>
+    <br>
+    the header chunk appears at the beginning of the file, and describes the<br>
+    file in three ways. the header chunk always looks like:<br>
+    <br>
+    4d 54 68 64 00 00 00 06 ff ff nn nn dd dd<br>
+    <br>
+    the ascii equivalent of the first 4 bytes is mthd. after mthd comes the 4-byte<br>
+    size of the header. this will always be 00 00 00 06, because the actual header<br>
+    information will always be 6 bytes. <br>
+    <br>
+    ff ff is the file format. there are 3 formats:<br>
+    <br>
+    0 - single-track <br>
+    1 - multiple tracks, synchronous<br>
+    2 - multiple tracks, asynchronous<br>
+    <br>
+    single track is fairly self-explanatory - one track only. synchronous multiple<br>
+    tracks means that the tracks will all be vertically synchronous, or in other<br>
+    words, they all start at the same time, and so can represent different parts<br>
+    in one song. asynchronous multiple tracks do not necessarily start at the same<br>
+    time, and can be completely asynchronous. <br>
+    <br>
+    nn nn is the number of tracks in the midi file.<br>
+    <br>
+    dd dd is the number of delta-time ticks per quarter note. (more about this<br>
+    later)<br>
+    <br>
+    <br>
+    3. track chunks<br>
+    <br>
+    the remainder of the file after the header chunk consists of track chunks.<br>
+    each track has one header and may contain as many midi commands as you like.<br>
+    the header for a track is very similar to the one for the file:<br>
+    <br>
+    4d 54 72 6b xx xx xx xx<br>
+    <br>
+    as with the header, the first 4 bytes has an ascii equivalent. this one is<br>
+    mtrk. the 4 bytes after mtrk give the length of the track (not including the<br>
+    track header) in bytes. <br>
+    following the header are midi events. these events are identical to the<br>
+    actual data sent and received by midi ports on a synth with one addition. a<br>
+    midi event is preceded by a delta-time. a delta time is the number of ticks<br>
+    after which the midi event is to be executed. the number of ticks per quarter<br>
+    note was defined previously in the file header chunk. this delta-time is a<br>
+    variable-length encoded value. this format, while confusing, allows large<br>
+    numbers to use as many bytes as they need, without requiring small numbers to<br>
+    waste bytes by filling with zeros. the number is converted into 7-bit bytes,<br>
+    and the most-significant bit of each byte is 1 except for the last byte of the<br>
+    number, which has a msb of 0. this allows the number to be read one byte at a<br>
+    time, and when you see a msb of 0, you know that it was the last (least<br>
+    significant) byte of the number. according to the midi spec, the entire delta-<br>
+    time should be at most 4 bytes long. <br>
+    following the delta-time is a midi event. each midi event (except a<br>
+    running midi event) has a command byte which will always have a msb of 1 (the<br>
+    value will be &gt;= 128). a list of most of these commands is in appendix a. each<br>
+    command has different parameters and lengths, but the data that follows the<br>
+    command will have a msb of 0 (less than 128). the exception to this is a meta-<br>
+    event, which may contain data with a msb of 1. however, meta-events require a<br>
+    length parameter which alleviates confusion. <br>
+    one subtlety which can cause confusion is running mode. this is where<br>
+    the actual midi command is omitted, and the last midi command issued is<br>
+    assumed. this means that the midi event will consist of a delta-time and the<br>
+    parameters that would go to the command if it were included. <br>
+    <br>
+    4. conclusion<br>
+    <br>
+    if this explanation has only served to confuse the issue more, the<br>
+    appendices contain examples which may help clarify the issue. also, 2<br>
+    utilities and a graphic file should have been included with this document: <br>
+    <br>
+    dec.exe - this utility converts a binary file (like .mid) to a tab-delimited<br>
+    text file containing the decimal equivalents of each byte.<br>
+    <br>
+    rec.exe - this utility converts a tab-delimited text file of decimal values<br>
+    into a binary file in which each byte corresponds to one of the decimal<br>
+    values.<br>
+    <br>
+    midinote.ps - this is the postscript form of a page showing note numbers with<br>
+    a keyboard and with the standard grand staff.<br>
+    &#12; appendix a<br>
+    <br>
+    1. midi event commands<br>
+    <br>
+    each command byte has 2 parts. the left nybble (4 bits) contains the actual<br>
+    command, and the right nybble contains the midi channel number on which the<br>
+    command will be executed. there are 16 midi channels, and 8 midi commands (the<br>
+    command nybble must have a msb of 1).<br>
+    in the following table, x indicates the midi channel number. note that all<br>
+    data bytes will be &lt;128 (msb set to 0).<br>
+    <br>
+    hex binary data description<br>
+    8x 1000xxxx nn vv note off (key is released)<br>
+    nn=note number<br>
+    vv=velocity<br>
+    <br>
+    9x 1001xxxx nn vv note on (key is pressed)<br>
+    nn=note number<br>
+    vv=velocity<br>
+    <br>
+    ax 1010xxxx nn vv key after-touch<br>
+    nn=note number<br>
+    vv=velocity<br>
+    <br>
+    bx 1011xxxx cc vv control change<br>
+    cc=controller number<br>
+    vv=new value<br>
+    <br>
+    cx 1100xxxx pp program (patch) change<br>
+    pp=new program number<br>
+    <br>
+    dx 1101xxxx cc channel after-touch<br>
+    cc=channel number<br>
+    <br>
+    ex 1110xxxx bb tt pitch wheel change (2000h is normal or no<br>
+    change)<br>
+    bb=bottom (least sig) 7 bits of value<br>
+    tt=top (most sig) 7 bits of value<br>
+    &#12;the following table lists meta-events which have no midi channel number. they<br>
+    are of the format:<br>
+    <br>
+    ff xx nn dd<br>
+    <br>
+    all meta-events start with ff followed by the command (xx), the length, or<br>
+    number of bytes that will contain data (nn), and the actual data (dd).<br>
+    <br>
+    hex binary data description<br>
+    00 00000000 nn ssss sets the track's sequence number.<br>
+    nn=02 (length of 2-byte sequence number)<br>
+    ssss=sequence number<br>
+    <br>
+    01 00000001 nn tt .. text event- any text you want.<br>
+    nn=length in bytes of text<br>
+    tt=text characters<br>
+    <br>
+    02 00000010 nn tt .. same as text event, but used for<br>
+    copyright info.<br>
+    nn tt=same as text event<br>
+    <br>
+    03 00000011 nn tt .. sequence or track name<br>
+    nn tt=same as text event<br>
+    <br>
+    04 00000100 nn tt .. track instrument name<br>
+    nn tt=same as text event<br>
+    <br>
+    05 00000101 nn tt .. lyric<br>
+    nn tt=same as text event<br>
+    <br>
+    06 00000110 nn tt .. marker<br>
+    nn tt=same as text event<br>
+    <br>
+    07 00000111 nn tt .. cue point<br>
+    nn tt=same as text event<br>
+    <br>
+    2f 00101111 00 this event must come at the end of each<br>
+    track<br>
+    <br>
+    51 01010001 03 tttttt set tempo<br>
+    tttttt=microseconds/quarter note<br>
+    <br>
+    58 01011000 04 nn dd ccbb time signature<br>
+    nn=numerator of time sig.<br>
+    dd=denominator of time sig. 2=quarter<br>
+    3=eighth, etc.<br>
+    cc=number of ticks in metronome click<br>
+    bb=number of 32nd notes to the quarter<br>
+    note<br>
+    <br>
+    59 01011001 02 sf mi key signature<br>
+    sf=sharps/flats (-7=7 flats, 0=key of c,<br>
+    7=7 sharps)<br>
+    mi=major/minor (0=major, 1=minor)<br>
+    <br>
+    7f 01111111 xx dd .. sequencer specific information<br>
+    xx=number of bytes to be sent<br>
+    dd=data&#12;<br>
+    the following table lists system messages which control the entire system.<br>
+    these have no midi channel number. (these will generally only apply to<br>
+    controlling a midi keyboard, etc.)<br>
+    <br>
+    hex binary data description<br>
+    f8 11111000 timing clock used when synchronization is<br>
+    required.<br>
+    <br>
+    fa 11111010 start current sequence<br>
+    <br>
+    fb 11111011 continue a stopped sequence where left<br>
+    off<br>
+    <br>
+    fc 11111100 stop a sequence<br>
+    <br>
+    <br>
+    the following table lists the numbers corresponding to notes for use in note <br>
+    on and note off commands.<br>
+    <br>
+    <br>
+    octave|| note numbers<br>
+    # ||<br>
+    || c | c# | d | d# | e | f | f# | g | g# | a | a# | b<br>
+    -----------------------------------------------------------------------------<br>
+    0 || 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11<br>
+    1 || 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23<br>
+    2 || 24 | 25 | 26 | 27 | 28 | 29 | 30 | 31 | 32 | 33 | 34 | 35<br>
+    3 || 36 | 37 | 38 | 39 | 40 | 41 | 42 | 43 | 44 | 45 | 46 | 47<br>
+    4 || 48 | 49 | 50 | 51 | 52 | 53 | 54 | 55 | 56 | 57 | 58 | 59<br>
+    5 || 60 | 61 | 62 | 63 | 64 | 65 | 66 | 67 | 68 | 69 | 70 | 71<br>
+    6 || 72 | 73 | 74 | 75 | 76 | 77 | 78 | 79 | 80 | 81 | 82 | 83<br>
+    7 || 84 | 85 | 86 | 87 | 88 | 89 | 90 | 91 | 92 | 93 | 94 | 95<br>
+    8 || 96 | 97 | 98 | 99 | 100 | 101 | 102 | 103 | 104 | 105 | 106 | 107<br>
+    9 || 108 | 109 | 110 | 111 | 112 | 113 | 114 | 115 | 116 | 117 | 118 | 119<br>
+    10 || 120 | 121 | 122 | 123 | 124 | 125 | 126 | 127 |<br>
+    <br>
+    <br>
+    bibliography<br>
+    <br>
+    &quot;midi systems and control&quot; francis rumsey 1990 focal press<br>
+    <br>
+    &quot;midi and sound book for the atari st&quot; bernd enders and wolfgang klemme<br>
+    1989 m&amp;t publishing, inc.<br>
+    <br>
+    midi file specs and general midi specs were also obtained by sending e-mail<br>
+    to listserv@auvm.american.edu with the phrase get midispec package<br>
+    in the message.<br>
+    <br>
+    <br>
+    ------------------------------- dec.cpp ------------------------------------<br>
+    <br>
+    /* file dec.cpp<br>
+    <br>
+    by dustin caldwell (dustin@gse.utah.edu)<br>
+    <br>
+    */<br>
+    <br>
+    <br>
+    #include &lt;dos.h&gt;<br>
+    #include &lt;stdio.h&gt;<br>
+    #include &lt;stdlib.h&gt;<br>
+    <br>
+    void helpdoc();<br>
+    <br>
+    main()<br>
+    {<br>
+    file *fp;<br>
+    <br>
+    unsigned char ch, c;<br>
+    <br>
+    if((fp=fopen(_argv[1], &quot;rb&quot;))==null) /* open file to read */<br>
+    {<br>
+    printf(&quot;cannot open file %s\n&quot;,_argv[1]);<br>
+    helpdoc();<br>
+    exit(-1);<br>
+    }<br>
+    <br>
+    c=0;<br>
+    ch=fgetc(fp);<br>
+    <br>
+    while(!feof(fp)) /* loop for whole file */<br>
+    {<br>
+    printf(&quot;%u\t&quot;, ch); /* print every byte's decimal equiv. */<br>
+    c++;<br>
+    if(c&gt;8) /* print 8 numbers to a line */<br>
+    {<br>
+    c=0;<br>
+    printf(&quot;\n&quot;);<br>
+    }<br>
+    <br>
+    ch=fgetc(fp);<br>
+    }<br>
+    <br>
+    fclose(fp); /* close up */<br>
+    }<br>
+    <br>
+    void helpdoc() /* print help message */<br>
+    {<br>
+    printf(&quot;\n binary file decoder\n\n&quot;);<br>
+    <br>
+    printf(&quot;\n syntax: dec binary_file_name\n\n&quot;);<br>
+    <br>
+    printf(&quot;by dustin caldwell (dustin@gse.utah.edu)\n\n&quot;);<br>
+    printf(&quot;this is a filter program that reads a binary file\n&quot;);<br>
+    printf(&quot;and prints the decimal equivalent of each byte\n&quot;);<br>
+    printf(&quot;tab-separated. this is mostly useful when piped \n&quot;);<br>
+    printf(&quot;into another file to be edited manually. eg:\n\n&quot;);<br>
+    printf(&quot;c:\&gt;dec sonata3.mid &gt; son3.txt\n\n&quot;);<br>
+    printf(&quot;this will create a file called son3.txt which can\n&quot;);<br>
+    printf(&quot;be edited with any ascii editor. \n\n&quot;);<br>
+    printf(&quot;(rec.exe may also be useful, as it reencodes the \n&quot;);<br>
+    printf(&quot;ascii text file).\n\n&quot;);<br>
+    printf(&quot;have fun!!\n&quot;);<br>
+    }<br>
+    <br>
+    ---------------------------- rec.cpp ----------------------------------<br>
+    <br>
+    /* file rec.cpp<br>
+    by dustin caldwell (dustin@gse.utah.edu)<br>
+    */<br>
+    <br>
+    #include &lt;dos.h&gt;<br>
+    #include &lt;stdio.h&gt;<br>
+    #include &lt;ctype.h&gt;<br>
+    #include &lt;stdlib.h&gt;<br>
+    <br>
+    void helpdoc();<br>
+    <br>
+    main()<br>
+    {<br>
+    file *rfp, *wfp;<br>
+    <br>
+    unsigned char ch, c;<br>
+    char s[20];<br>
+    <br>
+    if((rfp=fopen(_argv[1], &quot;r&quot;))==null) /* open the read file */<br>
+    {<br>
+    printf(&quot;cannot open file %s \n&quot;,_argv[1]);<br>
+    helpdoc();<br>
+    exit(-1);<br>
+    }<br>
+    <br>
+    if((wfp=fopen(_argv[2], &quot;wb&quot;))==null) /* open the write file */<br>
+    {<br>
+    printf(&quot;cannot open file %s \n&quot;,_argv[1]);<br>
+    helpdoc();<br>
+    exit(-1);<br>
+    }<br>
+    <br>
+    c=0;<br>
+    <br>
+    ch=fgetc(rfp);<br>
+    <br>
+    while(!feof(rfp)) /* loop for whole file */<br>
+    {<br>
+    <br>
+    if(isalnum(ch)) /* only 'see' valid ascii chars */<br>
+    {<br>
+    c=0;<br>
+    while(isdigit(ch)) /* only use decimal digits (0-9) */<br>
+    {<br>
+    s[c]=ch; /* build a string containing the number */<br>
+    c++;<br>
+    ch=fgetc(rfp);<br>
+    }<br>
+    s[c]=null; /* must have null terminator */<br>
+    <br>
+    fputc(atoi(s), wfp);/* write the binary equivalent to file */<br>
+    <br>
+    }<br>
+    <br>
+    ch=fgetc(rfp); /* loop until next number starts */<br>
+    <br>
+    <br>
+    }<br>
+    <br>
+    fclose(rfp); /* close up */<br>
+    fclose(wfp);<br>
+    }<br>
+    <br>
+    <br>
+    void helpdoc() /* print help message */<br>
+    {<br>
+    printf(&quot;\n text file encoder\n\n&quot;);<br>
+    <br>
+    printf(&quot;\n syntax: rec text_file_name binary_file_name\n\n&quot;);<br>
+    <br>
+    printf(&quot;by dustin caldwell (dustin@gse.utah.edu)\n\n&quot;);<br>
+    printf(&quot;this is a program that reads an ascii tab-\n&quot;);<br>
+    printf(&quot;delimited file and builds a binary file where\n&quot;);<br>
+    printf(&quot;each byte of the binary file is one of the decimal\n&quot;);<br>
+    printf(&quot;digits in the text file.\n&quot;);<br>
+    printf(&quot; eg:\n\n&quot;);<br>
+    printf(&quot;c:\&gt;rec son3.txt son3.mid\n\n&quot;);<br>
+    printf(&quot;(this will create a file called son3.mid which is\n&quot;);<br>
+    printf(&quot;a valid binary file)\n\n&quot;);<br>
+    printf(&quot;(dec.exe may also be useful, as it decodes binary files)\n\n&quot;);<br>
+    printf(&quot;have fun!!\n&quot;);<br>
+    }</td>
+  </tr>
+</table>
+</center></div>
+
+</body>
+</html>
+

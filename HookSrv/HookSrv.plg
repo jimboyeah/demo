@@ -1,0 +1,28 @@
+--------------------Configuration: HookSrv - Win32 Debug--------------------
+Begining build with project "C:\Program Files (x86)\DevStudio\MyProjects\win32\HookSrv\HookSrv.dsp", at root.
+Active configuration is Win32 (x86) Dynamic-Link Library (based on Win32 (x86) Dynamic-Link Library)
+
+Project's tools are:
+			"32-bit C/C++ Compiler for 80x86" with flags "/nologo /MTd /W3 /Gm /GX /Zi /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /Fp"Debug/HookSrv.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /c "
+			"OLE Type Library Maker" with flags "/nologo /D "_DEBUG" /mktyplib203 /o NUL /win32 "
+			"Win32 Resource Compiler" with flags "/l 0x804 /d "_DEBUG" "
+			"Browser Database Maker" with flags "/o"Debug/HookSrv.bsc" "
+			"COFF Linker for 80x86" with flags "kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:windows /dll /incremental:yes /pdb:"Debug/hooksrv.pdb" /debug /machine:I386 /out:"..\output\hooksrv.dll" /implib:"Debug/hooksrv.lib" /pdbtype:sept "
+			"Custom Build" with flags ""
+			"<Component 0xa>" with flags ""
+
+Creating temp file "C:\Users\ADMINI~1\AppData\Local\Temp\RSPDAFE.tmp" with contents </nologo /MTd /W3 /Gm /GX /Zi /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /Fp"Debug/HookSrv.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /c 
+"C:\Program Files (x86)\DevStudio\MyProjects\win32\HookSrv\hooksrv.cpp"
+>
+Creating command line "cl.exe @C:\Users\ADMINI~1\AppData\Local\Temp\RSPDAFE.tmp" 
+Creating temp file "C:\Users\ADMINI~1\AppData\Local\Temp\RSPDB0F.tmp" with contents <kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:windows /dll /incremental:yes /pdb:"Debug/hooksrv.pdb" /debug /machine:I386 /out:"..\output\hooksrv.dll" /implib:"Debug/hooksrv.lib" /pdbtype:sept 
+".\Debug\hooksrv.obj">
+Creating command line "link.exe @C:\Users\ADMINI~1\AppData\Local\Temp\RSPDB0F.tmp" 
+Compiling...
+hooksrv.cpp
+Linking...
+   Creating library Debug/hooksrv.lib and object Debug/hooksrv.exp
+
+
+
+hooksrv.dll - 0 error(s), 0 warning(s)

@@ -1,0 +1,42 @@
+System CPU: GenuineIntel 0.01GHz(8MHz)
+
+delay mips:00000375
+delay mips:00000375
+delay mips:00000750
+delay mips:00000375
+delay mips:00000375
+delay mips:00000750
+delay mips:00000187
+delay mips:00000187
+delay mips:00000375
+delay mips:00000187
+delay mips:00000187
+delay mips:00000375
+delay mips:00000375
+delay mips:00000750
+delay mips:00000187
+delay mips:00000001
+delay mips:00000001
+delay mips:00000001
+delay mips:00000001
+delay mips:00000001
+delay mips:00000001
+delay mips:00000001
+delay mips:00000001
+delay mips:00000001
+delay mips:00000001
+delay mips:00000750
+delay mips:00000187
+delay mips:00000187
+delay mips:00000375
+delay mips:00000187
+delay mips:00000750
+delay mips:00000187
+delay mips:00000187
+delay mips:00000187
+delay mips:00000750
+delay mips:00000187
+delay mips:00000375
+delay mips:00000187
+delay mips:00000750
+Status of chip 8255: 0x30 

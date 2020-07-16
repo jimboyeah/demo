@@ -1,0 +1,441 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML dir=ltr>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<title>Compiler Reference</title>
+
+<!--CSS_START-->
+<script language="JavaScript" src='MS-ITS:dsmsdn.chm::/html/msdn_header.js'></script>
+<!--CSS_END-->
+</HEAD>
+<BODY>
+
+<h1><a name="_core_compiler_reference"></a>Compiler Reference</h1>
+<p>
+<object id=alink_1 type="application/x-oleobject"
+	classid="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+<PARAM name="Command" value="ALink">
+<PARAM name="DefaultTopic" value="_topic_not_found.htm">
+<PARAM name="Item1" value="">
+<PARAM name="Item2" value="_vc_compiling_home">
+</object><a href=JavaScript:alink_1.Click()>Home</a>  |&nbsp; <a href="_core_overviews.3a_.compiling_and_linking.htm">Overview</a>  |&nbsp; <a href="_core_set_compiler_options.htm">How Do I</a></p>
+<p>
+CL.EXE is a 32-bit tool that controls the Microsoft C and C++ compilers and linker. The compilers produce Common Object File Format (COFF) object (.OBJ) files. The linker produces executable (.EXE) files or dynamic-link libraries (DLLs).</p>
+<p>
+For information on specifying options, see <a href="_core_set_compiler_options.htm">Set Compiler Options</a>. Other topics covered in this section are <a href="_core_fast_compilation.htm">Fast Compilation</a> and <a href="_core_cl_invokes_the_linker.htm">CL Invokes the Linker</a>. </p>
+<p>
+To compile without linking, use <a href="_core_.2f.c_lc.htm">/c</a> on the command line or click the Compile command on the Build menu. </p>
+<p>
+The following is a comprehensive, alphabetic list of options for the compiler (CL.EXE). Click any option name for specific information about it. Also see the <a href="_core_compiler_options_listed_by_category.htm">compiler options listed by category of purpose</a>. </p>
+<table border=1 cellpadding=5 cols=2 frame=below rules=rows>
+<tr valign=top>
+<td class=label width=41%><b>Option name and arguments</b></td>
+<td class=label width=59%><b>Purpose</b></td>
+</tr>
+<tr valign=top>
+<td width=41%><a href="_core_.2f.c_uc.htm">/C</a></td>
+<td width=59%>Preserves comments during preprocessing</td>
+</tr>
+<tr valign=top>
+<td width=41%><a href="_core_.2f.c_lc.htm">/c</a></td>
+<td width=59%>Compiles without linking</td>
+</tr>
+<tr valign=top>
+<td width=41%><a href="_core_.2f.d.htm">/D</a><i>name</i>[= | <b># </b>[{<i>string</i> | <i>number</i>}] ]</td>
+<td width=59%>Defines constants and macros</td>
+</tr>
+<tr valign=top>
+<td width=41%><a href="_core_.2f.e.htm">/E</a></td>
+<td width=59%>Copies preprocessor output to standard output</td>
+</tr>
+<tr valign=top>
+<td width=41%><a href="_core_.2f.eh.htm">/EH</a>{s|a}[c][-]</td>
+<td width=59%>Specifies the model of exception handling</td>
+</tr>
+<tr valign=top>
+<td width=41%><a href="_core_.2f.ep.htm">/EP</a></td>
+<td width=59%>Copies preprocessor output to standard output</td>
+</tr>
+<tr valign=top>
+<td width=41%><a href="_core_.2f.f.htm">/F</a> <i>number</i></td>
+<td width=59%>Sets stack size</td>
+</tr>
+<tr valign=top>
+<td width=41%><a href="_core_.2f.fa.htm">/FA</a>[<i>c</i>|<i>s</i>]</td>
+<td width=59%>Creates a listing file</td>
+</tr>
+<tr valign=top>
+<td width=41%><a href="_core_.2f.fa.htm">/Fa</a></td>
+<td width=59%>Sets listing file name</td>
+</tr>
+<tr valign=top>
+<td width=41%><a href="_core_.2f.fd.htm">/Fd</a><i>filename</i></td>
+<td width=59%>Renames program database file</td>
+</tr>
+<tr valign=top>
+<td width=41%><a href="_core_.2f.fd1.htm">/FD</a></td>
+<td width=59%>Generate file dependencies</td>
+</tr>
+<tr valign=top>
+<td width=41%><a href="_core_.2f.fe.htm">/Fe</a><i>filename</i></td>
+<td width=59%>Renames the executable file</td>
+</tr>
+<tr valign=top>
+<td width=41%><a href="_core_.2f.fi.htm">/FI</a><i>filename</i></td>
+<td width=59%>Preprocesses the specified include file</td>
+</tr>
+<tr valign=top>
+<td width=41%><a href="_core_.2f.fm.htm">/Fm</a>[<i>filename</i>]</td>
+<td width=59%>Creates a map file</td>
+</tr>
+<tr valign=top>
+<td width=41%><a href="_core_.2f.fo.htm">/Fo</a><i>filename</i></td>
+<td width=59%>Creates an object file</td>
+</tr>
+<tr valign=top>
+<td width=41%><a href="_core_.2f.fp.htm">/Fp</a><i>filename</i></td>
+<td width=59%>Specifies a precompiled header file name</td>
+</tr>
+<tr valign=top>
+<td width=41%><a href="_core_.2f.fr.2c_2f.fr.htm">/FR</a>[<i>filename</i>]<br>
+<a href="_core_.2f.fr.2c_2f.fr.htm">/Fr</a>[<i>filename</i>]</td>
+<td width=59%>Generate browser files</td>
+</tr>
+<tr valign=top>
+<td width=41%><a href="_core_.2f.g.htm">/G3</a></td>
+<td width=59%>Optimizes code to favor the 386 processor. Phased out in Visual C++ 5.0, the compiler will ignore this option</td>
+</tr>
+<tr valign=top>
+<td width=41%><a href="_core_.2f.g.htm">/G4</a></td>
+<td width=59%>Optimizes code to favor the 486 processor. Phased out in Visual C++ 5.0, the compiler will ignore this option</td>
+</tr>
+<tr valign=top>
+<td width=41%><a href="_core_.2f.g.htm">/G5</a></td>
+<td width=59%>Optimizes code to favor the Pentium processor</td>
+</tr>
+<tr valign=top>
+<td width=41%><a href="_core_.2f.g.htm">/G6</a></td>
+<td width=59%>Optimizes code to favor the Pentium Pro processor</td>
+</tr>
+<tr valign=top>
+<td width=41%><a href="_core_.2f.ga.htm">/GA</a></td>
+<td width=59%>Optimizes code for Windows application</td>
+</tr>
+<tr valign=top>
+<td width=41%><a href="_core_.2f.g.htm">/GB</a></td>
+<td width=59%>Optimizes code to favor the Pentium processor. Blends optimizations for the 80386 (/G3), 80486 (/G4), Pentium (/G5), and Pentium Pro (/G6) options.</td>
+</tr>
+<tr valign=top>
+<td width=41%><a href="_core_.2f.gd.htm">/GD</a></td>
+<td width=59%>Optimizes code for Windows DLL</td>
+</tr>
+<tr valign=top>
+<td width=41%><a href="_core_.2f.gd.2c_2f.gr.2c_2f.gz.htm">/Gd</a></td>
+<td width=59%>Uses the __<b>cdecl</b> calling convention</td>
+</tr>
+<tr valign=top>
+<td width=41%><a href="_core_.2f.ge.htm">/Ge</a></td>
+<td width=59%>Activates stack probes </td>
+</tr>
+<tr valign=top>
+<td width=41%><a href="_core_.2f.gf.htm">/GF</a><br>
+<a href="_core_.2f.gf.htm">/Gf</a></td>
+<td width=59%>Enable string pooling</td>
+</tr>
+<tr valign=top>
+<td width=41%><a href="_core_.2f.gh.htm">/Gh</a></td>
+<td width=59%>Calls hook function, __<b>penter</b></td>
+</tr>
+<tr valign=top>
+<td width=41%><a href="_core_.2f.gi.htm">/Gi</a></td>
+<td width=59%>Enables incremental compilation</td>
+</tr>
+<tr valign=top>
+<td width=41%><a href="_core_.2f.gm_minimal.htm">/Gm</a></td>
+<td width=59%>Enables minimal rebuild</td>
+</tr>
+<tr valign=top>
+<td width=41%><a href="_core_.2f.gr_option.htm">/GR</a></td>
+<td width=59%>Enables run-time type information (RTTI)</td>
+</tr>
+<tr valign=top>
+<td width=41%><a href="_core_.2f.gd.2c_2f.gr.2c_2f.gz.htm">/Gr</a></td>
+<td width=59%>Uses the __<b>fastcall</b> calling convention</td>
+</tr>
+<tr valign=top>
+<td width=41%><a href="_core_.2f.gs.htm">/Gs</a><i>size</i></td>
+<td width=59%>Controls stack probes</td>
+</tr>
+<tr valign=top>
+<td width=41%><a href="_core_.2f.gt.htm">/GT</a></td>
+<td width=59%>Supports fiber safety for data allocated using static thread-local storage.</td>
+</tr>
+<tr valign=top>
+<td width=41%><a href="_core_.2f.gx.htm">/GX</a>[–]</td>
+<td width=59%>Enables synchronous exception handling</td>
+</tr>
+<tr valign=top>
+<td width=41%><a href="_core_.2f.gy.htm">/Gy</a></td>
+<td width=59%>Enables function-level linking</td>
+</tr>
+<tr valign=top>
+<td width=41%><a href="vcrefgz(catchrelease-builderrorsindebugbuild).htm">/GZ</a></td>
+<td width=59%>Catch release-build errors in debug build</td>
+</tr>
+<tr valign=top>
+<td width=41%><a href="_core_.2f.gd.2c_2f.gr.2c_2f.gz.htm">/Gz</a></td>
+<td width=59%>Uses the __<b>stdcall</b> calling convention</td>
+</tr>
+<tr valign=top>
+<td width=41%><a href="_core_.2f.h.htm">/H</a><i>number</i></td>
+<td width=59%>Restricts the length of external (public) names</td>
+</tr>
+<tr valign=top>
+<td width=41%><a href="_core_.2f.help.htm">/HELP</a></td>
+<td width=59%>Lists the compiler options</td>
+</tr>
+<tr valign=top>
+<td width=41%><a href="_core_.2f.i.htm">/I</a><i>directory</i></td>
+<td width=59%>Searches a directory for include files</td>
+</tr>
+<tr valign=top>
+<td width=41%><a href="_core_.2f.j.htm">/J</a></td>
+<td width=59%>Changes the default <b>char</b> type</td>
+</tr>
+<tr valign=top>
+<td width=41%><a href="_core_.2f.md.2c_2f.ml.2c_2f.mt.2c_2f.ld.htm">/LD</a></td>
+<td width=59%>Creates a dynamic-link library</td>
+</tr>
+<tr valign=top>
+<td width=41%><a href="_core_.2f.md.2c_2f.ml.2c_2f.mt.2c_2f.ld.htm">/LDd</a></td>
+<td width=59%>Creates a debug dynamic-link library</td>
+</tr>
+<tr valign=top>
+<td width=41%><a href="_core_.2f.link.htm">/link</a> <i>option</i></td>
+<td width=59%>Passes the specified option to LINK</td>
+</tr>
+<tr valign=top>
+<td width=41%><a href="_core_.2f.md.2c_2f.ml.2c_2f.mt.2c_2f.ld.htm">/MD</a></td>
+<td width=59%>Creates a multithreaded DLL, using MSVCRT.LIB</td>
+</tr>
+<tr valign=top>
+<td width=41%><a href="_core_.2f.md.2c_2f.ml.2c_2f.mt.2c_2f.ld.htm">/MDd</a></td>
+<td width=59%>Creates a debug multithreaded DLL, using MSVCRTD.LIB</td>
+</tr>
+<tr valign=top>
+<td width=41%><a href="_core_.2f.md.2c_2f.ml.2c_2f.mt.2c_2f.ld.htm">/ML</a></td>
+<td width=59%>Creates a single-threaded executable file, using LIBC.LIB</td>
+</tr>
+<tr valign=top>
+<td width=41%><a href="_core_.2f.md.2c_2f.ml.2c_2f.mt.2c_2f.ld.htm">/MLd</a></td>
+<td width=59%>Creates a debug single-threaded executable file, using LIBCD.LIB</td>
+</tr>
+<tr valign=top>
+<td width=41%><a href="_core_.2f.md.2c_2f.ml.2c_2f.mt.2c_2f.ld.htm">/MT</a></td>
+<td width=59%>Creates a multithreaded executable file, using LIBCMT.LIB</td>
+</tr>
+<tr valign=top>
+<td width=41%><a href="_core_.2f.md.2c_2f.ml.2c_2f.mt.2c_2f.ld.htm">/MTd</a></td>
+<td width=59%>Creates a debug multithreaded executable file, using LIBCMTD.LIB</td>
+</tr>
+<tr valign=top>
+<td width=41%><a href="_core_.2f.nologo_compiler.htm">/nologo</a></td>
+<td width=59%>Suppresses display of sign-on banner</td>
+</tr>
+<tr valign=top>
+<td width=41%><a href="_core_.2f.o1.2c_2f.o2.htm">/O1</a></td>
+<td width=59%>Creates small code</td>
+</tr>
+<tr valign=top>
+<td width=41%><a href="_core_.2f.o1.2c_2f.o2.htm">/O2</a></td>
+<td width=59%>Creates fast code</td>
+</tr>
+<tr valign=top>
+<td width=41%><a href="_core_.2f.oa.2c_2f.ow.htm">/Oa</a></td>
+<td width=59%>Assumes no aliasing</td>
+</tr>
+<tr valign=top>
+<td width=41%><a href="_core_.2f.ob.htm">/Ob</a></td>
+<td width=59%>Controls inline expansion</td>
+</tr>
+<tr valign=top>
+<td width=41%><a href="_core_.2f.od.htm">/Od</a></td>
+<td width=59%>Disables optimization</td>
+</tr>
+<tr valign=top>
+<td width=41%><a href="_core_.2f.og.htm">/Og</a></td>
+<td width=59%>Uses global optimizations</td>
+</tr>
+<tr valign=top>
+<td width=41%><a href="_core_.2f.oi.htm">/Oi</a></td>
+<td width=59%>Generates intrinsic functions</td>
+</tr>
+<tr valign=top>
+<td width=41%><a href="_core_.2f.op.htm">/Op</a></td>
+<td width=59%>Improves floating-point consistency</td>
+</tr>
+<tr valign=top>
+<td width=41%><a href="_core_.2f.os.htm">/Os</a></td>
+<td width=59%>Favors small code </td>
+</tr>
+<tr valign=top>
+<td width=41%><a href="_core_.2f.ot.htm">/Ot</a></td>
+<td width=59%>Favors fast code </td>
+</tr>
+<tr valign=top>
+<td width=41%><a href="_core_.2f.oa.2c_2f.ow.htm">/Ow</a></td>
+<td width=59%>Assumes aliasing across function calls</td>
+</tr>
+<tr valign=top>
+<td width=41%><a href="_core_.2f.ox.htm">/Ox</a></td>
+<td width=59%>Uses maximum optimization (/Ob1gity /Gs)</td>
+</tr>
+<tr valign=top>
+<td width=41%><a href="_core_.2f.oy.htm">/Oy</a></td>
+<td width=59%>Omits frame pointer</td>
+</tr>
+<tr valign=top>
+<td width=41%><a href="vcrefqlf.htm">/Qlf</a><u>  </u></td>
+<td width=59%>Generates additional debugging information for kernal-mode device drivers.</td>
+</tr>
+<tr valign=top>
+<td width=41%><a href="_core_.2f.qi0f.htm">/QI0f</a></td>
+<td width=59%>Performs Pentium 0x0f erratum fix</td>
+</tr>
+<tr valign=top>
+<td width=41%><a href="_core_.2f.qifdiv.htm">/QIfdiv</a>[–]</td>
+<td width=59%>Performs Pentium FDIV erratum fix</td>
+</tr>
+<tr valign=top>
+<td width=41%><a href="_core_.2f.p.htm">/P</a></td>
+<td width=59%>Writes preprocessor output to a file</td>
+</tr>
+<tr valign=top>
+<td width=41%><a href="_core_.2f.tc.2c_2f.tp.htm">/Tc</a><i>filename</i><br>
+<a href="_core_.2f.tc.2c_2f.tp.htm">/TC</a></td>
+<td width=59%>Specifies a C source file</td>
+</tr>
+<tr valign=top>
+<td width=41%><a href="_core_.2f.tc.2c_2f.tp.htm">/Tp</a><i>filename</i><br>
+<a href="_core_.2f.tc.2c_2f.tp.htm">/TP</a></td>
+<td width=59%>Specifies a C++ source file</td>
+</tr>
+<tr valign=top>
+<td width=41%><a href="_core_.2f.u.2c_2f.u.htm">/U</a><i>symbol</i></td>
+<td width=59%>Removes a predefined macro</td>
+</tr>
+<tr valign=top>
+<td width=41%><a href="_core_.2f.u.2c_2f.u.htm">/u</a></td>
+<td width=59%>Removes all predefined macros</td>
+</tr>
+<tr valign=top>
+<td width=41%><a href="_core_.2f.v.htm">/V</a></td>
+<td width=59%>Sets the version string</td>
+</tr>
+<tr valign=top>
+<td width=41%><a href="_core_.2f.vd.htm">/vd</a>{0|1}</td>
+<td width=59%>Suppresses or enables hidden vtordisp class members</td>
+</tr>
+<tr valign=top>
+<td width=41%><a href="_core_.2f.vmb.2c_2f.vmg.htm">/vmb</a></td>
+<td width=59%>Uses best base for pointers to members</td>
+</tr>
+<tr valign=top>
+<td width=41%><a href="_core_.2f.vmb.2c_2f.vmg.htm">/vmg</a></td>
+<td width=59%>Uses full generality for pointers to members</td>
+</tr>
+<tr valign=top>
+<td width=41%><a href="_core_.2f.vmm.2c_2f.vms.2c_2f.vmv.htm">/vmm</a></td>
+<td width=59%>Declares multiple inheritance</td>
+</tr>
+<tr valign=top>
+<td width=41%><a href="_core_.2f.vmm.2c_2f.vms.2c_2f.vmv.htm">/vms</a></td>
+<td width=59%>Declares single inheritance</td>
+</tr>
+<tr valign=top>
+<td width=41%><a href="_core_.2f.vmm.2c_2f.vms.2c_2f.vmv.htm">/vmv</a></td>
+<td width=59%>Declares virtual inheritance</td>
+</tr>
+<tr valign=top>
+<td width=41%><a href="_core_.2f.w.2c_2f.w.htm">/W</a><i>level</i> </td>
+<td width=59%>Sets warning level</td>
+</tr>
+<tr valign=top>
+<td width=41%><a href="_core_.2f.w.2c_2f.w.htm">/w</a></td>
+<td width=59%>Disables all warnings</td>
+</tr>
+<tr valign=top>
+<td width=41%><a href="_core_.2f.x.htm">/X</a></td>
+<td width=59%>Ignores the standard include directory</td>
+</tr>
+<tr valign=top>
+<td width=41%><a href="_core_.2f.yc.htm">/Yc</a>[<i>filename</i>]</td>
+<td width=59%>Creates a precompiled header file</td>
+</tr>
+<tr valign=top>
+<td width=41%><a href="_core_.2f.yd.htm">/Yd</a></td>
+<td width=59%>Places complete debugging information in all object files</td>
+</tr>
+<tr valign=top>
+<td width=41%><a href="_core_.2f.yu.htm">/Yu</a>[<i>filename</i>]</td>
+<td width=59%>Uses a precompiled header file during build</td>
+</tr>
+<tr valign=top>
+<td width=41%><a href="_core_.2f.yx.htm">/YX</a></td>
+<td width=59%>Automates precompiled header </td>
+</tr>
+<tr valign=top>
+<td width=41%><a href="_core_.2f.z7.2c_2f.zd.2c_2f.zi.htm">/Z7</a></td>
+<td width=59%>Generates C 7.0–compatible debugging information</td>
+</tr>
+<tr valign=top>
+<td width=41%><a href="_core_.2f.za.2c_2f.ze.htm">/Za</a></td>
+<td width=59%>Disables language extensions</td>
+</tr>
+<tr valign=top>
+<td width=41%><a href="_core_.2f.z7.2c_2f.zd.2c_2f.zi.htm">/Zd</a></td>
+<td width=59%>Generates line numbers</td>
+</tr>
+<tr valign=top>
+<td width=41%><a href="_core_.2f.za.2c_2f.ze.htm">/Ze</a></td>
+<td width=59%>Enables language extensions</td>
+</tr>
+<tr valign=top>
+<td width=41%><a href="_core_.2f.zg.htm">/Zg</a></td>
+<td width=59%>Generates function prototypes</td>
+</tr>
+<tr valign=top>
+<td width=41%><a href="_core_.2f.z7.2c_2f.zd.2c_2f.zi.htm">/Zi</a></td>
+<td width=59%>Generates complete debugging information</td>
+</tr>
+<tr valign=top>
+<td width=41%><a href="_core_.2f.z7.2c_2f.zd.2c_2f.zi.htm">/ZI</a></td>
+<td width=59%>Includes debug information in a program database compatible with Edit and Continue.</td>
+</tr>
+<tr valign=top>
+<td width=41%><a href="_core_.2f.zl.htm">/Zl</a></td>
+<td width=59%>Removes default library name from .OBJ file</td>
+</tr>
+<tr valign=top>
+<td width=41%><a href="_core_.2f.zm.htm">/Zm</a><i>number</i></td>
+<td width=59%>Sets the compiler's memory allocation limit</td>
+</tr>
+<tr valign=top>
+<td width=41%><a href="_core_.2f.zn.htm">/Zn</a></td>
+<td width=59%>Turns off SBRPACK for .SBR files</td>
+</tr>
+<tr valign=top>
+<td width=41%><a href="_core_.2f.zp.htm">/Zp</a><i>n</i></td>
+<td width=59%>Packs structure members</td>
+</tr>
+<tr valign=top>
+<td width=41%><a href="_core_.2f.zs.htm">/Zs</a></td>
+<td width=59%>Checks syntax only</td>
+</tr>
+</table><br>
+
+<!--FOOTER_START-->
+<script language="JavaScript" src='MS-ITS:dsmsdn.chm::/html/msdn_footer.js'></script>
+<!--FOOTER_END-->
+</BODY>
+</HTML>

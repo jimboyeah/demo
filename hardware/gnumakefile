@@ -1,0 +1,32 @@
+#
+#  GNU makefile demo by Jimbowhy @ 2016/3/18 14:56:39
+#  Usage:
+#       mingw32-make DEBUG=1 cpuid
+#       mingw32-make all
+
+MC=@mc.exe
+RC=@windres.exe
+
+CC=@g++
+CFLAGS:=-s -O3
+libs:=-lwinmm -lgdi32 -lkernel32 -lmsimg32
+
+ifeq "DEBUG" "1"
+CFLAGS:=-g
+endif
+
+ifeq "DYNAMIC" "1"
+CFLAGS:=$(CFLAGS) -Wl,-Bdynamic
+endif
+
+CFLAGS:=$(CFLAGS) -I"." -L"C:\sdks\PSDK2k3SP1\Lib"
+
+
+all : cpuid
+
+cpuid:
+	$(CC) $(CFLAGS) -o cpuid cpuid.cpp $(LFLAGS)
+
+clean:
+	del *.obj
+

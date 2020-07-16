@@ -1,0 +1,13 @@
+icup.cpp(12): Warning! W010: col(9) asm directive ignored
+icup.cpp(12): Error! E121: col(9) syntax error
+icup.cpp(14): Error! E029: col(5) symbol 'Sleep' has not been declared
+icup.cpp(20): Warning! W010: col(9) asm directive ignored
+icup.cpp(20): Error! E121: col(9) syntax error
+icup.cpp(22): Warning! W389: col(20) integral value may be truncated during assignment or initialization
+icup.cpp(22): Warning! W389: col(20) integral value may be truncated during assignment or initialization
+icup.cpp(36): Warning! W010: col(9) asm directive ignored
+icup.cpp(36): Error! E121: col(9) syntax error
+icup.cpp(40): Warning! W726: col(1) no reference to formal parameter 'index'
+icup.cpp(25): Note! N392: col(17) definition: 'int index' in 'char * CPUID( int )'
+icup.cpp(56): Warning! W388: col(15) integral constant will be truncated during assignment or initialization
+icup.cpp(72): Error! E003: col(1) missing return value

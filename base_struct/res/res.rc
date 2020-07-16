@@ -1,0 +1,76 @@
+
+#include "res.h"
+#include "afxres.h"
+
+#include "resource.rc"
+MMT MESSAGETABLE resource.mc
+
+#pragma code_page(936)
+MoveCursor    CURSOR                 movetab.cur
+WxIcon        ICON                   wxwin.ico
+DING          WAVE    DISCARDABLE   "pass.wav"
+BMP           BIN     DISCARDABLE   "mario256.bmp"
+16            BITMAP                 mario16.bmp
+mario         BITMAP                 mario_24bpp.bmp 
+
+STRINGTABLE LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+{
+	IDS_HELLO,   "梦见你来了，还好吗？"
+	IDDSTAR,   "《白日梦!》"
+}
+
+STRINGTABLE LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_TRADITIONAL
+{
+	IDS_HELLO,   "夢見你來了，還好嗎！"
+	IDS_GOODBYE, "再見"
+	IDDSTAR,     "白日夢!" 
+} 
+
+STRINGTABLE LANGUAGE LANG_ENGLISH, SUBLANG_NEUTRAL
+{
+	IDDSTAR,   "[Colourful day!]"
+}
+
+STRINGTABLE LANGUAGE LANG_NEUTRAL, SUBLANG_ENGLISH_US
+{
+	IDDSTAR,   "*Colorful day!"
+} 
+
+STRINGTABLE LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_UK
+{
+	IDDSTAR,   "Colourful day!"
+}
+
+STRINGTABLE LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+{
+	IDDSTAR,   "Colorful day!"
+} 
+
+
+ShapesMenu MENU
+{
+	POPUP "&Shape"
+	{
+		MENUITEM "&Rectangle", ID_RECT
+		MENUITEM "&Triangle",  ID_TRIANGLE
+		MENUITEM "&Ellipse",   ID_ELLIPSE
+	}
+}
+
+1 ACCELERATORS
+{
+	"^C",  IDDCLEAR								//; control C
+	"K",   IDDCLEAR								//; shift K
+	"k",   IDDELLIPSE,					ALT		//; alt k
+	98,    IDDRECT,						ASCII	//; b
+	66,    IDDSTAR,						ASCII	//; B (shift b)
+	"g",   IDDRECT								//; g
+	"G",   IDDSTAR								//; G (shift G)
+	VK_F1, IDDCLEAR,					VIRTKEY	//; F1
+	VK_F1, IDDSTAR,    CONTROL,			VIRTKEY	//; control F1
+	VK_F1, IDDELLIPSE, SHIFT,			VIRTKEY	//; shift F1
+	VK_F1, IDDRECT,    ALT,				VIRTKEY	//; alt F1
+	VK_F2, IDDCLEAR,   ALT, SHIFT,		VIRTKEY	//; alt shift F2
+	VK_F2, IDDSTAR,    CONTROL, SHIFT,	VIRTKEY	//; ctrl shift F2
+	VK_F2, IDDRECT,    ALT, CONTROL,	VIRTKEY	//; alt control F2
+}

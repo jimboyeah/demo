@@ -1,0 +1,34 @@
+# Microsoft Developer Studio Generated Dependency File, included by demo.mak
+
+.\ChildView.cpp : \
+	"..\..\..\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	".\ChildView.h"\
+	".\demo.h"\
+	".\StdAfx.h"\
+	
+
+.\demo.cpp : \
+	"..\..\..\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	".\ChildView.h"\
+	".\demo.h"\
+	".\MainFrm.h"\
+	".\StdAfx.h"\
+	
+
+.\MainFrm.cpp : \
+	"..\..\..\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	".\ChildView.h"\
+	".\demo.h"\
+	".\MainFrm.h"\
+	".\StdAfx.h"\
+	
+
+.\StdAfx.cpp : \
+	"..\..\..\program files (x86)\microsoft visual studio\vc98\include\basetsd.h"\
+	".\StdAfx.h"\
+	
+
+.\demo.rc : \
+	".\res\demo.ico"\
+	".\res\demo.rc2"\
+	

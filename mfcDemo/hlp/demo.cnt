@@ -1,0 +1,9 @@
+:Base demo.hlp
+1 功能表
+2 「檔案」功能表=menu_file
+2 「編輯」功能表=menu_edit
+2 「檢視」功能表=menu_view
+2 「視窗」功能表=menu_window
+2 「說明」功能表=menu_help
+1 <<add your application-specific topics here>>
+2 <<add your topic jumps here>>=main_index

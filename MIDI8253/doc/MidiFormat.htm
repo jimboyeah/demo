@@ -1,0 +1,543 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="zh-cn">
+<meta name="GENERATOR" content="Microsoft FrontPage 12.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>标准MIDI文件格式 - GameRes.com</title>
+<base target="_blank">
+</head>
+
+<body topmargin="0" leftmargin="0" bgcolor="#e0eee0" link="#FF9900" vlink="#FF9900" alink="#FF9900" text="#1F003F">
+<font face="Arial">
+
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber1">
+  <tr>
+    <td width="100%"></td>
+  </tr>
+  <tr>
+    <td width="100%">　</td>
+  </tr>
+  <tr>
+    <td width="100%">
+    <div align="center">
+      <center>
+      <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" width="85%" id="AutoNumber2">
+        <tr>
+          <td width="100%" bgcolor="#151631">
+          <p align="right"><font size="1">jiajun2001 译&emsp; </font></td>
+        </tr>
+        <tr>
+          <td width="100%">
+          <p align="center"><font size=1></font><br>
+          <font color="#FFFFEE">
+<b>标准MIDI文件格式</b></font></td>
+        </tr>
+        <tr>
+          <td width="100%">　</td>
+        </tr>
+        <tr>
+          <td width="100%">
+  <p align="left"><font size="2">&emsp;&thinsp;&thinsp;标准的MIDI文件格式就像奇异的兽。总体看来，它是那样的让你无法抗拒。当然，你怎样看它无关紧要，可是用足够多的描述符描述一段音乐并使它能够重现，可不是很少的工作就可以完成的。然而，它虽然复杂，但是真正理解之后，MIDI文件格式的结构还是很直观明了的。<br>
+  <br>
+  &emsp;&emsp;在这里我必须放弃一些东西，因为毕竟我不是MIDI也不是MIDI文件专家！最近我为我的PC准备了一块Gravis
+  超音频音效卡，利用它听完几段MIDI文件（.mid)之后，想：“呵，我要是能够制作自己的MIDI（.mid）文件该多好啊！”嗯，经过烦人的几个小时之后，我发现，那些并不是没有价值的工作。但是，我是不会让一个冗长的文件格式就能够阻止的（此外，我告诉过我的妻子，计算机不是很难用的，而且我十分憎恨当一个伪君子）。那么，在这篇文章中如果发现什么错误，请让我知道，我会修改它的。同时，这份文档的范围并没有提供所有类型的MIDI命令和任何可能的文件配置！这篇基本指南将使读者能够（以中等的时间投资）制作出MIDI类型的文件。<br>
+  <br>
+  1.概述：<br>
+  <br>
+  &emsp;&emsp;一个MIDI文件基本上由两个部分组成，头块和轨道块。第二节讲述头块，第三节讲述轨道块。一个MIDI文件有一个头块用来描述文件的格式、许多的轨道块等内容。一个轨道可以想象为像一个大型多音轨录音机那样，你可以为某种声音、某种乐谱、某种乐器或者你需要的任何东西分配一个轨道。<br>
+  <br>
+  2.头块：<br>
+  <br>
+  &emsp;&emsp;头块出现在文件的开头，有三种方式来描述文件。头块看起来一直是这样的：<br>
+  &emsp;&emsp;4D 54 68 64 00 00 00 06 ff ff nn nn dd dd<br>
+  <br>
+  &emsp;&emsp;前4个字节等同于ASCII码MThd，接着MThd之后的4个字节是头的大小。它将一直是00
+  00 00 00 06，因为现行的头信息将一直是6字节。<br>
+  <br>
+  &emsp;&emsp;ff ff是文件的格式，有3种格式：<br>
+  &emsp;&emsp;&emsp;0－单轨<br>
+  &emsp;&emsp;&emsp;1－多规，同步<br>
+  &emsp;&emsp;&emsp;2－多规，异步<br>
+  <br>
+  &emsp;&emsp;单轨，很显然就只有一个轨道。同步多轨意味着所有轨道都是垂直同步的，或者其他的措辞为他们都在同一时间开始，并且可以表现一首歌的不同部分。异步多轨没有必要同时开始，而且可以完全的不同步。<br>
+  <br>
+  &emsp;&emsp;&emsp;nn nn 是MIDI文件中的轨道数。<br>
+  &emsp;&emsp;&emsp;dd dd 是每个4分音符delta-time节奏数（这之后将做详细介绍）。<br>
+  <br>
+  3.轨道块：<br>
+  <br>
+  &emsp;&emsp;头块之后剩下的文件部分是轨道块。每一个轨道包含一个头，并且可以包含你所希望的许多MIDI命令。轨道头与文件头及其相似：<br>
+  <br>
+  &emsp;&emsp;4D 54 72 6B xx xx xx xx<br>
+  <br>
+  &emsp;&emsp;与头一致，前4个字节是ASCII吗，这个是MTrk，紧跟MTrk的4个字节给出了以字节为单位的轨道的长度（不包括轨道头）。<br>
+  <br>
+  &emsp;&emsp;在头之下是MIDI事件，这些事件同现行的可以被带有累加的MIDI合成器端口接受和发送的数据是相同的。一个MIDI
+  事件先于一个delta-time。一个delta-time是一个MIDI事件被执行后的节奏数，每个四分之一音符的节奏数先前已经定义在了文件的头块中。这个delta-time是一个可变长度的编码值。这种格式虽然混乱，可是允许根据需要利用多位表示较大的数值，这不会因为需求小的数值情况下以添零的方式浪费掉一些字节！数值被转换为7位的字节，并且除了最后一个字节以最高有效位是0外，各个字节最有意义的一位是1，。这就允许一个数值被一次一个字节地读取，你如果发现最高有效位是0，则这就是这个数值的最后一位(意义比较小）。依照MIDI说明，全部delta-time的长度最多超过4字节。<br>
+  <br>
+  &emsp;&emsp;delta-time 之后就是MIDI事件，每个MIDI事件（除了正在运行的事件外）带有一个最高有效位总是1的命令字节（值将&gt;128）。大部分命令的列表在附录A中。每个命令都有不同的参数和长度，但是接下来的数据将是最高有效位为零（值将&lt;128）。这里有个例外就是meta-event，最高有效位可以是1。然而，meta-events需要一个长的参数以区分。<br>
+  <br>
+  &emsp;&emsp;微小失误就可以导致混乱的是运行模式，这是现行MIDI命令所忽略的地方，并且最终发行的MIDI命令是假定的。这就意味这如果包含了命令，那么MIDI事件就是由delta-time与参数组成而转换的。<br>
+  <br>
+  4.综述：<br>
+  <br>
+  &emsp;&emsp;如果这份说明仅仅是使问题更加混乱，那么以下提供的例子可能有助于澄清问题！同时，两个公用程序和一个图解文件包含在这个文档里面：<br>
+  <br>
+  &emsp;&emsp;DEC.EXE——这个公共程序是将二进制文件（比如.MID）转换成以十进制表示的对应每个字节的有标记界限的文本文件。<br>
+  <br>
+  &emsp;&emsp;REC.EXE——这个公共程序是将有标记界限的十进制数文本文件对应的每一字节转换成二进制文件。<br>
+  <br>
+  &emsp;&emsp;MIDINOTE.PS——这是一个对应键盘和五线谱的音符数字附录页。</font></p>
+  <p align="left"><font size="2"><br>
+  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;附录A<br>
+  <br>
+  1.MIDI事件命令<br>
+  <br>
+  &emsp;&emsp;每个命令字节有两部分，左nybble(4位）包含现行的命令，右nybble包含将被执行的命令的通道号，这里有16各MIDI通道8个MIDI命令（命令nybble必须最高有效位是1的）。在下表中，X表示MIDI通道号。所有的音符即数据字节都&lt;128（最高有效位是0）。<br>
+  <br>
+  十六进制 二进制 数据 描述<br>
+  <br>
+  8x&emsp;&emsp; 1000xxxx&emsp; nn vv&emsp;&emsp;&emsp;
+  音符关闭 (释放键盘)<br>
+  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;nn=音符号<br>
+  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;vv=速度<br>
+  <br>
+  9x&emsp;&emsp; 1001xxxx&emsp; nn vv&emsp;&emsp;&emsp;
+  音符打开 (按下键盘)<br>
+  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;nn=音符号<br>
+  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;vv=速度<br>
+  <br>
+  Ax&emsp;&emsp; 1010xxxx&emsp; nn vv&emsp;&emsp;&emsp;
+  触摸键盘以后<br>
+  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;nn=音符号<br>
+  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;vv=速度<br>
+  <br>
+  Bx&emsp;&emsp; 1011xxxx&emsp; cc vv&emsp;&emsp;&emsp;
+  调换控制<br>
+  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;cc=控制号<br>
+  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;vv=新值<br>
+  <br>
+  Cx&emsp;&emsp; 1100xxxx&emsp; pp&emsp;&emsp;&emsp;&emsp;&emsp;
+  改变程序（片断）<br>
+  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;pp=新的程序号<br>
+  <br>
+  Dx&emsp;&emsp; 1101xxxx&emsp; cc&emsp;&emsp;&emsp;&emsp;&emsp;
+  在通道后接触<br>
+  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;cc=管道号<br>
+  <br>
+  Ex&emsp;&emsp; 1110xxxx&emsp; bb tt&emsp;&emsp;&emsp;
+  改变互相咬和的齿轮 (2000H 表明缺省或没有改变)(什么意思搞不懂:)<br>
+  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;bb=值的低7位(least
+  sig)<br>
+  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;tt=值的高7位
+  (most sig)<br>
+  <br>
+  &emsp;下表是没有通道的 meta-events列表 ，他们的格式是：<br>
+  <br>
+  &emsp;&emsp;FF xx nn dd<br>
+  <br>
+  &emsp;所有的 meta-events 是以 FF 开头的命令 (xx)，长度，或者含在数据的字节数（nn），现行的数据(dd)<br>
+  <br>
+  十六进制 二进制 数据 描述<br>
+  00&emsp;&emsp; 00000000&emsp; nn ssss&emsp;&emsp;
+  设定轨道的序号<br>
+  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;nn=02
+  (两字节长度的序号)<br>
+  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;ssss=序号<br>
+  <br>
+  01&emsp;&emsp; 00000001&emsp; nn tt ..&emsp;&emsp;
+  你需要的所有文本事件<br>
+  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+  nn=以字节为单位的文本长度<br>
+  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;tt=文本字符<br>
+  <br>
+  02&emsp;&emsp; 00000010&emsp; nn tt ..&emsp;&emsp;
+  同文本的事件, 但是用于版权信息<br>
+  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+  nn tt=同文本事件<br>
+  <br>
+  03&emsp;&emsp; 00000011 nn tt ..&emsp;&emsp;
+  序列或者轨道名<br>
+  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+  nn tt=同文本事件<br>
+  <br>
+  04&emsp;&emsp; 00000100&emsp; nn tt ..&emsp;&emsp;
+  轨道乐器名<br>
+  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;nn
+  tt=同文本事件<br>
+  <br>
+  05&emsp;&emsp; 00000101&emsp; nn tt ..&emsp;&emsp;
+  歌词<br>
+  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+  nn tt=同文本事件<br>
+  <br>
+  06&emsp;&emsp; 00000110&emsp; nn tt ..&emsp;&emsp;
+  标签<br>
+  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;nn
+  tt=同文本事件<br>
+  <br>
+  07&emsp;&emsp; 00000111&emsp; nn tt ..&emsp;&emsp;
+  浮点音符<br>
+  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+  nn tt=同文本事件<br>
+  <br>
+  2F&emsp;&emsp; 00101111&emsp; 00&emsp;&emsp;&emsp;&emsp;&emsp;
+  这个事件一定在每个轨道的结尾出现<br>
+  <br>
+  51&emsp;&emsp; 01010001&emsp; 03 tttttt&emsp;
+  设定拍子<br>
+  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;tttttt=微秒/四分音符<br>
+  <br>
+  58&emsp;&emsp; 01011000&emsp; 04 nn dd cc bb
+  拍子记号<br>
+  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;nn=拍子记号分子<br>
+  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;dd=拍子记号分母2=四分之一<br>
+  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;3=8分拍,
+  等等.<br>
+  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;cc=节拍器的节奏<br>
+  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;bb=对四分之一音符标注的第32号数字<br>
+  <br>
+  59&emsp; 01011001&emsp; 02 sf mi&emsp;&emsp;
+  音调符号<br>
+  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;sf=升调/降调(-7=7
+  降调, 0=基准C调,7=7 升调)<br>
+  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+  mi=大调/小调(0=大调, 1=小调)<br>
+  <br>
+  7F&emsp;&emsp; 01111111&emsp; xx dd ..&emsp;&emsp;
+  音序器的详细信息<br>
+  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;xx=被发送的字节数<br>
+  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;dd=数据<br>
+  <br>
+  &emsp;&emsp;下表列出了控制整个系统的系统消息。这里没有MIDI通道数
+  (这些一般仅应用于MIDI键盘等.)<br>
+  <br>
+  十六进制&emsp;&emsp; 二进制 数据&emsp;&emsp;&emsp;&emsp;
+  描述<br>
+  <br>
+  F8&emsp;&emsp; 11111000&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+  同步所必须的计时器<br>
+  FA&emsp;&emsp; 11111010&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+  开始当前的队列<br>
+  FB&emsp;&emsp; 11111011&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+  从停止的地方继续一个队列<br>
+  FC&emsp;&emsp; 11111100&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+  停止一个队列<br>
+  <br>
+  下表列出的是与音符相对应的命令标记。<br>
+  八度音阶&brvbar;&brvbar;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+  音符号<br>
+  </font>
+</font>
+
+  <font size="2">
+<font face="Fixedsys">
+
+   # &brvbar;&brvbar;<br>
+  &emsp;&emsp;&brvbar;&brvbar; C&emsp; &brvbar; C#
+  &brvbar; D&emsp; &brvbar; D#&emsp;&brvbar; E&emsp; &brvbar; F&emsp; &brvbar;
+  F#&emsp;&brvbar; G&emsp; &brvbar; G# &brvbar; A&emsp; &brvbar; A#
+  &brvbar; B<br>
+  -----------------------------------------------------------------------------<br>
+   0 &brvbar;&brvbar; 0&nbsp; &brvbar; 1&nbsp; &brvbar; 2&nbsp;
+  &brvbar; 3&nbsp; &brvbar; 4&nbsp; &brvbar; 5&nbsp; &brvbar; 6&nbsp;
+  &brvbar; 7&nbsp; &brvbar; 8&nbsp; &brvbar; 9&nbsp; &brvbar; 10 &brvbar;
+  11<br>
+   1 &brvbar;&brvbar; 12 &brvbar; 13 &brvbar; 14
+  &brvbar; 15 &brvbar; 16 &brvbar; 17 &brvbar; 18
+  &brvbar; 19 &brvbar; 20 &brvbar; 21 &brvbar; 22
+  &brvbar; 23<br>
+   2 &brvbar;&brvbar; 24 &brvbar; 25 &brvbar; 26
+  &brvbar; 27 &brvbar; 28 &brvbar; 29 &brvbar; 30
+  &brvbar; 31 &brvbar; 32 &brvbar; 33 &brvbar; 34
+  &brvbar; 35<br>
+   3 &brvbar;&brvbar; 36 &brvbar; 37 &brvbar; 38
+  &brvbar; 39 &brvbar; 40 &brvbar; 41 &brvbar; 42
+  &brvbar; 43 &brvbar; 44 &brvbar; 45 &brvbar; 46
+  &brvbar; 47<br>
+   4 &brvbar;&brvbar; 48 &brvbar; 49 &brvbar; 50
+  &brvbar; 51 &brvbar; 52 &brvbar; 53 &brvbar; 54
+  &brvbar; 55 &brvbar; 56 &brvbar; 57 &brvbar; 58
+  &brvbar; 59<br>
+   5 &brvbar;&brvbar; 60 &brvbar; 61 &brvbar; 62
+  &brvbar; 63 &brvbar; 64 &brvbar; 65 &brvbar; 66
+  &brvbar; 67 &brvbar; 68 &brvbar; 69 &brvbar; 70
+  &brvbar; 71<br>
+   6 &brvbar;&brvbar; 72 &brvbar; 73 &brvbar; 74
+  &brvbar; 75 &brvbar; 76 &brvbar; 77 &brvbar; 78
+  &brvbar; 79 &brvbar; 80 &brvbar; 81 &brvbar; 82
+  &brvbar; 83<br>
+   7 &brvbar;&brvbar; 84 &brvbar; 85 &brvbar; 86
+  &brvbar; 87 &brvbar; 88 &brvbar; 89 &brvbar; 90
+  &brvbar; 91 &brvbar; 92 &brvbar; 93 &brvbar; 94
+  &brvbar; 95<br>
+   8 &brvbar;&brvbar; 96 &brvbar; 97 &brvbar; 98
+  &brvbar; 99 &brvbar; 100 &brvbar; 101 &brvbar; 102 &brvbar; 103 &brvbar; 104 &brvbar; 105 &brvbar; 106 &brvbar; 107<br>
+   9 &brvbar;&brvbar; 108 &brvbar; 109 &brvbar; 110 &brvbar; 111
+  &brvbar; 112 &brvbar; 113 &brvbar; 114 &brvbar; 115 &brvbar; 116 &brvbar; 117
+  &brvbar; 118 &brvbar; 119<br>
+   10&brvbar;&brvbar; 120 &brvbar; 121 &brvbar; 122 &brvbar; 123
+  &brvbar; 124 &brvbar; 125 &brvbar; 126 &brvbar; 127 &brvbar;</font><font face="Arial"><br>
+  <br>
+  参考资料：<br>
+  &quot;MIDI Systems and Control&quot; Francis Rumsey 1990 Focal Press<br>
+  &quot;MIDI and Sound Book for the Atari ST&quot; Bernd Enders and Wolfgang
+  Klem 1989 M&amp;T Publishing, Inc.<br>
+  MIDI file specs and general MIDI specs were also obtained by sending e-mail to
+  LISTSERV@AUVM.AMERICAN.EDU with the phrase GET MIDISPEC PACKAGE in the
+  message.<br>
+  ------------------------------ DEC.CPP ------------------------------------<br>
+  <br>
+</font>
+
+<font face="宋体">
+
+  /* file dec.cpp<br>
+  <br>
+  by Dustin Caldwell&emsp; (dustin@gse.utah.edu)<br>
+  <br>
+  */<br>
+  <br>
+  <br>
+  #include &lt;dos.h&gt;<br>
+  #include &lt;stdio.h&gt;<br>
+  #include &lt;stdlib.h&gt;<br>
+  <br>
+  void helpdoc();<br>
+  <br>
+  main()<br>
+  {<br>
+  &emsp;&emsp;&emsp; FILE *fp;<br>
+  <br>
+  &emsp;&emsp;&emsp; unsigned char ch, c;<br>
+  <br>
+  &emsp;&emsp;&emsp; if((fp=fopen(_argv[1],
+  &quot;rb&quot;))==NULL)&emsp;&emsp;&emsp;&emsp;&emsp;
+  /* open file to read */<br>
+  &emsp;&emsp;&emsp; {<br>
+  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+  printf(&quot;cannot open file %s\n&quot;,_argv[1]);<br>
+  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+  helpdoc();<br>
+  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+  exit(-1);<br>
+  &emsp;&emsp;&emsp; }<br>
+  <br>
+  &emsp;&emsp;&emsp; c=0;<br>
+  &emsp;&emsp;&emsp; ch=fgetc(fp);<br>
+  <br>
+  &emsp;&emsp;&emsp; while(!feof(fp))&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+  /* loop for whole file */<br>
+  &emsp;&emsp;&emsp; {<br>
+  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+  printf(&quot;%u\t&quot;, ch);&emsp;&emsp;&emsp;&emsp;&emsp;
+  /* print every byte's decimal equiv. */<br>
+  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+  c++;<br>
+  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+  if(c&gt;8)&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+  /* print 8 numbers to a line */<br>
+  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+  {<br>
+  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+  c=0;<br>
+  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+  printf(&quot;\n&quot;);<br>
+  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+  }<br>
+  <br>
+  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+  ch=fgetc(fp);<br>
+  &emsp;&emsp;&emsp; }<br>
+  <br>
+  &emsp;&emsp;&emsp; fclose(fp);&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+  /* close up */<br>
+  }<br>
+  <br>
+  void helpdoc()&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+  /* print help message */<br>
+  {<br>
+  &emsp;&emsp;&emsp; printf(&quot;\n Binary File
+  Decoder\n\n&quot;);<br>
+  <br>
+  &emsp;&emsp;&emsp; printf(&quot;\n Syntax: dec
+  binary_file_name\n\n&quot;);<br>
+  <br>
+  &emsp;&emsp;&emsp; printf(&quot;by Dustin Caldwell
+  (dustin@gse.utah.edu)\n\n&quot;);<br>
+  &emsp;&emsp;&emsp; printf(&quot;This is a filter
+  program that reads a binary file\n&quot;);<br>
+  &emsp;&emsp;&emsp; printf(&quot;and prints the decimal
+  equivalent of each byte\n&quot;);<br>
+  &emsp;&emsp;&emsp; printf(&quot;tab-separated. This is
+  mostly useful when piped \n&quot;);<br>
+  &emsp;&emsp;&emsp; printf(&quot;into another file to
+  be edited manually. eg:\n\n&quot;);<br>
+  &emsp;&emsp;&emsp; printf(&quot;c:\&gt;dec sonata3.mid
+  &gt; son3.txt\n\n&quot;);<br>
+  &emsp;&emsp;&emsp; printf(&quot;This will create a
+  file called son3.txt which can\n&quot;);<br>
+  &emsp;&emsp;&emsp; printf(&quot;be edited with any
+  ascii editor. \n\n&quot;);<br>
+  &emsp;&emsp;&emsp; printf(&quot;(rec.exe may also be
+  useful, as it reencodes the \n&quot;);<br>
+  &emsp;&emsp;&emsp; printf(&quot;ascii text
+  file).\n\n&quot;);<br>
+  &emsp;&emsp;&emsp; printf(&quot;Have Fun!!\n&quot;);<br>
+  }<br>
+  <br>
+  ---------------------------- REC.CPP ----------------------------------<br>
+  <br>
+  /* File rec.cpp<br>
+  &emsp;&emsp;&emsp; by Dustin Caldwell
+  (dustin@gse.utah.edu)<br>
+  */<br>
+  <br>
+  #include &lt;dos.h&gt;<br>
+  #include &lt;stdio.h&gt;<br>
+  #include &lt;ctype.h&gt;<br>
+  #include &lt;stdlib.h&gt;<br>
+  <br>
+  void helpdoc();<br>
+  <br>
+  main()<br>
+  {<br>
+  &emsp;&emsp;&emsp; FILE *rfp, *wfp;<br>
+  <br>
+  &emsp;&emsp;&emsp; unsigned char ch, c;<br>
+  &emsp;&emsp;&emsp; char s[20];<br>
+  <br>
+  &emsp;&emsp;&emsp; if((rfp=fopen(_argv[1],
+  &quot;r&quot;))==NULL)&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+  /* open the read file */<br>
+  &emsp;&emsp;&emsp; {<br>
+  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+  printf(&quot;cannot open file %s \n&quot;,_argv[1]);<br>
+  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+  helpdoc();<br>
+  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+  exit(-1);<br>
+  &emsp;&emsp;&emsp; }<br>
+  <br>
+  &emsp;&emsp;&emsp; if((wfp=fopen(_argv[2],
+  &quot;wb&quot;))==NULL)&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+  /* open the write file */<br>
+  &emsp;&emsp;&emsp; {<br>
+  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+  printf(&quot;cannot open file %s \n&quot;,_argv[1]);<br>
+  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+  helpdoc();<br>
+  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+  exit(-1);<br>
+  &emsp;&emsp;&emsp; }<br>
+  <br>
+  &emsp;&emsp;&emsp; c=0;<br>
+  <br>
+  &emsp;&emsp;&emsp; ch=fgetc(rfp);<br>
+  <br>
+  &emsp;&emsp;&emsp; while(!feof(rfp))&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+  /* loop for whole file */<br>
+  &emsp;&emsp;&emsp; {<br>
+  <br>
+  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+  if(isalnum(ch))&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+  /* only 'see' valid ascii chars */<br>
+  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+  {<br>
+  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+  c=0;<br>
+  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+  while(isdigit(ch))&emsp;&emsp; /* only use decimal digits
+  (0-9) */<br>
+  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+  {<br>
+  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+  s[c]=ch;&emsp;&emsp;&emsp; /* build a string
+  containing the number */<br>
+  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+  c++;<br>
+  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+  ch=fgetc(rfp);<br>
+  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+  }<br>
+  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+  s[c]=NULL;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+  /* must have NULL terminator */<br>
+  <br>
+  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+  fputc(atoi(s), wfp);/* write the binary equivalent to file */<br>
+  <br>
+  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+  }<br>
+  <br>
+  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+  ch=fgetc(rfp);&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+  /* loop until next number starts */<br>
+  <br>
+  <br>
+  &emsp;&emsp;&emsp; }<br>
+  <br>
+  &emsp;&emsp;&emsp; fclose(rfp);&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+  /* close up */<br>
+  &emsp;&emsp;&emsp; fclose(wfp);<br>
+  }<br>
+  <br>
+  <br>
+  void helpdoc()&emsp;&emsp;&emsp;&emsp; /* print
+  help message */<br>
+  {<br>
+  &emsp;&emsp;&emsp; printf(&quot;\n Text File
+  Encoder\n\n&quot;);<br>
+  <br>
+  &emsp;&emsp;&emsp; printf(&quot;\n Syntax: rec
+  text_file_name binary_file_name\n\n&quot;);<br>
+  <br>
+  &emsp;&emsp;&emsp; printf(&quot;by Dustin Caldwell
+  (dustin@gse.utah.edu)\n\n&quot;);<br>
+  &emsp;&emsp;&emsp; printf(&quot;This is a program that
+  reads an ascii tab-\n&quot;);<br>
+  &emsp;&emsp;&emsp; printf(&quot;delimited file and
+  builds a binary file where\n&quot;);<br>
+  &emsp;&emsp;&emsp; printf(&quot;each byte of the
+  binary file is one of the decimal\n&quot;);<br>
+  &emsp;&emsp;&emsp; printf(&quot;digits in the text
+  file.\n&quot;);<br>
+  &emsp;&emsp;&emsp; printf(&quot; eg:\n\n&quot;);<br>
+  &emsp;&emsp;&emsp; printf(&quot;c:\&gt;rec son3.txt
+  son3.mid\n\n&quot;);<br>
+  &emsp;&emsp;&emsp; printf(&quot;(This will create a
+  file called son3.mid which is\n&quot;);<br>
+  &emsp;&emsp;&emsp; printf(&quot;a valid binary
+  file)\n\n&quot;);<br>
+  &emsp;&emsp;&emsp; printf(&quot;(dec.exe may also be
+  useful, as it decodes binary files)\n\n&quot;);<br>
+  &emsp;&emsp;&emsp; printf(&quot;Have Fun!!\n&quot;);<br>
+  }</font></font><font face="Arial"></td>
+        </tr>
+        <tr>
+          <td width="100%">
+          　</td>
+        </tr>
+        <tr>
+          <td width="100%" bgcolor="#151631">
+          <p align="right"><font size="1"></font></td>
+        </tr>
+        <tr>
+          <td width="100%"></td>
+        </tr>
+      </table>
+      </center>
+    </div>
+    </td>
+  </tr>
+  <tr>
+    <td width="100%"></td>
+  </tr>
+</table>
+
+</body>
+</font>
+
+</html>

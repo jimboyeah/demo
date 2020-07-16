@@ -1,0 +1,165 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUT_DIALOG DIALOG DISCARDABLE  0, 0, 201, 137
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About WinMacro"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,75,110,50,14
+    LTEXT           "WinMacro",IDC_STATIC,52,15,34,8
+    LTEXT           "Macro Recorder/Player for Windows",IDC_STATIC,51,25,116,
+                    8
+    LTEXT           "Written By",IDC_STATIC,15,41,34,8
+    LTEXT           "S. Senthil Kumar (senthilkumar_tce@yahoo.com)",
+                    IDC_STATIC,15,51,154,8
+    EDITTEXT        IDC_WEBSITES_LIST,17,63,164,43,ES_MULTILINE | 
+                    ES_AUTOVSCROLL | ES_AUTOHSCROLL | ES_READONLY | NOT 
+                    WS_BORDER
+    ICON            IDI_ICON1,IDC_STATIC,15,14,21,20
+END
+
+IDD_WINMACRO2 DIALOG DISCARDABLE  0, 0, 250, 52
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "WinMacro v1.2"
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_FILENAME,51,6,151,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "Browse",IDC_BROWSE,204,4,42,14
+    PUSHBUTTON      "Record",IDC_RECORD,29,23,50,14
+    PUSHBUTTON      "Playback",IDC_PLAYBACK,87,22,50,14
+    PUSHBUTTON      "Options",IDC_OPTIONS,149,22,50,14
+    LTEXT           "Select File",IDC_STATIC,7,8,42,8
+    PUSHBUTTON      "About",IDC_ABOUT,215,22,30,14
+END
+
+IDD_OPTIONS_DIALOG DIALOG DISCARDABLE  0, 0, 158, 124
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "WinMacro Options"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,26,104,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,79,104,50,14
+    GROUPBOX        "Playback Options",IDC_STATIC,0,4,157,96
+    CONTROL         "Playback Events at Recorded Speed",IDC_NORMAL_SPEED,
+                    "Button",BS_AUTORADIOBUTTON,6,44,133,10
+    CONTROL         "Playback Events At My Own Speed",IDC_USER_DEFINED_SPEED,
+                    "Button",BS_AUTORADIOBUTTON,6,59,129,10
+    LTEXT           "Time Interval",IDC_STATIC,17,72,42,8
+    EDITTEXT        IDC_TIME_INTERVAL,62,70,40,14,ES_AUTOHSCROLL | WS_GROUP
+    CONTROL         "Add to Recorded Time",IDC_ADD_TO_RECORDED_TIME,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,17,87,87,10
+    EDITTEXT        IDC_NO_OF_REPETITIONS,77,28,40,14,ES_AUTOHSCROLL
+    CONTROL         "Repeat Playback",IDC_REPEAT_PLAYBACK,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,6,17,71,10
+    LTEXT           "No. of Repetitions",IDC_STATIC,17,31,58,8
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUT_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 194
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 130
+    END
+
+    IDD_WINMACRO2, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 248
+        BOTTOMMARGIN, 44
+    END
+
+    IDD_OPTIONS_DIALOG, DIALOG
+    BEGIN
+        RIGHTMARGIN, 157
+        BOTTOMMARGIN, 123
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_ICON1               ICON    DISCARDABLE     "icon1.ico"
+IDI_ICON2               ICON    DISCARDABLE     "icon2.ico"
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

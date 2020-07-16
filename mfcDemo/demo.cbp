@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="demo" />
+		<Option pch_mode="2" />
+		<Option compiler="microsoft_visual_c_65" />
+		<Build>
+			<Target title="Debug">
+				<Option output="Debug/demo" prefix_auto="1" extension_auto="1" />
+				<Option object_output="Debug/" />
+				<Option type="1" />
+				<Option compiler="microsoft_visual_c_60" />
+				<Option projectCompilerOptionsRelation="-1" />
+				<Option projectLinkerOptionsRelation="-1" />
+				<Option projectIncludeDirsRelation="-1" />
+				<Option projectLibDirsRelation="-1" />
+				<Compiler>
+					<Add option="/nologo /MDd /W3 /Gm /GX /ZI" />
+					<Add option='/Od /D &quot;WIN32&quot; /D &quot;_DEBUG&quot; /D &quot;_WINDOWS&quot; /D &quot;_MBCS&quot;' />
+					<Add option='/Fp&quot;Debug/demo.pch&quot; /YX&quot;stdafx.h&quot; /Fo&quot;Debug/&quot; /Fd&quot;Debug/&quot; /FD /GZ /c' />
+					<Add option='/D&quot;_WINDOWS&quot; /D &quot;_MBCS&quot; /D &quot;_AFXDLL&quot;' />
+				</Compiler>
+				<MakeCommands>
+					<Build command="" />
+					<CompileFile command="" />
+					<Clean command="" />
+					<DistClean command="" />
+					<AskRebuildNeeded command="" />
+					<SilentBuild command=" &gt; $(CMD_NULL)" />
+				</MakeCommands>
+			</Target>
+			<Target title="Release">
+				<Option output="Release/demo" prefix_auto="1" extension_auto="1" />
+				<Option object_output="Release/" />
+				<Option type="1" />
+				<Option compiler="microsoft_visual_c_60" />
+				<Compiler>
+					<Add option="/MD" />
+					<Add option="/Ox" />
+					<Add option='/MD /W3 /GX /O2 /D &quot;WIN32&quot; /D &quot;NDEBUG&quot; /D &quot;_WINDOWS&quot; /D &quot;_AFXDLL&quot; /D &quot;_MBCS&quot;' />
+					<Add option='/Fo&quot;Release/&quot; /Fd&quot;Release/&quot; /FD /c' />
+					<Add option='/Fp&quot;Release/demo.pch&quot; /YX&quot;stdafx.h&quot;' />
+					<Add option="/DNDEBUG" />
+				</Compiler>
+				<Linker>
+					<Add option="/subsystem:windows" />
+					<Add option="/incremental:no" />
+					<Add option='/pdb:&quot;Release/demo.pdb&quot;' />
+					<Add option="/machine:I386" />
+					<Add option='/out:&quot;Release/demo.exe&quot;' />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="/W3" />
+		</Compiler>
+		<Unit filename="ChildView.cpp" />
+		<Unit filename="ChildView.h" />
+		<Unit filename="MainFrm.cpp" />
+		<Unit filename="MainFrm.h" />
+		<Unit filename="StdAfx.cpp" />
+		<Unit filename="StdAfx.h" />
+		<Unit filename="demo.cpp" />
+		<Unit filename="demo.h" />
+		<Unit filename="demo.rc">
+			<Option compilerVar="WINDRES" />
+		</Unit>
+		<Unit filename="resource.h" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

@@ -1,0 +1,48 @@
+# depslib dependency file v1.0
+1330185644 source:c:\www\c\src\cb\main.cpp
+	<iostream>
+	"src/Base.CPP"
+
+1329805783 c:\www\c\src\cb\base.cpp
+	<iostream>
+
+1329800690 c:\www\c\src\cb\time.cpp
+
+1329806735 source:c:\www\c\src\cb\src\weekday.cpp
+
+1330009497 source:c:\www\c\src\cb\src\time.cpp
+
+1329869922 source:c:\www\c\src\cb\src\main.cpp
+	<iostream>
+	"Base.CPP"
+
+1330185870 c:\www\c\src\cb\src\base.cpp
+	<iostream>
+
+1329806082 c:\www\c\src\cb\src\time.cpp
+
+1330185870 source:c:\www\c\src\cb\src\base.cpp
+	<iostream>
+
+1330009497 source:c:\www\c\src\comeback\src\time.cpp
+
+1329806735 source:c:\www\c\src\comeback\src\weekday.cpp
+
+1330233253 source:c:\www\c\src\comeback\src\base.cpp
+	<iostream>
+	<string>
+
+1330529202 source:c:\www\c\src\comeback\main.cpp
+	<iostream>
+	<string>
+	"Base.CPP"
+	"Time.CPP"
+
+1330530520 c:\www\c\src\comeback\src\base.cpp
+	<iostream>
+	<string>
+
+1330530554 c:\www\c\src\comeback\src\time.cpp
+
+1329806735 c:\www\c\src\comeback\src\weekday.cpp
+

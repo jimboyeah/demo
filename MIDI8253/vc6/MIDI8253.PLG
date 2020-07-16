@@ -1,0 +1,37 @@
+--------------------Configuration: MIDI8253 - Win32 Debug--------------------
+Begining build with project "C:\c\src\MIDI8253\vc6\MIDI8253.DSP", at root.
+Active configuration is Win32 (x86) Application (based on Win32 (x86) Application)
+
+Project's tools are:
+			"32-bit C/C++ Compiler for 80x86" with flags "/nologo /MLd /W3 /GX /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /FR"Debug/" /Fp"Debug/MIDI8253.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /ZI /c "
+			"OLE Type Library Maker" with flags "/nologo /D "_DEBUG" /mktyplib203 /o /win32 "NUL" "
+			"Win32 Resource Compiler" with flags "/l 0x804 /d "_DEBUG" "
+			"Browser Database Maker" with flags "/nologo /o"Debug/MIDI8253.bsc" "
+			"COFF Linker for 80x86" with flags "kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:windows /incremental:yes /pdb:"Debug/midi8253.pdb" /debug /machine:I386 /out:"../bin/midi8253.exe" /pdbtype:sept "
+			"Custom Build" with flags ""
+			"<Component 0xa>" with flags ""
+
+Creating temp file "C:\Users\ADMINI~1\AppData\Local\Temp\RSP7CA4.tmp" with contents </nologo /MLd /W3 /GX /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /FR"Debug/" /Fp"Debug/MIDI8253.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /ZI /c 
+"C:\c\src\MIDI8253\vc6\cpuid.cpp"
+"C:\c\src\MIDI8253\vc6\main.cpp"
+"C:\c\src\MIDI8253\vc6\MIDI8253.cpp"
+>
+Creating command line "cl.exe @C:\Users\ADMINI~1\AppData\Local\Temp\RSP7CA4.tmp" 
+Creating temp file "C:\Users\ADMINI~1\AppData\Local\Temp\RSP7CA5.tmp" with contents <kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:windows /incremental:yes /pdb:"Debug/midi8253.pdb" /debug /machine:I386 /out:"../bin/midi8253.exe" /pdbtype:sept 
+.\Debug\cpuid.obj
+.\Debug\main.obj
+.\Debug\MIDI8253.obj>
+Creating command line "link.exe @C:\Users\ADMINI~1\AppData\Local\Temp\RSP7CA5.tmp" 
+Compiling...
+Command line warning D4002 : ignoring unknown option '/ZI'
+cpuid.cpp
+C:\c\src\MIDI8253\vc6\cpuid.cpp(30) : error C2400: inline assembler syntax error in 'opcode'; found 'newline'
+C:\c\src\MIDI8253\vc6\cpuid.cpp(37) : error C2400: inline assembler syntax error in 'opcode'; found 'newline'
+C:\c\src\MIDI8253\vc6\cpuid.cpp(53) : error C2400: inline assembler syntax error in 'opcode'; found 'newline'
+main.cpp
+MIDI8253.cpp
+Error executing cl.exe.
+
+
+
+midi8253.exe - 3 error(s), 1 warning(s)

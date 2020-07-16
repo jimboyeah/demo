@@ -1,0 +1,28 @@
+# depslib dependency file v1.0
+1385403598 source:c:\codeblocks\hookcross\main.cpp
+	"../hooksrv/main.h"
+	<windows.h>
+	<sstream>
+
+1385403018 c:\codeblocks\hooksrv\main.h
+	<windows.h>
+	<sstream>
+
+1451141015 source:c:\c\src\hookcross\main.cpp
+	"../hooksrv/main.h"
+	<windows.h>
+	<sstream>
+
+1385403018 c:\c\src\hooksrv\main.h
+	<windows.h>
+	<sstream>
+
+1451296807 source:c:\c\src\hookdemo\hookcross\main.cpp
+	"../hooksrv/main.h"
+	<windows.h>
+	<sstream>
+
+1385403018 c:\c\src\hookdemo\hooksrv\main.h
+	<windows.h>
+	<sstream>
+

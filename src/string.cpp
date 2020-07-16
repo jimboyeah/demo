@@ -20,5 +20,11 @@ int main ()
    len = str3.size();
    cout << "str3.size() :  " << len << endl;
  
+   // c++11 raw string literials
+   string raw_str = R"(
+     some raw string...
+   )";
+   cout << raw_str;
+   
    return 0;
 }

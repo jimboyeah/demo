@@ -14,8 +14,8 @@
 			"variants":
 			[
 				{
-					"name": "Make help",
-					"cmd": "make --version && g++ --version && make help"
+					"cmd": "make --version && g++ --version && make help",
+					"name": "Make help"
 				},
 				{
 					"name": "CMake GUI",
@@ -53,68 +53,114 @@
 			"working_dir": "${project_path}/build"
 		},
 		{
-			"name": "Ninja Make(Windows)",
+			"cmd":
+			[
+				"cmake",
+				"..",
+				"-G",
+				"Sublime Text 2 - Ninja"
+			],
 			"encoding": "utf8",
 			"env":
 			{
 				"PATH": "c:/MinGW/bin/;%PATH%"
 			},
 			"file_regex": "^  (.+)\\((\\d+)\\)(): ((?:fatal )?(?:error|warning) \\w+\\d\\d\\d\\d: .*) \\[.*$",
+			"name": "Ninja Make(Windows)",
 			"quiet": true,
-			"cmd": ["cmake", "..", "-G", "Sublime Text 2 - Ninja"],
-			// "shell_cmd": "cmake .. -G \"Sublime Text 2 - Ninja\"",
 			"working_dir": "${project_path}/ninja"
 		},
 		{
+			"cmd":
+			[
+				"C:/MinGW/bin/ninja.exe",
+				"-f",
+				"build.ninja",
+				"free.cpp"
+			],
+			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)",
 			"name": "Ninja - free.cpp",
-			"cmd": ["C:/MinGW/bin/ninja.exe", "-f", "build.ninja", "free.cpp"],
-			"working_dir": "${project_path}/ninja",
 			"quiet": true,
-			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)"
+			"working_dir": "${project_path}/ninja"
 		},
 		{
+			"cmd":
+			[
+				"C:/MinGW/bin/ninja.exe",
+				"-f",
+				"build.ninja",
+				"string-null-tm.cpp"
+			],
+			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)",
 			"name": "Ninja - string-null-tm.cpp",
-			"cmd": ["C:/MinGW/bin/ninja.exe", "-f", "build.ninja", "string-null-tm.cpp"],
-			"working_dir": "${project_path}/ninja",
 			"quiet": true,
-			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)"
+			"working_dir": "${project_path}/ninja"
 		},
 		{
+			"cmd":
+			[
+				"C:/MinGW/bin/ninja.exe",
+				"-f",
+				"build.ninja",
+				"all"
+			],
+			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)",
 			"name": "Ninja - all",
-			"cmd": ["C:/MinGW/bin/ninja.exe", "-f", "build.ninja", "all"],
-			"working_dir": "${project_path}/ninja",
 			"quiet": true,
-			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)"
+			"working_dir": "${project_path}/ninja"
 		},
 		{
+			"cmd":
+			[
+				"C:/MinGW/bin/ninja.exe",
+				"-f",
+				"build.ninja",
+				"clean"
+			],
+			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)",
 			"name": "Ninja - clean",
-			"cmd": ["C:/MinGW/bin/ninja.exe", "-f", "build.ninja", "clean"],
-			"working_dir": "${project_path}/ninja",
 			"quiet": true,
-			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)"
+			"working_dir": "${project_path}/ninja"
 		},
 		{
+			"cmd":
+			[
+				"C:/MinGW/bin/ninja.exe",
+				"-f",
+				"build.ninja",
+				"rebuild_cache"
+			],
+			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)",
 			"name": "Ninja - rebuild_cache",
-			"cmd": ["C:/MinGW/bin/ninja.exe", "-f", "build.ninja", "rebuild_cache"],
-			"working_dir": "${project_path}/ninja",
 			"quiet": true,
-			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)"
+			"working_dir": "${project_path}/ninja"
 		},
 		{
+			"cmd":
+			[
+				"C:/MinGW/bin/ninja.exe",
+				"-f",
+				"build.ninja",
+				"test"
+			],
+			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)",
 			"name": "Ninja - test",
-			"cmd": ["C:/MinGW/bin/ninja.exe", "-f", "build.ninja", "test"],
-			"working_dir": "${project_path}/ninja",
 			"quiet": true,
-			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)"
+			"working_dir": "${project_path}/ninja"
 		},
 		{
+			"cmd":
+			[
+				"C:/MinGW/bin/ninja.exe",
+				"-f",
+				"build.ninja",
+				"edit_cache"
+			],
+			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)",
 			"name": "Ninja - edit_cache",
-			"cmd": ["C:/MinGW/bin/ninja.exe", "-f", "build.ninja", "edit_cache"],
-			"working_dir": "${project_path}/ninja",
 			"quiet": true,
-			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)"
+			"working_dir": "${project_path}/ninja"
 		}
-
 	],
 	"folders":
 	[
@@ -137,6 +183,9 @@
 		},
 		{
 			"path": "C:\\boost_1_73_0"
+		},
+		{
+			"path": "C:\\vcpkg\\buildtrees\\freetype"
 		}
 	],
 	"settings":

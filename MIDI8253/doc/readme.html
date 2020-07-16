@@ -1,0 +1,185 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <title> Jimbowhy 的蜂鸣乐音 </title>
+  <meta name="generator" content="editplus" />
+  <meta name="author" content="" />
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+ </head>
+
+ <body>
+  <script type="text/javascript">
+  function write (t) {
+    document.write("<br>"+t);
+  }
+  function fix(t,l){
+    t = "0000000"+t;
+    t = t.substr(t.length-l,l);
+    return t;
+  }
+  var fi = 1.1931816 * Math.pow(10,6);
+  var RATIO = Math.pow(2,1/12); // Half tone about 1.059463
+  var A1 = 440; // Standard note pitch A1 = 440Hz
+  var list = [];
+  var notes=['A','B','C','D','E','F','G'];
+  var scales=[2, 1, 2, 2, 1, 2, 2];
+  var len = notes.length;
+
+  var scale=0;
+  for(var i=0; i<7; i++){
+    scale += scales[(2*len-i-1)%len];
+    var note = notes[len-i-1]+parseInt((i+len+2)/len);
+    var fo = Math.ceil(A1 / Math.pow(RATIO,scale));
+    var hex = Math.ceil(fi/fo).toString(16).toUpperCase();
+    var text = "#define NOTE_"+note+"\t0x" + fix(hex,4) + "\t// "+fo+"Hz";
+    list.unshift(text);
+  }
+
+  var hex = Math.ceil(fi/A1).toString(16).toUpperCase();
+  var text = "#define NOTE_A1\t0x" + fix(hex,4) + "\t// Standard Pitch A1 = 440Hz";
+  list.push(text);
+
+  scale=0;
+  for(var i=0; i<28; i++){
+    scale += scales[(i)%len];
+    var group = ((i-1-7)/len);
+    var note = notes[(i+1)%len];
+    if(group>=0) note = note.toLowerCase();
+    group = group<1? "":parseInt(group);
+    note += i===0? "1":group;
+    var fo = Math.ceil(A1 * Math.pow(RATIO,scale));
+    var hex = Math.ceil(fi/fo).toString(16).toUpperCase();
+    var text = "#define NOTE_"+note+"\t0x" + fix(hex,4) + "\t// "+fo+"Hz";
+    list.push(text);
+  }
+  while( text = list.shift() ) write(text);
+  </script>
+  <!--
+  这里涉及律学和物理学的知识。我们知道国际标准音为440Hz的高音A。那么根据十二平均律的计算原理，相差一个半音（小二度）的两个音，频率比应为1加上2的12次根。这个数大约是1.059463。相差八度的两个音，频率比为2。
+
+  英语音乐词汇
+
+alto 男高音，女低音
+tenor 次中音
+baritone 上低音，男中音
+bass 低音
+soprano 女高音
+mezzo-soprano 女次高音
+sharp 高半音符号，升号
+flat 调号
+natural (sign) 本位号
+staff, stave 五线谱
+A,B,C,D,E,F,G 唱名la,si,do,re,mi,fa,sol
+G clef, treble clef 高音谱号
+F clef, bass clef 低音谱号
+C clef, tenor clef, alto clef 中音谱号
+semibreve 全音符 (美作：whole note)
+minim 二分音符 (美作：halfnote)
+dotted crotchet 四分音符 (美作：dotted note,quarter note)
+quaver 八分音符 (美作：eighth note)
+semiquaver 十六分音符 (美作：sixteenth note)
+demisemiquaver 三十二分音符 (美作：thirty-second note)
+hemidemisemiquaver 六十四分音符 (美作：sixty-fourth note)
+rest 休止符
+crotchet rest 四分休止符 (美作：quarter rest)
+semitone 半音
+pause 休止
+time, bar 拍子
+rhythm 节奏
+three-four time 三四拍子
+syncope, syncopation 切分音
+tone 音程
+pitch 基音音乐
+major key 大调
+minor key 小调
+scale 音阶
+arpeggio 琶音
+solfeggio 视唱
+solmization 阶名唱法
+diapason, range 音域
+tuning fork 音叉
+metronome 节拍器
+chord 和弦，谐音
+cadence 调音
+counterpoint 多声部音乐
+lyrics, words 歌词
+score 总谱,乐谱
+orchestra 乐队
+conductor 乐队指挥
+baton 乐队指挥棒
+band 管乐队
+solo 独奏,独唱
+duet, duo 二重奏，二重唱
+trio 三重奏，三重唱
+quartet, quartette 四重奏，四重唱
+quintet 五重奏，五重唱
+choir, choral society 合奏，合唱
+music chart 音乐排行榜
+platinum 白金
+title track 指与专辑同名的单
+tape磁带
+CD光盘
+MP3 音频压缩格式
+musicassette 卡式音乐录音带
+debut single 首张单曲
+debut album 处女专辑（首张专辑）
+release 唱片的发行、推出
+musicology 音乐学
+musicianship 音乐技巧,音乐感,音乐才能,音乐修养, 音乐鉴赏力
+techno 一种电子乐（而trance则指锐舞派对上的电子流行曲，即加上
+了旋律的techno，而house则是 一种比disco节奏更快的舞曲）
+rhythm 节奏，旋律
+jazz band 爵士乐队
+military band 军乐队
+keyboard 键盘，通常指电子琴
+arousic （指乐器）原声的（不是电的）
+an acoustic guitar原声吉他（区别于电子吉他）
+chorus 和唱，副歌
+rap 说唱
+hip hop 希普霍普
+blues忧郁布鲁斯歌曲(蓝调音乐)
+heavy metal重金属
+rock and roll 摇滚乐
+electronical 电子音乐
+latin 拉丁
+pop流行音乐
+discography音乐唱片分类目录, 音乐唱片分类学(法),录音作品目录
+DJ disco jockey迪斯科舞厅、电台的音乐主持人
+discodance 迪斯科舞
+discotheque迪斯科舞厅
+alto 男高音, 女低音
+tenor 次中音
+baritone 上低音, 男中音
+bass 低音
+soprano 女高音
+mezzo-soprano 女次高音
+sharp 高半音符号,升号
+flat 调号
+bandmaster (管)乐队指挥
+bandsman (管)乐队队员
+band(-)stand (室外)音乐台
+brass band 管乐队; 吹奏乐队
+natural (sign) 本位号
+staff, stave 五线谱
+A,B,C,D,E,F,G 唱名la,si,do,re,mi,fa,sol
+G clef, treble clef 高音谱号
+F clef, bass clef 低音谱号
+C clef, tenor clef, alto clef 中音谱号
+semibreve 全音符 (美作:whole note)
+minim 二分音符 (美作:halfnote)
+dotted crotchet 四分音符 (美作:dotted note,quarter note)
+quaver 八分音符 (美作:eighth note)
+semiquaver 十六分音符 (美作:sixteenth note)
+demisemiquaver 三十二分音符 (美作:thirty-second note)
+hemidemisemiquaver 六十四分音符 (美作:sixty-fourth note)
+rest 休止符
+crotchet rest 四分休止符 (美作:quarter rest)
+semitone 半音
+pause 休止
+
+time, bar 拍子
+ -->
+
+ </body>
+</html>

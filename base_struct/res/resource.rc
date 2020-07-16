@@ -1,0 +1,8 @@
+LANGUAGE 0x4,0x1
+1 11 Resource_CHT.bin
+LANGUAGE 0x7,0x1
+1 11 Resource_GER.bin
+LANGUAGE 0x9,0x1
+1 11 Resource_ENU.bin
+LANGUAGE 0x4,0x2
+1 11 Resource_CHS.bin

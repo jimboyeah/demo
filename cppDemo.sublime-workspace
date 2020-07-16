@@ -379,7 +379,8 @@
 			"file": "cppDemo.sublime-project",
 			"settings":
 			{
-				"buffer_size": 1433,
+				"buffer_size": 3672,
+				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
@@ -387,16 +388,33 @@
 			"file": "CMakeLists.txt",
 			"settings":
 			{
-				"buffer_size": 2385,
+				"buffer_size": 2393,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "boost/smart-pointer.cpp",
+			"file": "src/platform-relialy.cpp",
 			"settings":
 			{
-				"buffer_size": 614,
+				"buffer_size": 1083,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/for-range.cpp",
+			"settings":
+			{
+				"buffer_size": 829,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/argv.cpp",
+			"settings":
+			{
+				"buffer_size": 893,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -419,21 +437,95 @@
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
-		},
-		{
-			"contents": "Microsoft Windows [版本 10.0.18362.900]\n(c) 2019 Microsoft Corporation。保留所有权利。\n\nC:\\coding\\md-code\\cppDemos\\build>dir\n 驱动器 C 中的卷没有标签。\n 卷的序列号是 2235-9063\n\n C:\\coding\\md-code\\cppDemos\\build 的目录\n\n2020-07-11  03:49    <DIR>          .\n2020-07-11  03:49    <DIR>          ..\n2020-07-07  19:48            16,086 CMakeCache.txt\n2020-07-11  03:50    <DIR>          CMakeFiles\n2020-07-07  19:48             1,566 cmake_install.cmake\n2020-07-11  03:49             1,314 CTestTestfile.cmake\n2020-07-11  03:49            46,127 Makefile\n2020-07-11  03:50           239,784 object.map\n2020-07-07  19:38    <DIR>          QtDemos\n               5 个文件        304,877 字节\n               4 个目录 59,730,931,712 可用字节\n\nC:\\coding\\md-code\\cppDemos\\build>cd ..\\bin\n\nC:\\coding\\md-code\\cppDemos\\bin>smart-pointer.cpp\nsmart-pointer.cpp <data>\n\nC:\\coding\\md-code\\cppDemos\\bin>smart-pointer.cpp\nsmart-pointer.cpp <data>\n\nC:\\coding\\md-code\\cppDemos\\bin>",
-			"settings":
-			{
-				"buffer_size": 918,
-				"line_ending": "Windows",
-				"name": "*REPL* [shell]",
-				"scratch": true
-			}
 		}
 	],
-	"build_system": "MinGW Build (Windows)",
+	"build_system": "Ninja - all",
 	"build_system_choices":
 	[
+		[
+			[
+				[
+					"MinGW Build (Windows)",
+					""
+				],
+				[
+					"MinGW Build (Windows)",
+					"Make help"
+				],
+				[
+					"MinGW Build (Windows)",
+					"CMake GUI"
+				],
+				[
+					"MinGW Build (Windows)",
+					"MinGW Makefiles"
+				],
+				[
+					"MinGW Build (Windows)",
+					"WSL demo"
+				],
+				[
+					"MinGW Build (Windows)",
+					"clean"
+				],
+				[
+					"MinGW Build (Windows)",
+					"clear all"
+				],
+				[
+					"MinGW Build (Windows)",
+					"Make"
+				],
+				[
+					"MinGW Build (Windows)",
+					"Make install"
+				],
+				[
+					"MinGW Build (Windows)",
+					"Make test"
+				],
+				[
+					"Ninja (Windows)",
+					""
+				],
+				[
+					"cppDemo - all",
+					""
+				],
+				[
+					"cppDemo - clean",
+					""
+				],
+				[
+					"cppDemo - edit_cache",
+					""
+				],
+				[
+					"cppDemo - free.cpp",
+					""
+				],
+				[
+					"cppDemo - platform-relialy.c",
+					""
+				],
+				[
+					"cppDemo - rebuild_cache",
+					""
+				],
+				[
+					"cppDemo - test",
+					""
+				],
+				[
+					"Packages/SublimeREPL/sublimerepl_build_system_hack.sublime-build",
+					""
+				]
+			],
+			[
+				"MinGW Build (Windows)",
+				"CMake GUI"
+			]
+		],
 		[
 			[
 				[
@@ -476,6 +568,646 @@
 			[
 				"MinGW Build (Windows)",
 				"Make"
+			]
+		],
+		[
+			[
+				[
+					"MinGW Build (Windows)",
+					""
+				],
+				[
+					"MinGW Build (Windows)",
+					"Make help"
+				],
+				[
+					"MinGW Build (Windows)",
+					"MinGW Makefiles"
+				],
+				[
+					"MinGW Build (Windows)",
+					"WSL demo"
+				],
+				[
+					"MinGW Build (Windows)",
+					"clean"
+				],
+				[
+					"MinGW Build (Windows)",
+					"clear all"
+				],
+				[
+					"MinGW Build (Windows)",
+					"Make"
+				],
+				[
+					"MinGW Build (Windows)",
+					"Make install"
+				],
+				[
+					"MinGW Build (Windows)",
+					"Make test"
+				],
+				[
+					"Ninja (Windows)",
+					""
+				],
+				[
+					"Packages/SublimeREPL/sublimerepl_build_system_hack.sublime-build",
+					""
+				]
+			],
+			[
+				"MinGW Build (Windows)",
+				"Make help"
+			]
+		],
+		[
+			[
+				[
+					"MinGW Build (Windows)",
+					""
+				],
+				[
+					"MinGW Build (Windows)",
+					"Make help"
+				],
+				[
+					"MinGW Build (Windows)",
+					"MinGW Makefiles"
+				],
+				[
+					"MinGW Build (Windows)",
+					"WSL demo"
+				],
+				[
+					"MinGW Build (Windows)",
+					"clean"
+				],
+				[
+					"MinGW Build (Windows)",
+					"clear all"
+				],
+				[
+					"MinGW Build (Windows)",
+					"Make"
+				],
+				[
+					"MinGW Build (Windows)",
+					"Make install"
+				],
+				[
+					"MinGW Build (Windows)",
+					"Make test"
+				],
+				[
+					"Ninja (Windows)",
+					""
+				],
+				[
+					"cppDemo - ReadFile.cpp",
+					""
+				],
+				[
+					"cppDemo - ReadFile.cpp/fast",
+					""
+				],
+				[
+					"cppDemo - all",
+					""
+				],
+				[
+					"cppDemo - argv.cpp",
+					""
+				],
+				[
+					"cppDemo - argv.cpp/fast",
+					""
+				],
+				[
+					"cppDemo - array.cpp",
+					""
+				],
+				[
+					"cppDemo - array.cpp/fast",
+					""
+				],
+				[
+					"cppDemo - clean",
+					""
+				],
+				[
+					"cppDemo - default-args.cpp",
+					""
+				],
+				[
+					"cppDemo - default-args.cpp/fast",
+					""
+				],
+				[
+					"cppDemo - edit_cache",
+					""
+				],
+				[
+					"cppDemo - file-binary.cpp",
+					""
+				],
+				[
+					"cppDemo - file-binary.cpp/fast",
+					""
+				],
+				[
+					"cppDemo - file-text.cpp",
+					""
+				],
+				[
+					"cppDemo - file-text.cpp/fast",
+					""
+				],
+				[
+					"cppDemo - format.cpp",
+					""
+				],
+				[
+					"cppDemo - format.cpp/fast",
+					""
+				],
+				[
+					"cppDemo - free.cpp",
+					""
+				],
+				[
+					"cppDemo - free.cpp/fast",
+					""
+				],
+				[
+					"cppDemo - lambda-class.cpp",
+					""
+				],
+				[
+					"cppDemo - lambda-class.cpp/fast",
+					""
+				],
+				[
+					"cppDemo - lambda.cpp",
+					""
+				],
+				[
+					"cppDemo - lambda.cpp/fast",
+					""
+				],
+				[
+					"cppDemo - list.cpp",
+					""
+				],
+				[
+					"cppDemo - list.cpp/fast",
+					""
+				],
+				[
+					"cppDemo - macro.cpp",
+					""
+				],
+				[
+					"cppDemo - macro.cpp/fast",
+					""
+				],
+				[
+					"cppDemo - map-multi.cpp",
+					""
+				],
+				[
+					"cppDemo - map-multi.cpp/fast",
+					""
+				],
+				[
+					"cppDemo - map.cpp",
+					""
+				],
+				[
+					"cppDemo - map.cpp/fast",
+					""
+				],
+				[
+					"cppDemo - multithread.cpp",
+					""
+				],
+				[
+					"cppDemo - multithread.cpp/fast",
+					""
+				],
+				[
+					"cppDemo - platform-relialy.c",
+					""
+				],
+				[
+					"cppDemo - platform-relialy.c/fast",
+					""
+				],
+				[
+					"cppDemo - platform-relialy.cpp",
+					""
+				],
+				[
+					"cppDemo - platform-relialy.cpp/fast",
+					""
+				],
+				[
+					"cppDemo - rebuild_cache",
+					""
+				],
+				[
+					"cppDemo - reference-lvalue.cpp",
+					""
+				],
+				[
+					"cppDemo - reference-lvalue.cpp/fast",
+					""
+				],
+				[
+					"cppDemo - reference.cpp",
+					""
+				],
+				[
+					"cppDemo - reference.cpp/fast",
+					""
+				],
+				[
+					"cppDemo - regex.cpp",
+					""
+				],
+				[
+					"cppDemo - regex.cpp/fast",
+					""
+				],
+				[
+					"cppDemo - set.cpp",
+					""
+				],
+				[
+					"cppDemo - set.cpp/fast",
+					""
+				],
+				[
+					"cppDemo - singleton.cpp",
+					""
+				],
+				[
+					"cppDemo - singleton.cpp/fast",
+					""
+				],
+				[
+					"cppDemo - smart-pointer.cpp",
+					""
+				],
+				[
+					"cppDemo - smart-pointer.cpp/fast",
+					""
+				],
+				[
+					"cppDemo - string-funcs.cpp",
+					""
+				],
+				[
+					"cppDemo - string-funcs.cpp/fast",
+					""
+				],
+				[
+					"cppDemo - string-null-tm.cpp",
+					""
+				],
+				[
+					"cppDemo - string-null-tm.cpp/fast",
+					""
+				],
+				[
+					"cppDemo - string.cpp",
+					""
+				],
+				[
+					"cppDemo - string.cpp/fast",
+					""
+				],
+				[
+					"cppDemo - template-class.cpp",
+					""
+				],
+				[
+					"cppDemo - template-class.cpp/fast",
+					""
+				],
+				[
+					"cppDemo - template-func.cpp",
+					""
+				],
+				[
+					"cppDemo - template-func.cpp/fast",
+					""
+				],
+				[
+					"cppDemo - test",
+					""
+				],
+				[
+					"cppDemo - thread-hello.cpp",
+					""
+				],
+				[
+					"cppDemo - thread-hello.cpp/fast",
+					""
+				],
+				[
+					"cppDemo - virtual.cpp",
+					""
+				],
+				[
+					"cppDemo - virtual.cpp/fast",
+					""
+				],
+				[
+					"Packages/SublimeREPL/sublimerepl_build_system_hack.sublime-build",
+					""
+				]
+			],
+			[
+				"cppDemo - argv.cpp/fast",
+				""
+			]
+		],
+		[
+			[
+				[
+					"MinGW Build (Windows)",
+					""
+				],
+				[
+					"MinGW Build (Windows)",
+					"Make help"
+				],
+				[
+					"MinGW Build (Windows)",
+					"MinGW Makefiles"
+				],
+				[
+					"MinGW Build (Windows)",
+					"WSL demo"
+				],
+				[
+					"MinGW Build (Windows)",
+					"clean"
+				],
+				[
+					"MinGW Build (Windows)",
+					"clear all"
+				],
+				[
+					"MinGW Build (Windows)",
+					"Make"
+				],
+				[
+					"MinGW Build (Windows)",
+					"Make install"
+				],
+				[
+					"MinGW Build (Windows)",
+					"Make test"
+				],
+				[
+					"Ninja (Windows)",
+					""
+				],
+				[
+					"cppDemo - ReadFile.cpp",
+					""
+				],
+				[
+					"cppDemo - all",
+					""
+				],
+				[
+					"cppDemo - argv.cpp",
+					""
+				],
+				[
+					"cppDemo - array.cpp",
+					""
+				],
+				[
+					"cppDemo - clean",
+					""
+				],
+				[
+					"cppDemo - default-args.cpp",
+					""
+				],
+				[
+					"cppDemo - edit_cache",
+					""
+				],
+				[
+					"cppDemo - file-binary.cpp",
+					""
+				],
+				[
+					"cppDemo - file-text.cpp",
+					""
+				],
+				[
+					"cppDemo - format.cpp",
+					""
+				],
+				[
+					"cppDemo - free.cpp",
+					""
+				],
+				[
+					"cppDemo - lambda-class.cpp",
+					""
+				],
+				[
+					"cppDemo - lambda.cpp",
+					""
+				],
+				[
+					"cppDemo - list.cpp",
+					""
+				],
+				[
+					"cppDemo - macro.cpp",
+					""
+				],
+				[
+					"cppDemo - map-multi.cpp",
+					""
+				],
+				[
+					"cppDemo - map.cpp",
+					""
+				],
+				[
+					"cppDemo - multithread.cpp",
+					""
+				],
+				[
+					"cppDemo - platform-relialy.c",
+					""
+				],
+				[
+					"cppDemo - platform-relialy.c/fast",
+					""
+				],
+				[
+					"cppDemo - platform-relialy.cpp",
+					""
+				],
+				[
+					"cppDemo - rebuild_cache",
+					""
+				],
+				[
+					"cppDemo - reference-lvalue.cpp",
+					""
+				],
+				[
+					"cppDemo - reference.cpp",
+					""
+				],
+				[
+					"cppDemo - regex.cpp",
+					""
+				],
+				[
+					"cppDemo - set.cpp",
+					""
+				],
+				[
+					"cppDemo - singleton.cpp",
+					""
+				],
+				[
+					"cppDemo - smart-pointer.cpp",
+					""
+				],
+				[
+					"cppDemo - string-funcs.cpp",
+					""
+				],
+				[
+					"cppDemo - string-null-tm.cpp",
+					""
+				],
+				[
+					"cppDemo - string.cpp",
+					""
+				],
+				[
+					"cppDemo - template-class.cpp",
+					""
+				],
+				[
+					"cppDemo - template-func.cpp",
+					""
+				],
+				[
+					"cppDemo - test",
+					""
+				],
+				[
+					"cppDemo - thread-hello.cpp",
+					""
+				],
+				[
+					"cppDemo - virtual.cpp",
+					""
+				],
+				[
+					"Packages/SublimeREPL/sublimerepl_build_system_hack.sublime-build",
+					""
+				]
+			],
+			[
+				"cppDemo - test",
+				""
+			]
+		],
+		[
+			[
+				[
+					"MinGW Build (Windows)",
+					""
+				],
+				[
+					"MinGW Build (Windows)",
+					"Make help"
+				],
+				[
+					"MinGW Build (Windows)",
+					"MinGW Makefiles"
+				],
+				[
+					"MinGW Build (Windows)",
+					"WSL demo"
+				],
+				[
+					"MinGW Build (Windows)",
+					"clean"
+				],
+				[
+					"MinGW Build (Windows)",
+					"clear all"
+				],
+				[
+					"MinGW Build (Windows)",
+					"Make"
+				],
+				[
+					"MinGW Build (Windows)",
+					"Make install"
+				],
+				[
+					"MinGW Build (Windows)",
+					"Make test"
+				],
+				[
+					"Ninja (Windows)",
+					""
+				],
+				[
+					"cppDemo - all",
+					""
+				],
+				[
+					"cppDemo - clean",
+					""
+				],
+				[
+					"cppDemo - edit_cache",
+					""
+				],
+				[
+					"cppDemo - free.cpp",
+					""
+				],
+				[
+					"cppDemo - platform-relialy.c",
+					""
+				],
+				[
+					"cppDemo - rebuild_cache",
+					""
+				],
+				[
+					"cppDemo - test",
+					""
+				],
+				[
+					"Packages/SublimeREPL/sublimerepl_build_system_hack.sublime-build",
+					""
+				]
+			],
+			[
+				"cppDemo - edit_cache",
+				""
 			]
 		],
 		[
@@ -865,6 +1597,634 @@
 				"MinGW Build (Windows)",
 				"Make"
 			]
+		],
+		[
+			[
+				[
+					"Ninja (Windows)",
+					""
+				],
+				[
+					"cppDemo - all",
+					""
+				],
+				[
+					"cppDemo - clean",
+					""
+				],
+				[
+					"cppDemo - edit_cache",
+					""
+				],
+				[
+					"cppDemo - free.cpp",
+					""
+				],
+				[
+					"cppDemo - platform-relialy.c",
+					""
+				],
+				[
+					"cppDemo - rebuild_cache",
+					""
+				],
+				[
+					"cppDemo - string-null-tm.cpp",
+					""
+				],
+				[
+					"cppDemo - test",
+					""
+				],
+				[
+					"make (Windows)",
+					""
+				],
+				[
+					"make (Windows)",
+					"Make help"
+				],
+				[
+					"make (Windows)",
+					"CMake GUI"
+				],
+				[
+					"make (Windows)",
+					"MinGW Makefiles"
+				],
+				[
+					"make (Windows)",
+					"WSL demo"
+				],
+				[
+					"make (Windows)",
+					"clean"
+				],
+				[
+					"make (Windows)",
+					"clear all"
+				],
+				[
+					"make (Windows)",
+					"Make"
+				],
+				[
+					"make (Windows)",
+					"Make install"
+				],
+				[
+					"make (Windows)",
+					"Make test"
+				],
+				[
+					"Packages/SublimeREPL/sublimerepl_build_system_hack.sublime-build",
+					""
+				]
+			],
+			[
+				"cppDemo - test",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Ninja (Windows)",
+					""
+				],
+				[
+					"cppDemo - all",
+					""
+				],
+				[
+					"cppDemo - clean",
+					""
+				],
+				[
+					"cppDemo - edit_cache",
+					""
+				],
+				[
+					"cppDemo - free.cpp",
+					""
+				],
+				[
+					"cppDemo - platform-relialy.c",
+					""
+				],
+				[
+					"cppDemo - rebuild_cache",
+					""
+				],
+				[
+					"cppDemo - test",
+					""
+				],
+				[
+					"make (Windows)",
+					""
+				],
+				[
+					"make (Windows)",
+					"Make help"
+				],
+				[
+					"make (Windows)",
+					"CMake GUI"
+				],
+				[
+					"make (Windows)",
+					"MinGW Makefiles"
+				],
+				[
+					"make (Windows)",
+					"WSL demo"
+				],
+				[
+					"make (Windows)",
+					"clean"
+				],
+				[
+					"make (Windows)",
+					"clear all"
+				],
+				[
+					"make (Windows)",
+					"Make"
+				],
+				[
+					"make (Windows)",
+					"Make install"
+				],
+				[
+					"make (Windows)",
+					"Make test"
+				],
+				[
+					"Packages/SublimeREPL/sublimerepl_build_system_hack.sublime-build",
+					""
+				]
+			],
+			[
+				"cppDemo - test",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Ninja (Windows)",
+					""
+				],
+				[
+					"cppDemo - all",
+					""
+				],
+				[
+					"cppDemo - clean",
+					""
+				],
+				[
+					"cppDemo - edit_cache",
+					""
+				],
+				[
+					"cppDemo - free.cpp",
+					""
+				],
+				[
+					"cppDemo - rebuild_cache",
+					""
+				],
+				[
+					"cppDemo - string-null-tm.cpp",
+					""
+				],
+				[
+					"cppDemo - test",
+					""
+				],
+				[
+					"make (Windows)",
+					""
+				],
+				[
+					"make (Windows)",
+					"Make help"
+				],
+				[
+					"make (Windows)",
+					"CMake GUI"
+				],
+				[
+					"make (Windows)",
+					"MinGW Makefiles"
+				],
+				[
+					"make (Windows)",
+					"WSL demo"
+				],
+				[
+					"make (Windows)",
+					"clean"
+				],
+				[
+					"make (Windows)",
+					"clear all"
+				],
+				[
+					"make (Windows)",
+					"Make"
+				],
+				[
+					"make (Windows)",
+					"Make install"
+				],
+				[
+					"make (Windows)",
+					"Make test"
+				],
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					""
+				],
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					"Run"
+				],
+				[
+					"Packages/SublimeREPL/sublimerepl_build_system_hack.sublime-build",
+					""
+				],
+				[
+					"Packages/User/C++ MinGW.sublime-build",
+					""
+				],
+				[
+					"Packages/User/C++ MinGW.sublime-build",
+					"(-std=c++17)"
+				],
+				[
+					"Packages/User/C++ MinGW.sublime-build",
+					"(-std=c++14)"
+				],
+				[
+					"Packages/User/C++ MinGW.sublime-build",
+					"(-std=c++11)"
+				],
+				[
+					"Packages/User/C++ MinGW.sublime-build",
+					"(-std=c++11) with ENV"
+				],
+				[
+					"Packages/User/C++ MinGW.sublime-build",
+					"(-std=c++11) Release with ENV"
+				],
+				[
+					"Packages/User/C++ MinGW.sublime-build",
+					"(-std=c++0x) with ENV"
+				],
+				[
+					"Packages/User/C++ MinGW.sublime-build",
+					"(-std=c++98) with ENV"
+				],
+				[
+					"Packages/User/C++ MinGW.sublime-build",
+					"(-ansi) with ENV"
+				],
+				[
+					"Packages/User/C++ MinGW.sublime-build",
+					"(-std=c11) with ENV"
+				],
+				[
+					"Packages/User/C++ MinGW.sublime-build",
+					"(-std=c99) with ENV"
+				],
+				[
+					"Packages/User/C++ MinGW.sublime-build",
+					"(-std=c90) with ENV"
+				],
+				[
+					"Packages/User/C++ MinGW.sublime-build",
+					"控制台中运行"
+				]
+			],
+			[
+				"cppDemo - clean",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Ninja (Windows)",
+					""
+				],
+				[
+					"cppDemo - all",
+					""
+				],
+				[
+					"cppDemo - clean",
+					""
+				],
+				[
+					"cppDemo - edit_cache",
+					""
+				],
+				[
+					"cppDemo - free.cpp",
+					""
+				],
+				[
+					"cppDemo - rebuild_cache",
+					""
+				],
+				[
+					"cppDemo - string-null-tm.cpp",
+					""
+				],
+				[
+					"cppDemo - test",
+					""
+				],
+				[
+					"make (Windows)",
+					""
+				],
+				[
+					"make (Windows)",
+					"Make help"
+				],
+				[
+					"make (Windows)",
+					"CMake GUI"
+				],
+				[
+					"make (Windows)",
+					"MinGW Makefiles"
+				],
+				[
+					"make (Windows)",
+					"WSL demo"
+				],
+				[
+					"make (Windows)",
+					"clean"
+				],
+				[
+					"make (Windows)",
+					"clear all"
+				],
+				[
+					"make (Windows)",
+					"Make"
+				],
+				[
+					"make (Windows)",
+					"Make install"
+				],
+				[
+					"make (Windows)",
+					"Make test"
+				],
+				[
+					"Packages/SublimeREPL/sublimerepl_build_system_hack.sublime-build",
+					""
+				]
+			],
+			[
+				"cppDemo - all",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Ninja - all",
+					""
+				],
+				[
+					"Ninja - clean",
+					""
+				],
+				[
+					"Ninja - edit_cache",
+					""
+				],
+				[
+					"Ninja - free.cpp",
+					""
+				],
+				[
+					"Ninja - rebuild_cache",
+					""
+				],
+				[
+					"Ninja - string-null-tm.cpp",
+					""
+				],
+				[
+					"Ninja - test",
+					""
+				],
+				[
+					"Ninja Make(Windows)",
+					""
+				],
+				[
+					"make (Windows)",
+					""
+				],
+				[
+					"make (Windows)",
+					"Make help"
+				],
+				[
+					"make (Windows)",
+					"CMake GUI"
+				],
+				[
+					"make (Windows)",
+					"MinGW Makefiles"
+				],
+				[
+					"make (Windows)",
+					"WSL demo"
+				],
+				[
+					"make (Windows)",
+					"clean"
+				],
+				[
+					"make (Windows)",
+					"clear all"
+				],
+				[
+					"make (Windows)",
+					"Make"
+				],
+				[
+					"make (Windows)",
+					"Make install"
+				],
+				[
+					"make (Windows)",
+					"Make test"
+				],
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					""
+				],
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					"Run"
+				],
+				[
+					"Packages/SublimeREPL/sublimerepl_build_system_hack.sublime-build",
+					""
+				],
+				[
+					"Packages/User/C++ MinGW.sublime-build",
+					""
+				],
+				[
+					"Packages/User/C++ MinGW.sublime-build",
+					"(-std=c++17)"
+				],
+				[
+					"Packages/User/C++ MinGW.sublime-build",
+					"(-std=c++14)"
+				],
+				[
+					"Packages/User/C++ MinGW.sublime-build",
+					"(-std=c++11)"
+				],
+				[
+					"Packages/User/C++ MinGW.sublime-build",
+					"(-std=c++11) with ENV"
+				],
+				[
+					"Packages/User/C++ MinGW.sublime-build",
+					"(-std=c++11) Release with ENV"
+				],
+				[
+					"Packages/User/C++ MinGW.sublime-build",
+					"(-std=c++0x) with ENV"
+				],
+				[
+					"Packages/User/C++ MinGW.sublime-build",
+					"(-std=c++98) with ENV"
+				],
+				[
+					"Packages/User/C++ MinGW.sublime-build",
+					"(-ansi) with ENV"
+				],
+				[
+					"Packages/User/C++ MinGW.sublime-build",
+					"(-std=c11) with ENV"
+				],
+				[
+					"Packages/User/C++ MinGW.sublime-build",
+					"(-std=c99) with ENV"
+				],
+				[
+					"Packages/User/C++ MinGW.sublime-build",
+					"(-std=c90) with ENV"
+				],
+				[
+					"Packages/User/C++ MinGW.sublime-build",
+					"控制台中运行"
+				]
+			],
+			[
+				"Ninja - all",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Ninja - all",
+					""
+				],
+				[
+					"Ninja - clean",
+					""
+				],
+				[
+					"Ninja - edit_cache",
+					""
+				],
+				[
+					"Ninja - free.cpp",
+					""
+				],
+				[
+					"Ninja - rebuild_cache",
+					""
+				],
+				[
+					"Ninja - string-null-tm.cpp",
+					""
+				],
+				[
+					"Ninja - test",
+					""
+				],
+				[
+					"Ninja Make(Windows)",
+					""
+				],
+				[
+					"make (Windows)",
+					""
+				],
+				[
+					"make (Windows)",
+					"Make help"
+				],
+				[
+					"make (Windows)",
+					"CMake GUI"
+				],
+				[
+					"make (Windows)",
+					"MinGW Makefiles"
+				],
+				[
+					"make (Windows)",
+					"WSL demo"
+				],
+				[
+					"make (Windows)",
+					"clean"
+				],
+				[
+					"make (Windows)",
+					"clear all"
+				],
+				[
+					"make (Windows)",
+					"Make"
+				],
+				[
+					"make (Windows)",
+					"Make install"
+				],
+				[
+					"make (Windows)",
+					"Make test"
+				],
+				[
+					"Packages/SublimeREPL/sublimerepl_build_system_hack.sublime-build",
+					""
+				]
+			],
+			[
+				"Ninja - rebuild_cache",
+				""
+			]
 		]
 	],
 	"build_varint": "",
@@ -875,16 +2235,56 @@
 		"selected_items":
 		[
 			[
+				"pushc",
+				"Git: Push Current Branch"
+			],
+			[
+				"com\t",
+				"Git: Commit"
+			],
+			[
+				"status",
+				"Git: Status"
+			],
+			[
+				"add\t",
+				"Git: Add All"
+			],
+			[
+				"comm",
+				"Git: Commit"
+			],
+			[
+				"addcu",
+				"Git: Add Current File"
+			],
+			[
+				"addc",
+				"Git: Add Current File"
+			],
+			[
+				"pusc",
+				"Git: Push Current Branch"
+			],
+			[
+				"add",
+				"Git: Add All"
+			],
+			[
+				"commit",
+				"Git: Commit"
+			],
+			[
+				"addl",
+				"Git: Add All"
+			],
+			[
 				"push",
 				"Git: Push Current Branch"
 			],
 			[
 				"comm\t",
 				"Git: Commit"
-			],
-			[
-				"status",
-				"Git: Status"
 			],
 			[
 				"adda",
@@ -899,16 +2299,8 @@
 				"Git: Commit"
 			],
 			[
-				"add",
-				"Git: Add All"
-			],
-			[
 				"chang",
 				"Git: Change Branch"
-			],
-			[
-				"comm",
-				"Git: Commit"
 			],
 			[
 				"chanag",
@@ -924,10 +2316,6 @@
 			],
 			[
 				"co",
-				"Git: Commit"
-			],
-			[
-				"com\t",
 				"Git: Commit"
 			],
 			[
@@ -1113,13 +2501,29 @@
 	"expanded_folders":
 	[
 		"/C/coding/md-code/cppDemos",
-		"/C/coding/md-code/cppDemos/bin",
-		"/C/coding/md-code/cppDemos/QtDemos",
-		"/C/boost_1_73_0",
-		"/C/boost_1_73_0/boost"
+		"/C/coding/md-code/cppDemos/build",
+		"/C/coding/md-code/cppDemos/ninja",
+		"/C/coding/md-code/cppDemos/src",
+		"/C/coding/src",
+		"/C/coding/src/makefile"
 	],
 	"file_history":
 	[
+		"/C/coding/md-code/cppDemos/src/for-each.cpp",
+		"/C/coding/src/makefile/loader.c",
+		"/C/coding/md-code/cppDemos/src/const_cast.cpp",
+		"/C/coding/md-code/cppDemos/build/CMakeFiles/CMakeOutput.log",
+		"/C/coding/md-code/cppDemos/src/argv.cpp",
+		"/C/coding/md-code/cppDemos/src/platform-relialy.c",
+		"/C/coding/md-code/cppDemos/boost/smart-pointer.cpp",
+		"/C/coding/md-code/cppDemos/readme.md",
+		"/C/coding/md-code/cppDemos/build/build_folder_required",
+		"/C/coding/md-code/cppDemos/.gitignore",
+		"/C/coding/md-code/git-demo/readme.md",
+		"/C/coding/md-code/cppDemos/cmake.md",
+		"/C/coding/md-code/cppDemos/C++STL.md",
+		"/C/coding/md-code/cppDemos/sublime.md",
+		"/C/coding/md-code/cppDemos/ninja/cppDemo.sublime-project",
 		"/C/coding/md-code/cppDemos/QtDemos/qtDemo.sublime-project",
 		"/C/boost_1_73_0/boost/scoped_array.hpp",
 		"/C/coding/src/base_struct/bitmap.cpp",
@@ -1144,11 +2548,9 @@
 		"/C/coding/md-code/cppDemos/src/virtual.cpp",
 		"/C/coding/cpp/virtual.cpp",
 		"/C/coding/md-code/cppDemos/QtDemos/CMakeLists.txt",
-		"/C/coding/md-code/cppDemos/.gitignore",
 		"/C/coding/cpp/qt5/main.cpp",
 		"/C/coding/cpp/qt/main.cpp",
 		"/C/coding/md-code/cppDemos/src/../QtDemos/demo.cpp",
-		"/C/coding/md-code/cppDemos/readme.md",
 		"/C/coding/cpp/rvalue.cpp",
 		"/C/coding/cpp/singleton.cpp",
 		"/C/coding/cpp/multithread/main.c",
@@ -1158,7 +2560,6 @@
 		"/C/coding/md-code/cppDemos/src/ReadFile.cpp",
 		"/C/MinGW/set_distro_paths.bat",
 		"/C/coding/md-code/cppDemos/src/default-args.cpp",
-		"/C/coding/md-code/cppDemos/src/platform-relialy.c",
 		"/C/coding/md-code/cppDemos/src/file-text.cpp",
 		"/C/coding/md-code/cppDemos/src/template-func.cpp",
 		"/C/coding/md-code/cppDemos/autogit.bat",
@@ -1182,7 +2583,6 @@
 		"/C/Users/OCEAN/AppData/Roaming/Sublime Text 3/Packages/User/Node.sublime-build",
 		"/C/coding/md/readme_es6.md",
 		"/C/coding/md/readme_git.md",
-		"/C/coding/md-code/git-demo/readme.md",
 		"/C/coding/md-code/git-demo/cmake.md",
 		"/C/coding/md-code/git-demo/gnu make.md",
 		"/C/download/ChezScheme-master/examples/edit.ss",
@@ -1236,22 +2636,11 @@
 		"/C/coding/md-code/coding/qt.conf",
 		"/C/Qt/Examples/Qt-5.9/activeqt/simpleqml/main.cpp",
 		"/C/Qt/5.9/Src/qtbase/src/corelib/kernel/qcoreapplication.cpp",
-		"/C/Qt/n/qtqm/qtqm.pro",
-		"/C/Qt/Examples/Qt-5.9/activeqt/simpleqml/simpleqml.pro",
-		"/C/Qt/Examples/Qt-5.9/activeqt/simpleqml/build/.qmake.stash",
-		"/C/Qt/Examples/Qt-5.9/activeqt/simpleqml/build/Makefile.Debug",
-		"/C/Qt/Examples/Qt-5.9/activeqt/simpleqml/simpleqml.qrc",
-		"/C/Qt/5.9/mingw53_32/lib/pkgconfig/Qt5AxBase.pc",
-		"/C/Qt/5.9/mingw53_32/lib/pkgconfig/Qt5AxContainer.pc",
-		"/C/Qt/5.9/mingw53_32/lib/pkgconfig/Qt5AxServer.pc",
-		"/C/Qt/5.9/mingw53_32/lib/pkgconfig/Qt5UiTools.pc",
-		"/C/Qt/Examples/Qt-5.9/examples.pro",
-		"/C/Qt/Examples/Qt-5.9/activeqt/shared.pri",
-		"/C/Qt/5.9/Src/qtdoc/doc/src/snippets/widgets-tutorial/notepad/notepad.cpp"
+		"/C/Qt/n/qtqm/qtqm.pro"
 	],
 	"find":
 	{
-		"height": 22.0
+		"height": 23.0
 	},
 	"find_in_files":
 	{
@@ -1268,6 +2657,20 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"print(",
+			"// ",
+			"s",
+			"decltype",
+			"cppDemo - ",
+			")\n",
+			".\\\\W+$",
+			"w",
+			"free",
+			"\\",
+			"edit_cache",
+			".cpp\",",
+			"cpp/fast\",",
+			"\"working_dir\": \"${project_path}\",",
 			"src",
 			"void *",
 			"sleep",
@@ -1365,7 +2768,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 4,
 			"sheets":
 			[
 				{
@@ -1374,15 +2777,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1433,
+						"buffer_size": 3672,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								837,
-								837
+								3364,
+								3366
 							]
 						],
 						"settings":
@@ -1396,10 +2799,10 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 118.0,
+						"translation.y": 1630.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
@@ -1408,15 +2811,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2385,
+						"buffer_size": 2393,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								853,
-								853
+								1101,
+								1101
 							]
 						],
 						"settings":
@@ -1431,27 +2834,27 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 189.0,
+						"translation.y": 271.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
 					"buffer": 2,
-					"file": "boost/smart-pointer.cpp",
+					"file": "src/platform-relialy.cpp",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 614,
+						"buffer_size": 1083,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								472,
-								472
+								553,
+								553
 							]
 						],
 						"settings":
@@ -1462,8 +2865,76 @@
 							"remote_loading": false,
 							"synced": false,
 							"syntax": "Packages/C++/C++.sublime-syntax",
-							"tab_size": 2,
+							"tab_size": 4,
 							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "src/for-range.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 829,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								657,
+								654
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"is_init_dirty_state": false,
+							"origin_encoding": "ASCII",
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/C++/C++.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "src/argv.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 893,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								128,
+								128
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"is_init_dirty_state": false,
+							"origin_encoding": "ASCII",
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/C++/C++.sublime-syntax"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -1473,7 +2944,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 3,
+					"buffer": 5,
 					"file": "src/free.cpp",
 					"semi_transient": false,
 					"settings":
@@ -1485,8 +2956,8 @@
 						"selection":
 						[
 							[
-								1146,
-								1146
+								214,
+								214
 							]
 						],
 						"settings":
@@ -1502,14 +2973,14 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 141.0,
+						"translation.y": 46.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
-					"buffer": 4,
+					"buffer": 6,
 					"file": "src/multithread.cpp",
 					"semi_transient": false,
 					"settings":
@@ -1540,91 +3011,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
-					"type": "text"
-				}
-			]
-		},
-		{
-			"selected": 0,
-			"sheets":
-			[
-				{
-					"buffer": 5,
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 918,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								918,
-								918
-							]
-						],
-						"settings":
-						{
-							"auto_complete": true,
-							"auto_indent": false,
-							"detect_indentation": false,
-							"gutter": false,
-							"history_arrows": true,
-							"incomplete_sync": null,
-							"indent_subsequent_lines": false,
-							"is_init_dirty_state": false,
-							"line_numbers": false,
-							"repl": true,
-							"repl_external_id": "shell",
-							"repl_id": "848fb89a530e4e67bea00dfa93a60ced",
-							"repl_restart_args":
-							{
-								"cmd":
-								{
-									"linux":
-									[
-										"bash",
-										"-i"
-									],
-									"osx":
-									[
-										"bash",
-										"-i"
-									],
-									"windows":
-									[
-										"cmd.exe"
-									]
-								},
-								"cmd_postfix": "\n",
-								"cwd": "$file_path",
-								"encoding":
-								{
-									"linux": "utf-8",
-									"osx": "utf-8",
-									"windows": "$win_cmd_encoding"
-								},
-								"env":
-								{
-								},
-								"external_id": "shell",
-								"suppress_echo": true,
-								"syntax": "Packages/Text/Plain text.tmLanguage",
-								"type": "subprocess"
-							},
-							"repl_sublime2": false,
-							"smart_indent": false,
-							"spell_check": false,
-							"syntax": "Packages/Text/Plain text.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 250.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
+					"stack_index": 6,
 					"type": "text"
 				}
 			]
@@ -1632,7 +3019,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 22.0
+		"height": 23.0
 	},
 	"input":
 	{
@@ -1647,12 +3034,6 @@
 				0,
 				1,
 				1
-			],
-			[
-				0,
-				1,
-				1,
-				2
 			]
 		],
 		"cols":
@@ -1663,7 +3044,6 @@
 		"rows":
 		[
 			0.0,
-			0.747181964573,
 			1.0
 		]
 	},
@@ -1688,7 +3068,7 @@
 	"project": "cppDemo.sublime-project",
 	"replace":
 	{
-		"height": 40.0
+		"height": 42.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -1697,6 +3077,26 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"for",
+				"♬☾ CPP Demo Project\\src\\for-range.cpp"
+			],
+			[
+				"argv",
+				"♬☾ CPP Demo Project\\src\\argv.cpp"
+			],
+			[
+				"stri",
+				"♬☾ CPP Demo Project\\src\\string.cpp"
+			],
+			[
+				"platform-relialy",
+				"♬☾ CPP Demo Project\\src\\platform-relialy.cpp"
+			],
+			[
+				"CMakelog",
+				"♬☾ CPP Demo Project\\build\\CMakeFiles\\CMakeOutput.log"
+			],
 			[
 				"scoped_array.hpp",
 				"boost_1_73_0\\boost\\scoped_array.hpp"
@@ -2188,26 +3588,6 @@
 			[
 				"BodyTagHelper",
 				"source\\aspnetcore-master\\src\\Mvc\\Mvc.Razor\\src\\TagHelpers\\BodyTagHelper.cs"
-			],
-			[
-				"HeadTag",
-				"source\\Mvc-master\\src\\Microsoft.AspNetCore.Mvc.Razor\\TagHelpers\\HeadTagHelper.cs"
-			],
-			[
-				"TagMode",
-				"source\\Razor-master\\src\\Microsoft.AspNetCore.Razor.Language\\TagMode.cs"
-			],
-			[
-				"TagStructure",
-				"source\\Razor-master\\src\\Microsoft.AspNetCore.Razor.Language\\TagStructure.cs"
-			],
-			[
-				"TagHelperContext",
-				"source\\Razor-master\\src\\Microsoft.AspNetCore.Razor\\TagHelpers\\TagHelperContext.cs"
-			],
-			[
-				"TagHelperContent",
-				"source\\Razor-master\\src\\Microsoft.AspNetCore.Razor\\TagHelpers\\TagHelperContent.cs"
 			]
 		],
 		"width": 0.0
@@ -2215,9 +3595,13 @@
 	"select_project":
 	{
 		"height": 500.0,
-		"last_filter": "ogl",
+		"last_filter": "fr",
 		"selected_items":
 		[
+			[
+				"fr",
+				"C:\\vcpkg\\buildtrees\\freetype\\freetype.sublime-project"
+			],
 			[
 				"ogl",
 				"C:\\download\\OpenCV\\ogldev-source\\ogldev.sublime-project"
