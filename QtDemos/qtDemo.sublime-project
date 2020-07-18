@@ -2,13 +2,33 @@
 	"build_systems":
 	[
 		{
+			"name": "Ninja",
+			"env":
+			{
+				"PATH": "c:/Qt/Tools/mingw530_32/bin/;%PATH%"
+			},
+			"quiet": true,
+			"shell_cmd": "cmake .. -G \"Ninja\"",
+			"working_dir": "${project_path}/build"
+		},
+		{
+			"name": "Ninja all",
+			"env":
+			{
+				"PATH": "c:/Qt/Tools/mingw530_32/bin/;%PATH%"
+			},
+			"quiet": true,
+			"shell_cmd": "Ninja all",
+			"working_dir": "${project_path}/build"
+		},
+		{
 			"encoding": "gbk",
 			"env":
 			{
 				"PATH": "c:/Qt/Tools/mingw530_32/bin/;%PATH%"
 			},
 			"file_regex": "^  (.+)\\((\\d+)\\)(): ((?:fatal )?(?:error|warning) \\w+\\d\\d\\d\\d: .*) \\[.*$",
-			"name": "MinGW Build (Windows)",
+			"name": "♬☾ Demos (Windows)",
 			"quiet": true,
 			"shell_cmd": "cmake --build .",
 			"variants":
@@ -47,6 +67,30 @@
 				}
 			],
 			"working_dir": "${project_path}/build"
+		},
+		{
+			"encoding": "gbk",
+			"env":
+			{
+				"PATH": "c:/Qt/Tools/mingw530_32/bin/;%PATH%"
+			},
+			"name": "Qmake Qt Examples (Windows)",
+			"quiet": true,
+			"shell_cmd": "qmake C:/Qt/Examples/Qt-5.9/",
+			"working_dir": "${project_path}/qmake",
+			"variants":
+			[
+				{"name":"Make all", "shell_cmd":"make -j 8" },
+				{"name":"Make corelib", "shell_cmd":"make sub-corelib -j 8" },
+				{"name":"Make opengl", "shell_cmd":"make sub-opengl -j 8" },
+				{"name":"Make opengl/2dpainting", "shell_cmd":"cd opengl/2dpainting && qmake C:/Qt/Examples/Qt-5.9/opengl/2dpainting && make -j 8" },
+				{"name":"Make Script", "shell_cmd":"make sub-scripts -j 8" },
+				{"name":"Make SVG", "shell_cmd":"make sub-svg -j 8" },
+				{"name":"Make SVG-OpenGL", "shell_cmd":"cd svg/opengl && qmake C:/Qt/Examples/Qt-5.9/svg/opengl/framebufferobject/ && make -j 8" },
+				{"name":"Make widgets", "shell_cmd":"make sub-widgets -j 8" },
+				{"name":"Make charts", "shell_cmd":"make sub-charts -j 8" },
+				{"name":"Make charts/qmlpiechar", "shell_cmd":"cd charts/qmlpiechart && make -j 8" }
+			]
 		}
 	],
 	"folders":
@@ -64,6 +108,12 @@
 		},
 		{
 			"path": "C:\\coding\\md-code\\git-demo"
+		},
+		{
+			"path": "C:\\Qt\\Examples"
+		},
+		{
+			"path": "C:\\Qt\\5.9\\mingw53_32"
 		}
 	],
 	"settings":

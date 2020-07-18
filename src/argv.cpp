@@ -9,7 +9,7 @@ void tryKey()
     for(int i: {1,2,3})
     {
         std::cout << "Press x key to continue ..." << std::endl;
-        char key = getch(); // wait key press
+        char key = _getch(); // wait key press
         // char key = getchar(); // equal to getc(stdin)
         // char key = getc(stdin);
         switch(key)
@@ -19,7 +19,7 @@ void tryKey()
                 break;
             case '\x27':
             case 'x':
-                printf("Byte", key );
+                printf("Byte %c", key );
                 exit(0);
                 break;
             default:

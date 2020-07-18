@@ -4,12 +4,36 @@
 		"selected_items":
 		[
 			[
-				"boo",
-				"boost_1_73_0/"
+				"__",
+				"__LITTLE_ENDIAN__"
+			],
+			[
+				"o",
+				"ostream"
+			],
+			[
+				"Enum",
+				"EnumHWndsArg"
+			],
+			[
+				"wndNam",
+				"wndNameTip"
+			],
+			[
+				"cla",
+				"className"
 			],
 			[
 				"link",
-				"link_libraries\tcommand"
+				"target_link_libraries"
+			],
+			[
+				"IMp",
+				"IMPLEMENT_DYNCREATE_COMMON"
+			],
+			[
+				"boo",
+				"boost_1_73_0/"
 			],
 			[
 				"m1",
@@ -379,34 +403,26 @@
 			"file": "cppDemo.sublime-project",
 			"settings":
 			{
-				"buffer_size": 3672,
+				"buffer_size": 3856,
 				"encoding": "UTF-8",
-				"line_ending": "Unix"
+				"line_ending": "Windows"
 			}
 		},
 		{
 			"file": "CMakeLists.txt",
 			"settings":
 			{
-				"buffer_size": 2393,
+				"buffer_size": 3464,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "src/platform-relialy.cpp",
+			"file": "src/neasted.cpp",
 			"settings":
 			{
-				"buffer_size": 1083,
+				"buffer_size": 1048,
 				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/for-range.cpp",
-			"settings":
-			{
-				"buffer_size": 829,
 				"line_ending": "Windows"
 			}
 		},
@@ -414,26 +430,7 @@
 			"file": "src/argv.cpp",
 			"settings":
 			{
-				"buffer_size": 893,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/free.cpp",
-			"settings":
-			{
-				"buffer_size": 1233,
-				"encoding": "UTF-8",
-				"line_ending": "Windows",
-				"name": "#include <cstdlib>"
-			}
-		},
-		{
-			"file": "src/multithread.cpp",
-			"settings":
-			{
-				"buffer_size": 1355,
+				"buffer_size": 897,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -2222,7 +2219,7 @@
 				]
 			],
 			[
-				"Ninja - rebuild_cache",
+				"Ninja - all",
 				""
 			]
 		]
@@ -2235,6 +2232,58 @@
 		"selected_items":
 		[
 			[
+				"push",
+				"Git: Push Current Branch"
+			],
+			[
+				"status",
+				"Git: Status"
+			],
+			[
+				"com",
+				"Git: Commit"
+			],
+			[
+				"add",
+				"Git: Add All"
+			],
+			[
+				"comm",
+				"Git: Commit"
+			],
+			[
+				"pus",
+				"Git: Push Current Branch"
+			],
+			[
+				"comm\t",
+				"Git: Commit"
+			],
+			[
+				"addll",
+				"Git: Add All"
+			],
+			[
+				"hex",
+				"HexViewer: Toggle Hex View"
+			],
+			[
+				"rename",
+				"Rename File"
+			],
+			[
+				"toggle hex",
+				"HexViewer: Toggle Hex View"
+			],
+			[
+				"hexview",
+				"HexViewer: Toggle Hex View"
+			],
+			[
+				"hexviewtog",
+				"HexViewer: Toggle Hex View"
+			],
+			[
 				"pushc",
 				"Git: Push Current Branch"
 			],
@@ -2243,16 +2292,8 @@
 				"Git: Commit"
 			],
 			[
-				"status",
-				"Git: Status"
-			],
-			[
 				"add\t",
 				"Git: Add All"
-			],
-			[
-				"comm",
-				"Git: Commit"
 			],
 			[
 				"addcu",
@@ -2267,10 +2308,6 @@
 				"Git: Push Current Branch"
 			],
 			[
-				"add",
-				"Git: Add All"
-			],
-			[
 				"commit",
 				"Git: Commit"
 			],
@@ -2279,24 +2316,12 @@
 				"Git: Add All"
 			],
 			[
-				"push",
-				"Git: Push Current Branch"
-			],
-			[
-				"comm\t",
-				"Git: Commit"
-			],
-			[
 				"adda",
 				"Git: Add All"
 			],
 			[
 				"edit",
 				"Project: Edit Project"
-			],
-			[
-				"com",
-				"Git: Commit"
 			],
 			[
 				"chang",
@@ -2501,24 +2526,98 @@
 	"expanded_folders":
 	[
 		"/C/coding/md-code/cppDemos",
-		"/C/coding/md-code/cppDemos/build",
-		"/C/coding/md-code/cppDemos/ninja",
-		"/C/coding/md-code/cppDemos/src",
-		"/C/coding/src",
-		"/C/coding/src/makefile"
+		"/C/coding/md-code/cppDemos/base"
 	],
 	"file_history":
 	[
+		"/C/download/OpenCV/redbook/aux2glut.sed",
+		"/C/vcpkg/buildtrees/freetype/src/2.10.1-ea10bbeefe/include/freetype/ftimage.h",
+		"/C/vcpkg/buildtrees/freetype/src/2.10.1-ea10bbeefe/include/freetype/freetype.h",
+		"/C/coding/md-code/cppDemos/src/dynamic-memory.cpp",
+		"/C/coding/md-code/cppDemos/base/ft02-colored.cpp",
+		"/C/coding/md-code/cppDemos/src/operators.cpp",
+		"/C/coding/md-code/cppDemos/.gitignore",
+		"/C/coding/md-code/cppDemos/CMakeLists.cmake",
+		"/C/coding/md-code/cppDemos/base_struct/record.cpp",
+		"/C/coding/md-code/cppDemos/src/arguments-list.cpp",
+		"/C/coding/md-code/cppDemos/base/ft01-example.cpp",
+		"/C/coding/md-code/cppDemos/base_struct/pw.dat",
+		"/C/coding/md-code/cppDemos/base_struct/pwa.dat",
+		"/C/coding/md-code/cppDemos/base_struct/pay.txt",
+		"/C/coding/md-code/cppDemos/base_struct/record.til",
+		"/C/coding/md-code/cppDemos/base_struct/record.id0",
+		"/C/coding/md-code/cppDemos/base_struct/o/palette.txt",
+		"/C/coding/md-code/cppDemos/base_struct/o/n2.txt",
+		"/C/coding/md-code/cppDemos/base_struct/o/m4.txt",
+		"/C/coding/md-code/cppDemos/base_struct/o/m1.txt",
+		"/C/coding/md-code/cppDemos/hardware/hardware.ncb",
+		"/C/coding/md-code/cppDemos/hardware/int1a/int1a.dsp",
+		"/C/coding/md-code/cppDemos/makefile/libltdl.txt",
+		"/C/coding/md-code/cppDemos/makefile/man/gcc.txt",
+		"/C/coding/md-code/cppDemos/makefile/man/dlltool.txt",
+		"/C/coding/md-code/cppDemos/src/arguments-list-avg.cpp",
+		"/C/coding/md-code/cppDemos/src/const.cpp",
+		"/C/coding/md-code/cppDemos/src/intro.cpp",
+		"/C/vcpkg/buildtrees/freetype/src/2.10.1-ea10bbeefe/docs/tutorial/example2.cpp",
+		"/C/coding/md-code/unicode/ms/windows/CP950.TXT",
+		"/C/coding/md-code/unicode/ms/windows/CP936.TXT",
+		"/C/coding/md-code/unicode/ms/windows/CP932.TXT",
+		"/C/coding/md-code/unicode/ms/windows/CP874.TXT",
+		"/C/vcpkg/buildtrees/freetype/src/2.10.1-ea10bbeefe/include/freetype/ttnameid.h",
+		"/C/coding/md-code/unicode/LibIconv/b/data.txt",
+		"/C/coding/md-code/unicode/LibIconv/b/iconv.txt",
+		"/C/coding/md-code/cppDemos/bin/logw.txt",
+		"/C/coding/src/cal_to24.cpp",
+		"/C/coding/src/lunar.cpp",
+		"/C/coding/src/weekday.cpp",
+		"/C/coding/md-code/cppDemos/stream-file.cpp",
+		"/C/coding/md-code/cppDemos/src/binfind.cpp",
+		"/C/coding/md-code/cppDemos/src/../comeback/main.cpp",
+		"/C/coding/src/win32/hock/clipboard.cpp",
+		"/C/coding/md-code/cppDemos/src/wchar.cpp",
+		"/C/vcpkg/buildtrees/freetype/src/2.10.1-ea10bbeefe/docs/tutorial/Makefile",
+		"/C/coding/md-code/cppDemos/win32/w03-gui.cpp",
+		"/C/coding/md-code/cppDemos/win32/w02-Locales.cpp",
+		"/C/coding/md-code/cppDemos/win32/w01-app.cpp",
+		"/C/coding/md-code/cppDemos/win32/w02-winenum.cpp",
+		"/C/coding/md-code/cppDemos/win32/w02-toggle.cpp",
+		"/C/coding/md-code/cppDemos/win32/w02-version.cpp",
+		"/C/MinGW/x86_64-w64-mingw32/include/winuser.h",
+		"/C/coding/md-code/cppDemos/base/byte2hex.cpp",
+		"/C/coding/md-code/cppDemos/bin/mfc.cpp",
+		"/C/coding/md-code/cppDemos/base/rt.cpp",
+		"/C/coding/src/win32/clr/MyForm.cpp",
+		"/C/coding/src/win32/clr/AppForm.h",
+		"/C/coding/src/win32/NLS/log.txt",
+		"/C/coding/md-code/cppDemos/base/mfc01-runtime-type.cpp",
+		"/C/coding/src/win32/console/toggle.cpp",
+		"/C/coding/md-code/cppDemos/base/wchar.cpp.hxv",
+		"/C/coding/md-code/cppDemos/base/wchar.c",
+		"/C/boost_1_73_0/libs/math/test/s_.ipp",
+		"/C/coding/md-code/cppDemos/base/z01-demo.cpp",
+		"/C/vcpkg/buildtrees/freetype/src/2.10.1-ea10bbeefe/docs/tutorial/example4.cpp",
+		"/C/vcpkg/buildtrees/freetype/src/2.10.1-ea10bbeefe/docs/tutorial/example4.pro",
+		"/C/vcpkg/buildtrees/freetype/src/2.10.1-ea10bbeefe/builds/cmake/FindHarfBuzz.cmake",
+		"/C/vcpkg/buildtrees/freetype/src/2.10.1-ea10bbeefe/src/raster/ftraster.c",
+		"/C/coding/md-code/cppDemos/autogit.bat",
+		"/C/coding/md-code/Nuklear-master/src/Readme.md",
+		"/C/coding/md-code/cppDemos/ninja/In file included from ../base/ft03-rasterizer.cpp",
+		"/C/coding/md-code/cppDemos/src/multithread.cpp",
+		"/C/coding/md-code/cppDemos/src/free.cpp",
+		"/C/coding/md-code/cppDemos/src/argv.cpp",
+		"/C/coding/md-code/cppDemos/src/for-range.cpp",
+		"/C/Program Files/Sublime Text 3/changelog.txt",
+		"/C/boost_1_73_0/boost/fusion/algorithm/query/detail/find_if.hpp",
+		"/C/vcpkg/buildtrees/freetype/src/2.10.1-ea10bbeefe/docs/documentation.html",
+		"/C/coding/md-code/cppDemos/src/dynamic_cast.cpp",
 		"/C/coding/md-code/cppDemos/src/for-each.cpp",
 		"/C/coding/src/makefile/loader.c",
 		"/C/coding/md-code/cppDemos/src/const_cast.cpp",
 		"/C/coding/md-code/cppDemos/build/CMakeFiles/CMakeOutput.log",
-		"/C/coding/md-code/cppDemos/src/argv.cpp",
 		"/C/coding/md-code/cppDemos/src/platform-relialy.c",
 		"/C/coding/md-code/cppDemos/boost/smart-pointer.cpp",
 		"/C/coding/md-code/cppDemos/readme.md",
 		"/C/coding/md-code/cppDemos/build/build_folder_required",
-		"/C/coding/md-code/cppDemos/.gitignore",
 		"/C/coding/md-code/git-demo/readme.md",
 		"/C/coding/md-code/cppDemos/cmake.md",
 		"/C/coding/md-code/cppDemos/C++STL.md",
@@ -2558,95 +2657,19 @@
 		"/C/coding/cpp/multithread/multithread.cbp",
 		"/C/coding/md-code/cppDemos/src/template-class.cpp",
 		"/C/coding/md-code/cppDemos/src/ReadFile.cpp",
-		"/C/MinGW/set_distro_paths.bat",
-		"/C/coding/md-code/cppDemos/src/default-args.cpp",
-		"/C/coding/md-code/cppDemos/src/file-text.cpp",
-		"/C/coding/md-code/cppDemos/src/template-func.cpp",
-		"/C/coding/md-code/cppDemos/autogit.bat",
-		"/C/coding/md-code/cppDemos/src/string.cpp",
-		"/C/coding/md-code/cppDemos/src/set.cpp",
-		"/C/coding/md-code/cppDemos/src/reference.cpp",
-		"/C/coding/md-code/cppDemos/src/list.cpp",
-		"/C/coding/md-code/cppDemos/cppDemo.sublime-project",
-		"/C/Users/OCEAN/AppData/Roaming/Sublime Text 3/Packages/User/Default (Windows).sublime-keymap",
-		"/C/Users/OCEAN/AppData/Roaming/Sublime Text 3/Packages/Emmet/Default (Windows).sublime-keymap",
-		"/C/Users/OCEAN/AppData/Roaming/Sublime Text 3/Packages/Emmet/Emmet.sublime-settings",
-		"/C/coding/md-code/cppDemos/build/Testing/Temporary/LastTestsFailed.log",
-		"/C/coding/md-code/cppDemos/build/Testing/Temporary/LastTest.log",
-		"/C/coding/md-code/cppDemos/out.txt",
-		"/C/coding/md-code/git-demo/dogit.bat",
-		"/C/coding/md-code/cppDemos/cppDemo.sublime-workspace",
-		"/C/coding/md/readme_markdown.md",
-		"/C/coding/md/OpenToonz/Blender.md",
-		"/C/coding/md/readme_node.md",
-		"/C/coding/md/c-daystep/readme.html",
-		"/C/Users/OCEAN/AppData/Roaming/Sublime Text 3/Packages/User/Node.sublime-build",
-		"/C/coding/md/readme_es6.md",
-		"/C/coding/md/readme_git.md",
-		"/C/coding/md-code/git-demo/cmake.md",
-		"/C/coding/md-code/git-demo/gnu make.md",
-		"/C/download/ChezScheme-master/examples/edit.ss",
-		"/C/download/ChezScheme-master/examples/compat.ss",
-		"/C/coding/md/readme_golang.md",
-		"/C/coding/md/socket.io/go-my-websocket.md",
-		"/C/coding/md/socket.io/assets/api_flow.txt",
-		"/C/coding/md-code/git-demo/readme.txt",
-		"/C/coding/md-code/dllDemo/test/CmakeLists.txt",
-		"/C/coding/md/readme_sublime.md",
-		"/C/Users/OCEAN/AppData/Local/Temp/Rar$DIa11172.7703/README-win32.txt",
-		"/C/download/OpenCV/glut-3.7.6/Imakefile",
-		"/C/download/Imakefile",
-		"/C/Users/OCEAN/AppData/Roaming/Sublime Text 3/Packages/User/C++ MinGW.sublime-build",
-		"/C/download/OpenCV/OpenCV-MinGW64-GCC810/freetype-2.10.0/include/ft2build.h",
-		"/C/coding/md/Makefile.md",
-		"/C/Users/OCEAN/AppData/Roaming/Sublime Text 3/Packages/User/CMake.sublime-settings",
-		"/C/download/OpenCV/opencv/sources/samples/python/deconvolution.py",
-		"/C/coding/md-code/opencv/display/CMakeLists.txt",
-		"/C/download/OpenCV/opencv/build/include/opencv2/imgproc.hpp",
-		"/C/download/OpenCV/opencv/sources/modules/highgui/src/window.cpp",
-		"/C/Users/OCEAN/AppData/Roaming/Sublime Text 3/Packages/User/C#.sublime-build",
-		"/C/Users/OCEAN/AppData/Roaming/Sublime Text 3/Packages/User/Dart 2.2.sublime-build",
-		"/C/Users/OCEAN/AppData/Roaming/Sublime Text 3/Packages/User/php.sublime-build",
-		"/C/Users/OCEAN/AppData/Roaming/Sublime Text 3/Packages/User/GoLang.sublime-build",
-		"/C/coding/md-code/opencv/display/display.cpp",
-		"/C/download/OpenCV/opencv/build/include/opencv2/gapi/core.hpp",
-		"/C/Anaconda3/Lib/site-packages/pydicom/charset.py",
-		"/C/coding/md/writing/articals/She-Is-Color/ref/HSL和HSV色彩空间_files/plugins.js",
-		"/C/coding/md-code/coding/coding.py",
-		"/C/Program Files/erl10.4/lib/os_mon-2.5/ebin/os_mon.app",
-		"/C/coding/md-code/erlang/ch_app/ch_app.app",
-		"/C/coding/md-code/erlang/ch_app/ch_app.erl",
-		"/C/coding/md-code/coding/help_cv2.py",
-		"/C/coding/md-code/coding/coding.cpp",
-		"/C/Qt/n/qtqm/main.cpp",
-		"/C/Qt/n/qtqm/main.qml",
-		"/C/Qt/n/simpleqml/main.qml",
-		"/C/Qt/5.9/mingw53_32/qml/QtQuick.2/plugins.qmltypes",
-		"/C/Qt/5.9/mingw53_32/qml/QtQuick.2/qmldir",
-		"/C/Qt/5.9/Src/qtbase/include/QtGui/qguiapplication.h",
-		"/C/Qt/n/qt3d/main.cpp",
-		"/C/Qt/n/build-qt3d-unknown-Debug/debug/新建文本文档.txt",
-		"/C/Qt/5.9/Src/qtbase/src/gui/kernel/qguiapplication_p.h",
-		"/C/Qt/5.9/Src/qtbase/include/QtGui/QGuiApplication",
-		"/C/Qt/n/simpleqml/build/Makefile.Release",
-		"/C/Qt/Examples/Qt-5.9/activeqt/simpleqml/build/Makefile.Release",
-		"/C/Qt/dist/installer-changelog",
-		"/C/Qt/components.xml",
-		"/C/Qt/Examples/Qt-5.9/activeqt/simpleqml/build/Makefile",
-		"/C/coding/md-code/coding/qt.conf",
-		"/C/Qt/Examples/Qt-5.9/activeqt/simpleqml/main.cpp",
-		"/C/Qt/5.9/Src/qtbase/src/corelib/kernel/qcoreapplication.cpp",
-		"/C/Qt/n/qtqm/qtqm.pro"
+		"/C/MinGW/set_distro_paths.bat"
 	],
 	"find":
 	{
-		"height": 23.0
+		"height": 40.0
 	},
 	"find_in_files":
 	{
 		"height": 451.0,
 		"where_history":
 		[
+			"C:\\coding\\md-code\\cppDemos\\base_struct",
+			"C:\\coding\\src\\win32",
 			"<open folders>",
 			"*.txt",
 			"c:"
@@ -2657,100 +2680,134 @@
 		"case_sensitive": false,
 		"find_history":
 		[
-			"print(",
-			"// ",
-			"s",
-			"decltype",
-			"cppDemo - ",
-			")\n",
-			".\\\\W+$",
+			"data[]",
+			"static ",
+			"const char",
+			"const",
+			"test",
+			"neasted",
+			"((char)(0x30313233)) =",
+			"0",
+			"record.id0",
+			"out",
+			"more",
+			"num",
+			"cout",
+			"<<",
+			"\n  ",
+			" ",
+			"                    ",
+			"                   ",
+			"                  ",
+			"                 ",
+			"                ",
+			"               ",
+			"              ",
+			"             ",
+			"            ",
+			"           ",
+			"          ",
+			"         ",
+			"        ",
+			"       ",
+			"      ",
+			"     ",
+			"    ",
+			"   ",
+			"  ",
+			"                 ",
+			"               ",
+			"              ",
+			"  ",
+			"                     ",
+			"                    ",
+			"                   ",
+			"                  ",
+			"                 ",
+			"                ",
+			"               ",
+			"              ",
+			"             ",
+			"            ",
+			"           ",
+			"          ",
+			"         ",
+			"        ",
+			"       ",
+			"      ",
+			"     ",
+			"    ",
+			"   ",
+			"  ",
+			"   ",
+			"  ",
+			"\" <<",
+			"EQUAL",
+			"MATCHES",
+			"continue",
+			", Base & b",
+			"out",
+			"Base &",
+			"this.",
+			", Base &b",
+			"endl",
+			"            Header            ",
+			"華",
+			"0x6F22",
+			"0xBA7E",
+			"0xD6D0",
+			"0xB5D8",
+			"0xA5E3",
+			"534E",
+			"4E2D",
+			"6C49",
+			"6c49",
+			"0x534E",
+			"0xBABA",
+			"0xBBAA",
+			"0x4E53",
+			"0x534E",
+			"0x4E53",
+			"0x534E",
+			"0x4E53",
+			"4E53",
+			"534E",
+			"83EF",
+			"4E53",
+			"EF83",
+			"0x534E",
+			"0x4E53",
 			"w",
-			"free",
-			"\\",
-			"edit_cache",
-			".cpp\",",
-			"cpp/fast\",",
-			"\"working_dir\": \"${project_path}\",",
-			"src",
-			"void *",
-			"sleep",
-			"Qt/Tools/mingw530_32",
-			"\")",
-			"/usr/bin/",
-			"src",
-			"AddDemo",
-			"-l",
-			"Qt53DCore",
-			"* ",
-			"4",
-			"std::cerr",
-			"NULL",
-			"?",
-			"FUCKMS",
-			"()",
-			"FUCKMS",
-			"string",
-			"<PackageName>",
-			"NCLUDE_DIRS",
-			"_LIBRARIES",
-			"DEMOSLIST:",
-			"DEMOLIST",
-			"else",
-			"Caffe",
-			"\\",
-			"33",
-			"msg ",
-			"#   ",
-			"     // ",
-			"// ",
-			"        #define",
-			"define something ",
-			"//",
-			"\n   ",
-			"#   error",
-			"  // ",
-			"//",
-			">  //",
-			"windows-version.txt",
-			"map",
-			"m1_Iter",
-			"div*5>p",
-			"p",
-			"div",
-			"5",
-			"div",
-			");\n",
-			"{}",
-			"func2",
-			"func1",
-			"s2",
-			"s1",
-			"; ",
-			" // ",
-			"\n//",
-			"-funcs",
-			"// ",
-			"cppDemo",
-			"》 ",
-			"《",
-			"coding\\md-code\\",
-			"\\)",
-			"\\(",
-			"\\",
-			")",
-			"(",
-			"[\\n\\r]*",
-			"strcpy( str3, str1) : Hello",
-			"[\\n\\r]*",
-			"// ",
-			"[\\n\\r]*",
-			"\\\\n",
-			"\\n",
-			"n",
-			"\\",
-			"dbg_lichen_star",
-			"test_add_4_5",
-			"\"ARG"
+			"wchar_t",
+			"out << ",
+			"<<",
+			"name",
+			"GetProcessHandleByID",
+			"nID",
+			"Handle",
+			"GetProcessIDByName",
+			"wtitle",
+			"msgError",
+			"// TEXT(...)",
+			"testLocales",
+			".lib",
+			"boost",
+			"IMPLEMENT_DYNCREATE_COMMON(ClassName) \\",
+			"\n",
+			"91",
+			"runtime-type.cpp\" 91",
+			"runtime-type.cpp",
+			"mfc01",
+			"\n# ",
+			"# ",
+			"{#",
+			"(char *)",
+			"IMPLEMENT_DYNCREATE",
+			"aname",
+			"caname",
+			"variable",
+			"geeksforgeeks",
+			".h"
 		],
 		"highlight": false,
 		"in_selection": false,
@@ -2758,6 +2815,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			" "
 		],
 		"reverse": false,
 		"show_context": true,
@@ -2768,7 +2826,7 @@
 	"groups":
 	[
 		{
-			"selected": 4,
+			"selected": 3,
 			"sheets":
 			[
 				{
@@ -2777,7 +2835,7 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3672,
+						"buffer_size": 3856,
 						"regions":
 						{
 						},
@@ -2799,10 +2857,10 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1630.0,
+						"translation.y": 1284.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
@@ -2811,15 +2869,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2393,
+						"buffer_size": 3464,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1101,
-								1101
+								1427,
+								1427
 							]
 						],
 						"settings":
@@ -2834,7 +2892,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 271.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 2,
@@ -2842,66 +2900,26 @@
 				},
 				{
 					"buffer": 2,
-					"file": "src/platform-relialy.cpp",
+					"file": "src/neasted.cpp",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1083,
+						"buffer_size": 1048,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								553,
-								553
+								401,
+								401
 							]
 						],
 						"settings":
 						{
 							"incomplete_sync": null,
 							"is_init_dirty_state": false,
-							"origin_encoding": "ASCII",
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/C++/C++.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "src/for-range.cpp",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 829,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								657,
-								654
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"is_init_dirty_state": false,
-							"origin_encoding": "ASCII",
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/C++/C++.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/C++/C++.sublime-syntax"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -2911,20 +2929,20 @@
 					"type": "text"
 				},
 				{
-					"buffer": 4,
+					"buffer": 3,
 					"file": "src/argv.cpp",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 893,
+						"buffer_size": 897,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								128,
-								128
+								571,
+								571
 							]
 						],
 						"settings":
@@ -2934,7 +2952,9 @@
 							"origin_encoding": "ASCII",
 							"remote_loading": false,
 							"synced": false,
-							"syntax": "Packages/C++/C++.sublime-syntax"
+							"syntax": "Packages/C++/C++.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -2942,84 +2962,13 @@
 					},
 					"stack_index": 0,
 					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "src/free.cpp",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1233,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								214,
-								214
-							]
-						],
-						"settings":
-						{
-							"auto_name": "#include <cstdlib>",
-							"incomplete_sync": null,
-							"is_init_dirty_state": false,
-							"origin_encoding": "ASCII",
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/C++/C++.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 46.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "src/multithread.cpp",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1355,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								158,
-								153
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"is_init_dirty_state": false,
-							"origin_encoding": "UTF-8",
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/C++/C++.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
 				}
 			]
 		}
 	],
 	"incremental_find":
 	{
-		"height": 23.0
+		"height": 22.0
 	},
 	"input":
 	{
@@ -3048,9 +2997,13 @@
 		]
 	},
 	"menu_visible": true,
+	"output.diagnostics":
+	{
+		"height": 0.0
+	},
 	"output.exec":
 	{
-		"height": 263.0
+		"height": 234.0
 	},
 	"output.find_results":
 	{
@@ -3060,6 +3013,10 @@
 	{
 		"height": 292.0
 	},
+	"output.hex_viewer_inspector":
+	{
+		"height": 159.0
+	},
 	"output.sftp":
 	{
 		"height": 0.0
@@ -3068,7 +3025,7 @@
 	"project": "cppDemo.sublime-project",
 	"replace":
 	{
-		"height": 42.0
+		"height": 71.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -3077,6 +3034,54 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"arg",
+				"♬☾ CPP Demo Project\\src\\argv.cpp"
+			],
+			[
+				"bin.cpp",
+				"♬☾ CPP Demo Project\\src\\bin.cpp"
+			],
+			[
+				"example2",
+				"freetype\\src\\2.10.1-ea10bbeefe\\docs\\tutorial\\example2.cpp"
+			],
+			[
+				"com",
+				"♬☾ CPP Demo Project\\src\\comeback.cpp"
+			],
+			[
+				"stre",
+				"♬☾ CPP Demo Project\\stream-file.cpp"
+			],
+			[
+				"",
+				"♬☾ CPP Demo Project\\win32\\w02-toggle.cpp"
+			],
+			[
+				"mfc.cpp",
+				"♬☾ CPP Demo Project\\bin\\mfc.cpp"
+			],
+			[
+				"rt.",
+				"src\\win32\\console\\rt.cpp"
+			],
+			[
+				"wchar",
+				"♬☾ CPP Demo Project\\src\\wchar.cpp"
+			],
+			[
+				"ft01",
+				"♬☾ CPP Demo Project\\base\\ft01-example.cpp"
+			],
+			[
+				"harfbuzz",
+				"freetype\\src\\2.10.1-ea10bbeefe\\builds\\cmake\\FindHarfBuzz.cmake"
+			],
+			[
+				"ftraster",
+				"freetype\\src\\2.10.1-ea10bbeefe\\src\\raster\\ftraster.c"
+			],
 			[
 				"for",
 				"♬☾ CPP Demo Project\\src\\for-range.cpp"
@@ -3192,10 +3197,6 @@
 			[
 				"qguiapplication",
 				"Qt\\5.9\\Src\\qtbase\\src\\gui\\kernel\\qguiapplication_p.h"
-			],
-			[
-				"",
-				"Qt\\n\\qt3d\\main.cpp"
 			],
 			[
 				"QGuiApplication",
@@ -3544,50 +3545,6 @@
 			[
 				"win.",
 				"md\\readme_win.md"
-			],
-			[
-				"rsa.md",
-				"md\\rsa\\readme_rsa.md"
-			],
-			[
-				"android",
-				"md\\readme_android.md"
-			],
-			[
-				"csproj",
-				"coding\\Console.csproj"
-			],
-			[
-				"server",
-				"coding\\bs-server.cs"
-			],
-			[
-				"bs",
-				"coding\\bs-server.cs"
-			],
-			[
-				"stm32",
-				"md\\STM\\STM32_Nucleo.md"
-			],
-			[
-				"cbui",
-				"User\\C#.sublime-build"
-			],
-			[
-				"PHP.md",
-				"md\\readme_php.md"
-			],
-			[
-				"KeyEventArgs",
-				"source\\aspnetcore-master\\src\\Components\\Web\\src\\Web\\KeyboardEventArgs.cs"
-			],
-			[
-				"TagHelperComponent",
-				"source\\Razor-master\\src\\Microsoft.AspNetCore.Razor\\TagHelpers\\TagHelperComponent.cs"
-			],
-			[
-				"BodyTagHelper",
-				"source\\aspnetcore-master\\src\\Mvc\\Mvc.Razor\\src\\TagHelpers\\BodyTagHelper.cs"
 			]
 		],
 		"width": 0.0
@@ -3595,9 +3552,13 @@
 	"select_project":
 	{
 		"height": 500.0,
-		"last_filter": "fr",
+		"last_filter": "qt",
 		"selected_items":
 		[
+			[
+				"qt",
+				"C:\\coding\\md-code\\cppDemos\\QtDemos\\qtDemo.sublime-project"
+			],
 			[
 				"fr",
 				"C:\\vcpkg\\buildtrees\\freetype\\freetype.sublime-project"
@@ -3636,9 +3597,37 @@
 	"select_symbol":
 	{
 		"height": 392.0,
-		"last_filter": "createTrackbar",
+		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"TT_PLATFORM",
+				"TT_PLATFORM_MICROSOFT"
+			],
+			[
+				"wchar",
+				"wchar_t"
+			],
+			[
+				"FT_LOAD_FORCE_AUTOHINT",
+				"FT_LOAD_FORCE_AUTOHINT"
+			],
+			[
+				"FT_GlyphSlotRec",
+				"FT_GlyphSlotRec"
+			],
+			[
+				"FT_Encoding_BIG5",
+				"ft_encoding_big5"
+			],
+			[
+				"FT_ENCO",
+				"ft_encoding_big5"
+			],
+			[
+				"FT_FaceRec",
+				"FT_FaceRec"
+			],
 			[
 				"createTrackbar",
 				"createTrackbar"
@@ -3744,7 +3733,7 @@
 				"TryAddSingleton"
 			]
 		],
-		"width": 796.0
+		"width": 972.0
 	},
 	"selected_group": 0,
 	"settings":

@@ -6,7 +6,7 @@
 #include <QMenu>
 #include <QMenuBar>
 #include <QFrame>
-
+// https://doc-snapshots.qt.io/qt5-5.9/all-examples.html
 int main(int argc, char* argv[])
 {
     QApplication app(argc, argv);

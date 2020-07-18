@@ -47,7 +47,7 @@ typedef unsigned int uint32;
 
 // #if (('1234' >> 24) == '1')
 // #elif (('4321' >> 24) == '1')
-#if ((0x01020304 >> 24) == 0x01)
+#if ((0x01020304 >> 24) == 0x04)
 #elif ((0x01020304 >> 24) == 0x01)
   #define BIG_ENDIAN
 #else

@@ -49,7 +49,7 @@ endmacro()
 message("Qt DEMOS LIST:")
 aux_source_directory("src/" qtsrc)
 foreach(item ${qtsrc})
-    string(REGEX REPLACE ".*/\(.*\)" "\\1" name ${item})
+    string(REGEX REPLACE ".*/\(.*\)\\..*" "\\1" name ${item})
     AddQtDemo(${name} ${item})
 endforeach(item)
 

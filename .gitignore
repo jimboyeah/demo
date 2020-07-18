@@ -3,6 +3,7 @@ obj
 *.obj
 *.o
 build
+qmake
 bin
 Debug
 Release
