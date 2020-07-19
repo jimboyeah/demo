@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <title>ECharts</title>
+    <link rel="stylesheet" href="theme.css">
+    <style>#example { background: rgba(255,255,255, 0.96) !important;} #toolbox {top:22vh}</style>
+</head>
+<body class="half">
+    <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+    <div id="example" style=""></div>
+
+    <!-- <script src="../echarts-2.2.7/build/dist/echarts-all.js"></script> -->
+    <script src="./echarts-4.2.1/dist/echarts.js"></script><script src="./utils.js"></script>
+    <!-- CDN 方式引入 -->
+    <!-- <script src="https://cdn.bootcss.com/echarts/4.2.1/echarts.min.js"></script> -->
+    <script type="text/javascript">
+
+        option = {
+            backgroundColor: '#282828',
+            visualMap: {
+                show: false,
+                min: 80,
+                max: 600,
+                inRange: {
+                    colorLightness: [0, 1]
+                }
+            },
+            series : [
+                {
+                    name: '访问来源',
+                    type: 'pie',
+                    radius: '75%',
+                    data:[
+                        {value:235, name:'视频广告'},
+                        {value:274, name:'联盟广告'},
+                        {value:310, name:'邮件营销'},
+                        {value:335, name:'直接访问'},
+                        {value:400, name:'搜索引擎'}
+                    ],
+                    roseType: 'angle',
+                    label: {
+                        normal: {
+                            textStyle: {
+                                color: 'rgba(255, 255, 255, 0.3)'
+                            }
+                        }
+                    },
+                    labelLine: {
+                        normal: {
+                            lineStyle: {
+                                color: 'rgba(255, 255, 255, 0.3)'
+                            }
+                        }
+                    },
+                    itemStyle: {
+                        normal: {
+                            color: '#c28531',
+                            shadowBlur: 200,
+                            shadowColor: 'rgba(0, 0, 0, 0.5)'
+                        }
+                    }
+                }
+            ]
+        };
+
+        var myChart;
+        render(option)
+
+        // 图表渲染方法
+        function render(option) {
+            // 基于准备好的dom，初始化echarts图表
+            myChart = echarts.init(document.getElementById('example')); 
+            // 为echarts对象加载数据 
+            myChart.setOption(option);
+            myChart.on('click', 'series', function (e) {
+                console.log(echarts.version, e);
+            });
+        }
+    </script>
+
+</body>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <title>ECharts</title>
+    <link rel="stylesheet" href="theme.css">
+    <style>#example { background: rgba(255,255,255, 0.96) !important;} #toolbox {top:22vh}</style>
+</head>
+<body class="half">
+    <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+    <div id="example" style=""></div>
+
+    <!-- <script src="../echarts-2.2.7/build/dist/echarts-all.js"></script> -->
+    <script src="./echarts-4.2.1/dist/echarts.js"></script><script src="./utils.js"></script>
+    <script src="./echarts-4.2.1/dist/echarts-en.js"></script>
+    <!-- CDN 方式引入 -->
+    <!-- <script src="https://cdn.bootcss.com/echarts/4.2.1/echarts.min.js"></script> -->
+
+    <!-- 需要3D扩展 -->
+    <script src="./echarts-4.2.1/dist/echarts-gl.js"></script>
+
+
+    <script type="text/javascript">
+
+    // import React, { Component, PropTypes } from 'react';
+    // import echarts from 'echarts';
+    // import echarts from 'echarts-gl'
+    // import bmap from 'echarts/extension/bmap/bmap';
+
+    // app.title = '嵌套环形图';
+
+    option = {
+        tooltip: {
+            trigger: 'item',
+            formatter: "{a} <br/>{b}: {c} ({d}%)"
+        },
+        legend: {
+            // orient: 'horizontal',
+            // formatter: "{name}",
+            orient: 'vertical',
+            x: 'left',
+            show: true,
+            data:['直达','营销广告','搜索引擎','邮件营销','联盟广告','视频广告','百度','谷歌','必应','其他']
+        },
+        series: [
+            {
+                name:'访问来源',
+                type:'pie',
+                selectedMode: 'single',
+                radius: [0, '30%'],
+
+                label: {
+                    normal: {
+                        position: 'inner'
+                    }
+                },
+                labelLine: {
+                    normal: {
+                        show: false
+                    }
+                },
+                data:[
+                    {value:335, name:'直达', selected:true},
+                    {value:679, name:'营销广告'},
+                    {value:1548, name:'搜索引擎'}
+                ]
+            },
+            {
+                name:'访问来源',
+                type:'pie',
+                radius: ['40%', '55%'],
+                label: {
+                    normal: {
+                        backgroundColor: '#eee',
+                        borderColor: '#aaa',
+                        borderWidth: 1,
+                        borderRadius: 4,
+                        // shadowBlur:3,
+                        // shadowOffsetX: 2,
+                        // shadowOffsetY: 2,
+                        // shadowColor: '#999',
+                        // padding: [0, 7],
+                        formatter: '{a|{a}}{abg|}\n{hr|}\n  {b|{b}：}{c}  {per|{d}%}  ',
+                        rich: {
+                            a: {
+                                color: '#999',
+                                lineHeight: 22,
+                                align: 'center'
+                            },
+                            // abg: {
+                            //     backgroundColor: '#333',
+                            //     width: '100%',
+                            //     align: 'right',
+                            //     height: 22,
+                            //     borderRadius: [4, 4, 0, 0]
+                            // },
+                            hr: {
+                                borderColor: '#aaa',
+                                width: '100%',
+                                borderWidth: 0.5,
+                                height: 0
+                            },
+                            b: {
+                                fontSize: 16,
+                                lineHeight: 33
+                            },
+                            per: {
+                                color: '#eee',
+                                backgroundColor: '#334455',
+                                padding: [2, 4],
+                                borderRadius: 2
+                            }
+                        }
+                    }
+                },
+                data:[
+                    {value:335, name:'直达'},
+                    {value:310, name:'邮件营销'},
+                    {value:234, name:'联盟广告'},
+                    {value:135, name:'视频广告'},
+                    {value:1048, name:'百度'},
+                    {value:251, name:'谷歌'},
+                    {value:147, name:'必应'},
+                    {value:102, name:'其他'}
+                ]
+            }
+        ]
+    };
+
+
+    var myChart;
+    render(option)
+
+    myChart.on('click', 'series', function (e) {
+        console.log("on series click", echarts.version, e);
+    });
+    myChart.on('dblclick', 'series', function (e) {
+        console.log("on series dblclick", echarts.version, e);
+    });
+
+
+    // 图表渲染方法
+    function render(option) {
+        // 基于准备好的dom，初始化echarts图表
+        myChart = echarts.init(document.getElementById('example')); 
+        // 为echarts对象加载数据 
+        myChart.setOption(option);
+    }
+    </script>
+
+</body>

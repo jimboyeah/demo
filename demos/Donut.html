@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <title>ECharts</title>
+    <link rel="stylesheet" href="theme.css">
+    <style>#example { background: rgba(255,255,255, 0.96) !important;} #toolbox {top:22vh}</style>
+</head>
+<body class="half">
+    <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+    <div id="example" style=""></div>
+
+    <!-- <script src="../echarts-2.2.7/build/dist/echarts-all.js"></script> -->
+    <script src="./echarts-4.2.1/dist/echarts.js"></script><script src="./utils.js"></script>
+    <script src="./echarts-4.2.1/dist/echarts-en.js"></script>
+    <!-- CDN 方式引入 -->
+    <!-- <script src="https://cdn.bootcss.com/echarts/4.2.1/echarts.min.js"></script> -->
+
+    <!-- 需要3D扩展 -->
+    <script src="./echarts-4.2.1/dist/echarts-gl.js"></script>
+
+
+    <script type="text/javascript">
+
+    // import React, { Component, PropTypes } from 'react';
+    // import echarts from 'echarts';
+    // import echarts from 'echarts-gl'
+    // import bmap from 'echarts/extension/bmap/bmap';
+
+
+    // app.title = '环形图';
+
+    option = {
+        // 在option内增加Grid属性控制上下左右的间距
+        grid: [{  
+             left: '16%',  
+             right: '5%',  
+             top: '16%',  
+            bottom: '5%',  
+            containLabel: false
+        }],
+        // xAxis: [
+        //     {gridIndex: 0, min: 0, max: 20}
+        // ],
+        // yAxis: [
+        //     {gridIndex: 0, min: 0, max: 20}
+        // ],
+        tooltip: {
+            trigger: 'item',
+            formatter: "{a} <br/>{b}: {c} ({d}%)"
+        },
+        legend: {
+            orient: 'vertical',
+            x: 'left',
+            data:['直接访问','邮件营销','联盟广告','视频广告','搜索引擎']
+        },
+        series: [
+            {
+                name:'访问来源',
+                type:'pie',
+                radius: ['50%', '70%'],
+                avoidLabelOverlap: true,
+                label: {
+                    normal: {
+                        show: true,
+                        position: 'outside' // inside
+                    },
+                    emphasis: {
+                        show: true,
+                        textStyle: {
+                            fontSize: '30',
+                            fontWeight: 'bold'
+                        }
+                    }
+                },
+                labelLine: {
+                    normal: {
+                        show: false
+                    }
+                },
+                data:[
+                    {value:335, name:'直接访问'},
+                    {value:310, name:'邮件营销'},
+                    {value:234, name:'联盟广告'},
+                    {value:135, name:'视频广告'},
+                    {value:1548, name:'搜索引擎'}
+                ]
+            }
+        ]
+    };
+
+
+    var myChart;
+    render(option)
+
+    myChart.on('click', 'series', function (e) {
+        console.log("on series click", echarts.version, e);
+    });
+    myChart.on('dblclick', 'series', function (e) {
+        console.log("on series dblclick", echarts.version, e);
+    });
+
+
+    // 图表渲染方法
+    function render(option) {
+        // 基于准备好的dom，初始化echarts图表
+        myChart = echarts.init(document.getElementById('example')); 
+        // 为echarts对象加载数据 
+        myChart.setOption(option);
+    }
+    </script>
+
+</body>

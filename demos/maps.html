@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="utf-8">
+	<title>ECharts</title>
+	<link rel="stylesheet" href="theme.css">
+	<style>#container { background: rgba(255,255,255, 0.96) !important;} #toolbox {top:22vh}</style>
+</head>
+<body class="half">
+	<!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+	<div id="container" style=""></div>
+
+
+    <script src="./utils.js"></script>
+    <script src="./jquery.min.js"></script>
+
+	<!-- 主模块引入 -->
+	<!-- <script src="https://cdn.bootcss.com/echarts/4.2.1/echarts.min.js"></script> -->
+	<!-- <script src="../echarts-2.2.7/build/dist/echarts-all.js"></script> -->
+	<script src="./echarts-4.2.1/dist/echarts.js"></script>
+
+	<!-- 3D扩展 -->
+	<script src="./echarts-gl-1.1.1/echarts-gl.js"></script>
+
+	<!-- 统计工具 -->
+    <script src="./echarts-stat/ecStat.min.js"></script>
+
+	<!-- 需要百度地图与地图扩展 -->
+    <script type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&ak=p1EQvKECSm8LMV249TxNB2dT"></script>
+    <script src="./echarts-4.2.1/dist/extension/dataTool.min.js"></script>
+    <script src="./echarts-4.2.1/dist/extension/bmap.js"></script>
+	
+	<!-- 使用旧版离线地图 -->
+    <script src="./map/js/china.js"></script>
+    <script src="./map/js/world.js"></script>
+	<script src="./map/js/province/guangdong.js"></script>
+
+    <!-- 
+
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/dist/echarts.min.js"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts-gl/dist/echarts-gl.min.js"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts-stat/dist/ecStat.min.js"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/dist/extension/dataTool.min.js"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/map/js/china.js"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/map/js/world.js"></script>
+	<script type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&ak=p1EQvKECSm8LMV249TxNB2dT"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/dist/extension/bmap.min.js"></script>
+
+     -->
+
+
+
+	<script type="text/javascript">
+
+        var ROOT_PATH = "./"
+
+		var myChart;
+
+		// 图表渲染方法
+		function render(option) {
+			// 基于准备好的dom，初始化echarts图表
+			myChart = echarts.init(document.getElementById('container')); 
+			// 为echarts对象加载数据 
+			myChart.setOption(option);
+    		myChart.on('click', "series", function (e) {
+    				console.log("on series click", echarts.version, e);
+    		});
+    		myChart.on('geoselected', function (e) {
+    				console.log("on geoselected", echarts.version, e);
+    		});
+    		myChart.on('legendselectchanged', function (e) {
+    				console.log("on legendselectchanged", echarts.version, e);
+    		});
+		}
+		</script>
+
+</body>

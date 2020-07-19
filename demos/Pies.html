@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="utf-8">
+	<title>ECharts</title>
+	<link rel="stylesheet" href="theme.css">
+	<style>#example { background: rgba(255,255,255, 0.96) !important;} #toolbox {top:22vh}</style>
+</head>
+<body class="half">
+	<!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+	<div id="example" style=""></div>
+
+	<!-- <script src="../echarts-2.2.7/build/dist/echarts-all.js"></script> -->
+	<script src="./echarts-4.2.1/dist/echarts.js"></script>
+    <script src="./utils.js"></script>
+	<script src="./echarts-4.2.1/dist/echarts-en.js"></script>
+	<!-- CDN 方式引入 -->
+	<!-- <script src="https://cdn.bootcss.com/echarts/4.2.1/echarts.min.js"></script> -->
+
+	<!-- 3D扩展 -->
+	<!-- <script src="./echarts-4.2.1/dist/echarts-gl.js"></script> -->
+
+	<!-- 需要百度地图与地图扩展 -->
+	<!-- <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=p1EQvKECSm8LMV249TxNB2dT"></script> -->
+	<!-- <script src="http://www.echartsjs.com/examples/vendors/echarts/extension/bmap.js?_v_=1536959211921"></script> -->
+	<!-- <script src="./echarts-4.2.1/dist/extension/bmap.js"></script> -->
+	
+	<!-- 使用旧版离线地图 -->
+	<script src="../map/js/world.js"></script>
+	<!-- <script src="../map/js/china.js"></script> -->
+	<!-- <script src="../map/js/province/guangdong.js"></script> -->
+
+	<script type="text/javascript">
+
+    const data = [
+      {name: "事例一", value: 40 },
+      {name: "事例二", value: 21 },
+      {name: "事例三", value: 17 },
+      {name: "事例四", value: 13 },
+      {name: "事例五", value: 9 }
+    ];
+
+    const data2 = [
+      {name: "产品一", value: 40 },
+      {name: "产品二", value: 21 },
+      {name: "产品三", value: 17 },
+      {name: "产品四", value: 13 },
+      {name: "产品五", value: 9 }
+    ];
+
+    var option = {
+        color: ['#4575b4', '#74add1', '#abd9e9', '#e0f3f8', '#fdae61', '#f46d43', '#d73027', '#a50026'],
+
+        title : {
+            top: 20,
+            text: '数量统计',
+            subtext: '纯属虚构',
+            x:'center'
+        },
+        tooltip : {
+            trigger: 'item',
+            formatter: "{a} <br/>{b} : {c} ({d}%)"
+        },
+        legend: {
+            type: 'plain', //'scroll',
+            orient: 'horizontal', //'vertical',
+            width: "60%",
+            left: 'center',
+            bottom: "5%",
+            data: data.concat(data2),
+            // selected: { '事例一': false } // 取消选中类目
+            // selected: {"事例一":true, "事例二":true, "事例三":false, "事例四":false, "事例五":false}
+            // selected: [20, 40] // 选取 20 到 40 的值范围
+            // selected: { 1: false } // 取消选中第二段
+
+        },
+        series : [
+            {
+                name: '示例',
+                type: 'pie',
+                radius : '30%',
+                center: ['25%', '50%'],
+                avoidLabelOverlap: true,
+                labelLine: {
+                    normal: {
+                        show: false
+                    }
+                },
+                label: {
+                    normal:{
+                        // position:'outer',
+                        // {a} series.name {b} data.name {c} data.value {d} data.value percent 
+                        formatter: '{a|{b}}\n{hr|}\n {c}  {per|{d}%}  ',
+                        // formatter: '{a|{a}} {per|{d}%}  ',
+                        fontSize:24,
+                        // position:'inner',
+                        rich: {
+                            a: {
+                                color: '#999',
+                                lineHeight: 22,
+                                align: 'center'
+                            },
+                            hr: {
+                                borderColor: '#aaa',
+                                width: '100%',
+                                borderWidth: 0.5,
+                                height: 0
+                            },
+                            b: {
+                                // fontSize: 16,
+                                lineHeight: 33
+                            },
+                            per: {
+                                color: '#eee',
+                                backgroundColor: '#334455',
+                                padding: [2, 4],
+                                borderRadius: 2
+                            }
+                        }
+                    }
+                },
+                data: data,
+                itemStyle: {
+                    emphasis: {
+                        shadowBlur: 10,
+                        shadowOffsetX: 0,
+                        shadowColor: 'rgba(0, 0, 0, 0.5)'
+                    }
+                }
+            },
+            {
+                name: '示例2',
+                type: 'pie',
+                radius : '30%',
+                center: ['75%', '50%'],
+                avoidLabelOverlap: true,
+                labelLine: {
+                    normal: {
+                        show: false
+                    }
+                },
+                label: {
+                    normal:{
+                        // position:'outer',
+                        // {a} series.name {b} data.name {c} data.value {d} data.value percent 
+                        formatter: '{a|{b}}\n{hr|}\n  {c}  {per|{d}%}  ',
+                        // formatter: '{a|{a}} {per|{d}%}  ',
+                        rich: {
+                            a: {
+                                color: '#999',
+                                lineHeight: 22,
+                                align: 'center'
+                            },
+                            hr: {
+                                borderColor: '#aaa',
+                                width: '100%',
+                                borderWidth: 0.5,
+                                height: 0
+                            },
+                            b: {
+                                fontSize: 16,
+                                lineHeight: 33
+                            },
+                            per: {
+                                color: '#eee',
+                                backgroundColor: '#334455',
+                                padding: [2, 4],
+                                borderRadius: 2
+                            }
+                        }
+                    }
+                },
+                data: data2,
+                itemStyle: {
+                    emphasis: {
+                        shadowBlur: 10,
+                        shadowOffsetX: 0,
+                        shadowColor: 'rgba(0, 0, 0, 0.5)'
+                    }
+                }
+            }
+        ]
+    };
+
+
+// import React, { Component } from 'react';
+// impott Echarts from 'echart-for-react';
+// export default class Map extends Component {
+
+//   static displayName = 'Map';
+//   static propTypes = {};
+//   static defaultProps = {};
+
+//   constructor(props) {
+//     super(props);
+//     this.state = {};
+//   }
+
+//   onSelect = (e) => {
+//     console.log("onSelect...", e);
+//   }
+	
+//   onClick = (e) => {
+//     console.log("onClick...", e);
+//   }
+	
+//   onlegendselectchanged = (e) => {
+//     console.log("onlegendselectchanged...", e);
+//   }
+
+//   render() {
+//     let handlers = { geoselected: this.onSelect, click: this.onClick };
+//     return (
+//       <Echarts onEvents={handlers} option={option} style={{ height: '650px' }} />
+//     );
+//   }
+// }
+// 
+// export default Map
+
+
+		var myChart;
+		render(option)
+
+		myChart.on('click', "series", function (e) {
+				console.log("on series click", echarts.version, e);
+		});
+		myChart.on('geoselected', function (e) {
+				console.log("on geoselected", echarts.version, e);
+		});
+		myChart.on('legendselectchanged', function (e) {
+				console.log("on legendselectchanged", echarts.version, e);
+		});
+
+
+		// 图表渲染方法
+		function render(option) {
+				// 基于准备好的dom，初始化echarts图表
+				myChart = echarts.init(document.getElementById('example')); 
+				// 为echarts对象加载数据 
+				myChart.setOption(option);
+		}
+		</script>
+
+</body>

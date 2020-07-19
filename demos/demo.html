@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <title>ECharts</title>
+    <link rel="stylesheet" href="theme.css">
+    <style>#example { background: rgba(255,255,255, 0.96) !important; padding:20px 20px 0 0;} #toolbox {top:22vh}</style>
+</head>
+<body class="half">
+    <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+    <div id="example" style=""></div>
+
+    <!-- ECharts 按模块引入 echarts.js 再 require 引入需要的图表模块 -->
+    <!-- <script src="http://echarts.baidu.com/build/dist/echarts.js"></script> -->
+    <!-- Echarts 独立文件打包，echarts-all.js 已经包含所有组件，不能再搭配 require 加载模块  -->
+    <!-- <script src="../echarts-2.2.7/build/dist/echarts-all.js"></script> -->
+
+    <script src="./echarts-4.2.1/dist/echarts.js"></script><script src="./utils.js"></script>
+    <!-- CDN 方式引入 -->
+    <!-- <script src="https://cdn.bootcss.com/echarts/4.2.1/echarts.min.js"></script> -->
+    <script type="text/javascript">
+        // 模块加载方式需要路径配置
+        // moduleInit()
+        function moduleInit(){
+            require.config({
+                paths: {
+                    // echarts: 'http://echarts.baidu.com/build/dist'
+                    echarts: '../echarts-2.2.7/build/dist'
+                }
+            });
+            
+            // 按需加载模块
+            require(
+                [
+                    'echarts',
+                    'echarts/chart/bar',        // 柱形图
+                    'echarts/chart/chord',      // 和弦图
+                    'echarts/chart/eventRiver', // 事件河流图 
+                    'echarts/chart/force',      // 力导向布局图
+                    'echarts/chart/funnel',     // 漏斗图
+                    'echarts/chart/gauge',      // 仪表盘 
+                    'echarts/chart/k',          // K线图 
+                    'echarts/chart/line',       // 折线图
+                    'echarts/chart/map',        // 地图 
+                    'echarts/chart/pie',        // 饼图
+                    'echarts/chart/radar',      // 雷达图 
+                    'echarts/chart/scatter',    // 散点图 
+                    'echarts/chart/treemap',    // 矩阵树图 
+                    'echarts/chart/venn'        // 韦恩图 
+                ], render
+            );
+        }
+
+        // 独立文件加载方式直接绘制图表
+        render(echarts)
+        var myChart;
+
+        // 模拟异步数据填充，默认数据和原有数据合并，可以通过 {notMerge:true} 来覆盖
+        myChart.showLoading()
+        setTimeout(function(){
+            myChart.hideLoading()
+            myChart.setOption({
+                title: {
+                    text: '异步数据加载示例'
+                },
+                tooltip: {},
+                legend: {
+                    data:['销量']
+                },
+                xAxis: {
+                    data: ["衬衫","羊毛衫","雪纺衫","裤子","高跟鞋","袜子"]
+                },
+                yAxis: {},
+                series: [
+                    { name: '销量', type: 'bar', data: [15, 40, 16, 14, 20, 30]}
+                ]
+            }, {notMerge:true});
+        }, 3000);
+
+        // 图表渲染方法
+        function render(ec) {
+            // 基于准备好的dom，初始化echarts图表
+            myChart = ec.init(document.getElementById('example')); 
+            var colors = ['#5793f3', '#d14a61', '#675bba'];
+
+            var option = {
+                tooltip: {
+                    trigger: 'axis',
+                    show: true
+                },
+                toolbox: {
+                    show: true,
+                    feature: {
+                        mark: {show: true},
+                        dataView: {show: true, readOnly: false},
+                        magicType: {show: true, type: ['line', 'bar', 'k', 'pie', 'gauge', 'funnel', 'force', 'chord', 'eventRiver', 'map', 'treemap', 'veen']},
+                        restore: {show: true},
+                        saveAsImage: {show: true}
+                    }
+                },
+                calculable: true,
+                legend: {
+                    data:['销量', '价格', '利润']
+                },
+                xAxis: [
+                    { type: 'category',  data: ["衬衫","羊毛衫","雪纺衫","裤子","高跟鞋","袜子"] }
+                ],
+                yAxis: [ // 多 Y 轴设置，系列定义时指定要使用的 Y 轴，默认是第一个 yAxisIndex: 0
+                    { type: 'value', name: "销量", min: 0, max: 50 },
+                    { type: 'value', name: '价格', min: 0, max: 500, position: 'right'},
+                    { type: 'value', name: '利润', min: 0, max: 2800, splitNumber:9, position: 'right', offset: -15,
+                        axisLine: {
+                            lineStyle: { color: colors[2] }
+                        },
+                        axisLabel: {
+                            formatter: '{value} RMB'
+                        }
+                    }
+                ],
+                series: [
+                    { "name":"销量", "type":"bar", "data":[   5,   20,   40,   10,   10,  20] },
+                    { "name":"价格", "type":"line", "yAxisIndex":1, "data":[ 125,  260,  140,  110,  310,  10] },
+                    { "name":"利润", "type":"line", "yAxisIndex":2, "data":[ 200, 2400, 1600,  200, 2200, 100] }
+                ]
+            };
+    
+            // 为echarts对象加载数据 
+            myChart.setOption(option); 
+        }
+    </script>
+
+</body>

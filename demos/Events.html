@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="utf-8">
+	<title>ECharts</title>
+	<link rel="stylesheet" href="theme.css">
+	<style>#example { background: rgba(255,255,255, 0.96) !important;} #toolbox {top:22vh}</style>
+</head>
+<body class="half">
+	<!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+	<div id="example" style=""></div>
+
+	<!-- <script src="../echarts-2.2.7/build/dist/echarts-all.js"></script> -->
+	<script src="./echarts-4.2.1/dist/echarts.js"></script><script src="./utils.js"></script>
+	<script src="./echarts-4.2.1/dist/echarts-en.js"></script>
+	<!-- CDN 方式引入 -->
+	<!-- <script src="https://cdn.bootcss.com/echarts/4.2.1/echarts.min.js"></script> -->
+
+	<!-- 3D扩展 -->
+	<!-- <script src="./echarts-4.2.1/dist/echarts-gl.js"></script> -->
+
+	<!-- 需要百度地图与地图扩展 -->
+	<!-- <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=p1EQvKECSm8LMV249TxNB2dT"></script> -->
+	<!-- <script src="http://www.echartsjs.com/examples/vendors/echarts/extension/bmap.js?_v_=1536959211921"></script> -->
+	<!-- <script src="./echarts-4.2.1/dist/extension/bmap.js"></script> -->
+	
+	<!-- 使用旧版离线地图 -->
+	<script src="../map/js/world.js"></script>
+	<!-- <script src="../map/js/china.js"></script> -->
+	<!-- <script src="../map/js/province/guangdong.js"></script> -->
+
+	<script type="text/javascript">
+
+option = {
+    tooltip : {
+        trigger: 'axis'
+    },
+    legend: {
+        data:['最高','最低']
+    },
+    toolbox: {
+        show : true,
+        feature : {
+            mark : {show: true},
+            dataView : {readOnly:false},
+            magicType : {show: true, type: ['line', 'bar', 'stack', 'tiled']},
+            restore : {show: true},
+            saveAsImage : {show: true}
+        }
+    },
+    calculable : true,
+    dataZoom : {
+        show : true,
+        realtime : true,
+        start : 40,
+        end : 60
+    },
+    xAxis : [
+        {
+            type : 'category',
+            boundaryGap : true,
+            data : function (){
+                var list = [];
+                for (var i = 1; i <= 30; i++) {
+                    list.push('2013-03-' + i);
+                }
+                return list;
+            }()
+        }
+    ],
+    yAxis : [
+        {
+            type : 'value'
+        }
+    ],
+    series : [
+        {
+            name:'最高',
+            type:'line',
+            data:function (){
+                var list = [];
+                for (var i = 1; i <= 30; i++) {
+                    list.push(Math.round(Math.random()* 30) + 30);
+                }
+                return list;
+            }()
+        },
+        {
+            name:'最低',
+            type:'bar',
+            data:function (){
+                var list = [];
+                for (var i = 1; i <= 30; i++) {
+                    list.push(Math.round(Math.random()* 10));
+                }
+                return list;
+            }()
+        }
+    ]
+};
+function eConsole(param) {
+    var mes = '【' + param.type + '】';
+    if (typeof param.seriesIndex != 'undefined') {
+        mes += '  seriesIndex : ' + param.seriesIndex;
+        mes += '  dataIndex : ' + param.dataIndex;
+    }
+    if (param.type == 'hover') {
+        console.log('Event Console : ' + mes);
+    }
+    else {
+        console.log(mes);
+    }
+    console.log(param);
+}
+/*
+https://echarts.baidu.com/echarts2/doc/example/event.html
+https://echarts.baidu.com/echarts2/doc/doc.html
+var ecConfig = require('echarts/config');
+// -------全局通用
+REFRESH: 'refresh',
+RESTORE: 'restore',
+RESIZE: 'resize',
+CLICK: 'click',
+DBLCLICK: 'dblclick',
+HOVER: 'hover',
+MOUSEOUT: 'mouseout',
+// -------业务交互逻辑
+DATA_CHANGED: 'dataChanged',
+DATA_ZOOM: 'dataZoom',
+DATA_RANGE: 'dataRange',
+DATA_RANGE_HOVERLINK: 'dataRangeHoverLink',
+LEGEND_SELECTED: 'legendSelected',
+LEGEND_HOVERLINK: 'legendHoverLink',
+MAP_SELECTED: 'mapSelected',
+PIE_SELECTED: 'pieSelected',
+MAGIC_TYPE_CHANGED: 'magicTypeChanged',
+DATA_VIEW_CHANGED: 'dataViewChanged',
+TIMELINE_CHANGED: 'timelineChanged',
+MAP_ROAM: 'mapRoam',
+
+myChart.on(ecConfig.EVENT.CLICK, eConsole);
+myChart.on(ecConfig.EVENT.DBLCLICK, eConsole);
+//myChart.on(ecConfig.EVENT.HOVER, eConsole);
+myChart.on(ecConfig.EVENT.DATA_ZOOM, eConsole);
+myChart.on(ecConfig.EVENT.LEGEND_SELECTED, eConsole);
+myChart.on(ecConfig.EVENT.MAGIC_TYPE_CHANGED, eConsole);
+myChart.on(ecConfig.EVENT.DATA_VIEW_CHANGED, eConsole);
+*/
+
+        var myChart;
+        render(option)
+
+myChart.on('click', eConsole);
+myChart.on('dblclick', eConsole);
+myChart.on('hover', eConsole);
+myChart.on('datazoom', eConsole);
+myChart.on('legendSelected', eConsole);
+myChart.on('magicTypeChanged', eConsole);
+myChart.on('dataViewChanged', eConsole);
+// myChart.on('updateAxisPointer', eConsole);
+                    
+
+
+		myChart.on('click', "series", function (e) {
+				console.log("on series click", echarts.version, e);
+		});
+		myChart.on('geoselected', function (e) {
+				console.log("on geoselected", echarts.version, e);
+		});
+		myChart.on('legendselectchanged', function (e) {
+				console.log("on legendselectchanged", echarts.version, e);
+		});
+
+
+		// 图表渲染方法
+		function render(option) {
+				// 基于准备好的dom，初始化echarts图表
+				myChart = echarts.init(document.getElementById('example')); 
+				// 为echarts对象加载数据 
+				myChart.setOption(option);
+		}
+		</script>
+
+</body>

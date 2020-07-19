@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <title>ECharts</title>
+    <link rel="stylesheet" href="theme.css">
+    <style>#example { background: rgba(255,255,255, 0.96) !important; padding:20px 20px 0;} #toolbox {top:22vh}</style>
+</head>
+<body class="half">
+    <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+    <div id="example" style=""></div>
+
+    <!-- <script src="../echarts-2.2.7/build/dist/echarts-all.js"></script> -->
+    <script src="./echarts-4.2.1/dist/echarts.js"></script><script src="./utils.js"></script>
+    <!-- CDN 方式引入 -->
+    <!-- <script src="https://cdn.bootcss.com/echarts/4.2.1/echarts.min.js"></script> -->
+    <script type="text/javascript">
+
+    option = {
+        title : {
+            text: '某楼盘销售情况',
+            subtext: '纯属虚构'
+        },
+        tooltip : {
+            trigger: 'axis'
+        },
+        legend: {
+            data:['意向','预购','成交']
+        },
+        toolbox: {
+            show : true,
+            feature : {
+                mark : {show: true},
+                dataView : {show: true, readOnly: false},
+                magicType : {show: true, type: ['line', 'bar', 'stack', 'tiled']},
+                restore : {show: true},
+                saveAsImage : {show: true}
+            }
+        },
+        calculable : true,
+        xAxis : [
+            {
+                type : 'category',
+                boundaryGap : false,
+                data : ['周一','周二','周三','周四','周五','周六','周日']
+            }
+        ],
+        yAxis : [
+            {
+                type : 'value'
+            }
+        ],
+        series : [
+            {
+                name:'成交',
+                type:'line',
+                smooth:true,
+                itemStyle: {normal: {areaStyle: {type: 'default'}}},
+                data:[10, 12, 21, 54, 260, 830, 710]
+            },
+            {
+                name:'预购',
+                type:'line',
+                smooth:true,
+                itemStyle: {normal: {areaStyle: {type: 'default'}}},
+                data:[30, 182, 434, 791, 390, 30, 10]
+            },
+            {
+                name:'意向',
+                type:'line',
+                smooth:true,
+                itemStyle: {normal: {areaStyle: {type: 'default'}}},
+                data:[1320, 1132, 601, 234, 120, 90, 20]
+            }
+        ]
+    };
+
+    var myChart;
+    render(option)
+
+    // 图表渲染方法
+    function render(option) {
+        // 基于准备好的dom，初始化echarts图表
+        myChart = echarts.init(document.getElementById('example')); 
+        // 为echarts对象加载数据 
+        myChart.setOption(option);
+        myChart.on('click', 'series', function (e) {
+            console.log(echarts.version, e);
+        });
+    }
+    </script>
+
+</body>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html style="height: 100%">
+   <head>
+       <meta charset="utf-8">
+   </head>
+   <body style="height: 100%; margin: 0">
+       <div id="container" style="height: 100%"></div>
+
+        <link rel="stylesheet" href="theme.css">
+        <script src="./jquery.min.js"></script>
+        <script src="./utils.js"></script>
+
+        <script src="./echarts-4.2.1/dist/echarts.js"></script>
+        <script src="./echarts-gl-1.1.1/echarts-gl.min.js"></script>
+
+       <!-- 
+       <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/dist/echarts.min.js"></script>
+       <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts-stat/dist/ecStat.min.js"></script>
+       <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/dist/extension/dataTool.min.js"></script>
+       <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts-gl/dist/echarts-gl.min.js"></script>
+       <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/map/js/china.js"></script>
+       <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/map/js/world.js"></script>
+       <script type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&ak=xfhhaTThl11qYVrqLZii6w8qE5ggnhrY&__ec_v__=20190126"></script>
+       <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/dist/extension/bmap.min.js"></script>
+       
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/echarts.min.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts-gl/echarts-gl.min.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts-stat/ecStat.min.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/dataTool.min.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/china.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/world.js"></script>
+       <script type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&ak=xfhhaTThl11qYVrqLZii6w8qE5ggnhrY&__ec_v__=20190126"></script> 
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/bmap.min.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/simplex.js"></script>
+       -->
+
+       <script type="text/javascript">
+var dom = document.getElementById("container");
+var myChart = echarts.init(dom);
+var app = {};
+option = null;
+var json = 'https://echarts.apache.org/examples/data-gl/asset/data/internet.graph.json';
+json = 'data/internet.graph.json';
+$.getJSON(json, function (graph) {
+    var edges = graph.edges.map(function (edge) {
+        return {
+            source: edge[0],
+            target: edge[1],
+            value: 2
+        }
+    });
+    var categories = [];
+    var categoriesMap = {};
+    var nodes = graph.nodes.map(function (node) {
+        if (!categoriesMap[node[3]]) {
+            categories.push({
+                name: node[3]
+            });
+            categoriesMap[node[3]] = true;
+        }
+        return {
+            x: Math.random() * window.innerWidth,
+            y: Math.random() * window.innerHeight,
+            // x: node[0],
+            // y: node[1],
+            symbolSize: node[2],
+            category: node[3],
+            value: 1
+        }
+    });
+
+
+    myChart.setOption({
+        color: ["rgb(203,239,15)", "rgb(73,15,239)","rgb(239,231,15)","rgb(15,217,239)","rgb(30,15,239)","rgb(15,174,239)","rgb(116,239,15)","rgb(239,15,58)","rgb(15,239,174)","rgb(239,102,15)","rgb(239,15,15)","rgb(15,44,239)","rgb(239,145,15)","rgb(30,239,15)","rgb(239,188,15)","rgb(159,239,15)","rgb(159,15,239)","rgb(15,239,44)","rgb(15,239,87)","rgb(15,239,217)","rgb(203,15,239)","rgb(239,15,188)","rgb(239,15,102)","rgb(239,58,15)","rgb(239,15,145)","rgb(116,15,239)","rgb(15,131,239)","rgb(73,239,15)","rgb(15,239,131)","rgb(15,87,239)","rgb(239,15,231)"],
+        series: [{
+            type: 'graphGL',
+            nodes: nodes,
+            edges: edges,
+            categories: categories.sort(function (a, b) { return a.name - b.name; }),
+            lineStyle: {
+                color: 'rgba(255,255,255,0.2)'
+            },
+            itemStyle: {
+                opacity: 1
+            },
+            forceAtlas2: {
+                steps: 1,
+                stopThreshold: 1,
+                jitterTolerence: 10,
+                edgeWeight: [0.2, 1],
+                gravity: 0,
+                edgeWeightInfluence: 1,
+                scaling: 0.2
+            }
+        }]
+    });
+});;
+if (option && typeof option === "object") {
+    myChart.setOption(option, true);
+}
+       </script>
+   </body>
+</html>

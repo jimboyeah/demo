@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="utf-8">
+	<title>ECharts</title>
+	<link rel="stylesheet" href="theme.css">
+	<style>#example { background: rgba(255,255,255, 0.96) !important;} #toolbox {top:22vh}</style>
+</head>
+<body class="half">
+	<!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+	<div id="example" style=""></div>
+
+	<!-- <script src="../echarts-2.2.7/build/dist/echarts-all.js"></script> -->
+	<script src="./echarts-4.2.1/dist/echarts.js"></script><script src="./utils.js"></script>
+	<script src="./echarts-4.2.1/dist/echarts-en.js"></script>
+	<!-- CDN 方式引入 -->
+	<!-- <script src="https://cdn.bootcss.com/echarts/4.2.1/echarts.min.js"></script> -->
+
+	<!-- 3D扩展 -->
+	<!-- <script src="./echarts-4.2.1/dist/echarts-gl.js"></script> -->
+
+	<!-- 需要百度地图与地图扩展 -->
+	<!-- <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=p1EQvKECSm8LMV249TxNB2dT"></script> -->
+	<!-- <script src="http://www.echartsjs.com/examples/vendors/echarts/extension/bmap.js?_v_=1536959211921"></script> -->
+	<!-- <script src="./echarts-4.2.1/dist/extension/bmap.js"></script> -->
+	
+	<!-- 使用旧版离线地图 -->
+	<script src="../map/js/world.js"></script>
+	<!-- <script src="../map/js/china.js"></script> -->
+	<!-- <script src="../map/js/province/guangdong.js"></script> -->
+
+	<script type="text/javascript">
+
+// app.title = '多 Y 轴示例';
+
+var colors = ['#5793f3', '#d14a61', '#675bba'];
+
+option = {
+    color: colors,
+
+    tooltip: {
+        trigger: 'axis',
+        axisPointer: {
+            type: 'cross'
+        }
+    },
+    grid: {
+        right: '20%'
+    },
+    toolbox: {
+        feature: {
+            dataView: {show: true, readOnly: false},
+            restore: {show: true},
+            saveAsImage: {show: true}
+        }
+    },
+    legend: {
+        data:['蒸发量','降水量','平均温度']
+    },
+    xAxis: [
+        {
+            type: 'category',
+            axisTick: {
+                alignWithLabel: true
+            },
+            data: ['1月','2月','3月','4月','5月','6月','7月','8月','9月','10月','11月','12月']
+        }
+    ],
+    yAxis: [
+        {
+            type: 'value',
+            name: '蒸发量',
+            min: 0,
+            max: 250,
+            position: 'right',
+            axisLine: {
+                lineStyle: {
+                    color: colors[0]
+                }
+            },
+            axisLabel: {
+                formatter: '{value} ml'
+            }
+        },
+        {
+            type: 'value',
+            name: '降水量',
+            min: 0,
+            max: 250,
+            position: 'right',
+            offset: 80,
+            axisLine: {
+                lineStyle: {
+                    color: colors[1]
+                }
+            },
+            axisLabel: {
+                formatter: '{value} ml'
+            }
+        },
+        {
+            type: 'value',
+            name: '温度',
+            min: 0,
+            max: 25,
+            position: 'left',
+            axisLine: {
+                lineStyle: {
+                    color: colors[2]
+                }
+            },
+            axisLabel: {
+                formatter: '{value} °C'
+            }
+        }
+    ],
+    series: [
+        {
+            name:'蒸发量',
+            type:'bar',
+            data:[2.0, 4.9, 7.0, 23.2, 25.6, 76.7, 135.6, 162.2, 32.6, 20.0, 6.4, 3.3]
+        },
+        {
+            name:'降水量',
+            type:'bar',
+            yAxisIndex: 1,
+            data:[2.6, 5.9, 9.0, 26.4, 28.7, 70.7, 175.6, 182.2, 48.7, 18.8, 6.0, 2.3]
+        },
+        {
+            name:'平均温度',
+            type:'line',
+            yAxisIndex: 2,
+            data:[2.0, 2.2, 3.3, 4.5, 6.3, 10.2, 20.3, 23.4, 23.0, 16.5, 12.0, 6.2]
+        }
+    ]
+};
+
+
+// import React, { Component } from 'react';
+// impott Echarts from 'echart-for-react';
+// export default class Map extends Component {
+
+//   static displayName = 'Map';
+//   static propTypes = {};
+//   static defaultProps = {};
+
+//   constructor(props) {
+//     super(props);
+//     this.state = {};
+//   }
+
+//   onSelect = (e) => {
+//     console.log("onSelect...", e);
+//   }
+    
+//   onClick = (e) => {
+//     console.log("onClick...", e);
+//   }
+    
+//   onlegendselectchanged = (e) => {
+//     console.log("onlegendselectchanged...", e);
+//   }
+
+//   render() {
+//     let handlers = { geoselected: this.onSelect, click: this.onClick };
+//     return (
+//       <Echarts onEvents={handlers} option={option} style={{ height: '650px' }} />
+//     );
+//   }
+// }
+// 
+// export default Map
+
+
+		var myChart;
+		render(option)
+
+		myChart.on('click', "series", function (e) {
+				console.log("on series click", echarts.version, e);
+		});
+		myChart.on('geoselected', function (e) {
+				console.log("on geoselected", echarts.version, e);
+		});
+		myChart.on('legendselectchanged', function (e) {
+				console.log("on legendselectchanged", echarts.version, e);
+		});
+
+
+		// 图表渲染方法
+		function render(option) {
+				// 基于准备好的dom，初始化echarts图表
+				myChart = echarts.init(document.getElementById('example')); 
+				// 为echarts对象加载数据 
+				myChart.setOption(option);
+		}
+		</script>
+
+</body>

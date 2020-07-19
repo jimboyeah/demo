@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <title>ECharts</title>
+    <link rel="stylesheet" href="theme.css">
+    <style>#example { background: rgba(255,255,255, 0.96) !important;} #toolbox {top:22vh}</style>
+</head>
+<body class="half">
+    <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+    <div id="example" style=""></div>
+
+    <!-- <script src="../echarts-2.2.7/build/dist/echarts-all.js"></script> -->
+    <script src="./echarts-4.2.1/dist/echarts.js"></script><script src="./utils.js"></script>
+    <script src="./echarts-4.2.1/dist/echarts-en.js"></script>
+    <!-- CDN 方式引入 -->
+    <!-- <script src="https://cdn.bootcss.com/echarts/4.2.1/echarts.min.js"></script> -->
+
+    <!-- 需要3D扩展 -->
+    <script src="./echarts-4.2.1/dist/echarts-gl.js"></script>
+
+
+    <script type="text/javascript">
+
+    // import React, { Component, PropTypes } from 'react';
+    // import echarts from 'echarts';
+    // import echarts from 'echarts-gl'
+    // import bmap from 'echarts/extension/bmap/bmap';
+
+var xAxisData = [];
+var data1 = [];
+var data2 = [];
+for (var i = 0; i < 100; i++) {
+    xAxisData.push('类目' + i);
+    data1.push((Math.sin(i / 5) * (i / 5 -10) + i / 6) * 5);
+    data2.push((Math.cos(i / 5) * (i / 5 -10) + i / 6) * 5);
+}
+
+option = {
+    title: {
+        text: '柱状图动画延迟'
+    },
+    legend: {
+        data: ['bar', 'bar2'],
+        align: 'left'
+    },
+    toolbox: {
+        // y: 'bottom',
+        feature: {
+            magicType: {
+                type: ['stack', 'tiled']
+            },
+            dataView: {},
+            saveAsImage: {
+                pixelRatio: 2
+            }
+        }
+    },
+    tooltip: {},
+    xAxis: {
+        data: xAxisData,
+        silent: false,
+        splitLine: {
+            show: false
+        }
+    },
+    yAxis: {
+    },
+    series: [{
+        name: 'bar',
+        type: 'bar',
+        data: data1,
+        animationDelay: function (idx) {
+            return idx * 10;
+        }
+    }, {
+        name: 'bar2',
+        type: 'bar',
+        data: data2,
+        animationDelay: function (idx) {
+            return idx * 10 + 100;
+        }
+    }],
+    animationEasing: 'elasticOut',
+    animationDelayUpdate: function (idx) {
+        return idx * 5;
+    }
+};
+
+    var myChart;
+    render(option)
+
+    myChart.on('click', 'series', function (e) {
+        console.log("on series click", echarts.version, e);
+    });
+    myChart.on('dblclick', 'series', function (e) {
+        console.log("on series dblclick", echarts.version, e);
+    });
+
+
+    // 图表渲染方法
+    function render(option) {
+        // 基于准备好的dom，初始化echarts图表
+        myChart = echarts.init(document.getElementById('example')); 
+        // 为echarts对象加载数据 
+        myChart.setOption(option);
+    }
+    </script>
+
+</body>
