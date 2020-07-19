@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title> Hello BizCharts for React! </title>
+        <script src="../js/react.development.js"> </script>
+        <script src="../js/react-dom.development.js"> </script>
+        <script src="../js/babel.min.js"> </script>
+        <script src="../js/data-set.min.js"></script>
+        <script src="../js/bizCharts-3.5.8/BizCharts.min.js"></script>
+        <!-- 
+        <script src="../js/BizCharts.min.js"></script>
+        <script src="../js/jquery.min.js"></script>
+        <script src="../js/bizcharts-plugin-slider.js"></script>
+        <script src="../js/numeral.min.js"></script>
+        <script src="../js/polyfill.min.js"></script>
+        <script src="https://unpkg.com/bizcharts-plugin-slider@2.0.0/umd/bizcharts-plugin-slider.js"></script>
+        <script src="https://cdn.staticfile.org/react/16.4.0/umd/react.development.js"> </script> 
+        <script src="https://cdn.staticfile.org/react-dom/16.4.0/umd/react-dom.development.js"> </script>
+        <script src="https://cdn.staticfile.org/babel-standalone/6.26.0/babel.min.js"> </script>
+        <script src="https://unpkg.com/bizcharts@3.3.0/umd/BizCharts.min.js"></script>
+        -->
+        <link rel="stylesheet" href="theme.css">
+        <style>#example { background:_white; }</style>
+        <script>
+            document.onclick = function(e){
+                // document.body.className = document.body.className?"":"half" 
+                render();
+            }
+        </script>
+    </head>
+    <body class="half">
+        <div id="example"> </div>
+        <script src="./utils.js"> </script>
+
+    </body>
+</html>
+
+<script type="text/babel">
+    // import {Component} from 'react';
+    let Component = React.Component;
+    
+    // import { Chart, Axis, Legend, Tooltip, Geom } from 'bizcharts';
+    // bizUtil.setTheme('dark');
+    BizCharts.setTheme('dark');
+
+    var 
+    Axis = BizCharts.Axis,
+    Chart = BizCharts.Chart,
+    Coord = BizCharts.Coord,
+    Facet = BizCharts.Facet,
+    G2 = BizCharts.G2,
+    Geom = BizCharts.Geom,
+    Guide = BizCharts.Guide,
+    Label = BizCharts.Label,
+    Legend = BizCharts.Legend,
+    Line = BizCharts.Line,
+    Shape = BizCharts.Shape,
+    Tooltip = BizCharts.Tooltip,
+    Util = BizCharts.Util,
+    View = BizCharts.View;
+</script>
+
+<script type="text/babel">
+// import React from "react";
+// import {G2, Chart, Geom, Axis, Tooltip, Coord, Label, Legend, View, Guide, Shape, Facet, Util } from "bizcharts";
+// import DataSet from "@antv/data-set";
+
+class Innerlabel extends React.Component {
+  render() {
+    const { DataView } = DataSet;
+    const data = [
+      {item: "事例一", count: 40 },
+      {item: "事例二", count: 21 },
+      {item: "事例三", count: 17 },
+      {item: "事例四", count: 13 },
+      {item: "事例五", count: 9 }
+    ];
+    const dv = new DataView();
+    dv.source(data).transform({
+      type: "percent",
+      field: "count",
+      dimension: "item",
+      as: "percent"
+    });
+    const cols = {
+      percent: {
+        formatter: val => {
+          val = val * 100 + "%";
+          return val;
+        }
+      }
+    };
+    return (
+      <div>
+        <Chart
+          height={getRootHeight()}
+          data={dv}
+          scale={cols}
+          padding={[40]}
+          forceFit
+        >
+          <Coord type="theta" radius={0.75} />
+          <Axis name="percent" />
+          <Legend
+            textStyle={{fill:"white"}}
+            position="right"
+            offsetY={-getRootHeight() / 2 + 100}
+            offsetX={-60}
+          />
+          <Tooltip
+            showTitle={false}
+            itemTpl="<li style='color:{color};'><span style=&quot;background-color:{color};&quot; class=&quot;g2-tooltip-marker&quot;></span>{name}: {value}</li>"
+          />
+          <Geom
+            type="intervalStack"
+            position="percent"
+            color="item"
+            tooltip={[
+              "item*percent",
+              (item, percent) => {
+                percent = percent * 100 + "%";
+                return {
+                  name: item,
+                  value: percent
+                };
+              }
+            ]}
+            style={{
+              lineWidth: 1,
+              stroke: "#fff"
+            }}
+          >
+            <Label
+              content="percent"
+              offset={-80}
+              textStyle={{
+                fill:"white",
+                rotate: 0,
+                textAlign: "right",
+                shadowBlur: 2,
+                shadowColor: "rgba(0, 0, 0, .45)"
+              }}
+            />
+          </Geom>
+        </Chart>
+      </div>
+    );
+  }
+}
+
+// export default Innerlabel;
+// ReactDOM.render(<Innerlabel />, mountNode)
+
+</script>
+
+
+<script type="text/babel">
+    const root = document.getElementById('example')
+    function getRootHeight(){ //window.innerHeight
+        let height = window.getComputedStyle(root).height;
+        console.log("getComputedStyle", height, this);
+        return parseInt(height);
+    }
+    function render(){
+        ReactDOM.render(
+            <Innerlabel /> , root
+        );
+    }
+    window.onresize = function(e){
+        render();
+    }
+    render();
+</script>

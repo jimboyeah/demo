@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title> Hello BizCharts for React! </title>
+        <script src="../js/react.development.js"> </script>
+        <script src="../js/react-dom.development.js"> </script>
+        <script src="../js/babel.min.js"> </script>
+        <script src="../js/BizCharts.min.js"></script>
+        <!-- <script src="https://cdn.staticfile.org/react/16.4.0/umd/react.development.js"> </script> -->
+        <!-- <script src="https://cdn.staticfile.org/react-dom/16.4.0/umd/react-dom.development.js"> </script> -->
+        <!-- <script src="https://cdn.staticfile.org/babel-standalone/6.26.0/babel.min.js"> </script> -->
+        <!-- <script src="https://unpkg.com/bizcharts@3.3.0/umd/BizCharts.min.js"></script> -->
+        <link rel="stylesheet" href="theme.css">
+        <script>
+            document.onclick = function(e){
+                // document.body.className = document.body.className?"":"half" 
+                render();
+            }
+        </script>
+    </head>
+    <body class="half">
+        <div id="example"> </div>
+        <script src="./utils.js"> </script>
+
+    </body>
+</html>
+
+<script type="text/babel">
+    // import {Component} from 'react';
+    // let Component = React.Component;
+    
+    // import { Chart, Axis, Legend, Tooltip, Geom } from 'bizcharts';
+    // bizUtil.setTheme('dark');
+    BizCharts.setTheme('dark');
+
+    var 
+    Axis = BizCharts.Axis,
+    Chart = BizCharts.Chart,
+    Coord = BizCharts.Coord,
+    Facet = BizCharts.Facet,
+    G2 = BizCharts.G2,
+    Geom = BizCharts.Geom,
+    Guide = BizCharts.Guide,
+    Label = BizCharts.Label,
+    Legend = BizCharts.Legend,
+    Line = BizCharts.Line,
+    Shape = BizCharts.Shape,
+    Tooltip = BizCharts.Tooltip,
+    Util = BizCharts.Util,
+    View = BizCharts.View;
+</script>
+
+<script type="text/babel">
+// data-set 可以按需引入，除此之外不要引入别的包
+// import React from 'react';
+// import { Chart, Axis, Coord, Geom, Guide, Shape } from 'bizcharts';
+
+const { Html, Arc } = Guide;
+
+// 下面的代码会被作为 cdn script 注入 注释勿删
+// CDN START
+function creatData() {
+  const data = [];
+  let val = Math.random() * 6;
+  val = val.toFixed(1);
+  data.push({ value: val * 1 });
+  return data;
+}
+
+let data = creatData();
+
+
+// 自定义Shape 部分
+Shape.registerShape('point', 'pointer', {
+  drawShape(cfg, group) {
+    let point = cfg.points[0]; // 获取第一个标记点
+    point = this.parsePoint(point);
+    const center = this.parsePoint({ // 获取极坐标系下画布中心点
+      x: 0,
+      y: 0,
+    });
+    // 绘制指针
+    group.addShape('line', {
+      attrs: {
+        x1: center.x,
+        y1: center.y,
+        x2: point.x,
+        y2: point.y,
+        stroke: cfg.color,
+        lineWidth: 5,
+        lineCap: 'round',
+      },
+    });
+    return group.addShape('circle', {
+      attrs: {
+        x: center.x,
+        y: center.y,
+        r: 12,
+        stroke: cfg.color,
+        lineWidth: 4.5,
+        fill: '#fff',
+      },
+    });
+  },
+});
+
+const color = ['#0086FA', '#FFBF00', '#F5222D'];
+const cols = {
+  value: {
+    min: 0,
+    max: 6,
+    tickInterval: 1,
+    nice: false,
+  },
+};
+
+class GaugeColor extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      data,
+      lineWidth: 25,
+    };
+  }
+
+  componentDidMount() {
+    const self = this;
+    setInterval(() => {
+      data = creatData();
+      self.setState({
+        data,
+      });
+    }, 1000);
+  }
+
+  render() {
+    const { lineWidth } = this.state;
+    const val = this.state.data[0].value;
+    return (
+      <Chart heightFix={window.innerHeight} plotBackground={{fill:"white"}} background={{fill:"white"}} data={this.state.data} scale={cols} padding={[0, 0, 200, 0]} forceFit>
+        <Coord type="polar" startAngle={-9 / 8 * Math.PI} endAngle={1 / 8 * Math.PI} radius={0.75} />
+        <Axis
+          name="value"
+          zIndex={2}
+          line={null}
+          label={{
+            offset: -20,
+            textStyle: {
+              fontSize: 18,
+              fill: '#CBCBCB',
+              textAlign: 'center',
+              textBaseline: 'middle',
+            },
+          }}
+          tickLine={{
+            length: -24,
+            stroke: '#fff',
+            strokeOpacity: 1,
+          }}
+        />
+        <Axis name="1" visible={false} />
+        <Guide>
+          <Arc zIndex={0} start={[0, 0.965]} end={[6, 0.965]} style={{stroke: 'rgba(0, 0, 0, 0.09)', lineWidth, }} />
+          { val >= 2 &&            <Arc zIndex={1} start={[0, 0.965]} end={[val, 0.965]} style={{stroke: color[0], lineWidth, }} />}
+          { val >= 4 &&            <Arc zIndex={1} start={[2, 0.965]} end={[4, 0.965]}   style={{stroke: color[1], lineWidth, }} />}
+          { val >= 4 && val < 6 && <Arc zIndex={1} start={[4, 0.965]} end={[val, 0.965]} style={{stroke: color[2], lineWidth, }} />}
+          { val >= 2 && val < 4 && <Arc zIndex={1} start={[2, 0.965]} end={[val, 0.965]} style={{stroke: color[1], lineWidth, }} />}
+          { val <  2 &&            <Arc zIndex={1} start={[0, 0.965]} end={[val, 0.965]} style={{stroke: color[0], lineWidth, }} />}
+          <Html
+            position={['50%', '95%']}
+            html={() => (`<div style="width: 300px;text-align: center;font-size: 12px!important;"><p style="font-size: 1.75em; color: rgba(255,0,0,0.73);margin: 0;">合格率</p><p style="font-size: 3em;color: rgba(255,0,0.73);margin: 0;">${val * 10}%</p></div>`)}
+          />
+        </Guide>
+        <Geom
+          type="point"
+          position="value*1"
+          shape="pointer"
+          color="#1890FF"
+          active={false}
+          style={{ stroke: '#fff', lineWidth: 1 }}
+        />
+      </Chart>
+    );
+  }
+}
+
+
+</script>
+
+<script type="text/babel">
+    function render(){
+        ReactDOM.render(
+            <GaugeColor /> , document.getElementById('example')
+        );
+    }
+    render();
+</script>

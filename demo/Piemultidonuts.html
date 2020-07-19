@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title> Hello BizCharts for React! </title>
+        <script src="../js/react.development.js"> </script>
+        <script src="../js/react-dom.development.js"> </script>
+        <script src="../js/babel.min.js"> </script>
+        <script src="../js/BizCharts.min.js"></script>
+        <script src="../js/data-set.min.js"></script>
+        <script src="../js/jquery.min.js"></script>
+
+        <!-- 
+        <script src="../js/bizcharts-plugin-slider.js"></script>
+        <script src="../js/numeral.min.js"></script>
+        <script src="../js/polyfill.min.js"></script>
+        <script src="https://unpkg.com/bizcharts-plugin-slider@2.0.0/umd/bizcharts-plugin-slider.js"></script>
+        <script src="https://cdn.staticfile.org/react/16.4.0/umd/react.development.js"> </script> 
+        <script src="https://cdn.staticfile.org/react-dom/16.4.0/umd/react-dom.development.js"> </script>
+        <script src="https://cdn.staticfile.org/babel-standalone/6.26.0/babel.min.js"> </script>
+        <script src="https://unpkg.com/bizcharts@3.3.0/umd/BizCharts.min.js"></script>
+        -->
+        <link rel="stylesheet" href="theme.css">
+        <style>#example { background:_white; }</style>
+        <script>
+
+            document.onclick = function(e){
+                // document.body.className = document.body.className?"":"half" 
+                render();
+            }
+        </script>
+    </head>
+    <body class="half">
+        <div id="example"> </div>
+        <script src="./utils.js"> </script>
+
+    </body>
+</html>
+
+<script type="text/babel">
+    // import {Component} from 'react';
+    let Component = React.Component;
+    
+    // import { Chart, Axis, Legend, Tooltip, Geom } from 'bizcharts';
+    // bizUtil.setTheme('dark');
+    BizCharts.setTheme('dark');
+
+    var 
+    Axis = BizCharts.Axis,
+    Chart = BizCharts.Chart,
+    Coord = BizCharts.Coord,
+    Facet = BizCharts.Facet,
+    G2 = BizCharts.G2,
+    Geom = BizCharts.Geom,
+    Guide = BizCharts.Guide,
+    Label = BizCharts.Label,
+    Legend = BizCharts.Legend,
+    Line = BizCharts.Line,
+    Shape = BizCharts.Shape,
+    Tooltip = BizCharts.Tooltip,
+    Util = BizCharts.Util,
+    View = BizCharts.View;
+</script>
+
+<script type="text/babel">
+// import $ from "jquery";
+// import React from "react";
+// import {G2, Chart, Geom, Axis, Tooltip, Coord, Label, Legend, View, Guide, Shape, Facet, Util } from "bizcharts";
+// import DataSet from "@antv/data-set";
+
+let data;
+$.ajax({
+  url: "../imgs/mock-g2-pie-multi-donuts-0.2.7.json",
+  url: "https://alifd.alibabausercontent.com/materials/@bizcharts/g2-pie-multi-donuts/0.2.7/mock.json",
+  async : false,
+  success: (iData) => { data = iData }
+});
+
+function getComponent(data) {
+  const dv = new DataSet.View().source(data);
+  dv.transform({
+    type: "fold",
+    fields: ["小于5岁", "5至13岁", "14至17岁"],
+    // 展开字段集
+    key: "age",
+    value: "count"
+  }).transform({
+    type: "percent",
+    field: "count",
+    dimension: "age",
+    groupBy: ["state"],
+    as: ["percent"]
+  });
+
+  class SliderChart extends React.Component {
+    render() {
+      return (
+        <Chart height={getRootHeight()} data={dv} forceFit padding={40}>
+          <Tooltip />
+          <Facet
+            type="list"
+            cols={9}
+            fields={["state"]}
+            showTitle={false}
+            padding={0}
+            eachView={(view, facet) => {
+              view.coord("theta", {
+                radius: 0.8,
+                innerRadius: 0.6
+              });
+              view
+                .intervalStack()
+                .position("percent")
+                .color("age");
+              view.guide().html({
+                position: ["50%", "50%"],
+                html:
+                  '<div style="color:#8c8c8c;font-size: 14px;text-align: center;width: 10em;">' +
+                  facet.data[0].state +
+                  "</div>",
+                alignX: "middle",
+                alignY: "middle"
+              });
+            }}
+          />
+        </Chart>
+      );
+    }
+  }
+  return SliderChart;
+}
+
+class Piemultidonuts extends React.Component {
+  render() {
+    const SliderChart = getComponent(data);
+    return (
+      <div>
+        <SliderChart />
+      </div>
+    );
+  }
+}
+
+// ReactDOM.render(<Piemultidonuts />, mountNode)
+
+
+</script>
+
+
+<script type="text/babel">
+    const root = document.getElementById('example')
+    function getRootHeight(){ //window.innerHeight
+        let height = window.getComputedStyle(root).height;
+        console.log("getComputedStyle", height, this);
+        return parseInt(height);
+    }
+    function render(){
+        ReactDOM.render(
+            <Piemultidonuts /> , root
+        );
+    }
+    window.onresize = function(e){
+        render();
+    }
+    render();
+</script>

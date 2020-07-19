@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title> Hello BizCharts for React! </title>
+        <script src="../js/utils.js"> </script>
+        <script src="../js/react.development.js"> </script>
+        <script src="../js/react-dom.development.js"> </script>
+        <script src="../js/babel.min.js"> </script>
+        <script src="../js/BizCharts-3.3.0.min.js"></script>
+        <script src="../js/data-set.min.js"></script>
+        <script src="../js/jquery.min.js"></script>
+        <!-- 
+        <script src="../js/bizcharts-plugin-slider.js"></script>
+        <script src="../js/numeral.min.js"></script>
+        <script src="../js/polyfill.min.js"></script>
+        <script src="https://unpkg.com/bizcharts-plugin-slider@2.0.0/umd/bizcharts-plugin-slider.js"></script>
+        <script src="https://cdn.staticfile.org/react/16.4.0/umd/react.development.js"> </script> 
+        <script src="https://cdn.staticfile.org/react-dom/16.4.0/umd/react-dom.development.js"> </script>
+        <script src="https://cdn.staticfile.org/babel-standalone/6.26.0/babel.min.js"> </script>
+        <script src="https://unpkg.com/bizcharts@3.3.4/umd/BizCharts.min.js"></script>
+        -->
+        <link rel="stylesheet" href="theme.css">
+        <style>#example { background:_white; } #toolbox {top:22vh}</style>
+    </head>
+    <body class="half">
+        <div id="example"> </div>
+        <script src="./utils.js"> </script>
+
+    </body>
+</html>
+
+<script type="text/babel">
+    // import {Component} from 'react';
+    let Component = React.Component;
+    
+    // import { Chart, Axis, Legend, Tooltip, Geom } from 'bizcharts';
+    // bizUtil.setTheme('dark');
+    BizCharts.setTheme('dark');
+
+    var 
+    Axis = BizCharts.Axis,
+    Chart = BizCharts.Chart,
+    Coord = BizCharts.Coord,
+    Facet = BizCharts.Facet,
+    G2 = BizCharts.G2,
+    Geom = BizCharts.Geom,
+    Guide = BizCharts.Guide,
+    Label = BizCharts.Label,
+    Legend = BizCharts.Legend,
+    Line = BizCharts.Line,
+    Shape = BizCharts.Shape,
+    Tooltip = BizCharts.Tooltip,
+    Util = BizCharts.Util,
+    View = BizCharts.View;
+</script>
+
+<script type="text/babel">
+// import $ from "jquery";
+// import React from 'react';
+// import { Chart, View, Geom } from 'bizcharts';
+// import DataSet from '@antv/data-set';
+let data;
+$.ajax({
+  url: "../imgs/mock-map-hex-choropleth-map-0.1.7.json",
+  url: "https://alifd.alibabausercontent.com/materials/@bizcharts/map-hex-choropleth-map/0.1.7/mock.json",
+  async : false,
+  success: (iData) => { data = iData }
+});
+
+
+function addPoint(collection, point) {
+  const count = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 1;
+
+  for (let i = 0; i < count; i++) {
+    collection.push(point);
+  }
+}
+
+function getCount(x, y, medianX, medianY) {
+  const distance = Math.pow(x - medianX, 2) + Math.pow(y - medianY, 2);
+  if (distance < 4) {
+    return 3;
+  } else if (distance < 16) {
+    return 3;
+  } else if (distance < 64) {
+    return 2;
+  }
+  return 1;
+}
+
+const geoDv = new DataSet.View().source(data, {
+  type: 'GeoJSON',
+});
+// console.log(GeoJSON);
+const ranges = {
+  lat: geoDv.range('latitude'),
+  lon: geoDv.range('longitude'),
+};
+const medians = {
+  lat: geoDv.median('latitude'),
+  lon: geoDv.median('longitude'),
+};
+
+// console.log(ranges, medians);
+const userData = [];
+for (let lon = ranges.lon[0]; lon <= ranges.lon[1]; lon += 0.5) {
+  for (let lat = ranges.lat[0]; lat <= ranges.lat[1]; lat += 0.5) {
+    if (geoDv.geoContains(data, [lon, lat])) {
+      addPoint(userData, {
+        latitude: lat,
+        longitude: lon,
+      }, getCount(lon, lat, medians.lon, medians.lat));
+    }
+  }
+}
+// console.log(userData);
+const userDv = new DataSet.View().source(userData).transform({
+  // sizeByCount: true,
+  type: 'bin.hexagon',
+  fields: ['longitude', 'latitude'],
+  binWidth: [2, 3],
+  as: ['longitude', 'latitude', 'count'],
+});
+// console.log(userDv);
+
+const scale = {
+  latitude: {
+    sync: true,
+    nice: false,
+  },
+  longitude: {
+    sync: true,
+    nice: false,
+  },
+};
+
+class Demo extends React.Component {
+  render() {
+    return (
+      <Chart height={getRootHeight()} scale={scale} forceFit padding={[60, 10]}>
+        {/* // geo view */}
+        <View data={geoDv}>
+          <Geom type="polygon" position="longitude*latitude" color="grey" opacity={0.3} />
+        </View>
+        {/* // user view */}
+        <View data={userDv}>
+          <Geom
+            type={window.GEOMTYPE||"polygon"}
+            adjust={window.GEOMTYPEADJUST||""}
+            position="longitude*latitude"
+            color={['count', '#BAE7FF-#1890FF-#0050B3']}
+            size={getRootHeight() / 20}
+            style={{
+              lineWidth: 10,
+              stroke: 'white',
+            }}
+          />
+        </View>
+      </Chart>
+    );
+  }
+}
+
+// CDN END
+// ReactDOM.render(<Demo />, mountNode)
+
+// export default Labelline;
+// var Demo = Labelline
+
+</script>
+
+
+<script type="text/babel">
+          // <Tooltip
+          //   containerTpl='<div class="g2-tooltip">
+          //   <div class="g2-tooltip-title" style="margin:10px 0;color:black;"></div>
+          //   <ul class="g2-tooltip-list" style="color:black;"></ul>
+          // </div>' />
+          // <Geom
+          //   type={window.GEOMTYPE||"intervalStack"}
+          //   adjust={window.GEOMTYPEADJUST||""}
+          // />
+    function render(){
+        ReactDOM.render(
+            <Demo /> , root
+        );
+    }
+    var GEOMTYPES = [
+        "area", 
+        "edge",
+        // "heatmap",
+        "interval", 
+        // "line", 
+        // "path", 
+        // "point", 
+        // "polygon", 
+        // "schema", 
+        "areaStack",
+        // "intervalDodge", 
+        "intervalStack", 
+        "intervalSymmetric", 
+        // "pointDodge", 
+        // "pointJitter", 
+        "pointStack", 
+        // "schemaDodge"
+    ];
+    let GEOMADJUSTTYPES = [
+        'stack',
+        // 'dodge',
+        'jitter',
+        'symmetric'
+    ];
+    const root = document.getElementById('example')
+    function getRootHeight(){ //window.innerHeight
+        let height = window.getComputedStyle(root).height;
+        console.log("getComputedStyle", height, this);
+        return parseInt(height);
+    }
+    document.onclick = function(e){
+        // document.body.className = document.body.className?"":"half" 
+        render();
+        return true;
+    }
+    window.onresize = function(e){
+        render();
+    }
+    render();
+</script>

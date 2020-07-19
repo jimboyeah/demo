@@ -1,0 +1,64 @@
+{
+	"build_systems":
+	[
+		{
+			"encoding": "gkb",
+			"env":
+			{
+				"PATH": "c:/CodeBlocks/MinGW/bin/;%PATH%"
+			},
+			"file_regex": "^  (.+)\\((\\d+)\\)(): ((?:fatal )?(?:error|warning) \\w+\\d\\d\\d\\d: .*) \\[.*$",
+			"name": "Git Demo",
+			"quiet": true,
+			"shell_cmd": "git status",
+			"variants":
+			[
+				{
+					"name": "Git help",
+					"shell_cmd": "git --help"
+				},
+				{
+					"name": "Git Origin attach",
+					"shell_cmd": "git remote add origin https://github.com/jimboyeah/demo.git"
+				},
+				{
+					"name": "Branch List",
+					"shell_cmd": "git branch -a"
+				},
+				{
+					"name": "Branch List remote",
+					"shell_cmd": "git branch -r --list"
+				},
+				{
+					"name": "git show",
+					"shell_cmd": "git show"
+				}
+			],
+			"working_dir": "${project_path}"
+		}
+	],
+	"folders":
+	[
+		{
+			"binary_file_patterns":
+			[
+				"*.noting"
+			],
+			"name": "Demo Project",
+			"path": "."
+		},
+		{
+			"path": "C:\\coding\\md-code\\cppDemos"
+		},
+		{
+			"path": "C:\\coding\\md-code\\dllDemo"
+		}
+	],
+	"settings":
+	{
+		"cmake":
+		{
+			"build_folder": "${project_path}"
+		}
+	}
+}

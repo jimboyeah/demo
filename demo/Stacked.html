@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title> Hello BizCharts for React! </title>
+        <script src="../js/utils.js"> </script>
+        <script src="../js/react.development.js"> </script>
+        <script src="../js/react-dom.development.js"> </script>
+        <script src="../js/babel.min.js"> </script>
+        <script src="../js/BizCharts-3.3.0.min.js"></script>
+        <script src="../js/data-set.min.js"></script>
+        <script src="../js/jquery.min.js"></script>
+        <!-- 
+        <script src="../js/bizcharts-plugin-slider.js"></script>
+        <script src="../js/numeral.min.js"></script>
+        <script src="../js/polyfill.min.js"></script>
+        <script src="https://unpkg.com/bizcharts-plugin-slider@2.0.0/umd/bizcharts-plugin-slider.js"></script>
+        <script src="https://cdn.staticfile.org/react/16.4.0/umd/react.development.js"> </script> 
+        <script src="https://cdn.staticfile.org/react-dom/16.4.0/umd/react-dom.development.js"> </script>
+        <script src="https://cdn.staticfile.org/babel-standalone/6.26.0/babel.min.js"> </script>
+        <script src="https://unpkg.com/bizcharts@3.3.4/umd/BizCharts.min.js"></script>
+        -->
+        <link rel="stylesheet" href="theme.css">
+        <style>#example { background:_white; }</style>
+    </head>
+    <body class="half">
+        <div id="example"> </div>
+        <script src="./utils.js"> </script>
+
+    </body>
+</html>
+
+<script type="text/babel">
+    // import {Component} from 'react';
+    let Component = React.Component;
+    
+    // import { Chart, Axis, Legend, Tooltip, Geom } from 'bizcharts';
+    // bizUtil.setTheme('dark');
+    BizCharts.setTheme('dark');
+
+    var 
+    Axis = BizCharts.Axis,
+    Chart = BizCharts.Chart,
+    Coord = BizCharts.Coord,
+    Facet = BizCharts.Facet,
+    G2 = BizCharts.G2,
+    Geom = BizCharts.Geom,
+    Guide = BizCharts.Guide,
+    Label = BizCharts.Label,
+    Legend = BizCharts.Legend,
+    Line = BizCharts.Line,
+    Shape = BizCharts.Shape,
+    Tooltip = BizCharts.Tooltip,
+    Util = BizCharts.Util,
+    View = BizCharts.View;
+</script>
+
+<script type="text/babel">
+// import React from "react";
+// import {G2, Chart, Geom, Axis, Tooltip, Coord, Label, Legend, View, Guide, Shape, Facet, Util } from "bizcharts";
+// import DataSet from "@antv/data-set";
+
+class Stacked extends React.Component {
+  render() {
+    const data = [
+      {State: "WY", 小于5岁: 25635, "5至13岁": 1890, "14至17岁": 9314 },
+      {State: "DC", 小于5岁: 30352, "5至13岁": 20439, "14至17岁": 10225 },
+      {State: "VT", 小于5岁: 38253, "5至13岁": 42538, "14至17岁": 15757 },
+      {State: "ND", 小于5岁: 51896, "5至13岁": 67358, "14至17岁": 18794 },
+      {State: "AK", 小于5岁: 72083, "5至13岁": 85640, "14至17岁": 22153 }
+    ];
+    const ds = new DataSet();
+    const dv = ds.createView().source(data);
+    dv.transform({
+      type: "fold",
+      fields: ["小于5岁", "5至13岁", "14至17岁"],
+      // 展开字段集
+      key: "年龄段",
+      // key字段
+      value: "人口数量",
+      // value字段
+      retains: ["State"] // 保留字段集，默认为除fields以外的所有字段
+    });
+    return (
+      <div>
+        <Chart height={getRootHeight()} padding={[40, 40, 80]} data={dv} forceFit>
+          <Legend />
+          <Coord transpose />
+          <Axis
+            name="State"
+            label={{
+              offset: 12
+            }}
+          />
+          <Axis name="人口数量" />
+          <Tooltip
+            containerTpl='<div class="g2-tooltip">
+            <div class="g2-tooltip-title" style="margin:10px 0;color:black;"></div>
+            <ul class="g2-tooltip-list" style="color:black;"></ul>
+          </div>' />
+          <Geom
+            type={window.GEOMTYPE||"intervalStack"}
+            adjust={window.GEOMTYPEADJUST||""}
+            position="State*人口数量"
+            color={"年龄段"}
+          />
+        </Chart>
+      </div>
+    );
+  }
+}
+
+// ReactDOM.render(<Stacked />, mountNode)
+
+// export default Stacked;
+var Demo = Stacked;
+
+</script>
+
+
+<script type="text/babel">
+          // <Tooltip
+          //   containerTpl='<div class="g2-tooltip">
+          //   <div class="g2-tooltip-title" style="margin:10px 0;color:black;"></div>
+          //   <ul class="g2-tooltip-list" style="color:black;"></ul>
+          // </div>' />
+          // <Geom
+          //   type={window.GEOMTYPE||"intervalStack"}
+          //   adjust={window.GEOMTYPEADJUST||""}
+          // />
+    function render(){
+        ReactDOM.render(
+            <Demo /> , root
+        );
+    }
+    var GEOMTYPES = [
+        "area", 
+        "edge",
+        "heatmap",
+        "interval", 
+        "line", 
+        "path", 
+        "point", 
+        "polygon", 
+        // "schema", 
+        "areaStack",
+        "intervalDodge", 
+        "intervalStack", 
+        "intervalSymmetric", 
+        // "pointDodge", 
+        "pointJitter", 
+        "pointStack", 
+        // "schemaDodge"
+    ];
+    let GEOMADJUSTTYPES = [
+        'stack',
+        'dodge',
+        'jitter',
+        'symmetric'
+    ];
+    const root = document.getElementById('example')
+    function getRootHeight(){ //window.innerHeight
+        let height = window.getComputedStyle(root).height;
+        console.log("getComputedStyle", height, this);
+        return parseInt(height);
+    }
+    document.onclick = function(e){
+        // document.body.className = document.body.className?"":"half" 
+        render();
+        return true;
+    }
+    window.onresize = function(e){
+        render();
+    }
+    render();
+</script>

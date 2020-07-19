@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title> Hello BizCharts for React! </title>
+        <script src="../js/react.development.js"> </script>
+        <script src="../js/react-dom.development.js"> </script>
+        <script src="../js/babel.min.js"> </script>
+        <script src="../js/bizCharts-3.5.5/BizCharts.min.js"></script>
+
+        <!-- 
+        <script src="../js/BizCharts.min.js"></script>
+        <script src="../js/data-set.min.js"></script>
+        <script src="../js/jquery.min.js"></script>
+        <script src="../js/bizcharts-plugin-slider.js"></script>
+        <script src="../js/numeral.min.js"></script>
+        <script src="../js/polyfill.min.js"></script>
+        <script src="https://unpkg.com/bizcharts-plugin-slider@2.0.0/umd/bizcharts-plugin-slider.js"></script>
+        <script src="https://cdn.staticfile.org/react/16.4.0/umd/react.development.js"> </script> 
+        <script src="https://cdn.staticfile.org/react-dom/16.4.0/umd/react-dom.development.js"> </script>
+        <script src="https://cdn.staticfile.org/babel-standalone/6.26.0/babel.min.js"> </script>
+        <script src="https://unpkg.com/bizcharts@3.3.0/umd/BizCharts.min.js"></script>
+        -->
+        <link rel="stylesheet" href="theme.css">
+        <style>#example { background:_white; }</style>
+        <script>
+
+            document.onclick = function(e){
+                // document.body.className = document.body.className?"":"half" 
+                render();
+            }
+        </script>
+    </head>
+    <body class="half">
+        <div id="example"> </div>
+        <script src="./utils.js"> </script>
+
+    </body>
+</html>
+
+<script type="text/babel">
+    // import {Component} from 'react';
+    let Component = React.Component;
+    
+    // import { Chart, Axis, Legend, Tooltip, Geom } from 'bizcharts';
+    // bizUtil.setTheme('dark');
+    BizCharts.setTheme('dark');
+
+    var 
+    Axis = BizCharts.Axis,
+    Chart = BizCharts.Chart,
+    Coord = BizCharts.Coord,
+    Facet = BizCharts.Facet,
+    G2 = BizCharts.G2,
+    Geom = BizCharts.Geom,
+    Guide = BizCharts.Guide,
+    Label = BizCharts.Label,
+    Legend = BizCharts.Legend,
+    Line = BizCharts.Line,
+    Shape = BizCharts.Shape,
+    Tooltip = BizCharts.Tooltip,
+    Util = BizCharts.Util,
+    View = BizCharts.View;
+</script>
+
+<script type="text/babel">
+// import React from "react";
+// import { G2, Chart, Geom, Axis, Tooltip, Coord, Label, Legend, View, Guide, Shape, Facet, Util } from "bizcharts";
+
+class Bubbleimage extends React.Component {
+  render() {
+    // 自定义 shape, 支持图片形式的气泡
+    Shape.registerShape("point", "image", {
+      drawShape: function(cfg, container) {
+        cfg.points = this.parsePoints(cfg.points);
+        const coord = this._coord;
+        container.addShape("line", {
+          attrs: {
+            x1: cfg.points[0].x,
+            y1: cfg.points[0].y,
+            x2: cfg.points[0].x,
+            y2: coord.start.y,
+            stroke: "#ccc",
+            lineWidth: 1,
+            lineDash: [4, 2]
+          }
+        });
+        return container.addShape("image", {
+          attrs: {
+            x: cfg.points[0].x - (12 * cfg.size) / 2,
+            y: cfg.points[0].y - 12 * cfg.size,
+            width: 12 * cfg.size,
+            height: 12 * cfg.size,
+            img: cfg.shape[1]
+          }
+        });
+      }
+    });
+    const data = [
+      {name: "Internet Explorer", value: 26 },
+      {name: "Chrome", value: 40 },
+      {name: "Firefox", value: 30 },
+      {name: "Safari", value: 24 },
+      {name: "Opera", value: 15 },
+      {name: "Undetectable", value: 8 }
+    ];
+    const imageMap = {
+      "Internet Explorer": "https://gw.alipayobjects.com/zos/rmsportal/eOYRaLPOmkieVvjyjTzM.png",
+      Chrome: "https://gw.alipayobjects.com/zos/rmsportal/dWJWRLWfpOEbwCyxmZwu.png",
+      Firefox: "https://gw.alipayobjects.com/zos/rmsportal/ZEPeDluKmAoTioCABBTc.png",
+      Safari: "https://gw.alipayobjects.com/zos/rmsportal/eZYhlLzqWLAYwOHQAXmc.png",
+      Opera: "https://gw.alipayobjects.com/zos/rmsportal/vXiGOWCGZNKuVVpVYQAw.png",
+      Undetectable: "https://gw.alipayobjects.com/zos/rmsportal/NjApYXminrnhBgOXyuaK.png"
+    };
+    const cols = {
+      value: {
+        nice: false,
+        max: 60,
+        min: 0
+      }
+    };
+    return (
+      <div>
+        <Chart
+          height={getRootHeight()}
+          data={data}
+          padding={[20, 40, 80, 30]}
+          scale={cols}
+          forceFit
+        >
+          <Axis name="name" />
+          <Axis name="value" visible={false} />
+          <Tooltip />
+          <Geom
+            type="point"
+            position="name*value"
+            color="name"
+            shape={[
+              "name",
+              name => {
+                return ["image", imageMap[name]]; // 根据具体的字段指定 shape
+              }
+            ]}
+            size="value"
+            style={{
+              stroke: "#fff",
+              lineWidth: 1,
+              fillOpacity: 1
+            }}
+          >
+            <Label
+              content="value"
+              offset={-20}
+              textStyle={{
+                fontSize: 16 // 文本大小
+              }}
+            />
+          </Geom>
+        </Chart>
+      </div>
+    );
+  }
+}
+
+// ReactDOM.render(<Bubbleimage />, mountNode)
+
+
+
+</script>
+
+
+<script type="text/babel">
+    const root = document.getElementById('example')
+    function getRootHeight(){ //window.innerHeight
+        let height = window.getComputedStyle(root).height;
+        console.log("getComputedStyle", height, this);
+        return parseInt(height);
+    }
+    function render(){
+        ReactDOM.render(
+            <Bubbleimage /> , root
+        );
+    }
+    window.onresize = function(e){
+        render();
+    }
+    render();
+</script>

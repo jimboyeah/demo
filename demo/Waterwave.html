@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title> Hello BizCharts for React! </title>
+        <script src="../js/utils.js"> </script>
+        <script src="../js/react.development.js"> </script>
+        <script src="../js/react-dom.development.js"> </script>
+        <script src="../js/babel.min.js"> </script>
+        <script src="../js/BizCharts-3.3.0.min.js"></script>
+        <script src="../js/data-set.min.js"></script>
+        <script src="../js/jquery.min.js"></script>
+        <!-- 
+        <script src="../js/bizcharts-plugin-slider.js"></script>
+        <script src="../js/numeral.min.js"></script>
+        <script src="../js/polyfill.min.js"></script>
+        <script src="https://unpkg.com/bizcharts-plugin-slider@2.0.0/umd/bizcharts-plugin-slider.js"></script>
+        <script src="https://cdn.staticfile.org/react/16.4.0/umd/react.development.js"> </script> 
+        <script src="https://cdn.staticfile.org/react-dom/16.4.0/umd/react-dom.development.js"> </script>
+        <script src="https://cdn.staticfile.org/babel-standalone/6.26.0/babel.min.js"> </script>
+        <script src="https://unpkg.com/bizcharts@3.3.4/umd/BizCharts.min.js"></script>
+        -->
+        <link rel="stylesheet" href="theme.css">
+        <style>#example { background:_white; } #toolbox {top:22vh}</style>
+    </head>
+    <body class="half">
+        <div id="example"> </div>
+        <script src="./utils.js"> </script>
+
+    </body>
+</html>
+
+<script type="text/babel">
+    // import {Component} from 'react';
+    let Component = React.Component;
+    
+    // import { Chart, Axis, Legend, Tooltip, Geom } from 'bizcharts';
+    // bizUtil.setTheme('dark');
+    BizCharts.setTheme('dark');
+
+    var 
+    Axis = BizCharts.Axis,
+    Chart = BizCharts.Chart,
+    Coord = BizCharts.Coord,
+    Facet = BizCharts.Facet,
+    G2 = BizCharts.G2,
+    Geom = BizCharts.Geom,
+    Guide = BizCharts.Guide,
+    Label = BizCharts.Label,
+    Legend = BizCharts.Legend,
+    Line = BizCharts.Line,
+    Shape = BizCharts.Shape,
+    Tooltip = BizCharts.Tooltip,
+    Util = BizCharts.Util,
+    View = BizCharts.View;
+</script>
+
+<script type="text/babel">
+// data-set 可以按需引入，除此之外不要引入别的包
+// import React from 'react';
+// import { Chart, Tooltip, Geom, Guide } from 'bizcharts';
+
+const { Text } = Guide;
+
+const data = [{
+  gender: 'male',
+  path: 'M381.759 0h292l-.64 295.328-100.127-100.096-94.368 94.368C499.808 326.848 512 369.824 512 415.712c0 141.376-114.56 256-256 256-141.376 0-256-114.624-256-256s114.624-256 256-256c48.8 0 94.272 13.92 133.12 37.632l93.376-94.592L381.76 0zM128.032 415.744c0 70.688 57.312 128 128 128s128-57.312 128-128-57.312-128-128-128-128 57.312-128 128z',
+  value: 50,
+}, {
+  gender: 'middle',
+  path: 'M381.759 0h292l-.64 295.328-100.127-100.096-94.368 94.368C499.808 326.848 512 369.824 512 415.712c0 141.376-114.56 256-256 256-141.376 0-256-114.624-256-256s114.624-256 256-256c48.8 0 94.272 13.92 133.12 37.632l93.376-94.592L381.76 0zM128.032 415.744c0 70.688 57.312 128 128 128s128-57.312 128-128-57.312-128-128-128-128 57.312-128 128z',
+  value: 25,
+}, {
+  gender: 'female',
+  path: 'M320.96 503.232v105.376h127.872V736.48H320.96v127.872H191.136V736.48H63.296V608.608h127.84v-105.76C81.216 474.208 0 374.56 0 255.712 0 114.496 114.496 0 255.712 0c141.248 0 255.68 114.496 255.68 255.712 0 119.328-79.872 219.264-190.432 247.52zm-65.248-375.36c-70.624 0-127.872 57.216-127.872 127.84 0 70.592 57.248 127.84 127.872 127.84s127.872-57.248 127.872-127.84c0-70.624-57.248-127.84-127.872-127.84z',
+  value: 25,
+}];
+
+const scale = {
+  value: {
+    min: 0,
+    max: 100,
+  },
+};
+
+class Demo extends React.Component {
+  render() {
+    return (
+      <Chart height={getRootHeight()} padding={[0]} data={data} scale={scale} forceFit>
+        <Tooltip />
+        <Geom
+          type={window.GEOMTYPE||"interval"}
+          adjust={window.GEOMTYPEADJUST||""}
+          position="gender*value"
+          color="gender"
+          shape="liquid-fill-gauge"
+          style={{
+            lineWidth: 10,
+            opacity: 0.75,
+          }}
+        />
+        <Guide>
+          {
+            data.map(
+              row => (<Text
+                content={`${row.value}%`}
+                top
+                position={{
+                  gender: row.gender,
+                  value: 50,
+                }}
+                style={{
+                  opacity: 0.95,
+                  fontSize: getRootHeight() / 15,
+                  textAlign: 'center',
+                }}
+              />))
+          }
+        </Guide>
+      </Chart>
+    );
+  }
+}
+
+// CDN END
+// ReactDOM.render(<Demo />, mountNode)
+
+// export default Cutomizelegend;
+// var Demo = Cutomizelegend
+
+</script>
+
+
+<script type="text/babel">
+          // <Tooltip
+          //   containerTpl='<div class="g2-tooltip">
+          //   <div class="g2-tooltip-title" style="margin:10px 0;color:black;"></div>
+          //   <ul class="g2-tooltip-list" style="color:black;"></ul>
+          // </div>' />
+          // <Geom
+          //   type={window.GEOMTYPE||"intervalStack"}
+          //   adjust={window.GEOMTYPEADJUST||""}
+          // />
+          // <Coord type={window.COORDTYPE || "polar"} reflect="y" />
+    function render(){
+        ReactDOM.render(
+            <Demo /> , root
+        );
+    }
+    var GEOMTYPES = [
+        // "area", 
+        "edge",
+        // "heatmap",
+        // "interval", 
+        // "line", 
+        // "path", 
+        // "point", 
+        "polygon", 
+        // "schema", 
+        // "areaStack",
+        // "intervalDodge", 
+        "intervalStack", 
+        // "intervalSymmetric", 
+        // "pointDodge", 
+        "pointJitter", 
+        // "pointStack", 
+        // "schemaDodge"
+    ];
+    let GEOMADJUSTTYPES = [
+        'stack',
+        // 'dodge',
+        // 'jitter',
+        'symmetric'
+    ];
+    const root = document.getElementById('example')
+    function getRootHeight(){ //window.innerHeight
+        let height = window.getComputedStyle(root).height;
+        console.log("getComputedStyle", height);
+        return parseInt(height);
+    }
+    document.onclick = function(e){
+        // document.body.className = document.body.className?"":"half" 
+        render();
+        return true;
+    }
+    window.onresize = function(e){
+        render();
+    }
+    render();
+</script>

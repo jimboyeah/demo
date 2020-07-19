@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title> Hello BizCharts for React! </title>
+        <script src="../js/react.development.js"> </script>
+        <script src="../js/react-dom.development.js"> </script>
+        <script src="../js/babel.min.js"> </script>
+        <script src="../js/BizCharts-3.3.0.min.js"></script>
+        <script src="../js/data-set.min.js"></script>
+        <script src="../js/jquery.min.js"></script>
+        <!-- 
+        <script src="../js/bizcharts-plugin-slider.js"></script>
+        <script src="../js/numeral.min.js"></script>
+        <script src="../js/polyfill.min.js"></script>
+        <script src="https://unpkg.com/bizcharts-plugin-slider@2.0.0/umd/bizcharts-plugin-slider.js"></script>
+        <script src="https://cdn.staticfile.org/react/16.4.0/umd/react.development.js"> </script> 
+        <script src="https://cdn.staticfile.org/react-dom/16.4.0/umd/react-dom.development.js"> </script>
+        <script src="https://cdn.staticfile.org/babel-standalone/6.26.0/babel.min.js"> </script>
+        <script src="https://unpkg.com/bizcharts@3.3.4/umd/BizCharts.min.js"></script>
+        -->
+        <link rel="stylesheet" href="theme.css">
+        <style>#example { background:_white; }</style>
+        <script>
+            document.onclick = function(e){
+                // document.body.className = document.body.className?"":"half" 
+                render();
+            }
+        </script>
+    </head>
+    <body class="half">
+        <div id="example"> </div>
+        <script src="./utils.js"> </script>
+
+    </body>
+</html>
+
+<script type="text/babel">
+    // import {Component} from 'react';
+    let Component = React.Component;
+    
+    // import { Chart, Axis, Legend, Tooltip, Geom } from 'bizcharts';
+    // bizUtil.setTheme('dark');
+    BizCharts.setTheme('dark');
+
+    var 
+    Axis = BizCharts.Axis,
+    Chart = BizCharts.Chart,
+    Coord = BizCharts.Coord,
+    Facet = BizCharts.Facet,
+    G2 = BizCharts.G2,
+    Geom = BizCharts.Geom,
+    Guide = BizCharts.Guide,
+    Label = BizCharts.Label,
+    Legend = BizCharts.Legend,
+    Line = BizCharts.Line,
+    Shape = BizCharts.Shape,
+    Tooltip = BizCharts.Tooltip,
+    Util = BizCharts.Util,
+    View = BizCharts.View;
+</script>
+
+<script type="text/babel">
+// import React from "react";
+// import {G2, Chart, Geom, Axis, Tooltip, Coord, Label, Legend, View, Guide, Shape, Facet, Util } from "bizcharts";
+// import DataSet from "@antv/data-set";
+
+class StackedPercentage extends React.Component {
+  render() {
+    const data = [
+      {country: "Asia", year: "1750", value: 502 },
+      {country: "Asia", year: "1800", value: 635 },
+      {country: "Asia", year: "1850", value: 809 },
+      {country: "Asia", year: "1900", value: 947 },
+      {country: "Asia", year: "1950", value: 1402 },
+      {country: "Asia", year: "1999", value: 3634 },
+      {country: "Asia", year: "2050", value: 5268 },
+      {country: "Asia", year: "2100", value: 7268 },
+      {country: "Europe", year: "1750", value: 163 },
+      {country: "Europe", year: "1800", value: 203 },
+      {country: "Europe", year: "1850", value: 276 },
+      {country: "Europe", year: "1900", value: 408 },
+      {country: "Europe", year: "1950", value: 547 },
+      {country: "Europe", year: "1999", value: 729 },
+      {country: "Europe", year: "2050", value: 628 },
+      {country: "Europe", year: "2100", value: 828 },
+      {country: "Oceania", year: "1750", value: 252 },
+      {country: "Oceania", year: "1800", value: 385 },
+      {country: "Oceania", year: "1850", value: 559 },
+      {country: "Oceania", year: "1900", value: 697 },
+      {country: "Oceania", year: "1950", value: 1152 },
+      {country: "Oceania", year: "1999", value: 3384 },
+      {country: "Oceania", year: "2050", value: 5018 },
+      {country: "Oceania", year: "2100", value: 7018 }
+    ];
+    const ds = new DataSet();
+    const dv = ds
+      .createView()
+      .source(data)
+      .transform({
+        type: "percent",
+        field: "value",
+        // 统计销量
+        dimension: "country",
+        // 每年的占比
+        groupBy: ["year"],
+        // 以不同产品类别为分组
+        as: "percent"
+      });
+    const cols = {
+      percent: {
+        min: 0,
+        formatter(val) {
+          return (val * 100).toFixed(2) + "%";
+        }
+      }
+    };
+    return (
+        <Chart height={getRootHeight()} data={dv} scale={cols} padding={[40, 40, 80, 80]} forceFit>
+          <Legend />
+          <Axis name="year" />
+          <Axis name="percent" />
+          <Tooltip 
+            containerTpl='<div class="g2-tooltip">
+            <div class="g2-tooltip-title" style="margin:10px 0;color:black;"></div>
+            <ul class="g2-tooltip-list" style="color:black;"></ul>
+          </div>' />
+
+          <Geom
+            type="area"
+            position="year*percent"
+            color={"country"}
+            color={["country",["#FF0028","#FFD000","#1983E5"]]} 
+          />
+        </Chart>
+    );
+  }
+}
+
+// ReactDOM.render(<StackedPercentage />, mountNode)
+// export default StackedPercentage;
+
+</script>
+
+
+<script type="text/babel">
+    const root = document.getElementById('example')
+    function getRootHeight(){ //window.innerHeight
+        let height = window.getComputedStyle(root).height;
+        console.log("getComputedStyle", height, this);
+        return parseInt(height);
+    }
+    function render(){
+        ReactDOM.render(
+            <StackedPercentage /> , root
+        );
+    }
+    window.onresize = function(e){
+        render();
+    }
+    render();
+</script>
