@@ -2,7 +2,7 @@
     "build_systems":
     [
         {
-            "encoding": "gkb",
+            "encoding": "gbk",
             "env":
             {
                 "PATH": "c:/CodeBlocks/MinGW/bin/;%PATH%"
@@ -14,7 +14,7 @@
             "working_dir": "${project_path}"
         },
         {
-            "encoding": "gkb",
+            "encoding": "gbk",
             "env":
             {
                 "PATH": "c:/CodeBlocks/MinGW/bin/;%PATH%"
@@ -26,7 +26,7 @@
             "working_dir": "${project_path}"
         },
         {
-            "encoding": "gkb",
+            "encoding": "gbk",
             "env":
             {
                 "PATH": "c:/CodeBlocks/MinGW/bin/;%PATH%"
@@ -38,7 +38,7 @@
             "working_dir": "${project_path}"
         },
         {
-            "encoding": "gkb",
+            "encoding": "gbk",
             "env":
             {
                 "PATH": "c:/CodeBlocks/MinGW/bin/;%PATH%"
@@ -50,7 +50,7 @@
             "working_dir": "${project_path}"
         },
         {
-            "encoding": "gkb",
+            "encoding": "gbk",
             "env":
             {
                 "PATH": "c:/CodeBlocks/MinGW/bin/;%PATH%"
