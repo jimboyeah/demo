@@ -296,7 +296,7 @@
 			"file": "readme.md",
 			"settings":
 			{
-				"buffer_size": 8486,
+				"buffer_size": 8887,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -318,6 +318,14 @@
 				"Git: Push Current Branch"
 			],
 			[
+				"comm",
+				"Git: Commit"
+			],
+			[
+				"add",
+				"Git: Add All"
+			],
+			[
 				"com",
 				"Git: Commit"
 			],
@@ -328,10 +336,6 @@
 			[
 				"change ",
 				"Git: Change Branch"
-			],
-			[
-				"comm",
-				"Git: Commit"
 			],
 			[
 				"gitadd",
@@ -577,6 +581,7 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"DotNetCoreWebw",
 			"https://github.com/jimboyeah/demo/tree/go-my-websocket"
 		],
 		"highlight": true,
@@ -671,15 +676,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 8486,
+						"buffer_size": 8887,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								793,
-								793
+								479,
+								479
 							]
 						],
 						"settings":
@@ -694,7 +699,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 1446.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -740,7 +745,7 @@
 	},
 	"output.git":
 	{
-		"height": 103.0
+		"height": 173.0
 	},
 	"output.sftp":
 	{

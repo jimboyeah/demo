@@ -6,11 +6,37 @@ Demo 这个仓库原本是坚果用来学 Git 版本管理用的，随着演示�
 
 演示项目列表：
 
+- VUE 组件开发实战 - C-DayStep
+
+    https://github.com/jimboyeah/demo/tree/C-DayStep-VUE
+
+        git clone -b C-DayStep-VUE https://github.com/jimboyeah/demo.git
+
+- BizCharts 图表库示范
+
+    https://github.com/jimboyeah/demo/tree/bizcharts
+
+        git clone -b bizcharts https://github.com/jimboyeah/demo.git
+
+- ECharts 图表库示范
+
+    https://github.com/jimboyeah/demo/tree/echarts
+
+        git clone -b echarts https://github.com/jimboyeah/demo.git
+
+- VUE + Markdown 文件解析
+
+    https://github.com/jimboyeah/demo/tree/vue3markdwon
+
+        git clone -b vue3markdwon https://github.com/jimboyeah/demo.git
+
+    React + Marked 示范见这里 https://jimboyeah.github.io/
+
 - .NetCore Web 服务开发
 
     https://github.com/jimboyeah/demo/tree/DotNetCoreWebw
 
-		git clone -b DotNetCoreWebw https://github.com/jimboyeah/demo.git
+        git clone -b DotNetCoreWebw https://github.com/jimboyeah/demo.git
 
 - Xarmarin 跨平台开发
 
