@@ -2,16 +2,23 @@
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <MD :msg="mdcontent"/>
   </div>
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
+import MD from './components/Markdown.vue'
+import mddemo from './assets/demo.md'
 
 export default {
   name: 'app',
+  data: function(){
+    return { mdcontent: mddemo };
+    // return { mdcontent: "# Welcome \n Vue.js App" };
+  },
   components: {
-    HelloWorld
+    HelloWorld, MD
   }
 }
 </script>

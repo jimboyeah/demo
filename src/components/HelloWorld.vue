@@ -27,17 +27,16 @@
       <li><a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener">vue-loader</a></li>
       <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
     </ul>
+    <h3>Nightwatch</h3>
+    <form action="">
+      <ul>
+        <li><a class="home" href="/">Home</a></li>
+        <li><input type="search" name="s"></li>
+        <li><button type="submit">Submit</button></li>
+      </ul>
+    </form>
   </div>
 </template>
-
-<script>
-export default {
-  name: 'HelloWorld',
-  props: {
-    msg: String
-  }
-}
-</script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
@@ -56,3 +55,12 @@ a {
   color: #42b983;
 }
 </style>
+
+<script>
+export default {
+  name: 'HelloWorld',
+  props: {
+    msg: String
+  }
+}
+</script>

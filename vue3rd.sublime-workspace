@@ -1,0 +1,1917 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"QApplication",
+				"QGuiApplication/"
+			],
+			[
+				"link",
+				"link_libraries\tcommand"
+			],
+			[
+				"m1",
+				"m1_Iter"
+			],
+			[
+				"find",
+				"find_library\tcommand"
+			],
+			[
+				"qml",
+				"main.qml"
+			],
+			[
+				"p",
+				"plugins/"
+			],
+			[
+				"img",
+				"imageMat"
+			],
+			[
+				"lena",
+				"lena_thresh"
+			],
+			[
+				"chapp",
+				"ch_app.erl"
+			],
+			[
+				"wxMen",
+				"wxMenuBar"
+			],
+			[
+				"create",
+				"create_test_menu"
+			],
+			[
+				"ge",
+				"GenerateNames"
+			],
+			[
+				"I",
+				"IsStatic"
+			],
+			[
+				"lo",
+				"localhost.pfx"
+			],
+			[
+				"Hook",
+				"KeyboardHook"
+			],
+			[
+				"Hoo",
+				"HookStop"
+			],
+			[
+				"Ho",
+				"HookStart"
+			],
+			[
+				"int",
+				"Int32"
+			],
+			[
+				"PlaySoun",
+				"PlaySoundFlags"
+			],
+			[
+				"O",
+				"OpenFileDialog"
+			],
+			[
+				"From",
+				"Form1_Load"
+			],
+			[
+				"Form1",
+				"Form1_Load"
+			],
+			[
+				"Do",
+				"DoWorkStatic"
+			],
+			[
+				"S",
+				"Singletons"
+			],
+			[
+				"Test",
+				"TestClass"
+			],
+			[
+				"_",
+				"_count"
+			],
+			[
+				"Con",
+				"Contacts"
+			],
+			[
+				"up",
+				"upperCase"
+			],
+			[
+				"cli",
+				"on_button_clicked"
+			],
+			[
+				"height",
+				"max-height\tproperty"
+			],
+			[
+				"so",
+				"socket.io-client"
+			],
+			[
+				"En",
+				"EncodeToString\tfunc(src []byte) string ·ƒ"
+			],
+			[
+				"st",
+				"StdEncoding\t*base64.Encoding ·ν"
+			],
+			[
+				"Engin",
+				"EngineioMessage\tfunc(text string) ·ƒ"
+			],
+			[
+				"EIO",
+				"EIO_Message\tEngineioPacket ·Ɩ"
+			],
+			[
+				"SIO_Bin",
+				"SIO_Binary_Event\tSocketioPacket ·Ɩ"
+			],
+			[
+				"SIO",
+				"SIO_Event\tSocketioPacket ·Ɩ"
+			],
+			[
+				"U",
+				"Uint16\tfunc(b []byte) uint16 ·ƒ"
+			],
+			[
+				"Error",
+				"ErrorNil\tErrorCode ·Ɩ"
+			],
+			[
+				"Err",
+				"ErrorNil\tErrorCode ·Ɩ"
+			],
+			[
+				"Messa",
+				"MessageType\tbyte ·ʈ"
+			],
+			[
+				"E",
+				"Err\terror ·ν"
+			],
+			[
+				"e",
+				"Err\terror ·ν"
+			],
+			[
+				"b",
+				"brw\t*bufio.ReadWriter ·ν"
+			],
+			[
+				"Mi",
+				"Millisecond\ttime.Duration ·Ɩ"
+			],
+			[
+				"Webs",
+				"github.com/gorilla/websocket\t ·ʂ"
+			],
+			[
+				"Set",
+				"SetReadDeadline\tfunc(t time.Time) error ·ƒ"
+			],
+			[
+				"B",
+				"BrokenMessage\tMessageType ·Ɩ"
+			],
+			[
+				"R",
+				"RemoteAddr\tfunc() net.Addr ·ƒ"
+			],
+			[
+				"P",
+				"parsed\tbool ·ν"
+			],
+			[
+				"utf",
+				"unicode/utf8\t ·ʂ"
+			],
+			[
+				"Mask",
+				"Masking\tbool ·ν"
+			],
+			[
+				"Mess",
+				"MessageType\tbyte ·ʈ"
+			],
+			[
+				"Ma",
+				"Maskingkey\t[4]byte ·ν"
+			],
+			[
+				"Masking",
+				"Masking\tbool ·ν"
+			],
+			[
+				"M",
+				"Maskingkey\t[4]byte ·ν"
+			],
+			[
+				"CloseMe",
+				"CloseMessageCode\tuint ·ʈ"
+			],
+			[
+				"Ti",
+				"PingTimeout\ttime.Duration ·Ɩ"
+			],
+			[
+				"Ping",
+				"PingTimeout\ttime.Duration ·Ɩ"
+			],
+			[
+				"r",
+				"SetReadDeadline\tfunc(t time.Time) error ·ƒ"
+			],
+			[
+				"Read",
+				"ReadWriter\tstruct ·ʈ"
+			],
+			[
+				"StatusIn",
+				"StatusInternalServerError\tuntyped int ·Ɩ"
+			],
+			[
+				"net",
+				"netConn\tnet.Conn ·ν"
+			],
+			[
+				"enc",
+				"encoding/base64\t ·ʂ"
+			],
+			[
+				"Re",
+				"RequestURI\tstring ·ν"
+			],
+			[
+				"Respn",
+				"ResponseWriter\tinterface ·ʈ"
+			],
+			[
+				"Ha",
+				"Handler\tinterface ·ʈ"
+			],
+			[
+				"L",
+				"GetLabel\tfunc() string ·ƒ"
+			],
+			[
+				"test",
+				"test_pb.js"
+			],
+			[
+				"react",
+				"react-quill/"
+			],
+			[
+				"el",
+				"element-ui/"
+			],
+			[
+				"rel",
+				"icedesign-qrcode.rel.js"
+			],
+			[
+				"get",
+				"getCroppedCanvas\twarning"
+			],
+			[
+				"cl",
+				"className"
+			],
+			[
+				"hex",
+				"hex2decimal"
+			],
+			[
+				"flex",
+				"flex-wrap\tproperty"
+			],
+			[
+				"in",
+				"MarshalIndent\tfunc(v interface{}, prefix string, indent string) []byte, error ·ƒ"
+			],
+			[
+				"io",
+				"io/ioutil\t ·ʂ"
+			],
+			[
+				"re",
+				"ReadDir\tfunc(dirname string) []os.FileInfo, error ·ƒ"
+			],
+			[
+				"init",
+				"initQueue"
+			],
+			[
+				"thread",
+				"threadID"
+			],
+			[
+				"exit",
+				"exitFlag"
+			],
+			[
+				"con",
+				"content_encoding"
+			],
+			[
+				"content",
+				"content_length"
+			],
+			[
+				"name",
+				"nameKey"
+			],
+			[
+				"work",
+				"workQueue"
+			],
+			[
+				"en",
+				"enqueue"
+			],
+			[
+				"none",
+				"None"
+			],
+			[
+				"Mo",
+				"ModeExclusive\tos.FileMode ·Ɩ"
+			],
+			[
+				"encod",
+				"encoding/json\t ·ʂ"
+			],
+			[
+				"Cmd",
+				"Command\tfunc(name string, arg ...string) *exec.Cmd ·ƒ"
+			],
+			[
+				"next",
+				"next.min.js"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Git Demo",
+					""
+				],
+				[
+					"Git Demo",
+					"Git help"
+				],
+				[
+					"Git Demo",
+					"Branch List"
+				],
+				[
+					"Git Demo",
+					"Branch List remote"
+				],
+				[
+					"Git Demo",
+					"git show"
+				],
+				[
+					"NPM run build",
+					""
+				],
+				[
+					"NPM run dev",
+					""
+				],
+				[
+					"NPM run start",
+					""
+				],
+				[
+					"NPM run test",
+					""
+				],
+				[
+					"Packages/SublimeREPL/sublimerepl_build_system_hack.sublime-build",
+					""
+				]
+			],
+			[
+				"NPM run build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Git Demo",
+					""
+				],
+				[
+					"Git Demo",
+					"Git help"
+				],
+				[
+					"Git Demo",
+					"Branch List"
+				],
+				[
+					"Git Demo",
+					"Branch List remote"
+				],
+				[
+					"Git Demo",
+					"git show"
+				],
+				[
+					"NPM run build",
+					""
+				],
+				[
+					"NPM run dev",
+					""
+				],
+				[
+					"NPM run start",
+					""
+				],
+				[
+					"NPM run test",
+					""
+				],
+				[
+					"Packages/SublimeREPL/sublimerepl_build_system_hack.sublime-build",
+					""
+				],
+				[
+					"Packages/TypeScript/TypeScript.sublime-build",
+					""
+				]
+			],
+			[
+				"NPM run build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Git Demo",
+					""
+				],
+				[
+					"Git Demo",
+					"Git help"
+				],
+				[
+					"Git Demo",
+					"Branch List"
+				],
+				[
+					"Git Demo",
+					"Branch List remote"
+				],
+				[
+					"Git Demo",
+					"git show"
+				],
+				[
+					"NPM run build",
+					""
+				],
+				[
+					"NPM run dev",
+					""
+				],
+				[
+					"NPM run start",
+					""
+				],
+				[
+					"NPM run test",
+					""
+				],
+				[
+					"Run PHP Server",
+					""
+				],
+				[
+					"Packages/SublimeREPL/sublimerepl_build_system_hack.sublime-build",
+					""
+				]
+			],
+			[
+				"Run PHP Server",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Git Demo",
+					""
+				],
+				[
+					"Git Demo",
+					"Git help"
+				],
+				[
+					"Git Demo",
+					"Branch List"
+				],
+				[
+					"Git Demo",
+					"Branch List remote"
+				],
+				[
+					"Git Demo",
+					"git show"
+				],
+				[
+					"NPM run build",
+					""
+				],
+				[
+					"NPM run dev",
+					""
+				],
+				[
+					"NPM run start",
+					""
+				],
+				[
+					"NPM run test",
+					""
+				],
+				[
+					"Run PHP Server",
+					""
+				],
+				[
+					"Packages/TypeScript/TypeScript.sublime-build",
+					""
+				]
+			],
+			[
+				"Run PHP Server",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Git Demo",
+					""
+				],
+				[
+					"Git Demo",
+					"Git help"
+				],
+				[
+					"Git Demo",
+					"Branch List"
+				],
+				[
+					"Git Demo",
+					"Branch List remote"
+				],
+				[
+					"Git Demo",
+					"git show"
+				],
+				[
+					"NPM run build",
+					""
+				],
+				[
+					"NPM run dev",
+					""
+				],
+				[
+					"NPM run start",
+					""
+				],
+				[
+					"NPM run test",
+					""
+				],
+				[
+					"Run PHP Server",
+					""
+				],
+				[
+					"Packages/User/Node.sublime-build",
+					""
+				],
+				[
+					"Packages/User/Node.sublime-build",
+					"TypeScript[ts-node]"
+				],
+				[
+					"Packages/User/Node.sublime-build",
+					"TypeScript ES3)"
+				],
+				[
+					"Packages/User/Node.sublime-build",
+					"TypeScript ES5)"
+				],
+				[
+					"Packages/User/Node.sublime-build",
+					"TypeScript ES6)"
+				],
+				[
+					"Packages/User/Node.sublime-build",
+					"ES6(ECMAScript 2015)"
+				],
+				[
+					"Packages/User/Node.sublime-build",
+					"ES5(ECMAScript 2009)"
+				]
+			],
+			[
+				"Run PHP Server",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Git Demo",
+					""
+				],
+				[
+					"Git Demo",
+					"Git help"
+				],
+				[
+					"Git Demo",
+					"Branch List"
+				],
+				[
+					"Git Demo",
+					"Branch List remote"
+				],
+				[
+					"Git Demo",
+					"git show"
+				],
+				[
+					"Npm run build",
+					""
+				],
+				[
+					"Npm run dev",
+					""
+				],
+				[
+					"Npm run start",
+					""
+				],
+				[
+					"Npm run test",
+					""
+				],
+				[
+					"Packages/SublimeREPL/sublimerepl_build_system_hack.sublime-build",
+					""
+				]
+			],
+			[
+				"Npm run start",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"disable",
+				"Package Control: Disable Package"
+			],
+			[
+				"pucsh",
+				"Git: Push Current Branch"
+			],
+			[
+				"com",
+				"Git: Commit"
+			],
+			[
+				"add",
+				"Git: Add All"
+			],
+			[
+				"push",
+				"Git: Push Current Branch"
+			],
+			[
+				"stats",
+				"Git: Status"
+			],
+			[
+				"co",
+				"Git: Commit"
+			],
+			[
+				"pusch",
+				"Git: Push Current Branch"
+			],
+			[
+				"status",
+				"Git: Status"
+			],
+			[
+				"git pu",
+				"Git: Pull"
+			],
+			[
+				"addall",
+				"Git: Add All"
+			],
+			[
+				"pushc",
+				"Git: Push Current Branch"
+			],
+			[
+				"psuhc",
+				"Git: Push Current Branch"
+			],
+			[
+				"comm",
+				"Git: Commit"
+			],
+			[
+				"enable",
+				"Package Control: Enable Package"
+			],
+			[
+				"branch",
+				"Git: New Branch"
+			],
+			[
+				"ini",
+				"Git: Init"
+			],
+			[
+				"edit",
+				"Project: Edit Project"
+			],
+			[
+				"chang",
+				"Git: Change Branch"
+			],
+			[
+				"chanag",
+				"Git: Change Branch"
+			],
+			[
+				"change",
+				"Git: Change Branch"
+			],
+			[
+				"pu",
+				"Git: Push Current Branch"
+			],
+			[
+				"com\t",
+				"Git: Commit"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"dis",
+				"Package Control: Disable Package"
+			],
+			[
+				"disb",
+				"Package Control: Disable Package"
+			],
+			[
+				"comm\t",
+				"Git: Commit"
+			],
+			[
+				"aadd",
+				"Package Control: Add Channel"
+			],
+			[
+				"ch",
+				"Git: Change Branch"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"git remote",
+				"Git: Track Remote Branch"
+			],
+			[
+				"add aa",
+				"Git: Add All"
+			],
+			[
+				"git",
+				"Git: Init"
+			],
+			[
+				"la",
+				"LaTeXTools: Clear cache"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"html",
+				"HTMLPrettify"
+			],
+			[
+				"erlang",
+				"Set Syntax: Erlang"
+			],
+			[
+				"diff",
+				"Set Syntax: Diff"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"disa",
+				"Package Control: Disable Package"
+			],
+			[
+				"in",
+				"Package Control: Install Package"
+			],
+			[
+				"package",
+				"Package Control: Install Package"
+			],
+			[
+				"utf",
+				"ConvertToUTF8: Reload with Encoding"
+			],
+			[
+				"TypesCript",
+				"TypeScript: Signature Info"
+			],
+			[
+				"preview",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"markdown",
+				"Set Syntax: MultiMarkdown"
+			],
+			[
+				"debug",
+				"SublimeCodeIntel: Enable Debug Mode"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"theme",
+				"UI: Select Color Scheme"
+			],
+			[
+				"them",
+				"UI: Select Theme"
+			],
+			[
+				"new pro",
+				"Project Manager: Add New Project"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 302.0,
+		"history":
+		[
+			"r = os.system(\"cmd /k echo >>c:/coding/md/log.txt\")",
+			"r = os.system(\"cmd /k \\\"echo c:/coding/md/log.txt mkdir c:\\mkdir\\\"\")",
+			"r = os.system(\"cmd /k echo \\\"c:/coding/md/log.txt mkdir c:\\mkdir\\\"\")",
+			"r = os.system(\"cmd /k echo c:/coding/md/log.txt mkdir c:\\mkdir'\")",
+			"r = os.system(\"cmd /k 'echo c:/coding/md/log.txt mkdir c:\\mkdir'\")",
+			"r = os.system(\"cmd -k echo c:/coding/md/log.txt mkdir c:\\mkdir\")",
+			"r = os.system(\"echo c:/coding/md/log.txt mkdir c:\\mkdir\")",
+			"r = os.system(\"echo c:/log.txt mkdir c:\\mkdir\")",
+			"r = os.system(\"echo c:\\\\log.txt mkdir c:\\mkdir\")",
+			"r = os.system(\"mkdir c:\\mkdir\")",
+			"r = os.system(\"cwd .\")",
+			"print(r)",
+			"r = os.system(\"dir .\")",
+			"print(r)",
+			"pring(r)",
+			"r = os.system(\"dir\")",
+			"os.system(\"dir\")",
+			"subprocess.run(\"ls\")",
+			"subprocess.run()",
+			"import subprocess",
+			"subprocess.run()",
+			"import commands",
+			"for i in val.readlines()",
+			"for i in val.readlines(): &  print(i)",
+			"for i in val.readlines()  print(i)",
+			"for i in val.readlines(): print(i)",
+			"for i in val.readlines():",
+			"val = os.popen('ls -al')",
+			"val = os.ppopen('ls -al')",
+			"val = os.Ppopen('ls -al')",
+			"import os",
+			"val = os.Ppopen('ls -al')",
+			"cwd"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/coding/md-code/vue-3.0/vue3rd"
+	],
+	"file_history":
+	[
+		"/C/coding/md-code/jimboyeah.github.io/webpack.config.js",
+		"/C/coding/md-code/jimboyeah.github.io/.gitignore",
+		"/C/coding/md-code/jimboyeah.github.io/src/constants.ts",
+		"/C/coding/md-code/jimboyeah.github.io/src/board.tsx",
+		"/C/coding/md-code/jimboyeah.github.io/package-lock.json",
+		"/C/iceWorks/TS/webpack/package.json",
+		"/C/coding/md-code/jimboyeah.github.io/index.html",
+		"/C/iceWorks/TypeScript/README.md",
+		"/C/coding/md-code/jimboyeah.github.io/gitref.bat",
+		"/C/coding/md-code/jimboyeah.github.io/_config.yml",
+		"/C/coding/md-code/NLTK/nltk_data/corpora/brown/ca01",
+		"/C/coding/md-code/NLTK/nltk_data/corpora/brown/ca24",
+		"/C/coding/md-code/NLTK/nltk_data/corpora/brown/cats.txt",
+		"/C/coding/md-code/NLTK/nltk_data/corpora/stopwords/english",
+		"/C/coding/md-code/NLTK/gitref.bat",
+		"/C/coding/md-code/bizcharts/readme_bizCharts.html",
+		"/C/coding/md-code/bizcharts/demo/utils.js",
+		"/C/coding/md-code/bizcharts/demo/Tree.html",
+		"/C/coding/md-code/bizcharts/server.go",
+		"/C/coding/md-code/bizcharts/demo/Arc.html",
+		"/C/coding/md-code/cppDemos/QtDemos/CMakeLists.txt",
+		"/C/coding/md-code/cppDemos/QtDemos/src/process/release/moc_mainwindow.cpp",
+		"/C/coding/md-code/cppDemos/QtDemos/src/qt-process.hpp",
+		"/C/Qt/Examples/Qt-5.9/widgets/mainwindows/application/main.cpp",
+		"/C/Qt/Examples/Qt-5.9/widgets/mainwindows/application/mainwindow.h",
+		"/C/Qt/Examples/Qt-5.9/script/calculator/calculator.pro",
+		"/C/Qt/Examples/Qt-5.9/widgets/mainwindows/application/application.qrc",
+		"/C/Qt/Examples/Qt-5.9/widgets/mainwindows/application/mainwindow.cpp",
+		"/C/Qt/Examples/Qt-5.9/widgets/itemviews/dirview/dirview.pro",
+		"/C/Qt/Examples/Qt-5.9/assistant/simpletextviewer/mainwindow.cpp",
+		"/C/Qt/Examples/Qt-5.9/activeqt/menus/menus.h",
+		"/C/coding/md-code/cppDemos/QtDemos/src/qt-signal-slot.cpp",
+		"/C/coding/md-code/cppDemos/QtDemos/src/qt-demo.cpp",
+		"/C/Qt/Examples/Qt-5.9/charts/charts.pro",
+		"/C/Qt/Examples/Qt-5.9/charts/audio/widget.cpp",
+		"/C/Qt/Examples/Qt-5.9/charts/qmlpiechart/main.cpp",
+		"/C/Qt/Examples/Qt-5.9/charts/audio/widget.h",
+		"/C/coding/md-code/cppDemos/QtDemos/build/CMakeCache.txt",
+		"/C/coding/md-code/cppDemos/.gitignore",
+		"/C/coding/md-code/cppDemos/QtDemos/build/charts/qmlpiechart/release/qml/qmlpiechart/main.qml",
+		"/C/coding/md-code/cppDemos/QtDemos/build/Makefile",
+		"/C/coding/md-code/cppDemos/QtDemos/build/svg/opengl/Makefile",
+		"/C/Qt/Examples/Qt-5.9/svg/svg.pro",
+		"/C/coding/md-code/cppDemos/QtDemos/build/opengl/Makefile",
+		"/C/Windows/Globalization/Sorting/SortDefault.nls",
+		"/C/Qt/5.9/mingw53_32/include/QtCore/qobjectdefs.h",
+		"/C/Qt/Examples/Qt-5.9/svg/opengl/framebufferobject/framebufferobject.pro",
+		"/C/Qt/Examples/Qt-5.9/svg/opengl/opengl.pro",
+		"/C/Qt/Examples/Qt-5.9/charts/areachart/areachart.pro",
+		"/C/Qt/Examples/Qt-5.9/charts/audio/audio.pro",
+		"/C/Qt/Examples/Qt-5.9/examples.pro",
+		"/C/coding/md-code/cppDemos/src/../QtDemos/demo.cpp",
+		"/C/coding/md-code/cppDemos/readme.md",
+		"/C/coding/cpp/rvalue.cpp",
+		"/C/coding/cpp/singleton.cpp",
+		"/C/coding/cpp/multithread/main.c",
+		"/C/coding/md-code/cppDemos/src/macro.cpp",
+		"/C/coding/cpp/multithread/multithread.cbp",
+		"/C/coding/md-code/cppDemos/src/template-class.cpp",
+		"/C/coding/md-code/cppDemos/src/ReadFile.cpp",
+		"/C/MinGW/set_distro_paths.bat",
+		"/C/coding/md-code/cppDemos/src/default-args.cpp",
+		"/C/coding/md-code/cppDemos/src/platform-relialy.c",
+		"/C/coding/md-code/cppDemos/src/file-text.cpp",
+		"/C/coding/md-code/cppDemos/src/template-func.cpp",
+		"/C/coding/md-code/cppDemos/autogit.bat",
+		"/C/coding/md-code/cppDemos/src/string.cpp",
+		"/C/coding/md-code/cppDemos/src/array.cpp",
+		"/C/coding/md-code/cppDemos/src/set.cpp",
+		"/C/coding/md-code/cppDemos/src/reference.cpp",
+		"/C/coding/md-code/cppDemos/src/list.cpp",
+		"/C/coding/md-code/cppDemos/cppDemo.sublime-project",
+		"/C/Users/OCEAN/AppData/Roaming/Sublime Text 3/Packages/User/Default (Windows).sublime-keymap",
+		"/C/Users/OCEAN/AppData/Roaming/Sublime Text 3/Packages/Emmet/Default (Windows).sublime-keymap",
+		"/C/Users/OCEAN/AppData/Roaming/Sublime Text 3/Packages/Emmet/Emmet.sublime-settings",
+		"/C/coding/md-code/cppDemos/build/Testing/Temporary/LastTestsFailed.log",
+		"/C/coding/md-code/cppDemos/build/Testing/Temporary/LastTest.log",
+		"/C/coding/md-code/cppDemos/out.txt",
+		"/C/coding/md-code/git-demo/dogit.bat",
+		"/C/coding/md-code/cppDemos/cppDemo.sublime-workspace",
+		"/C/coding/md/readme_markdown.md",
+		"/C/coding/md/OpenToonz/Blender.md",
+		"/C/coding/md/readme_node.md",
+		"/C/coding/md/c-daystep/readme.html",
+		"/C/Users/OCEAN/AppData/Roaming/Sublime Text 3/Packages/User/Node.sublime-build",
+		"/C/coding/md/readme_es6.md",
+		"/C/coding/md/readme_git.md",
+		"/C/coding/md-code/git-demo/readme.md",
+		"/C/coding/md-code/git-demo/cmake.md",
+		"/C/coding/md-code/git-demo/gnu make.md",
+		"/C/download/ChezScheme-master/examples/edit.ss",
+		"/C/download/ChezScheme-master/examples/compat.ss",
+		"/C/coding/md/readme_golang.md",
+		"/C/coding/md/socket.io/go-my-websocket.md",
+		"/C/coding/md/socket.io/assets/api_flow.txt",
+		"/C/coding/md-code/git-demo/readme.txt",
+		"/C/coding/md-code/dllDemo/test/CmakeLists.txt",
+		"/C/coding/md/readme_sublime.md",
+		"/C/Users/OCEAN/AppData/Local/Temp/Rar$DIa11172.7703/README-win32.txt",
+		"/C/download/OpenCV/glut-3.7.6/Imakefile",
+		"/C/download/Imakefile",
+		"/C/Users/OCEAN/AppData/Roaming/Sublime Text 3/Packages/User/C++ MinGW.sublime-build",
+		"/C/download/OpenCV/OpenCV-MinGW64-GCC810/freetype-2.10.0/include/ft2build.h",
+		"/C/coding/md/Makefile.md",
+		"/C/Users/OCEAN/AppData/Roaming/Sublime Text 3/Packages/User/CMake.sublime-settings",
+		"/C/download/OpenCV/opencv/sources/samples/python/deconvolution.py",
+		"/C/coding/md-code/opencv/display/CMakeLists.txt",
+		"/C/download/OpenCV/opencv/build/include/opencv2/imgproc.hpp",
+		"/C/download/OpenCV/opencv/sources/modules/highgui/src/window.cpp",
+		"/C/Users/OCEAN/AppData/Roaming/Sublime Text 3/Packages/User/C#.sublime-build",
+		"/C/Users/OCEAN/AppData/Roaming/Sublime Text 3/Packages/User/Dart 2.2.sublime-build",
+		"/C/Users/OCEAN/AppData/Roaming/Sublime Text 3/Packages/User/php.sublime-build",
+		"/C/Users/OCEAN/AppData/Roaming/Sublime Text 3/Packages/User/GoLang.sublime-build",
+		"/C/coding/md-code/opencv/display/display.cpp",
+		"/C/download/OpenCV/opencv/build/include/opencv2/gapi/core.hpp",
+		"/C/Anaconda3/Lib/site-packages/pydicom/charset.py",
+		"/C/coding/md/writing/articals/She-Is-Color/ref/HSL和HSV色彩空间_files/plugins.js",
+		"/C/coding/md-code/coding/coding.py",
+		"/C/Program Files/erl10.4/lib/os_mon-2.5/ebin/os_mon.app",
+		"/C/coding/md-code/erlang/ch_app/ch_app.app",
+		"/C/coding/md-code/erlang/ch_app/ch_app.erl",
+		"/C/coding/md-code/coding/help_cv2.py",
+		"/C/coding/md-code/coding/coding.cpp",
+		"/C/Qt/n/qtqm/main.cpp",
+		"/C/Qt/n/qtqm/main.qml",
+		"/C/Qt/n/simpleqml/main.qml",
+		"/C/Qt/5.9/mingw53_32/qml/QtQuick.2/plugins.qmltypes",
+		"/C/Qt/5.9/mingw53_32/qml/QtQuick.2/qmldir"
+	],
+	"find":
+	{
+		"height": 40.0
+	},
+	"find_in_files":
+	{
+		"height": 451.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": false,
+		"in_selection": false,
+		"preserve_case": true,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 153.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.diagnostics":
+	{
+		"height": 0.0
+	},
+	"output.doc":
+	{
+		"height": 0.0
+	},
+	"output.exec":
+	{
+		"height": 193.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.git":
+	{
+		"height": 169.0
+	},
+	"output.sftp":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "vue3rd.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"QMainWindow",
+				"Examples\\Qt-5.9\\assistant\\simpletextviewer\\mainwindow.cpp"
+			],
+			[
+				"cmake",
+				"Qt Demo Project\\CMakeLists.txt"
+			],
+			[
+				"caculator",
+				"Examples\\Qt-5.9\\script\\calculator\\calculator.pro"
+			],
+			[
+				"chart",
+				"Examples\\Qt-5.9\\charts\\charts.pro"
+			],
+			[
+				"dirview",
+				"Examples\\Qt-5.9\\widgets\\itemviews\\dirview\\dirview.pro"
+			],
+			[
+				"readme",
+				"CPP Demo Project\\readme.md"
+			],
+			[
+				"la",
+				"CPP Demo Project\\src\\lambda.cpp"
+			],
+			[
+				"reference",
+				"CPP Demo Project\\src\\reference.cpp"
+			],
+			[
+				"coding.cpp",
+				"coding\\coding.cpp"
+			],
+			[
+				"ccpp",
+				"md\\ccpp.md"
+			],
+			[
+				"markdown",
+				"md\\readme_markdown.md"
+			],
+			[
+				"node",
+				"md\\readme_node.md"
+			],
+			[
+				"node.",
+				"User\\Node.sublime-build"
+			],
+			[
+				"es6",
+				"md\\readme_es6.md"
+			],
+			[
+				"blender",
+				"md\\OpenToonz\\Blender.md"
+			],
+			[
+				"git",
+				"md\\readme_git.md"
+			],
+			[
+				"sublime",
+				"md\\readme_sublime.md"
+			],
+			[
+				"ming",
+				"User\\C++ MinGW.sublime-build"
+			],
+			[
+				"Make",
+				"md\\Makefile.md"
+			],
+			[
+				"dart",
+				"User\\Dart 2.2.sublime-build"
+			],
+			[
+				"php",
+				"User\\php.sublime-build"
+			],
+			[
+				"Ming",
+				"User\\C++ MinGW.sublime-build"
+			],
+			[
+				"cbuil",
+				"User\\C#.sublime-build"
+			],
+			[
+				"sublime.",
+				"md\\readme_sublime.md"
+			],
+			[
+				"golang",
+				"User\\GoLang.sublime-build"
+			],
+			[
+				"coding.py",
+				"coding\\coding.py"
+			],
+			[
+				"qguiapplication",
+				"Qt\\5.9\\Src\\qtbase\\src\\gui\\kernel\\qguiapplication_p.h"
+			],
+			[
+				"",
+				"Qt\\n\\qt3d\\main.cpp"
+			],
+			[
+				"QGuiApplication",
+				"Qt\\5.9\\Src\\qtbase\\include\\QtGui\\qguiapplication.h"
+			],
+			[
+				"simpleqml",
+				"Qt\\Examples\\Qt-5.9\\activeqt\\simpleqml\\simpleqml.pro"
+			],
+			[
+				".qml",
+				"Qt\\Examples\\Qt-5.9\\activeqt\\simpleqml\\main.qml"
+			],
+			[
+				"noepad",
+				"Qt\\5.9\\Src\\qtdoc\\doc\\src\\snippets\\widgets-tutorial\\build\\notepad.creator"
+			],
+			[
+				"notepad",
+				"Qt\\5.9\\Src\\qtdoc\\doc\\src\\snippets\\widgets-tutorial\\build\\notepad.creator"
+			],
+			[
+				"addressbook",
+				"Qt\\5.9\\Src\\qtwebengine\\src\\3rdparty\\chromium\\third_party\\protobuf\\csharp\\src\\AddressBook\\AddressBook.csproj"
+			],
+			[
+				"notepad.",
+				"Qt\\5.9\\Src\\qtdoc\\doc\\src\\snippets\\widgets-tutorial\\notepad\\notepad.cpp"
+			],
+			[
+				"qrc_qml.cpp",
+				"Qt\\n\\build\\release\\qrc_qml.cpp"
+			],
+			[
+				"cpp.md",
+				"md\\ccpp.md"
+			],
+			[
+				"qtbuild",
+				"User\\Qt+MinGW.sublime-build"
+			],
+			[
+				"help",
+				"coding\\help_cv2.py"
+			],
+			[
+				"py",
+				"User\\Python.sublime-build"
+			],
+			[
+				"python.",
+				"md\\readme_python.md"
+			],
+			[
+				"help_cv2",
+				"coding\\help_cv2.py"
+			],
+			[
+				"ffmpeg",
+				"md\\OpenToonz\\ffmpeg.md"
+			],
+			[
+				"core/hal/interface.h",
+				"opencv\\build\\include\\opencv2\\core\\hal\\interface.h"
+			],
+			[
+				"python",
+				"md\\readme_python.md"
+			],
+			[
+				"cbuild",
+				"User\\C#.sublime-build"
+			],
+			[
+				"pybuild",
+				"User\\Python.sublime-build"
+			],
+			[
+				"os_mon.app",
+				"otp_src_23.0\\lib\\os_mon\\ebin\\os_mon.app"
+			],
+			[
+				"OtpServerTransport\t",
+				"otp_src_23.0\\lib\\jinterface\\java_src\\com\\ericsson\\otp\\erlang\\OtpServerTransport.java"
+			],
+			[
+				"flipmenu",
+				"otp_src_23.0\\lib\\erl_docgen\\priv\\js\\flipmenu\\flipmenu.js"
+			],
+			[
+				"gol",
+				"md\\readme_golang.md"
+			],
+			[
+				"go.build",
+				"User\\GoLang.sublime-build"
+			],
+			[
+				"coding.go",
+				"coding\\main.go"
+			],
+			[
+				"test.config",
+				"coding\\erlang\\test.config"
+			],
+			[
+				"ch_sup",
+				"otp_src_23.0\\lib\\kernel\\test\\ch_sup.erl"
+			],
+			[
+				"coding.erl",
+				"coding\\erlang\\coding.erl"
+			],
+			[
+				"efficiency_guide",
+				"otp_src_23.0\\system\\doc\\efficiency_guide\\efficiency_guide.erl"
+			],
+			[
+				"wx_object",
+				"otp_src_23.0\\lib\\wx\\src\\wx_object.erl"
+			],
+			[
+				"otp_release_targets",
+				"otp_src_23.0\\make\\otp_release_targets.mk"
+			],
+			[
+				"make/target.mk",
+				"otp_src_23.0\\make\\target.mk"
+			],
+			[
+				"codeLock",
+				"coding\\erlang\\code_lock.erl"
+			],
+			[
+				"bif.c",
+				"otp_src_23.0\\erts\\emulator\\beam\\bif.c"
+			],
+			[
+				"calendar",
+				"otp_src_23.0\\lib\\stdlib\\src\\calendar.erl"
+			],
+			[
+				"erlbuild",
+				"User\\erlang.sublime-build"
+			],
+			[
+				"erl_main",
+				"otp_src_23.0\\erts\\emulator\\sys\\win32\\erl_main.c"
+			],
+			[
+				"start_erl.c",
+				"otp_src_23.0\\erts\\etc\\win32\\start_erl.c"
+			],
+			[
+				"erlexec.c",
+				"otp_src_23.0\\erts\\etc\\common\\erlexec.c"
+			],
+			[
+				"beam_emu",
+				"otp_src_23.0\\erts\\emulator\\beam\\beam_emu.c"
+			],
+			[
+				"ProcBin",
+				"otp_src_23.0\\lib\\observer\\src\\cdv_bin_cb.erl"
+			],
+			[
+				"genop",
+				"otp_src_23.0\\lib\\compiler\\src\\genop.tab"
+			],
+			[
+				"erl_ptab",
+				"otp_src_23.0\\erts\\emulator\\beam\\erl_ptab.h"
+			],
+			[
+				"coding.js",
+				"coding\\coding.js"
+			],
+			[
+				"erl_term",
+				"otp_src_23.0\\erts\\emulator\\beam\\erl_term.h"
+			],
+			[
+				"java",
+				"md\\readme_java.md"
+			],
+			[
+				"port d",
+				"code\\ports\\port_driver.c"
+			],
+			[
+				"run_erl",
+				"otp_src_23.0\\erts\\etc\\unix\\run_erl.c"
+			],
+			[
+				"escript",
+				"otp_src_23.0\\erts\\etc\\common\\escript.c"
+			],
+			[
+				"erlsrv",
+				"otp_src_23.0\\erts\\etc\\win32\\erlsrv\\erlsrv_main.c"
+			],
+			[
+				"erlexec",
+				"otp_src_23.0\\erts\\etc\\common\\erlexec.c"
+			],
+			[
+				"erl_bif_lists.c",
+				"otp_src_23.0\\erts\\emulator\\beam\\erl_bif_lists.c"
+			],
+			[
+				"lists.erl",
+				"otp_src_23.0\\lib\\stdlib\\src\\lists.erl"
+			],
+			[
+				"BeamInstr",
+				"otp_src_23.0\\lib\\hipe\\test\\basic_SUITE_data\\basic_beam_instrs.erl"
+			],
+			[
+				"sys.c",
+				"otp_src_23.0\\erts\\emulator\\sys\\win32\\sys.c"
+			],
+			[
+				"big.c",
+				"otp_src_23.0\\erts\\emulator\\beam\\big.c"
+			],
+			[
+				"erl_term.h",
+				"otp_src_23.0\\erts\\emulator\\beam\\erl_term.h"
+			],
+			[
+				"beamsys",
+				"otp_src_23.0\\erts\\emulator\\beam\\sys.h"
+			],
+			[
+				"bif.tab",
+				"otp_src_23.0\\erts\\emulator\\beam\\bif.tab"
+			],
+			[
+				"erl_process",
+				"otp_src_23.0\\erts\\emulator\\beam\\erl_process.h"
+			],
+			[
+				"sdzmmo client ",
+				"sdzmmo\\test_client\\client.erl"
+			],
+			[
+				"io.erl",
+				"otp_src_23.0\\lib\\stdlib\\src\\io.erl"
+			],
+			[
+				"gen_server",
+				"otp_src_23.0\\lib\\stdlib\\src\\gen_server.erl"
+			],
+			[
+				"acc",
+				"md\\accme.md"
+			],
+			[
+				"win",
+				"md\\readme_win.md"
+			],
+			[
+				"Net",
+				"md\\readme_net.md"
+			],
+			[
+				"Python",
+				"md\\readme_python.md"
+			],
+			[
+				"PastelMatrixPage",
+				"samples\\xamarin-forms-samples-master\\SkiaSharpForms\\Demos\\Demos\\SkiaSharpFormsDemos\\Effects\\PastelMatrixPage.cs"
+			],
+			[
+				"GrayScaleMatrixPage",
+				"samples\\xamarin-forms-samples-master\\SkiaSharpForms\\Demos\\Demos\\SkiaSharpFormsDemos\\Effects\\GrayScaleMatrixPage.cs"
+			],
+			[
+				"SkiaLightExperiment",
+				"samples\\xamarin-forms-samples-master\\SkiaSharpForms\\Demos\\Demos\\SkiaSharpFormsDemos\\Effects\\DistanceLightExperimentPage.xaml.cs"
+			],
+			[
+				"BlueBananaPage",
+				"samples\\xamarin-forms-samples-master\\SkiaSharpForms\\Demos\\Demos\\SkiaSharpFormsDemos\\Effects\\BlueBananaPage.cs"
+			],
+			[
+				"PorterDuffCanvasView",
+				"samples\\xamarin-forms-samples-master\\SkiaSharpForms\\Demos\\Demos\\SkiaSharpFormsDemos\\Effects\\PorterDuffCanvasView.cs"
+			],
+			[
+				"SkiaSharpFormsDemos",
+				"samples\\xamarin-forms-samples-master\\SkiaSharpForms\\Demos\\SkiaSharpFormsDemos.sln"
+			],
+			[
+				"PhotoLibrary",
+				"samples\\xamarin-forms-samples-master\\SkiaSharpForms\\Demos\\Demos\\SkiaSharpFormsDemos.Droid\\PhotoLibrary.cs"
+			],
+			[
+				"IPhotoLibrary",
+				"samples\\xamarin-forms-samples-master\\SkiaSharpForms\\Demos\\Demos\\SkiaSharpFormsDemos\\IPhotoLibrary.cs"
+			],
+			[
+				"ScalingModesPageg",
+				"samples\\xamarin-forms-samples-master\\SkiaSharpForms\\Demos\\Demos\\SkiaSharpFormsDemos\\obj\\Debug\\netstandard2.0\\Bitmaps\\ScalingModesPage.xaml.g.cs"
+			],
+			[
+				"Claim",
+				"source\\Security-master\\src\\Microsoft.AspNetCore.Authentication.OAuth\\Claims\\ClaimAction.cs"
+			],
+			[
+				"Claims",
+				"source\\AspNetCore.Docs-master\\aspnetcore\\security\\authorization\\claims.md"
+			],
+			[
+				"AuthenticationManager",
+				"source\\aspnetcore-master\\src\\Servers\\HttpSys\\src\\AuthenticationManager.cs"
+			],
+			[
+				"net",
+				"md\\readme_net.md"
+			],
+			[
+				"ActionFilter",
+				"source\\aspnetcore-master\\src\\Mvc\\Mvc.Core\\src\\Filters\\ControllerActionFilter.cs"
+			],
+			[
+				"ControllerBase",
+				"source\\Mvc-master\\src\\Microsoft.AspNetCore.Mvc.Core\\ControllerBase.cs"
+			],
+			[
+				"ApiController",
+				"source\\Mvc-master\\test\\Mvc.Api.Analyzers.Test\\ApiControllerFactsTest.cs"
+			],
+			[
+				"mvc ApiController",
+				"source\\Mvc-master\\test\\WebSites\\WebApiCompatShimWebSite\\Controllers\\MvcController.cs"
+			],
+			[
+				"ApiController.cs",
+				"source\\aspnetcore-master\\src\\Mvc\\Mvc.Api.Analyzers\\test\\ApiControllerFactsTest.cs"
+			],
+			[
+				"curl",
+				"md\\readme_curl.md"
+			],
+			[
+				"win.",
+				"md\\readme_win.md"
+			],
+			[
+				"rsa.md",
+				"md\\rsa\\readme_rsa.md"
+			],
+			[
+				"android",
+				"md\\readme_android.md"
+			],
+			[
+				"csproj",
+				"coding\\Console.csproj"
+			],
+			[
+				"server",
+				"coding\\bs-server.cs"
+			],
+			[
+				"bs",
+				"coding\\bs-server.cs"
+			],
+			[
+				"stm32",
+				"md\\STM\\STM32_Nucleo.md"
+			],
+			[
+				"cbui",
+				"User\\C#.sublime-build"
+			],
+			[
+				"PHP.md",
+				"md\\readme_php.md"
+			],
+			[
+				"KeyEventArgs",
+				"source\\aspnetcore-master\\src\\Components\\Web\\src\\Web\\KeyboardEventArgs.cs"
+			],
+			[
+				"TagHelperComponent",
+				"source\\Razor-master\\src\\Microsoft.AspNetCore.Razor\\TagHelpers\\TagHelperComponent.cs"
+			],
+			[
+				"BodyTagHelper",
+				"source\\aspnetcore-master\\src\\Mvc\\Mvc.Razor\\src\\TagHelpers\\BodyTagHelper.cs"
+			],
+			[
+				"HeadTag",
+				"source\\Mvc-master\\src\\Microsoft.AspNetCore.Mvc.Razor\\TagHelpers\\HeadTagHelper.cs"
+			],
+			[
+				"TagMode",
+				"source\\Razor-master\\src\\Microsoft.AspNetCore.Razor.Language\\TagMode.cs"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "8th",
+		"selected_items":
+		[
+			[
+				"8th",
+				"C:\\download\\OpenCV\\oglpg-8th-master\\OGLPG-8th.sublime-project"
+			],
+			[
+				"Qt",
+				"C:\\coding\\md-code\\cppDemos\\QtDemos\\qtDemo.sublime-project"
+			],
+			[
+				"",
+				"C:\\download\\OpenCV\\ogl-master\\OpenGL-tutorial.sublime-project"
+			],
+			[
+				"open",
+				"C:\\coding\\md-code\\opencv\\opencv.sublime-workspace"
+			],
+			[
+				"dll",
+				"C:\\coding\\md-code\\dllDemo\\dllDemo.sublime-project"
+			],
+			[
+				"git",
+				"C:\\coding\\md-code\\git-demo\\git.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 392.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"QString",
+				"QString"
+			],
+			[
+				"QT_CHARTS_USE_NAMESPACE",
+				"QT_CHARTS_USE_NAMESPACE"
+			],
+			[
+				"QT_CHARTS_BEGIN_NAMESPACE",
+				"QT_CHARTS_BEGIN_NAMESPACE"
+			],
+			[
+				"emit",
+				"emit"
+			],
+			[
+				"createTrackbar",
+				"createTrackbar"
+			],
+			[
+				"addWeighted",
+				"addWeighted"
+			],
+			[
+				"resize",
+				"resize"
+			],
+			[
+				"ApplicationViewer",
+				"QmlApplicationViewer"
+			],
+			[
+				"cuda_GpuMat",
+				"cuda_GpuMat"
+			],
+			[
+				"Function: element",
+				"Function: element"
+			],
+			[
+				"element",
+				"Function: element"
+			],
+			[
+				"spawn",
+				"Function: spawn"
+			],
+			[
+				"start_timer",
+				"Function: start_timer"
+			],
+			[
+				"ethr_atomic_read",
+				"ethr_atomic_read"
+			],
+			[
+				"erts_atomic64_read_nob",
+				"erts_atomic64_read_nob"
+			],
+			[
+				"now_",
+				"now_0"
+			],
+			[
+				"erl_start",
+				"erl_start"
+			],
+			[
+				"process_main",
+				"process_main"
+			],
+			[
+				"bs_init2",
+				"Function: do_bs_init_2"
+			],
+			[
+				"ErlSub",
+				"ErlSubBin"
+			],
+			[
+				"ProcBin",
+				"ProcBin"
+			],
+			[
+				"SMALL",
+				"small"
+			],
+			[
+				"Process",
+				"Process"
+			],
+			[
+				"TAG_PRIMARY_LIST",
+				"TAG_PRIMARY_LIST"
+			],
+			[
+				"ErlDrvEntry",
+				"ErlDrvEntry"
+			],
+			[
+				"driver_entry",
+				"add_driver_entry"
+			],
+			[
+				"driver_select",
+				"driver_select"
+			],
+			[
+				"ready_output",
+				"ready_output"
+			],
+			[
+				"main",
+				"main"
+			],
+			[
+				"AddSingleTon",
+				"TryAddSingleton"
+			]
+		],
+		"width": 972.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 274.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

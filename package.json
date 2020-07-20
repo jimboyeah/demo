@@ -5,19 +5,31 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
+    "nw": "node node_modules\\nightwatch\\bin\\runner.js --env chrome",
+    "nightwatch": "nightwatch --env chrome",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
     "core-js": "^3.4.4",
+    "highlight.js": "^10.1.1",
+    "html-loader": "^1.1.0",
+    "markdown-loader": "^5.1.0",
+    "marked": "^1.1.1",
     "vue": "^2.6.10"
   },
   "devDependencies": {
+    "@babel/core": "^7.7.7",
     "@vue/cli-plugin-babel": "^4.1.0",
     "@vue/cli-plugin-eslint": "^4.1.0",
     "@vue/cli-service": "^4.1.0",
     "babel-eslint": "^10.0.3",
+    "chromedriver": "^79.0.0",
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
+    "geckodriver": "^1.19.1",
+    "nightwatch": "^1.3.2",
+    "selenium-server": "^3.141.59",
+    "vue-markdown-loader": "^2.4.1",
     "vue-template-compiler": "^2.6.10"
   },
   "eslintConfig": {
