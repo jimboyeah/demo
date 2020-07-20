@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>spa</title>
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<link href="" rel="stylesheet">
+</head>
+<body>
+
+<!-- <script src="https://unpkg.com/vue/dist/vue.js"></script> -->
+<!-- <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script> -->
+<script src="assets/vue.js"></script>
+<script src="assets/vue-router.js"></script>
+
+<style>
+	.button { padding:2px; text-decoration: none; background:#00CAFF; border:1px solid #cccccc;}
+	.button:hover {color:#fff;}
+	.router-link-active {background:#FfBb00;}
+</style>
+
+<div id="app">
+  <h1>Hello App!</h1>
+  <p>
+	<!-- 使用 router-link 组件来导航，它会被渲染成一个 `<a>` 标签，`to` 属性指定链接 -->
+	<!-- IE天生天然残缺，不支持反引号，`/user/${id}/${name}`这样的模板字符串就不能使用了 -->
+	<router-link class="button" to="/foo">Go to Foo</router-link>
+	<router-link class="button" to="/bar">Go to Bar</router-link>
+	<router-link class="button" :to="'/user/'+id+'/'+name">Go to User1 View</router-link>
+	<router-link class="button" :to="'/user/112/Jimbo'">Go to User2 View</router-link>
+	<button class="button" @click="goBack">Go Back</button>
+	<span>Watching {{stamp}}</span>
+  </p>
+  <!-- 路由视图 路由出口 路由匹配到的组件将渲染在这里 -->
+  <router-view></router-view>
+  <!-- 命名视图 -->
+  <router-view name="secondary"></router-view>
+</div>
+
+<script>
+	// 1. 定义组件。组件也可以通过 Vue.extend() 创建或者是一个组件配置对象
+	const Foo  = { template: '<div>foo view</div>' }
+	const Bar  = { template: '<div>bar view</div>' }
+	const User = { 
+		template:'<div>' + // 因为组件模板只能有一个顶级元素所以这里要使用div包裹两个子元素
+				'	<div>Hello {{ $route.params.id }}</div>' +
+				'	<router-view></router-view>' + // 组件中使用路由视图用于渲染子路由匹配到的组件
+				'</div>',
+		watch: {  // 添加 watch 方法对路由变化作出响应...
+			$route:function (to, from) { 
+				console.log("route change ",to," <= ",from);
+				this.name = to+" <= "+from;
+			}
+		},
+		beforeRouteEnter:function (to, from, next) { // to, from 都是 $route 实例
+			console.log("before route enter ", to, " <= ", from);
+			next();
+		},
+		beforeRouteUpdate:function (to, from, next) { // 2.2 中引入的导航守卫
+			// react to route changes...
+			// don't forget to call next()
+			console.log("before route update ", to, " <= ", from);
+			next();
+		}
+	}
+
+	// 2. 配置组件的路由，每个路由应该映射一个组件
+	const routes = [
+		{ path: '/foo', component: Foo },
+		{ path: '/bar', component: Bar, name:"toBar" }, // 设置 name 属性来配置一个命名路由
+		{ path: '/user/:id', component: User,  // 动态路径参数 以冒号开头
+			children:[ // 嵌套路由 子视图内容会渲染到 User 组件中的 <router-view></router-view>
+				{ path:'', component:User }, // 子路由空路径时匹配上一级路由 /user/:id
+				{ path:'jeango', component:Foo }, // 匹配 /user/:id/jeango
+				{ path:'jimbo',  component:Bar }
+			]
+		}
+	]
+
+	// 3. 以 `routes` 配置创建 router 实例，{ routes } 是ES6缩写，相当于 {routes: routes}
+	const router = new VueRouter({ routes:routes })
+
+	// 4. 创建vue实例和挂载根实例。启动应用！
+	const app = new Vue({
+		router:router,
+		data:{name:"Jeango", id:110, stamp: + new Date()},
+		watch: { // 监视参数变化
+			stamp:function () {
+				console.log('watching', this.$route);
+				return this.$route.params.name
+			}
+		},
+		methods: {
+			goBack:function () {
+				this.stamp = +new Date(); // 更新相间数据触发watch事件
+				window.history.length > 1
+				? this.$router.go(-1)
+				: this.$router.push('/')
+			}
+		}
+	}).$mount('#app')
+
+</script>
+    
+</body>
+</html>

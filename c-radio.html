@@ -1,0 +1,137 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>VUE组件开发 c-radio</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<!-- <script src="https://apps.bdimg.com/libs/zepto/1.1.4/zepto.min.js"></script> -->
+	<!-- <script type="text/javascript" src="http://vuejs.org/js/vue.min.js"></script> -->
+	<script type="text/javascript" src="assets/vue.min.js"></script>
+	<!-- <link rel="stylesheet" type="text/css" href="http://unpkg.com/iview/dist/styles/iview.css"> -->
+	<!-- <script type="text/javascript" src="http://unpkg.com/iview/dist/iview.min.js"></script> -->
+	<link rel="stylesheet" type="text/css" href="iview/iview.css">
+	<script type="text/javascript" src="iview/iview.min.js"></script>
+</head>
+<body>
+<style>
+	.radio-frame {}
+	.radio-frame .title { }
+	.radio-frame .icon { float:right; width:20px;height:20px;background:#cccccc; position:relative;border-radius:20px; }
+	.radio-frame .icon::after { content:"";width:18px;height:18px;position:absolute;left:1px;top:1px;background:#ffffff;border-radius:20px; }
+	.radio-frame .item-active .icon::after{ animation: loading 0.2s steps(9, start); width:8px;height:8px;left:6px;top:6px;}
+	.radio-frame .item-active .icon { background:#26a2ff; }
+	.radio-frame .item {padding:8px 8px;font-size:1.3em;margin-top:-1px;border:1px solid #d9d9d9;border-left: none;border-right:none;}
+	@keyframes loading {
+		50% { width:12px;height:12px;left:4px;top:4px; }
+		100% { width:8px;height:8px;left:6px;top:6px; }
+	}
+</style>
+<div id="app">
+	<i-button @click="show">Click me!</i-button>
+	<Modal v-model="visible" title="Message">pick {{price}}</Modal>
+	<button class="ivu-btn ivu-btn-primary ivu-btn-large" type="primary" @click.native="go2pay">{{"请先登录"}}</button>
+
+	<c-radio align="left" v-model="price" @update="show" :options="products" @click.native="setOptions"></c-radio>
+</div>
+<script>
+/*
+
+* VUE组件开发 c-radio https://www.jianshu.com/p/a47d91d0ef12
+* VUE组件开发 c-daystep https://www.jianshu.com/p/6e66cc2f731e
+
+VUE组件基础
+
+示例组件为一个 c-radio 单选框组件，展示了VUE组件的事件使用，数据互通能力。
+
+	* Vue.component('c-radio', {...}) 方法定义组件；
+	* data: function () { return {...} } 使用function返回一个数据容器给每个组件实例；
+	* props: ['options'] 简式定义组件标签输入参数名称
+	* template:'<div ...>' 定义模板
+	* methods:{...} 定义组件方法
+
+组件方法内，可以通过 $emit 私有基础方法来触发事件，如以下代码触发一个input事件，可结合双向绑定数据 v-model="price" 实现组件数据到父组的传输：
+
+	this.$emit("input", value);
+
+使用c-radio组件：
+
+	<c-radio v-model="price" @update="show" :options="products" @click.native="setOptions"></c-radio>
+
+兼容事项：IE系列不在考虑范围，主要针对 android 的 AppleWebkit/Chrome/Mozilla 和苹果的 MobileSafari，后者对 ES6 支持不够好，像 let、const for-of 等等 ES6 语法需要兼容处理。微信内置浏览器QQ浏览器X5内核.
+
+参考微信小程序运行环境
+
+在 iOS 上，小程序逻辑层的 javascript 代码运行在 JavaScriptCore 中，视图层是由 WKWebView 来渲染的，环境有 iOS8、iOS9、iOS10；
+
+在 Android 上，
+
+旧版本，小程序逻辑层的 javascript 代码运行中 X5 JSCore 中，视图层是由 X5 基于 Mobile Chrome 57 内核来渲染的；
+
+新版本，小程序逻辑层的 javascript 代码运行在 V8 中，视图层是由自研 XWeb 引擎基于 Mobile Chrome 67 内核来渲染的；
+
+在 开发工具上，小程序逻辑层的 javascript 代码是运行在 NW.js 中，视图层是由 Chromium 60 Webview 来渲染的。
+
+
+
+ */
+Vue.component('c-radio', {
+	data: function () {
+		return { count: 0 };
+	},
+	props: ['options'],
+	methods:{
+		setTarget: function (event) {
+			var target = event.currentTarget;
+			var value  = event.currentTarget.dataset.value;
+			console.log("setTarget", this, target, value);
+			this.target = target;
+			this.$emit("input", value);
+		},
+		updateState: function (event) {
+			var els=event.currentTarget.getElementsByClassName('item'); 
+			for(var p in els) {
+				if( isNaN(p) ) continue;
+				els[p].className=els[p].className.replace('item-active','');
+			}
+			this.target.className+=' item-active';
+			this.$emit("update", this.target.dataset.value);
+			console.log("updateState", this, event, event.srcElement, event.target, event.toElement);//
+		}
+	},
+	template:
+	'<div class="radio-frame" @click="updateState">'+
+	'   <div class="item" v-for="(item,index) in options" @click.capture="setTarget" :index="index" :data-value="item.value">'+
+	'       <label class="icon"></label>'+
+	'       <label class="title" v-html="item.label">{{count}}</label>'+
+	'   </div>'+
+	'</div>'
+})
+
+new Vue({
+	el: '#app',
+	data: {
+		price:0,
+		visible: false,
+		products: [
+			{label:"体验7天VIP: ￥20.00 (仅限新用户)", value:20.00},
+			{label:"月度VIP: ￥99.00 <del>(原价320)</del>", value:99.00},
+			{label:"季度VIP: ￥198.00 <del>(原价640)</del>", value:198.00},
+			{label:"季度VIP: ￥396.00 <del>(原价1280)</del>", value:396.00},
+		]
+	},
+	methods: {
+		setOptions: function (event) {
+			console.log("setOptions", this, event);
+		},
+		show: function (event) {
+			console.log("show", event, this);
+			this.visible = true;
+			var that = this;
+			setTimeout(function(){ that.visible=false; }, 600);
+		}
+	}
+})
+</script>
+</body>
+</html>

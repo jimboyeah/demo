@@ -1,0 +1,56 @@
+.item { background:#f9d29f; font-weight: bold; padding:2em; text-shadow: 0 0px 3px cornsilk, 1px 0px 2px white; }
+.dark-style {
+	color: bisque;
+	background-color: #282828;
+	background-image: 
+		radial-gradient(black 15%, transparent 16%), 
+		radial-gradient(black 15%, transparent 16%), 
+		radial-gradient(rgba(255, 255, 255, 0.1) 15%, transparent 20%), 
+		radial-gradient(rgba(255, 255, 255, 0.1) 15%, transparent 20%);
+	background-position: 0 0px, 8px 8px, 0 1px, 8px 9px;
+	background-size: 16px 16px;
+}
+.patternA {
+	background-size: 50px 50px;
+	background-color: white;
+	background-image: 
+		-webkit-linear-gradient(to top,transparent 50%, rgba(200, 0, 0, .5) 50%, rgba(200, 0, 0, .5)),
+		-webkit-linear-gradient(to left, transparent 50%, rgba(200, 0, 0, .5) 50%, rgba(200, 0, 0, .5));
+	background-image: 
+		linear-gradient(to top,transparent 50%, rgba(200, 0, 0, .5) 50%, rgba(200, 0, 0, .5)),
+		linear-gradient(to left, transparent 50%, rgba(200, 0, 0, .5) 50%, rgba(200, 0, 0, .5))     
+}
+.patternB {
+	background-color: #88AA33;
+	background-image: 
+		radial-gradient(circle at 33% 45%, transparent 9px, #661133 10px, transparent 11px), 
+		radial-gradient(circle at 100% 84%, transparent 9px, #661133 10px, transparent 11px);
+	background-position: 0 10px, 0 0%, 0 0;
+	background-size: 20px 20px;
+}
+.patternC {
+	background-color: cornsilk;
+	background-image: 
+		radial-gradient(circle at 0% 50%, #404040 9px, transparent 10px), 
+		radial-gradient(circle at 100% 50%, #cccccc 9px, transparent 10px);
+	background-position: 0 50px, 0 15px;
+	background-size: 48px 24px;
+}
+.patternD {
+	background-color: cornsilk;
+	background-image: 
+		radial-gradient(circle at 50% 50%, #c0c0c0 4px, #323232 4px, #323232 12px, transparent 13px), 
+		radial-gradient(circle at 50% 50%, #323232 4px, #c0c0c0 4px, #c0c0c0 12px, transparent 13px),
+		radial-gradient(circle at 0% 50%, #323232 24px, transparent 0px), 
+		radial-gradient(circle at 100% 50%, #c0c0c0 24px, transparent 0px),
+		none;
+	background-position:25px 8px, 25px 32px, 0 20px, 0 20px;
+	background-size: 52px 52px; 
+}
+body {
+	background: 
+		repeating-radial-gradient(circle, #e8e1d7 0, #e6e5bb 16px, transparent) 0px 0px,
+		repeating-radial-gradient(circle, #f39117 0, #f93333 16px, transparent) 25px 25px;
+	background-position: -6px -8px, 0px 0px;
+	background-size: 5px 5px;
+}

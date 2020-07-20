@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title> Hello React! </title>
+		<script src="https://cdn.staticfile.org/react/16.4.0/umd/react.development.js"> </script>
+		<script src="https://cdn.staticfile.org/react-dom/16.4.0/umd/react-dom.development.js"> </script>
+		<script src="https://cdn.staticfile.org/babel-standalone/6.26.0/babel.min.js"> </script>
+		<script src="https://cdn.staticfile.org/redux/4.0.1/redux.min.js"></script>
+		<script src="https://cdn.staticfile.org/react-redux/6.0.1/react-redux.min.js"></script>
+		<script src="https://cdn.staticfile.org/prop-types/15.7.2/prop-types.js"></script>
+		<style>
+			.scrolled::-webkit-scrollbar {
+				width: 12px;
+				background-color: #F5F5F5;
+			}
+
+			.scrolled::-webkit-scrollbar-thumb {
+				border-radius: 10px;
+				-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+				background-color: #555;
+			}
+			.scrolled {
+				float:left;
+				margin:16px auto;
+				border:0.1px solid rgba(1,1,1,0.5);
+				width:400px; 
+				height:400px;
+				overflow: scroll;
+			}
+			.scrolled h1 {
+				width:150%;
+				height:150%;
+				font-size:200px;
+				text-align: center;
+			}
+			/* div#style-$.scrolled*11>h1{$} */
+			div#example {clear:both; padding:8px;background:#282828; display:inline-block; border-radius:32px; color:white;}
+		</style>
+		</head>
+		<body>
+			<div id="style-1" class="scrolled">
+				<h1>1</h1>
+			</div>
+			<div id="style-2" class="scrolled">
+				<h1>2</h1>
+			</div>
+			<div id="style-3" class="scrolled">
+				<h1>3</h1>
+			</div>
+			<div id="example"> </div>
+			<ul>
+				<li> <a href="index.html">React 组件演示</a> </li>
+				<li> <a href="c-daystep.html">c-daystep.html</a> </li>
+				<li> <a href="c-radio.html">c-radio.html</a> </li>
+				<li> <a href="readme.html">readme.html</a> </li>
+				<li> <a href="readme_vue.html">readme_vue.html</a> </li>
+				<li> <a href="spa.html">spa.html</a> </li>
+				<li> <a href="Tween.html">Tween.html</a> </li>
+			</ul>
+		</body>
+</html>
+
+<script type="text/babel">
+let Component = React.Component
+
+// Counter Component
+class Counter extends Component {
+	constructor(props) {
+		super(props);
+		this.incrementAsync = this.incrementAsync.bind(this);
+		this.incrementIfOdd = this.incrementIfOdd.bind(this);
+	}
+
+	incrementIfOdd() {
+		if (this.props.value % 2 !== 0) {
+			this.props.onIncrement()
+		}
+	}
+
+	incrementAsync() {
+		setTimeout(this.props.onIncrement, 1000)
+	}
+
+	render() {
+		const { value, onIncrement, onDecrement } = this.props
+		return (
+			<p>
+				Clicked: {value} times
+				<button onClick={onIncrement}> + </button>
+				<button onClick={onDecrement}> - </button>
+				<button onClick={this.incrementIfOdd}> Increment if odd </button>
+				<button onClick={this.incrementAsync}> Increment async </button>
+			</p>
+		)
+	}
+}
+
+Counter.propTypes = {
+	value: PropTypes.number.isRequired,
+	onIncrement: PropTypes.func.isRequired,
+	onDecrement: PropTypes.func.isRequired
+}
+
+// Reducer 
+const reducer = (state = 0, action) => {
+	switch (action.type) {
+		case 'INCREMENT':
+			return state + 1
+		case 'DECREMENT':
+			return state - 1
+		default:
+			return state
+	}
+}
+
+// index.js
+let createStore = Redux.createStore;
+
+const store = createStore(reducer)
+const rootEl = document.getElementById('example')
+
+const render = () => ReactDOM.render(
+	<Counter
+		value={store.getState()}
+		onIncrement={() => store.dispatch({ type: 'INCREMENT' })}
+		onDecrement={() => store.dispatch({ type: 'DECREMENT' })}
+	/>,
+	rootEl
+)
+
+render()
+store.subscribe(render)
+
+
+// const UserContext = React.createContext("datastore");
+
+// function Consumer(props) {
+//   function handler(e){
+//     return console.log(e.target.value)
+//   }
+//   return (
+//     <UserContext.Consumer>
+//       {a => <input {...props} onChange={handler} value={a} />}
+//     </UserContext.Consumer>
+//   );
+// }
+
+// function Editor(props) {
+//   return (
+//     <Consumer />
+//   );
+// }
+
+// function App() {
+//   return (
+//     <UserContext.Provider value={"fixed"}>
+//       <div className="App">
+//         <h1>Hello Demo</h1>
+//         <p>Edit it to see some what happen!</p>
+//         <Editor />
+//       </div>
+//     </UserContext.Provider>
+//   );
+// }
+
+// const rootElement = document.getElementById("example");
+// ReactDOM.render(<App />, rootElement);
+</script>

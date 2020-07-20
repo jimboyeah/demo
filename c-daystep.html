@@ -1,0 +1,372 @@
+<!-- 
+
+* VUE组件开发 c-radio https://www.jianshu.com/p/a47d91d0ef12
+* VUE组件开发 c-daystep https://www.jianshu.com/p/6e66cc2f731e
+
+
+# VUE组件生命周期
+https://cn.vuejs.org/v2/guide/instance.html
+
+在整个程序运行过程中，以下生命周期事件依次发生，在事件中如果有属性读写，那相应的 getter 或 setter 以及 watch,computed 函数也会被调用。解构事件 beforeDestroy 和 destroyed 会在 vm.$destory() 方法调用时触发。在 mounted 之前，内部的实图属性 vm.$el 会被创建并挂载到节点上，之后就开始状态监测循环，根据数据更新来进行响应。beforeUpdate
+和 updated 两个事件只在全局的VUE程序对象有效。对于 keep-alive 模式，还有 activated 和 deactivated 事件，相对VUE1.0的事件有较大的变动：
+
+	* beforeCreate 
+	* data 构造函数
+	* created
+	* 判断 el 参数是不存在，vm.$mount(el) 可能被调用
+	* 判断 template 模板参数是否存在，存在则执行 render 函数渲染，否则对 el 节点的 outerHTML 进行渲染
+	* beforeMount
+	* mounted
+	* beforeUpdate 这里更新数据不会触发附加的重渲染过程
+	* updated
+	* beforeDestroy
+	* destroyed
+
+组件 methods 中定义的方法可以直接由外部调用，vm.updateStep()。
+
+# 组件属性 prop
+https://vuejs.org/v2/guide/components-props.html
+https://cn.vuejs.org/v2/style-guide/#Prop-名大小写-强烈推荐
+
+在Vue1.x中利用props的twoWay和.sync绑定修饰符就可以实现props的双向绑定功能，但是在Vue2中彻底废弃了此功能，通常组件属性 prop 是单向绑定的，只能从父组件中向子组件传入数据，不能传出，但是例外的是，当属性是对象时，可以通过修改属性的内部变量从而保持父子组件对同一属性对象的引用来实现向父子组件的双向数据传送，如代码中通过 msg4parent 向父组件传送数据，传值给父组件数据还可以使用自定义事件 $emit。应该优先通过 prop 和事件进行父子组件之间的通信，而不是 this.$parent 或改变 prop。一个理想的 Vue 应用是 prop 向下传递，事件向上传递的。遵循这一约定会让你的组件更易于理解。然而，在一些边界情况下 prop 的变更或 this.$parent 能够简化两个深度耦合的组件。
+
+组件属性 prop 定义的方式有两一，一种是简易的形式，使用数组来定义属性名列表即可：
+
+	props: ['options', 'moreOptions']
+
+另一种是完整的定义，包括指定数据类型，指定默认值，validator 自定义验证函数等功能：
+
+	props: {
+		propA: Number, // 基础类型检测 （`null` 意思是任何类型都可以）
+		propB: [String, Number],					// 多种类型
+		propC: { type: String, required: true },	// 必传且是字符串
+		propD: { type: Number, default: 100 },		// 数字，有默认值
+		propE: { type: Object, default: function () { return { message: 'hello' } } },
+		propF: { validator: function (value) { return value > 10 }
+	}
+
+注意，HTML节点属性是不支持大写字符的，即使有大写字符出现也是被当作小写处理的。在使用 props 定义参数时，参数名字需遵循使用驼峰。一般情况可以约定 JavaScript 中使用更自然的 camelCase，而在 HTML 中则是 kebab-case。因此 moreOptions 这样包含大写字符的参数在 HTML 节点的属性对应 <div more-options="..." />。
+
+# 计算属性与侦听器(watch,computed)
+https://cn.vuejs.org/v2/guide/computed.html
+
+它们都是以Vue的依赖追踪机制为基础的，都是希望在依赖数据发生改变的时候，预先定义好的函数会对变化进行响应。但watch和computed也有明显不同的地方：
+watch和computed各自处理的数据关系场景不同：
+
+	* watch擅长处理一个数据影响多个数据的场景
+	* computed擅长处理一个数据受多个数据影响的场景
+
+虽然计算属性在大多数情况下更合适，但有时也需要一个自定义的侦听器。这就是为什么 Vue 通过 watch 选项提供了一个更通用的方法，来响应数据的变化。当需要在数据变化时执行异步或开销较大的操作时，这个方式是最有用的。计算属性默认只有 getter ，不过在需要时你也可以提供一个 setter。设置了计算属性后，对相应的属性赋值时 setter 会被调用，同样读取属性时 getter 也会被调用。getter 内需要返回计算属性的值，setter 则需要相应更新依赖变量的值。注意如果 getter 和 setter 操作了本身关联的属性变量，则会进行死循环，如以下示例中对 fullName 进行读取，或者对 fullName 赋值就会进入死循环。
+
+	computed: {
+		fullName: function () { return this.firstName+" "+this.lastName } // default getter
+	}
+
+	computed: {
+		fullName: {
+			get: function () { return this.firstName + ' ' + this.lastName }, // getter
+			set: function (newValue) { // setter
+				var names = newValue.split(' ')
+				this.firstName = names[0]
+				this.lastName = names.pop();
+			}
+		}
+	}
+
+要触发数据更新动作，或者在子组件响应父组件的数据更新，要求在父组件中更新数据对象时使用新对象实例，数值或字符串类型无求。如下面的代码，后面注解掉的两行是无效更新，尽管它们修改掉了数据变量，但并不会触发VUE的更新动作，相应的 watch 等函数也不会触发。
+
+	let daysteps = Object.assign({}, this.daysteps);
+	this.daysteps = daysteps;
+	// this.daysteps = this.daysteps;
+	// this.daysteps.days ++;
+
+注意：模板绑定事件时，事件出现的前后顺序会影响到事件处理的先后，如下的单击事件 setTarget 部会比 updateState 先执行。
+
+	 <div @click="setTarget" @click.capture="updateState"></div>
+
+https://cn.vuejs.org/v2/api/#Vue-nextTick
+
+ -->
+
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>VUE 组件开发 c-daystep </title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- <script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script> -->
+		<script src="assets/vue.js"></script>
+		<style>
+		body { background: url("assets/vellum.png"); }
+		.light-style,
+		.dark-style { background:#f9d29f; padding:2%; }
+		.dark-style {
+			background: #222 url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAMAAAC67D+PAAAAFVBMVEUqKiopKSkoKCgjIyMuLi4kJCQtLS0dJckpAAAAO0lEQVR42iXLAQoAUQhCQSvr/kfe910jHIikElsl5qVFa1iE5f0Pom/CNZdbNM6756lQ41NInMfuFPgAHVEAlGk4lvIAAAAASUVORK5CYII=");
+		}
+		.dark-style .day-step { 
+			background:#232323 !important;
+			background-image: linear-gradient(to bottom, #232323 0,#232323 100%) !important;
+			box-shadow:0px 3px 5px #272626, 0 1px 0 #ada7a7, 0px -1px 0px #211b1b !important;
+		}
+		</style>
+	</head>
+	<body>
+
+		<div id="appc">
+			<div class="light-style">
+				<c-daystep :options="daysteps" @update="updateStep"></c-daystep>
+				<c-daystep :options="daysteps2" @update="updateStep2"></c-daystep>
+				<c-daystep :options="daysteps3" @update="updateStep3"></c-daystep>
+			</div>
+			<div class="dark-style">
+				<c-daystep :options="daysteps" @update="updateStep"></c-daystep>
+				<c-daystep :options="daysteps2" @update="updateStep2"></c-daystep>
+				<c-daystep :options="daysteps3" @update="updateStep3"></c-daystep>
+			</div>
+		</div>
+
+	</body>
+</html>
+
+<script>
+// 注册 VUE 组件
+Vue.component('c-daystep', {
+	data: function () {
+		console.log("data init", this.options);
+		return { count: 0 };
+	},
+	// props: { options:{type:Object} },
+	props: ['options'],
+	watch: {
+		// options:function(nvalue, ovalue){
+		//	console.log("watch options", nvalue, ovalue, this.options);
+		// },
+		options:{
+			immediate: true,
+			handler (nvalue, ovalue) {
+				var opts = this.options;
+					opts.msg4parent = "Data for parent component!";
+				console.log("watch options", nvalue, ovalue, opts);
+				var items = [];
+				var days = opts.days;
+				var done = opts.done;
+				this.options.leading = opts.overShow && opts.leadingZero && done>days? done:this.options.leadingZero;
+				if( opts.overShow ) done = (done-1) % days + (done>0?1:0);//(days+1)+(done/days);
+				if( done>days ) done = days;
+				for(var i = 0; i<days; i++) {
+					items.push({themes:"stop "+(done>i?"done":"")});
+				}
+				this.options.items = items;
+				var i = opts.leadingZero? 0:1;
+				var w = done? (100/(days-i)*(done-i)):0;
+				this.options.barStyle = "width:"+w+"%";
+			}
+		}
+	},
+	computed:{
+		options_shadow:{
+			set: function(nvalue){
+				console.log("set options", nvalue, this.options);
+			},
+			get: function(){
+				console.log("get options", this);
+				return this.options;
+			}
+		}
+	},
+	beforeCreate:	function(){ console.log("beforeCreate", this); },
+	created:		function(){ console.log("created", this); },
+	beforeMount:	function(){ console.log("beforeMount", this); },
+	mounted:		function(){ console.log("mounted", this); },
+	beforeDestroy:	function(){ console.log("beforeDestroy", this); },
+	destroyed:		function(){ console.log("destroyed", this); },
+	methods:{
+		setTarget: function (event) {
+			var target = event.currentTarget;
+			var value  = event.currentTarget.dataset.value;
+			console.log("setTarget", value, this.options.done);
+			this.target = target;
+			this.$emit("input", value);
+		},
+		updateState: function (event) {
+			var els=event.currentTarget.getElementsByClassName('stop');
+			var value = this.target? this.target.dataset.value:0;
+			// if( value==3 ) this.$destroy();
+			this.$emit("update", {index:value});
+		}
+	},
+	template:
+	'<div class="day-step orange shine">'+
+	'	<span class="bar" :style="options.barStyle"></span>'+
+	'	<span class="stop done leading" v-if="options.leadingZero">{{options.leading}}</span>'+
+	'	<span :class="item.themes" v-for="(item,index) in options.items" @click="setTarget" @click.capture="updateState" :data-value="index">{{index+1}}</span>'+
+	'</div>'
+})
+
+var vm = new Vue({
+	el: '#appc',
+	data: { // 配置组件参数
+		daysteps3: {days:7, done:2},
+		daysteps2: {days:7, done:8, leadingZero: '签'},
+		daysteps: {days:7, done:0, overShow:true, leadingZero: '签',}
+	},
+	beforeUpdate:	function(){ console.log("beforeUpdate", this); },
+	updated:		function(){ console.log("updated", this); },
+	watch: {
+		daysteps: function(nvalue, ovalue){
+			console.log("watch daysteps", nvalue, ovalue);
+		}
+	},
+	methods: { // 配置组件点击事件处理
+		updateStep: function(res){
+			var opts = Object.assign({}, this.daysteps);
+			this.daysteps = opts;
+			opts.done = (opts.done+1);//%(opts.days+1);
+			console.log("updateStep", res, opts.done, opts.days, opts);
+		},
+		updateStep2: function(res){
+			var opts = Object.assign({}, this.daysteps2);
+			this.daysteps2 = opts;
+			opts.done = (opts.done+1)%(opts.days+1);
+			console.log("updateStep2", res, opts.done, opts.days, opts);
+		},
+		updateStep3: function(res){
+			if( res.index==3 ) this.$destroy();
+			var opts = Object.assign({}, this.daysteps3);
+			this.daysteps3 = opts;
+			opts.done = (opts.done+1)%(opts.days+1);
+			console.log("updateStep3", res, opts.done, opts.days, opts);
+		}
+	}
+})
+</script>
+
+<style>
+	.day-step {
+		display:flex;
+		flex-direction: row;
+		justify-content: space-between;
+		position: relative;
+		background-color: #1a1a1a;
+		background-image: linear-gradient(to bottom, #ffffff 0,#dadbde 100%);
+		height: 25px;
+		padding: 5px;
+		width: 100%;
+		margin: 28px 0;
+		text-align: left;
+		box-sizing: border-box;
+		-moz-border-radius: 25px;
+		-webkit-border-radius: 25px;
+		border-radius: 25px;
+		-moz-box-shadow: 0px 2px 3px #a59b9b, 0 1px 0 #ada7a7;
+		-webkit-box-shadow: 0px 2px 3px #a59b9b, 0 1px 0 #ada7a7;
+		box-shadow: 0px 2px 3px #a59b9b, 0 1px 0 #ada7a7;
+	}
+	
+	.day-step .stop { 
+		cursor:pointer;
+		border-radius: 25px;
+		display:inline-block;
+		width:32px; height:32px;
+		text-align: center;
+		line-height: 32px;
+		z-index: 2;
+		margin: -8px;
+		position: relative;
+		color: #b9a4a4;
+		background: #f5f5f5;
+		box-shadow: 0 2px 5px #928686;
+	}
+	.day-step .done { 
+		color:white;
+		background:#fd9215;
+		animation: done-delay 0.8s steps(2, end);
+	}
+	.day-step .leading { 
+		box-shadow: 0 0 10px #c5287a;
+		background: #ff5959 !important;
+	}
+	@-webkit-keyframes done-delay {
+	 0% { background:#f5f5f5; color: #b9a4a4; } 
+	 50% { background:#f5f5f5; color: #b9a4a4; } 
+	 100% { background:#fd9215; }
+	}
+
+	.day-step .bar {
+		position: absolute; height: 50%; top:25%; left:-3px;
+		display: inline-block;
+		background-color: #777;
+		-moz-border-radius: 25px;
+		-webkit-border-radius: 25px;
+		border-radius: 25px;
+		-moz-box-shadow: 0 1px 0 rgba(255, 255, 255, .5) inset;
+		-webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, .5) inset;
+		box-shadow: 0 1px 0 rgba(255, 255, 255, .5) inset;
+		-webkit-transition: width .4s ease-in-out;
+		-moz-transition: width .4s ease-in-out;
+		-ms-transition: width .4s ease-in-out;
+		-o-transition: width .4s ease-in-out;
+		transition: width .4s ease-in-out;
+	}
+	
+	.orange .bar {
+		background-color: #fecf23;
+		background-image: -webkit-gradient(linear, left top, left bottom, from(#fecf23), to(#fd9215));
+		background-image: -webkit-linear-gradient(top, #fecf23, #fd9215);
+		background-image: -moz-linear-gradient(top, #fecf23, #fd9215);
+		background-image: -ms-linear-gradient(top, #fecf23, #fd9215);
+		background-image: -o-linear-gradient(top, #fecf23, #fd9215);
+		background-image: linear-gradient(top, #fecf23, #fd9215);  
+	}
+
+	.shine .bar::after {
+		content: '';
+		opacity: 0;
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background: #fff;
+		-moz-border-radius: 3px;
+		-webkit-border-radius: 3px;
+		border-radius: 3px;
+		
+		-webkit-animation: animate-shine 2s ease-out infinite;
+		-moz-animation: animate-shine 2s ease-out infinite;
+	}
+
+	@-webkit-keyframes animate-shine { 
+		0% {opacity: 0; width: 0;}
+		50% {opacity: .5;}
+		100% {opacity: 0; width: 95%;}
+	}
+	
+	
+	@-moz-keyframes animate-shine {
+		0% {opacity: 0; width: 0;}
+		50% {opacity: .5;}
+		100% {opacity: 0; width: 95%;}
+	}
+
+	.glow .bar {
+		-moz-box-shadow: 0 5px 5px rgba(255, 255, 255, .7) inset, 0 -5px 5px rgba(255, 255, 255, .7) inset;
+		-webkit-box-shadow: 0 5px 5px rgba(255, 255, 255, .7) inset, 0 -5px 5px rgba(255, 255, 255, .7) inset;
+		box-shadow: 0 5px 5px rgba(255, 255, 255, .7) inset, 0 -5px 5px rgba(255, 255, 255, .7) inset;
+		
+		-webkit-animation: animate-glow 1s ease-out infinite;
+		-moz-animation: animate-glow 1s ease-out infinite;
+	}
+
+	@-webkit-keyframes animate-glow {
+	 0% { -webkit-box-shadow: 0 5px 5px rgba(255, 255, 255, .7) inset, 0 -5px 5px rgba(255, 255, 255, .7) inset;} 
+	 50% { -webkit-box-shadow: 0 5px 5px rgba(255, 255, 255, .3) inset, 0 -5px 5px rgba(255, 255, 255, .3) inset;} 
+	 100% { -webkit-box-shadow: 0 5px 5px rgba(255, 255, 255, .7) inset, 0 -5px 5px rgba(255, 255, 255, .7) inset;}
+	 }
+
+	@-moz-keyframes animate-glow {
+	 0% { -moz-box-shadow: 0 5px 5px rgba(255, 255, 255, .7) inset, 0 -5px 5px rgba(255, 255, 255, .7) inset;} 
+	 50% { -moz-box-shadow: 0 5px 5px rgba(255, 255, 255, .3) inset, 0 -5px 5px rgba(255, 255, 255, .3) inset;} 
+	 100% { -moz-box-shadow: 0 5px 5px rgba(255, 255, 255, .7) inset, 0 -5px 5px rgba(255, 255, 255, .7) inset;}
+	 }
+
+</style>

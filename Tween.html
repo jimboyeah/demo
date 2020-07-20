@@ -1,0 +1,118 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>VUE 组件开发 c-daystep </title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<!-- <script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script> -->
+		<link rel="stylesheet" href="theme.css">
+		<style> /*more styles here...*/ </style>
+	</head>
+	<body>
+
+	<style> .demo { background:#f9d29f; text-shadow: 0 0px 3px cornsilk; padding:16px; margin: 4px; display:inline-block; } </style>
+
+	<script src="assets/vue.js"></script>
+	<!-- <script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script> -->
+
+	<script src="assets/lodash.min.js"></script>
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.14.1/lodash.min.js"></script> -->
+
+	<div id="list-complete-demo" class="demo">
+	  <button v-on:click="shuffle">Shuffle</button>
+	  <button v-on:click="add">Add</button>
+	  <button v-on:click="remove">Remove</button>
+	  <transition-group name="list-complete" tag="p">
+	    <span v-for="item in items" v-bind:key="item" class="list-complete-item">
+	      {{ item }}
+	    </span>
+	  </transition-group>
+	</div>
+
+	<script>
+	new Vue({
+	  el: '#list-complete-demo',
+	  data: {
+	    items: [1,2,3,4,5,6,7,8,9],
+	    nextNum: 10
+	  },
+	  methods: {
+	    randomIndex: function () {
+	      return Math.floor(Math.random() * this.items.length)
+	    },
+	    add: function () {
+	      this.items.splice(this.randomIndex(), 0, this.nextNum++)
+	    },
+	    remove: function () {
+	      this.items.splice(this.randomIndex(), 1)
+	    },
+	    shuffle: function () {
+	      this.items = _.shuffle(this.items)
+	    }
+	  }
+	})
+	</script>
+
+	<style>
+	.list-complete-item {
+	  transition: all 1s;
+	  display: inline-block;
+	  margin-right: 10px;
+	}
+	.list-complete-enter, .list-complete-leave-to {
+	  opacity: 0;
+	  transform: translateY(30px);
+	}
+	.list-complete-leave-active {
+	  position: absolute;
+	}		
+	</style>
+
+
+
+	<script src="assets/TweenMax.min.js"></script>
+	<script src="assets/BezierPlugin.min.js"></script>
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script> -->
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/plugins/BezierPlugin.min.js"></script> -->
+
+	<div class="demo">
+		<div id="demo" style="width:60px;background: pink; font-size:30px; animation:any 1s ease;">DE MO!</div>		
+	</div>
+
+	<script>
+	var points = [{x:0, y:0}, {x:160, y:0}, {x:0, y:660}, {x:540, y:540}];
+	var demo = document.getElementById("demo");
+	TweenMax.to(demo, 5, {bezier:{type:"cubic", values:points, autoRotate:["x","y","rotation",45,false]}, ease:Power1.easeInOut});		
+	</script>
+
+
+
+
+	<div id="animated-number-demo" class="demo">
+	  <input v-model.number="number" type="number" step="20">
+	  <p>{{ animatedNumber }}</p>
+	</div>
+
+	<script>
+	new Vue({
+	  el: '#animated-number-demo',
+	  data: {
+	    number: 0,
+	    tweenedNumber: 0
+	  },
+	  computed: {
+	    animatedNumber: function() {
+	      return this.tweenedNumber.toFixed(0);
+	    }
+	  },
+	  watch: {
+	    number: function(newValue) {
+	      TweenLite.to(this.$data, 0.5, { tweenedNumber: newValue });
+	    }
+	  }
+	})
+	</script>
+
+
+
+	</body>
+</html>
