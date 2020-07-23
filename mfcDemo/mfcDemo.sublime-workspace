@@ -1,0 +1,3563 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"qml",
+				"main.qml"
+			],
+			[
+				"p",
+				"plugins/"
+			],
+			[
+				"img",
+				"imageMat"
+			],
+			[
+				"lena",
+				"lena_thresh"
+			],
+			[
+				"chapp",
+				"ch_app.erl"
+			],
+			[
+				"wxMen",
+				"wxMenuBar"
+			],
+			[
+				"create",
+				"create_test_menu"
+			],
+			[
+				"ge",
+				"GenerateNames"
+			],
+			[
+				"I",
+				"IsStatic"
+			],
+			[
+				"lo",
+				"localhost.pfx"
+			],
+			[
+				"Hook",
+				"KeyboardHook"
+			],
+			[
+				"Hoo",
+				"HookStop"
+			],
+			[
+				"Ho",
+				"HookStart"
+			],
+			[
+				"int",
+				"Int32"
+			],
+			[
+				"PlaySoun",
+				"PlaySoundFlags"
+			],
+			[
+				"O",
+				"OpenFileDialog"
+			],
+			[
+				"From",
+				"Form1_Load"
+			],
+			[
+				"Form1",
+				"Form1_Load"
+			],
+			[
+				"Do",
+				"DoWorkStatic"
+			],
+			[
+				"S",
+				"Singletons"
+			],
+			[
+				"Test",
+				"TestClass"
+			],
+			[
+				"_",
+				"_count"
+			],
+			[
+				"Con",
+				"Contacts"
+			],
+			[
+				"up",
+				"upperCase"
+			],
+			[
+				"cli",
+				"on_button_clicked"
+			],
+			[
+				"height",
+				"max-height\tproperty"
+			],
+			[
+				"so",
+				"socket.io-client"
+			],
+			[
+				"En",
+				"EncodeToString\tfunc(src []byte) string ·ƒ"
+			],
+			[
+				"st",
+				"StdEncoding\t*base64.Encoding ·ν"
+			],
+			[
+				"Engin",
+				"EngineioMessage\tfunc(text string) ·ƒ"
+			],
+			[
+				"EIO",
+				"EIO_Message\tEngineioPacket ·Ɩ"
+			],
+			[
+				"SIO_Bin",
+				"SIO_Binary_Event\tSocketioPacket ·Ɩ"
+			],
+			[
+				"SIO",
+				"SIO_Event\tSocketioPacket ·Ɩ"
+			],
+			[
+				"U",
+				"Uint16\tfunc(b []byte) uint16 ·ƒ"
+			],
+			[
+				"Error",
+				"ErrorNil\tErrorCode ·Ɩ"
+			],
+			[
+				"Err",
+				"ErrorNil\tErrorCode ·Ɩ"
+			],
+			[
+				"Messa",
+				"MessageType\tbyte ·ʈ"
+			],
+			[
+				"E",
+				"Err\terror ·ν"
+			],
+			[
+				"e",
+				"Err\terror ·ν"
+			],
+			[
+				"b",
+				"brw\t*bufio.ReadWriter ·ν"
+			],
+			[
+				"Mi",
+				"Millisecond\ttime.Duration ·Ɩ"
+			],
+			[
+				"Webs",
+				"github.com/gorilla/websocket\t ·ʂ"
+			],
+			[
+				"Set",
+				"SetReadDeadline\tfunc(t time.Time) error ·ƒ"
+			],
+			[
+				"B",
+				"BrokenMessage\tMessageType ·Ɩ"
+			],
+			[
+				"R",
+				"RemoteAddr\tfunc() net.Addr ·ƒ"
+			],
+			[
+				"P",
+				"parsed\tbool ·ν"
+			],
+			[
+				"utf",
+				"unicode/utf8\t ·ʂ"
+			],
+			[
+				"Mask",
+				"Masking\tbool ·ν"
+			],
+			[
+				"Mess",
+				"MessageType\tbyte ·ʈ"
+			],
+			[
+				"Ma",
+				"Maskingkey\t[4]byte ·ν"
+			],
+			[
+				"Masking",
+				"Masking\tbool ·ν"
+			],
+			[
+				"M",
+				"Maskingkey\t[4]byte ·ν"
+			],
+			[
+				"CloseMe",
+				"CloseMessageCode\tuint ·ʈ"
+			],
+			[
+				"Ti",
+				"PingTimeout\ttime.Duration ·Ɩ"
+			],
+			[
+				"Ping",
+				"PingTimeout\ttime.Duration ·Ɩ"
+			],
+			[
+				"r",
+				"SetReadDeadline\tfunc(t time.Time) error ·ƒ"
+			],
+			[
+				"Read",
+				"ReadWriter\tstruct ·ʈ"
+			],
+			[
+				"StatusIn",
+				"StatusInternalServerError\tuntyped int ·Ɩ"
+			],
+			[
+				"net",
+				"netConn\tnet.Conn ·ν"
+			],
+			[
+				"enc",
+				"encoding/base64\t ·ʂ"
+			],
+			[
+				"Re",
+				"RequestURI\tstring ·ν"
+			],
+			[
+				"Respn",
+				"ResponseWriter\tinterface ·ʈ"
+			],
+			[
+				"Ha",
+				"Handler\tinterface ·ʈ"
+			],
+			[
+				"L",
+				"GetLabel\tfunc() string ·ƒ"
+			],
+			[
+				"test",
+				"test_pb.js"
+			],
+			[
+				"react",
+				"react-quill/"
+			],
+			[
+				"el",
+				"element-ui/"
+			],
+			[
+				"rel",
+				"icedesign-qrcode.rel.js"
+			],
+			[
+				"get",
+				"getCroppedCanvas\twarning"
+			],
+			[
+				"cl",
+				"className"
+			],
+			[
+				"hex",
+				"hex2decimal"
+			],
+			[
+				"flex",
+				"flex-wrap\tproperty"
+			],
+			[
+				"in",
+				"MarshalIndent\tfunc(v interface{}, prefix string, indent string) []byte, error ·ƒ"
+			],
+			[
+				"io",
+				"io/ioutil\t ·ʂ"
+			],
+			[
+				"re",
+				"ReadDir\tfunc(dirname string) []os.FileInfo, error ·ƒ"
+			],
+			[
+				"init",
+				"initQueue"
+			],
+			[
+				"thread",
+				"threadID"
+			],
+			[
+				"exit",
+				"exitFlag"
+			],
+			[
+				"con",
+				"content_encoding"
+			],
+			[
+				"content",
+				"content_length"
+			],
+			[
+				"name",
+				"nameKey"
+			],
+			[
+				"work",
+				"workQueue"
+			],
+			[
+				"en",
+				"enqueue"
+			],
+			[
+				"none",
+				"None"
+			],
+			[
+				"Mo",
+				"ModeExclusive\tos.FileMode ·Ɩ"
+			],
+			[
+				"encod",
+				"encoding/json\t ·ʂ"
+			],
+			[
+				"Cmd",
+				"Command\tfunc(name string, arg ...string) *exec.Cmd ·ƒ"
+			],
+			[
+				"next",
+				"next.min.js"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/C++/C Single File.sublime-build",
+					""
+				],
+				[
+					"Packages/C++/C Single File.sublime-build",
+					"Run"
+				],
+				[
+					"Packages/User/Dart 2.2.sublime-build",
+					""
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					""
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go build"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go build Window GUI App"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go Release Window GUI App"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go Release App"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go run"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go install"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go run with Test Arguments"
+				],
+				[
+					"Packages/User/php.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/C++/C Single File.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					""
+				],
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					"Run"
+				],
+				[
+					"Packages/User/C++ MinGW.sublime-build",
+					""
+				],
+				[
+					"Packages/User/C++ MinGW.sublime-build",
+					"(-std=c++11)"
+				],
+				[
+					"Packages/User/C++ MinGW.sublime-build",
+					"Qt(-std=c++11)"
+				],
+				[
+					"Packages/User/C++ MinGW.sublime-build",
+					"Qt(-std=c++11) Release"
+				],
+				[
+					"Packages/User/C++ MinGW.sublime-build",
+					"Qt(-std=c++0x)"
+				],
+				[
+					"Packages/User/C++ MinGW.sublime-build",
+					"Qt(-std=c++98)"
+				],
+				[
+					"Packages/User/C++ MinGW.sublime-build",
+					"Qt(-ansi)"
+				],
+				[
+					"Packages/User/C++ MinGW.sublime-build",
+					"Qt(-std=c11)"
+				],
+				[
+					"Packages/User/C++ MinGW.sublime-build",
+					"Qt(-std=c99)"
+				],
+				[
+					"Packages/User/C++ MinGW.sublime-build",
+					"Qt(-std=c90)"
+				],
+				[
+					"Packages/User/C++ MinGW.sublime-build",
+					"控制台中运行"
+				],
+				[
+					"Packages/User/Dart 2.2.sublime-build",
+					""
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					""
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go build"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go build Window GUI App"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go Release Window GUI App"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go Release App"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go run"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go install"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go run with Test Arguments"
+				],
+				[
+					"Packages/User/php.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/User/C++ MinGW.sublime-build",
+				"(-std=c++11)"
+			]
+		],
+		[
+			[
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					""
+				],
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					"Run"
+				],
+				[
+					"Packages/User/C++ MinGW.sublime-build",
+					""
+				],
+				[
+					"Packages/User/C++ MinGW.sublime-build",
+					"(-std=c++17)"
+				],
+				[
+					"Packages/User/C++ MinGW.sublime-build",
+					"(-std=c++14)"
+				],
+				[
+					"Packages/User/C++ MinGW.sublime-build",
+					"(-std=c++11)"
+				],
+				[
+					"Packages/User/C++ MinGW.sublime-build",
+					"(-std=c++11) with ENV"
+				],
+				[
+					"Packages/User/C++ MinGW.sublime-build",
+					"(-std=c++11) Release with ENV"
+				],
+				[
+					"Packages/User/C++ MinGW.sublime-build",
+					"(-std=c++0x) with ENV"
+				],
+				[
+					"Packages/User/C++ MinGW.sublime-build",
+					"(-std=c++98) with ENV"
+				],
+				[
+					"Packages/User/C++ MinGW.sublime-build",
+					"(-ansi) with ENV"
+				],
+				[
+					"Packages/User/C++ MinGW.sublime-build",
+					"(-std=c11) with ENV"
+				],
+				[
+					"Packages/User/C++ MinGW.sublime-build",
+					"(-std=c99) with ENV"
+				],
+				[
+					"Packages/User/C++ MinGW.sublime-build",
+					"(-std=c90) with ENV"
+				],
+				[
+					"Packages/User/C++ MinGW.sublime-build",
+					"控制台中运行"
+				]
+			],
+			[
+				"Packages/C++/C++ Single File.sublime-build",
+				"Run"
+			]
+		],
+		[
+			[
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					""
+				],
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					"Run"
+				],
+				[
+					"Packages/User/C++ MinGW.sublime-build",
+					""
+				],
+				[
+					"Packages/User/C++ MinGW.sublime-build",
+					"(-std=c++17)"
+				],
+				[
+					"Packages/User/C++ MinGW.sublime-build",
+					"(-std=c++14)"
+				],
+				[
+					"Packages/User/C++ MinGW.sublime-build",
+					"(-std=c++11)"
+				],
+				[
+					"Packages/User/C++ MinGW.sublime-build",
+					"(-std=c++11) with ENV"
+				],
+				[
+					"Packages/User/C++ MinGW.sublime-build",
+					"(-std=c++11) Release with ENV"
+				],
+				[
+					"Packages/User/C++ MinGW.sublime-build",
+					"(-std=c++0x) with ENV"
+				],
+				[
+					"Packages/User/C++ MinGW.sublime-build",
+					"(-std=c++98) with ENV"
+				],
+				[
+					"Packages/User/C++ MinGW.sublime-build",
+					"(-ansi) with ENV"
+				],
+				[
+					"Packages/User/C++ MinGW.sublime-build",
+					"(-std=c11) with ENV"
+				],
+				[
+					"Packages/User/C++ MinGW.sublime-build",
+					"(-std=c99) with ENV"
+				],
+				[
+					"Packages/User/C++ MinGW.sublime-build",
+					"(-std=c90) with ENV"
+				],
+				[
+					"Packages/User/C++ MinGW.sublime-build",
+					"控制台中运行"
+				],
+				[
+					"Packages/User/Dart 2.2.sublime-build",
+					""
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					""
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go build"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go build Window GUI App"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go Release Window GUI App"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go Release App"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go run"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go install"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go run with Test Arguments"
+				],
+				[
+					"Packages/User/php.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/User/C++ MinGW.sublime-build",
+				"(-std=c++11) with ENV"
+			]
+		],
+		[
+			[
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					""
+				],
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					"Run"
+				],
+				[
+					"Packages/User/C++ MinGW.sublime-build",
+					""
+				],
+				[
+					"Packages/User/C++ MinGW.sublime-build",
+					"(-std=c++17)"
+				],
+				[
+					"Packages/User/C++ MinGW.sublime-build",
+					"(-std=c++14)"
+				],
+				[
+					"Packages/User/C++ MinGW.sublime-build",
+					"(-std=c++11)"
+				],
+				[
+					"Packages/User/C++ MinGW.sublime-build",
+					"Qt(-std=c++11)"
+				],
+				[
+					"Packages/User/C++ MinGW.sublime-build",
+					"Qt(-std=c++11) Release"
+				],
+				[
+					"Packages/User/C++ MinGW.sublime-build",
+					"Qt(-std=c++0x)"
+				],
+				[
+					"Packages/User/C++ MinGW.sublime-build",
+					"Qt(-std=c++98)"
+				],
+				[
+					"Packages/User/C++ MinGW.sublime-build",
+					"Qt(-ansi)"
+				],
+				[
+					"Packages/User/C++ MinGW.sublime-build",
+					"Qt(-std=c11)"
+				],
+				[
+					"Packages/User/C++ MinGW.sublime-build",
+					"Qt(-std=c99)"
+				],
+				[
+					"Packages/User/C++ MinGW.sublime-build",
+					"Qt(-std=c90)"
+				],
+				[
+					"Packages/User/C++ MinGW.sublime-build",
+					"控制台中运行"
+				],
+				[
+					"Packages/User/Dart 2.2.sublime-build",
+					""
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					""
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go build"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go build Window GUI App"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go Release Window GUI App"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go Release App"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go run"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go install"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go run with Test Arguments"
+				],
+				[
+					"Packages/User/php.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/User/C++ MinGW.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					""
+				],
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					"Run"
+				],
+				[
+					"Packages/User/Dart 2.2.sublime-build",
+					""
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					""
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go build"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go build Window GUI App"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go Release Window GUI App"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go Release App"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go run"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go install"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go run with Test Arguments"
+				],
+				[
+					"Packages/User/php.sublime-build",
+					""
+				],
+				[
+					"Packages/User/Qt+MinGW.sublime-build",
+					""
+				],
+				[
+					"Packages/User/Qt+MinGW.sublime-build",
+					"编译再运行(-std=c++0x)"
+				],
+				[
+					"Packages/User/Qt+MinGW.sublime-build",
+					"编译再运行(-std=c++11)"
+				],
+				[
+					"Packages/User/Qt+MinGW.sublime-build",
+					"编译再运行(-std=c++11) Release"
+				],
+				[
+					"Packages/User/Qt+MinGW.sublime-build",
+					"编译再运行(-std=c++98)"
+				],
+				[
+					"Packages/User/Qt+MinGW.sublime-build",
+					"编译再运行(-ansi)"
+				],
+				[
+					"Packages/User/Qt+MinGW.sublime-build",
+					"编译再运行(-std=c11)"
+				],
+				[
+					"Packages/User/Qt+MinGW.sublime-build",
+					"编译再运行(-std=c99)"
+				],
+				[
+					"Packages/User/Qt+MinGW.sublime-build",
+					"编译再运行(-std=c90)"
+				],
+				[
+					"Packages/User/Qt+MinGW.sublime-build",
+					"控制台中运行"
+				]
+			],
+			[
+				"Packages/User/Qt+MinGW.sublime-build",
+				"编译再运行(-std=c++11)"
+			]
+		],
+		[
+			[
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					""
+				],
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					"Run"
+				],
+				[
+					"Packages/User/Dart 2.2.sublime-build",
+					""
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					""
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go build"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go build Window GUI App"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go Release Window GUI App"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go Release App"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go run"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go install"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go run with Test Arguments"
+				],
+				[
+					"Packages/User/php.sublime-build",
+					""
+				],
+				[
+					"Packages/User/Qt+MinGW.sublime-build",
+					""
+				],
+				[
+					"Packages/User/Qt+MinGW.sublime-build",
+					"编译再运行(-std=c++0x)"
+				],
+				[
+					"Packages/User/Qt+MinGW.sublime-build",
+					"编译再运行(-std=c++112)"
+				],
+				[
+					"Packages/User/Qt+MinGW.sublime-build",
+					"编译再运行(-std=c++11)"
+				],
+				[
+					"Packages/User/Qt+MinGW.sublime-build",
+					"编译再运行(-std=c++11) Release"
+				],
+				[
+					"Packages/User/Qt+MinGW.sublime-build",
+					"编译再运行(-std=c++98)"
+				],
+				[
+					"Packages/User/Qt+MinGW.sublime-build",
+					"编译再运行(-ansi)"
+				],
+				[
+					"Packages/User/Qt+MinGW.sublime-build",
+					"编译再运行(-std=c11)"
+				],
+				[
+					"Packages/User/Qt+MinGW.sublime-build",
+					"编译再运行(-std=c99)"
+				],
+				[
+					"Packages/User/Qt+MinGW.sublime-build",
+					"编译再运行(-std=c90)"
+				],
+				[
+					"Packages/User/Qt+MinGW.sublime-build",
+					"控制台中运行"
+				]
+			],
+			[
+				"Packages/User/Qt+MinGW.sublime-build",
+				"编译再运行(-std=c++112)"
+			]
+		],
+		[
+			[
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					""
+				],
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					"Run"
+				],
+				[
+					"Packages/User/Dart 2.2.sublime-build",
+					""
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					""
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go build"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go build Window GUI App"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go Release Window GUI App"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go Release App"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go run"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go install"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go run with Test Arguments"
+				],
+				[
+					"Packages/User/php.sublime-build",
+					""
+				],
+				[
+					"Packages/User/Qt+MinGW.sublime-build",
+					""
+				],
+				[
+					"Packages/User/Qt+MinGW.sublime-build",
+					"编译再运行(-std=c++11)"
+				],
+				[
+					"Packages/User/Qt+MinGW.sublime-build",
+					"编译再运行(-std=c++11) Release"
+				],
+				[
+					"Packages/User/Qt+MinGW.sublime-build",
+					"编译再运行(-std=c++98)"
+				],
+				[
+					"Packages/User/Qt+MinGW.sublime-build",
+					"编译再运行(-ansi)"
+				],
+				[
+					"Packages/User/Qt+MinGW.sublime-build",
+					"编译再运行(-std=c11)"
+				],
+				[
+					"Packages/User/Qt+MinGW.sublime-build",
+					"编译再运行(-std=c99)"
+				],
+				[
+					"Packages/User/Qt+MinGW.sublime-build",
+					"编译再运行(-std=c90)"
+				],
+				[
+					"Packages/User/Qt+MinGW.sublime-build",
+					"控制台中运行"
+				]
+			],
+			[
+				"Packages/User/Qt+MinGW.sublime-build",
+				"编译再运行(-std=c++11)"
+			]
+		],
+		[
+			[
+				[
+					"Packages/Lua/Lua.sublime-build",
+					""
+				],
+				[
+					"Packages/User/Dart 2.2.sublime-build",
+					""
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					""
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go build"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go build Window GUI App"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go Release Window GUI App"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go Release App"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go run"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go install"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go run with Test Arguments"
+				],
+				[
+					"Packages/User/php.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/Lua/Lua.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/MarkdownPreview/Markdown.sublime-build",
+					""
+				],
+				[
+					"Packages/SublimeREPL/sublimerepl_build_system_hack.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/MarkdownPreview/Markdown.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/MarkdownPreview/Markdown.sublime-build",
+					""
+				],
+				[
+					"Packages/User/Dart 2.2.sublime-build",
+					""
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					""
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go build"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go build Window GUI App"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go Release Window GUI App"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go Release App"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go run"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go install"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go run with Test Arguments"
+				],
+				[
+					"Packages/User/php.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/MarkdownPreview/Markdown.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				],
+				[
+					"Packages/SublimeREPL/sublimerepl_build_system_hack.sublime-build",
+					""
+				],
+				[
+					"Packages/User/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/User/Python.sublime-build",
+					"Run"
+				]
+			],
+			[
+				"Packages/Python/Python.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				],
+				[
+					"Packages/User/Dart 2.2.sublime-build",
+					""
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					""
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go build"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go build Window GUI App"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go Release Window GUI App"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go Release App"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go run"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go install"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go run with Test Arguments"
+				],
+				[
+					"Packages/User/php.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/Python/Python.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				],
+				[
+					"Packages/User/Dart 2.2.sublime-build",
+					""
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					""
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go build"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go build Window GUI App"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go Release Window GUI App"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go Release App"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go run"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go install"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go run with Test Arguments"
+				],
+				[
+					"Packages/User/php.sublime-build",
+					""
+				],
+				[
+					"Packages/User/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/User/Python.sublime-build",
+					"Run"
+				]
+			],
+			[
+				"Packages/User/Python.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/Rust/Cargo.sublime-build",
+					""
+				],
+				[
+					"Packages/Rust/Cargo.sublime-build",
+					"Run"
+				],
+				[
+					"Packages/Rust/Cargo.sublime-build",
+					"Test"
+				],
+				[
+					"Packages/Rust/Cargo.sublime-build",
+					"Bench"
+				],
+				[
+					"Packages/Rust/Cargo.sublime-build",
+					"Clean"
+				],
+				[
+					"Packages/Rust/Rust.sublime-build",
+					""
+				],
+				[
+					"Packages/Rust/Rust.sublime-build",
+					"Run"
+				],
+				[
+					"Packages/Rust/Rust.sublime-build",
+					"Build & Run"
+				],
+				[
+					"Packages/User/Dart 2.2.sublime-build",
+					""
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					""
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go build"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go build Window GUI App"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go Release Window GUI App"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go Release App"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go run"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go install"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go run with Test Arguments"
+				],
+				[
+					"Packages/User/php.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/Rust/Cargo.sublime-build",
+				"Run"
+			]
+		],
+		[
+			[
+				[
+					"Packages/Sublime-Erlang/Erlang.sublime-build",
+					""
+				],
+				[
+					"Packages/Sublime-Erlang/rebar.sublime-build",
+					""
+				],
+				[
+					"Packages/Sublime-Erlang/rebar.sublime-build",
+					"Clean"
+				],
+				[
+					"Packages/Sublime-Erlang/rebar.sublime-build",
+					"Build with dependencies"
+				],
+				[
+					"Packages/Sublime-Erlang/rebar.sublime-build",
+					"Test (common_test)"
+				],
+				[
+					"Packages/Sublime-Erlang/rebar.sublime-build",
+					"Test (eunit)"
+				],
+				[
+					"Packages/Sublime-Erlang/rebar.sublime-build",
+					"Test Current Module (eunit)"
+				],
+				[
+					"Packages/Sublime-Erlang/rebar.sublime-build",
+					"Generate Documentation"
+				],
+				[
+					"Packages/Sublime-Erlang/rebar.sublime-build",
+					"Update Dependencies"
+				],
+				[
+					"Packages/User/Dart 2.2.sublime-build",
+					""
+				],
+				[
+					"Packages/User/erlang.sublime-build",
+					""
+				],
+				[
+					"Packages/User/erlang.sublime-build",
+					"Run ..."
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					""
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go build"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go build Window GUI App"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go Release Window GUI App"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go Release App"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go run"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go install"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go run with Test Arguments"
+				],
+				[
+					"Packages/User/php.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/User/erlang.sublime-build",
+				"Run ..."
+			]
+		],
+		[
+			[
+				[
+					"Packages/Sublime-Erlang/Erlang.sublime-build",
+					""
+				],
+				[
+					"Packages/Sublime-Erlang/rebar.sublime-build",
+					""
+				],
+				[
+					"Packages/Sublime-Erlang/rebar.sublime-build",
+					"Clean"
+				],
+				[
+					"Packages/Sublime-Erlang/rebar.sublime-build",
+					"Build with dependencies"
+				],
+				[
+					"Packages/Sublime-Erlang/rebar.sublime-build",
+					"Test (common_test)"
+				],
+				[
+					"Packages/Sublime-Erlang/rebar.sublime-build",
+					"Test (eunit)"
+				],
+				[
+					"Packages/Sublime-Erlang/rebar.sublime-build",
+					"Test Current Module (eunit)"
+				],
+				[
+					"Packages/Sublime-Erlang/rebar.sublime-build",
+					"Generate Documentation"
+				],
+				[
+					"Packages/Sublime-Erlang/rebar.sublime-build",
+					"Update Dependencies"
+				],
+				[
+					"Packages/User/Dart 2.2.sublime-build",
+					""
+				],
+				[
+					"Packages/User/erlang.sublime-build",
+					""
+				],
+				[
+					"Packages/User/erlang.sublime-build",
+					"Run ..."
+				],
+				[
+					"Packages/User/erlang.sublime-build",
+					"Run escript ..."
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					""
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go build"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go build Window GUI App"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go Release Window GUI App"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go Release App"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go run"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go install"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go run with Test Arguments"
+				],
+				[
+					"Packages/User/php.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/User/erlang.sublime-build",
+				"Run ..."
+			]
+		],
+		[
+			[
+				[
+					"Packages/TypeScript/TypeScript.sublime-build",
+					""
+				],
+				[
+					"Packages/User/Dart 2.2.sublime-build",
+					""
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					""
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go build"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go build Window GUI App"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go Release Window GUI App"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go Release App"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go run"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go install"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go run with Test Arguments"
+				],
+				[
+					"Packages/User/Node.sublime-build",
+					""
+				],
+				[
+					"Packages/User/Node.sublime-build",
+					"TypeScript[ts-node]"
+				],
+				[
+					"Packages/User/Node.sublime-build",
+					"TypeScript ES3)"
+				],
+				[
+					"Packages/User/Node.sublime-build",
+					"TypeScript ES5)"
+				],
+				[
+					"Packages/User/Node.sublime-build",
+					"TypeScript ES6)"
+				],
+				[
+					"Packages/User/Node.sublime-build",
+					"ES6(ECMAScript 2015)"
+				],
+				[
+					"Packages/User/Node.sublime-build",
+					"ES5(ECMAScript 2009)"
+				],
+				[
+					"Packages/User/php.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/TypeScript/TypeScript.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/TypeScript/TypeScript.sublime-build",
+					""
+				],
+				[
+					"Packages/User/Dart 2.2.sublime-build",
+					""
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					""
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go build"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go build Window GUI App"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go Release Window GUI App"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go Release App"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go run"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go install"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go run with Test Arguments"
+				],
+				[
+					"Packages/User/php.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/TypeScript/TypeScript.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/User/C#.sublime-build",
+					""
+				],
+				[
+					"Packages/User/C#.sublime-build",
+					"Build Exe"
+				],
+				[
+					"Packages/User/C#.sublime-build",
+					"Build DLL"
+				],
+				[
+					"Packages/User/C#.sublime-build",
+					"Run"
+				],
+				[
+					"Packages/User/C#.sublime-build",
+					"Run with Test Arguments"
+				],
+				[
+					"Packages/User/Dart 2.2.sublime-build",
+					""
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					""
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go build"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go build Window GUI App"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go Release Window GUI App"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go Release App"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go run"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go install"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go run with Test Arguments"
+				],
+				[
+					"Packages/User/php.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/User/C#.sublime-build",
+				"Build Exe"
+			]
+		],
+		[
+			[
+				[
+					"Packages/User/C#.sublime-build",
+					""
+				],
+				[
+					"Packages/User/C#.sublime-build",
+					"Build Exe & Run ..."
+				],
+				[
+					"Packages/User/C#.sublime-build",
+					"Build DLL"
+				],
+				[
+					"Packages/User/C#.sublime-build",
+					"Run"
+				],
+				[
+					"Packages/User/C#.sublime-build",
+					".Net New"
+				],
+				[
+					"Packages/User/C#.sublime-build",
+					".Net Run"
+				],
+				[
+					"Packages/User/C#.sublime-build",
+					".Net Run Project"
+				],
+				[
+					"Packages/User/C#.sublime-build",
+					"Run with Test Arguments"
+				],
+				[
+					"Packages/User/Dart 2.2.sublime-build",
+					""
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					""
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go build"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go build Window GUI App"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go Release Window GUI App"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go Release App"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go run"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go install"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go run with Test Arguments"
+				],
+				[
+					"Packages/User/php.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/User/C#.sublime-build",
+				"Build Exe & Run ..."
+			]
+		],
+		[
+			[
+				[
+					"Packages/User/C#.sublime-build",
+					""
+				],
+				[
+					"Packages/User/C#.sublime-build",
+					"Build Exe & Run ..."
+				],
+				[
+					"Packages/User/C#.sublime-build",
+					"Build DLL"
+				],
+				[
+					"Packages/User/C#.sublime-build",
+					"Run"
+				],
+				[
+					"Packages/User/C#.sublime-build",
+					".Net New"
+				],
+				[
+					"Packages/User/C#.sublime-build",
+					".Net Run"
+				],
+				[
+					"Packages/User/C#.sublime-build",
+					".Net Watch"
+				],
+				[
+					"Packages/User/C#.sublime-build",
+					".Net Run Project"
+				],
+				[
+					"Packages/User/C#.sublime-build",
+					".Net Watch Project"
+				],
+				[
+					"Packages/User/C#.sublime-build",
+					"Run with Test Arguments"
+				],
+				[
+					"Packages/User/Dart 2.2.sublime-build",
+					""
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					""
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go build"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go build Window GUI App"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go Release Window GUI App"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go Release App"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go run"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go install"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go run with Test Arguments"
+				],
+				[
+					"Packages/User/php.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/User/C#.sublime-build",
+				"Build Exe & Run ..."
+			]
+		],
+		[
+			[
+				[
+					"Packages/User/C#.sublime-build",
+					""
+				],
+				[
+					"Packages/User/C#.sublime-build",
+					"Build Exe & Run ..."
+				],
+				[
+					"Packages/User/C#.sublime-build",
+					"Build DLL"
+				],
+				[
+					"Packages/User/C#.sublime-build",
+					"Run"
+				],
+				[
+					"Packages/User/C#.sublime-build",
+					".Net Run"
+				],
+				[
+					"Packages/User/C#.sublime-build",
+					"Run with Test Arguments"
+				],
+				[
+					"Packages/User/Dart 2.2.sublime-build",
+					""
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					""
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go build"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go build Window GUI App"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go Release Window GUI App"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go Release App"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go run"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go install"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go run with Test Arguments"
+				],
+				[
+					"Packages/User/php.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/User/C#.sublime-build",
+				".Net Run"
+			]
+		],
+		[
+			[
+				[
+					"Packages/User/C#.sublime-build",
+					""
+				],
+				[
+					"Packages/User/C#.sublime-build",
+					"Build Exe & Run ..."
+				],
+				[
+					"Packages/User/C#.sublime-build",
+					"Build DLL"
+				],
+				[
+					"Packages/User/C#.sublime-build",
+					"Run"
+				],
+				[
+					"Packages/User/C#.sublime-build",
+					"Run with Test Arguments"
+				],
+				[
+					"Packages/User/Dart 2.2.sublime-build",
+					""
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					""
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go build"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go build Window GUI App"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go Release Window GUI App"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go Release App"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go run"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go install"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go run with Test Arguments"
+				],
+				[
+					"Packages/User/php.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/User/C#.sublime-build",
+				"Build Exe & Run ..."
+			]
+		],
+		[
+			[
+				[
+					"Packages/User/Dart 2.2.sublime-build",
+					""
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					""
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go build"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go build Window GUI App"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go Release Window GUI App"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go Release App"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go run"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go install"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go run with Test Arguments"
+				],
+				[
+					"Packages/User/Node.sublime-build",
+					""
+				],
+				[
+					"Packages/User/Node.sublime-build",
+					"TypeScript[ts-node]"
+				],
+				[
+					"Packages/User/Node.sublime-build",
+					"TypeScript ES3)"
+				],
+				[
+					"Packages/User/Node.sublime-build",
+					"TypeScript ES5)"
+				],
+				[
+					"Packages/User/Node.sublime-build",
+					"TypeScript ES6)"
+				],
+				[
+					"Packages/User/Node.sublime-build",
+					"ES6(ECMAScript 2015)"
+				],
+				[
+					"Packages/User/Node.sublime-build",
+					"ES5(ECMAScript 2009)"
+				],
+				[
+					"Packages/User/php.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/User/Node.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/User/Dart 2.2.sublime-build",
+					""
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					""
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go build"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go build Window GUI App"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go Release Window GUI App"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go Release App"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go run"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go install"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go run with Test Arguments"
+				],
+				[
+					"Packages/User/php.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/User/GoLang.sublime-build",
+				"Go run"
+			]
+		],
+		[
+			[
+				[
+					"Packages/User/Dart 2.2.sublime-build",
+					""
+				],
+				[
+					"Packages/User/erlang.sublime-build",
+					""
+				],
+				[
+					"Packages/User/erlang.sublime-build",
+					"Run ..."
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					""
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go build"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go build Window GUI App"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go Release Window GUI App"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go Release App"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go run"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go install"
+				],
+				[
+					"Packages/User/GoLang.sublime-build",
+					"Go run with Test Arguments"
+				],
+				[
+					"Packages/User/php.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/User/erlang.sublime-build",
+				"Run ..."
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"enabl",
+				"Table Editor: Enable for current view"
+			],
+			[
+				"enable",
+				"Table Editor: Enable for current view"
+			],
+			[
+				"hex",
+				"HexViewer: Toggle Hex View"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"comm",
+				"Git: Commit"
+			],
+			[
+				"adda",
+				"Git: Add All"
+			],
+			[
+				"ena",
+				"Table Editor: Enable for current view"
+			],
+			[
+				"status",
+				"Git: Status"
+			],
+			[
+				"comm\t",
+				"Git: Commit"
+			],
+			[
+				"add",
+				"Git: Add All"
+			],
+			[
+				"enab",
+				"Table Editor: Enable for current view"
+			],
+			[
+				"addll",
+				"Git: Add All"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"LSPEnable",
+				"LSP: Enable Language Server in Project"
+			],
+			[
+				"isnta",
+				"Package Control: Install Package"
+			],
+			[
+				"print",
+				"Print to HTML: print as HTML via browser"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"check",
+				"Git: Checkout Current File"
+			],
+			[
+				"git diff",
+				"Git: Diff Current File"
+			],
+			[
+				"pushc",
+				"Git: Push Current Branch"
+			],
+			[
+				"cmm",
+				"Git: Commit"
+			],
+			[
+				"repl",
+				"Package Control: Enable Package"
+			],
+			[
+				"en",
+				"Table Editor: Enable for current view"
+			],
+			[
+				"endablecu",
+				"Table Editor: Enable for current syntax"
+			],
+			[
+				"com",
+				"Git: Commit"
+			],
+			[
+				"git status",
+				"Git: Status"
+			],
+			[
+				"git i",
+				"Git: Init"
+			],
+			[
+				"table edit",
+				"Table Editor: Enable for current view"
+			],
+			[
+				"table",
+				"Table Editor: Show demo film in new scratch view"
+			],
+			[
+				"preview",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"previe",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"markown",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"mark",
+				"Build With: Markdown"
+			],
+			[
+				"dis",
+				"Package Control: Disable Package"
+			],
+			[
+				"disabl",
+				"Package Control: Disable Package"
+			],
+			[
+				"endable",
+				"Package Control: Disable Package"
+			],
+			[
+				"la",
+				"LaTeXTools: Clear cache"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"html",
+				"HTMLPrettify"
+			],
+			[
+				"erlang",
+				"Set Syntax: Erlang"
+			],
+			[
+				"diff",
+				"Set Syntax: Diff"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"disa",
+				"Package Control: Disable Package"
+			],
+			[
+				"in",
+				"Package Control: Install Package"
+			],
+			[
+				"package",
+				"Package Control: Install Package"
+			],
+			[
+				"utf",
+				"ConvertToUTF8: Reload with Encoding"
+			],
+			[
+				"TypesCript",
+				"TypeScript: Signature Info"
+			],
+			[
+				"markdown",
+				"Set Syntax: MultiMarkdown"
+			],
+			[
+				"debug",
+				"SublimeCodeIntel: Enable Debug Mode"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"theme",
+				"UI: Select Color Scheme"
+			],
+			[
+				"them",
+				"UI: Select Theme"
+			],
+			[
+				"new pro",
+				"Project Manager: Add New Project"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 302.0,
+		"history":
+		[
+			"out.write(\"\\0x62\\0xfa\\0x10\")",
+			"out = open(\"C:/download/OpenCV/redbook/asset/test.gzip\", \"wb\")",
+			"out.write(\"\\0x62\\0xfa\\0x10\")",
+			"newFile.write(newFileBytes)",
+			"newFile = open(\"filename.txt\", \"wb\")",
+			"newFileBytes = [123, 3, 255, 0, 100]",
+			"out.write(data)",
+			"data = [0x62, 0xfa, 0x10]",
+			"out.write([0x62, 0xfa, 0x10])",
+			"out = open(\"C:/download/OpenCV/redbook/asset/test.gzip\")",
+			" out = open(\"C:/download/OpenCV/redbook/asset/test.gzip\", \"wb\")",
+			"out.write([0x62, 0xfa, 0x10])",
+			"out.write((0x62, 0xfa, 0x10))",
+			"out = open(\"C:/download/OpenCV/redbook/asset/test.gzip\")",
+			"os.system(\"dir\");",
+			"import os;",
+			"execfile(\"..\")",
+			"execfile",
+			"system.io(\"dir\");",
+			"print(window)",
+			"print(view)",
+			"print(view);",
+			"dir(sublime)",
+			"dir(sheet)",
+			"print(__name__)",
+			"print(__name_)",
+			"print(__doc__)",
+			".",
+			";",
+			"__doc__",
+			"dir()",
+			"ver",
+			"__version",
+			".version().",
+			".version()",
+			"version()",
+			"1+1",
+			"dir",
+			"r = os.system(\"cmd /k echo >>c:/coding/md/log.txt\")",
+			"r = os.system(\"cmd /k \\\"echo c:/coding/md/log.txt mkdir c:\\mkdir\\\"\")",
+			"r = os.system(\"cmd /k echo \\\"c:/coding/md/log.txt mkdir c:\\mkdir\\\"\")",
+			"r = os.system(\"cmd /k echo c:/coding/md/log.txt mkdir c:\\mkdir'\")",
+			"r = os.system(\"cmd /k 'echo c:/coding/md/log.txt mkdir c:\\mkdir'\")",
+			"r = os.system(\"cmd -k echo c:/coding/md/log.txt mkdir c:\\mkdir\")",
+			"r = os.system(\"echo c:/coding/md/log.txt mkdir c:\\mkdir\")",
+			"r = os.system(\"echo c:/log.txt mkdir c:\\mkdir\")",
+			"r = os.system(\"echo c:\\\\log.txt mkdir c:\\mkdir\")",
+			"r = os.system(\"mkdir c:\\mkdir\")",
+			"r = os.system(\"cwd .\")",
+			"print(r)",
+			"r = os.system(\"dir .\")",
+			"print(r)",
+			"pring(r)",
+			"r = os.system(\"dir\")",
+			"os.system(\"dir\")",
+			"subprocess.run(\"ls\")",
+			"subprocess.run()",
+			"import subprocess",
+			"subprocess.run()",
+			"import commands",
+			"for i in val.readlines()",
+			"for i in val.readlines(): &  print(i)",
+			"for i in val.readlines()  print(i)",
+			"for i in val.readlines(): print(i)",
+			"for i in val.readlines():",
+			"val = os.popen('ls -al')",
+			"val = os.ppopen('ls -al')",
+			"val = os.Ppopen('ls -al')",
+			"import os",
+			"val = os.Ppopen('ls -al')",
+			"cwd"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/coding/md-code/cppDemos/mfcDemo"
+	],
+	"file_history":
+	[
+		"/C/coding/md/writing/mfc/mfc.md",
+		"/C/coding/md/writing/mfc/01 MFC 记事本 - CEditView.md",
+		"/C/download/不伦纯爱2011/download.bat",
+		"/C/download/不伦纯爱2011/urls.bat",
+		"/C/download/不伦纯爱2011/urls.md",
+		"/C/download/不伦纯爱2011/1882b53f96c000000.ts",
+		"/C/download/不伦纯爱2011/1882b53f96c001000.ts",
+		"/C/download/不伦纯爱2011/1882b53f96c001001.ts",
+		"/C/download/不伦纯爱2011/1882b53f96c001003.ts",
+		"/C/download/不伦纯爱2011/1882b53f96c001002.ts",
+		"/C/download/不伦纯爱2011/1882b53f96c001005.ts",
+		"/C/download/不伦纯爱2011/1882b53f96c001004.ts",
+		"/C/download/不伦纯爱2011/1882b53f96c001006.ts",
+		"/C/download/不伦纯爱2011/1882b53f96c001007.ts",
+		"/C/download/不伦纯爱2011/1882b53f96c001008.ts",
+		"/C/download/不伦纯爱2011/1882b53f96c001009.ts",
+		"/C/download/不伦纯爱2011/1882b53f96c001010.ts",
+		"/C/download/不伦纯爱2011/1882b53f96c001011.ts",
+		"/C/download/不伦纯爱2011/1882b53f96c001012.ts",
+		"/C/download/不伦纯爱2011/1882b53f96c001013.ts",
+		"/C/download/不伦纯爱2011/1882b53f96c001014.ts",
+		"/C/download/不伦纯爱2011/1882b53f96c001015.ts",
+		"/C/download/不伦纯爱2011/1882b53f96c001016.ts",
+		"/C/download/不伦纯爱2011/1882b53f96c001017.ts",
+		"/C/download/不伦纯爱2011/1882b53f96c001018.ts",
+		"/C/download/不伦纯爱2011/1882b53f96c001019.ts",
+		"/C/download/不伦纯爱2011/1882b53f96c001020.ts",
+		"/C/download/不伦纯爱2011/1882b53f96c001021.ts",
+		"/C/download/不伦纯爱2011/1882b53f96c001022.ts",
+		"/C/download/不伦纯爱2011/1882b53f96c001023.ts",
+		"/C/download/不伦纯爱2011/1882b53f96c001024.ts",
+		"/C/download/不伦纯爱2011/1882b53f96c001025.ts",
+		"/C/download/不伦纯爱2011/1882b53f96c001026.ts",
+		"/C/download/不伦纯爱2011/1882b53f96c001027.ts",
+		"/C/download/不伦纯爱2011/1882b53f96c001028.ts",
+		"/C/download/不伦纯爱2011/1882b53f96c001029.ts",
+		"/C/download/不伦纯爱2011/1882b53f96c001030.ts",
+		"/C/download/不伦纯爱2011/1882b53f96c001031.ts",
+		"/C/download/不伦纯爱2011/1882b53f96c001032.ts",
+		"/C/download/不伦纯爱2011/1882b53f96c001033.ts",
+		"/C/download/不伦纯爱2011/1882b53f96c001034.ts",
+		"/C/download/不伦纯爱2011/1882b53f96c001035.ts",
+		"/C/download/不伦纯爱2011/1882b53f96c001036.ts",
+		"/C/download/不伦纯爱2011/1882b53f96c001037.ts",
+		"/C/download/不伦纯爱2011/1882b53f96c001039.ts",
+		"/C/download/不伦纯爱2011/1882b53f96c001038.ts",
+		"/C/download/不伦纯爱2011/1882b53f96c001041.ts",
+		"/C/download/不伦纯爱2011/1882b53f96c001040.ts",
+		"/C/download/不伦纯爱2011/1882b53f96c001042.ts",
+		"/C/download/不伦纯爱2011/1882b53f96c001043.ts",
+		"/C/download/不伦纯爱2011/1882b53f96c001044.ts",
+		"/C/download/不伦纯爱2011/1882b53f96c001045.ts",
+		"/C/download/不伦纯爱2011/1882b53f96c001046.ts",
+		"/C/download/不伦纯爱2011/1882b53f96c001048.ts",
+		"/C/download/不伦纯爱2011/1882b53f96c001047.ts",
+		"/C/download/不伦纯爱2011/1882b53f96c001049.ts",
+		"/C/download/不伦纯爱2011/1882b53f96c001050.ts",
+		"/C/download/不伦纯爱2011/1882b53f96c001051.ts",
+		"/C/download/不伦纯爱2011/1882b53f96c001052.ts",
+		"/C/download/不伦纯爱2011/1882b53f96c001053.ts",
+		"/C/download/不伦纯爱2011/1882b53f96c001054.ts",
+		"/C/download/不伦纯爱2011/1882b53f96c001055.ts",
+		"/C/download/不伦纯爱2011/1882b53f96c001056.ts",
+		"/C/download/不伦纯爱2011/1882b53f96c001057.ts",
+		"/C/download/不伦纯爱2011/1882b53f96c001058.ts",
+		"/C/download/不伦纯爱2011/1882b53f96c001059.ts",
+		"/C/coding/md-code/MNIST/data/t10k-labels.idx1-ubyte",
+		"/C/coding/md/readme_python.md",
+		"/C/coding/python/package/main.py",
+		"/C/coding/md-code/MNIST/data/t10k-images.idx3-ubyte",
+		"/C/coding/md/writing/unicode/coding.md",
+		"/C/coding/md/readme_vim.md",
+		"/C/coding/md/Qt/readme.md",
+		"/C/coding/md/db/readme_mysql.md",
+		"/C/coding/md/readme_hadoop.md",
+		"/C/coding/md/lisp.md",
+		"/C/coding/md/readme_java.md",
+		"/C/coding/md/webpack/readme_ts.md",
+		"/C/coding/md/webpack/readme_react.md",
+		"/C/coding/md/c-daystep/readme_vue.md",
+		"/C/coding/md/c-daystep/c-daystep.html",
+		"/C/coding/md/c-daystep/www/index.php",
+		"/C/coding/md/c-daystep/map/app.min.js",
+		"/C/coding/md/c-daystep/demo.js",
+		"/C/coding/md/c-daystep/map/app.js",
+		"/C/coding/md/c-daystep/map/app.ts",
+		"/C/coding/md/c-daystep/map/app.js.map",
+		"/C/coding/md/c-daystep/map/app.min.js.map",
+		"/C/coding/md/c-daystep/map/app.beautify.js",
+		"/C/coding/md/c-daystep/c-radio.html",
+		"/C/coding/md/webpack/readme_webpack.md",
+		"/C/coding/md/webpack/readme_node.md",
+		"/C/coding/md/webpack/readme_css.md",
+		"/C/coding/md/OpenGL/LinearAlgebra.md",
+		"/C/Qt/Examples/Qt-5.9/charts/audio/main.cpp",
+		"/C/Qt/Examples/Qt-5.9/charts/audio/widget.h",
+		"/C/Qt/Examples/Qt-5.9/charts/audio/widget.cpp",
+		"/C/Qt/Examples/Qt-5.9/charts/audio/xyseriesiodevice.h",
+		"/C/Qt/Examples/Qt-5.9/charts/barmodelmapper/tablewidget.h",
+		"/C/Qt/Examples/Qt-5.9/charts/barmodelmapper/customtablemodel.h",
+		"/C/Qt/5.9/Src/qtsvg/qtsvg.pro",
+		"/C/coding/md/readme_linux.md",
+		"/C/Users/OCEAN/AppData/Local/VirtualStore/windows-version.txt",
+		"/C/coding/md/readme_git.md",
+		"/C/coding/md/ccpp.md",
+		"/C/coding/md/readme_sublime.md",
+		"/C/coding/md/readme_win.md",
+		"/C/vcpkg/buildtrees/freetype/src/2.10.1-ea10bbeefe/docs/documentation.html",
+		"/C/coding/md-code/coding/coding.js",
+		"/C/Users/OCEAN/AppData/Roaming/Sublime Text 3/Packages/User/ExternalPrintPreview.sublime-settings",
+		"/C/Users/OCEAN/AppData/Roaming/Sublime Text 3/Packages/SublimePreviewAndPrint/ExternalPrintPreview.sublime-settings",
+		"/C/Users/OCEAN/AppData/Local/Temp/Rar$DIa15788.49452/README.md",
+		"/C/Users/OCEAN/AppData/Roaming/Sublime Text 3/Packages/User/Projects/TypeScript.sublime-project",
+		"/C/vcpkg/buildtrees/freetype/src/2.10.1-ea10bbeefe/docs/tutorial/Makefile",
+		"/C/coding/md/csharp.md",
+		"/C/coding/md-code/coding/coding.py",
+		"/C/coding/md-code/coding/foo.gz",
+		"/C/coding/md-code/coding/filebinary.bin",
+		"/C/coding/md-code/coding/foo",
+		"/C/vcpkg/buildtrees/libigl/src/f571827c8c-b1a8caf56b/tutorial/CMakeLists.txt",
+		"/C/vcpkg/buildtrees/libigl/src/f571827c8c-b1a8caf56b/tutorial/101_FileIO/CMakeLists.txt",
+		"/C/vcpkg/scripts/bootstrap.ps1",
+		"/C/vcpkg/scripts/toolchains/mingw.cmake",
+		"/C/vcpkg/toolsrc/src/vcpkg/build.cpp",
+		"/C/vcpkg/buildtrees/libigl/install-x64-mingw-dbg-out.log",
+		"/C/vcpkg/buildtrees/libigl/src/f571827c8c-b1a8caf56b/tutorial/101_FileIO/main.cpp",
+		"/C/Users/OCEAN/AppData/Local/Temp/Rar$DIa16576.12748/readme.txt",
+		"/C/vcpkg/buildtrees/sdl2/install-x64-mingw-dbg-out.log"
+	],
+	"find":
+	{
+		"height": 24.0
+	},
+	"find_in_files":
+	{
+		"height": 451.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": false,
+		"in_selection": false,
+		"preserve_case": true,
+		"regex": true,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 24.0
+	},
+	"input":
+	{
+		"height": 153.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.9o://9o":
+	{
+		"height": 109.0
+	},
+	"output.GoSublime-output":
+	{
+		"height": 97.0
+	},
+	"output.GoSublime/HUD":
+	{
+		"height": 0.0
+	},
+	"output.MarGo-output":
+	{
+		"height": 97.0
+	},
+	"output.diagnostics":
+	{
+		"height": 0.0
+	},
+	"output.doc":
+	{
+		"height": 0.0
+	},
+	"output.exec":
+	{
+		"height": 195.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.git":
+	{
+		"height": 223.0
+	},
+	"output.hex_viewer_inspector":
+	{
+		"height": 169.0
+	},
+	"output.markdown":
+	{
+		"height": 197.0
+	},
+	"output.sftp":
+	{
+		"height": 103.0
+	},
+	"output.unsaved_changes":
+	{
+		"height": 97.0
+	},
+	"pinned_build_system": "",
+	"project": "mfcDemo.sublime-project",
+	"replace":
+	{
+		"height": 44.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"win",
+				"md\\readme_win.md"
+			],
+			[
+				"mysql",
+				"md\\db\\readme_mysql.md"
+			],
+			[
+				"pythond",
+				"md\\readme_python.md"
+			],
+			[
+				"python",
+				"md\\readme_python.md"
+			],
+			[
+				"pyth",
+				"md\\readme_python.md"
+			],
+			[
+				"ts.md",
+				"md\\webpack\\readme_ts.md"
+			],
+			[
+				"react",
+				"md\\webpack\\readme_react.md"
+			],
+			[
+				"vue",
+				"md\\c-daystep\\readme_vue.md"
+			],
+			[
+				"web",
+				"md\\webpack\\readme_webpack.md"
+			],
+			[
+				"css.md",
+				"md\\webpack\\readme_css.md"
+			],
+			[
+				"vue.md",
+				"md\\c-daystep\\readme_vue.md"
+			],
+			[
+				"react.md",
+				"md\\webpack\\readme_react.md"
+			],
+			[
+				"webpack",
+				"md\\webpack\\readme_webpack.md"
+			],
+			[
+				"ts.m",
+				"md\\webpack\\readme_ts.md"
+			],
+			[
+				"node",
+				"md\\webpack\\readme_node.md"
+			],
+			[
+				"java",
+				"md\\readme_java.md"
+			],
+			[
+				"qt.md",
+				"md\\Qt\\readme.md"
+			],
+			[
+				"linux",
+				"md\\readme_linux.md"
+			],
+			[
+				"vim",
+				"md\\readme_vim.md"
+			],
+			[
+				"git",
+				"md\\readme_git.md"
+			],
+			[
+				"LINUX",
+				"md\\readme_linux.md"
+			],
+			[
+				"coding.js",
+				"coding\\coding.js"
+			],
+			[
+				"sublim",
+				"md\\readme_sublime.md"
+			],
+			[
+				"sublime",
+				"md\\readme_sublime.md"
+			],
+			[
+				"coding.py",
+				"coding\\coding.py"
+			],
+			[
+				"lin",
+				"md\\OpenGL\\LinearAlgebra.md"
+			],
+			[
+				"markdown",
+				"md\\readme_markdown.md"
+			],
+			[
+				"bit",
+				"md\\writing\\bmp\\bitmap.md"
+			],
+			[
+				"bitma",
+				"md\\writing\\bmp\\bitmap.md"
+			],
+			[
+				"mark",
+				"md\\readme_markdown.md"
+			],
+			[
+				"git.",
+				"md\\readme_git.md"
+			],
+			[
+				"makr",
+				"md\\Markdown Cheatsheet.md"
+			],
+			[
+				"blen",
+				"md\\OpenToonz\\Blender.md"
+			],
+			[
+				"mingw",
+				"User\\C++ MinGW.sublime-build"
+			],
+			[
+				"mina",
+				"md\\readme_mina.md"
+			],
+			[
+				"pay",
+				"md\\readme_pay.md"
+			],
+			[
+				"openGL",
+				"md\\OpenGL\\OpenGL.md"
+			],
+			[
+				"fls",
+				"md\\OpenToonz\\flstudio.md"
+			],
+			[
+				"markdowm",
+				"md\\readme_markdown.md"
+			],
+			[
+				"sub",
+				"md\\readme_sublime.md"
+			],
+			[
+				"win.md",
+				"md\\readme_win.md"
+			],
+			[
+				"subli",
+				"md\\readme_sublime.md"
+			],
+			[
+				"mardk",
+				"md\\readme_markdown.md"
+			],
+			[
+				"coding.cpp",
+				"coding\\coding.cpp"
+			],
+			[
+				"ccpp",
+				"md\\ccpp.md"
+			],
+			[
+				"node.",
+				"User\\Node.sublime-build"
+			],
+			[
+				"es6",
+				"md\\readme_es6.md"
+			],
+			[
+				"blender",
+				"md\\OpenToonz\\Blender.md"
+			],
+			[
+				"ming",
+				"User\\C++ MinGW.sublime-build"
+			],
+			[
+				"Make",
+				"md\\Makefile.md"
+			],
+			[
+				"cmake",
+				"User\\CMake.sublime-settings"
+			],
+			[
+				"dart",
+				"User\\Dart 2.2.sublime-build"
+			],
+			[
+				"php",
+				"User\\php.sublime-build"
+			],
+			[
+				"Ming",
+				"User\\C++ MinGW.sublime-build"
+			],
+			[
+				"cbuil",
+				"User\\C#.sublime-build"
+			],
+			[
+				"sublime.",
+				"md\\readme_sublime.md"
+			],
+			[
+				"golang",
+				"User\\GoLang.sublime-build"
+			],
+			[
+				"qguiapplication",
+				"Qt\\5.9\\Src\\qtbase\\src\\gui\\kernel\\qguiapplication_p.h"
+			],
+			[
+				"",
+				"Qt\\n\\qt3d\\main.cpp"
+			],
+			[
+				"QGuiApplication",
+				"Qt\\5.9\\Src\\qtbase\\include\\QtGui\\qguiapplication.h"
+			],
+			[
+				"simpleqml",
+				"Qt\\Examples\\Qt-5.9\\activeqt\\simpleqml\\simpleqml.pro"
+			],
+			[
+				".qml",
+				"Qt\\Examples\\Qt-5.9\\activeqt\\simpleqml\\main.qml"
+			],
+			[
+				"noepad",
+				"Qt\\5.9\\Src\\qtdoc\\doc\\src\\snippets\\widgets-tutorial\\build\\notepad.creator"
+			],
+			[
+				"notepad",
+				"Qt\\5.9\\Src\\qtdoc\\doc\\src\\snippets\\widgets-tutorial\\build\\notepad.creator"
+			],
+			[
+				"addressbook",
+				"Qt\\5.9\\Src\\qtwebengine\\src\\3rdparty\\chromium\\third_party\\protobuf\\csharp\\src\\AddressBook\\AddressBook.csproj"
+			],
+			[
+				"notepad.",
+				"Qt\\5.9\\Src\\qtdoc\\doc\\src\\snippets\\widgets-tutorial\\notepad\\notepad.cpp"
+			],
+			[
+				"qrc_qml.cpp",
+				"Qt\\n\\build\\release\\qrc_qml.cpp"
+			],
+			[
+				"cpp.md",
+				"md\\ccpp.md"
+			],
+			[
+				"qtbuild",
+				"User\\Qt+MinGW.sublime-build"
+			],
+			[
+				"help",
+				"coding\\help_cv2.py"
+			],
+			[
+				"py",
+				"User\\Python.sublime-build"
+			],
+			[
+				"python.",
+				"md\\readme_python.md"
+			],
+			[
+				"help_cv2",
+				"coding\\help_cv2.py"
+			],
+			[
+				"ffmpeg",
+				"md\\OpenToonz\\ffmpeg.md"
+			],
+			[
+				"core/hal/interface.h",
+				"opencv\\build\\include\\opencv2\\core\\hal\\interface.h"
+			],
+			[
+				"cbuild",
+				"User\\C#.sublime-build"
+			],
+			[
+				"pybuild",
+				"User\\Python.sublime-build"
+			],
+			[
+				"os_mon.app",
+				"otp_src_23.0\\lib\\os_mon\\ebin\\os_mon.app"
+			],
+			[
+				"OtpServerTransport\t",
+				"otp_src_23.0\\lib\\jinterface\\java_src\\com\\ericsson\\otp\\erlang\\OtpServerTransport.java"
+			],
+			[
+				"flipmenu",
+				"otp_src_23.0\\lib\\erl_docgen\\priv\\js\\flipmenu\\flipmenu.js"
+			],
+			[
+				"gol",
+				"md\\readme_golang.md"
+			],
+			[
+				"go.build",
+				"User\\GoLang.sublime-build"
+			],
+			[
+				"coding.go",
+				"coding\\main.go"
+			],
+			[
+				"test.config",
+				"coding\\erlang\\test.config"
+			],
+			[
+				"ch_sup",
+				"otp_src_23.0\\lib\\kernel\\test\\ch_sup.erl"
+			],
+			[
+				"coding.erl",
+				"coding\\erlang\\coding.erl"
+			],
+			[
+				"efficiency_guide",
+				"otp_src_23.0\\system\\doc\\efficiency_guide\\efficiency_guide.erl"
+			],
+			[
+				"wx_object",
+				"otp_src_23.0\\lib\\wx\\src\\wx_object.erl"
+			],
+			[
+				"otp_release_targets",
+				"otp_src_23.0\\make\\otp_release_targets.mk"
+			],
+			[
+				"make/target.mk",
+				"otp_src_23.0\\make\\target.mk"
+			],
+			[
+				"codeLock",
+				"coding\\erlang\\code_lock.erl"
+			],
+			[
+				"bif.c",
+				"otp_src_23.0\\erts\\emulator\\beam\\bif.c"
+			],
+			[
+				"calendar",
+				"otp_src_23.0\\lib\\stdlib\\src\\calendar.erl"
+			],
+			[
+				"erlbuild",
+				"User\\erlang.sublime-build"
+			],
+			[
+				"erl_main",
+				"otp_src_23.0\\erts\\emulator\\sys\\win32\\erl_main.c"
+			],
+			[
+				"start_erl.c",
+				"otp_src_23.0\\erts\\etc\\win32\\start_erl.c"
+			],
+			[
+				"erlexec.c",
+				"otp_src_23.0\\erts\\etc\\common\\erlexec.c"
+			],
+			[
+				"beam_emu",
+				"otp_src_23.0\\erts\\emulator\\beam\\beam_emu.c"
+			],
+			[
+				"ProcBin",
+				"otp_src_23.0\\lib\\observer\\src\\cdv_bin_cb.erl"
+			],
+			[
+				"genop",
+				"otp_src_23.0\\lib\\compiler\\src\\genop.tab"
+			],
+			[
+				"erl_ptab",
+				"otp_src_23.0\\erts\\emulator\\beam\\erl_ptab.h"
+			],
+			[
+				"erl_term",
+				"otp_src_23.0\\erts\\emulator\\beam\\erl_term.h"
+			],
+			[
+				"port d",
+				"code\\ports\\port_driver.c"
+			],
+			[
+				"run_erl",
+				"otp_src_23.0\\erts\\etc\\unix\\run_erl.c"
+			],
+			[
+				"escript",
+				"otp_src_23.0\\erts\\etc\\common\\escript.c"
+			],
+			[
+				"erlsrv",
+				"otp_src_23.0\\erts\\etc\\win32\\erlsrv\\erlsrv_main.c"
+			],
+			[
+				"erlexec",
+				"otp_src_23.0\\erts\\etc\\common\\erlexec.c"
+			],
+			[
+				"erl_bif_lists.c",
+				"otp_src_23.0\\erts\\emulator\\beam\\erl_bif_lists.c"
+			],
+			[
+				"lists.erl",
+				"otp_src_23.0\\lib\\stdlib\\src\\lists.erl"
+			],
+			[
+				"BeamInstr",
+				"otp_src_23.0\\lib\\hipe\\test\\basic_SUITE_data\\basic_beam_instrs.erl"
+			],
+			[
+				"sys.c",
+				"otp_src_23.0\\erts\\emulator\\sys\\win32\\sys.c"
+			],
+			[
+				"big.c",
+				"otp_src_23.0\\erts\\emulator\\beam\\big.c"
+			],
+			[
+				"erl_term.h",
+				"otp_src_23.0\\erts\\emulator\\beam\\erl_term.h"
+			],
+			[
+				"beamsys",
+				"otp_src_23.0\\erts\\emulator\\beam\\sys.h"
+			],
+			[
+				"bif.tab",
+				"otp_src_23.0\\erts\\emulator\\beam\\bif.tab"
+			],
+			[
+				"erl_process",
+				"otp_src_23.0\\erts\\emulator\\beam\\erl_process.h"
+			],
+			[
+				"sdzmmo client ",
+				"sdzmmo\\test_client\\client.erl"
+			],
+			[
+				"io.erl",
+				"otp_src_23.0\\lib\\stdlib\\src\\io.erl"
+			],
+			[
+				"gen_server",
+				"otp_src_23.0\\lib\\stdlib\\src\\gen_server.erl"
+			],
+			[
+				"acc",
+				"md\\accme.md"
+			],
+			[
+				"Net",
+				"md\\readme_net.md"
+			],
+			[
+				"Python",
+				"md\\readme_python.md"
+			],
+			[
+				"PastelMatrixPage",
+				"samples\\xamarin-forms-samples-master\\SkiaSharpForms\\Demos\\Demos\\SkiaSharpFormsDemos\\Effects\\PastelMatrixPage.cs"
+			],
+			[
+				"GrayScaleMatrixPage",
+				"samples\\xamarin-forms-samples-master\\SkiaSharpForms\\Demos\\Demos\\SkiaSharpFormsDemos\\Effects\\GrayScaleMatrixPage.cs"
+			],
+			[
+				"SkiaLightExperiment",
+				"samples\\xamarin-forms-samples-master\\SkiaSharpForms\\Demos\\Demos\\SkiaSharpFormsDemos\\Effects\\DistanceLightExperimentPage.xaml.cs"
+			],
+			[
+				"BlueBananaPage",
+				"samples\\xamarin-forms-samples-master\\SkiaSharpForms\\Demos\\Demos\\SkiaSharpFormsDemos\\Effects\\BlueBananaPage.cs"
+			],
+			[
+				"PorterDuffCanvasView",
+				"samples\\xamarin-forms-samples-master\\SkiaSharpForms\\Demos\\Demos\\SkiaSharpFormsDemos\\Effects\\PorterDuffCanvasView.cs"
+			],
+			[
+				"SkiaSharpFormsDemos",
+				"samples\\xamarin-forms-samples-master\\SkiaSharpForms\\Demos\\SkiaSharpFormsDemos.sln"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"C:\\coding\\md-code\\csdemo\\cs.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 392.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"createTrackbar",
+				"createTrackbar"
+			],
+			[
+				"addWeighted",
+				"addWeighted"
+			],
+			[
+				"resize",
+				"resize"
+			],
+			[
+				"ApplicationViewer",
+				"QmlApplicationViewer"
+			],
+			[
+				"cuda_GpuMat",
+				"cuda_GpuMat"
+			],
+			[
+				"Function: element",
+				"Function: element"
+			],
+			[
+				"element",
+				"Function: element"
+			],
+			[
+				"spawn",
+				"Function: spawn"
+			],
+			[
+				"start_timer",
+				"Function: start_timer"
+			],
+			[
+				"ethr_atomic_read",
+				"ethr_atomic_read"
+			],
+			[
+				"erts_atomic64_read_nob",
+				"erts_atomic64_read_nob"
+			],
+			[
+				"now_",
+				"now_0"
+			],
+			[
+				"erl_start",
+				"erl_start"
+			],
+			[
+				"process_main",
+				"process_main"
+			],
+			[
+				"bs_init2",
+				"Function: do_bs_init_2"
+			],
+			[
+				"ErlSub",
+				"ErlSubBin"
+			],
+			[
+				"ProcBin",
+				"ProcBin"
+			],
+			[
+				"SMALL",
+				"small"
+			],
+			[
+				"Process",
+				"Process"
+			],
+			[
+				"TAG_PRIMARY_LIST",
+				"TAG_PRIMARY_LIST"
+			],
+			[
+				"ErlDrvEntry",
+				"ErlDrvEntry"
+			],
+			[
+				"driver_entry",
+				"add_driver_entry"
+			],
+			[
+				"driver_select",
+				"driver_select"
+			],
+			[
+				"ready_output",
+				"ready_output"
+			],
+			[
+				"main",
+				"main"
+			],
+			[
+				"AddSingleTon",
+				"TryAddSingleton"
+			]
+		],
+		"width": 884.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 216.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

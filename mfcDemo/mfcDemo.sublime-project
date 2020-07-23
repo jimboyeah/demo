@@ -1,0 +1,101 @@
+{
+	"build_systems":
+	[
+		{
+			"cmd": ["C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Auxiliary/Build/vcvars64.bat", "&&", "cmake", "..", "-G", "Sublime Text 2 - Ninja"],
+			"encoding": "utf8",
+			"file_regex": "^  (.+)\\((\\d+)\\)(): ((?:fatal )?(?:error|warning) \\w+\\d\\d\\d\\d: .*) \\[.*$",
+			"name": "☾♬ Ninja (Windows)",
+			"quiet": true,
+			"working_dir": "${project_path}/ninja"
+		},
+		{
+			"cmd": ["ninja.exe", "-f", "build.ninja", "all"],
+			"encoding": "gbk",
+			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)",
+			"name": "☾♬ Ninja - all",
+			"quiet": true,
+			"working_dir": "${project_path}/ninja"
+		},
+		{
+			"cmd": ["ninja.exe", "-f", "build.ninja", "clean"],
+			"encoding": "utf8",
+			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)",
+			"name": "☾♬ Ninja - clean",
+			"quiet": true,
+			"working_dir": "${project_path}/ninja"
+		},
+		{
+			"cmd": ["ninja.exe", "-f", "build.ninja", "edit_cache"],
+			"encoding": "utf8",
+			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)",
+			"name": "☾♬ Ninja - edit_cache",
+			"quiet": true,
+			"working_dir": "${project_path}/ninja"
+		},
+		{
+			"cmd": ["ninja.exe", "-f", "build.ninja", "rebuild_cache"],
+			"encoding": "utf8",
+			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)",
+			"name": "☾♬ Ninja - rebuild_cache",
+			"quiet": true,
+			"working_dir": "${project_path}/ninja"
+		},
+		{
+			"encoding": "utf8",
+			"env":
+			{
+				"PATH": "c:/MinGW/bin/;%PATH%"
+			},
+			"file_regex": "^  File \"(.+)\", line(\\d+),.*$",
+			"name": "♬☾ MinGW (Windows)",
+			"quiet": true,
+			"shell_cmd": "cmake --build .",
+			"variants":
+			[
+				{
+					"name": "Unix Makefiles",
+					"shell_cmd": "cmake .. -G \"Unix Makefiles\""
+				},
+				{
+					"name": "clean",
+					"shell_cmd": "make clean"
+				},
+				{
+					"name": "clear all",
+					"shell_cmd": "del * /s /q"
+				},
+				{
+					"name": "Make",
+					"shell_cmd": "make all -j 4 BUILD_SHARED_LIBS=ON"
+				},
+				{
+					"name": "Clean & Make",
+					"shell_cmd": "make clean && make BUILD_SHARED_LIBS=ON"
+				}
+			],
+			"working_dir": "${project_path}/build"
+		}
+	],
+	"folders":
+	[
+		{
+			"path": "."
+		},
+		{
+			"path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-3.17"
+		},
+		{
+			"path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC"
+		},
+		{
+			"path": "C:\\Program Files (x86)\\Windows Kits"
+		},
+		{
+			"path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\Common7\\Tools"
+		},
+		{
+			"path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Auxiliary"
+		}
+	]
+}

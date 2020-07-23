@@ -78,7 +78,7 @@ LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_TRADITIONAL
 
 // Icon with lowest ID value placed first to ensure application icon
 // remains consistent on all systems.
-IDR_MAINFRAME           ICON    DISCARDABLE     "res\\demo.ico"
+IDR_MAINFRAME           ICON    DISCARDABLE     ".\\demo.ico"
 
 /////////////////////////////////////////////////////////////////////////////
 //
@@ -334,7 +334,7 @@ END
 LANGUAGE 4, 1
 #pragma code_page(950)
 #endif //_WIN32
-#include "res\demo.rc2"  // non-Microsoft Visual C++ edited resources
+#include ".\demo.rc2"  // non-Microsoft Visual C++ edited resources
 #include "l.cht\afxres.rc"          // Standard components
 #endif
 

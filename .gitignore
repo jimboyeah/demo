@@ -1,4 +1,5 @@
 # .gitignore
+.vs
 obj
 *.obj
 *.o

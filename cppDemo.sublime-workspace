@@ -2526,10 +2526,20 @@
 	"expanded_folders":
 	[
 		"/C/coding/md-code/cppDemos",
-		"/C/coding/md-code/cppDemos/base"
+		"/C/coding/md-code/cppDemos/base",
+		"/C/coding/md-code/cppDemos/mfcDemo"
 	],
 	"file_history":
 	[
+		"/C/coding/md-code/cppDemos/mfcDemo/demo.mak",
+		"/C/coding/md-code/cppDemos/mfcDemo/MakeHelp.bat",
+		"/C/coding/md-code/cppDemos/mfcDemo/ReadMe.txt",
+		"/C/coding/md-code/cppDemos/mfcDemo/demo.positions",
+		"/C/coding/md-code/cppDemos/mfcDemo/demo.ncb",
+		"/C/coding/md-code/cppDemos/mfcDemo/demo.opt",
+		"/C/coding/md-code/cppDemos/mfcDemo/demo.layout",
+		"/C/coding/md-code/cppDemos/mfcDemo/demo.aps",
+		"/C/coding/md-code/cppDemos/mfcDemo/demo.dsw",
 		"/C/download/OpenCV/redbook/aux2glut.sed",
 		"/C/vcpkg/buildtrees/freetype/src/2.10.1-ea10bbeefe/include/freetype/ftimage.h",
 		"/C/vcpkg/buildtrees/freetype/src/2.10.1-ea10bbeefe/include/freetype/freetype.h",
@@ -2648,16 +2658,7 @@
 		"/C/coding/cpp/virtual.cpp",
 		"/C/coding/md-code/cppDemos/QtDemos/CMakeLists.txt",
 		"/C/coding/cpp/qt5/main.cpp",
-		"/C/coding/cpp/qt/main.cpp",
-		"/C/coding/md-code/cppDemos/src/../QtDemos/demo.cpp",
-		"/C/coding/cpp/rvalue.cpp",
-		"/C/coding/cpp/singleton.cpp",
-		"/C/coding/cpp/multithread/main.c",
-		"/C/coding/md-code/cppDemos/src/macro.cpp",
-		"/C/coding/cpp/multithread/multithread.cbp",
-		"/C/coding/md-code/cppDemos/src/template-class.cpp",
-		"/C/coding/md-code/cppDemos/src/ReadFile.cpp",
-		"/C/MinGW/set_distro_paths.bat"
+		"/C/coding/cpp/qt/main.cpp"
 	],
 	"find":
 	{
@@ -2919,7 +2920,11 @@
 						{
 							"incomplete_sync": null,
 							"is_init_dirty_state": false,
-							"syntax": "Packages/C++/C++.sublime-syntax"
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/C++/C++.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -2968,7 +2973,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 22.0
+		"height": 24.0
 	},
 	"input":
 	{

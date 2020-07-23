@@ -57,11 +57,11 @@ BOOL CDemoApp::InitInstance()
 	//  of your final executable, you should remove from the following
 	//  the specific initialization routines you do not need.
 
-#ifdef _AFXDLL
-	Enable3dControls();			// Call this when using MFC in a shared DLL
-#else
-	Enable3dControlsStatic();	// Call this when linking to MFC statically
-#endif
+    // #ifdef _AFXDLL
+    // 	Enable3dControls();			// Call this when using MFC in a shared DLL
+    // #else
+    // 	Enable3dControlsStatic();	// Call this when linking to MFC statically
+    // #endif
 
 	// Change the registry key under which our settings are stored.
 	// TODO: You should modify this string to be something appropriate
@@ -172,7 +172,7 @@ void CDemoApp::OnAppOpen()
         CFile cf;
         CFileException fe;
         if( 0!=cf.Open(szName, CFile::modeReadWrite, &fe) ){
-            int l = cf.GetLength();
+            long l = (long)cf.GetLength();
             char *cpBuf = new char[l];
             cf.Read(cpBuf,l);
             mf.SetContentText(CString(cpBuf,l));
