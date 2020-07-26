@@ -44,4 +44,5 @@ install(TARGETS point hello DESTINATION "/lib")
 install(TARGETS point hello DESTINATION "${PROJECT_SOURCE_DIR}/bin")
 
 # add_subdirectory(example bin EXCLUDE_FROM_ALL)
-add_subdirectory(example bin)
+add_subdirectory(example example)
+add_subdirectory(reimp reimp)

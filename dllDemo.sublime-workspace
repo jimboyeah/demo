@@ -1396,6 +1396,10 @@
 		"selected_items":
 		[
 			[
+				"status",
+				"Git: Status"
+			],
+			[
 				"staus",
 				"Git: Status"
 			],
@@ -1422,10 +1426,6 @@
 			[
 				"add",
 				"Git: Add All"
-			],
-			[
-				"status",
-				"Git: Status"
 			],
 			[
 				"adda",
@@ -1819,7 +1819,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 5,
 			"sheets":
 			[
 				{
@@ -1835,8 +1835,8 @@
 						"selection":
 						[
 							[
-								365,
-								365
+								724,
+								724
 							]
 						],
 						"settings":
@@ -1850,10 +1850,10 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 189.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
@@ -2005,8 +2005,8 @@
 						"selection":
 						[
 							[
-								23,
-								23
+								65,
+								65
 							]
 						],
 						"settings":
@@ -2022,7 +2022,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 0,
 					"type": "text"
 				}
 			]

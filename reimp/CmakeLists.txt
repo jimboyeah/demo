@@ -1,0 +1,9 @@
+
+cmake_minimum_required(VERSION 2.8)
+
+include_directories("./src")
+# link_directories()
+
+set(CMAKE_CXX_FLAGS "-O2 -I." )
+
+add_executable(reimp "src/reimp.c" "src/ar.c" "src/util.c")

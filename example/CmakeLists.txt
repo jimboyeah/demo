@@ -3,10 +3,12 @@ cmake_minimum_required(VERSION 2.8)
 
 include_directories(
     "${PROJECT_SOURCE_DIR}/include/"
+    "C:/coding/md-code/cppDemos/mfcDemo/dynamicLib/"
     )
 link_directories( 
     "${PROJECT_BINARY_DIR}/lib/"
     "${PROJECT_SOURCE_DIR}/lib/"
+    "C:/coding/md-code/cppDemos/mfcDemo/lib/"
     )
 
 # set(CMAKE_FIND_LIBRARY_SUFFIXES ".a")
@@ -24,4 +26,4 @@ target_link_libraries( PointTest point )
 # target_link_libraries( PointTest libpoint.a )
 
 add_executable(app app.cpp)
-target_link_libraries( app hello )
+target_link_libraries( app hello dynamicLib_d )

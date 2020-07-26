@@ -2,6 +2,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "hello.h"
+#include "lib.h"
+#include <iostream>
+
+using namespace std;
 
 /* Function signature of the function exported from the DLL. */
 typedef int (__cdecl *AddFunc)(int a, int b);
@@ -38,6 +42,20 @@ int main(int argc, char** argv)
 
 	/* Unload the DLL. */
 	FreeLibrary(hAddLib);
+
+	// Test DLL build from MSVC
+	int a = 2, b = 3;
+    cout << "Global constant PI: " << PI << endl;
+    cout << "Test:" << a << " + " << b << " = " << add(a, b) << endl;
+    cout << "Test: " << getText() << endl;
+
+    // unwork with C++ class because ABI incompatible
+    // LibTest lt;
+    // lt.Test();
+    // cout << "LibTest.G: " << lt.G << endl;
+    // cout << "LibTest::Pi: " << LibTest::Pi << endl;
+    // cout << "LibTest::Max(" << a << ", " << b << "): " << LibTest::Max(a, b) << endl;
+
 
 	return EXIT_SUCCESS;
 }
