@@ -2,7 +2,7 @@
 	"build_systems":
 	[
 		{
-			"encoding": "gkb",
+			"encoding": "gbk",
 			"env":
 			{
 				"PATH": "c:/CodeBlocks/MinGW/bin/;%PATH%"
@@ -16,6 +16,10 @@
 				{
 					"name": "Git help",
 					"shell_cmd": "git --help"
+				},
+				{
+					"name": "Git Origin attach",
+					"shell_cmd": "git remote add origin https://github.com/jimboyeah/demo.git"
 				},
 				{
 					"name": "Branch List",

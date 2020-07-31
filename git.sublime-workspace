@@ -279,7 +279,7 @@
 			"file": "git.sublime-project",
 			"settings":
 			{
-				"buffer_size": 964,
+				"buffer_size": 1091,
 				"line_ending": "Windows"
 			}
 		},
@@ -296,7 +296,7 @@
 			"file": "readme.md",
 			"settings":
 			{
-				"buffer_size": 8887,
+				"buffer_size": 9539,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -314,11 +314,11 @@
 		"selected_items":
 		[
 			[
-				"push",
+				"pushc",
 				"Git: Push Current Branch"
 			],
 			[
-				"comm",
+				"com",
 				"Git: Commit"
 			],
 			[
@@ -326,7 +326,11 @@
 				"Git: Add All"
 			],
 			[
-				"com",
+				"push",
+				"Git: Push Current Branch"
+			],
+			[
+				"comm",
 				"Git: Commit"
 			],
 			[
@@ -581,6 +585,8 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"BizCharts",
+			"C-DayStep-VUE",
 			"DotNetCoreWebw",
 			"https://github.com/jimboyeah/demo/tree/go-my-websocket"
 		],
@@ -600,7 +606,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -609,15 +615,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 964,
+						"buffer_size": 1091,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								377,
-								377
+								2,
+								785
 							]
 						],
 						"settings":
@@ -634,7 +640,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
@@ -667,7 +673,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
@@ -676,15 +682,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 8887,
+						"buffer_size": 9539,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								479,
-								479
+								826,
+								826
 							]
 						],
 						"settings":
@@ -699,10 +705,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1446.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 1,
 					"type": "text"
 				}
 			]
@@ -739,6 +745,14 @@
 		]
 	},
 	"menu_visible": true,
+	"output.diagnostics":
+	{
+		"height": 0.0
+	},
+	"output.exec":
+	{
+		"height": 174.0
+	},
 	"output.find_results":
 	{
 		"height": 0.0
