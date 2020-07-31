@@ -1,0 +1,14 @@
+[Editable Files]
+File1=Clock.c
+
+[Project Type]
+Type=windows
+
+[Default Window Placement]
+Location=left
+
+[Makefile]
+File=Clock.mak
+
+[Executable File]
+File=Clock.exe

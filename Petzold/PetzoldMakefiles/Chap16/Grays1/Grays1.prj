@@ -1,0 +1,14 @@
+[Editable Files]
+File1=Grays1.c
+
+[Project Type]
+Type=windows
+
+[Default Window Placement]
+Location=left
+
+[Makefile]
+File=Grays1.mak
+
+[Executable File]
+File=Grays1.exe

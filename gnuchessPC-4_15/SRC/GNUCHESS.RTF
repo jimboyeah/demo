@@ -1,0 +1,307 @@
+{\rtf\ansi
+{\fonttbl
+ \f0\fswiss Arial;}
+{\colortbl
+ \red0\green0\blue127;}
+\deff0
+\fs20
+\sa200
+#{\footnote contents}
+${\footnote GNU Chess Help Contents}
+{\fs32\cf0 GNU Chess Help Contents}
+\par
+{\uldb Playing GNU Chess}{\v playing}
+\par
+{\fs26 GNU Chess menu commands}
+\par
+{\uldb Game}{\v game}\line
+{\uldb Edit}{\v edit}\line
+{\uldb Options}{\v options}\line
+{\uldb Skill}{\v skill}\line
+{\uldb Side}{\v side}\line
+{\uldb Board}{\v board}\line
+{\uldb Hint}{\v hint}
+\par
+Most menu settings will be saved in GNUCHESS.INI in your Windows directory.
+\page
+
+#{\footnote playing}
+${\footnote Playing GNU Chess}
+K{\footnote Playing GNU Chess;Moving pieces}
+{\fs32\cf0 Playing GNU Chess}\par
+To move a piece, point the mouse cursor at the square the piece is on, press
+ the left mouse button, then point the cursor at the destination square and
+ click the left button again. If you select the wrong piece, click on it again.
+ To castle, move the king to the square where it should be after the castling
+ move. The rook will be moved automatically. Moves can also be made by
+ pressing F2 and typing the move in algebraic notation, for example e2e3.
+ Type o-o for a King-side castle and o-o-o for a Queen-side castle.
+\par
+\page
+
+#{\footnote game}
+${\footnote Game menu}
+K{\footnote Game menu;Open game;Save game;List game}
+{\fs32\cf0 Game Menu}
+\par\pard
+{\b New}
+\par\li144\sa200
+Reset the board and clocks to start a new game.
+\par\pard
+{\b Open}
+\par\li144\sa200
+Retrieve and resume playing a previously saved game.
+\par\pard
+{\b Save}
+\par\li144\sa200
+Save a game to continue it later.
+\par\pard
+{\b List}
+\par\li144\sa200
+List the moves of the game to a file.
+\par\pard
+{\b Exit}\line
+\tx144\tab\keep Exit GNU Chess.
+\page
+
+#{\footnote edit}
+${\footnote Edit menu}
+K{\footnote Edit menu;Setup board;Review game;Undo;Remove;Force}
+{\fs32\cf0 Edit Menu}
+\sa200\par\pard
+{\b Setup Board}
+\par
+\li144\sa200
+Allows the contents of the board to be edited. Pieces can be moved anywhere
+ on the board. To remove a piece, click the right button or double click the
+ left button on its square. Note that the kings cannot be removed. To add a piece to
+ the board, press a button on the bar and click on the appropriate square.
+ Press the button again to pop it up. Pieces cannot be moved while a button
+ is down. The buttons can also be operated using keys 1 to 9 and 0 (0 is the
+ black queen). Moves can be keyed in using F2. If a button is down, type the
+ coordinates of the destination square. When finished, select {\b Done} from
+ the menu. Select {\b Clear Board} to remove all pieces except the kings, and
+ {\b Restore Board} to restore a normal starting board. The board editor is
+ useful for setting up chess problems on the board.
+\par\pard
+{\b Review Game}
+\par
+\sa200\li144
+Replay a game one move at a time. Use the menu to see the next move or take
+ back the previous move. Replay only works properly for games starting from
+ a normal starting board, not one set up differently using the board editor.
+\par\pard
+{\b Undo}
+\par\sa200\li144
+Undo the last move.
+\par\pard
+{\b Remove}
+\par\sa200\li144
+Undo the last two moves.
+\par\pard
+\page
+
+#{\footnote options}
+${\footnote Options menu}
+K{\footnote Options menu;Beep;Coordinates;Search stats;Animated searching;Hash;
+Hash depth;Create hashfile;Windows;Contempt;Material;Recapture;Threat;PVS;
+New eval;Gamein}
+\sa200
+{\fs32\cf0 Options Menu}
+\par\pard
+{\b Beep}
+\par\sa200\li144
+Beep when the computer has made its move.
+\par\pard
+{\b Coordinates}
+\par\sa200\li144
+Display board coordinates.
+\par\pard
+{\b Search Stats}
+\par\sa200\li144
+Show search statistics.
+\par\pard
+{\b Animated Searching}
+\par\sa200\li144
+See animation of the searching process. Note that searching is much slower
+ with this option on.
+\par\pard
+{\b Book}
+\par\sa200\li144
+If checked, GNU Chess will use its book of chess game openings to improve
+ its opening game. The file GNUCHESS.DAT must be in the same directory as
+ GNUCHESS.EXE. If this file was not found or could not be opened, the Book
+ menu option is grayed.
+\par\pard
+{\b Hash}
+\par\sa200\li144
+Enable use of the hash file, if one exists. A hash file allows the program
+ to learn from previous games.
+\par\pard
+{\b Hash Depth}
+\par\sa200\li144
+Allows the user to change the minimum depth for using the hashfile and the
+ number of moves from the begining of the game to use it.
+\par\pard
+{\b Create Hashfile}
+\par\sa200\li144
+Create a hash file. The actual size is the number entered multiplied by
+ 38 bytes. If the size is less than 24, 2 to the power of the
+ number is used. 16 to 17 is a good size to use. A hash file may improve
+ the playing ability of the computer. It will probably place considerable
+ demand on the hard drive while the computer is calculating its move.
+\par\pard
+{\b Compile Book}
+\par\sa200\li144
+The binary book file GNUCHESS.DAT was compiled from the file GNUCHESS.BK3
+ distributed with GNU Chess for other platforms. If you wish to compile a
+ different book file, name it GNUCHESS.BK and place it in the same directory
+ as GNUCHESS.EXE. The Compile Book menu option will add the file's contents
+ to GNUCHESS.DAT, which will be created if it does not exist. The size of
+ this file is limited to 20000 records.
+\par\pard
+{\b Change Windows}
+\par\sa200\li144
+Change some paramaters used by the search algorithm. Generally, just use the
+ defaults.
+\par\pard
+{\b Contempt}
+\par\sa200\li144
+Sets the amount of contempt the computer has for the player. Contempt means
+ that the computer will take a risk in the hope that the player will not
+ see a potential good move. The higher the contempt, the greater the risk
+ the computer is prepared to take.
+\par\pard
+{\b Material}
+\par\sa200\li144
+Draw on lack of material.
+\par\pard
+{\b Recapture}
+\par\sa200\li144
+Use recapture heuristic.
+\par\pard
+{\b Threat}
+\par\sa200\li144
+Use threat heuristic.
+\par\pard
+{\b PVS}
+\par\sa200\li144
+Use PVS heuristic.
+\par\pard
+{\b New Eval}
+\par\sa200\li144
+Enable new evaluations
+\par\pard
+{\b Gamein}
+\par\sa200\li144
+Use gamein timing. Assumes the time specified for time control is the time
+ for a complete game.
+\par\pard
+\page
+
+#{\footnote skill}
+${\footnote Skill menu}
+K{\footnote Skill menu;Time controls;Random;Easy;Depth}
+\sa200
+{\fs32\cf0 Skill Menu}
+\par\pard
+{\b Time}
+\par\sa200\li144
+Set the time control. Specify the number of moves to make in a certain time.
+ When the time is up, the entries on the second and third lines will be used
+ if they are non-zero, otherwise the clock will be reset to the last set
+ of numbers used. For example, if you enter 20 and 10 on the first line and
+ 1 and 1 on the second line, the computer will generate 20 moves in 10
+ minutes, then 1 move every minute after that. If either paramater on the
+ first line is zero, the computer will make each move within the time
+ entered in the maximum response time control.
+\par\pard
+{\b Random}
+\par\sa200\li144
+Randomize the move selection slightly.
+\par\pard
+{\b Easy}
+\par\sa200\li144
+If easy mode is off, the computer thinks about its next move during the
+ opponents turn.
+\par\pard
+{\b Depth}
+\par\sa200\li144
+Set the maximum search depth. To reduce the difficulty of play, this
+ can be decreased, to a minimum of 2.
+\par\pard
+\page
+
+#{\footnote side}
+${\footnote Side menu}
+K{\footnote Side menu;Reverse board;Switch;Black;White;Both;Go}
+\sa200
+{\fs32\cf0 Side Menu}
+\par\pard
+{\b Reverse Board}
+\par\sa200\li144
+Reverse the board.
+\par\pard
+{\b Switch}
+\par\sa200\li144
+Switch sides with the computer. The board will be reversed if necessary
+ so that your pieces are at the front.
+\par\pard
+{\b Switch but don't move}
+\par\sa200\li144
+Same as {\b Switch}, but it ensures that it will not be the computer's move
+ after the switch. This is useful if you have set up a position with the
+ board editor and want the computer to play white with black moving first.
+\par\pard
+{\b Black}
+\par\sa200\li144
+Computer plays black. The board may be reversed as for {\b Switch}.
+\par\pard
+{\b White}
+\par\sa200\li144
+Computer plays white. The board may be reversed as for {\b Switch}.
+\par\pard
+{\b Both}
+\par\sa200\li144
+Computer plays against itself.
+\par\pard
+{\b White to move / Black to move}
+\par\sa200\li144
+Change whose move it is.
+\par\pard
+{\b Force}
+\par\sa200\li144
+Allows the user to enter moves for both sides. The board can be used to play
+ a game between two people while force is on.
+\par\pard
+\page
+
+#{\footnote board}
+${\footnote Board menu}
+K{\footnote Board menu;Colors;Board size}
+\sa200
+{\fs32\cf0 Board Menu}
+\par\pard
+{\b Colors}
+\par\sa200\li144
+Set the display colors.
+\par\pard
+{\b Size}
+\par\sa200\li144
+Set the board size. Small fits on a 640 X 480 screen, medium fits on a
+ 800 X 600 screen, and large fits on a 1024 X 768 screen.
+\par\pard
+{\b Type}
+\par\sa200\li144
+Set the board type to square or simulated 3D.
+\par\pard
+\page
+
+#{\footnote hint}
+${\footnote Hint}
+\sa200
+{\fs32\cf0 Hint}
+\par
+Display the best move the computer thinks you can make. You can also
+ use Ctrl-H.
+}

@@ -1,0 +1,52 @@
+The install script in this folder, "install.sh" is
+needed only by those who wish to compile and run the
+Petzold example programs on the Wine emulator.  The Wine
+project is an implementation of the WIN32 API on top of
+X and UNIX.  Hence Wine is a compatibility layer that
+allows Windows software to run on Intel based Unixes
+such as Linux, FreeBSD, and Solaris.
+
+This special install script is needed because file names 
+on the UNIX operating system are case sensitive whereas 
+Windows ignores the case of file names.  Consequently 
+Mr. Petzold, who developed this code on Windows, may never
+have been aware of some inconsistencies in the names of 
+his files.  For example, under Windows it is acceptable 
+for a .C source file to include a .H header file named 
+"Resource.h" via a preprocessor statement such as:
+
+#include "resource.h"
+
+However this same statement fails to find the Resource.h
+file when this code is compiled on a UNIX operating
+system.  Therefore Dimitrie O. Paun has developed the
+"install.sh" script to patch over these differences, 
+without requiring source level changes in the original 
+Petzold code.  This is accomplished via an automated 
+process consisting of file renaming and the creation of 
+symbolic links.  All you need to do is to invoke the
+"install.sh" script from the directory where you installed
+the Petzold project folders (i.e., the directory holding 
+directories named Chap01, Chap02, etc.), like this:
+
+bash Wine/install.sh
+
+Once the script runs, you can simply invoke make to
+build all 145 of the example programs:
+
+make
+
+Incidentally, the PetzoldConvert.exe program will not
+run under Wine (but that's okay since the "install.sh"
+script serves as its replacement).
+
+
+NOTE: Currently, 3 of the example programs do not compile
+under Wine:
+  - Chap21/EdrTest
+  - Chap21/ShowBit
+  - Chap21/StrProg
+
+The example programs in Chap21 are using DLLs, and DLLs
+are not currently supported by winegcc (The Wine team
+hopes to have this capability soon).

@@ -1,0 +1,17 @@
+[Editable Files]
+File1=DibHeads.c
+File2=DibHeads.rc
+File3=Resource.h
+File4=afxres.h
+
+[Project Type]
+Type=windows
+
+[Default Window Placement]
+Location=left
+
+[Makefile]
+File=DibHeads.mak
+
+[Executable File]
+File=DibHeads.exe

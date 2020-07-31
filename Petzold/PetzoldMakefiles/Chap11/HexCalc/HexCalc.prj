@@ -1,0 +1,18 @@
+[Editable Files]
+File1=HexCalc.c
+File2=HexCalc.rc
+File3=HexCalc.dlg
+File4=Resource.h
+File5=afxres.h
+
+[Project Type]
+Type=windows
+
+[Default Window Placement]
+Location=left
+
+[Makefile]
+File=HexCalc.mak
+
+[Executable File]
+File=HexCalc.exe

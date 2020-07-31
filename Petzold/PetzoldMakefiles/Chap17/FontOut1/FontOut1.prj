@@ -1,0 +1,20 @@
+[Editable Files]
+File1=FontOut1.c
+File2=..\EZTest\EZFont.c
+File3=..\EZTest\EZFont.h
+File4=..\EZTest\FontDemo.c
+File5=..\EZTest\FontDemo.rc
+File6=..\EZTest\Resource.h
+FIle7=..\EZTest\afxres.h
+
+[Project Type]
+Type=windows
+
+[Default Window Placement]
+Location=left
+
+[Makefile]
+File=FontOut1.mak
+
+[Executable File]
+File=FontOut1.exe

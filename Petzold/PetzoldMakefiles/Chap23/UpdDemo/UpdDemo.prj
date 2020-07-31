@@ -1,0 +1,17 @@
+[Editable Files]
+File1=UpdDemo.c
+File2=UpdDemo.rc
+File3=Resource.h
+File4=afxres.h
+
+[Project Type]
+Type=windows
+
+[Default Window Placement]
+Location=left
+
+[Makefile]
+File=UpdDemo.mak
+
+[Executable File]
+File=UpdDemo.exe

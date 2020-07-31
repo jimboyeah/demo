@@ -1,0 +1,14 @@
+[Editable Files]
+File1=Multi1.c
+
+[Project Type]
+Type=windows
+
+[Default Window Placement]
+Location=left
+
+[Makefile]
+File=Multi1.mak
+
+[Executable File]
+File=Multi1.exe

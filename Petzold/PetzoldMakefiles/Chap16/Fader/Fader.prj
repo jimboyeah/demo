@@ -1,0 +1,15 @@
+[Editable Files]
+File1=Fader.c
+File2=..\Bounce\PalAnim.c
+
+[Project Type]
+Type=windows
+
+[Default Window Placement]
+Location=left
+
+[Makefile]
+File=Fader.mak
+
+[Executable File]
+File=Fader.exe

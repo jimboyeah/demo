@@ -1,0 +1,14 @@
+[Editable Files]
+File1=head.c
+
+[Project Type]
+Type=windows
+
+[Default Window Placement]
+Location=left
+
+[Makefile]
+File=head.mak
+
+[Executable File]
+File=head.exe

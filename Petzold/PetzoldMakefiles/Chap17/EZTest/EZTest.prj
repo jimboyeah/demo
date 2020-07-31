@@ -1,0 +1,20 @@
+[Editable Files]
+File1=EZTest.c
+File2=EZFont.c
+File3=EZFont.h
+File4=FontDemo.c
+File5=FontDemo.rc
+File6=Resource.h
+File7=afxres.h
+
+[Project Type]
+Type=windows
+
+[Default Window Placement]
+Location=left
+
+[Makefile]
+File=EZTest.mak
+
+[Executable File]
+File=EZTest.exe

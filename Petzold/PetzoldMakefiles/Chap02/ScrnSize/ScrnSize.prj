@@ -1,0 +1,14 @@
+[Editable Files]
+File1=ScrnSize.c
+
+[Project Type]
+Type=windows
+
+[Default Window Placement]
+Location=left
+
+[Makefile]
+File=ScrnSize.mak
+
+[Executable File]
+File=ScrnSize.exe

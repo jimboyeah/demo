@@ -1,0 +1,15 @@
+[Editable Files]
+File1=AllColor.c
+File2=..\Bounce\PalAnim.c
+
+[Project Type]
+Type=windows
+
+[Default Window Placement]
+Location=left
+
+[Makefile]
+File=AllColor.mak
+
+[Executable File]
+File=AllColor.exe

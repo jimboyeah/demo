@@ -1,0 +1,14 @@
+[Editable Files]
+File1=Emf2.c
+
+[Project Type]
+Type=windows
+
+[Default Window Placement]
+Location=left
+
+[Makefile]
+File=Emf2.mak
+
+[Executable File]
+File=Emf2.exe

@@ -1,0 +1,17 @@
+[Editable Files]
+File1=MDIDemo.c
+File2=MDIDemo.rc
+File3=Resource.h
+File4=afxres.h
+
+[Project Type]
+Type=windows
+
+[Default Window Placement]
+Location=left
+
+[Makefile]
+File=MDIDemo.mak
+
+[Executable File]
+File=MDIDemo.exe

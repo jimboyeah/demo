@@ -1,0 +1,17 @@
+[Editable Files]
+File1=Unichars.c
+File2=Unichars.rc
+File3=Resource.h
+File4=afxres.h
+
+[Project Type]
+Type=windows
+
+[Default Window Placement]
+Location=left
+
+[Makefile]
+File=UniChars.mak
+
+[Executable File]
+File=UniChars.exe

@@ -1,0 +1,19 @@
+[Editable Files]
+File1=StrProg.c
+File2=StrLib.c
+File3=StrLib.h
+File4=StrProg.rc
+File5=Resource.h
+File6=afxres.h
+
+[Project Type]
+Type=windows
+
+[Default Window Placement]
+Location=left
+
+[Makefile]
+File=StrProg.mak
+
+[Executable File]
+File=StrProg.exe

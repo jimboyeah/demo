@@ -1,0 +1,14 @@
+[Editable Files]
+File1=LineDemo.c
+
+[Project Type]
+Type=windows
+
+[Default Window Placement]
+Location=left
+
+[Makefile]
+File=LineDemo.mak
+
+[Executable File]
+File=LineDemo.exe

@@ -1,0 +1,15 @@
+[Editable Files]
+File1=SysMets3.c
+File2=SysMets.h
+
+[Project Type]
+Type=windows
+
+[Default Window Placement]
+Location=left
+
+[Makefile]
+File=SysMets3.mak
+
+[Executable File]
+File=SysMets3.exe

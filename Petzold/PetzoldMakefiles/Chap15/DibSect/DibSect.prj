@@ -1,0 +1,17 @@
+[Editable Files]
+File1=DibSect.c
+File2=DibSect.rc
+File3=Resource.h
+File4=afxres.h
+
+[Project Type]
+Type=windows
+
+[Default Window Placement]
+Location=left
+
+[Makefile]
+File=DibSect.mak
+
+[Executable File]
+File=DibSect.exe

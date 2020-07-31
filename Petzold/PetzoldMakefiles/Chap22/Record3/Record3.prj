@@ -1,0 +1,17 @@
+[Editable Files]
+File1=Record3.c
+File2=..\Record1\Record.rc
+File3=..\Record1\Resource.h
+File4=..\Record1\afxres.h
+
+[Project Type]
+Type=windows
+
+[Default Window Placement]
+Location=left
+
+[Makefile]
+File=Record3.mak
+
+[Executable File]
+File=Record3.exe

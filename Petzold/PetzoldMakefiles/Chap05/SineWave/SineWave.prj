@@ -1,0 +1,14 @@
+[Editable Files]
+File1=SineWave.c
+
+[Project Type]
+Type=windows
+
+[Default Window Placement]
+Location=left
+
+[Makefile]
+File=SineWave.mak
+
+[Executable File]
+File=SineWave.exe

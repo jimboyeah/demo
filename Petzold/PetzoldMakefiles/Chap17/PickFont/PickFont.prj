@@ -1,0 +1,17 @@
+[Editable Files]
+File1=PickFont.c
+File2=PickFont.rc
+File3=Resource.h
+File4=afxres.h
+
+[Project Type]
+Type=windows
+
+[Default Window Placement]
+Location=left
+
+[Makefile]
+File=PickFont.mak
+
+[Executable File]
+File=PickFont.exe

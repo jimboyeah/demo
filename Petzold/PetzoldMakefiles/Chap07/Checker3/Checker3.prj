@@ -1,0 +1,14 @@
+[Editable Files]
+File1=Checker3.c
+
+[Project Type]
+Type=windows
+
+[Default Window Placement]
+Location=left
+
+[Makefile]
+File=Checker3.mak
+
+[Executable File]
+File=Checker3.exe

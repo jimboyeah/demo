@@ -1,0 +1,240 @@
+001:eng:{ pnbrqk}
+001:ger:{ bsltdk}
+001:swe:{ bsltdk}
+002:eng:{ PNBRQK}
+002:ger:{ BSLTDK}
+002:swe:{ BSLTDK}
+003:eng:{o-o}
+003:ger:{o-o}
+003:swe:{o-o}
+004:eng:{o-o-o}
+004:ger:{o-o-o}
+004:swe:{o-o-o}
+005:eng:{0-0}
+005:ger:{0-0}
+005:swe:{0-0}
+006:eng:{0-0-0}
+006:ger:{0-0-0}
+006:swe:{0-0-0}
+007:eng:{wWbB}
+007:ger:{wWsS}
+007:swe:{vVsS}
+008:eng:{       score  depth   nodes  time         }
+008:ger:{       Bewert Tiefe   Posit  Zeit         }
+008:swe:{       eval   djup    noder  tid         }
+009:eng:{       score  depth   nodes  time\n}
+009:ger:{       Bewert Tiefe   Posit  Zeit\n}
+009:swe:{       eval   djup    noder  tid\n}
+010:eng:{Ambiguous Move!}
+010:ger:{Zug nicht eindeutig!}
+010:swe:{Tvetydigt drag!}
+011:eng:{A Window}
+011:ger:{A Window}
+011:swe:{A Window}
+012:eng:{B Window}
+012:ger:{B Window}
+012:swe:{B Window}
+013:eng:{Black %s White %s %d eps %d\n}
+013:ger:{Schwarz %s Weiss %s %d eps %d\n}
+013:swe:{Svart %s Vit %s %d\n}
+014:eng:{Castled White %s Black %s\n}
+014:ger:{Rochade Weiss %s Schwarz %s\n}
+014:swe:{Vit Rockad %s Svart %s\n}
+015:eng:{Computer mates!}
+015:ger:{Computer setzt matt!}
+015:swe:{Datorn mattar!}
+016:eng:{Computer will soon mate!}
+016:ger:{Computer setzt bald matt!}
+016:swe:{Datorn mattar snart!}
+017:eng:{Could not open file}
+017:ger:{Konnte File nicht oeffnen}
+017:swe:{Kunde inte oeppna filen}
+018:eng:{Counting transposition file entries, wait!\n}
+018:ger:{Zaehle transposition File Eintraege, warten!\n}
+018:swe:{Raeknar posterna i transpositionsfilen, vaenta!\n}
+019:eng:{Depth= %d%c }
+019:ger:{Tiefe= %d%c }
+019:swe:{Djup= %d%c }
+020:eng:{Draw %s\n}
+020:ger:{Zug %s\n}
+020:swe:{Drag %s\n}
+021:eng:{Drawn game!}
+021:ger:{Spiel unentschieden!}
+021:swe:{Remi!}
+022:eng:{Enter piece: }
+022:ger:{Eingabe Figur: }
+022:swe:{Ange pjaes: }
+023:eng:{Game saved}
+023:ger:{Spiel abgespeichert}
+023:swe:{Partiet sparat}
+024:eng:{Human}
+024:ger:{Mensch  }
+024:swe:{Maenniska  }
+025:eng:{Illegal move (no matching move)%s\n}
+025:ger:{ungueltiger Zug (kein passender Zug)%s\n}
+025:swe:{Felaktigt drag (inget matchande drag)%s\n}
+026:eng:{Illegal move (no matching move)}
+026:ger:{ungueltiger Zug (kein passender Zug)}
+026:swe:{Felaktigt drag (inget matchande drag)}
+027:eng:{Illegal move..(in check)}
+027:ger:{ungueltiger Zug..(wird geprueft)}
+027:swe:{Otillaatet drag..(i schack)}
+028:eng:{Max Moves}
+028:ger:{Max Zuege}
+028:swe:{Max Drag}
+029:eng:{Move Limit}
+029:ger:{Zug Limit}
+029:swe:{Draggraens}
+030:eng:{My move is %s}
+030:ger:{Mein Zug ist %s}
+030:swe:{Mitt drag aer %s}
+031:eng:{No moves}
+031:ger:{keine Zuege}
+031:swe:{Inga drag}
+032:eng:{No pieces}
+032:ger:{keine Figur}
+032:swe:{Inga pjaeser}
+033:eng:{Opponent mates!}
+033:ger:{Gegner setzt matt!}
+033:swe:{Motstaandaren mattar!}
+034:eng:{Opponent will soon mate!}
+034:ger:{Gegner setzt bald matt!}
+034:swe:{Motstaandaren mattar snart!}
+035:eng:{S%d m%d ps%d m%d ps%d}
+035:ger:{S%d m%d ps%d m%d ps%d}
+035:swe:{S%d m%d ps%d m%d ps%d}
+036:eng:{The file contains %d entries out of max %d\n}
+036:ger:{Das File enthaelt %d Eintraege von max. %d\n}
+036:swe:{Filen innehaaller %d poster av max. %d\n}
+037:eng:{TimeControl %d Operator Time %d\n}
+037:ger:{Zeitkontrolle %d Operator Zeit %d\n}
+037:swe:{Tidskontroll %d Operatoerstid %d\n}
+038:eng:{X Window}
+038:ger:{X Window}
+038:swe:{X Window}
+039:eng:{White Clock %ld Moves %ld\nBlack Clock %d Moves %d\n\n}
+039:ger:{Weiss Uhr %ld Zuege %ld\nSchwarz Uhr %d Zuege %d\n\n}
+039:swe:{Vit klocka %ld Drag %ld\nSvart klocka %d drag %d\n\n}
+040:eng:{White}
+040:ger:{Weiss}
+040:swe:{Vit}
+041:eng:{Black}
+041:ger:{Schwarz}
+041:swe:{Svart}
+042:eng:{Your move:}
+042:ger:{Ihr Zug ist? }
+042:swe:{Ditt drag? }
+043:eng:{\nmove  score depth  nodes  time flags capture color\n}
+043:ger:{\nZug   BewertTiefe  Posit  Zeit flags capture Farbe\n}
+043:swe:{\ndrag  eval  djup   noder  tid  flags capture faerg\n}
+044:eng:{chess.000}
+044:ger:{chess.000}
+044:swe:{chess.000}
+045:eng:{computer}
+045:ger:{Computer}
+045:swe:{datorn}
+046:eng:{Contempt}
+046:ger:{Contempt}
+046:swe:{Contempt}
+047:eng:{Depth}
+047:ger:{Tiefe}
+047:swe:{Djup}
+048:eng:{gnuchess 4p%s game\n}
+048:ger:{gnuchess 4p%s Spiel\n}
+048:swe:{gnuchess 4p%s parti\n}
+049:eng:{Hash Depth}
+049:ger:{Hash Tiefe}
+049:swe:{hash Djup}
+050:eng:{try }
+050:ger:{Versuch }
+050:swe:{proeva }
+051:eng:{ttable collision detected}
+051:ger:{ttable collision detected}
+051:swe:{ttable collision detected}
+052:eng:{Book used %d of %d entries.}
+052:ger:{Bibl. benutzte %d von %d Eintraegen.}
+052:swe:{Boken anvaende %d av %d poster.}
+053:eng:{true}
+053:ger:{wahr}
+053:swe:{sant}
+054:eng:{false}
+054:ger:{falsch}
+054:swe:{falskt}
+055:eng:{Open failure for file: %s}
+055:ger:{Fehler beim Oeffnen des files: %s}
+055:swe:{Fel vid filoeppning: %s}
+056:eng:{I have no idea\n}
+056:ger:{Ich habe keine Ahnung\n}
+056:swe:{Jag har inte en aning\n}
+057:eng:{Not Enough Material}
+057:ger:{Nicht genug Material}
+057:swe:{Inte nog med material}
+058:eng:{Illegal position}
+058:ger:{Unerlaubter position}
+058:swe:{otillaaten position}
+059:eng:{abcdefgh}
+059:ger:{abcdefgh}
+059:swe:{abcdefgh}
+060:eng:{12345678}
+060:ger:{12345678}
+060:swe:{12345678}
+061:eng:{Set Maximum Search Depth}
+061:ger:{}
+061:swe:{}
+062:eng:{It's not your move}
+062:ger:{}
+062:swe:{}
+063:eng:{Set Hash Depth}
+063:ger:{}
+063:swe:{}
+064:eng:{Set Contempt}
+064:ger:{}
+064:swe:{}
+065:eng:{Set Time Control}
+065:ger:{}
+065:swe:{}
+066:eng:{Promote Pawn}
+066:ger:{}
+066:swe:{}
+067:eng:{Create Hashfile}
+067:ger:{}
+067:swe:{}
+068:eng:{Size}
+068:ger:{}
+068:swe:{}
+069:eng:{Change Windows}
+069:ger:{}
+069:swe:{}
+070:eng:{Insufficient memory}
+070:ger:{}
+070:swe:{}
+071:eng:{Invalid command}
+071:ger:{}
+071:swe:{}
+072:eng:{Cannot remove the king}
+072:ger:{}
+072:swe:{}
+073:eng:{Computer is Black}
+073:ger:{}
+073:swe:{}
+074:eng:{Computer is White}
+074:ger:{}
+074:swe:{}
+075:eng:{It is %s's move}
+075:ger:{}
+075:swe:{}
+076:eng:{%s is in check}
+076:ger:{}
+076:swe:{}
+077:eng:{Replay mode: next move is no. %d}
+077:ger:{}
+077:swe:{}
+078:eng:{Replay finished, click mouse button to exit}
+078:ger:{}
+078:swe:{}
+079:eng:{Could not open or create %s}
+079:ger:{}
+079:swe:{}
+080:eng:{Could not open bookfile gnuchess.bk}
+080:ger:{}
+080:swe:{}

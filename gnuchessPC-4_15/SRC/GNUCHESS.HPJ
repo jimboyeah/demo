@@ -1,0 +1,6 @@
+[OPTIONS]
+CONTENTS=contents
+TITLE=GNU Chess Help
+COMPRESS=MEDIUM
+[FILES]
+gnuchess.rtf

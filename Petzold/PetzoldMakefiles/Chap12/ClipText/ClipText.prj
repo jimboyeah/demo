@@ -1,0 +1,17 @@
+[Editable Files]
+File1=ClipText.c
+File2=ClipText.rc
+File3=Resource.h
+File4=afxres.h
+
+[Project Type]
+Type=windows
+
+[Default Window Placement]
+Location=left
+
+[Makefile]
+File=ClipText.mak
+
+[Executable File]
+File=ClipText.exe

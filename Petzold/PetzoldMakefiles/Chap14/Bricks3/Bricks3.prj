@@ -1,0 +1,17 @@
+[Editable Files]
+File1=Bricks3.c
+File2=Bricks3.rc
+File3=Resource.h
+File4=afxres.h
+
+[Project Type]
+Type=windows
+
+[Default Window Placement]
+Location=left
+
+[Makefile]
+File=Bricks3.mak
+
+[Executable File]
+File=Bricks3.exe

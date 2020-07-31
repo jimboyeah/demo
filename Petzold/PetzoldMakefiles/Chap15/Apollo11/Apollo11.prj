@@ -1,0 +1,16 @@
+[Editable Files]
+File1=Apollo11.c
+File2=DibFile.h
+File3=..\ShowDib1\DibFile.c
+
+[Project Type]
+Type=windows
+
+[Default Window Placement]
+Location=left
+
+[Makefile]
+File=Apollo11.mak
+
+[Executable File]
+File=Apollo11.exe

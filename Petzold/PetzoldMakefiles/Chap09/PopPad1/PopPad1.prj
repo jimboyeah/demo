@@ -1,0 +1,14 @@
+[Editable Files]
+File1=PopPad1.c
+
+[Project Type]
+Type=windows
+
+[Default Window Placement]
+Location=left
+
+[Makefile]
+File=PopPad1.mak
+
+[Executable File]
+File=PopPad1.exe

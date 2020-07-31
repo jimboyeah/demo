@@ -1,0 +1,23 @@
+[Editable Files]
+File1=Dibble.c
+File2=DibHelp.c
+File3=DibHelp.h
+File4=DibPal.c
+File5=DibPal.h
+File6=DibConv.c
+File7=DibConv.h
+File8=Dibble.rc
+File9=Resource.h
+File10=afxres.h
+
+[Project Type]
+Type=windows
+
+[Default Window Placement]
+Location=left
+
+[Makefile]
+File=Dibble.mak
+
+[Executable File]
+File=Dibble.exe

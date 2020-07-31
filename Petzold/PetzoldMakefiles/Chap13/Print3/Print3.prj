@@ -1,0 +1,19 @@
+[Editable Files]
+File1=Print3.c
+File2=Print.rc
+File3=Resource.h
+File4=..\Print1\GetPrnDC.c
+File5=..\Print1\Print.c
+File6=afxres.h
+
+[Project Type]
+Type=windows
+
+[Default Window Placement]
+Location=left
+
+[Makefile]
+File=Print3.mak
+
+[Executable File]
+File=Print3.exe

@@ -1,0 +1,14 @@
+[Editable Files]
+File1=Connect.c
+
+[Project Type]
+Type=windows
+
+[Default Window Placement]
+Location=left
+
+[Makefile]
+File=Connect.mak
+
+[Executable File]
+File=Connect.exe

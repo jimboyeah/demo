@@ -1,0 +1,17 @@
+[Editable Files]
+File1=NoPopups.c
+File2=NoPopups.rc
+File3=Resource.h
+File4=afxres.h
+
+[Project Type]
+Type=windows
+
+[Default Window Placement]
+Location=left
+
+[Makefile]
+File=NoPopups.mak
+
+[Executable File]
+File=NoPopups.exe

@@ -1,0 +1,17 @@
+[Editable Files]
+File1=About1.c
+File2=About1.rc
+File3=Resource.h
+File4=afxres.h
+
+[Project Type]
+Type=windows
+
+[Default Window Placement]
+Location=left
+
+[Makefile]
+File=About1.mak
+
+[Executable File]
+File=About1.exe

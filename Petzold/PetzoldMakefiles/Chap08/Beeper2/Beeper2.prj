@@ -1,0 +1,14 @@
+[Editable Files]
+File1=Beeper2.c
+
+[Project Type]
+Type=windows
+
+[Default Window Placement]
+Location=left
+
+[Makefile]
+File=Beeper2.mak
+
+[Executable File]
+File=Beeper2.exe

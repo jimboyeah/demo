@@ -1,0 +1,14 @@
+[Editable Files]
+File1=EndJoin.c
+
+[Project Type]
+Type=windows
+
+[Default Window Placement]
+Location=left
+
+[Makefile]
+File=EndJoin.mak
+
+[Executable File]
+File=EndJoin.exe

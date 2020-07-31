@@ -1,0 +1,14 @@
+[Editable Files]
+File1=WakeUp.c
+
+[Project Type]
+Type=windows
+
+[Default Window Placement]
+Location=left
+
+[Makefile]
+File=WakeUp.mak
+
+[Executable File]
+File=WakeUp.exe

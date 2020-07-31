@@ -1,0 +1,17 @@
+[Editable Files]
+File1=HelloBit.c
+File2=HelloBit.rc
+File3=Resource.h
+File4=afxres.h
+
+[Project Type]
+Type=windows
+
+[Default Window Placement]
+Location=left
+
+[Makefile]
+File=HelloBit.mak
+
+[Executable File]
+File=HelloBit.exe

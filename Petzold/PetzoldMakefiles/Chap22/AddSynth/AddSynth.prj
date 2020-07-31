@@ -1,0 +1,18 @@
+[Editable Files]
+File1=AddSynth.c
+File2=AddSynth.h
+File3=AddSynth.rc
+File4=Resource.h
+File5=afxres.h
+
+[Project Type]
+Type=windows
+
+[Default Window Placement]
+Location=left
+
+[Makefile]
+File=AddSynth.mak
+
+[Executable File]
+File=AddSynth.exe

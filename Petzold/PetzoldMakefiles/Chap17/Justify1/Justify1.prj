@@ -1,0 +1,17 @@
+[Editable Files]
+File1=Justify1.c
+File2=Justify1.rc
+File3=Resource.h
+File4=afxres.h
+
+[Project Type]
+Type=windows
+
+[Default Window Placement]
+Location=left
+
+[Makefile]
+File=Justify1.mak
+
+[Executable File]
+File=Justify1.exe

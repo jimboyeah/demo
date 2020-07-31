@@ -1,0 +1,18 @@
+[Editable Files]
+File1=Emf9.c
+File2=..\Emf8\Emf.c
+File3=..\Emf8\Emf.rc
+File4=..\Emf8\Resource.h
+File5=..\Emf8\afxres.h
+
+[Project Type]
+Type=windows
+
+[Default Window Placement]
+Location=left
+
+[Makefile]
+File=Emf9.mak
+
+[Executable File]
+File=Emf9.exe

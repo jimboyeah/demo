@@ -1,0 +1,14 @@
+[Editable Files]
+File1=KBMidi.c
+
+[Project Type]
+Type=windows
+
+[Default Window Placement]
+Location=left
+
+[Makefile]
+File=KBMidi.mak
+
+[Executable File]
+File=KBMidi.exe

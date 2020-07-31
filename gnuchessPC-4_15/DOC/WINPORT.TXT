@@ -1,0 +1,23 @@
+Porting GNU Chess 4.0 to Windows
+
+Most of the original code has been changed very little, except main.c, the
+screen display code and the InputCommand function. The main function is now
+WinMain. WinMain is a bit unorthodox in that it contains no message loop.
+InputCommand, search, EditBoard and Replay contain message loops. This avoids
+a lot of fiddling around with the code because the original program flow is
+unchanged. WinMain contains the same loop (with some extra code) as found in
+the original main function, which alternately calls InputCommand and
+SelectMove. In InputCommand, EditBoard and Replay, the message loop continues
+until WndProc places a value in command. The search function checks for
+messages periodically.
+
+The only new source files are dialogs.c, gnuchess.rc, the icon (from Chess
+3.21) and the bitmaps. There are six bitmap files for each piece: a mask and
+a detail bitmap in three sizes, 40x40, 60x60 and 80x80. These are derived
+from the bitmaps used for winboard. I thought the pawns were a little
+imposing so I chopped the bottom off. The width of the Queen has been reduced
+so it doesn't hang over the edge of square at the back of the board.
+
+Enjoy!
+
+Conor McCarthy (C.McCarthy@sct.gu.edu.au)

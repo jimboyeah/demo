@@ -1,0 +1,14 @@
+[Editable Files]
+File1=DigClock.c
+
+[Project Type]
+Type=windows
+
+[Default Window Placement]
+Location=left
+
+[Makefile]
+File=DigClock.mak
+
+[Executable File]
+File=DigClock.exe

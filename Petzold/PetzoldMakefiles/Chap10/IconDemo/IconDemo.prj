@@ -1,0 +1,17 @@
+[Editable Files]
+File1=IconDemo.c
+File2=IconDemo.rc
+File3=Resource.h
+File4=afxres.h
+
+[Project Type]
+Type=windows
+
+[Default Window Placement]
+Location=left
+
+[Makefile]
+File=IconDemo.mak
+
+[Executable File]
+File=IconDemo.exe

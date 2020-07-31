@@ -1,0 +1,371 @@
+/*
+ * gnuchess.rc - Resource file for GNU CHESS for Windows
+ *
+ * Copyright (c) 1996 Conor McCarthy
+ * Some resources derived from Chess 3.21, Copyright (c) 1991 Daryl Baker
+ *
+ * This file is part of GNU CHESS.
+ *
+ * GNU Chess is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 2, or (at your option)
+ * any later version.
+ *
+ * GNU Chess is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with GNU Chess; see the file COPYING.  If not, write to
+ * the Free Software Foundation, 675 Mass Ave, Cambridge, MA 02139, USA.
+ */
+
+#include "gnuchess.h"
+
+1 BITMAP "p40d.bmp"
+
+2 BITMAP "n40d.bmp"
+
+3 BITMAP "b40d.bmp"
+
+4 BITMAP "r40d.bmp"
+
+5 BITMAP "q40d.bmp"
+
+6 BITMAP "k40d.bmp"
+
+7 BITMAP "p40m.bmp"
+
+8 BITMAP "n40m.bmp"
+
+9 BITMAP "b40m.bmp"
+
+10 BITMAP "r40m.bmp"
+
+11 BITMAP "q40m.bmp"
+
+12 BITMAP "k40m.bmp"
+
+
+13 BITMAP "p60d.bmp"
+
+14 BITMAP "n60d.bmp"
+
+15 BITMAP "b60d.bmp"
+
+16 BITMAP "r60d.bmp"
+
+17 BITMAP "q60d.bmp"
+
+18 BITMAP "k60d.bmp"
+
+19 BITMAP "p60m.bmp"
+
+20 BITMAP "n60m.bmp"
+
+21 BITMAP "b60m.bmp"
+
+22 BITMAP "r60m.bmp"
+
+23 BITMAP "q60m.bmp"
+
+24 BITMAP "k60m.bmp"
+
+
+25 BITMAP "p80d.bmp"
+
+26 BITMAP "n80d.bmp"
+
+27 BITMAP "b80d.bmp"
+
+28 BITMAP "r80d.bmp"
+
+29 BITMAP "q80d.bmp"
+
+30 BITMAP "k80d.bmp"
+
+31 BITMAP "p80m.bmp"
+
+32 BITMAP "n80m.bmp"
+
+33 BITMAP "b80m.bmp"
+
+34 BITMAP "r80m.bmp"
+
+35 BITMAP "q80m.bmp"
+
+36 BITMAP "k80m.bmp"
+
+CHESS ICON "gnuchess.ico"
+
+CHESS MENU Begin
+                  POPUP "&Game"
+                                  Begin
+                                                MENUITEM "&New\tCtrl-N",                IDM_NEW
+                                                MENUITEM "&Open...\tCtrl-O",            IDM_GET
+                                                MENUITEM "&Save...",                    IDM_SAVE
+                                                MENUITEM "&List...",                       IDM_LIST
+                                                MENUITEM SEPARATOR
+                                                MENUITEM "E&xit",                       IDM_QUIT
+                                  END
+
+                  POPUP "&Edit"
+                                  BEGIN
+                                         MENUITEM "&Setup Board",                  IDM_EDIT
+                                         MENUITEM "R&eview Game",                  IDM_REVIEW
+                                         MENUITEM SEPARATOR
+                                         MENUITEM "&Undo",                         IDM_UNDO
+                                         MENUITEM "&Remove",                       IDM_REMOVE
+                                  END
+
+                  POPUP "&Options"
+                                         BEGIN
+                                                MENUITEM "&Beep"                        IDM_BEEP
+                                                MENUITEM "C&oordinates",                IDM_COORD
+                                                MENUITEM "&Search Stats",               IDM_POST
+                                                MENUITEM "A&nimated Searching",         IDM_ANIMATE
+                                                MENUITEM SEPARATOR
+                                                MENUITEM "Boo&k"                        IDM_BOOK
+                                                MENUITEM "&Hash"                        IDM_HASH
+                                                MENUITEM "Hash &Depth..."               IDM_HDEPTH
+                                                MENUITEM "Create Hashfile..."           IDM_HFILE
+                  MENUITEM "Compile Book..."              IDM_COMPILE
+                                                MENUITEM SEPARATOR
+                                                MENUITEM "&Windows..."                  IDM_WIN
+                                                MENUITEM "&Contemp..."                  IDM_CONTEMP
+                                                MENUITEM SEPARATOR
+                                                MENUITEM "&Material"                    IDM_MATERIAL
+                                                MENUITEM "&Recapture"                   IDM_RCPTR
+                                                MENUITEM "&Threat"                      IDM_THREAT
+                                                MENUITEM "&PVS"                         IDM_PVS
+                                                MENUITEM "New &Eval"                    IDM_NEWEVAL
+                                                MENUITEM SEPARATOR
+                  MENUITEM "&Gamein"                      IDM_GAMEIN
+                                         END
+
+                  POPUP "&Skill"
+                                         BEGIN
+                                                MENUITEM "&Time...",                    IDM_TIME
+                                                MENUITEM SEPARATOR
+                                                MENUITEM "&Random",                     IDM_RANDOM
+                                                MENUITEM "&Easy",                       IDM_EASY
+                                                MENUITEM "&Depth...",                   IDM_DEPTH
+                                  END
+
+                  POPUP "S&ide"
+                                  BEGIN
+                                                MENUITEM "&Reverse Board",              IDM_REVERSE
+                  MENUITEM SEPARATOR
+                                                MENUITEM "&Switch",                     IDM_SWITCH
+                                                MENUITEM "Switch but &don't move",      IDM_SWITCHDM
+                                                MENUITEM "&Black",                      IDM_BLACK
+                                                MENUITEM "&White",                      IDM_WHITE
+                                                MENUITEM "B&oth"                        IDM_BOTH
+                                                MENUITEM "W&hite to Move"               IDM_WTM
+                                                MENUITEM "B&lack to Move"               IDM_BTM
+                                                MENUITEM SEPARATOR
+                                                MENUITEM "&Force",                      IDM_FORCE
+                                  END
+
+                  POPUP "&Board"
+                                Begin
+                                        POPUP "&Colors"
+                                          Begin
+                                                                Menuitem "Window Background",   IDM_BACKGROUND
+                                                                Menuitem "Black Squares",       IDM_BLACKSQUARE
+                                                                Menuitem "White Squares",       IDM_WHITESQUARE
+                                                                Menuitem "Black Pieces",        IDM_BLACKPIECE
+                                                                Menuitem "White Pieces",        IDM_WHITEPIECE
+                                                                Menuitem "Text Color",          IDM_TEXT
+                                                                Menuitem "Board Edge",          IDM_EDGE
+                                                                Menuitem SEPARATOR
+                                                                Menuitem "Default Colors",      IDM_DEFAULT
+                                          end
+                                        POPUP "&Size"
+                                          Begin
+                                                                MENUITEM "&Small",              IDM_SMALL
+                                                                MENUITEM "&Medium",             IDM_MEDIUM
+                                                                MENUITEM "&Large",              IDM_LARGE
+                                          end
+                                        POPUP "&Type"
+                                          BEGIN
+                                                  MENUITEM "&Square"    IDM_SQUARE
+                                                  MENUITEM "&3D Effect" IDM_3D
+                                          END
+                                end
+
+                  MENUITEM "Hi&nt",                               IDM_HINT
+
+                  POPUP "&Help"
+                                         Begin
+                                                                MENUITEM "&Contents",           IDM_INDEX
+                                                                MENUITEM "&Using Help",         IDM_HELP
+                                                                MENUITEM SEPARATOR
+                                                                MENUITEM "&About GNU Chess...", IDM_ABOUT
+                                         end
+          END
+
+
+EDIT MENU
+  BEGIN
+          POPUP "&Edit"
+                  BEGIN
+                          MENUITEM "&Clear Board"    IDM_CLEAR
+           MENUITEM "&Restore Board"  IDM_RESTORE
+                          MENUITEM "&Done"           IDM_DONE
+                  END
+  END
+
+CHESS ACCELERATORS
+BEGIN
+        "^O",  IDM_GET
+        "^N",  IDM_NEW
+        "^H",  IDM_HINT
+END
+
+CHANGEWINDOW DIALOG 70, 30, 177, 69
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION
+FONT 8, "MS Sans Serif"
+{
+ EDITTEXT IDC_WA, 55, 14, 23, 12
+ EDITTEXT IDC_WB, 55, 31, 23, 12
+ EDITTEXT IDC_WX, 55, 48, 23, 12
+ RTEXT "", IDC_APROMPT, 3, 16, 47, 8
+ RTEXT "", IDC_BPROMPT, 3, 33, 47, 8
+ RTEXT "", IDC_XPROMPT, 3, 50, 47, 8
+ EDITTEXT IDC_BA, 84, 14, 23, 12
+ EDITTEXT IDC_BB, 84, 31, 23, 12
+ EDITTEXT IDC_BX, 84, 48, 23, 12
+ CTEXT "", IDC_WHITE, 54, 4, 26, 8
+ CTEXT "", IDC_BLACK, 83, 4, 26, 8
+ DEFPUSHBUTTON "OK", IDOK, 119, 13, 50, 14
+ PUSHBUTTON "Cancel", IDCANCEL, 119, 31, 50, 14
+}
+
+HASHDEPTHDLG DIALOG 70, 30, 145, 45
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION
+FONT 8, "MS Sans Serif"
+{
+ EDITTEXT IDC_DEPTH, 53, 8, 23, 12, WS_BORDER | WS_GROUP | WS_TABSTOP
+ EDITTEXT IDC_MOVELIM, 53, 25, 23, 12, WS_BORDER | WS_TABSTOP
+ RTEXT "", IDC_DPROMPT, 5, 10, 43, 8
+ RTEXT "", IDC_MLPROMPT, 5, 27, 43, 8
+ DEFPUSHBUTTON "OK", IDOK, 86, 6, 50, 14
+ PUSHBUTTON "Cancel", IDCANCEL, 86, 24, 50, 14
+}
+
+NUMDLG DIALOG 70, 30, 143, 46
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION
+FONT 8, "MS Sans Serif"
+{
+ EDITTEXT IDC_NUM, 45, 16, 28, 12
+ DEFPUSHBUTTON "OK", IDOK, 84, 6, 50, 14
+ PUSHBUTTON "Cancel", IDCANCEL, 84, 24, 50, 14
+ RTEXT "", IDC_PROMPT, 2, 18, 40, 8
+}
+
+
+ABOUT DIALOG 20, 20, 235, 170
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION
+CAPTION "GNU Chess 4.15 for Windows"
+FONT 8, "MS Sans Serif"
+{
+ DEFPUSHBUTTON "OK", IDOK, 92, 152, 50, 14
+ ICON "CHESS", -1, 18, 5, 18, 20
+ CTEXT "Ported to Windows by Conor McCarthy", -1, 54, 4, 161, 8
+ CTEXT "Compiled with Watcom C 11.0", -1, 51, 18, 166, 8
+ CTEXT "Ported from GNU Chess 4.0 patchlevel 77", -1, 8, 38, 218, 8
+ CTEXT "Copyright 1987 - 1995", -1, 9, 49, 216, 8
+ CONTROL "", -1, "static", SS_BLACKFRAME | WS_CHILD | WS_VISIBLE, 4, 98, 227, 1
+ CONTROL "", -1, "static", SS_BLACKFRAME | WS_CHILD | WS_VISIBLE, 4, 32, 227, 1
+ CTEXT "Contains resources and code fragments from Chess 3.21 for Windows", -1, 4, 103, 227, 8
+ CTEXT "Copyright 1990 - 1991 Daryl Baker", -1, 16, 115, 203, 8
+ CONTROL "", -1, "static", SS_BLACKFRAME | WS_CHILD | WS_VISIBLE, 4, 128, 227, 1
+ CTEXT "Windows version 4.15 additional copyright 1996-1998 Conor McCarthy", -1, 3, 135, 230, 8
+ CTEXT "Stuart Cracraft\nMike McGann\nChua Kong Sian\nJohn Stanback", -1, 85, 60, 64, 36
+}
+
+
+TIME DIALOG 40, 30, 220, 107
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION
+FONT 8, "MS Sans Serif"
+{
+ COMBOBOX IDC_MOVES1, 13, 10, 33, 64, CBS_DROPDOWN | WS_VSCROLL
+ CTEXT "moves in", -1, 47, 11, 43, 8
+ COMBOBOX IDC_MINS1, 89, 10, 33, 58, CBS_DROPDOWN | WS_VSCROLL
+ LTEXT "minutes", -1, 124, 11, 39, 8
+ COMBOBOX IDC_MOVES2, 13, 27, 33, 64, CBS_DROPDOWN | WS_VSCROLL
+ CTEXT "moves in", -1, 47, 28, 43, 8
+ COMBOBOX IDC_MINS2, 89, 27, 33, 58, CBS_DROPDOWN | WS_VSCROLL
+ LTEXT "minutes", -1, 124, 28, 39, 8
+ COMBOBOX IDC_MOVES3, 13, 44, 33, 63, CBS_DROPDOWN | WS_VSCROLL
+ CTEXT "moves in", -1, 47, 45, 43, 8
+ COMBOBOX IDC_MINS3, 89, 44, 33, 58, CBS_DROPDOWN | WS_VSCROLL
+ LTEXT "minutes", -1, 124, 45, 39, 8
+ RTEXT "1.", -1, 0, 12, 10, 8
+ RTEXT "2.", -1, 0, 29, 10, 8
+ RTEXT "3.", -1, 1, 46, 9, 8
+ RTEXT "Maximum response time", IDC_MRTEXT, 4, 76, 82, 8
+ EDITTEXT IDC_MAXRT, 90, 74, 20, 12
+ LTEXT "seconds", IDC_MRSECS, 114, 76, 49, 8
+ DEFPUSHBUTTON "OK", IDOK, 165, 5, 50, 14
+ PUSHBUTTON "Cancel", IDCANCEL, 165, 23, 50, 14
+}
+
+
+STATS DIALOG 0, 0, 87, 161
+STYLE WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU | DS_ABSALIGN
+CAPTION "Search Stats"
+FONT 8, "MS Sans Serif"
+{
+ PUSHBUTTON "Close", IDOK, 25, 146, 37, 13
+ RTEXT "Position:", -1, 0, 2, 41, 8
+ RTEXT "Score:", -1, 0, 13, 41, 8
+ RTEXT "Node:", -1, 0, 24, 41, 8
+ RTEXT "Nodes/sec:", -1, 0, 35, 41, 8
+ RTEXT "Max Tree:", -1, 0, 46,41,8
+ LTEXT "", IDC_BESTLINE, 5, 68, 77, 73
+ GROUPBOX "Best line", -1, 3, 56, 81, 88, BS_GROUPBOX | BS_LEFTTEXT
+ LTEXT "", IDC_POS, 44, 3, 41, 8
+ LTEXT "", IDC_SCORE, 44, 13, 41, 8
+ LTEXT "", IDC_NODE, 44, 24, 41, 8
+ LTEXT "", IDC_NODESEC, 44, 35, 41, 8
+ LTEXT "", IDC_TREE, 44, 46, 41, 8
+}
+
+PROMOTE DIALOG 70, 30, 164, 55
+STYLE WS_BORDER | WS_CAPTION | WS_DLGFRAME | WS_POPUP
+BEGIN
+         CONTROL "Knight", 101, "button", BS_RADIOBUTTON | WS_TABSTOP | WS_CHILD, 4, 10, 38, 12
+         CONTROL "Bishop", 102, "button", BS_RADIOBUTTON | WS_TABSTOP | WS_CHILD, 44, 10, 36, 12
+         CONTROL "Rook", 103, "button", BS_RADIOBUTTON | WS_TABSTOP | WS_CHILD, 85, 10, 28, 12
+         CONTROL "Queen", 104, "button", BS_RADIOBUTTON | WS_TABSTOP | WS_CHILD, 123, 10, 35, 12
+         CONTROL "OK", IDOK, "button", BS_DEFPUSHBUTTON | WS_TABSTOP | WS_CHILD, 63, 33, 38, 14
+END
+
+CREATEHASH DIALOG 70, 30, 163, 46
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION
+FONT 8, "MS Sans Serif"
+{
+ EDITTEXT IDC_HFSIZE, 45, 16, 48, 12
+ DEFPUSHBUTTON "OK", IDOK, 104, 6, 50, 14
+ PUSHBUTTON "Cancel", IDCANCEL, 104, 24, 50, 14
+ RTEXT "", IDC_PROMPT, 2, 18, 40, 8
+}
+
+
+COMPILEBOOK DIALOG 58, 22, 143, 121
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Compile Book"
+FONT 8, "MS Sans Serif"
+{
+ DEFPUSHBUTTON "Start", IDOK, 13, 102, 50, 14
+ PUSHBUTTON "Cancel", IDCANCEL, 76, 102, 50, 14
+ LTEXT "An ASCII book file named gnuchess.bk must be in the same directory as gnuchess.exe. The games contained in it will be added to gnuchess.dat. This process places great demand on the processor and will take some time.", -1, 6, 5, 131, 52
+ GROUPBOX "", -1, 7, 54, 128, 43, BS_GROUPBOX | BS_LEFTTEXT
+ LTEXT "Record:", IDC_REC, 10, 72, 79, 8, WS_DISABLED | WS_GROUP
+ LTEXT "Games:", IDC_GAMES, 10, 83, 78, 8, WS_DISABLED | WS_GROUP
+ LTEXT "Bytes Processed:", IDC_OFFSET, 10, 61, 122, 8, WS_DISABLED | WS_GROUP
+}
+

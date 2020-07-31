@@ -1,0 +1,14 @@
+[Editable Files]
+File1=AltWind.c
+
+[Project Type]
+Type=windows
+
+[Default Window Placement]
+Location=left
+
+[Makefile]
+File=AltWind.mak
+
+[Executable File]
+File=AltWind.exe

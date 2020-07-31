@@ -1,0 +1,17 @@
+[Editable Files]
+File1=TestMci.c
+File2=TestMci.rc
+File3=Resource.h
+File4=afxres.h
+
+[Project Type]
+Type=windows
+
+[Default Window Placement]
+Location=left
+
+[Makefile]
+File=TestMci.mak
+
+[Executable File]
+File=TestMci.exe

@@ -1,0 +1,14 @@
+[Editable Files]
+File1=Colors1.c
+
+[Project Type]
+Type=windows
+
+[Default Window Placement]
+Location=left
+
+[Makefile]
+File=Colors1.mak
+
+[Executable File]
+File=Colors1.exe

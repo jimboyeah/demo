@@ -1,0 +1,14 @@
+[Editable Files]
+File1=Environ.c
+
+[Project Type]
+Type=windows
+
+[Default Window Placement]
+Location=left
+
+[Makefile]
+File=Environ.mak
+
+[Executable File]
+File=Environ.exe

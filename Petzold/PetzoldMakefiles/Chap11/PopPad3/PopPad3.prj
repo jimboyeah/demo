@@ -1,0 +1,21 @@
+[Editable Files]
+File1=PopPad.c
+File2=PopFile.c
+File3=PopFind.c
+File4=PopFont.c
+File5=PopPrnt0.c
+File6=PopPad.rc
+File7=Resource.h
+File8=afxres.h
+
+[Project Type]
+Type=windows
+
+[Default Window Placement]
+Location=left
+
+[Makefile]
+File=PopPad3.mak
+
+[Executable File]
+File=PopPad3.exe

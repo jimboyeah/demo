@@ -1,0 +1,14 @@
+[Editable Files]
+File1=RandRect.c
+
+[Project Type]
+Type=windows
+
+[Default Window Placement]
+Location=left
+
+[Makefile]
+File=RandRect.mak
+
+[Executable File]
+File=RandRect.exe

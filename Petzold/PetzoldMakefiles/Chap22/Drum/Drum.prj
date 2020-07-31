@@ -1,0 +1,21 @@
+[Editable Files]
+File1=Drum.c
+File2=DrumFile.c
+File3=DrumFile.h
+File4=DrumTime.c
+File5=DrumTime.h
+File6=Drum.rc
+File7=Resource.h
+File8=afxres.h
+
+[Project Type]
+Type=windows
+
+[Default Window Placement]
+Location=left
+
+[Makefile]
+File=Drum.mak
+
+[Executable File]
+File=Drum.exe
