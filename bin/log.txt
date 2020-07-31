@@ -1,0 +1,2 @@
+25UTF-8:
+show 中国國語 in UTF8

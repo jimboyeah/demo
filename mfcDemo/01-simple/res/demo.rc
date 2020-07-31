@@ -1,0 +1,400 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 中文(简体，中国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include "".\\demo.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""l.chs\\afxres.rc""          // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    ".\\demo.ico"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU
+BEGIN
+    POPUP "檔案(&F)"
+    BEGIN
+        MENUITEM "打開(&O)\tCtrl+O",              ID_APP_OPEN
+        MENUITEM "結束(&X)",                      ID_APP_EXIT
+        MENUITEM "存檔(&S)\tCtrl+S",              ID_APP_SAVE
+    END
+    POPUP "編輯(&E)", MENUBREAK
+    BEGIN
+        MENUITEM "復原(&U)\tCtrl+Z",              ID_EDIT_UNDO
+        MENUITEM SEPARATOR
+        MENUITEM "剪下(&T)\tCtrl+X",              ID_EDIT_CUT, MENUBREAK
+        MENUITEM "複製(&C)\tCtrl+C",              ID_EDIT_COPY
+        MENUITEM "貼上(&P)\tCtrl+V",              ID_EDIT_PASTE
+    END
+    POPUP "檢視(&V)"
+    BEGIN
+        MENUITEM "狀態列(&S)",                     ID_VIEW_STATUS_BAR
+        MENUITEM SEPARATOR
+        MENUITEM "子窗口(&C)",                     ID_VIEW_CHILD, MENUBARBREAK
+        MENUITEM "弹出窗(&P)",                     ID_VIEW_POPUP
+        MENUITEM "通用窗(&O)",                     ID_VIEW_OVERLAPPED
+        MENUITEM "编辑器(&E)",                     ID_VIEW_TEXTBOX
+    END
+    POPUP "說明(&H)", MENUBARBREAK
+    BEGIN
+        MENUITEM "說明主題(&H)",                   ID_HELP_FINDER
+        MENUITEM SEPARATOR
+        MENUITEM "關於 demo(&A)...",               ID_APP_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS
+BEGIN
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    "O",            ID_APP_OPEN,            VIRTKEY, CONTROL, NOINVERT
+    "S",            ID_APP_SAVE,            VIRTKEY, CONTROL, NOINVERT
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL, NOINVERT
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY, ALT, NOINVERT
+    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY, SHIFT, NOINVERT
+    // VK_F1,          ID_HELP,                VIRTKEY, NOINVERT
+    VK_F1,          ID_CONTEXT_HELP,        VIRTKEY, SHIFT, NOINVERT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY, NOINVERT
+    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT, NOINVERT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT, NOINVERT
+    "X",            ID_EDIT_CUT,            VIRTKEY, CONTROL, NOINVERT
+    "Z",            ID_EDIT_UNDO,           VIRTKEY, CONTROL, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG 0, 0, 235, 55
+STYLE DS_SETFONT | WS_OVERLAPPED | WS_CAPTION | WS_SYSMENU | WS_POPUP
+CAPTION "關於 demo"
+FONT 10, "新細明體"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "demo Version 1.0",IDC_STATIC,40,10,119,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2016",IDC_STATIC,40,25,119,8
+    DEFPUSHBUTTON   "確定",IDOK,178,7,50,14,WS_GROUP
+END
+
+ID_VIEW_CHILD DIALOG 0, 0, 235, 55
+STYLE DS_SETFONT | WS_CAPTION | WS_SYSMENU | WS_MAXIMIZEBOX | WS_MINIMIZEBOX | WS_CHILD | WS_CHILDWINDOW
+MENU IDR_MAINFRAME
+CAPTION "Dialog demo"
+FONT 10, "新細明體"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "DS_SETFONT | WS_CAPTION | WS_SYSMENU | WS_MAXIMIZEBOX",IDC_STATIC,40,10,119,8,SS_NOPREFIX
+    LTEXT           " | WS_MINIMIZEBOX | WS_CHILD | WS_CHILDWINDOW",IDC_STATIC,40,25,119,8
+    DEFPUSHBUTTON   "確定",IDOK,178,7,50,14,WS_GROUP
+END
+
+ID_VIEW_POPUP DIALOG 0, 0, 235, 55
+STYLE DS_SETFONT | WS_CAPTION | WS_SYSMENU | WS_MAXIMIZEBOX | WS_MINIMIZEBOX | WS_POPUP
+MENU IDR_MAINFRAME
+CAPTION "Dialog demo"
+FONT 10, "新細明體"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "DS_SETFONT | WS_CAPTION | WS_SYSMENU | WS_MAXIMIZEBOX ",IDC_STATIC,40,10,119,8,SS_NOPREFIX
+    LTEXT           "| WS_MINIMIZEBOX | WS_POPUP",IDC_STATIC,40,25,119,8
+    DEFPUSHBUTTON   "確定",IDOK,178,7,50,14,WS_GROUP
+END
+
+ID_VIEW_OVERLAPPED DIALOG 0, 0, 235, 55
+STYLE DS_SETFONT | WS_OVERLAPPED | WS_CAPTION | WS_SYSMENU | WS_MAXIMIZEBOX | WS_MINIMIZEBOX
+MENU IDR_MAINFRAME
+CAPTION "Dialog demo"
+FONT 10, "新細明體"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "DS_SETFONT | WS_OVERLAPPED | WS_CAPTION | WS_SYSMENU | WS_MAXIMIZEBOX | WS_MINIMIZEBOX",IDC_STATIC,40,10,119,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2016",IDC_STATIC,40,25,119,8
+    DEFPUSHBUTTON   "確定",IDOK,178,7,50,14,WS_GROUP
+END
+
+
+ID_VIEW_TEXTBOX DIALOGEX 0, 0, 235, 80
+STYLE DS_SETFONT | DS_MODALFRAME | WS_OVERLAPPED | WS_CAPTION | WS_SYSMENU | DS_CONTEXTHELP
+CAPTION "Text demo"
+MENU IDR_MAINFRAME
+FONT 10, "微软雅黑"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,14,10,11,11
+    LTEXT           "demo Version 1.0",IDC_STATIC,40,10,119,8,SS_NOPREFIX
+    DEFPUSHBUTTON   "確定",IDOK,175,5,50,15,WS_GROUP
+    EDITTEXT        IDC_EDIT1,11,29,214,43,ES_AUTOHSCROLL
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040404B0"
+        BEGIN
+            VALUE "FileDescription", "demo MFC Application"
+            VALUE "FileVersion", "1, 0, 0, 1"
+            VALUE "InternalName", "demo"
+            VALUE "LegalCopyright", "Copyright (C) 2016"
+            VALUE "OriginalFilename", "demo.EXE"
+            VALUE "ProductName", "demo Application"
+            VALUE "ProductVersion", "1, 0, 0, 1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x404, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    "IDD_TEXTBOX", DIALOG
+    BEGIN
+        TOPMARGIN, 1
+        BOTTOMMARGIN, 79
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// AFX_DIALOG_LAYOUT
+//
+
+IDD_TEXTBOX AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDP_SOCKETS_INIT_FAILED "Windows sockets 啟始失敗。"
+END
+
+STRINGTABLE
+BEGIN
+    IDR_MAINFRAME           "demo"
+END
+
+STRINGTABLE
+BEGIN
+    AFX_IDS_APP_TITLE       "demo"
+    AFX_IDS_IDLEMESSAGE     "若欲取得「說明」，請按 F1"
+    AFX_IDS_HELPMODEMESSAGE "請選取一物件以便取得「說明」"
+END
+
+STRINGTABLE
+BEGIN
+    ID_INDICATOR_EXT        "EXT"
+    ID_INDICATOR_CAPS       "CAP"
+    ID_INDICATOR_NUM        "NUM"
+    ID_INDICATOR_SCRL       "SCRL"
+    ID_INDICATOR_OVR        "OVR"
+    ID_INDICATOR_REC        "REC"
+END
+
+STRINGTABLE
+BEGIN
+    ID_APP_ABOUT            "顯示程式的資訊， 版本及版權\n關於"
+    ID_APP_EXIT             "結束應用程式並提示儲存檔案\n結束"
+    ID_HELP_INDEX           "開啟「說明」\n說明主題"
+    ID_HELP_FINDER          "列出「說明主題」\n說明主題"
+    ID_HELP_USING           "指導如何使用「說明」的\n說明"
+    ID_CONTEXT_HELP         "顯示被按下之按鈕，功能表和視窗的「說明」\n說明"
+    ID_HELP                 "顯示目前執行工作或命令的說明\n說明"
+END
+
+STRINGTABLE
+BEGIN
+    ID_APP_OPEN             "打開文件"
+    ID_APP_SAVE             "保存内容到文件"
+END
+
+STRINGTABLE
+BEGIN
+    ID_NEXT_PANE            "切換到下一個窗格\n下一個窗格"
+    ID_PREV_PANE            "切換到上一個窗格\n上一個窗格"
+END
+
+STRINGTABLE
+BEGIN
+    ID_WINDOW_SPLIT         "分割目前的視窗\n分割"
+END
+
+STRINGTABLE
+BEGIN
+    ID_EDIT_CLEAR           "刪除選取內容\n刪除"
+    ID_EDIT_CLEAR_ALL       "全部刪除\n全部刪除"
+    ID_EDIT_COPY            "複製選取內容到剪貼簿中\n複製"
+    ID_EDIT_CUT             "剪下選取內容到剪貼簿中\n剪下"
+    ID_EDIT_FIND            "尋找指定文字\n尋找"
+    ID_EDIT_PASTE           "插入剪貼簿內容\n貼上"
+    ID_EDIT_REPEAT          "重複前一動作\n重複"
+    ID_EDIT_REPLACE         "以不同文字取代指定之文字\n取代"
+    ID_EDIT_SELECT_ALL      "選取整篇文件\n選取全部"
+    ID_EDIT_UNDO            "復原上一次動作\n復原"
+    ID_EDIT_REDO            "重做前一個復原的動作\n重做"
+END
+
+STRINGTABLE
+BEGIN
+    ID_VIEW_STATUS_BAR      "隱藏或顯示狀態列\n切換狀態列"
+    ID_VIEW_CHILD           "新开窗口，样式:\tID_VIEW_CHILD\t1\t2"
+    ID_VIEW_POPUP           "新开窗口，样式:\tID_VIEW_POPUP\t1\t2"
+    ID_VIEW_OVERLAPPED      "新开窗口，样式:\tID_VIEW_OVERLAPPED\t1\t2"
+    ID_VIEW_TEXTBOX         "新开窗口，样式:\tID_VIEW_TEXTBOX\t1\t2"
+END
+
+STRINGTABLE
+BEGIN
+    AFX_IDS_SCSIZE          "改變視窗大小"
+    AFX_IDS_SCMOVE          "改變視窗位置"
+    AFX_IDS_SCMINIMIZE      "縮小視窗到一圖示"
+    AFX_IDS_SCMAXIMIZE      "放大視窗到全螢幕"
+    AFX_IDS_SCNEXTWINDOW    "切換到下一個文件視窗"
+    AFX_IDS_SCPREVWINDOW    "切換到前一個文件視窗"
+    AFX_IDS_SCCLOSE         "關閉工作中視窗並提示儲存文件"
+END
+
+STRINGTABLE
+BEGIN
+    AFX_IDS_SCRESTORE       "還原視窗至原來大小"
+    AFX_IDS_SCTASKLIST      "叫出「工作列」"
+END
+
+#endif    // 中文(简体，中国) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE 4, 2
+#pragma code_page(936)
+#endif //_WIN32
+#include ".\demo.rc2"  // non-Microsoft Visual C++ edited resources
+#include "l.chs\afxres.rc"          // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

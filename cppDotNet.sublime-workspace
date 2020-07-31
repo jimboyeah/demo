@@ -1,0 +1,2431 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"PROJ",
+				"PROJECT_SOURCE_DIR\tbuiltin"
+			],
+			[
+				"bin",
+				"bin-clr/"
+			],
+			[
+				"link",
+				"link_directories\tcommand"
+			],
+			[
+				"add_c",
+				"add_custom_command\tcommand"
+			],
+			[
+				"tar",
+				"target_link_libraries\tcommand"
+			],
+			[
+				"F",
+				"Finished"
+			],
+			[
+				"qml",
+				"main.qml"
+			],
+			[
+				"p",
+				"plugins/"
+			],
+			[
+				"img",
+				"imageMat"
+			],
+			[
+				"lena",
+				"lena_thresh"
+			],
+			[
+				"chapp",
+				"ch_app.erl"
+			],
+			[
+				"wxMen",
+				"wxMenuBar"
+			],
+			[
+				"create",
+				"create_test_menu"
+			],
+			[
+				"ge",
+				"GenerateNames"
+			],
+			[
+				"I",
+				"IsStatic"
+			],
+			[
+				"lo",
+				"localhost.pfx"
+			],
+			[
+				"Hook",
+				"KeyboardHook"
+			],
+			[
+				"Hoo",
+				"HookStop"
+			],
+			[
+				"Ho",
+				"HookStart"
+			],
+			[
+				"int",
+				"Int32"
+			],
+			[
+				"PlaySoun",
+				"PlaySoundFlags"
+			],
+			[
+				"O",
+				"OpenFileDialog"
+			],
+			[
+				"From",
+				"Form1_Load"
+			],
+			[
+				"Form1",
+				"Form1_Load"
+			],
+			[
+				"Do",
+				"DoWorkStatic"
+			],
+			[
+				"S",
+				"Singletons"
+			],
+			[
+				"Test",
+				"TestClass"
+			],
+			[
+				"_",
+				"_count"
+			],
+			[
+				"Con",
+				"Contacts"
+			],
+			[
+				"up",
+				"upperCase"
+			],
+			[
+				"cli",
+				"on_button_clicked"
+			],
+			[
+				"height",
+				"max-height\tproperty"
+			],
+			[
+				"so",
+				"socket.io-client"
+			],
+			[
+				"En",
+				"EncodeToString\tfunc(src []byte) string ·ƒ"
+			],
+			[
+				"st",
+				"StdEncoding\t*base64.Encoding ·ν"
+			],
+			[
+				"Engin",
+				"EngineioMessage\tfunc(text string) ·ƒ"
+			],
+			[
+				"EIO",
+				"EIO_Message\tEngineioPacket ·Ɩ"
+			],
+			[
+				"SIO_Bin",
+				"SIO_Binary_Event\tSocketioPacket ·Ɩ"
+			],
+			[
+				"SIO",
+				"SIO_Event\tSocketioPacket ·Ɩ"
+			],
+			[
+				"U",
+				"Uint16\tfunc(b []byte) uint16 ·ƒ"
+			],
+			[
+				"Error",
+				"ErrorNil\tErrorCode ·Ɩ"
+			],
+			[
+				"Err",
+				"ErrorNil\tErrorCode ·Ɩ"
+			],
+			[
+				"Messa",
+				"MessageType\tbyte ·ʈ"
+			],
+			[
+				"E",
+				"Err\terror ·ν"
+			],
+			[
+				"e",
+				"Err\terror ·ν"
+			],
+			[
+				"b",
+				"brw\t*bufio.ReadWriter ·ν"
+			],
+			[
+				"Mi",
+				"Millisecond\ttime.Duration ·Ɩ"
+			],
+			[
+				"Webs",
+				"github.com/gorilla/websocket\t ·ʂ"
+			],
+			[
+				"Set",
+				"SetReadDeadline\tfunc(t time.Time) error ·ƒ"
+			],
+			[
+				"B",
+				"BrokenMessage\tMessageType ·Ɩ"
+			],
+			[
+				"R",
+				"RemoteAddr\tfunc() net.Addr ·ƒ"
+			],
+			[
+				"P",
+				"parsed\tbool ·ν"
+			],
+			[
+				"utf",
+				"unicode/utf8\t ·ʂ"
+			],
+			[
+				"Mask",
+				"Masking\tbool ·ν"
+			],
+			[
+				"Mess",
+				"MessageType\tbyte ·ʈ"
+			],
+			[
+				"Ma",
+				"Maskingkey\t[4]byte ·ν"
+			],
+			[
+				"Masking",
+				"Masking\tbool ·ν"
+			],
+			[
+				"M",
+				"Maskingkey\t[4]byte ·ν"
+			],
+			[
+				"CloseMe",
+				"CloseMessageCode\tuint ·ʈ"
+			],
+			[
+				"Ti",
+				"PingTimeout\ttime.Duration ·Ɩ"
+			],
+			[
+				"Ping",
+				"PingTimeout\ttime.Duration ·Ɩ"
+			],
+			[
+				"r",
+				"SetReadDeadline\tfunc(t time.Time) error ·ƒ"
+			],
+			[
+				"Read",
+				"ReadWriter\tstruct ·ʈ"
+			],
+			[
+				"StatusIn",
+				"StatusInternalServerError\tuntyped int ·Ɩ"
+			],
+			[
+				"net",
+				"netConn\tnet.Conn ·ν"
+			],
+			[
+				"enc",
+				"encoding/base64\t ·ʂ"
+			],
+			[
+				"Re",
+				"RequestURI\tstring ·ν"
+			],
+			[
+				"Respn",
+				"ResponseWriter\tinterface ·ʈ"
+			],
+			[
+				"Ha",
+				"Handler\tinterface ·ʈ"
+			],
+			[
+				"L",
+				"GetLabel\tfunc() string ·ƒ"
+			],
+			[
+				"test",
+				"test_pb.js"
+			],
+			[
+				"react",
+				"react-quill/"
+			],
+			[
+				"el",
+				"element-ui/"
+			],
+			[
+				"rel",
+				"icedesign-qrcode.rel.js"
+			],
+			[
+				"get",
+				"getCroppedCanvas\twarning"
+			],
+			[
+				"cl",
+				"className"
+			],
+			[
+				"hex",
+				"hex2decimal"
+			],
+			[
+				"flex",
+				"flex-wrap\tproperty"
+			],
+			[
+				"in",
+				"MarshalIndent\tfunc(v interface{}, prefix string, indent string) []byte, error ·ƒ"
+			],
+			[
+				"io",
+				"io/ioutil\t ·ʂ"
+			],
+			[
+				"re",
+				"ReadDir\tfunc(dirname string) []os.FileInfo, error ·ƒ"
+			],
+			[
+				"init",
+				"initQueue"
+			],
+			[
+				"thread",
+				"threadID"
+			],
+			[
+				"exit",
+				"exitFlag"
+			],
+			[
+				"con",
+				"content_encoding"
+			],
+			[
+				"content",
+				"content_length"
+			],
+			[
+				"name",
+				"nameKey"
+			],
+			[
+				"work",
+				"workQueue"
+			],
+			[
+				"en",
+				"enqueue"
+			],
+			[
+				"none",
+				"None"
+			],
+			[
+				"Mo",
+				"ModeExclusive\tos.FileMode ·Ɩ"
+			],
+			[
+				"encod",
+				"encoding/json\t ·ʂ"
+			],
+			[
+				"Cmd",
+				"Command\tfunc(name string, arg ...string) *exec.Cmd ·ƒ"
+			],
+			[
+				"next",
+				"next.min.js"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "cppDotNet.sublime-project",
+			"settings":
+			{
+				"buffer_size": 2739,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "dotnet-clr/CMakeLists.txt",
+			"settings":
+			{
+				"buffer_size": 3926,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "dotnet-clr/src/plugin_assembly_dll.cpp",
+			"settings":
+			{
+				"buffer_size": 1107,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "dotnet-clr/src/MathLibrary.h",
+			"settings":
+			{
+				"buffer_size": 406,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "dotnet-clr/src/MathLibrary_dll.cpp",
+			"settings":
+			{
+				"buffer_size": 499,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/coding/md-code/vcppnet/appendb/dyncreat.cpp",
+			"settings":
+			{
+				"buffer_size": 2499,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "dotnet-clr/src/self_reflection.cpp",
+			"settings":
+			{
+				"buffer_size": 1325,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "dotnet-clr/src/vcpp_reflection_6.cpp",
+			"settings":
+			{
+				"buffer_size": 1341,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "dotnet-clr/clr-res/clrc.vcxproj",
+			"settings":
+			{
+				"buffer_size": 4860,
+				"encoding": "UTF-8 with BOM",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "dotnet-clr/clr-gui/clr.vcxproj",
+			"settings":
+			{
+				"buffer_size": 4094,
+				"encoding": "UTF-8 with BOM",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "dotnet-clr/msbuild/AssemblyInfo.cpp",
+			"settings":
+			{
+				"buffer_size": 2360,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "dotnet-clr/msbuild/helloworld.vcxproj",
+			"settings":
+			{
+				"buffer_size": 2306,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Microsoft/VC/v160/Microsoft.Cpp.Default.props",
+			"settings":
+			{
+				"buffer_size": 18774,
+				"encoding": "UTF-8 with BOM",
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "Ninja - all",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Ninja - all",
+					""
+				],
+				[
+					"Ninja - clean",
+					""
+				],
+				[
+					"Ninja - edit_cache",
+					""
+				],
+				[
+					"Ninja - rebuild_cache",
+					""
+				],
+				[
+					"Ninja - test",
+					""
+				],
+				[
+					"Ninja Make(Windows)",
+					""
+				]
+			],
+			[
+				"Ninja - all",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Ninja - all",
+					""
+				],
+				[
+					"Ninja - clean",
+					""
+				],
+				[
+					"Ninja - edit_cache",
+					""
+				],
+				[
+					"Ninja - rebuild_cache",
+					""
+				],
+				[
+					"Ninja - test",
+					""
+				],
+				[
+					"Ninja Make(Windows)",
+					""
+				],
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					""
+				],
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					"Run"
+				],
+				[
+					"Packages/User/C++ MinGW.sublime-build",
+					""
+				],
+				[
+					"Packages/User/C++ MinGW.sublime-build",
+					"(-std=c++17)"
+				],
+				[
+					"Packages/User/C++ MinGW.sublime-build",
+					"(-std=c++14)"
+				],
+				[
+					"Packages/User/C++ MinGW.sublime-build",
+					"(-std=c++11)"
+				],
+				[
+					"Packages/User/C++ MinGW.sublime-build",
+					"(-std=c++11) with ENV"
+				],
+				[
+					"Packages/User/C++ MinGW.sublime-build",
+					"(-std=c++11) Release with ENV"
+				],
+				[
+					"Packages/User/C++ MinGW.sublime-build",
+					"(-std=c++0x) with ENV"
+				],
+				[
+					"Packages/User/C++ MinGW.sublime-build",
+					"(-std=c++98) with ENV"
+				],
+				[
+					"Packages/User/C++ MinGW.sublime-build",
+					"(-ansi) with ENV"
+				],
+				[
+					"Packages/User/C++ MinGW.sublime-build",
+					"(-std=c11) with ENV"
+				],
+				[
+					"Packages/User/C++ MinGW.sublime-build",
+					"(-std=c99) with ENV"
+				],
+				[
+					"Packages/User/C++ MinGW.sublime-build",
+					"(-std=c90) with ENV"
+				],
+				[
+					"Packages/User/C++ MinGW.sublime-build",
+					"控制台中运行"
+				]
+			],
+			[
+				"Ninja - all",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"edit",
+				"Project: Edit Project"
+			],
+			[
+				"statsu",
+				"Git: Status"
+			],
+			[
+				"add",
+				"Git: Add All"
+			],
+			[
+				"ad",
+				"Git: Add All"
+			],
+			[
+				"enable",
+				"Table Editor: Enable for current view"
+			],
+			[
+				"com",
+				"Git: Commit"
+			],
+			[
+				"comm",
+				"Git: Commit"
+			],
+			[
+				"pushc",
+				"Git: Push Current Branch"
+			],
+			[
+				"status",
+				"Git: Status"
+			],
+			[
+				"comm\t",
+				"Git: Commit"
+			],
+			[
+				"enabl",
+				"Table Editor: Enable for current view"
+			],
+			[
+				"hex",
+				"HexViewer: Toggle Hex View"
+			],
+			[
+				"adda",
+				"Git: Add All"
+			],
+			[
+				"ena",
+				"Table Editor: Enable for current view"
+			],
+			[
+				"enab",
+				"Table Editor: Enable for current view"
+			],
+			[
+				"addll",
+				"Git: Add All"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"LSPEnable",
+				"LSP: Enable Language Server in Project"
+			],
+			[
+				"isnta",
+				"Package Control: Install Package"
+			],
+			[
+				"print",
+				"Print to HTML: print as HTML via browser"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"check",
+				"Git: Checkout Current File"
+			],
+			[
+				"git diff",
+				"Git: Diff Current File"
+			],
+			[
+				"cmm",
+				"Git: Commit"
+			],
+			[
+				"repl",
+				"Package Control: Enable Package"
+			],
+			[
+				"en",
+				"Table Editor: Enable for current view"
+			],
+			[
+				"endablecu",
+				"Table Editor: Enable for current syntax"
+			],
+			[
+				"git status",
+				"Git: Status"
+			],
+			[
+				"git i",
+				"Git: Init"
+			],
+			[
+				"table edit",
+				"Table Editor: Enable for current view"
+			],
+			[
+				"table",
+				"Table Editor: Show demo film in new scratch view"
+			],
+			[
+				"preview",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"previe",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"markown",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"mark",
+				"Build With: Markdown"
+			],
+			[
+				"dis",
+				"Package Control: Disable Package"
+			],
+			[
+				"disabl",
+				"Package Control: Disable Package"
+			],
+			[
+				"endable",
+				"Package Control: Disable Package"
+			],
+			[
+				"la",
+				"LaTeXTools: Clear cache"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"html",
+				"HTMLPrettify"
+			],
+			[
+				"erlang",
+				"Set Syntax: Erlang"
+			],
+			[
+				"diff",
+				"Set Syntax: Diff"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"disa",
+				"Package Control: Disable Package"
+			],
+			[
+				"in",
+				"Package Control: Install Package"
+			],
+			[
+				"package",
+				"Package Control: Install Package"
+			],
+			[
+				"utf",
+				"ConvertToUTF8: Reload with Encoding"
+			],
+			[
+				"TypesCript",
+				"TypeScript: Signature Info"
+			],
+			[
+				"markdown",
+				"Set Syntax: MultiMarkdown"
+			],
+			[
+				"debug",
+				"SublimeCodeIntel: Enable Debug Mode"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"theme",
+				"UI: Select Color Scheme"
+			],
+			[
+				"them",
+				"UI: Select Theme"
+			],
+			[
+				"new pro",
+				"Project Manager: Add New Project"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 302.0,
+		"history":
+		[
+			"out.write(\"\\0x62\\0xfa\\0x10\")",
+			"out = open(\"C:/download/OpenCV/redbook/asset/test.gzip\", \"wb\")",
+			"out.write(\"\\0x62\\0xfa\\0x10\")",
+			"newFile.write(newFileBytes)",
+			"newFile = open(\"filename.txt\", \"wb\")",
+			"newFileBytes = [123, 3, 255, 0, 100]",
+			"out.write(data)",
+			"data = [0x62, 0xfa, 0x10]",
+			"out.write([0x62, 0xfa, 0x10])",
+			"out = open(\"C:/download/OpenCV/redbook/asset/test.gzip\")",
+			" out = open(\"C:/download/OpenCV/redbook/asset/test.gzip\", \"wb\")",
+			"out.write([0x62, 0xfa, 0x10])",
+			"out.write((0x62, 0xfa, 0x10))",
+			"out = open(\"C:/download/OpenCV/redbook/asset/test.gzip\")",
+			"os.system(\"dir\");",
+			"import os;",
+			"execfile(\"..\")",
+			"execfile",
+			"system.io(\"dir\");",
+			"print(window)",
+			"print(view)",
+			"print(view);",
+			"dir(sublime)",
+			"dir(sheet)",
+			"print(__name__)",
+			"print(__name_)",
+			"print(__doc__)",
+			".",
+			";",
+			"__doc__",
+			"dir()",
+			"ver",
+			"__version",
+			".version().",
+			".version()",
+			"version()",
+			"1+1",
+			"dir",
+			"r = os.system(\"cmd /k echo >>c:/coding/md/log.txt\")",
+			"r = os.system(\"cmd /k \\\"echo c:/coding/md/log.txt mkdir c:\\mkdir\\\"\")",
+			"r = os.system(\"cmd /k echo \\\"c:/coding/md/log.txt mkdir c:\\mkdir\\\"\")",
+			"r = os.system(\"cmd /k echo c:/coding/md/log.txt mkdir c:\\mkdir'\")",
+			"r = os.system(\"cmd /k 'echo c:/coding/md/log.txt mkdir c:\\mkdir'\")",
+			"r = os.system(\"cmd -k echo c:/coding/md/log.txt mkdir c:\\mkdir\")",
+			"r = os.system(\"echo c:/coding/md/log.txt mkdir c:\\mkdir\")",
+			"r = os.system(\"echo c:/log.txt mkdir c:\\mkdir\")",
+			"r = os.system(\"echo c:\\\\log.txt mkdir c:\\mkdir\")",
+			"r = os.system(\"mkdir c:\\mkdir\")",
+			"r = os.system(\"cwd .\")",
+			"print(r)",
+			"r = os.system(\"dir .\")",
+			"print(r)",
+			"pring(r)",
+			"r = os.system(\"dir\")",
+			"os.system(\"dir\")",
+			"subprocess.run(\"ls\")",
+			"subprocess.run()",
+			"import subprocess",
+			"subprocess.run()",
+			"import commands",
+			"for i in val.readlines()",
+			"for i in val.readlines(): &  print(i)",
+			"for i in val.readlines()  print(i)",
+			"for i in val.readlines(): print(i)",
+			"for i in val.readlines():",
+			"val = os.popen('ls -al')",
+			"val = os.ppopen('ls -al')",
+			"val = os.Ppopen('ls -al')",
+			"import os",
+			"val = os.Ppopen('ls -al')",
+			"cwd"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/coding/md-code/cppDemos",
+		"/C/coding/md-code/cppDemos/dotnet-clr",
+		"/C/coding/md-code/cppDemos/dotnet-clr/msbuild",
+		"/C/coding/md-code/cppDemos/dotnet-clr/src",
+		"/C/coding/src",
+		"/C/coding/md-code/vcppnet",
+		"/C/coding/md-code/vcppnet/Ex32a-DotNet-DLL",
+		"/C/coding/md-code/vcppnet/Ex32b-DotNet-Exe",
+		"/C/coding/md-code/vcppnet/Ex34c",
+		"/C/coding/md-code/vcppnet/Ex34d",
+		"/C/coding/md-code/vcppnet/ManagedCWebFormAppWizard"
+	],
+	"file_history":
+	[
+		"/C/coding/md-code/cppDemos/bin-clr/MathClient.exe.manifest",
+		"/C/coding/md-code/cppDemos/dotnet-clr/src/vcpp_reflection_5.cpp",
+		"/C/coding/md-code/cppDemos/dotnet-clr/src/friend_assemblies_dll.cpp",
+		"/C/coding/md-code/cppDemos/dotnet-clr/src/vcpp_reflection_2.cpp",
+		"/C/coding/md-code/cppDemos/dotnet-clr/src/mcppv2_gcnew_2.cpp",
+		"/C/coding/md-code/cppDemos/bin-clr/mcppv2_gcnew_2.exe.manifest",
+		"/C/coding/md-code/cppDemos/bin-clr/friend_assemblies.dll.manifest",
+		"/C/coding/md-code/cppDemos/bin-clr/friend_assembly.dll.manifest",
+		"/C/coding/md-code/cppDemos/dotnet-clr/src/abstract_native_keyword.cpp",
+		"/C/coding/md-code/cppDemos/dotnet-clr/src/friend_assemblies_2.cpp",
+		"/C/coding/md-code/cppDemos/dotnet-clr/src/mcppv2_paramarray3.cs",
+		"/C/coding/md-code/cppDemos/dotnet-clr/src/generics_overview_nm.cpp",
+		"/C/coding/md-code/cppDemos/dotnet-clr/msbuild/Helloworld.cpp",
+		"/C/coding/md-code/cppDemos/dotnet-clr/src/string_operators_3.cpp",
+		"/C/coding/md-code/cppDemos/dotnet-clr/src/override_native_keyword.cpp",
+		"/C/coding/md-code/cppDemos/dotnet-clr/src/sealed_native_keyword_nm.cpp",
+		"/C/coding/md-code/cppDemos/src/bin.cpp",
+		"/C/coding/md-code/cppDemos/src/stream-file.cpp",
+		"/C/coding/src/streamfile/streamfile.cbp",
+		"/C/coding/md-code/cppDemos/dotnet-clr/src/mcppv2_paramarray2_dll.cpp",
+		"/C/coding/md-code/cppDemos/dotnet-clr/src/vcpp_reflection_5_dll.cpp",
+		"/C/coding/md-code/cppDemos/dotnet-clr/src/user_defined_attributes_nm.cpp",
+		"/C/coding/md-code/cppDemos/dotnet-clr/src/generics_overview_3.cpp",
+		"/C/coding/md-code/cppDemos/dotnet-clr/src/extending_metadata_f_nm.cpp",
+		"/C/coding/md-code/cppDemos/dotnet-clr/src/extending_metadata_e_nm.cpp",
+		"/C/coding/md-code/cppDemos/dotnet-clr/src/user_defined_attributes.cpp",
+		"/C/coding/md-code/cppDemos/dotnet-clr/src/extending_metadata_e.cpp",
+		"/C/coding/md-code/cppDemos/dotnet-clr/src/extending_metadata_f.cpp",
+		"/C/coding/md-code/cppDemos/dotnet-clr/clr-gui/AppForm.h",
+		"/C/coding/md-code/cppDemos/dotnet-clr/clr-gui/MyForm.cpp",
+		"/C/coding/md-code/vcppnet/Ex32b/Ex32b.vcproj",
+		"/C/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Microsoft/VC/v160/Microsoft.Cpp.props",
+		"/C/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Microsoft/VC/v160/Microsoft.Cpp.targets",
+		"/C/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Microsoft/VC/v160/Microsoft.Cpp.Current.targets",
+		"/C/coding/md-code/cppDemos/dotnet-clr/msbuild/Helloworld.cs",
+		"/C/coding/md-code/cppDemos/dotnet-clr/msbuild/helloworld.csproj",
+		"/C/coding/md-code/cppDemos/dotnet-clr/src/tracking_reference_valuetypes_3.cpp",
+		"/C/coding/md-code/cppDemos/dotnet-clr/msbuild/hellomore.cs",
+		"/C/coding/md-code/cppDemos/dotnet-clr/msbuild/hello.csproj",
+		"/C/coding/md-code/cppDemos/dotnet-clr/clr-res/ReadMe.txt",
+		"/C/coding/md-code/cppDemos/stream-file.cpp",
+		"/C/coding/md-code/cppDemos/sublime.md",
+		"/C/coding/md-code/cppDemos/cppDemo-MSVC.sublime-project",
+		"/C/coding/md-code/cppDemos/clrc/ReadMe.txt",
+		"/C/coding/md/c-daystep/readme.md",
+		"/C/coding/md-code/cppDemos/clr/demo.cpp",
+		"/C/coding/md/STM/STM32_Nucleo.md",
+		"/C/coding/md/readme_ci.md",
+		"/C/coding/md-code/cppDemos/mfcDemo/comDemo/COMStepByStep_demo/VBClient/Client.vbw",
+		"/C/coding/md-code/cppDemos/mfcDemo/comDemo/COMStepByStep_demo/VBClient/CodeGuru.vbw",
+		"/C/coding/md-code/cppDemos/mfcDemo/comDemo/COMStepByStep_demo/bin/Readme.txt",
+		"/C/coding/md-code/cppDemos/mfcDemo/comDemo/COMStepByStep_demo/VBClient/CodeGuruDemo.vbw",
+		"/C/coding/md-code/cppDemos/mfcDemo/comDemo/COMStepByStep_demo/VBClient/CodeGuruDemo.vbp",
+		"/C/coding/md-code/cppDemos/mfcDemo/comDemo/COMStepByStep_demo/VBClient/frmMain.frm",
+		"/C/coding/md-code/cppDemos/mfcDemo/comDemo/COMStepByStep_demo/VBClient/frmMain.frx",
+		"/C/coding/md-code/cppDemos/mfcDemo/comDemo/COMStepByStep_demo/VCClient/Client.cpp",
+		"/C/coding/md-code/cppDemos/mfcDemo/comDemo/COMStepByStep_demo/bin/setup.bat",
+		"/C/coding/md-code/cppDemos/mfcDemo/comDemo/COMStepByStep_demo/bin/remove.bat",
+		"/C/coding/md/writing/mfc/MFC 01 - CEditView.md",
+		"/C/coding/md/writing/mfc/MFC_7.0_Hierarchy_Chart.gif",
+		"/C/Users/OCEAN/Videos/妹夫/!acqier.bat",
+		"/C/coding/md/readme_win.md",
+		"/C/Users/OCEAN/Videos/疋田のぞみ/!acqier.bat",
+		"/C/Users/OCEAN/Videos/桃色万花筒・加藤ももか/!acqier.bat",
+		"/C/Users/OCEAN/Videos/处女情怀/!acqier.bat",
+		"/C/Users/OCEAN/Videos/十来岁的国王/!acqier.bat",
+		"/C/Users/OCEAN/Videos/别看着我/!acqier.bat",
+		"/C/Users/OCEAN/Videos/Tsumugi2闪烁风暴/!acqier.bat",
+		"/C/download/programming/C++/CPP-Concurrency-In-Action-2ed-2019-master/content/chapter9/9.2-chinese.md",
+		"/C/coding/md/readme_git.md",
+		"/C/Users/OCEAN/Videos/桃色万花筒・加藤ももか/@combie.bat",
+		"/D/CAB&SIGN/README.TXT",
+		"/C/Users/OCEAN/Videos/恋活　近藤あさみ/!acqier.bat",
+		"/C/Users/OCEAN/Videos/天使萌–可爱天使萌5/!acqier.bat",
+		"/C/Users/OCEAN/Videos/天使萌–可爱天使萌5/download.bat",
+		"/C/Users/OCEAN/Videos/恋活　近藤あさみ/@combie.bat",
+		"/C/coding/md/db/readme_mysql.md",
+		"/C/Users/OCEAN/Videos/疋田のぞみ/@acqier.bat",
+		"/C/Users/OCEAN/Videos/恋活　近藤あさみ/@acqier.bat",
+		"/C/Users/OCEAN/Videos/疋田のぞみ/a.bat",
+		"/C/coding/md/OpenToonz/ffmpeg.md",
+		"/C/Users/OCEAN/Videos/疋田のぞみ/download.bat",
+		"/C/coding/md-code/cppDemos/mfcDemo/lib/dynamicLib_d.def",
+		"/C/coding/md-code/cppDemos/mfcDemo/lib/dynamicLib_d.exp",
+		"/C/Users/OCEAN/Videos/ZARD What a beautiful memory/[ZARD -  What a beautiful moment][2004 Main Live][1024x576].ass",
+		"/C/coding/md-code/cppDemos/mfcDemo/01-simple/ReadMe.txt",
+		"/C/coding/md/readme_sublime.md",
+		"/D/Readme.txt",
+		"/D/CPPIDE/ColoredText/Main.cpp",
+		"/D/CPPIDE/Factorial12/Main.cpp",
+		"/D/CPPIDE/Factorial12/SecondFile.cpp",
+		"/D/CPPIDE/Factorial/Main.cpp",
+		"/C/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/Tools/VsDevCmd.bat",
+		"/C/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Auxiliary/Build/vcvarsall.bat",
+		"/C/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.26.28801/bin/Hostx64/x64/ml64.exe",
+		"/C/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/Tools/VsMSBuildCmd.bat",
+		"/C/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Auxiliary/Build/vcvarsx86_amd64.bat",
+		"/C/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Auxiliary/Build/vcvarsamd64_x86.bat",
+		"/C/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Auxiliary/Build/vcvars64.bat",
+		"/C/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Auxiliary/Build/vcvars32.bat",
+		"/C/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Auxiliary/Build/Microsoft.VCToolsVersion.v142.default.txt",
+		"/C/coding/md/readme.md",
+		"/C/coding/md/writing/cb/define_initialization_1.html",
+		"/C/coding/md/writing/mfc/mfc.md",
+		"/C/coding/md/writing/mfc/01 MFC 记事本 - CEditView.md",
+		"/C/download/不伦纯爱2011/download.bat",
+		"/C/download/不伦纯爱2011/urls.bat",
+		"/C/download/不伦纯爱2011/urls.md",
+		"/C/download/不伦纯爱2011/1882b53f96c000000.ts",
+		"/C/download/不伦纯爱2011/1882b53f96c001000.ts",
+		"/C/download/不伦纯爱2011/1882b53f96c001001.ts",
+		"/C/download/不伦纯爱2011/1882b53f96c001003.ts",
+		"/C/download/不伦纯爱2011/1882b53f96c001002.ts",
+		"/C/download/不伦纯爱2011/1882b53f96c001005.ts",
+		"/C/download/不伦纯爱2011/1882b53f96c001004.ts",
+		"/C/download/不伦纯爱2011/1882b53f96c001006.ts",
+		"/C/download/不伦纯爱2011/1882b53f96c001007.ts",
+		"/C/download/不伦纯爱2011/1882b53f96c001008.ts",
+		"/C/download/不伦纯爱2011/1882b53f96c001009.ts",
+		"/C/download/不伦纯爱2011/1882b53f96c001010.ts",
+		"/C/download/不伦纯爱2011/1882b53f96c001011.ts",
+		"/C/download/不伦纯爱2011/1882b53f96c001012.ts",
+		"/C/download/不伦纯爱2011/1882b53f96c001013.ts",
+		"/C/download/不伦纯爱2011/1882b53f96c001014.ts",
+		"/C/download/不伦纯爱2011/1882b53f96c001015.ts",
+		"/C/download/不伦纯爱2011/1882b53f96c001016.ts",
+		"/C/download/不伦纯爱2011/1882b53f96c001017.ts",
+		"/C/download/不伦纯爱2011/1882b53f96c001018.ts"
+	],
+	"find":
+	{
+		"height": 40.0
+	},
+	"find_in_files":
+	{
+		"height": 451.0,
+		"where_history":
+		[
+			"C:\\coding\\md-code\\cppDemos\\dotnet-clr\\src"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"string",
+			"\\",
+			"MathClient_dll",
+			"MathClient",
+			"string",
+			"friend_assemblies_2",
+			"${dllname}",
+			"clr-",
+			"clr-$",
+			"clr-",
+			"bin",
+			"clr-",
+			"{\"",
+			"clr-friend_assemblies_2",
+			"${dllname}",
+			"${dllname",
+			"add_library",
+			"objname",
+			"${BUILD_SHARED_LIBRARY}",
+			"friend_assemblies",
+			"_zw",
+			"main",
+			"?",
+			"using namespace System;",
+			"#include <stdio.h>\n",
+			"<====================",
+			"WriteLine",
+			" <=====================",
+			")\n",
+			"C++\n\nCopy\n",
+			"/LD",
+			"/clr /c",
+			"/c",
+			"dll",
+			"Win64",
+			"Ex32",
+			"dll",
+			"..",
+			"Include=\"..",
+			"TargetDir",
+			"OutDir",
+			"OutputPath",
+			"Win32",
+			"100",
+			"main",
+			".",
+			"nsole.WriteLine",
+			"<Tar",
+			"x86",
+			"x64",
+			"Win32",
+			"WIN32",
+			"Win32",
+			"WIN32",
+			"Win32",
+			"clr/"
+		],
+		"highlight": false,
+		"in_selection": false,
+		"preserve_case": true,
+		"regex": true,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 5,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "cppDotNet.sublime-project",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2739,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2529,
+								2529
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"is_init_dirty_state": false,
+							"origin_encoding": "UTF-8",
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1198.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 12,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "dotnet-clr/CMakeLists.txt",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3926,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1614,
+								1608
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"is_init_dirty_state": false,
+							"origin_encoding": "ASCII",
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/CMake/CMake.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 878.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "dotnet-clr/src/plugin_assembly_dll.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1107,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								591,
+								578
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"is_init_dirty_state": false,
+							"origin_encoding": "ASCII",
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/C++/C++.sublime-syntax",
+							"tab_size": 3,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 77.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "dotnet-clr/src/MathLibrary.h",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 406,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								406,
+								406
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"is_init_dirty_state": false,
+							"origin_encoding": "ASCII",
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/C++/C++.sublime-syntax",
+							"tab_size": 3,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "dotnet-clr/src/MathLibrary_dll.cpp",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 499,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								491,
+								491
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"is_init_dirty_state": false,
+							"origin_encoding": "ASCII",
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/C++/C++.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "/C/coding/md-code/vcppnet/appendb/dyncreat.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2499,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1360,
+								1360
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"origin_encoding": "ASCII",
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/C++/C++.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 222.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "dotnet-clr/src/self_reflection.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1325,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								18,
+								3
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"is_init_dirty_state": false,
+							"origin_encoding": "ASCII",
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/C++/C++.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "dotnet-clr/src/vcpp_reflection_6.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1341,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								134,
+								134
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"is_init_dirty_state": false,
+							"origin_encoding": "ASCII",
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/C++/C++.sublime-syntax",
+							"tab_size": 3,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "dotnet-clr/clr-res/clrc.vcxproj",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4860,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4033,
+								4103
+							]
+						],
+						"settings":
+						{
+							"in_converting": true,
+							"incomplete_sync": null,
+							"is_init_dirty_state": false,
+							"origin_content": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<Project DefaultTargets=\"Build\" ToolsVersion=\"4.0\" xmlns=\"http://schemas.microsoft.com/developer/msbuild/2003\">\n  <ItemGroup Label=\"ProjectConfigurations\">\n    <ProjectConfiguration Include=\"Debug|x64\">\n      <Configuration>Debug</Configuration>\n      <Platform>x64</Platform>\n    </ProjectConfiguration>\n    <ProjectConfiguration Include=\"Release|x64\">\n      <Configuration>Release</Configuration>\n      <Platform>x64</Platform>\n    </ProjectConfiguration>\n  </ItemGroup>\n  <PropertyGroup Label=\"Globals\">\n    <ProjectGuid>{C818EED7-BEA8-4A15-A986-70044EA00DF3}</ProjectGuid>\n    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>\n    <Keyword>ManagedCProj</Keyword>\n    <RootNamespace>clrc</RootNamespace>\n  </PropertyGroup>\n  <Import Project=\"$(VCTargetsPath)\\Microsoft.Cpp.Default.props\" />\n  <PropertyGroup Condition=\"'$(Configuration)|$(Platform)'=='Debug|x64'\" Label=\"Configuration\">\n    <ConfigurationType>Application</ConfigurationType>\n    <UseDebugLibraries>true</UseDebugLibraries>\n    <PlatformToolset>v110</PlatformToolset>\n    <CLRSupport>true</CLRSupport>\n    <CharacterSet>Unicode</CharacterSet>\n  </PropertyGroup>\n  <PropertyGroup Condition=\"'$(Configuration)|$(Platform)'=='Release|x64'\" Label=\"Configuration\">\n    <ConfigurationType>Application</ConfigurationType>\n    <UseDebugLibraries>false</UseDebugLibraries>\n    <PlatformToolset>v110</PlatformToolset>\n    <CLRSupport>true</CLRSupport>\n    <CharacterSet>Unicode</CharacterSet>\n  </PropertyGroup>\n  <Import Project=\"$(VCTargetsPath)\\Microsoft.Cpp.props\" />\n  <ImportGroup Label=\"ExtensionSettings\">\n  </ImportGroup>\n  <ImportGroup Label=\"PropertySheets\" Condition=\"'$(Configuration)|$(Platform)'=='Debug|x64'\">\n    <Import Project=\"$(UserRootDir)\\Microsoft.Cpp.$(Platform).user.props\" Condition=\"exists('$(UserRootDir)\\Microsoft.Cpp.$(Platform).user.props')\" Label=\"LocalAppDataPlatform\" />\n  </ImportGroup>\n  <ImportGroup Label=\"PropertySheets\" Condition=\"'$(Configuration)|$(Platform)'=='Release|x64'\">\n    <Import Project=\"$(UserRootDir)\\Microsoft.Cpp.$(Platform).user.props\" Condition=\"exists('$(UserRootDir)\\Microsoft.Cpp.$(Platform).user.props')\" Label=\"LocalAppDataPlatform\" />\n  </ImportGroup>\n  <PropertyGroup Label=\"UserMacros\" />\n  <PropertyGroup Condition=\"'$(Configuration)|$(Platform)'=='Debug|x64'\">\n    <LinkIncremental>true</LinkIncremental>\n  </PropertyGroup>\n  <PropertyGroup Condition=\"'$(Configuration)|$(Platform)'=='Release|x64'\">\n    <LinkIncremental>false</LinkIncremental>\n  </PropertyGroup>\n  <ItemDefinitionGroup Condition=\"'$(Configuration)|$(Platform)'=='Debug|x64'\">\n    <ClCompile>\n      <WarningLevel>Level3</WarningLevel>\n      <Optimization>Disabled</Optimization>\n      <PreprocessorDefinitions>x64;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>\n      <PrecompiledHeader>Use</PrecompiledHeader>\n    </ClCompile>\n    <Link>\n      <GenerateDebugInformation>true</GenerateDebugInformation>\n      <AdditionalDependencies />\n      <SubSystem>Console</SubSystem>\n    </Link>\n  </ItemDefinitionGroup>\n  <ItemDefinitionGroup Condition=\"'$(Configuration)|$(Platform)'=='Release|x64'\">\n    <ClCompile>\n      <WarningLevel>Level3</WarningLevel>\n      <PreprocessorDefinitions>x64;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>\n      <PrecompiledHeader>Use</PrecompiledHeader>\n    </ClCompile>\n    <Link>\n      <GenerateDebugInformation>true</GenerateDebugInformation>\n      <AdditionalDependencies />\n      <SubSystem>Console</SubSystem>\n    </Link>\n  </ItemDefinitionGroup>\n  <ItemGroup>\n    <Reference Include=\"System\" />\n    <Reference Include=\"System.Data\" />\n    <Reference Include=\"System.Drawing\" />\n    <Reference Include=\"System.Windows.Forms\" />\n    <Reference Include=\"System.Xml\" />\n  </ItemGroup>\n  <ItemGroup>\n    <Text Include=\"ReadMe.txt\" />\n  </ItemGroup>\n  <ItemGroup>\n    <ClInclude Include=\"MyForm.h\">\n      <FileType>CppForm</FileType>\n    </ClInclude>\n    <ClInclude Include=\"resource.h\" />\n    <ClInclude Include=\"stdafx.h\" />\n  </ItemGroup>\n  <ItemGroup>\n    <ResourceCompile Include=\"app.rc\" />\n  </ItemGroup>\n  <ItemGroup>\n    <ClCompile Include=\"AssemblyInfo.cpp\" />\n    <ClCompile Include=\"clrc.cpp\" />\n    <ClCompile Include=\"MyForm.cpp\" />\n    <ClCompile Include=\"stdafx.cpp\">\n      <PrecompiledHeader Condition=\"'$(Configuration)|$(Platform)'=='Debug|x64'\">Create</PrecompiledHeader>\n      <PrecompiledHeader Condition=\"'$(Configuration)|$(Platform)'=='Release|x64'\">Create</PrecompiledHeader>\n    </ClCompile>\n  </ItemGroup>\n  <ItemGroup>\n    <Image Include=\"app.ico\" />\n  </ItemGroup>\n  <ItemGroup>\n    <EmbeddedResource Include=\"MyForm.resx\">\n      <DependentUpon>MyForm.h</DependentUpon>\n    </EmbeddedResource>\n  </ItemGroup>\n  <Import Project=\"$(VCTargetsPath)\\Microsoft.Cpp.targets\" />\n  <ImportGroup Label=\"ExtensionTargets\">\n  </ImportGroup>\n</Project>",
+							"origin_encoding": "UTF-8-SIG",
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/XML/XML.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 373.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "dotnet-clr/clr-gui/clr.vcxproj",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4094,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								241,
+								241
+							],
+							[
+								308,
+								308
+							],
+							[
+								396,
+								396
+							],
+							[
+								465,
+								465
+							],
+							[
+								916,
+								916
+							],
+							[
+								1257,
+								1257
+							],
+							[
+								1737,
+								1737
+							],
+							[
+								2033,
+								2033
+							],
+							[
+								2345,
+								2345
+							],
+							[
+								2486,
+								2486
+							],
+							[
+								2632,
+								2632
+							],
+							[
+								2774,
+								2774
+							],
+							[
+								3077,
+								3077
+							],
+							[
+								3175,
+								3175
+							]
+						],
+						"settings":
+						{
+							"in_converting": true,
+							"incomplete_sync": null,
+							"is_init_dirty_state": false,
+							"origin_content": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<Project DefaultTargets=\"Build\" ToolsVersion=\"4.0\" xmlns=\"http://schemas.microsoft.com/developer/msbuild/2003\">\n  <ItemGroup Label=\"ProjectConfigurations\">\n    <ProjectConfiguration Include=\"Debug|Win32\">\n      <Configuration>Debug</Configuration>\n      <Platform>Win32</Platform>\n    </ProjectConfiguration>\n    <ProjectConfiguration Include=\"Release|Win32\">\n      <Configuration>Release</Configuration>\n      <Platform>Win32</Platform>\n    </ProjectConfiguration>\n  </ItemGroup>\n  <PropertyGroup Label=\"Globals\">\n    <ProjectGuid>{81D07876-6370-441A-BA83-4DD9651E9152}</ProjectGuid>\n    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>\n    <Keyword>ManagedCProj</Keyword>\n    <RootNamespace>clr</RootNamespace>\n  </PropertyGroup>\n  <Import Project=\"$(VCTargetsPath)\\Microsoft.Cpp.Default.props\" />\n  <PropertyGroup Condition=\"'$(Configuration)|$(Platform)'=='Debug|Win32'\" Label=\"Configuration\">\n    <ConfigurationType>Application</ConfigurationType>\n    <UseDebugLibraries>true</UseDebugLibraries>\n    <PlatformToolset>v142</PlatformToolset>\n    <CLRSupport>true</CLRSupport>\n    <CharacterSet>Unicode</CharacterSet>\n  </PropertyGroup>\n  <PropertyGroup Condition=\"'$(Configuration)|$(Platform)'=='Release|Win32'\" Label=\"Configuration\">\n    <ConfigurationType>Application</ConfigurationType>\n    <UseDebugLibraries>false</UseDebugLibraries>\n    <PlatformToolset>v142</PlatformToolset>\n    <CLRSupport>true</CLRSupport>\n    <CharacterSet>Unicode</CharacterSet>\n  </PropertyGroup>\n  <Import Project=\"$(VCTargetsPath)\\Microsoft.Cpp.props\" />\n  <ImportGroup Label=\"ExtensionSettings\">\n  </ImportGroup>\n  <ImportGroup Label=\"PropertySheets\" Condition=\"'$(Configuration)|$(Platform)'=='Debug|Win32'\">\n    <Import Project=\"$(UserRootDir)\\Microsoft.Cpp.$(Platform).user.props\" Condition=\"exists('$(UserRootDir)\\Microsoft.Cpp.$(Platform).user.props')\" Label=\"LocalAppDataPlatform\" />\n  </ImportGroup>\n  <ImportGroup Label=\"PropertySheets\" Condition=\"'$(Configuration)|$(Platform)'=='Release|Win32'\">\n    <Import Project=\"$(UserRootDir)\\Microsoft.Cpp.$(Platform).user.props\" Condition=\"exists('$(UserRootDir)\\Microsoft.Cpp.$(Platform).user.props')\" Label=\"LocalAppDataPlatform\" />\n  </ImportGroup>\n  <PropertyGroup Label=\"UserMacros\" />\n  <PropertyGroup Condition=\"'$(Configuration)|$(Platform)'=='Debug|Win32'\">\n    <LinkIncremental>true</LinkIncremental>\n  </PropertyGroup>\n  <PropertyGroup Condition=\"'$(Configuration)|$(Platform)'=='Release|Win32'\">\n    <LinkIncremental>false</LinkIncremental>\n  </PropertyGroup>\n  <ItemDefinitionGroup Condition=\"'$(Configuration)|$(Platform)'=='Debug|Win32'\">\n    <ClCompile>\n      <WarningLevel>Level3</WarningLevel>\n      <Optimization>Disabled</Optimization>\n      <PreprocessorDefinitions>Win32;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>\n    </ClCompile>\n    <Link>\n      <GenerateDebugInformation>true</GenerateDebugInformation>\n      <AdditionalDependencies />\n    </Link>\n  </ItemDefinitionGroup>\n  <ItemDefinitionGroup Condition=\"'$(Configuration)|$(Platform)'=='Release|Win32'\">\n    <ClCompile>\n      <WarningLevel>Level3</WarningLevel>\n      <PreprocessorDefinitions>Win32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>\n    </ClCompile>\n    <Link>\n      <GenerateDebugInformation>true</GenerateDebugInformation>\n      <AdditionalDependencies />\n    </Link>\n  </ItemDefinitionGroup>\n  <ItemGroup>\n    <Reference Include=\"System\" />\n    <Reference Include=\"System.Data\" />\n    <Reference Include=\"System.Drawing\" />\n    <Reference Include=\"System.Windows.Forms\" />\n    <Reference Include=\"System.Xml\" />\n  </ItemGroup>\n  <ItemGroup>\n    <ClCompile Include=\"MyForm.cpp\" />\n  </ItemGroup>\n  <ItemGroup>\n    <ClInclude Include=\"AppForm.h\">\n      <FileType>CppForm</FileType>\n    </ClInclude>\n  </ItemGroup>\n  <ItemGroup>\n    <EmbeddedResource Include=\"AppForm.resx\">\n      <DependentUpon>AppForm.h</DependentUpon>\n    </EmbeddedResource>\n  </ItemGroup>\n  <Import Project=\"$(VCTargetsPath)\\Microsoft.Cpp.targets\" />\n  <ImportGroup Label=\"ExtensionTargets\">\n  </ImportGroup>\n</Project>",
+							"origin_encoding": "UTF-8-SIG",
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/XML/XML.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "dotnet-clr/msbuild/AssemblyInfo.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2360,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								19,
+								19
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"is_init_dirty_state": false,
+							"origin_encoding": "ASCII",
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/C++/C++.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "dotnet-clr/msbuild/helloworld.vcxproj",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2306,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1446,
+								1446
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"is_init_dirty_state": false,
+							"origin_encoding": "ASCII",
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"file": "/C/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Microsoft/VC/v160/Microsoft.Cpp.Default.props",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 18774,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1422,
+								1422
+							]
+						],
+						"settings":
+						{
+							"in_converting": true,
+							"incomplete_sync": null,
+							"is_init_dirty_state": false,
+							"origin_content": "<!--\n***********************************************************************************************\nMicrosoft.Cpp.Default.props\n\nWARNING:  DO NOT MODIFY this file unless you are knowledgeable about MSBuild and have\n          created a backup copy.  Incorrect changes to this file will make it\n          impossible to load or build your projects from the command-line or the IDE.\n\nCopyright (C) Microsoft Corporation. All rights reserved.\n***********************************************************************************************\n-->\n\n<Project xmlns=\"http://schemas.microsoft.com/developer/msbuild/2003\" TreatAsLocalProperty=\"Platform\">\n\n  <PropertyGroup>\n    <VCTargetsPathActual>$(VCTargetsPath)</VCTargetsPathActual>\n    <CurrentVCTargetsPath>$(VCTargetsPath)</CurrentVCTargetsPath>\n    <CurrentVsInstallRoot>$(VsInstallRoot)</CurrentVsInstallRoot>\n    <ClearDevCommandPromptEnvVars Condition=\"'$(ClearDevCommandPromptEnvVars)' == '' and '$(VSCMD_VER)' != '' and '$(DisableRegistryUse)' != 'true' and '$(UseEnv)' != 'true'\">true</ClearDevCommandPromptEnvVars>\n  </PropertyGroup>\n\n  <!-- clear out properties defined as env vars in dev command prompt and which interfere with the project settings -->\n  <PropertyGroup Condition = \"'$(ClearDevCommandPromptEnvVars)' == 'true'\">\n    <Framework40Version />\n    <FrameworkDir />\n    <FrameworkDIR32 />\n    <FrameworkVersion />\n    <FrameworkVersion32 />\n    <IFCPATH />\n    <NETFXSDKDir />\n    <UCRTVersion />\n    <UniversalCRTSdkDir />\n    <VCIDEInstallDir />\n    <VCINSTALLDIR />\n    <VCToolsInstallDir />\n    <VCToolsRedistDir />\n    <VCToolsVersion />\n    <WindowsLibPath />\n    <WindowsSdkBinPath />\n    <WindowsSdkDir />\n    <WindowsSDKLibVersion />\n    <WindowsSdkVerBinPath />\n    <WindowsSDKVersion />\n    <WindowsSDK_ExecutablePath_x64 />\n    <WindowsSDK_ExecutablePath_x86 />\n  </PropertyGroup>\n\n  <Import Project=\"$(MSBuildExtensionsPath)\\$(MSBuildToolsVersion)\\Microsoft.Common.props\" Condition=\"Exists('$(MSBuildExtensionsPath)\\$(MSBuildToolsVersion)\\Microsoft.Common.props')\" />\n\n  <Import Condition=\"Exists('$(VCTargetsPath)\\ImportBefore\\Default')\" Project=\"$(VCTargetsPath)\\ImportBefore\\Default\\*.props\" />\n\n  <PropertyGroup Condition=\"'$(DisableInstalledVCTargetsUse)' != 'true'\">\n    <VCTargetsPath10 Condition=\"'$(VCTargetsPath10)' == '' or ('$(VCTargetsPath10)' != '' and !exists('$(VCTargetsPath10)'))\">$(MSBuildProgramFiles32)\\MSBuild\\Microsoft.Cpp\\v4.0\\</VCTargetsPath10>\n    <VCTargetsPath11 Condition=\"'$(VCTargetsPath11)' == '' or ('$(VCTargetsPath11)' != '' and !exists('$(VCTargetsPath11)'))\">$(MSBuildProgramFiles32)\\MSBuild\\Microsoft.Cpp\\v4.0\\V110\\</VCTargetsPath11>\n    <VCTargetsPath12 Condition=\"'$(VCTargetsPath12)' == '' or ('$(VCTargetsPath12)' != '' and !exists('$(VCTargetsPath12)'))\">$(MSBuildProgramFiles32)\\MSBuild\\Microsoft.Cpp\\v4.0\\V120\\</VCTargetsPath12>\n    <VCTargetsPath14 Condition=\"'$(VCTargetsPath14)' == '' or ('$(VCTargetsPath14)' != '' and !exists('$(VCTargetsPath14)'))\">$(MSBuildProgramFiles32)\\MSBuild\\Microsoft.Cpp\\v4.0\\V140\\</VCTargetsPath14>\n    <VCTargetsPath15 Condition=\"'$(VCTargetsPath15)' == '' or ('$(VCTargetsPath15)' != '' and !exists('$(VCTargetsPath15)'))\">$(MSBuildExtensionsPath32)\\Microsoft\\VC\\v150\\</VCTargetsPath15>\n    <VCTargetsPath16 Condition=\"'$(VCTargetsPath16)' == '' or ('$(VCTargetsPath16)' != '' and !exists('$(VCTargetsPath16)'))\">$(MSBuildExtensionsPath32)\\Microsoft\\VC\\v160\\</VCTargetsPath16>\n  </PropertyGroup>\n  <PropertyGroup>\n    <MinSupportedVCTargetsVersion Condition=\"'$(MinimumVisualStudioVersion)' == '16.0'\">v160</MinSupportedVCTargetsVersion>\n    <MinSupportedVCTargetsVersion Condition=\"'$(MinimumVisualStudioVersion)' == '15.0'\">v150</MinSupportedVCTargetsVersion>\n    <MinSupportedVCTargetsVersion Condition=\"'$(MinimumVisualStudioVersion)' == '14.0'\">v140</MinSupportedVCTargetsVersion>\n    <MinSupportedVCTargetsVersion Condition=\"'$(MinimumVisualStudioVersion)' == '12.0'\">v120</MinSupportedVCTargetsVersion>\n    <MinSupportedVCTargetsVersion Condition=\"'$(MinimumVisualStudioVersion)' == '11.0'\">v110</MinSupportedVCTargetsVersion>\n  </PropertyGroup>\n\n  <PropertyGroup>\n    <Platform_Actual Condition=\"'$(Platform_Actual)' == ''\">$(Platform)</Platform_Actual>\n    <Platform Condition=\"'$(Platform)' == ''\">Win32</Platform>\n    <Platform Condition=\"'$(Platform)' == 'x86' or '$(Platform)' == 'Any CPU' or '$(Platform)' == 'AnyCPU'\">Win32</Platform>\n\n    <_DefaultPlatform>win32</_DefaultPlatform>\n\n    <!-- ApplicationTypeRevision was changed from 8.2 to 10.0 for Dev14 Store projects - So alias 8.2 to 10.0 for compatibility of older projects -->\n    <ApplicationTypeRevision Condition=\"'$(ApplicationType)' == 'Windows Store' and '$(ApplicationTypeRevision)' == '8.2'\">10.0</ApplicationTypeRevision>\n\n    <!-- When the Framework Version is <= 3.5, set PlatformToolset to use the 9.0 toolset.\n         When the Framework Version is >= 4.0, set PlatformToolset to use the 10.0 toolset.\n         If Targetframeworkversion does not exist, then leave the default toolset -->\n    <PlatformToolset Condition=\"'$(PlatformToolset)' == '' and\n                                 ('$(TargetFrameworkVersion)' == 'v3.5' or\n                                  '$(TargetFrameworkVersion)' == 'v3.0' or\n                                  '$(TargetFrameworkVersion)' == 'v2.0')\">v90</PlatformToolset>\n\n  </PropertyGroup>\n\n  <PropertyGroup>\n    <_RelativeApplicationTypeFolder></_RelativeApplicationTypeFolder>\n    <_RelativeApplicationTypeRevisionFolder></_RelativeApplicationTypeRevisionFolder>\n    <_RelativeApplicationTypeFolder Condition=\"'$(ApplicationType)' != ''\">Application Type\\$(ApplicationType)\\</_RelativeApplicationTypeFolder>\n    <_RelativeApplicationTypeRevisionFolder Condition=\"'$(ApplicationType)' != '' and '$(ApplicationTypeRevision)' != ''\">$(_RelativeApplicationTypeFolder)$(ApplicationTypeRevision)\\</_RelativeApplicationTypeRevisionFolder>\n\n    <_ApplicationTypeDefaultProps Condition=\"'$(_RelativeApplicationTypeFolder)' != ''\">$(VCTargetsPath)\\$(_RelativeApplicationTypeFolder)Default.props</_ApplicationTypeDefaultProps>\n    <_ApplicationTypeDefaultPropsFound Condition=\"'$(_ApplicationTypeDefaultProps)' != '' and Exists('$(_ApplicationTypeDefaultProps)')\">true</_ApplicationTypeDefaultPropsFound>\n    <_ApplicationTypeRevisionDefaultProps Condition=\"'$(_RelativeApplicationTypeRevisionFolder)' != ''\">$(VCTargetsPath)\\$(_RelativeApplicationTypeRevisionFolder)Default.props</_ApplicationTypeRevisionDefaultProps>\n    <_ApplicationTypeRevisionDefaultPropsFound Condition=\"'$(_ApplicationTypeRevisionDefaultProps)' != '' and Exists('$(_ApplicationTypeRevisionDefaultProps)')\">true</_ApplicationTypeRevisionDefaultPropsFound>\n  </PropertyGroup>\n\n  <!-- import Application Type default props. Note that they can change Platform value -->\n  <Import Condition=\"'$(_ApplicationTypeDefaultPropsFound)' == 'true'\" Project=\"$(_ApplicationTypeDefaultProps)\" />\n  <Import Condition=\"'$(_ApplicationTypeRevisionDefaultPropsFound)' == 'true'\" Project=\"$(_ApplicationTypeRevisionDefaultProps)\" />\n\n  <PropertyGroup>\n    <_RelativePlatformFolder>$(_RelativeApplicationTypeRevisionFolder)Platforms\\$(Platform)\\</_RelativePlatformFolder>\n    <_RelativePlatformDefaultProps>$(_RelativePlatformFolder)Platform.Default.props</_RelativePlatformDefaultProps>\n\n    <_PlatformDefaultProps>$(VCTargetsPath)\\$(_RelativePlatformDefaultProps)</_PlatformDefaultProps>\n    <_PlatformDefaultPropsFound Condition=\"Exists('$(_PlatformDefaultProps)')\">true</_PlatformDefaultPropsFound>\n\n    <Configuration Condition=\"'$(Configuration)' == ''\">Debug</Configuration>\n    <ConfigurationType Condition=\"'$(ConfigurationType)' == ''\">Application</ConfigurationType>\n  </PropertyGroup>\n\n  <PropertyGroup>\n    <!-- Short names for platform toolsets (added to project name in Solution Explorer) -->\n    <_PlatformToolsetShortNameFor_v141 Condition=\"'$(_PlatformToolsetShortNameFor_v141)' == ''\">Visual Studio 2017</_PlatformToolsetShortNameFor_v141>\n    <_PlatformToolsetShortNameFor_v140 Condition=\"'$(_PlatformToolsetShortNameFor_v140)' == ''\">Visual Studio 2015</_PlatformToolsetShortNameFor_v140>\n    <_PlatformToolsetShortNameFor_v140_xp Condition=\"'$(_PlatformToolsetShortNameFor_v140_xp)' == ''\">Visual Studio 2015 - Windows XP</_PlatformToolsetShortNameFor_v140_xp>\n    <_PlatformToolsetShortNameFor_v120 Condition=\"'$(_PlatformToolsetShortNameFor_v120)' == ''\">Visual Studio 2013</_PlatformToolsetShortNameFor_v120>\n    <_PlatformToolsetShortNameFor_v120_xp Condition=\"'$(_PlatformToolsetShortNameFor_v120_xp)' == ''\">Visual Studio 2013 - Windows XP</_PlatformToolsetShortNameFor_v120_xp>\n    <_PlatformToolsetShortNameFor_v110 Condition=\"'$(_PlatformToolsetShortNameFor_v110)' == ''\">Visual Studio 2012</_PlatformToolsetShortNameFor_v110>\n    <_PlatformToolsetShortNameFor_v110_xp Condition=\"'$(_PlatformToolsetShortNameFor_v110_xp)' == ''\">Visual Studio 2012 - Windows XP</_PlatformToolsetShortNameFor_v110_xp>\n    <_PlatformToolsetShortNameFor_v100 Condition=\"'$(_PlatformToolsetShortNameFor_v100)' == ''\">Visual Studio 2010</_PlatformToolsetShortNameFor_v100>\n    <_PlatformToolsetShortNameFor_v90 Condition=\"'$(_PlatformToolsetShortNameFor_v90)' == ''\">Visual Studio 2008</_PlatformToolsetShortNameFor_v90>\n\n    <!-- Friendly names added to the PlatformToolset in the property pages. -->\n    <_PlatformToolsetFriendlyNameFor_v142 Condition=\"'$(_PlatformToolsetFriendlyNameFor_v142)' == ''\">Visual Studio 2019 (v142)</_PlatformToolsetFriendlyNameFor_v142>\n    <_PlatformToolsetFriendlyNameFor_v141_xp Condition=\"'$(_PlatformToolsetFriendlyNameFor_v141_xp)' == ''\">Visual Studio 2017 - Windows XP (v141_xp)</_PlatformToolsetFriendlyNameFor_v141_xp>\n    <_PlatformToolsetFriendlyNameFor_v141 Condition=\"'$(_PlatformToolsetFriendlyNameFor_v141)' == ''\">Visual Studio 2017 (v141)</_PlatformToolsetFriendlyNameFor_v141>\n    <_PlatformToolsetFriendlyNameFor_v140_xp Condition=\"'$(_PlatformToolsetFriendlyNameFor_v140_xp)' == ''\">Visual Studio 2015 - Windows XP (v140_xp)</_PlatformToolsetFriendlyNameFor_v140_xp>\n    <_PlatformToolsetFriendlyNameFor_v140 Condition=\"'$(_PlatformToolsetFriendlyNameFor_v140)' == ''\">Visual Studio 2015 (v140)</_PlatformToolsetFriendlyNameFor_v140>\n    <_PlatformToolsetFriendlyNameFor_v140_clang_3_7 Condition=\"'$(_PlatformToolsetFriendlyNameFor_v140_clang_3_7)' == ''\">Clang 3.7 with Microsoft CodeGen (v140_clang_3_7)</_PlatformToolsetFriendlyNameFor_v140_clang_3_7>\n    <_PlatformToolsetFriendlyNameFor_v140_clang_c2 Condition=\"'$(_PlatformToolsetFriendlyNameFor_v140_clang_c2)' == ''\">Visual Studio 2015 - Clang with Microsoft CodeGen (v140_clang_c2)</_PlatformToolsetFriendlyNameFor_v140_clang_c2>\n    <_PlatformToolsetFriendlyNameFor_v120_xp Condition=\"'$(_PlatformToolsetFriendlyNameFor_v120_xp)' == ''\">Visual Studio 2013 - Windows XP (v120_xp)</_PlatformToolsetFriendlyNameFor_v120_xp>\n    <_PlatformToolsetFriendlyNameFor_v120 Condition=\"'$(_PlatformToolsetFriendlyNameFor_v120)' == ''\">Visual Studio 2013 (v120)</_PlatformToolsetFriendlyNameFor_v120>\n    <_PlatformToolsetFriendlyNameFor_v110_xp Condition=\"'$(_PlatformToolsetFriendlyNameFor_v110_xp)' == ''\">Visual Studio 2012 - Windows XP (v110_xp)</_PlatformToolsetFriendlyNameFor_v110_xp>\n    <_PlatformToolsetFriendlyNameFor_v110 Condition=\"'$(_PlatformToolsetFriendlyNameFor_v110)' == ''\">Visual Studio 2012 (v110)</_PlatformToolsetFriendlyNameFor_v110>\n    <_PlatformToolsetFriendlyNameFor_v100 Condition=\"'$(_PlatformToolsetFriendlyNameFor_v100)' == ''\">Visual Studio 2010 (v100)</_PlatformToolsetFriendlyNameFor_v100>\n    <_PlatformToolsetFriendlyNameFor_v90 Condition=\"'$(_PlatformToolsetFriendlyNameFor_v90)' == ''\">Visual Studio 2008 (v90)</_PlatformToolsetFriendlyNameFor_v90>\n\n    <v142_Installed Condition=\"Exists('$(VCTargetsPath)\\Platforms\\Win32\\PlatformToolsets\\v142\\Toolset.props')\">true</v142_Installed>\n    <v141_xp_Installed Condition=\"Exists('$(VCTargetsPath15)\\Platforms\\Win32\\PlatformToolsets\\v141_xp\\Toolset.props')\">true</v141_xp_Installed>\n\n    <!-- Define the upgrade toolsets for each old toolset -->\n    <_UpgradePlatformToolsetFor_v142 Condition=\"'$(_UpgradePlatformToolsetFor_v142)' == ''\">v142</_UpgradePlatformToolsetFor_v142>\n    <_UpgradePlatformToolsetFor_v141 Condition=\"'$(_UpgradePlatformToolsetFor_v141)' == '' and '$(v142_Installed)' == 'true'\">v142</_UpgradePlatformToolsetFor_v141>\n    <_UpgradePlatformToolsetFor_v141_xp Condition=\"'$(_UpgradePlatformToolsetFor_v141_xp)' == ''\">v141_xp</_UpgradePlatformToolsetFor_v141_xp>\n    <_UpgradePlatformToolsetFor_v140 Condition=\"'$(_UpgradePlatformToolsetFor_v140)' == '' and '$(v142_Installed)' == 'true'\">v142</_UpgradePlatformToolsetFor_v140>\n    <_UpgradePlatformToolsetFor_v140_xp Condition=\"'$(_UpgradePlatformToolsetFor_v140_xp)' == '' and '$(v141_xp_Installed)' == 'true'\">v141_xp</_UpgradePlatformToolsetFor_v140_xp>\n    <_UpgradePlatformToolsetFor_v120 Condition=\"'$(_UpgradePlatformToolsetFor_v120)' == '' and '$(v142_Installed)' == 'true'\">v142</_UpgradePlatformToolsetFor_v120>\n    <_UpgradePlatformToolsetFor_v120_xp Condition=\"'$(_UpgradePlatformToolsetFor_v120_xp)' == '' and '$(v141_xp_Installed)' == 'true'\">v141_xp</_UpgradePlatformToolsetFor_v120_xp>\n    <_UpgradePlatformToolsetFor_v110 Condition=\"'$(_UpgradePlatformToolsetFor_v110)' == '' and '$(v142_Installed)' == 'true'\">v142</_UpgradePlatformToolsetFor_v110>\n    <_UpgradePlatformToolsetFor_v110_xp Condition=\"'$(UpgradePlatformToolsetFor_v110_xp)' == '' and '$(v141_xp_Installed)' == 'true'\">v141_xp</_UpgradePlatformToolsetFor_v110_xp>\n    <_UpgradePlatformToolsetFor_v100 Condition=\"'$(_UpgradePlatformToolsetFor_v100)' == '' and '$(v142_Installed)' == 'true'\">v142</_UpgradePlatformToolsetFor_v100>\n    <_UpgradePlatformToolsetFor_v90 Condition=\"'$(_UpgradePlatformToolsetFor_v90)' == ''  and '$(v142_Installed)' == 'true'\">v142</_UpgradePlatformToolsetFor_v90>\n\n    <!-- Short name for platform toolset (appended to project name in Solution Explorer) -->\n    <_PlatformToolsetShortNameFor_v110_wp80>Windows Phone 8.0</_PlatformToolsetShortNameFor_v110_wp80>\n    <_PlatformToolsetShortNameFor_v120_wp81>Windows Phone 8.1</_PlatformToolsetShortNameFor_v120_wp81>\n\n    <!-- Friendly name for platform toolset (used in project property page) -->\n    <_PlatformToolsetFriendlyNameFor_v110_wp80 Condition=\"'$(_PlatformToolsetFriendlyNameFor_v110_wp80)' == ''\">Windows Phone 8.0 (v110_wp80)</_PlatformToolsetFriendlyNameFor_v110_wp80>\n    <_PlatformToolsetFriendlyNameFor_v120_wp81 Condition=\"'$(_PlatformToolsetFriendlyNameFor_v120_wp81)' == ''\">Windows Phone 8.1 (v120_wp81)</_PlatformToolsetFriendlyNameFor_v120_wp81>\n\n    <!-- clangcl -->\n    <!-- Short name for platform toolset (appended to project name in Solution Explorer) -->\n    <_PlatformToolsetShortNameFor_ClangCl Condition=\"'$(_PlatformToolsetShortNameFor_ClangCl)' == ''\">LLVM - clang-cl</_PlatformToolsetShortNameFor_ClangCl>\n    <!-- Friendly name for platform toolset (used in project property page) -->\n    <_PlatformToolsetFriendlyNameFor_ClangCl Condition=\"'$(_PlatformToolsetFriendlyNameFor_ClangCl)' == ''\">LLVM (clang-cl)</_PlatformToolsetFriendlyNameFor_ClangCl>\n\n    <!-- Llvm_ClangCl_1_0 only used in d16.1 preview 1 -->\n    <_UpgradePlatformToolsetFor_Llvm_ClangCl_1_0 Condition=\"'$(_UpgradePlatformToolsetFor_Llvm_ClangCl_1_0)' == ''\">ClangCl</_UpgradePlatformToolsetFor_Llvm_ClangCl_1_0>\n\n    <!-- Define the TargetApplicationTypeAndVersion property if the project is an ApplicationType-project -->\n    <TargetOSAndVersion Condition=\"'$(TargetOSAndVersion)' == '' and '$(ApplicationType)' != '' and  '$(ApplicationTypeRevision)' != ''\">$(ApplicationType) $(ApplicationTypeRevision)</TargetOSAndVersion>\n  </PropertyGroup>\n\n  <!-- import platform defaults if it exists in the current version -->\n  <Import Condition=\"'$(_PlatformDefaultPropsFound)' == 'true'\" Project=\"$(_PlatformDefaultProps)\"/>\n\n  <PropertyGroup>\n    <LangID Condition=\"'$(LangID)' == ''\">1033</LangID>\n    <ProjectName Condition=\" '$(ProjectName)' == '' \">$(MSBuildProjectName)</ProjectName>\n    <TargetName Condition=\" '$(TargetName)' == '' and '$(AssemblyName)' != ''\">$(AssemblyName)</TargetName>\n    <ProjectFileName Condition=\" '$(ProjectFileName)' == '' \">$(MSBuildProjectFile)</ProjectFileName>\n    <ProjectExt Condition=\" '$(ProjectExt)' == '' \">$(MSBuildProjectExtension)</ProjectExt>\n\n    <ProjectDir Condition=\" '$(ProjectDir)' == '' \">$(MSBuildProjectDirectory)\\</ProjectDir>\n    <ProjectPath Condition=\" '$(ProjectPath)' == '' \">$(ProjectDir)$(ProjectFileName)</ProjectPath>\n    <PlatformName Condition=\" '$(PlatformName)' == '' \">$(Platform)</PlatformName>\n    <SolutionDir Condition=\"'$(SolutionDir)'==''\">$(ProjectDir)</SolutionDir>\n\n    <UserRootDir Condition=\"'$(UserRootDir)' == '' \">$(LocalAppData)\\Microsoft\\MSBuild\\v4.0</UserRootDir>\n    <MultiToolTask Condition=\"'$(MultiToolTask)' == ''\">false</MultiToolTask>\n\n    <WholeProgramOptimizationDelayImport Condition=\"'$(WholeProgramOptimization)' != ''\">true</WholeProgramOptimizationDelayImport>\n    <WholeProgramOptimization Condition=\"'$(WholeProgramOptimization)' == ''\">false</WholeProgramOptimization>\n    <WindowsAppContainer Condition=\"'$(WindowsAppContainer)' == '' and '$(AppContainerApplication)' == 'true'\">true</WindowsAppContainer>\n    <WindowsAppContainer Condition=\"'$(WindowsAppContainer)' == ''\">false</WindowsAppContainer>\n    <CLRSupport Condition=\"'$(CLRSupport)' == ''\">false</CLRSupport>\n    <UseOfATL Condition=\"'$(UseOfATL)' == ''\">false</UseOfATL>\n    <UseOfMFC Condition=\"'$(UseOfMFC)' == ''\">false</UseOfMFC>\n    <SpectreMitigation Condition=\"'$(SpectreMitigation)' == ''\">false</SpectreMitigation>\n    <SQLDebugging Condition=\"'$(SQLDebugging)' == ''\">false</SQLDebugging>\n    <Attach Condition=\"'$(Attach)' == ''\">false</Attach>\n\n    <EnableUnitySupport Condition=\"'$(EnableUnitySupport)' == ''\">false</EnableUnitySupport>\n    <UseDebugLibraries Condition=\"'$(UseDebugLibraries)' == ''\">false</UseDebugLibraries>\n    <CharacterSet Condition=\"'$(CharacterSet)' == ''\">NotSet</CharacterSet>\n    <EnableASAN Condition=\"'$(EnableASAN)' == ''\">false</EnableASAN>\n  </PropertyGroup>\n\n  <ItemDefinitionGroup>\n    <BuildLog>\n      <Path>$(IntDir)$(MSBuildProjectName).log</Path>\n    </BuildLog>\n  </ItemDefinitionGroup>\n\n  <PropertyGroup>\n    <_DefaultLLVMInstallDir Condition=\"'$(_DefaultLLVMInstallDir)' == ''\">$(VsInstallRoot)\\VC\\Tools\\Llvm</_DefaultLLVMInstallDir>\n    <LLVMInstallDir Condition=\"'$(LLVMInstallDir)' == ''\">$(_DefaultLLVMInstallDir)</LLVMInstallDir>\n  </PropertyGroup>\n\n  <Import Condition=\"Exists('$(VCTargetsPath)\\ImportAfter\\Default')\" Project=\"$(VCTargetsPath)\\ImportAfter\\Default\\*.props\" />\n  <Import Condition=\"Exists('$(ForceImportAfterCppDefaultProps)')\" Project=\"$(ForceImportAfterCppDefaultProps)\" />\n</Project>\n",
+							"origin_encoding": "UTF-8-SIG",
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 11,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 22.0
+	},
+	"input":
+	{
+		"height": 153.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.diagnostics":
+	{
+		"height": 0.0
+	},
+	"output.exec":
+	{
+		"height": 349.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.sftp":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "cppDotNet.sublime-project",
+	"replace":
+	{
+		"height": 71.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"plugin_",
+				"♬☾ CPP Demo Project\\dotnet-clr\\src\\plugin_assembly.cpp"
+			],
+			[
+				"src\\reflectioncpp",
+				"♬☾ CPP Demo Project\\dotnet-clr\\src\\vcpp_reflection_6.cpp"
+			],
+			[
+				"mcppv2_gcnew_2",
+				"♬☾ CPP Demo Project\\dotnet-clr\\src\\mcppv2_gcnew_2.cpp"
+			],
+			[
+				"friend",
+				"♬☾ CPP Demo Project\\dotnet-clr\\src\\friend_assemblies_dll.cpp"
+			],
+			[
+				"friend_assemblies_2",
+				"♬☾ CPP Demo Project\\dotnet-clr\\src\\friend_assemblies_2.cpp"
+			],
+			[
+				"override_native_keyword",
+				"♬☾ CPP Demo Project\\dotnet-clr\\src\\override_native_keyword.cpp"
+			],
+			[
+				"sealed_native_keyword",
+				"♬☾ CPP Demo Project\\dotnet-clr\\src\\sealed_native_keyword.cpp"
+			],
+			[
+				"stream-file",
+				"♬☾ CPP Demo Project\\src\\stream-file.cpp"
+			],
+			[
+				"stream",
+				"src\\streamfile\\streamfile.cbp"
+			],
+			[
+				"vcpp_reflection_5",
+				"♬☾ CPP Demo Project\\dotnet-clr\\src\\vcpp_reflection_5.cpp"
+			],
+			[
+				"cmakelist.txt",
+				"♬☾ CPP Demo Project\\dotnet-clr\\CMakeLists.txt"
+			],
+			[
+				"cdaystep",
+				"md\\c-daystep\\readme.md"
+			],
+			[
+				"stm",
+				"md\\STM\\STM32_Nucleo.md"
+			],
+			[
+				"git",
+				"md\\readme_git.md"
+			],
+			[
+				"ffmp",
+				"md\\OpenToonz\\ffmpeg.md"
+			],
+			[
+				"win.",
+				"md\\readme_win.md"
+			],
+			[
+				"mysql",
+				"md\\db\\readme_mysql.md"
+			],
+			[
+				"ci.md",
+				"md\\readme_ci.md"
+			],
+			[
+				"sublime",
+				"md\\readme_sublime.md"
+			],
+			[
+				"win.m",
+				"md\\readme_win.md"
+			],
+			[
+				"mfc",
+				"md\\writing\\mfc\\mfc.md"
+			],
+			[
+				"win",
+				"md\\readme_win.md"
+			],
+			[
+				"pythond",
+				"md\\readme_python.md"
+			],
+			[
+				"python",
+				"md\\readme_python.md"
+			],
+			[
+				"pyth",
+				"md\\readme_python.md"
+			],
+			[
+				"ts.md",
+				"md\\webpack\\readme_ts.md"
+			],
+			[
+				"react",
+				"md\\webpack\\readme_react.md"
+			],
+			[
+				"vue",
+				"md\\c-daystep\\readme_vue.md"
+			],
+			[
+				"web",
+				"md\\webpack\\readme_webpack.md"
+			],
+			[
+				"css.md",
+				"md\\webpack\\readme_css.md"
+			],
+			[
+				"vue.md",
+				"md\\c-daystep\\readme_vue.md"
+			],
+			[
+				"react.md",
+				"md\\webpack\\readme_react.md"
+			],
+			[
+				"webpack",
+				"md\\webpack\\readme_webpack.md"
+			],
+			[
+				"ts.m",
+				"md\\webpack\\readme_ts.md"
+			],
+			[
+				"node",
+				"md\\webpack\\readme_node.md"
+			],
+			[
+				"java",
+				"md\\readme_java.md"
+			],
+			[
+				"qt.md",
+				"md\\Qt\\readme.md"
+			],
+			[
+				"linux",
+				"md\\readme_linux.md"
+			],
+			[
+				"vim",
+				"md\\readme_vim.md"
+			],
+			[
+				"LINUX",
+				"md\\readme_linux.md"
+			],
+			[
+				"coding.js",
+				"coding\\coding.js"
+			],
+			[
+				"sublim",
+				"md\\readme_sublime.md"
+			],
+			[
+				"coding.py",
+				"coding\\coding.py"
+			],
+			[
+				"lin",
+				"md\\OpenGL\\LinearAlgebra.md"
+			],
+			[
+				"markdown",
+				"md\\readme_markdown.md"
+			],
+			[
+				"bit",
+				"md\\writing\\bmp\\bitmap.md"
+			],
+			[
+				"bitma",
+				"md\\writing\\bmp\\bitmap.md"
+			],
+			[
+				"mark",
+				"md\\readme_markdown.md"
+			],
+			[
+				"git.",
+				"md\\readme_git.md"
+			],
+			[
+				"makr",
+				"md\\Markdown Cheatsheet.md"
+			],
+			[
+				"blen",
+				"md\\OpenToonz\\Blender.md"
+			],
+			[
+				"mingw",
+				"User\\C++ MinGW.sublime-build"
+			],
+			[
+				"mina",
+				"md\\readme_mina.md"
+			],
+			[
+				"pay",
+				"md\\readme_pay.md"
+			],
+			[
+				"openGL",
+				"md\\OpenGL\\OpenGL.md"
+			],
+			[
+				"fls",
+				"md\\OpenToonz\\flstudio.md"
+			],
+			[
+				"markdowm",
+				"md\\readme_markdown.md"
+			],
+			[
+				"sub",
+				"md\\readme_sublime.md"
+			],
+			[
+				"win.md",
+				"md\\readme_win.md"
+			],
+			[
+				"subli",
+				"md\\readme_sublime.md"
+			],
+			[
+				"mardk",
+				"md\\readme_markdown.md"
+			],
+			[
+				"coding.cpp",
+				"coding\\coding.cpp"
+			],
+			[
+				"ccpp",
+				"md\\ccpp.md"
+			],
+			[
+				"node.",
+				"User\\Node.sublime-build"
+			],
+			[
+				"es6",
+				"md\\readme_es6.md"
+			],
+			[
+				"blender",
+				"md\\OpenToonz\\Blender.md"
+			],
+			[
+				"ming",
+				"User\\C++ MinGW.sublime-build"
+			],
+			[
+				"Make",
+				"md\\Makefile.md"
+			],
+			[
+				"cmake",
+				"User\\CMake.sublime-settings"
+			],
+			[
+				"dart",
+				"User\\Dart 2.2.sublime-build"
+			],
+			[
+				"php",
+				"User\\php.sublime-build"
+			],
+			[
+				"Ming",
+				"User\\C++ MinGW.sublime-build"
+			],
+			[
+				"cbuil",
+				"User\\C#.sublime-build"
+			],
+			[
+				"sublime.",
+				"md\\readme_sublime.md"
+			],
+			[
+				"golang",
+				"User\\GoLang.sublime-build"
+			],
+			[
+				"qguiapplication",
+				"Qt\\5.9\\Src\\qtbase\\src\\gui\\kernel\\qguiapplication_p.h"
+			],
+			[
+				"",
+				"Qt\\n\\qt3d\\main.cpp"
+			],
+			[
+				"QGuiApplication",
+				"Qt\\5.9\\Src\\qtbase\\include\\QtGui\\qguiapplication.h"
+			],
+			[
+				"simpleqml",
+				"Qt\\Examples\\Qt-5.9\\activeqt\\simpleqml\\simpleqml.pro"
+			],
+			[
+				".qml",
+				"Qt\\Examples\\Qt-5.9\\activeqt\\simpleqml\\main.qml"
+			],
+			[
+				"noepad",
+				"Qt\\5.9\\Src\\qtdoc\\doc\\src\\snippets\\widgets-tutorial\\build\\notepad.creator"
+			],
+			[
+				"notepad",
+				"Qt\\5.9\\Src\\qtdoc\\doc\\src\\snippets\\widgets-tutorial\\build\\notepad.creator"
+			],
+			[
+				"addressbook",
+				"Qt\\5.9\\Src\\qtwebengine\\src\\3rdparty\\chromium\\third_party\\protobuf\\csharp\\src\\AddressBook\\AddressBook.csproj"
+			],
+			[
+				"notepad.",
+				"Qt\\5.9\\Src\\qtdoc\\doc\\src\\snippets\\widgets-tutorial\\notepad\\notepad.cpp"
+			],
+			[
+				"qrc_qml.cpp",
+				"Qt\\n\\build\\release\\qrc_qml.cpp"
+			],
+			[
+				"cpp.md",
+				"md\\ccpp.md"
+			],
+			[
+				"qtbuild",
+				"User\\Qt+MinGW.sublime-build"
+			],
+			[
+				"help",
+				"coding\\help_cv2.py"
+			],
+			[
+				"py",
+				"User\\Python.sublime-build"
+			],
+			[
+				"python.",
+				"md\\readme_python.md"
+			],
+			[
+				"help_cv2",
+				"coding\\help_cv2.py"
+			],
+			[
+				"ffmpeg",
+				"md\\OpenToonz\\ffmpeg.md"
+			],
+			[
+				"core/hal/interface.h",
+				"opencv\\build\\include\\opencv2\\core\\hal\\interface.h"
+			],
+			[
+				"cbuild",
+				"User\\C#.sublime-build"
+			],
+			[
+				"pybuild",
+				"User\\Python.sublime-build"
+			],
+			[
+				"os_mon.app",
+				"otp_src_23.0\\lib\\os_mon\\ebin\\os_mon.app"
+			],
+			[
+				"OtpServerTransport\t",
+				"otp_src_23.0\\lib\\jinterface\\java_src\\com\\ericsson\\otp\\erlang\\OtpServerTransport.java"
+			],
+			[
+				"flipmenu",
+				"otp_src_23.0\\lib\\erl_docgen\\priv\\js\\flipmenu\\flipmenu.js"
+			],
+			[
+				"gol",
+				"md\\readme_golang.md"
+			],
+			[
+				"go.build",
+				"User\\GoLang.sublime-build"
+			],
+			[
+				"coding.go",
+				"coding\\main.go"
+			],
+			[
+				"test.config",
+				"coding\\erlang\\test.config"
+			],
+			[
+				"ch_sup",
+				"otp_src_23.0\\lib\\kernel\\test\\ch_sup.erl"
+			],
+			[
+				"coding.erl",
+				"coding\\erlang\\coding.erl"
+			],
+			[
+				"efficiency_guide",
+				"otp_src_23.0\\system\\doc\\efficiency_guide\\efficiency_guide.erl"
+			],
+			[
+				"wx_object",
+				"otp_src_23.0\\lib\\wx\\src\\wx_object.erl"
+			],
+			[
+				"otp_release_targets",
+				"otp_src_23.0\\make\\otp_release_targets.mk"
+			],
+			[
+				"make/target.mk",
+				"otp_src_23.0\\make\\target.mk"
+			],
+			[
+				"codeLock",
+				"coding\\erlang\\code_lock.erl"
+			],
+			[
+				"bif.c",
+				"otp_src_23.0\\erts\\emulator\\beam\\bif.c"
+			],
+			[
+				"calendar",
+				"otp_src_23.0\\lib\\stdlib\\src\\calendar.erl"
+			],
+			[
+				"erlbuild",
+				"User\\erlang.sublime-build"
+			],
+			[
+				"erl_main",
+				"otp_src_23.0\\erts\\emulator\\sys\\win32\\erl_main.c"
+			],
+			[
+				"start_erl.c",
+				"otp_src_23.0\\erts\\etc\\win32\\start_erl.c"
+			],
+			[
+				"erlexec.c",
+				"otp_src_23.0\\erts\\etc\\common\\erlexec.c"
+			],
+			[
+				"beam_emu",
+				"otp_src_23.0\\erts\\emulator\\beam\\beam_emu.c"
+			],
+			[
+				"ProcBin",
+				"otp_src_23.0\\lib\\observer\\src\\cdv_bin_cb.erl"
+			],
+			[
+				"genop",
+				"otp_src_23.0\\lib\\compiler\\src\\genop.tab"
+			],
+			[
+				"erl_ptab",
+				"otp_src_23.0\\erts\\emulator\\beam\\erl_ptab.h"
+			],
+			[
+				"erl_term",
+				"otp_src_23.0\\erts\\emulator\\beam\\erl_term.h"
+			],
+			[
+				"port d",
+				"code\\ports\\port_driver.c"
+			],
+			[
+				"run_erl",
+				"otp_src_23.0\\erts\\etc\\unix\\run_erl.c"
+			],
+			[
+				"escript",
+				"otp_src_23.0\\erts\\etc\\common\\escript.c"
+			],
+			[
+				"erlsrv",
+				"otp_src_23.0\\erts\\etc\\win32\\erlsrv\\erlsrv_main.c"
+			],
+			[
+				"erlexec",
+				"otp_src_23.0\\erts\\etc\\common\\erlexec.c"
+			],
+			[
+				"erl_bif_lists.c",
+				"otp_src_23.0\\erts\\emulator\\beam\\erl_bif_lists.c"
+			],
+			[
+				"lists.erl",
+				"otp_src_23.0\\lib\\stdlib\\src\\lists.erl"
+			],
+			[
+				"BeamInstr",
+				"otp_src_23.0\\lib\\hipe\\test\\basic_SUITE_data\\basic_beam_instrs.erl"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"C:\\coding\\md-code\\cppDemos\\mfcDemo\\mfcDemo.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 392.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"\"$(INTDIR)\""
+			],
+			[
+				"Cobject",
+				"CObject"
+			],
+			[
+				"createTrackbar",
+				"createTrackbar"
+			],
+			[
+				"addWeighted",
+				"addWeighted"
+			],
+			[
+				"resize",
+				"resize"
+			],
+			[
+				"ApplicationViewer",
+				"QmlApplicationViewer"
+			],
+			[
+				"cuda_GpuMat",
+				"cuda_GpuMat"
+			],
+			[
+				"Function: element",
+				"Function: element"
+			],
+			[
+				"element",
+				"Function: element"
+			],
+			[
+				"spawn",
+				"Function: spawn"
+			],
+			[
+				"start_timer",
+				"Function: start_timer"
+			],
+			[
+				"ethr_atomic_read",
+				"ethr_atomic_read"
+			],
+			[
+				"erts_atomic64_read_nob",
+				"erts_atomic64_read_nob"
+			],
+			[
+				"now_",
+				"now_0"
+			],
+			[
+				"erl_start",
+				"erl_start"
+			],
+			[
+				"process_main",
+				"process_main"
+			],
+			[
+				"bs_init2",
+				"Function: do_bs_init_2"
+			],
+			[
+				"ErlSub",
+				"ErlSubBin"
+			],
+			[
+				"ProcBin",
+				"ProcBin"
+			],
+			[
+				"SMALL",
+				"small"
+			],
+			[
+				"Process",
+				"Process"
+			],
+			[
+				"TAG_PRIMARY_LIST",
+				"TAG_PRIMARY_LIST"
+			],
+			[
+				"ErlDrvEntry",
+				"ErlDrvEntry"
+			],
+			[
+				"driver_entry",
+				"add_driver_entry"
+			],
+			[
+				"driver_select",
+				"driver_select"
+			],
+			[
+				"ready_output",
+				"ready_output"
+			],
+			[
+				"main",
+				"main"
+			],
+			[
+				"AddSingleTon",
+				"TryAddSingleton"
+			]
+		],
+		"width": 914.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 347.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

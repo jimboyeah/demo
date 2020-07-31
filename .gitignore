@@ -3,9 +3,17 @@
 obj
 *.obj
 *.o
+*.exp
+*.exe
+*.dll
+*.lib
+*.ilk
+*.pdb
+*.manifest
 build
 qmake
 bin
 Debug
 Release
 ninja
+ninja-msvc

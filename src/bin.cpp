@@ -7,6 +7,7 @@
  * Suggestions and flames both welcome. To use, try this:
  *  unsigned char ch = 0x80;
  *  std::cout << std::binary(ch) << "\n";
+ * ex src\stream-file.cpp
  */
 #include <iostream>
 

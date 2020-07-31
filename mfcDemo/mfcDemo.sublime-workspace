@@ -4,6 +4,62 @@
 		"selected_items":
 		[
 			[
+				"iC",
+				"iCtrlId"
+			],
+			[
+				"ID",
+				"ID_VIEW_TEXTBOX"
+			],
+			[
+				"ID_VIEW",
+				"ID_VIEW_OVERLAPPED"
+			],
+			[
+				"PRO",
+				"PROJECT_SOURCE_DIR\tbuiltin"
+			],
+			[
+				"taget",
+				"target_compile_options\tcommand"
+			],
+			[
+				"exec",
+				"execute_process\tcommand"
+			],
+			[
+				"ta",
+				"target_compile_definitions\tcommand"
+			],
+			[
+				"stat",
+				"staticLibTest"
+			],
+			[
+				"lin",
+				"link_directories\tcommand"
+			],
+			[
+				"else",
+				"else\tcommand"
+			],
+			[
+				"Ini",
+				"InitConsoleWindow"
+			],
+			[
+				"Win",
+				"Windows Kits/"
+			],
+			[
+				"Pr",
+				"Program Files (x86)/"
+			],
+			[
+				"Mic",
+				"Microsoft Visual Studio/"
+			],
+			[
 				"qml",
 				"main.qml"
 			],
@@ -359,10 +415,294 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "mfcDemo.sublime-project",
+			"settings":
+			{
+				"buffer_size": 3299,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "CMakeLists.txt",
+			"settings":
+			{
+				"buffer_size": 4011,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "comDemo/IAdd.idl",
+			"settings":
+			{
+				"buffer_size": 739,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "comDemo/COMStepByStep_demo/bin/setup.bat",
+			"settings":
+			{
+				"buffer_size": 95,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/coding/md-code/vcppnet/Ex23b/Ex23bAuto.cpp",
+			"settings":
+			{
+				"buffer_size": 3552,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/coding/md-code/vcppnet/Ex29b/Ex29bView.cpp",
+			"settings":
+			{
+				"buffer_size": 1163,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/Program Files (x86)/Windows Kits/10/Include/10.0.18362.0/um/combaseapi.h",
+			"settings":
+			{
+				"buffer_size": 41124,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "01-simple/src/ChildView.h",
+			"settings":
+			{
+				"buffer_size": 1355,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "01-simple/src/ChildView.cpp",
+			"settings":
+			{
+				"buffer_size": 1495,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "//{{NO_DEPENDENCIES}}\n// Microsoft Visual C++ 生成的包含文件。\n// 供 demo.rc 使用\n//\n#define IDD_ABOUTBOX                    100\n#define IDP_SOCKETS_INIT_FAILED         104\n#define IDR_MAINFRAME                   128\n#define IDR_DEMOTYPE                    129\n#define IDC_EDIT1                       1000\n#define ID_APP_OPEN                     32772\n#define ID_APP_SAVE                     32773\n\n#define ID_VIEW_TEXTBOX             101\n#define ID_VIEW_CHILD               308\n#define ID_VIEW_POPUP               309\n#define ID_VIEW_OVERLAPPED          310\n\n// Next default values for new objects\n// \n#ifdef APSTUDIO_INVOKED\n#ifndef APSTUDIO_READONLY_SYMBOLS\n#define _APS_3D_CONTROLS                     1\n#define _APS_NEXT_RESOURCE_VALUE        131\n#define _APS_NEXT_COMMAND_VALUE         32774\n#define _APS_NEXT_CONTROL_VALUE         1001\n#define _APS_NEXT_SYMED_VALUE           101\n#endif\n#endif\n",
+			"file": "01-simple/res/resource.h",
+			"file_size": 929,
+			"file_write_time": 132403206385229622,
+			"settings":
+			{
+				"buffer_size": 890,
+				"line_ending": "Windows",
+				"scratch": true
+			}
+		},
+		{
+			"contents": "// Microsoft Visual C++ generated resource script.\n//\n#include \"resource.h\"\n\n#define APSTUDIO_READONLY_SYMBOLS\n/////////////////////////////////////////////////////////////////////////////\n//\n// Generated from the TEXTINCLUDE 2 resource.\n//\n#include \"afxres.h\"\n\n/////////////////////////////////////////////////////////////////////////////\n#undef APSTUDIO_READONLY_SYMBOLS\n\n/////////////////////////////////////////////////////////////////////////////\n// 中文(简体，中国) resources\n\n#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\nLANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED\n#pragma code_page(936)\n\n#ifdef APSTUDIO_INVOKED\n/////////////////////////////////////////////////////////////////////////////\n//\n// TEXTINCLUDE\n//\n\n1 TEXTINCLUDE \nBEGIN\n    \"resource.h\\0\"\nEND\n\n2 TEXTINCLUDE \nBEGIN\n    \"#include \"\"afxres.h\"\"\\r\\n\"\n    \"\\0\"\nEND\n\n3 TEXTINCLUDE \nBEGIN\n    \"#define _AFX_NO_SPLITTER_RESOURCES\\r\\n\"\n    \"#define _AFX_NO_OLE_RESOURCES\\r\\n\"\n    \"#define _AFX_NO_TRACKER_RESOURCES\\r\\n\"\n    \"#define _AFX_NO_PROPERTY_RESOURCES\\r\\n\"\n    \"\\r\\n\"\n    \"#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\\r\\n\"\n    \"#ifdef _WIN32\\r\\n\"\n    \"LANGUAGE 4, 2\\r\\n\"\n    \"#pragma code_page(936)\\r\\n\"\n    \"#endif //_WIN32\\r\\n\"\n    \"#include \"\".\\\\demo.rc2\"\"  // non-Microsoft Visual C++ edited resources\\r\\n\"\n    \"#include \"\"l.chs\\\\afxres.rc\"\"          // Standard components\\r\\n\"\n    \"#endif\\r\\n\"\n    \"\\0\"\nEND\n\n#endif    // APSTUDIO_INVOKED\n\n\n/////////////////////////////////////////////////////////////////////////////\n//\n// Icon\n//\n\n// Icon with lowest ID value placed first to ensure application icon\n// remains consistent on all systems.\nIDR_MAINFRAME           ICON                    \".\\\\demo.ico\"\n\n\n/////////////////////////////////////////////////////////////////////////////\n//\n// Menu\n//\n\nIDR_MAINFRAME MENU\nBEGIN\n    POPUP \"檔案(&F)\"\n    BEGIN\n        MENUITEM \"打開(&O)\\tCtrl+O\",              ID_APP_OPEN\n        MENUITEM \"結束(&X)\",                      ID_APP_EXIT\n        MENUITEM \"存檔(&S)\\tCtrl+S\",              ID_APP_SAVE\n    END\n    POPUP \"編輯(&E)\", MENUBREAK\n    BEGIN\n        MENUITEM \"復原(&U)\\tCtrl+Z\",              ID_EDIT_UNDO\n        MENUITEM SEPARATOR\n        MENUITEM \"剪下(&T)\\tCtrl+X\",              ID_EDIT_CUT, MENUBREAK\n        MENUITEM \"複製(&C)\\tCtrl+C\",              ID_EDIT_COPY\n        MENUITEM \"貼上(&P)\\tCtrl+V\",              ID_EDIT_PASTE\n    END\n    POPUP \"檢視(&V)\"\n    BEGIN\n        MENUITEM \"狀態列(&S)\",                     ID_VIEW_STATUS_BAR\n        MENUITEM SEPARATOR\n        MENUITEM \"子窗口(&C)\",                     ID_VIEW_CHILD, MENUBARBREAK\n        MENUITEM \"弹出窗(&P)\",                     ID_VIEW_POPUP\n        MENUITEM \"通用窗(&O)\",                     ID_VIEW_OVERLAPPED\n        MENUITEM \"编辑器(&E)\",                     ID_VIEW_TEXTBOX\n    END\n    POPUP \"說明(&H)\", MENUBARBREAK\n    BEGIN\n        MENUITEM \"說明主題(&H)\",                   ID_HELP_FINDER\n        MENUITEM SEPARATOR\n        MENUITEM \"關於 demo(&A)...\",               ID_APP_ABOUT\n    END\nEND\n\n\n/////////////////////////////////////////////////////////////////////////////\n//\n// Accelerator\n//\n\nIDR_MAINFRAME ACCELERATORS\nBEGIN\n    \"C\",            ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT\n    \"O\",            ID_APP_OPEN,            VIRTKEY, CONTROL, NOINVERT\n    \"S\",            ID_APP_SAVE,            VIRTKEY, CONTROL, NOINVERT\n    \"V\",            ID_EDIT_PASTE,          VIRTKEY, CONTROL, NOINVERT\n    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY, ALT, NOINVERT\n    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY, SHIFT, NOINVERT\n    // VK_F1,          ID_HELP,                VIRTKEY, NOINVERT\n    VK_F1,          ID_CONTEXT_HELP,        VIRTKEY, SHIFT, NOINVERT\n    VK_F6,          ID_NEXT_PANE,           VIRTKEY, NOINVERT\n    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT, NOINVERT\n    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT\n    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT, NOINVERT\n    \"X\",            ID_EDIT_CUT,            VIRTKEY, CONTROL, NOINVERT\n    \"Z\",            ID_EDIT_UNDO,           VIRTKEY, CONTROL, NOINVERT\nEND\n\n\n/////////////////////////////////////////////////////////////////////////////\n//\n// Dialog\n//\n\nIDD_ABOUTBOX DIALOG 0, 0, 235, 55\nSTYLE DS_SETFONT | WS_OVERLAPPED | WS_CAPTION | WS_SYSMENU | WS_POPUP\nCAPTION \"關於 demo\"\nFONT 10, \"新細明體\"\nBEGIN\n    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20\n    LTEXT           \"demo Version 1.0\",IDC_STATIC,40,10,119,8,SS_NOPREFIX\n    LTEXT           \"Copyright (C) 2016\",IDC_STATIC,40,25,119,8\n    DEFPUSHBUTTON   \"確定\",IDOK,178,7,50,14,WS_GROUP\nEND\n\nID_VIEW_CHILD DIALOG 0, 0, 235, 55\nSTYLE DS_SETFONT | WS_CAPTION | WS_SYSMENU | WS_MAXIMIZEBOX | WS_MINIMIZEBOX | WS_CHILD | WS_CHILDWINDOW\nMENU IDR_MAINFRAME\nCAPTION \"Dialog demo\"\nFONT 10, \"新細明體\"\nBEGIN\n    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20\n    LTEXT           \"DS_SETFONT | WS_CAPTION | WS_SYSMENU | WS_MAXIMIZEBOX\",IDC_STATIC,40,10,119,8,SS_NOPREFIX\n    LTEXT           \" | WS_MINIMIZEBOX | WS_CHILD | WS_CHILDWINDOW\",IDC_STATIC,40,25,119,8\n    DEFPUSHBUTTON   \"確定\",IDOK,178,7,50,14,WS_GROUP\nEND\n\nID_VIEW_POPUP DIALOG 0, 0, 235, 55\nSTYLE DS_SETFONT | WS_CAPTION | WS_SYSMENU | WS_MAXIMIZEBOX | WS_MINIMIZEBOX | WS_POPUP\nMENU IDR_MAINFRAME\nCAPTION \"Dialog demo\"\nFONT 10, \"新細明體\"\nBEGIN\n    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20\n    LTEXT           \"DS_SETFONT | WS_CAPTION | WS_SYSMENU | WS_MAXIMIZEBOX \",IDC_STATIC,40,10,119,8,SS_NOPREFIX\n    LTEXT           \"| WS_MINIMIZEBOX | WS_POPUP\",IDC_STATIC,40,25,119,8\n    DEFPUSHBUTTON   \"確定\",IDOK,178,7,50,14,WS_GROUP\nEND\n\nID_VIEW_OVERLAPPED DIALOG 0, 0, 235, 55\nSTYLE DS_SETFONT | WS_OVERLAPPED | WS_CAPTION | WS_SYSMENU | WS_MAXIMIZEBOX | WS_MINIMIZEBOX\nMENU IDR_MAINFRAME\nCAPTION \"Dialog demo\"\nFONT 10, \"新細明體\"\nBEGIN\n    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20\n    LTEXT           \"DS_SETFONT | WS_OVERLAPPED | WS_CAPTION | WS_SYSMENU | WS_MAXIMIZEBOX | WS_MINIMIZEBOX\",IDC_STATIC,40,10,119,8,SS_NOPREFIX\n    LTEXT           \"Copyright (C) 2016\",IDC_STATIC,40,25,119,8\n    DEFPUSHBUTTON   \"確定\",IDOK,178,7,50,14,WS_GROUP\nEND\n\n\nID_VIEW_TEXTBOX DIALOGEX 0, 0, 235, 80\nSTYLE DS_SETFONT | DS_MODALFRAME | WS_OVERLAPPED | WS_CAPTION | WS_SYSMENU | DS_CONTEXTHELP\nCAPTION \"Text demo\"\nMENU IDR_MAINFRAME\nFONT 10, \"微软雅黑\"\nBEGIN\n    ICON            IDR_MAINFRAME,IDC_STATIC,14,10,11,11\n    LTEXT           \"demo Version 1.0\",IDC_STATIC,40,10,119,8,SS_NOPREFIX\n    DEFPUSHBUTTON   \"確定\",IDOK,175,5,50,15,WS_GROUP\n    EDITTEXT        IDC_EDIT1,11,29,214,43,ES_AUTOHSCROLL\nEND\n\n\n/////////////////////////////////////////////////////////////////////////////\n//\n// Version\n//\n\nVS_VERSION_INFO VERSIONINFO\n FILEVERSION 1,0,0,1\n PRODUCTVERSION 1,0,0,1\n FILEFLAGSMASK 0x3fL\n#ifdef _DEBUG\n FILEFLAGS 0x1L\n#else\n FILEFLAGS 0x0L\n#endif\n FILEOS 0x4L\n FILETYPE 0x1L\n FILESUBTYPE 0x0L\nBEGIN\n    BLOCK \"StringFileInfo\"\n    BEGIN\n        BLOCK \"040404B0\"\n        BEGIN\n            VALUE \"FileDescription\", \"demo MFC Application\"\n            VALUE \"FileVersion\", \"1, 0, 0, 1\"\n            VALUE \"InternalName\", \"demo\"\n            VALUE \"LegalCopyright\", \"Copyright (C) 2016\"\n            VALUE \"OriginalFilename\", \"demo.EXE\"\n            VALUE \"ProductName\", \"demo Application\"\n            VALUE \"ProductVersion\", \"1, 0, 0, 1\"\n        END\n    END\n    BLOCK \"VarFileInfo\"\n    BEGIN\n        VALUE \"Translation\", 0x404, 1200\n    END\nEND\n\n\n/////////////////////////////////////////////////////////////////////////////\n//\n// DESIGNINFO\n//\n\n#ifdef APSTUDIO_INVOKED\nGUIDELINES DESIGNINFO\nBEGIN\n    IDD_ABOUTBOX, DIALOG\n    BEGIN\n        LEFTMARGIN, 7\n        RIGHTMARGIN, 228\n        TOPMARGIN, 7\n        BOTTOMMARGIN, 48\n    END\n\n    \"IDD_TEXTBOX\", DIALOG\n    BEGIN\n        TOPMARGIN, 1\n        BOTTOMMARGIN, 79\n    END\nEND\n#endif    // APSTUDIO_INVOKED\n\n\n/////////////////////////////////////////////////////////////////////////////\n//\n// AFX_DIALOG_LAYOUT\n//\n\nIDD_TEXTBOX AFX_DIALOG_LAYOUT\nBEGIN\n    0\nEND\n\n\n/////////////////////////////////////////////////////////////////////////////\n//\n// String Table\n//\n\nSTRINGTABLE\nBEGIN\n    IDP_SOCKETS_INIT_FAILED \"Windows sockets 啟始失敗。\"\nEND\n\nSTRINGTABLE\nBEGIN\n    IDR_MAINFRAME           \"demo\"\nEND\n\nSTRINGTABLE\nBEGIN\n    AFX_IDS_APP_TITLE       \"demo\"\n    AFX_IDS_IDLEMESSAGE     \"若欲取得「說明」，請按 F1\"\n    AFX_IDS_HELPMODEMESSAGE \"請選取一物件以便取得「說明」\"\nEND\n\nSTRINGTABLE\nBEGIN\n    ID_INDICATOR_EXT        \"EXT\"\n    ID_INDICATOR_CAPS       \"CAP\"\n    ID_INDICATOR_NUM        \"NUM\"\n    ID_INDICATOR_SCRL       \"SCRL\"\n    ID_INDICATOR_OVR        \"OVR\"\n    ID_INDICATOR_REC        \"REC\"\nEND\n\nSTRINGTABLE\nBEGIN\n    ID_APP_ABOUT            \"顯示程式的資訊， 版本及版權\\n關於\"\n    ID_APP_EXIT             \"結束應用程式並提示儲存檔案\\n結束\"\n    ID_HELP_INDEX           \"開啟「說明」\\n說明主題\"\n    ID_HELP_FINDER          \"列出「說明主題」\\n說明主題\"\n    ID_HELP_USING           \"指導如何使用「說明」的\\n說明\"\n    ID_CONTEXT_HELP         \"顯示被按下之按鈕，功能表和視窗的「說明」\\n說明\"\n    ID_HELP                 \"顯示目前執行工作或命令的說明\\n說明\"\nEND\n\nSTRINGTABLE\nBEGIN\n    ID_APP_OPEN             \"打開文件\"\n    ID_APP_SAVE             \"保存内容到文件\"\nEND\n\nSTRINGTABLE\nBEGIN\n    ID_NEXT_PANE            \"切換到下一個窗格\\n下一個窗格\"\n    ID_PREV_PANE            \"切換到上一個窗格\\n上一個窗格\"\nEND\n\nSTRINGTABLE\nBEGIN\n    ID_WINDOW_SPLIT         \"分割目前的視窗\\n分割\"\nEND\n\nSTRINGTABLE\nBEGIN\n    ID_EDIT_CLEAR           \"刪除選取內容\\n刪除\"\n    ID_EDIT_CLEAR_ALL       \"全部刪除\\n全部刪除\"\n    ID_EDIT_COPY            \"複製選取內容到剪貼簿中\\n複製\"\n    ID_EDIT_CUT             \"剪下選取內容到剪貼簿中\\n剪下\"\n    ID_EDIT_FIND            \"尋找指定文字\\n尋找\"\n    ID_EDIT_PASTE           \"插入剪貼簿內容\\n貼上\"\n    ID_EDIT_REPEAT          \"重複前一動作\\n重複\"\n    ID_EDIT_REPLACE         \"以不同文字取代指定之文字\\n取代\"\n    ID_EDIT_SELECT_ALL      \"選取整篇文件\\n選取全部\"\n    ID_EDIT_UNDO            \"復原上一次動作\\n復原\"\n    ID_EDIT_REDO            \"重做前一個復原的動作\\n重做\"\nEND\n\nSTRINGTABLE\nBEGIN\n    ID_VIEW_STATUS_BAR      \"隱藏或顯示狀態列\\n切換狀態列\"\n    ID_VIEW_CHILD           \"新开窗口，样式:\\tID_VIEW_CHILD\\t1\\t2\"\n    ID_VIEW_POPUP           \"新开窗口，样式:\\tID_VIEW_POPUP\\t1\\t2\"\n    ID_VIEW_OVERLAPPED      \"新开窗口，样式:\\tID_VIEW_OVERLAPPED\\t1\\t2\"\n    ID_VIEW_TEXTBOX         \"新开窗口，样式:\\tID_VIEW_TEXTBOX\\t1\\t2\"\nEND\n\nSTRINGTABLE\nBEGIN\n    AFX_IDS_SCSIZE          \"改變視窗大小\"\n    AFX_IDS_SCMOVE          \"改變視窗位置\"\n    AFX_IDS_SCMINIMIZE      \"縮小視窗到一圖示\"\n    AFX_IDS_SCMAXIMIZE      \"放大視窗到全螢幕\"\n    AFX_IDS_SCNEXTWINDOW    \"切換到下一個文件視窗\"\n    AFX_IDS_SCPREVWINDOW    \"切換到前一個文件視窗\"\n    AFX_IDS_SCCLOSE         \"關閉工作中視窗並提示儲存文件\"\nEND\n\nSTRINGTABLE\nBEGIN\n    AFX_IDS_SCRESTORE       \"還原視窗至原來大小\"\n    AFX_IDS_SCTASKLIST      \"叫出「工作列」\"\nEND\n\n#endif    // 中文(简体，中国) resources\n/////////////////////////////////////////////////////////////////////////////\n\n\n\n#ifndef APSTUDIO_INVOKED\n/////////////////////////////////////////////////////////////////////////////\n//\n// Generated from the TEXTINCLUDE 3 resource.\n//\n#define _AFX_NO_SPLITTER_RESOURCES\n#define _AFX_NO_OLE_RESOURCES\n#define _AFX_NO_TRACKER_RESOURCES\n#define _AFX_NO_PROPERTY_RESOURCES\n\n#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\n#ifdef _WIN32\nLANGUAGE 4, 2\n#pragma code_page(936)\n#endif //_WIN32\n#include \".\\demo.rc2\"  // non-Microsoft Visual C++ edited resources\n#include \"l.chs\\afxres.rc\"          // Standard components\n#endif\n\n/////////////////////////////////////////////////////////////////////////////\n#endif    // not APSTUDIO_INVOKED\n\n",
+			"file": "01-simple/res/demo.rc",
+			"file_size": 12071,
+			"file_write_time": 132403954063197250,
+			"settings":
+			{
+				"buffer_size": 11172,
+				"line_ending": "Windows",
+				"scratch": true
+			}
+		},
+		{
+			"file": "01-simple/src/demo.cpp",
+			"settings":
+			{
+				"buffer_size": 6104,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "01-simple/src/demo.h",
+			"settings":
+			{
+				"buffer_size": 1516,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		}
 	],
-	"build_system": "",
+	"build_system": "☾♬ Ninja - all",
 	"build_system_choices":
 	[
+		[
+			[
+				[
+					"OpenCV Demos (Windows)",
+					""
+				],
+				[
+					"OpenCV Demos (Windows)",
+					"Unix Makefiles"
+				],
+				[
+					"OpenCV Demos (Windows)",
+					"clean"
+				],
+				[
+					"OpenCV Demos (Windows)",
+					"clear all"
+				],
+				[
+					"OpenCV Demos (Windows)",
+					"Make"
+				],
+				[
+					"OpenCV Demos (Windows)",
+					"Clean & Make"
+				],
+				[
+					"☾♬ Ninja (Windows)",
+					""
+				],
+				[
+					"☾♬ Ninja - all",
+					""
+				],
+				[
+					"☾♬ Ninja - clean",
+					""
+				],
+				[
+					"☾♬ Ninja - edit_cache",
+					""
+				],
+				[
+					"☾♬ Ninja - rebuild_cache",
+					""
+				]
+			],
+			[
+				"☾♬ Ninja - all",
+				""
+			]
+		],
+		[
+			[
+				[
+					"OpenCV Demos (Windows)",
+					""
+				],
+				[
+					"OpenCV Demos (Windows)",
+					"Unix Makefiles"
+				],
+				[
+					"OpenCV Demos (Windows)",
+					"clean"
+				],
+				[
+					"OpenCV Demos (Windows)",
+					"clear all"
+				],
+				[
+					"OpenCV Demos (Windows)",
+					"Make"
+				],
+				[
+					"OpenCV Demos (Windows)",
+					"Clean & Make"
+				],
+				[
+					"☾♬ Ninja (Windows)",
+					""
+				],
+				[
+					"☾♬ Ninja - all",
+					""
+				],
+				[
+					"☾♬ Ninja - clean",
+					""
+				],
+				[
+					"☾♬ Ninja - edit_cache",
+					""
+				],
+				[
+					"☾♬ Ninja - rebuild_cache",
+					""
+				],
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					""
+				],
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					"Run"
+				],
+				[
+					"Packages/User/C++ MinGW.sublime-build",
+					""
+				],
+				[
+					"Packages/User/C++ MinGW.sublime-build",
+					"(-std=c++17)"
+				],
+				[
+					"Packages/User/C++ MinGW.sublime-build",
+					"(-std=c++14)"
+				],
+				[
+					"Packages/User/C++ MinGW.sublime-build",
+					"(-std=c++11)"
+				],
+				[
+					"Packages/User/C++ MinGW.sublime-build",
+					"(-std=c++11) with ENV"
+				],
+				[
+					"Packages/User/C++ MinGW.sublime-build",
+					"(-std=c++11) Release with ENV"
+				],
+				[
+					"Packages/User/C++ MinGW.sublime-build",
+					"(-std=c++0x) with ENV"
+				],
+				[
+					"Packages/User/C++ MinGW.sublime-build",
+					"(-std=c++98) with ENV"
+				],
+				[
+					"Packages/User/C++ MinGW.sublime-build",
+					"(-ansi) with ENV"
+				],
+				[
+					"Packages/User/C++ MinGW.sublime-build",
+					"(-std=c11) with ENV"
+				],
+				[
+					"Packages/User/C++ MinGW.sublime-build",
+					"(-std=c99) with ENV"
+				],
+				[
+					"Packages/User/C++ MinGW.sublime-build",
+					"(-std=c90) with ENV"
+				],
+				[
+					"Packages/User/C++ MinGW.sublime-build",
+					"控制台中运行"
+				]
+			],
+			[
+				"☾♬ Ninja - all",
+				""
+			]
+		],
 		[
 			[
 				[
@@ -2314,6 +2654,170 @@
 				"Packages/User/erlang.sublime-build",
 				"Run ..."
 			]
+		],
+		[
+			[
+				[
+					"☾♬ Ninja (Windows)",
+					""
+				],
+				[
+					"☾♬ Ninja - all",
+					""
+				],
+				[
+					"☾♬ Ninja - clean",
+					""
+				],
+				[
+					"☾♬ Ninja - edit_cache",
+					""
+				],
+				[
+					"☾♬ Ninja - rebuild_cache",
+					""
+				],
+				[
+					"♬☾ MinGW (Windows)",
+					""
+				],
+				[
+					"♬☾ MinGW (Windows)",
+					"Unix Makefiles"
+				],
+				[
+					"♬☾ MinGW (Windows)",
+					"clean"
+				],
+				[
+					"♬☾ MinGW (Windows)",
+					"clear all"
+				],
+				[
+					"♬☾ MinGW (Windows)",
+					"Make"
+				],
+				[
+					"♬☾ MinGW (Windows)",
+					"Clean & Make"
+				]
+			],
+			[
+				"☾♬ Ninja - all",
+				""
+			]
+		],
+		[
+			[
+				[
+					"☾♬ Ninja (Windows)",
+					""
+				],
+				[
+					"☾♬ Ninja - all",
+					""
+				],
+				[
+					"☾♬ Ninja - clean",
+					""
+				],
+				[
+					"☾♬ Ninja - edit_cache",
+					""
+				],
+				[
+					"☾♬ Ninja - rebuild_cache",
+					""
+				],
+				[
+					"♬☾ MinGW (Windows)",
+					""
+				],
+				[
+					"♬☾ MinGW (Windows)",
+					"Unix Makefiles"
+				],
+				[
+					"♬☾ MinGW (Windows)",
+					"clean"
+				],
+				[
+					"♬☾ MinGW (Windows)",
+					"clear all"
+				],
+				[
+					"♬☾ MinGW (Windows)",
+					"Make"
+				],
+				[
+					"♬☾ MinGW (Windows)",
+					"Clean & Make"
+				],
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					""
+				],
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					"Run"
+				],
+				[
+					"Packages/User/C++ MinGW.sublime-build",
+					""
+				],
+				[
+					"Packages/User/C++ MinGW.sublime-build",
+					"(-std=c++17)"
+				],
+				[
+					"Packages/User/C++ MinGW.sublime-build",
+					"(-std=c++14)"
+				],
+				[
+					"Packages/User/C++ MinGW.sublime-build",
+					"(-std=c++11)"
+				],
+				[
+					"Packages/User/C++ MinGW.sublime-build",
+					"(-std=c++11) with ENV"
+				],
+				[
+					"Packages/User/C++ MinGW.sublime-build",
+					"(-std=c++11) Release with ENV"
+				],
+				[
+					"Packages/User/C++ MinGW.sublime-build",
+					"(-std=c++0x) with ENV"
+				],
+				[
+					"Packages/User/C++ MinGW.sublime-build",
+					"(-std=c++98) with ENV"
+				],
+				[
+					"Packages/User/C++ MinGW.sublime-build",
+					"(-ansi) with ENV"
+				],
+				[
+					"Packages/User/C++ MinGW.sublime-build",
+					"(-std=c11) with ENV"
+				],
+				[
+					"Packages/User/C++ MinGW.sublime-build",
+					"(-std=c99) with ENV"
+				],
+				[
+					"Packages/User/C++ MinGW.sublime-build",
+					"(-std=c90) with ENV"
+				],
+				[
+					"Packages/User/C++ MinGW.sublime-build",
+					"控制台中运行"
+				]
+			],
+			[
+				"☾♬ Ninja - all",
+				""
+			]
 		]
 	],
 	"build_varint": "",
@@ -2324,16 +2828,56 @@
 		"selected_items":
 		[
 			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"status",
+				"Git: Status"
+			],
+			[
+				"hex",
+				"HexViewer: Toggle Hex View"
+			],
+			[
+				"pushc",
+				"Git: Push Current Branch"
+			],
+			[
+				"git push",
+				"Git: Push Current Branch"
+			],
+			[
+				"comm\t",
+				"Git: Commit"
+			],
+			[
+				"adda",
+				"Git: Add All"
+			],
+			[
+				"git stat",
+				"Git: Status"
+			],
+			[
+				"add",
+				"Git: Add All"
+			],
+			[
+				"git show",
+				"Git: Show Tags"
+			],
+			[
+				"git status",
+				"Git: Status"
+			],
+			[
 				"enabl",
 				"Table Editor: Enable for current view"
 			],
 			[
 				"enable",
 				"Table Editor: Enable for current view"
-			],
-			[
-				"hex",
-				"HexViewer: Toggle Hex View"
 			],
 			[
 				"insta",
@@ -2344,24 +2888,8 @@
 				"Git: Commit"
 			],
 			[
-				"adda",
-				"Git: Add All"
-			],
-			[
 				"ena",
 				"Table Editor: Enable for current view"
-			],
-			[
-				"status",
-				"Git: Status"
-			],
-			[
-				"comm\t",
-				"Git: Commit"
-			],
-			[
-				"add",
-				"Git: Add All"
 			],
 			[
 				"enab",
@@ -2400,10 +2928,6 @@
 				"Git: Diff Current File"
 			],
 			[
-				"pushc",
-				"Git: Push Current Branch"
-			],
-			[
 				"cmm",
 				"Git: Commit"
 			],
@@ -2422,10 +2946,6 @@
 			[
 				"com",
 				"Git: Commit"
-			],
-			[
-				"git status",
-				"Git: Status"
 			],
 			[
 				"git i",
@@ -2458,10 +2978,6 @@
 			[
 				"remo",
 				"Package Control: Remove Package"
-			],
-			[
-				"instal",
-				"Package Control: Install Package"
 			],
 			[
 				"mark",
@@ -2639,148 +3155,174 @@
 	},
 	"expanded_folders":
 	[
-		"/C/coding/md-code/cppDemos/mfcDemo"
+		"/C/coding/md-code/cppDemos/mfcDemo",
+		"/C/coding/md-code/cppDemos/mfcDemo/comDemo",
+		"/C/coding/md-code/vcppnet",
+		"/C/coding/md-code/vcppnet/Ex23a-Automation",
+		"/C/coding/md-code/vcppnet/Ex23c",
+		"/C/coding/md-code/vcppnet/Ex24b",
+		"/C/coding/md-code/vcppnet/Ex28a_Web",
+		"/C/coding/md-code/vcppnet/Ex29a-DHTML",
+		"/C/coding/md-code/vcppnet/Ex29b",
+		"/C/coding/md-code/vcppnet/Ex29c",
+		"/C/coding/md-code/winprog5th",
+		"/D/DEVSTUDIO/VC/SAMPLES/MFC"
 	],
 	"file_history":
 	[
-		"/C/coding/md/writing/mfc/mfc.md",
-		"/C/coding/md/writing/mfc/01 MFC 记事本 - CEditView.md",
-		"/C/download/不伦纯爱2011/download.bat",
-		"/C/download/不伦纯爱2011/urls.bat",
-		"/C/download/不伦纯爱2011/urls.md",
-		"/C/download/不伦纯爱2011/1882b53f96c000000.ts",
-		"/C/download/不伦纯爱2011/1882b53f96c001000.ts",
-		"/C/download/不伦纯爱2011/1882b53f96c001001.ts",
-		"/C/download/不伦纯爱2011/1882b53f96c001003.ts",
-		"/C/download/不伦纯爱2011/1882b53f96c001002.ts",
-		"/C/download/不伦纯爱2011/1882b53f96c001005.ts",
-		"/C/download/不伦纯爱2011/1882b53f96c001004.ts",
-		"/C/download/不伦纯爱2011/1882b53f96c001006.ts",
-		"/C/download/不伦纯爱2011/1882b53f96c001007.ts",
-		"/C/download/不伦纯爱2011/1882b53f96c001008.ts",
-		"/C/download/不伦纯爱2011/1882b53f96c001009.ts",
-		"/C/download/不伦纯爱2011/1882b53f96c001010.ts",
-		"/C/download/不伦纯爱2011/1882b53f96c001011.ts",
-		"/C/download/不伦纯爱2011/1882b53f96c001012.ts",
-		"/C/download/不伦纯爱2011/1882b53f96c001013.ts",
-		"/C/download/不伦纯爱2011/1882b53f96c001014.ts",
-		"/C/download/不伦纯爱2011/1882b53f96c001015.ts",
-		"/C/download/不伦纯爱2011/1882b53f96c001016.ts",
-		"/C/download/不伦纯爱2011/1882b53f96c001017.ts",
-		"/C/download/不伦纯爱2011/1882b53f96c001018.ts",
-		"/C/download/不伦纯爱2011/1882b53f96c001019.ts",
-		"/C/download/不伦纯爱2011/1882b53f96c001020.ts",
-		"/C/download/不伦纯爱2011/1882b53f96c001021.ts",
-		"/C/download/不伦纯爱2011/1882b53f96c001022.ts",
-		"/C/download/不伦纯爱2011/1882b53f96c001023.ts",
-		"/C/download/不伦纯爱2011/1882b53f96c001024.ts",
-		"/C/download/不伦纯爱2011/1882b53f96c001025.ts",
-		"/C/download/不伦纯爱2011/1882b53f96c001026.ts",
-		"/C/download/不伦纯爱2011/1882b53f96c001027.ts",
-		"/C/download/不伦纯爱2011/1882b53f96c001028.ts",
-		"/C/download/不伦纯爱2011/1882b53f96c001029.ts",
-		"/C/download/不伦纯爱2011/1882b53f96c001030.ts",
-		"/C/download/不伦纯爱2011/1882b53f96c001031.ts",
-		"/C/download/不伦纯爱2011/1882b53f96c001032.ts",
-		"/C/download/不伦纯爱2011/1882b53f96c001033.ts",
-		"/C/download/不伦纯爱2011/1882b53f96c001034.ts",
-		"/C/download/不伦纯爱2011/1882b53f96c001035.ts",
-		"/C/download/不伦纯爱2011/1882b53f96c001036.ts",
-		"/C/download/不伦纯爱2011/1882b53f96c001037.ts",
-		"/C/download/不伦纯爱2011/1882b53f96c001039.ts",
-		"/C/download/不伦纯爱2011/1882b53f96c001038.ts",
-		"/C/download/不伦纯爱2011/1882b53f96c001041.ts",
-		"/C/download/不伦纯爱2011/1882b53f96c001040.ts",
-		"/C/download/不伦纯爱2011/1882b53f96c001042.ts",
-		"/C/download/不伦纯爱2011/1882b53f96c001043.ts",
-		"/C/download/不伦纯爱2011/1882b53f96c001044.ts",
-		"/C/download/不伦纯爱2011/1882b53f96c001045.ts",
-		"/C/download/不伦纯爱2011/1882b53f96c001046.ts",
-		"/C/download/不伦纯爱2011/1882b53f96c001048.ts",
-		"/C/download/不伦纯爱2011/1882b53f96c001047.ts",
-		"/C/download/不伦纯爱2011/1882b53f96c001049.ts",
-		"/C/download/不伦纯爱2011/1882b53f96c001050.ts",
-		"/C/download/不伦纯爱2011/1882b53f96c001051.ts",
-		"/C/download/不伦纯爱2011/1882b53f96c001052.ts",
-		"/C/download/不伦纯爱2011/1882b53f96c001053.ts",
-		"/C/download/不伦纯爱2011/1882b53f96c001054.ts",
-		"/C/download/不伦纯爱2011/1882b53f96c001055.ts",
-		"/C/download/不伦纯爱2011/1882b53f96c001056.ts",
-		"/C/download/不伦纯爱2011/1882b53f96c001057.ts",
-		"/C/download/不伦纯爱2011/1882b53f96c001058.ts",
-		"/C/download/不伦纯爱2011/1882b53f96c001059.ts",
-		"/C/coding/md-code/MNIST/data/t10k-labels.idx1-ubyte",
-		"/C/coding/md/readme_python.md",
-		"/C/coding/python/package/main.py",
-		"/C/coding/md-code/MNIST/data/t10k-images.idx3-ubyte",
-		"/C/coding/md/writing/unicode/coding.md",
-		"/C/coding/md/readme_vim.md",
-		"/C/coding/md/Qt/readme.md",
-		"/C/coding/md/db/readme_mysql.md",
-		"/C/coding/md/readme_hadoop.md",
-		"/C/coding/md/lisp.md",
-		"/C/coding/md/readme_java.md",
-		"/C/coding/md/webpack/readme_ts.md",
-		"/C/coding/md/webpack/readme_react.md",
-		"/C/coding/md/c-daystep/readme_vue.md",
-		"/C/coding/md/c-daystep/c-daystep.html",
-		"/C/coding/md/c-daystep/www/index.php",
-		"/C/coding/md/c-daystep/map/app.min.js",
-		"/C/coding/md/c-daystep/demo.js",
-		"/C/coding/md/c-daystep/map/app.js",
-		"/C/coding/md/c-daystep/map/app.ts",
-		"/C/coding/md/c-daystep/map/app.js.map",
-		"/C/coding/md/c-daystep/map/app.min.js.map",
-		"/C/coding/md/c-daystep/map/app.beautify.js",
-		"/C/coding/md/c-daystep/c-radio.html",
-		"/C/coding/md/webpack/readme_webpack.md",
-		"/C/coding/md/webpack/readme_node.md",
-		"/C/coding/md/webpack/readme_css.md",
-		"/C/coding/md/OpenGL/LinearAlgebra.md",
-		"/C/Qt/Examples/Qt-5.9/charts/audio/main.cpp",
-		"/C/Qt/Examples/Qt-5.9/charts/audio/widget.h",
-		"/C/Qt/Examples/Qt-5.9/charts/audio/widget.cpp",
-		"/C/Qt/Examples/Qt-5.9/charts/audio/xyseriesiodevice.h",
-		"/C/Qt/Examples/Qt-5.9/charts/barmodelmapper/tablewidget.h",
-		"/C/Qt/Examples/Qt-5.9/charts/barmodelmapper/customtablemodel.h",
-		"/C/Qt/5.9/Src/qtsvg/qtsvg.pro",
-		"/C/coding/md/readme_linux.md",
-		"/C/Users/OCEAN/AppData/Local/VirtualStore/windows-version.txt",
-		"/C/coding/md/readme_git.md",
-		"/C/coding/md/ccpp.md",
-		"/C/coding/md/readme_sublime.md",
-		"/C/coding/md/readme_win.md",
-		"/C/vcpkg/buildtrees/freetype/src/2.10.1-ea10bbeefe/docs/documentation.html",
-		"/C/coding/md-code/coding/coding.js",
-		"/C/Users/OCEAN/AppData/Roaming/Sublime Text 3/Packages/User/ExternalPrintPreview.sublime-settings",
-		"/C/Users/OCEAN/AppData/Roaming/Sublime Text 3/Packages/SublimePreviewAndPrint/ExternalPrintPreview.sublime-settings",
-		"/C/Users/OCEAN/AppData/Local/Temp/Rar$DIa15788.49452/README.md",
-		"/C/Users/OCEAN/AppData/Roaming/Sublime Text 3/Packages/User/Projects/TypeScript.sublime-project",
-		"/C/vcpkg/buildtrees/freetype/src/2.10.1-ea10bbeefe/docs/tutorial/Makefile",
-		"/C/coding/md/csharp.md",
-		"/C/coding/md-code/coding/coding.py",
-		"/C/coding/md-code/coding/foo.gz",
-		"/C/coding/md-code/coding/filebinary.bin",
-		"/C/coding/md-code/coding/foo",
-		"/C/vcpkg/buildtrees/libigl/src/f571827c8c-b1a8caf56b/tutorial/CMakeLists.txt",
-		"/C/vcpkg/buildtrees/libigl/src/f571827c8c-b1a8caf56b/tutorial/101_FileIO/CMakeLists.txt",
-		"/C/vcpkg/scripts/bootstrap.ps1",
-		"/C/vcpkg/scripts/toolchains/mingw.cmake",
-		"/C/vcpkg/toolsrc/src/vcpkg/build.cpp",
-		"/C/vcpkg/buildtrees/libigl/install-x64-mingw-dbg-out.log",
-		"/C/vcpkg/buildtrees/libigl/src/f571827c8c-b1a8caf56b/tutorial/101_FileIO/main.cpp",
-		"/C/Users/OCEAN/AppData/Local/Temp/Rar$DIa16576.12748/readme.txt",
-		"/C/vcpkg/buildtrees/sdl2/install-x64-mingw-dbg-out.log"
+		"/C/Program Files (x86)/Windows Kits/10/Include/10.0.18362.0/um/Unknwnbase.h",
+		"/C/coding/md-code/cppDemos/mfcDemo/comDemo/COMStepByStep_demo/bin/Readme.txt",
+		"/C/coding/md-code/cppDemos/mfcDemo/comDemo/AddObj/AddObjGuid.h",
+		"/C/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.26.28801/atlmfc/include/afxmsg_.h",
+		"/C/coding/md-code/cppDemos/mfcDemo/01-simple/src/MainFrm.cpp",
+		"/C/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.26.28801/atlmfc/src/mfc/appcore.cpp",
+		"/C/coding/md-code/cppDemos/mfcDemo/01-simple/src/MainFrm.h",
+		"/C/coding/md-code/cppDemos/mfcDemo/01-simple/src/AboutDialog.h",
+		"/C/coding/md-code/cppDemos/mfcDemo/01-simple/src/AboutDialog.cpp",
+		"/C/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.26.28801/atlmfc/src/mfc/viewedit.cpp",
+		"/C/Program Files (x86)/Windows Kits/10/Include/10.0.18362.0/shared/intsafe.h",
+		"/C/coding/md-code/cppDemos/mfcDemo/comDemo/AddObj/trace.h",
+		"/C/coding/md-code/cppDemos/mfcDemo/comDemo/AddObj/Factory.h",
+		"/C/coding/md-code/cppDemos/mfcDemo/comDemo/AddObj/IAdd.idl",
+		"/C/coding/md-code/cppDemos/mfcDemo/comDemo/ServiceAdd.idl",
+		"/C/coding/md-code/vcppnet/Ex19b/StringView.cpp",
+		"/C/coding/md-code/cppDemos/mfcDemo/comDemo/AddObj/Factory.cpp",
+		"/C/coding/md-code/cppDemos/mfcDemo/comDemo/AddObj/AddObj.vcxproj",
+		"/C/coding/md-code/cppDemos/mfcDemo/comDemo/AddObj/AddObj.mak",
+		"/C/coding/md-code/cppDemos/mfcDemo/comDemo/AddObj/AddObj.dsp",
+		"/C/coding/md-code/cppDemos/mfcDemo/comDemo/AddObj/AddObj.plg",
+		"/C/Program Files (x86)/Windows Kits/10/Include/10.0.18362.0/um/Unknwn.Idl",
+		"/C/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.26.28801/crt/src/stl/multprec.cpp",
+		"/C/coding/md-code/vcppnet/Ex22a/Interface.h",
+		"/D/DEVSTUDIO/VC/SAMPLES/MFC/ADVANCED/OLDBARS/STATBAR.CPP",
+		"/C/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.26.28801/atlmfc/include/afx.h",
+		"/C/Program Files (x86)/Windows Kits/10/Include/10.0.18362.0/um/winnt.h",
+		"/C/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.26.28801/atlmfc/src/mfc/winfrm.cpp",
+		"/C/Program Files (x86)/Windows Kits/10/Include/10.0.18362.0/um/WinUser.h",
+		"/C/coding/md-code/cppDemos/mfcDemo/mfc_dynamic/mfc_dynamic.cpp",
+		"/C/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.26.28801/atlmfc/include/afxwin.h",
+		"/C/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.26.28801/atlmfc/include/afxtempl.h",
+		"/C/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.26.28801/atlmfc/src/mfc/appui2.cpp",
+		"/C/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.26.28801/atlmfc/src/mfc/indicate.rc",
+		"/C/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.26.28801/atlmfc/include/afxres.rc",
+		"/C/Program Files (x86)/Windows Kits/10/Include/10.0.18362.0/ucrt/stdlib.h",
+		"/C/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.26.28801/atlmfc/include/afxres.h",
+		"/C/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.26.28801/atlmfc/include/afxext.h",
+		"/C/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.26.28801/atlmfc/src/mfc/barstat.cpp",
+		"/C/PROGRA~2/MICROS~1/2019/COMMUN~1/VC/Tools/MSVC/1426~1.288/atlmfc/include/afxwin.h",
+		"/C/Program Files (x86)/Windows Kits/10/Include/10.0.18362.0/shared/wtypes.h",
+		"/C/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.26.28801/atlmfc/src/mfc/dlgcore.cpp",
+		"/C/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.26.28801/atlmfc/src/mfc/l.chs/prompts.rc",
+		"/C/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.26.28801/atlmfc/src/mfc/afxframewndex.cpp",
+		"/C/coding/md-code/cppDemos/mfcDemo/01-simple/demo.clw",
+		"/C/coding/md-code/cppDemos/mfcDemo/01-simple/res/demo.rc2",
+		"/C/coding/md-code/cppDemos/mfcDemo/mfc_dynamic/Resource.h",
+		"/C/Program Files (x86)/Windows Kits/10/Include/10.0.18362.0/um/ScrnSave.h",
+		"/C/coding/md-code/cppDemos/mfcDemo/01-simple/src/ChildView.cpp",
+		"/C/Program Files (x86)/Windows Kits/10/Include/10.0.18362.0/um/wingdi.h",
+		"/F/DEVSTUDIO/VC/SAMPLES/MFC/OLE/ACDUAL/SERVER/ACDUAL.MAK",
+		"/C/coding/md-code/cppDemos/mfcDemo/01-simple/res/demo.aps",
+		"/C/coding/md-code/cppDemos/mfcDemo/dynamicLib/CMakeLists.txt",
+		"/C/coding/md-code/cppDemos/mfcDemo/src/libTest.cpp",
+		"/C/coding/md-code/cppDemos/mfcDemo/dynamicLib/lib.h",
+		"/C/coding/md-code/cppDemos/mfcDemo/lib/info.txt",
+		"/C/coding/md-code/cppDemos/mfcDemo/src/CMakeLists.txt",
+		"/C/coding/md-code/cppDemos/.gitignore",
+		"/C/coding/md-code/cppDemos/mfcDemo/dynamicLib/lib.def",
+		"/C/coding/md-code/cppDemos/mfcDemo/dynamicLib/lib.cpp",
+		"/C/coding/md-code/cppDemos/mfcDemo/lib/log.txt",
+		"/C/coding/md-code/cppDemos/mfcDemo/CMakeLists.txt",
+		"/C/coding/md-code/cppDemos/mfcDemo/ninja/dynamicLib/CMakeFiles/dynamicLib_d.dir/lib.cpp.obj",
+		"/C/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.26.28801/crt/src/vcruntime/exe_main.cpp",
+		"/C/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.26.28801/crt/src/vcruntime/exe_common.inl",
+		"/C/coding/md-code/cppDemos/mfcDemo/lib/dynamicLib.lib",
+		"/C/coding/md-code/cppDemos/mfcDemo/bin/LibTest_d.exp",
+		"/C/coding/md-code/cppDemos/mfcDemo/src/Test.cpp",
+		"/C/coding/md-code/cppDemos/mfcDemo/dynamicLib/libTest.cpp",
+		"/C/coding/md-code/cppDemos/mfcDemo/src/setVar.bat",
+		"/C/coding/md-code/cppDemos/mfcDemo/staticlib/libTest.cpp",
+		"/C/coding/md-code/cppDemos/mfcDemo/ninja/dynamicLib/CMakeFiles/dynamicLib_d.dir/intermediate.manifest",
+		"/C/coding/md-code/cppDemos/mfcDemo/staticlib/CMakeLists.txt",
+		"/C/coding/md-code/cppDemos/mfcDemo/staiclib/CMakeLists.txt",
+		"/C/coding/md-code/cppDemos/mfcDemo/staiclib/lib.h",
+		"/F/DEVSTUDIO/VC/SAMPLES/MFC/ADVANCED/FIRE/FIRE.RC",
+		"/C/PROGRA~2/MICROS~1/2019/COMMUN~1/VC/Tools/MSVC/1426~1.288/atlmfc/include/afxdlgs.h",
+		"/C/coding/md-code/cppDemos/mfcDemo/bin/test.bat",
+		"/C/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.26.28801/atlmfc/include/afxver_.h",
+		"/C/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.26.28801/atlmfc/include/atlcomcli.h",
+		"/C/coding/md-code/cppDemos/mfcDemo/src/demo.h",
+		"/C/coding/md-code/cppDemos/mfcDemo/src/demo.cpp",
+		"/C/coding/md-code/cppDemos/mfcDemo/res/demo.rc",
+		"/C/coding/md-code/cppDemos/mfcDemo/MFCchs/res/MFCchs.rc2",
+		"/C/download/《Windows程序设计(第5版 珍藏版)》配书光盘/Readme.txt",
+		"/C/coding/md-code/vcppnet/Ex28a/BlockSock.h",
+		"/C/coding/md-code/vcppnet/Ex29c/_Ex29c_p.c",
+		"/C/coding/md-code/vcppnet/Ex28a/BlockSock.cpp",
+		"/C/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.26.28801/atlmfc/src/mfc/appmodul.cpp",
+		"/C/download/Test.txt",
+		"/C/Program Files (x86)/Windows Kits/10/Include/10.0.18362.0/ucrt/corecrt_io.h",
+		"/C/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.26.28801/atlmfc/include/l.cht/afxres.rc",
+		"/C/coding/md-code/cppDemos/mfcDemo/demo.cbp",
+		"/C/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.17/Modules/FindMFC.cmake",
+		"/C/coding/md-code/cppDemos/mfcDemo/ninja/DEMO.sublime-project",
+		"/C/coding/md-code/cppDemos/mfcDemo/test.cpp",
+		"/C/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.26.28801/atlmfc/include/afxwin2.inl",
+		"/C/coding/md-code/cppDemos/mfcDemo/demo.mak",
+		"/C/coding/md-code/cppDemos/mfcDemo/demo.vcxproj",
+		"/C/coding/md-code/cppDemos/mfcDemo/MakeHelp.bat",
+		"/C/coding/md-code/cppDemos/mfcDemo/ReadMe.txt",
+		"/C/coding/md-code/cppDemos/mfcDemo/ninja/CMakeFiles/MFCDemo.dir/manifest.rc",
+		"/C/Program Files (x86)/Windows Kits/10/Include/10.0.18362.0/shared/winapifamily.h",
+		"/C/Program Files (x86)/Windows Kits/10/Include/10.0.18362.0/ucrt/corecrt.h",
+		"/C/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.26.28801/include/vcruntime.h",
+		"/C/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Auxiliary/Build/vcvarsall.bat",
+		"/C/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/Tools/VsDevCmd.bat",
+		"/C/Program Files (x86)/Windows Kits/10/Include/10.0.18362.0/ucrt/new.h",
+		"/C/Program Files (x86)/Windows Kits/10/Include/10.0.18362.0/ucrt/stdio.h",
+		"/C/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/Tools/vsdevcmd/core/msbuild.bat",
+		"/C/coding/md-code/cppDemos/mfcDemo/test.bat",
+		"/C/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/Tools/api-ms-win-crt-convert-l1-1-0.dll",
+		"/C/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/Tools/api-ms-win-crt-filesystem-l1-1-0.dll",
+		"/C/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/Tools/api-ms-win-crt-heap-l1-1-0.dll",
+		"/C/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/Tools/VsMSBuildCmd.bat",
+		"/C/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/Tools/api-ms-win-crt-locale-l1-1-0.dll",
+		"/C/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/Tools/api-ms-win-crt-math-l1-1-0.dll",
+		"/C/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/Tools/api-ms-win-crt-multibyte-l1-1-0.dll",
+		"/C/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/Tools/api-ms-win-crt-stdio-l1-1-0.dll",
+		"/C/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/Tools/api-ms-win-crt-string-l1-1-0.dll",
+		"/C/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/Tools/api-ms-win-crt-runtime-l1-1-0.dll",
+		"/C/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/Tools/api-ms-win-crt-time-l1-1-0.dll",
+		"/C/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/Tools/errlook.exe",
+		"/C/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/Tools/errlook.hlp",
+		"/C/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/Tools/guidgen.exe",
+		"/C/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/Tools/LaunchDevCmd.bat",
+		"/C/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/Tools/api-ms-win-crt-utility-l1-1-0.dll",
+		"/C/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/Tools/makehm.exe"
 	],
 	"find":
 	{
-		"height": 24.0
+		"height": 40.0
 	},
 	"find_in_files":
 	{
 		"height": 451.0,
 		"where_history":
 		[
+			"C:\\coding\\md-code\\cppDemos\\mfcDemo\\comDemo\\AddObj",
+			"C:\\coding\\md-code\\vcppnet",
+			"C:\\coding\\md-code\\winprog5th",
+			"D:\\DEVSTUDIO\\VC\\SAMPLES\\MFC",
+			"C:\\coding\\md-code\\cppDemos\\mfcDemo\\",
+			"C:\\coding\\md-code\\cppDemos\\mfcDemo\\01-simple",
+			"C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.26.28801\\atlmfc",
+			"C:\\coding\\md-code\\cppDemos\\mfcDemo\\01-simple,",
+			"C:\\coding\\md-code\\cppDemos\\mfcDemo\\01-simple,C:\\coding\\md-code\\cppDemos\\mfcDemo",
+			"C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.26.28801\\atlmfc\\",
+			"C:\\coding\\md-code\\cppDemos\\mfcDemo\\01-simple",
+			"C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC",
+			"",
+			"C:\\coding\\md-code\\vcppnet",
+			""
 		]
 	},
 	"find_state":
@@ -2788,11 +3330,139 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"IIServiceComTest_add",
+			"IIServiceComTest",
+			"CIServiceComTest::add",
+			"Gm",
+			"GM",
+			"MB",
+			"SORT_CLASS_FACTORY",
+			"trace",
+			"/Z7",
+			"/Zi",
+			" /Zi",
+			"/Zi ",
+			"/Zi",
+			"/Gy",
+			"/ZI",
+			"/Gm",
+			"Zi",
+			"ZI",
+			"Gm",
+			"ON_MESSAGE(",
+			"(ON_MESSAGE",
+			"12",
+			"8",
+			"(ID_CONTEXT_HELP",
+			"IDR_MAINFRAME",
+			"m_nIDResource",
+			"CDocTemplate",
+			"\nclass ",
+			"class ",
+			"m_viewList",
+			"AddDocTemplate",
+			"CDocManager",
+			"CWinThread",
+			"CDocManager",
+			"IDR_MAINFRAME",
+			"LoadAccelTable",
+			"IDR_MAINFRAME",
+			"LoadAccelerators",
+			"ID_INDICATOR_EXT",
+			"ID_IND",
+			"ID_SEPARATOR",
+			"m_wndStatusBar",
+			"SetPaneText",
+			"PreCreateWindow",
+			"m_wndStatusBar",
+			"ID_SEPARATOR",
+			"indicators",
+			"m_wndStatusBar",
+			"indicators",
+			"Status",
+			"AFX_IDS_IDLEMESSAGE",
+			"ID_NEXT_PANE",
+			"ID_HELP_FINDER",
+			"ID_APP_ABOUT",
+			"關於",
+			"NULL",
+			"ret = dlg",
+			"aboutDlg",
+			"MAKEINTRESOURCE",
+			"CAboutDlg::BoxStyle",
+			"ID_V",
+			"(UINT)",
+			"DoModal",
+			"ID_EDIT_COPY",
+			"CEditView",
+			"(ID_EDIT_COPY",
+			"ID_EDIT_COPY",
+			"ID_VIEW_STATUS_BAR",
+			"CAboutDlg::",
+			"CDemoApp::",
+			"aboutDlg;",
+			"OnAppAbout",
+			"ID_VIEW_TEXTBOX",
+			"IDD_TEXTBOX",
+			"AFX_DIALOG_LAYOUT",
+			"IDD_TEXTBOX",
+			"Style",
+			"ID_VIEW_OVERLAPPE",
+			"ID_VIEW_OVERLAPPED",
+			"ID_APP_OPEN",
+			"ID_VIEW_CHILD",
+			"IDD_ABOUTBOX",
+			"ID_VIEW",
+			"AD_APP",
+			"WS_",
+			"CDialog",
+			"OnAppAbout",
+			"MESSAGETABLE",
+			"CMFCPreviewCtrlImpl",
+			"m_font",
+			"m_f",
+			"m_",
+			"ANSI_CHARSET",
+			"新細明體",
+			"IDD_",
+			"dynamicLib",
+			"{LIB_NAME}",
+			"dynamicLib",
+			"dynamicLib_d",
+			"add_library",
+			" /D _AFXDLL",
+			"LANGUAGE",
+			"add_executable",
+			"_d",
+			"BUILD_SHARED_LIBS",
+			"add_library",
+			"LIB_API",
+			"LIB_API __declspec",
+			"@LibTest",
+			"@",
+			"Test.def",
+			"Test",
+			" \"${PROJECT_SOURCE_DIR}/Test.def\"",
+			" @",
+			"?PI@LibTest@@2NB",
+			"\\",
+			"CTest",
+			"add_executable",
+			"/D DEBUG /D _DEBUG /D WIN32 /D _WINDOWS /D _MBCS ",
+			" /D LIB_EXPORTS",
+			"Use_wprintf_Instead_Of_printf",
+			"printf",
+			"__imp___stdio_common_vfprintf",
+			"cout <<",
+			"add_library",
+			"break",
+			"case",
+			"add_executable"
 		],
 		"highlight": false,
 		"in_selection": false,
 		"preserve_case": true,
-		"regex": true,
+		"regex": false,
 		"replace_history":
 		[
 		],
@@ -2805,14 +3475,463 @@
 	"groups":
 	[
 		{
+			"selected": 5,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "mfcDemo.sublime-project",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3299,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3258,
+								3258
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"is_init_dirty_state": false,
+							"origin_encoding": "ASCII",
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1213.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "CMakeLists.txt",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4011,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3068,
+								3068
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"is_init_dirty_state": false,
+							"origin_encoding": "UTF-8",
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/CMake/CMake.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 855.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 12,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "comDemo/IAdd.idl",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 739,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								425,
+								425
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"origin_encoding": "ASCII",
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/IDL-Syntax/IDL.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "comDemo/COMStepByStep_demo/bin/setup.bat",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 95,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								50,
+								50
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"origin_encoding": "ASCII",
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Batch File/Batch File.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "/C/coding/md-code/vcppnet/Ex23b/Ex23bAuto.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3552,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2713,
+								2703
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"origin_encoding": "ASCII",
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/C++/C++.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1243.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "/C/coding/md-code/vcppnet/Ex29b/Ex29bView.cpp",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 1163,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"origin_encoding": "ASCII",
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/C++/C++.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 466.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "/C/Program Files (x86)/Windows Kits/10/Include/10.0.18362.0/um/combaseapi.h",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 41124,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								35378,
+								35378
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"origin_encoding": "ASCII",
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/C++/C++.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 16978.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "01-simple/src/ChildView.h",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1355,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								664,
+								664
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"is_init_dirty_state": false,
+							"origin_encoding": "ASCII",
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/C++/C++.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 491.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "01-simple/src/ChildView.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1495,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1418,
+								1418
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"is_init_dirty_state": false,
+							"origin_encoding": "ASCII",
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/C++/C++.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 271.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "01-simple/res/resource.h",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 890,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								411,
+								396
+							]
+						],
+						"settings":
+						{
+							"in_converting": true,
+							"incomplete_sync": null,
+							"is_init_dirty_state": false,
+							"origin_content": "//{{NO_DEPENDENCIES}}\n// Microsoft Visual C++ 生成的包含文件。\n// 供 demo.rc 使用\n//\n#define IDD_ABOUTBOX                    100\n#define IDP_SOCKETS_INIT_FAILED         104\n#define IDR_MAINFRAME                   128\n#define IDR_DEMOTYPE                    129\n#define IDC_EDIT1                       1000\n#define ID_APP_OPEN                     32772\n#define ID_APP_SAVE                     32773\n\n// Next default values for new objects\n// \n#ifdef APSTUDIO_INVOKED\n#ifndef APSTUDIO_READONLY_SYMBOLS\n#define _APS_3D_CONTROLS                     1\n#define _APS_NEXT_RESOURCE_VALUE        131\n#define _APS_NEXT_COMMAND_VALUE         32774\n#define _APS_NEXT_CONTROL_VALUE         1001\n#define _APS_NEXT_SYMED_VALUE           101\n#endif\n#endif\n",
+							"origin_encoding": "GB2312",
+							"remote_loading": false,
+							"revert_to_scratch": true,
+							"synced": false,
+							"syntax": "Packages/C++/C++.sublime-syntax",
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 11,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "01-simple/res/demo.rc",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 11172,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4073,
+								4073
+							]
+						],
+						"settings":
+						{
+							"in_converting": true,
+							"incomplete_sync": null,
+							"is_init_dirty_state": false,
+							"origin_content": "// Microsoft Visual C++ generated resource script.\n//\n#include \"resource.h\"\n\n#define APSTUDIO_READONLY_SYMBOLS\n/////////////////////////////////////////////////////////////////////////////\n//\n// Generated from the TEXTINCLUDE 2 resource.\n//\n#include \"afxres.h\"\n\n/////////////////////////////////////////////////////////////////////////////\n#undef APSTUDIO_READONLY_SYMBOLS\n\n/////////////////////////////////////////////////////////////////////////////\n// 中文(简体，中国) resources\n\n#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\nLANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED\n#pragma code_page(936)\n\n#ifdef APSTUDIO_INVOKED\n/////////////////////////////////////////////////////////////////////////////\n//\n// TEXTINCLUDE\n//\n\n1 TEXTINCLUDE \nBEGIN\n    \"resource.h\\0\"\nEND\n\n2 TEXTINCLUDE \nBEGIN\n    \"#include \"\"afxres.h\"\"\\r\\n\"\n    \"\\0\"\nEND\n\n3 TEXTINCLUDE \nBEGIN\n    \"#define _AFX_NO_SPLITTER_RESOURCES\\r\\n\"\n    \"#define _AFX_NO_OLE_RESOURCES\\r\\n\"\n    \"#define _AFX_NO_TRACKER_RESOURCES\\r\\n\"\n    \"#define _AFX_NO_PROPERTY_RESOURCES\\r\\n\"\n    \"\\r\\n\"\n    \"#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\\r\\n\"\n    \"#ifdef _WIN32\\r\\n\"\n    \"LANGUAGE 4, 2\\r\\n\"\n    \"#pragma code_page(936)\\r\\n\"\n    \"#endif //_WIN32\\r\\n\"\n    \"#include \"\".\\\\demo.rc2\"\"  // non-Microsoft Visual C++ edited resources\\r\\n\"\n    \"#include \"\"l.chs\\\\afxres.rc\"\"          // Standard components\\r\\n\"\n    \"#endif\\r\\n\"\n    \"\\0\"\nEND\n\n#endif    // APSTUDIO_INVOKED\n\n\n/////////////////////////////////////////////////////////////////////////////\n//\n// Icon\n//\n\n// Icon with lowest ID value placed first to ensure application icon\n// remains consistent on all systems.\nIDR_MAINFRAME           ICON                    \".\\\\demo.ico\"\n\n\n/////////////////////////////////////////////////////////////////////////////\n//\n// Menu\n//\n\nIDR_MAINFRAME MENU\nBEGIN\n    POPUP \"檔案(&F)\"\n    BEGIN\n        MENUITEM \"打開(&O)\\tCtrl+O\",              ID_APP_OPEN\n        MENUITEM \"結束(&X)\",                      ID_APP_EXIT\n        MENUITEM \"存檔(&S)\\tCtrl+S\",              ID_APP_SAVE\n    END\n    POPUP \"編輯(&E)\"\n    BEGIN\n        MENUITEM \"復原(&U)\\tCtrl+Z\",              ID_EDIT_UNDO\n        MENUITEM SEPARATOR\n        MENUITEM \"剪下(&T)\\tCtrl+X\",              ID_EDIT_CUT\n        MENUITEM \"複製(&C)\\tCtrl+C\",              ID_EDIT_COPY\n        MENUITEM \"貼上(&P)\\tCtrl+V\",              ID_EDIT_PASTE\n    END\n    POPUP \"檢視(&V)\"\n    BEGIN\n        MENUITEM \"狀態列(&S)\",                     ID_VIEW_STATUS_BAR\n    END\n    POPUP \"說明(&H)\"\n    BEGIN\n        MENUITEM \"說明主題(&H)\",                    ID_HELP_FINDER\n        MENUITEM SEPARATOR\n        MENUITEM \"關於 demo(&A)...\",              ID_APP_ABOUT\n    END\nEND\n\n\n/////////////////////////////////////////////////////////////////////////////\n//\n// Accelerator\n//\n\nIDR_MAINFRAME ACCELERATORS\nBEGIN\n    \"C\",            ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT\n    \"O\",            ID_APP_OPEN,            VIRTKEY, CONTROL, NOINVERT\n    \"S\",            ID_APP_SAVE,            VIRTKEY, CONTROL, NOINVERT\n    \"V\",            ID_EDIT_PASTE,          VIRTKEY, CONTROL, NOINVERT\n    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY, ALT, NOINVERT\n    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY, SHIFT, NOINVERT\n    VK_F1,          ID_HELP,                VIRTKEY, NOINVERT\n    VK_F1,          ID_CONTEXT_HELP,        VIRTKEY, SHIFT, NOINVERT\n    VK_F6,          ID_NEXT_PANE,           VIRTKEY, NOINVERT\n    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT, NOINVERT\n    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT\n    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT, NOINVERT\n    \"X\",            ID_EDIT_CUT,            VIRTKEY, CONTROL, NOINVERT\n    \"Z\",            ID_EDIT_UNDO,           VIRTKEY, CONTROL, NOINVERT\nEND\n\n\n/////////////////////////////////////////////////////////////////////////////\n//\n// Dialog\n//\n\nIDD_ABOUTBOX DIALOG 0, 0, 235, 55\nSTYLE DS_SETFONT | DS_MODALFRAME | WS_OVERLAPPED | WS_CAPTION | WS_SYSMENU\nMENU IDR_MAINFRAME\nCAPTION \"關於 demo\"\nFONT 10, \"新細明體\"\nBEGIN\n    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20\n    LTEXT           \"demo Version 1.0\",IDC_STATIC,40,10,119,8,SS_NOPREFIX\n    LTEXT           \"Copyright (C) 2016\",IDC_STATIC,40,25,119,8\n    DEFPUSHBUTTON   \"確定\",IDOK,178,7,50,14,WS_GROUP\nEND\n\n\n/////////////////////////////////////////////////////////////////////////////\n//\n// Version\n//\n\nVS_VERSION_INFO VERSIONINFO\n FILEVERSION 1,0,0,1\n PRODUCTVERSION 1,0,0,1\n FILEFLAGSMASK 0x3fL\n#ifdef _DEBUG\n FILEFLAGS 0x1L\n#else\n FILEFLAGS 0x0L\n#endif\n FILEOS 0x4L\n FILETYPE 0x1L\n FILESUBTYPE 0x0L\nBEGIN\n    BLOCK \"StringFileInfo\"\n    BEGIN\n        BLOCK \"040404B0\"\n        BEGIN\n            VALUE \"FileDescription\", \"demo MFC Application\"\n            VALUE \"FileVersion\", \"1, 0, 0, 1\"\n            VALUE \"InternalName\", \"demo\"\n            VALUE \"LegalCopyright\", \"Copyright (C) 2016\"\n            VALUE \"OriginalFilename\", \"demo.EXE\"\n            VALUE \"ProductName\", \"demo Application\"\n            VALUE \"ProductVersion\", \"1, 0, 0, 1\"\n        END\n    END\n    BLOCK \"VarFileInfo\"\n    BEGIN\n        VALUE \"Translation\", 0x404, 1200\n    END\nEND\n\n\n/////////////////////////////////////////////////////////////////////////////\n//\n// DESIGNINFO\n//\n\n#ifdef APSTUDIO_INVOKED\nGUIDELINES DESIGNINFO\nBEGIN\n    IDD_ABOUTBOX, DIALOG\n    BEGIN\n        LEFTMARGIN, 7\n        RIGHTMARGIN, 228\n        TOPMARGIN, 7\n        BOTTOMMARGIN, 48\n    END\n\n    \"IDD_TEXTBOX\", DIALOG\n    BEGIN\n        TOPMARGIN, 1\n        BOTTOMMARGIN, 79\n    END\nEND\n#endif    // APSTUDIO_INVOKED\n\n\n/////////////////////////////////////////////////////////////////////////////\n//\n// AFX_DIALOG_LAYOUT\n//\n\nIDD_TEXTBOX AFX_DIALOG_LAYOUT\nBEGIN\n    0\nEND\n\n\n/////////////////////////////////////////////////////////////////////////////\n//\n// String Table\n//\n\nSTRINGTABLE\nBEGIN\n    IDP_SOCKETS_INIT_FAILED \"Windows sockets 啟始失敗。\"\nEND\n\nSTRINGTABLE\nBEGIN\n    IDR_MAINFRAME           \"demo\"\nEND\n\nSTRINGTABLE\nBEGIN\n    AFX_IDS_APP_TITLE       \"demo\"\n    AFX_IDS_IDLEMESSAGE     \"若欲取得「說明」，請按 F1\"\n    AFX_IDS_HELPMODEMESSAGE \"請選取一物件以便取得「說明」\"\nEND\n\nSTRINGTABLE\nBEGIN\n    ID_INDICATOR_EXT        \"EXT\"\n    ID_INDICATOR_CAPS       \"CAP\"\n    ID_INDICATOR_NUM        \"NUM\"\n    ID_INDICATOR_SCRL       \"SCRL\"\n    ID_INDICATOR_OVR        \"OVR\"\n    ID_INDICATOR_REC        \"REC\"\nEND\n\nSTRINGTABLE\nBEGIN\n    ID_APP_ABOUT            \"顯示程式的資訊， 版本及版權\\n關於\"\n    ID_APP_EXIT             \"結束應用程式並提示儲存檔案\\n結束\"\n    ID_HELP_INDEX           \"開啟「說明」\\n說明主題\"\n    ID_HELP_FINDER          \"列出「說明主題」\\n說明主題\"\n    ID_HELP_USING           \"指導如何使用「說明」的\\n說明\"\n    ID_CONTEXT_HELP         \"顯示被按下之按鈕，功能表和視窗的「說明」\\n說明\"\n    ID_HELP                 \"顯示目前執行工作或命令的說明\\n說明\"\nEND\n\nSTRINGTABLE\nBEGIN\n    ID_APP_OPEN             \"打開文件\"\n    ID_APP_SAVE             \"保存内容到文件\"\nEND\n\nSTRINGTABLE\nBEGIN\n    ID_NEXT_PANE            \"切換到下一個窗格\\n下一個窗格\"\n    ID_PREV_PANE            \"切換到上一個窗格\\n上一個窗格\"\nEND\n\nSTRINGTABLE\nBEGIN\n    ID_WINDOW_SPLIT         \"分割目前的視窗\\n分割\"\nEND\n\nSTRINGTABLE\nBEGIN\n    ID_EDIT_CLEAR           \"刪除選取內容\\n刪除\"\n    ID_EDIT_CLEAR_ALL       \"全部刪除\\n全部刪除\"\n    ID_EDIT_COPY            \"複製選取內容到剪貼簿中\\n複製\"\n    ID_EDIT_CUT             \"剪下選取內容到剪貼簿中\\n剪下\"\n    ID_EDIT_FIND            \"尋找指定文字\\n尋找\"\n    ID_EDIT_PASTE           \"插入剪貼簿內容\\n貼上\"\n    ID_EDIT_REPEAT          \"重複前一動作\\n重複\"\n    ID_EDIT_REPLACE         \"以不同文字取代指定之文字\\n取代\"\n    ID_EDIT_SELECT_ALL      \"選取整篇文件\\n選取全部\"\n    ID_EDIT_UNDO            \"復原上一次動作\\n復原\"\n    ID_EDIT_REDO            \"重做前一個復原的動作\\n重做\"\nEND\n\nSTRINGTABLE\nBEGIN\n    ID_VIEW_STATUS_BAR      \"隱藏或顯示狀態列\\n切換狀態列\"\nEND\n\nSTRINGTABLE\nBEGIN\n    AFX_IDS_SCSIZE          \"改變視窗大小\"\n    AFX_IDS_SCMOVE          \"改變視窗位置\"\n    AFX_IDS_SCMINIMIZE      \"縮小視窗到一圖示\"\n    AFX_IDS_SCMAXIMIZE      \"放大視窗到全螢幕\"\n    AFX_IDS_SCNEXTWINDOW    \"切換到下一個文件視窗\"\n    AFX_IDS_SCPREVWINDOW    \"切換到前一個文件視窗\"\n    AFX_IDS_SCCLOSE         \"關閉工作中視窗並提示儲存文件\"\nEND\n\nSTRINGTABLE\nBEGIN\n    AFX_IDS_SCRESTORE       \"還原視窗至原來大小\"\n    AFX_IDS_SCTASKLIST      \"叫出「工作列」\"\nEND\n\n#endif    // 中文(简体，中国) resources\n/////////////////////////////////////////////////////////////////////////////\n\n\n\n#ifndef APSTUDIO_INVOKED\n/////////////////////////////////////////////////////////////////////////////\n//\n// Generated from the TEXTINCLUDE 3 resource.\n//\n#define _AFX_NO_SPLITTER_RESOURCES\n#define _AFX_NO_OLE_RESOURCES\n#define _AFX_NO_TRACKER_RESOURCES\n#define _AFX_NO_PROPERTY_RESOURCES\n\n#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\n#ifdef _WIN32\nLANGUAGE 4, 2\n#pragma code_page(936)\n#endif //_WIN32\n#include \".\\demo.rc2\"  // non-Microsoft Visual C++ edited resources\n#include \"l.chs\\afxres.rc\"          // Standard components\n#endif\n\n/////////////////////////////////////////////////////////////////////////////\n#endif    // not APSTUDIO_INVOKED\n\n",
+							"origin_encoding": "GBK",
+							"remote_loading": false,
+							"revert_to_scratch": true,
+							"synced": false,
+							"syntax": "Packages/Pascal/Pascal.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1379.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "01-simple/src/demo.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6104,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								896,
+								887
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"is_init_dirty_state": false,
+							"origin_encoding": "ASCII",
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/C++/C++.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 874.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"file": "01-simple/src/demo.h",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1516,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1019,
+								1019
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"is_init_dirty_state": false,
+							"origin_encoding": "ASCII",
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/C++/C++.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 19.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				}
 			]
 		}
 	],
 	"incremental_find":
 	{
-		"height": 24.0
+		"height": 23.0
 	},
 	"input":
 	{
@@ -2867,7 +3986,7 @@
 	},
 	"output.exec":
 	{
-		"height": 195.0
+		"height": 219.0
 	},
 	"output.find_results":
 	{
@@ -2875,7 +3994,7 @@
 	},
 	"output.git":
 	{
-		"height": 223.0
+		"height": 103.0
 	},
 	"output.hex_viewer_inspector":
 	{
@@ -2897,7 +4016,7 @@
 	"project": "mfcDemo.sublime-project",
 	"replace":
 	{
-		"height": 44.0
+		"height": 42.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -2906,6 +4025,86 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"unknwn.idl",
+				"Windows Kits\\10\\Include\\10.0.18362.0\\um\\Unknwn.Idl"
+			],
+			[
+				"afxres.rc",
+				"MSVC\\14.26.28801\\atlmfc\\include\\afxres.rc"
+			],
+			[
+				"winuser",
+				"Windows Kits\\10\\Include\\10.0.18362.0\\um\\WinUser.h"
+			],
+			[
+				"viewedit",
+				"MSVC\\14.26.28801\\atlmfc\\src\\mfc\\viewedit.cpp"
+			],
+			[
+				"resou",
+				"mfcDemo\\mfc_dynamic\\Resource.h"
+			],
+			[
+				"demo.rc2",
+				"mfcDemo\\01-simple\\res\\demo.rc2"
+			],
+			[
+				"demo.rc",
+				"mfcDemo\\01-simple\\res\\demo.rc"
+			],
+			[
+				"intermediate.manifest",
+				"mfcDemo\\ninja\\dynamicLib\\CMakeFiles\\dynamicLib_d.dir\\intermediate.manifest"
+			],
+			[
+				"afx.h",
+				"MSVC\\14.26.28801\\atlmfc\\include\\afx.h"
+			],
+			[
+				"APPMODUL.CPP",
+				"MSVC\\14.26.28801\\atlmfc\\src\\mfc\\appmodul.cpp"
+			],
+			[
+				"afxwin.h",
+				"MSVC\\14.26.28801\\atlmfc\\include\\afxwin.h"
+			],
+			[
+				"demorc",
+				"mfcDemo\\res\\demo.rc"
+			],
+			[
+				"manifest.rc",
+				"mfcDemo\\ninja\\CMakeFiles\\MFCDemo.dir\\manifest.rc"
+			],
+			[
+				"winapifamily.h",
+				"Windows Kits\\10\\Include\\10.0.18362.0\\shared\\winapifamily.h"
+			],
+			[
+				"vcruntime.h",
+				"MSVC\\14.26.28801\\include\\vcruntime.h"
+			],
+			[
+				"new.h",
+				"Windows Kits\\10\\Include\\10.0.18362.0\\ucrt\\new.h"
+			],
+			[
+				"stdio.h",
+				"Windows Kits\\10\\Include\\10.0.18362.0\\ucrt\\stdio.h"
+			],
+			[
+				"vsdevcmd.bat",
+				"Common7\\Tools\\VsDevCmd.bat"
+			],
+			[
+				"CMakeOutput.log",
+				"mfcDemo\\ninja\\CMakeFiles\\CMakeOutput.log"
+			],
+			[
+				"FindMFC",
+				"cmake-3.17\\Modules\\FindMFC.cmake"
+			],
 			[
 				"win",
 				"md\\readme_win.md"
@@ -3337,86 +4536,6 @@
 			[
 				"erl_bif_lists.c",
 				"otp_src_23.0\\erts\\emulator\\beam\\erl_bif_lists.c"
-			],
-			[
-				"lists.erl",
-				"otp_src_23.0\\lib\\stdlib\\src\\lists.erl"
-			],
-			[
-				"BeamInstr",
-				"otp_src_23.0\\lib\\hipe\\test\\basic_SUITE_data\\basic_beam_instrs.erl"
-			],
-			[
-				"sys.c",
-				"otp_src_23.0\\erts\\emulator\\sys\\win32\\sys.c"
-			],
-			[
-				"big.c",
-				"otp_src_23.0\\erts\\emulator\\beam\\big.c"
-			],
-			[
-				"erl_term.h",
-				"otp_src_23.0\\erts\\emulator\\beam\\erl_term.h"
-			],
-			[
-				"beamsys",
-				"otp_src_23.0\\erts\\emulator\\beam\\sys.h"
-			],
-			[
-				"bif.tab",
-				"otp_src_23.0\\erts\\emulator\\beam\\bif.tab"
-			],
-			[
-				"erl_process",
-				"otp_src_23.0\\erts\\emulator\\beam\\erl_process.h"
-			],
-			[
-				"sdzmmo client ",
-				"sdzmmo\\test_client\\client.erl"
-			],
-			[
-				"io.erl",
-				"otp_src_23.0\\lib\\stdlib\\src\\io.erl"
-			],
-			[
-				"gen_server",
-				"otp_src_23.0\\lib\\stdlib\\src\\gen_server.erl"
-			],
-			[
-				"acc",
-				"md\\accme.md"
-			],
-			[
-				"Net",
-				"md\\readme_net.md"
-			],
-			[
-				"Python",
-				"md\\readme_python.md"
-			],
-			[
-				"PastelMatrixPage",
-				"samples\\xamarin-forms-samples-master\\SkiaSharpForms\\Demos\\Demos\\SkiaSharpFormsDemos\\Effects\\PastelMatrixPage.cs"
-			],
-			[
-				"GrayScaleMatrixPage",
-				"samples\\xamarin-forms-samples-master\\SkiaSharpForms\\Demos\\Demos\\SkiaSharpFormsDemos\\Effects\\GrayScaleMatrixPage.cs"
-			],
-			[
-				"SkiaLightExperiment",
-				"samples\\xamarin-forms-samples-master\\SkiaSharpForms\\Demos\\Demos\\SkiaSharpFormsDemos\\Effects\\DistanceLightExperimentPage.xaml.cs"
-			],
-			[
-				"BlueBananaPage",
-				"samples\\xamarin-forms-samples-master\\SkiaSharpForms\\Demos\\Demos\\SkiaSharpFormsDemos\\Effects\\BlueBananaPage.cs"
-			],
-			[
-				"PorterDuffCanvasView",
-				"samples\\xamarin-forms-samples-master\\SkiaSharpForms\\Demos\\Demos\\SkiaSharpFormsDemos\\Effects\\PorterDuffCanvasView.cs"
-			],
-			[
-				"SkiaSharpFormsDemos",
-				"samples\\xamarin-forms-samples-master\\SkiaSharpForms\\Demos\\SkiaSharpFormsDemos.sln"
 			]
 		],
 		"width": 0.0
@@ -3429,17 +4548,333 @@
 		[
 			[
 				"",
-				"C:\\coding\\md-code\\csdemo\\cs.sublime-project"
+				"C:\\coding\\md-code\\cppDemos\\cppDemo.sublime-project"
 			]
 		],
 		"width": 380.0
 	},
 	"select_symbol":
 	{
-		"height": 392.0,
-		"last_filter": "",
+		"height": 325.0,
+		"last_filter": "EnableAutomation",
 		"selected_items":
 		[
+			[
+				"EnableAutomation",
+				"EnableAutomation"
+			],
+			[
+				"IUnknown",
+				"IUnknown\n"
+			],
+			[
+				"Custom",
+				"Custom"
+			],
+			[
+				"CLSIDFrom",
+				"CLSIDFromProgID"
+			],
+			[
+				"S_OK",
+				"S_OK"
+			],
+			[
+				"interface",
+				"interface"
+			],
+			[
+				"CFtpFileFind",
+				"CFtpFileFind"
+			],
+			[
+				"ON_MESSAGE",
+				"ON_MESSAGE"
+			],
+			[
+				"TRY",
+				"TRY"
+			],
+			[
+				"CException",
+				"CException"
+			],
+			[
+				"ActivationContext",
+				"ACTIVATIONCONTEXTINFOCLASS"
+			],
+			[
+				"GetActiveDocument",
+				"GetActiveDocument"
+			],
+			[
+				"CreateFont",
+				"CreateFont"
+			],
+			[
+				"OnHelpFinder",
+				"OnHelpFinder"
+			],
+			[
+				"VK_F1",
+				"VK_F1"
+			],
+			[
+				"CObList",
+				"CObList"
+			],
+			[
+				"CMap",
+				"CMap"
+			],
+			[
+				"CPtrList",
+				"CPtrList"
+			],
+			[
+				"CDocument",
+				"CDocument"
+			],
+			[
+				"AddDocTemplate",
+				"AddDocTemplate"
+			],
+			[
+				"CDocManager",
+				"CDocManager"
+			],
+			[
+				"InitInstance",
+				"InitInstance"
+			],
+			[
+				"LoadAccelTable",
+				"LoadAccelTable"
+			],
+			[
+				"ID_INDICATOR_EXT",
+				"ID_INDICATOR_EXT"
+			],
+			[
+				"ID_SEPARATOR",
+				"ID_SEPARATOR"
+			],
+			[
+				"SetPaneText",
+				"SetPaneText"
+			],
+			[
+				"CBRS_ALL",
+				"CBRS_ALL"
+			],
+			[
+				"CStatusBar",
+				"CStatusBar"
+			],
+			[
+				"ID_INDICATOR_CAPS",
+				"ID_INDICATOR_CAPS"
+			],
+			[
+				"HANDLE",
+				"HANDLE"
+			],
+			[
+				"ON_WM_HELPINFO",
+				"ON_WM_HELPINFO"
+			],
+			[
+				"OnHelpInfo",
+				"OnHelpInfo"
+			],
+			[
+				"POINT",
+				"POINT"
+			],
+			[
+				"HELPINFO",
+				"HELPINFO_WINDOW"
+			],
+			[
+				"ON_WM_HELP",
+				"ON_WM_HELPINFO"
+			],
+			[
+				"WM_HELP",
+				"HELP_WM_HELP"
+			],
+			[
+				"MAKEINTRESOURCE",
+				"MAKEINTRESOURCE"
+			],
+			[
+				"CArray",
+				"CArray"
+			],
+			[
+				"CEditView",
+				"CEditView"
+			],
+			[
+				"ID_VIEW_STATUS_BAR",
+				"ID_VIEW_STATUS_BAR"
+			],
+			[
+				"IDD_TEXTBOX",
+				"IDD_TEXTBOX"
+			],
+			[
+				"ID_APP_OPEN",
+				"ID_APP_OPEN"
+			],
+			[
+				"ID_VIEW_STA",
+				"ID_VIEW_STATUS_BAR"
+			],
+			[
+				"ID_APP_",
+				"ID_APP_ABOUT"
+			],
+			[
+				"ID_APP",
+				"ID_APP"
+			],
+			[
+				"CDialog",
+				"CDialog"
+			],
+			[
+				"SetFont",
+				"SetFont"
+			],
+			[
+				"CFrameWnd",
+				"CFrameWnd"
+			],
+			[
+				"CWnd",
+				"CWnd"
+			],
+			[
+				"CWinApp",
+				"CWinApp"
+			],
+			[
+				"",
+				"\"$(INTDIR)\\Aclikdoc.obj\""
+			],
+			[
+				"FW_DONTCARE",
+				"FW_DONTCARE"
+			],
+			[
+				"CFont",
+				"CFont"
+			],
+			[
+				"printf",
+				"printf"
+			],
+			[
+				"PostNcDestroy",
+				"PostNcDestroy"
+			],
+			[
+				"TCHAR",
+				"TCHAR"
+			],
+			[
+				"LPCTSTR",
+				"LPCTSTR"
+			],
+			[
+				"CStdioFile",
+				"CStdioFile"
+			],
+			[
+				"WinMain",
+				"WinMain"
+			],
+			[
+				"winM",
+				"WinMain"
+			],
+			[
+				"AfxTrace",
+				"AfxTrace"
+			],
+			[
+				"Trace",
+				"Trace"
+			],
+			[
+				"ON_CONTROL_REFLECT",
+				"ON_CONTROL_REFLECT"
+			],
+			[
+				"BEGIN_MESSAGE_MAP",
+				"BEGIN_MESSAGE_MAP"
+			],
+			[
+				"ON_BN_DOUBLECLICKED",
+				"ON_BN_DOUBLECLICKED"
+			],
+			[
+				"ON_CLICK",
+				"ON_BN_CLICKED"
+			],
+			[
+				"DialogBox",
+				"DialogBox"
+			],
+			[
+				"SS_LEFT",
+				"SS_LEFT"
+			],
+			[
+				"SBS_HORZ",
+				"SBS_HORZ"
+			],
+			[
+				"UpdateData",
+				"UpdateData"
+			],
+			[
+				"DDX_Check",
+				"DDX_Check"
+			],
+			[
+				"BST_CHECKED",
+				"BST_CHECKED"
+			],
+			[
+				"IsDlgButtonChecked",
+				"IsDlgButtonChecked"
+			],
+			[
+				"BS_AUTOCHECKBOX",
+				"BS_AUTOCHECKBOX"
+			],
+			[
+				"CreateWindowEx",
+				"CreateWindowEx"
+			],
+			[
+				"LoadString",
+				"LoadString"
+			],
+			[
+				"WM_Char",
+				"WM_CHAR"
+			],
+			[
+				"_WIN32_WINNT ",
+				"_WIN32_WINNT"
+			],
+			[
+				"Enable3dControlsStatic",
+				"Enable3dControlsStatic"
+			],
 			[
 				"createTrackbar",
 				"createTrackbar"
@@ -3545,7 +4980,7 @@
 				"TryAddSingleton"
 			]
 		],
-		"width": 884.0
+		"width": 592.0
 	},
 	"selected_group": 0,
 	"settings":
@@ -3555,7 +4990,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 216.0,
+	"side_bar_width": 278.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

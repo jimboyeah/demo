@@ -1,0 +1,515 @@
+{
+	"folders":
+	[
+		{
+			"path": "../dotnet-clr"
+		}
+	],
+	"build_systems":
+	[
+		{
+			"name": "clr - all",
+			"cmd": ["C:/MinGW/bin/ninja.exe", "-f", "build.ninja", "all"],
+			"working_dir": "${project_path}",
+			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)"
+		},
+		{
+			"name": "clr - clean",
+			"cmd": ["C:/MinGW/bin/ninja.exe", "-f", "build.ninja", "clean"],
+			"working_dir": "${project_path}",
+			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)"
+		},
+		{
+			"name": "clr - friend_assemblies_2",
+			"cmd": ["C:/MinGW/bin/ninja.exe", "-f", "build.ninja", "friend_assemblies_2"],
+			"working_dir": "${project_path}",
+			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)"
+		},
+		{
+			"name": "clr - friend_assemblies_2/fast",
+			"cmd": ["C:/MinGW/bin/ninja.exe", "-f", "build.ninja", "friend_assemblies_2/fast"],
+			"working_dir": "${project_path}",
+			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)"
+		},
+		{
+			"name": "clr - mcppv2_gcnew_2",
+			"cmd": ["C:/MinGW/bin/ninja.exe", "-f", "build.ninja", "mcppv2_gcnew_2"],
+			"working_dir": "${project_path}",
+			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)"
+		},
+		{
+			"name": "clr - mcppv2_gcnew_2/fast",
+			"cmd": ["C:/MinGW/bin/ninja.exe", "-f", "build.ninja", "mcppv2_gcnew_2/fast"],
+			"working_dir": "${project_path}",
+			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)"
+		},
+		{
+			"name": "clr - abstract_native_keyword",
+			"cmd": ["C:/MinGW/bin/ninja.exe", "-f", "build.ninja", "abstract_native_keyword"],
+			"working_dir": "${project_path}",
+			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)"
+		},
+		{
+			"name": "clr - abstract_native_keyword/fast",
+			"cmd": ["C:/MinGW/bin/ninja.exe", "-f", "build.ninja", "abstract_native_keyword/fast"],
+			"working_dir": "${project_path}",
+			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)"
+		},
+		{
+			"name": "clr - plugin_application",
+			"cmd": ["C:/MinGW/bin/ninja.exe", "-f", "build.ninja", "plugin_application"],
+			"working_dir": "${project_path}",
+			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)"
+		},
+		{
+			"name": "clr - plugin_application/fast",
+			"cmd": ["C:/MinGW/bin/ninja.exe", "-f", "build.ninja", "plugin_application/fast"],
+			"working_dir": "${project_path}",
+			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)"
+		},
+		{
+			"name": "clr - compiler_type_traits",
+			"cmd": ["C:/MinGW/bin/ninja.exe", "-f", "build.ninja", "compiler_type_traits"],
+			"working_dir": "${project_path}",
+			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)"
+		},
+		{
+			"name": "clr - compiler_type_traits/fast",
+			"cmd": ["C:/MinGW/bin/ninja.exe", "-f", "build.ninja", "compiler_type_traits/fast"],
+			"working_dir": "${project_path}",
+			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)"
+		},
+		{
+			"name": "clr - explicit_override_2",
+			"cmd": ["C:/MinGW/bin/ninja.exe", "-f", "build.ninja", "explicit_override_2"],
+			"working_dir": "${project_path}",
+			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)"
+		},
+		{
+			"name": "clr - explicit_override_2/fast",
+			"cmd": ["C:/MinGW/bin/ninja.exe", "-f", "build.ninja", "explicit_override_2/fast"],
+			"working_dir": "${project_path}",
+			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)"
+		},
+		{
+			"name": "clr - tracking_reference_handles",
+			"cmd": ["C:/MinGW/bin/ninja.exe", "-f", "build.ninja", "tracking_reference_handles"],
+			"working_dir": "${project_path}",
+			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)"
+		},
+		{
+			"name": "clr - tracking_reference_handles/fast",
+			"cmd": ["C:/MinGW/bin/ninja.exe", "-f", "build.ninja", "tracking_reference_handles/fast"],
+			"working_dir": "${project_path}",
+			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)"
+		},
+		{
+			"name": "clr - string_operators",
+			"cmd": ["C:/MinGW/bin/ninja.exe", "-f", "build.ninja", "string_operators"],
+			"working_dir": "${project_path}",
+			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)"
+		},
+		{
+			"name": "clr - string_operators/fast",
+			"cmd": ["C:/MinGW/bin/ninja.exe", "-f", "build.ninja", "string_operators/fast"],
+			"working_dir": "${project_path}",
+			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)"
+		},
+		{
+			"name": "clr - explicit_override_1",
+			"cmd": ["C:/MinGW/bin/ninja.exe", "-f", "build.ninja", "explicit_override_1"],
+			"working_dir": "${project_path}",
+			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)"
+		},
+		{
+			"name": "clr - explicit_override_1/fast",
+			"cmd": ["C:/MinGW/bin/ninja.exe", "-f", "build.ninja", "explicit_override_1/fast"],
+			"working_dir": "${project_path}",
+			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)"
+		},
+		{
+			"name": "clr - tracking_reference_valuetypes_4",
+			"cmd": ["C:/MinGW/bin/ninja.exe", "-f", "build.ninja", "tracking_reference_valuetypes_4"],
+			"working_dir": "${project_path}",
+			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)"
+		},
+		{
+			"name": "clr - tracking_reference_valuetypes_4/fast",
+			"cmd": ["C:/MinGW/bin/ninja.exe", "-f", "build.ninja", "tracking_reference_valuetypes_4/fast"],
+			"working_dir": "${project_path}",
+			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)"
+		},
+		{
+			"name": "clr - declspec_appdomain",
+			"cmd": ["C:/MinGW/bin/ninja.exe", "-f", "build.ninja", "declspec_appdomain"],
+			"working_dir": "${project_path}",
+			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)"
+		},
+		{
+			"name": "clr - declspec_appdomain/fast",
+			"cmd": ["C:/MinGW/bin/ninja.exe", "-f", "build.ninja", "declspec_appdomain/fast"],
+			"working_dir": "${project_path}",
+			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)"
+		},
+		{
+			"name": "clr - extending_metadata_b",
+			"cmd": ["C:/MinGW/bin/ninja.exe", "-f", "build.ninja", "extending_metadata_b"],
+			"working_dir": "${project_path}",
+			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)"
+		},
+		{
+			"name": "clr - extending_metadata_b/fast",
+			"cmd": ["C:/MinGW/bin/ninja.exe", "-f", "build.ninja", "extending_metadata_b/fast"],
+			"working_dir": "${project_path}",
+			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)"
+		},
+		{
+			"name": "clr - explicit_override_3",
+			"cmd": ["C:/MinGW/bin/ninja.exe", "-f", "build.ninja", "explicit_override_3"],
+			"working_dir": "${project_path}",
+			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)"
+		},
+		{
+			"name": "clr - explicit_override_3/fast",
+			"cmd": ["C:/MinGW/bin/ninja.exe", "-f", "build.ninja", "explicit_override_3/fast"],
+			"working_dir": "${project_path}",
+			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)"
+		},
+		{
+			"name": "clr - generics_overview_2",
+			"cmd": ["C:/MinGW/bin/ninja.exe", "-f", "build.ninja", "generics_overview_2"],
+			"working_dir": "${project_path}",
+			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)"
+		},
+		{
+			"name": "clr - generics_overview_2/fast",
+			"cmd": ["C:/MinGW/bin/ninja.exe", "-f", "build.ninja", "generics_overview_2/fast"],
+			"working_dir": "${project_path}",
+			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)"
+		},
+		{
+			"name": "clr - tracking_reference_valuetypes_1",
+			"cmd": ["C:/MinGW/bin/ninja.exe", "-f", "build.ninja", "tracking_reference_valuetypes_1"],
+			"working_dir": "${project_path}",
+			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)"
+		},
+		{
+			"name": "clr - tracking_reference_valuetypes_1/fast",
+			"cmd": ["C:/MinGW/bin/ninja.exe", "-f", "build.ninja", "tracking_reference_valuetypes_1/fast"],
+			"working_dir": "${project_path}",
+			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)"
+		},
+		{
+			"name": "clr - generics_overview_3",
+			"cmd": ["C:/MinGW/bin/ninja.exe", "-f", "build.ninja", "generics_overview_3"],
+			"working_dir": "${project_path}",
+			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)"
+		},
+		{
+			"name": "clr - generics_overview_3/fast",
+			"cmd": ["C:/MinGW/bin/ninja.exe", "-f", "build.ninja", "generics_overview_3/fast"],
+			"working_dir": "${project_path}",
+			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)"
+		},
+		{
+			"name": "clr - mcppv2_paramarray",
+			"cmd": ["C:/MinGW/bin/ninja.exe", "-f", "build.ninja", "mcppv2_paramarray"],
+			"working_dir": "${project_path}",
+			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)"
+		},
+		{
+			"name": "clr - mcppv2_paramarray/fast",
+			"cmd": ["C:/MinGW/bin/ninja.exe", "-f", "build.ninja", "mcppv2_paramarray/fast"],
+			"working_dir": "${project_path}",
+			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)"
+		},
+		{
+			"name": "clr - mcpp_paramarray4",
+			"cmd": ["C:/MinGW/bin/ninja.exe", "-f", "build.ninja", "mcpp_paramarray4"],
+			"working_dir": "${project_path}",
+			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)"
+		},
+		{
+			"name": "clr - mcpp_paramarray4/fast",
+			"cmd": ["C:/MinGW/bin/ninja.exe", "-f", "build.ninja", "mcpp_paramarray4/fast"],
+			"working_dir": "${project_path}",
+			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)"
+		},
+		{
+			"name": "clr - mcppv2_array_of_arrays",
+			"cmd": ["C:/MinGW/bin/ninja.exe", "-f", "build.ninja", "mcppv2_array_of_arrays"],
+			"working_dir": "${project_path}",
+			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)"
+		},
+		{
+			"name": "clr - mcppv2_array_of_arrays/fast",
+			"cmd": ["C:/MinGW/bin/ninja.exe", "-f", "build.ninja", "mcppv2_array_of_arrays/fast"],
+			"working_dir": "${project_path}",
+			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)"
+		},
+		{
+			"name": "clr - mcppv2_gcnew_1",
+			"cmd": ["C:/MinGW/bin/ninja.exe", "-f", "build.ninja", "mcppv2_gcnew_1"],
+			"working_dir": "${project_path}",
+			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)"
+		},
+		{
+			"name": "clr - mcppv2_gcnew_1/fast",
+			"cmd": ["C:/MinGW/bin/ninja.exe", "-f", "build.ninja", "mcppv2_gcnew_1/fast"],
+			"working_dir": "${project_path}",
+			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)"
+		},
+		{
+			"name": "clr - MathLibrary",
+			"cmd": ["C:/MinGW/bin/ninja.exe", "-f", "build.ninja", "MathLibrary"],
+			"working_dir": "${project_path}",
+			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)"
+		},
+		{
+			"name": "clr - MathLibrary/fast",
+			"cmd": ["C:/MinGW/bin/ninja.exe", "-f", "build.ninja", "MathLibrary/fast"],
+			"working_dir": "${project_path}",
+			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)"
+		},
+		{
+			"name": "clr - multidimensional_arrays",
+			"cmd": ["C:/MinGW/bin/ninja.exe", "-f", "build.ninja", "multidimensional_arrays"],
+			"working_dir": "${project_path}",
+			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)"
+		},
+		{
+			"name": "clr - multidimensional_arrays/fast",
+			"cmd": ["C:/MinGW/bin/ninja.exe", "-f", "build.ninja", "multidimensional_arrays/fast"],
+			"working_dir": "${project_path}",
+			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)"
+		},
+		{
+			"name": "clr - override_native_keyword",
+			"cmd": ["C:/MinGW/bin/ninja.exe", "-f", "build.ninja", "override_native_keyword"],
+			"working_dir": "${project_path}",
+			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)"
+		},
+		{
+			"name": "clr - override_native_keyword/fast",
+			"cmd": ["C:/MinGW/bin/ninja.exe", "-f", "build.ninja", "override_native_keyword/fast"],
+			"working_dir": "${project_path}",
+			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)"
+		},
+		{
+			"name": "clr - self_reflection",
+			"cmd": ["C:/MinGW/bin/ninja.exe", "-f", "build.ninja", "self_reflection"],
+			"working_dir": "${project_path}",
+			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)"
+		},
+		{
+			"name": "clr - self_reflection/fast",
+			"cmd": ["C:/MinGW/bin/ninja.exe", "-f", "build.ninja", "self_reflection/fast"],
+			"working_dir": "${project_path}",
+			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)"
+		},
+		{
+			"name": "clr - string_operators_2",
+			"cmd": ["C:/MinGW/bin/ninja.exe", "-f", "build.ninja", "string_operators_2"],
+			"working_dir": "${project_path}",
+			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)"
+		},
+		{
+			"name": "clr - string_operators_2/fast",
+			"cmd": ["C:/MinGW/bin/ninja.exe", "-f", "build.ninja", "string_operators_2/fast"],
+			"working_dir": "${project_path}",
+			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)"
+		},
+		{
+			"name": "clr - string_operators_3",
+			"cmd": ["C:/MinGW/bin/ninja.exe", "-f", "build.ninja", "string_operators_3"],
+			"working_dir": "${project_path}",
+			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)"
+		},
+		{
+			"name": "clr - string_operators_3/fast",
+			"cmd": ["C:/MinGW/bin/ninja.exe", "-f", "build.ninja", "string_operators_3/fast"],
+			"working_dir": "${project_path}",
+			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)"
+		},
+		{
+			"name": "clr - tracking_reference_data",
+			"cmd": ["C:/MinGW/bin/ninja.exe", "-f", "build.ninja", "tracking_reference_data"],
+			"working_dir": "${project_path}",
+			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)"
+		},
+		{
+			"name": "clr - tracking_reference_data/fast",
+			"cmd": ["C:/MinGW/bin/ninja.exe", "-f", "build.ninja", "tracking_reference_data/fast"],
+			"working_dir": "${project_path}",
+			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)"
+		},
+		{
+			"name": "clr - tracking_reference_interior_ptr",
+			"cmd": ["C:/MinGW/bin/ninja.exe", "-f", "build.ninja", "tracking_reference_interior_ptr"],
+			"working_dir": "${project_path}",
+			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)"
+		},
+		{
+			"name": "clr - tracking_reference_interior_ptr/fast",
+			"cmd": ["C:/MinGW/bin/ninja.exe", "-f", "build.ninja", "tracking_reference_interior_ptr/fast"],
+			"working_dir": "${project_path}",
+			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)"
+		},
+		{
+			"name": "clr - tracking_reference_template",
+			"cmd": ["C:/MinGW/bin/ninja.exe", "-f", "build.ninja", "tracking_reference_template"],
+			"working_dir": "${project_path}",
+			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)"
+		},
+		{
+			"name": "clr - tracking_reference_template/fast",
+			"cmd": ["C:/MinGW/bin/ninja.exe", "-f", "build.ninja", "tracking_reference_template/fast"],
+			"working_dir": "${project_path}",
+			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)"
+		},
+		{
+			"name": "clr - tracking_reference_valuetypes_2",
+			"cmd": ["C:/MinGW/bin/ninja.exe", "-f", "build.ninja", "tracking_reference_valuetypes_2"],
+			"working_dir": "${project_path}",
+			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)"
+		},
+		{
+			"name": "clr - tracking_reference_valuetypes_2/fast",
+			"cmd": ["C:/MinGW/bin/ninja.exe", "-f", "build.ninja", "tracking_reference_valuetypes_2/fast"],
+			"working_dir": "${project_path}",
+			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)"
+		},
+		{
+			"name": "clr - tracking_reference_valuetypes_3",
+			"cmd": ["C:/MinGW/bin/ninja.exe", "-f", "build.ninja", "tracking_reference_valuetypes_3"],
+			"working_dir": "${project_path}",
+			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)"
+		},
+		{
+			"name": "clr - tracking_reference_valuetypes_3/fast",
+			"cmd": ["C:/MinGW/bin/ninja.exe", "-f", "build.ninja", "tracking_reference_valuetypes_3/fast"],
+			"working_dir": "${project_path}",
+			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)"
+		},
+		{
+			"name": "clr - vcpp_reflection_2",
+			"cmd": ["C:/MinGW/bin/ninja.exe", "-f", "build.ninja", "vcpp_reflection_2"],
+			"working_dir": "${project_path}",
+			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)"
+		},
+		{
+			"name": "clr - vcpp_reflection_2/fast",
+			"cmd": ["C:/MinGW/bin/ninja.exe", "-f", "build.ninja", "vcpp_reflection_2/fast"],
+			"working_dir": "${project_path}",
+			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)"
+		},
+		{
+			"name": "clr - vcmcppv2_explicit_boxing2",
+			"cmd": ["C:/MinGW/bin/ninja.exe", "-f", "build.ninja", "vcmcppv2_explicit_boxing2"],
+			"working_dir": "${project_path}",
+			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)"
+		},
+		{
+			"name": "clr - vcmcppv2_explicit_boxing2/fast",
+			"cmd": ["C:/MinGW/bin/ninja.exe", "-f", "build.ninja", "vcmcppv2_explicit_boxing2/fast"],
+			"working_dir": "${project_path}",
+			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)"
+		},
+		{
+			"name": "clr - vcpp_reflection",
+			"cmd": ["C:/MinGW/bin/ninja.exe", "-f", "build.ninja", "vcpp_reflection"],
+			"working_dir": "${project_path}",
+			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)"
+		},
+		{
+			"name": "clr - vcpp_reflection/fast",
+			"cmd": ["C:/MinGW/bin/ninja.exe", "-f", "build.ninja", "vcpp_reflection/fast"],
+			"working_dir": "${project_path}",
+			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)"
+		},
+		{
+			"name": "clr - vcpp_reflection_3",
+			"cmd": ["C:/MinGW/bin/ninja.exe", "-f", "build.ninja", "vcpp_reflection_3"],
+			"working_dir": "${project_path}",
+			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)"
+		},
+		{
+			"name": "clr - vcpp_reflection_3/fast",
+			"cmd": ["C:/MinGW/bin/ninja.exe", "-f", "build.ninja", "vcpp_reflection_3/fast"],
+			"working_dir": "${project_path}",
+			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)"
+		},
+		{
+			"name": "clr - vcpp_reflection_4",
+			"cmd": ["C:/MinGW/bin/ninja.exe", "-f", "build.ninja", "vcpp_reflection_4"],
+			"working_dir": "${project_path}",
+			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)"
+		},
+		{
+			"name": "clr - vcpp_reflection_4/fast",
+			"cmd": ["C:/MinGW/bin/ninja.exe", "-f", "build.ninja", "vcpp_reflection_4/fast"],
+			"working_dir": "${project_path}",
+			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)"
+		},
+		{
+			"name": "clr - vcpp_reflection_6",
+			"cmd": ["C:/MinGW/bin/ninja.exe", "-f", "build.ninja", "vcpp_reflection_6"],
+			"working_dir": "${project_path}",
+			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)"
+		},
+		{
+			"name": "clr - vcpp_reflection_6/fast",
+			"cmd": ["C:/MinGW/bin/ninja.exe", "-f", "build.ninja", "vcpp_reflection_6/fast"],
+			"working_dir": "${project_path}",
+			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)"
+		},
+		{
+			"name": "clr - MathClient",
+			"cmd": ["C:/MinGW/bin/ninja.exe", "-f", "build.ninja", "MathClient"],
+			"working_dir": "${project_path}",
+			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)"
+		},
+		{
+			"name": "clr - MathClient/fast",
+			"cmd": ["C:/MinGW/bin/ninja.exe", "-f", "build.ninja", "MathClient/fast"],
+			"working_dir": "${project_path}",
+			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)"
+		},
+		{
+			"name": "clr - clr-gui",
+			"cmd": ["C:/MinGW/bin/ninja.exe", "-f", "build.ninja", "clr-gui"],
+			"working_dir": "${project_path}",
+			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)"
+		},
+		{
+			"name": "clr - clr-gui/fast",
+			"cmd": ["C:/MinGW/bin/ninja.exe", "-f", "build.ninja", "clr-gui/fast"],
+			"working_dir": "${project_path}",
+			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)"
+		},
+		{
+			"name": "clr - clr-res",
+			"cmd": ["C:/MinGW/bin/ninja.exe", "-f", "build.ninja", "clr-res"],
+			"working_dir": "${project_path}",
+			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)"
+		},
+		{
+			"name": "clr - clr-res/fast",
+			"cmd": ["C:/MinGW/bin/ninja.exe", "-f", "build.ninja", "clr-res/fast"],
+			"working_dir": "${project_path}",
+			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)"
+		},
+		{
+			"name": "clr - edit_cache",
+			"cmd": ["C:/MinGW/bin/ninja.exe", "-f", "build.ninja", "edit_cache"],
+			"working_dir": "${project_path}",
+			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)"
+		},
+		{
+			"name": "clr - rebuild_cache",
+			"cmd": ["C:/MinGW/bin/ninja.exe", "-f", "build.ninja", "rebuild_cache"],
+			"working_dir": "${project_path}",
+			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)"
+		}
+	]
+}

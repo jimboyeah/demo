@@ -66,7 +66,10 @@ BOOL Toggle(const char *name,  int state=SW_SHOW){
 int32_t main(int argc, char ** argv)
 {
     if (argc==1){
-        printf("Usage demo: toggle notepad.exe");
+        printf(
+            "Usage demo:\n"
+            "--> 1st: run notepad.exe for the first\n"
+            "--> 2nd: toggle notepad.exe");
         return 0;
     }
 
@@ -89,7 +92,7 @@ int32_t main(int argc, char ** argv)
         GetClassName(parent, wndNameChild, 256);
         if (parent == NULL)
         {
-            printf("%p --> Main Window [%s, %s]\n", hwn, wndName, wndNameChild);
+            printf("%p --> Main and Child Window Name[%s, %s]\n", hwn, wndName, wndNameChild);
         }
         else
         {

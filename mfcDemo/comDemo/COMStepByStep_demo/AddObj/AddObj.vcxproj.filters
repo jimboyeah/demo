@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="AddObj.cpp" />
+    <ClCompile Include="AddObjFactory.cpp" />
+    <ClCompile Include="Exports.cpp" />
+    <ClCompile Include="REGISTRY.CPP" />
+    <ClCompile Include="dlldata.c" />
+    <ClCompile Include="Factory.cpp" />
+    <ClCompile Include="IAdd_i.c" />
+    <ClCompile Include="IAdd_p.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="Exports.def" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="resource.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Midl Include="IAdd.idl" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="headers">
+      <UniqueIdentifier>{d07ebdae-64e5-4eb2-ba60-8c538409058e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AddObj.h">
+      <Filter>headers</Filter>
+    </ClInclude>
+    <ClInclude Include="AddObjFactory.h">
+      <Filter>headers</Filter>
+    </ClInclude>
+    <ClInclude Include="AddObjGuid.h">
+      <Filter>headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Factory.h">
+      <Filter>headers</Filter>
+    </ClInclude>
+    <ClInclude Include="IAdd.h">
+      <Filter>headers</Filter>
+    </ClInclude>
+    <ClInclude Include="REGISTRY.H">
+      <Filter>headers</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>headers</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

@@ -68,18 +68,6 @@
 			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)"
 		},
 		{
-			"name": "cppDemo - arguments-list-avg",
-			"cmd": ["C:/MinGW/bin/ninja.exe", "-f", "build.ninja", "arguments-list-avg"],
-			"working_dir": "${project_path}",
-			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)"
-		},
-		{
-			"name": "cppDemo - arguments-list-avg/fast",
-			"cmd": ["C:/MinGW/bin/ninja.exe", "-f", "build.ninja", "arguments-list-avg/fast"],
-			"working_dir": "${project_path}",
-			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)"
-		},
-		{
 			"name": "cppDemo - rt",
 			"cmd": ["C:/MinGW/bin/ninja.exe", "-f", "build.ninja", "rt"],
 			"working_dir": "${project_path}",
@@ -88,6 +76,18 @@
 		{
 			"name": "cppDemo - rt/fast",
 			"cmd": ["C:/MinGW/bin/ninja.exe", "-f", "build.ninja", "rt/fast"],
+			"working_dir": "${project_path}",
+			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)"
+		},
+		{
+			"name": "cppDemo - arguments-list-avg",
+			"cmd": ["C:/MinGW/bin/ninja.exe", "-f", "build.ninja", "arguments-list-avg"],
+			"working_dir": "${project_path}",
+			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)"
+		},
+		{
+			"name": "cppDemo - arguments-list-avg/fast",
+			"cmd": ["C:/MinGW/bin/ninja.exe", "-f", "build.ninja", "arguments-list-avg/fast"],
 			"working_dir": "${project_path}",
 			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)"
 		},
@@ -236,12 +236,6 @@
 			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)"
 		},
 		{
-			"name": "cppDemo - test",
-			"cmd": ["C:/MinGW/bin/ninja.exe", "-f", "build.ninja", "test"],
-			"working_dir": "${project_path}",
-			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)"
-		},
-		{
 			"name": "cppDemo - decltype",
 			"cmd": ["C:/MinGW/bin/ninja.exe", "-f", "build.ninja", "decltype"],
 			"working_dir": "${project_path}",
@@ -338,6 +332,18 @@
 			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)"
 		},
 		{
+			"name": "cppDemo - enum",
+			"cmd": ["C:/MinGW/bin/ninja.exe", "-f", "build.ninja", "enum"],
+			"working_dir": "${project_path}",
+			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)"
+		},
+		{
+			"name": "cppDemo - enum/fast",
+			"cmd": ["C:/MinGW/bin/ninja.exe", "-f", "build.ninja", "enum/fast"],
+			"working_dir": "${project_path}",
+			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)"
+		},
+		{
 			"name": "cppDemo - file-binary",
 			"cmd": ["C:/MinGW/bin/ninja.exe", "-f", "build.ninja", "file-binary"],
 			"working_dir": "${project_path}",
@@ -386,14 +392,14 @@
 			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)"
 		},
 		{
-			"name": "cppDemo - z01-demo",
-			"cmd": ["C:/MinGW/bin/ninja.exe", "-f", "build.ninja", "z01-demo"],
+			"name": "cppDemo - stream-file",
+			"cmd": ["C:/MinGW/bin/ninja.exe", "-f", "build.ninja", "stream-file"],
 			"working_dir": "${project_path}",
 			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)"
 		},
 		{
-			"name": "cppDemo - z01-demo/fast",
-			"cmd": ["C:/MinGW/bin/ninja.exe", "-f", "build.ninja", "z01-demo/fast"],
+			"name": "cppDemo - stream-file/fast",
+			"cmd": ["C:/MinGW/bin/ninja.exe", "-f", "build.ninja", "stream-file/fast"],
 			"working_dir": "${project_path}",
 			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)"
 		},
@@ -602,6 +608,18 @@
 			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)"
 		},
 		{
+			"name": "cppDemo - override",
+			"cmd": ["C:/MinGW/bin/ninja.exe", "-f", "build.ninja", "override"],
+			"working_dir": "${project_path}",
+			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)"
+		},
+		{
+			"name": "cppDemo - override/fast",
+			"cmd": ["C:/MinGW/bin/ninja.exe", "-f", "build.ninja", "override/fast"],
+			"working_dir": "${project_path}",
+			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)"
+		},
+		{
 			"name": "cppDemo - reference-lvalue",
 			"cmd": ["C:/MinGW/bin/ninja.exe", "-f", "build.ninja", "reference-lvalue"],
 			"working_dir": "${project_path}",
@@ -622,6 +640,18 @@
 		{
 			"name": "cppDemo - wchar/fast",
 			"cmd": ["C:/MinGW/bin/ninja.exe", "-f", "build.ninja", "wchar/fast"],
+			"working_dir": "${project_path}",
+			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)"
+		},
+		{
+			"name": "cppDemo - w04-server",
+			"cmd": ["C:/MinGW/bin/ninja.exe", "-f", "build.ninja", "w04-server"],
+			"working_dir": "${project_path}",
+			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)"
+		},
+		{
+			"name": "cppDemo - w04-server/fast",
+			"cmd": ["C:/MinGW/bin/ninja.exe", "-f", "build.ninja", "w04-server/fast"],
 			"working_dir": "${project_path}",
 			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)"
 		},
@@ -766,6 +796,24 @@
 		{
 			"name": "cppDemo - ft02-colored/fast",
 			"cmd": ["C:/MinGW/bin/ninja.exe", "-f", "build.ninja", "ft02-colored/fast"],
+			"working_dir": "${project_path}",
+			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)"
+		},
+		{
+			"name": "cppDemo - z01-demo",
+			"cmd": ["C:/MinGW/bin/ninja.exe", "-f", "build.ninja", "z01-demo"],
+			"working_dir": "${project_path}",
+			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)"
+		},
+		{
+			"name": "cppDemo - z01-demo/fast",
+			"cmd": ["C:/MinGW/bin/ninja.exe", "-f", "build.ninja", "z01-demo/fast"],
+			"working_dir": "${project_path}",
+			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)"
+		},
+		{
+			"name": "cppDemo - test",
+			"cmd": ["C:/MinGW/bin/ninja.exe", "-f", "build.ninja", "test"],
 			"working_dir": "${project_path}",
 			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)"
 		},

@@ -9,7 +9,7 @@ project( cppDemo )
 # set(CMAKE_C_FLAGS "-std=c99 -ffunction-sections -fdata-sections")
 # set(CMAKE_C_STANDARD 99)
 set(CMAKE_C_STANDARD_REQUIRED True)
-set(CMAKE_CXX_FLAGS "-std=c++11 -Wl,-Map=object.map,--cref,--gc-section" )
+set(CMAKE_CXX_FLAGS "-std=c++11 -O2 -s -Wl,-Map=object.map,--cref,--gc-section" )
 
 set(BUILD_SHARED_LIBS ON)
 option(BUILD_SHARED_LIBS "Build using shared libraries" ON)
@@ -48,7 +48,7 @@ aux_source_directory("src/" src)
 foreach(item ${src})
     string(REGEX REPLACE ".*/(.*)\\..*$" "\\1" name ${item})
     if(name STREQUAL "bin")
-        message(STATUS "----------------------> ${item}")
+        message(STATUS "--------> use for ex stream-file.cpp canceld build ${item}")
         continue()
     endif(name STREQUAL "bin")
     AddDemo(${name} ${item})
@@ -65,11 +65,18 @@ message("Win32 DEMOS LIST:")
 aux_source_directory("win32/" win32)
 foreach(item ${win32})
     string(REGEX REPLACE ".*/(.*)\\..*$" "\\1" name ${item})
-    AddDemo(${name} ${item})
-    target_link_libraries( ${name} kernel32 user32 Winmm gdi32 winspool comdlg32 advapi32 shell32 ole32 oleaut32 uuid odbc32 odbccp32 )
+    if(name MATCHES "gui")
+        # /SUBSYSTEM:WINDOWS
+        AddDemo(${name} WIN32 ${item})
+    else(name MATCHES "gui")
+        # /SUBSYSTEM:CONSOLE
+        AddDemo(${name} ${item})
+    endif(name MATCHES "gui")
+    target_link_libraries( ${name} kernel32 user32 Winmm gdi32 winspool comdlg32 advapi32 shell32 ole32 oleaut32 uuid odbc32 odbccp32 ws2_32)
     # set_target_properties (${name} PROPERTIES LINK_OPTIONS "LINKER:--subsystem,console")
     # target_link_options( ${name} PUBLIC LINKER:--subsystem,console)
 endforeach(item)
+
 
 message("Base Lib DEMOS LIST:")
 aux_source_directory("base/" base)
@@ -106,4 +113,3 @@ SET_TESTS_PROPERTIES(string
     PROPERTIES PASS_REGULAR_EXPRESSION 
     # "[\n\r.]*[\n\r.]*[\n\r.]*")
     "str3 : Hello[\n\r]*str1 \\+ str2 : HelloWorld[\n\r]*str3.size\\(\\) :  10[\n\r]*")
-

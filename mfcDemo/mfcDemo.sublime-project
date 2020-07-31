@@ -2,7 +2,15 @@
 	"build_systems":
 	[
 		{
-			"cmd": ["C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Auxiliary/Build/vcvars64.bat", "&&", "cmake", "..", "-G", "Sublime Text 2 - Ninja"],
+			"cmd":
+			[
+				"C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Auxiliary/Build/vcvars64.bat",
+				"&&",
+				"cmake",
+				"..",
+				"-G",
+				"Sublime Text 2 - Ninja"
+			],
 			"encoding": "utf8",
 			"file_regex": "^  (.+)\\((\\d+)\\)(): ((?:fatal )?(?:error|warning) \\w+\\d\\d\\d\\d: .*) \\[.*$",
 			"name": "☾♬ Ninja (Windows)",
@@ -10,7 +18,15 @@
 			"working_dir": "${project_path}/ninja"
 		},
 		{
-			"cmd": ["ninja.exe", "-f", "build.ninja", "all"],
+			"cmd":
+			[
+				"C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Auxiliary/Build/vcvars64.bat",
+				"&&",
+				"ninja.exe",
+				"-f",
+				"build.ninja",
+				"all"
+			],
 			"encoding": "gbk",
 			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)",
 			"name": "☾♬ Ninja - all",
@@ -18,7 +34,13 @@
 			"working_dir": "${project_path}/ninja"
 		},
 		{
-			"cmd": ["ninja.exe", "-f", "build.ninja", "clean"],
+			"cmd":
+			[
+				"ninja.exe",
+				"-f",
+				"build.ninja",
+				"clean"
+			],
 			"encoding": "utf8",
 			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)",
 			"name": "☾♬ Ninja - clean",
@@ -26,7 +48,15 @@
 			"working_dir": "${project_path}/ninja"
 		},
 		{
-			"cmd": ["ninja.exe", "-f", "build.ninja", "edit_cache"],
+			"cmd":
+			[
+				"C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Auxiliary/Build/vcvars64.bat",
+				"&&",
+				"ninja.exe",
+				"-f",
+				"build.ninja",
+				"edit_cache"
+			],
 			"encoding": "utf8",
 			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)",
 			"name": "☾♬ Ninja - edit_cache",
@@ -34,7 +64,13 @@
 			"working_dir": "${project_path}/ninja"
 		},
 		{
-			"cmd": ["ninja.exe", "-f", "build.ninja", "rebuild_cache"],
+			"cmd":
+			[
+				"ninja.exe",
+				"-f",
+				"build.ninja",
+				"rebuild_cache"
+			],
 			"encoding": "utf8",
 			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)",
 			"name": "☾♬ Ninja - rebuild_cache",
@@ -96,6 +132,16 @@
 		},
 		{
 			"path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Auxiliary"
+		},
+		{
+			"path": "C:\\coding\\md-code\\vcppnet"
+		},
+		{
+			"path": "C:\\coding\\md-code\\winprog5th"
+		},
+		{
+			"name":"VS 97 MFC Sample",
+			"path": "D:\\DEVSTUDIO\\VC\\SAMPLES\\MFC"
 		}
 	]
 }

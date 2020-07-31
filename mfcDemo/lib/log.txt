@@ -1,0 +1,10 @@
+lib.cpp: DLL_PROCESS_DETACH
+lib.cpp: DLL_PROCESS_ATTACH
+Global constant PI: 3.14159
+LibTest::Max(9, 8): 9
+Test:9 + 8 = 17
+Test: Test message...
+Load DLL 00007FFF2FC80000
+Load add function 00007FFF2FC91069
+Test: 9 + 8 = 17
+lib.cpp: DLL_PROCESS_DETACH

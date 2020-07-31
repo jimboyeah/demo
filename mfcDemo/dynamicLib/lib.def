@@ -1,0 +1,37 @@
+;Test.def
+;Usage: lib /machine:x64 /def:"..\dynamicLib\Test.def" /out:dynamicLib.lib
+;link to dynamicLib.dll
+LIBRARY dynamicLib
+VERSION 0.1
+
+EXPORTS
+    ??0LibTest@@QEAA@XZ         @1
+    Max             @2
+    ?Pi@LibTest@@2NB              @3 DATA
+    Test            @4
+    PI              @5 DATA
+    add             @6
+    getText         @7
+
+; dumpbin /EXPORTS dynamicLib_d.dll
+;
+; dllexport style:
+;    ordinal hint RVA      name
+;
+;          1    0 00011050 ??0LibTest@@QEAA@XZ = @ILT+75(??0LibTest@@QEAA@XZ)
+;          2    1 0001104B ?Max@LibTest@@SAHHH@Z = @ILT+70(?Max@LibTest@@SAHHH@Z)
+;          3    2 00014000 ?PI@LibTest@@2NB = ?PI@LibTest@@2NB (public: static double const LibTest::PI)
+;          4    3 00011078 ?Test@LibTest@@QEAAXXZ = @ILT+115(?Test@LibTest@@QEAAXXZ)
+;          5    4 00014008 PI = PI
+;          6    5 0001102D add = @ILT+40(add)
+;          7    6 00011069 getText = @ILT+100(getText)
+; DEF style:
+;    ordinal hint RVA      name
+;
+;          8    0 00011113 ??0LibTest@@QEAA@XZ = @ILT+270(??0LibTest@@QEAA@XZ)
+;          2    1 00011109 Max = @ILT+260(?Max@LibTest@@SAHHH@Z)
+;          5    2 00018888 PI = PI
+;          3    3 00018880 Pi = ?Pi@LibTest@@2NB (public: static double const LibTest::Pi)
+;          4    4 0001119F Test = @ILT+410(?Test@LibTest@@QEAAXXZ)
+;          6    5 00011069 add = @ILT+100(add)
+;          7    6 00011172 getText = @ILT+365(getText)

@@ -1,0 +1,136 @@
+{
+	"build_systems":
+	[
+		{
+			"cmd":
+			[
+				"C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Auxiliary/Build/vcvars64.bat",
+				"&&",
+				"cmake",
+				"../dotnet-clr",
+				"-G",
+				"Sublime Text 2 - Ninja"
+			],
+			"encoding": "utf8",
+			"env":
+			{
+				"PATH": "c:/MinGW/bin/;%PATH%"
+			},
+			"file_regex": "^  (.+)\\((\\d+)\\)(): ((?:fatal )?(?:error|warning) \\w+\\d\\d\\d\\d: .*) \\[.*$",
+			"name": "Ninja Make(Windows)",
+			"quiet": true,
+			"working_dir": "${project_path}/ninja-msvc"
+		},
+		{
+			"cmd":
+			[
+				"C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Auxiliary/Build/vcvars64.bat",
+				"&&",
+				"C:/MinGW/bin/ninja.exe",
+				"-f",
+				"build.ninja",
+				"all"
+			],
+			"encoding": "gbk",
+			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)",
+			"name": "Ninja - all",
+			"quiet": true,
+			"working_dir": "${project_path}/ninja-msvc"
+		},
+		{
+			"cmd":
+			[
+				"C:/MinGW/bin/ninja.exe",
+				"-f",
+				"build.ninja",
+				"clean"
+			],
+			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)",
+			"name": "Ninja - clean",
+			"quiet": true,
+			"working_dir": "${project_path}/ninja-msvc"
+		},
+		{
+			"cmd":
+			[
+				"C:/MinGW/bin/ninja.exe",
+				"-f",
+				"build.ninja",
+				"rebuild_cache"
+			],
+			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)",
+			"name": "Ninja - rebuild_cache",
+			"quiet": true,
+			"working_dir": "${project_path}/ninja-msvc"
+		},
+		{
+			"cmd":
+			[
+				"C:/MinGW/bin/ninja.exe",
+				"-f",
+				"build.ninja",
+				"test"
+			],
+			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)",
+			"name": "Ninja - test",
+			"quiet": true,
+			"working_dir": "${project_path}/ninja-msvc"
+		},
+		{
+			"cmd":
+			[
+				"C:/MinGW/bin/ninja.exe",
+				"-f",
+				"build.ninja",
+				"edit_cache"
+			],
+			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)",
+			"name": "Ninja - edit_cache",
+			"quiet": true,
+			"working_dir": "${project_path}/ninja-msvc"
+		}
+	],
+	"folders":
+	[
+		{
+			"binary_file_patterns":
+			[
+				"*.noting"
+			],
+			"name": "♬☾ CPP Demo Project",
+			"path": "."
+		},
+		{
+			"path": "C:\\coding\\md-code\\dllDemo"
+		},
+		{
+			"path": "C:\\coding\\md-code\\git-demo"
+		},
+		{
+			"path": "C:\\coding\\src"
+		},
+		{
+			"path": "C:\\boost_1_73_0"
+		},
+		{
+			"path": "C:\\vcpkg\\buildtrees\\freetype"
+		},
+		{
+			"path": "C:\\coding\\md-code\\VCSamples"
+		},
+		{
+			"path": "C:\\coding\\md-code\\vcppnet"
+		},
+		{
+			"name":"MSBuild for VC v160",
+			"path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\MSBuild\\Microsoft\\VC\\v160"
+		}
+	],
+	"settings":
+	{
+		"cmake":
+		{
+			"build_folder": "${project_path}/build"
+		}
+	}
+}
