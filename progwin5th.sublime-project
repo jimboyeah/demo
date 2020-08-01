@@ -25,7 +25,8 @@
                 "ninja.exe",
                 "-f",
                 "build.ninja",
-                "all"
+                "BITLIB"
+                // "all"
             ],
             "encoding": "gbk",
             "file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)",

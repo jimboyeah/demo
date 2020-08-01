@@ -4,6 +4,18 @@
 		"selected_items":
 		[
 			[
+				"add",
+				"add_executable\tcommand"
+			],
+			[
+				"inclu",
+				"include_directories\tcommand"
+			],
+			[
+				"add_",
+				"add_library\tcommand"
+			],
+			[
 				"__",
 				"__LITTLE_ENDIAN__"
 			],
@@ -403,37 +415,29 @@
 			"file": "progwin5th.sublime-project",
 			"settings":
 			{
-				"buffer_size": 3717,
+				"buffer_size": 3745,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"contents": "cmake_minimum_required(VERSION 3.12)\nproject(petzold_pw5e C)\n# set(CMAKE_VERBOSE_MAKEFILE ON)#\n\n# NOTE:\n# Microsft Visual Studio requires MFC to be installed to compile .rc resources.\n#\n#\nset(CMAKE_C_STANDARD 11)\n\nset(CMAKE_C_FLAGS \"${CMAKE_C_FLAGS} -DSTRICT -DCMAKE_GENERATOR_PLATFORM=x64\")\nset(CMAKE_C_FLAGS \"${CMAKE_C_FLAGS} -D_WIN32_WINNT=0x0601 -DWINVER=0x0601\")\n\nif (MSVC)\n    # MSVC Compiler\nelse ()\n    set(CMAKE_C_FLAGS_DEBUG \"${CMAKE_C_FLAGS_DEBUG} -Wall -Wpedantic -Wextra\")\n    set(CMAKE_C_FLAGS_RELEASE \"${CMAKE_C_FLAGS_RELEASE} -Wall -Wpedantic -Wextra\")\nendif ()\n\nset(EXECUTABLE_OUTPUT_PATH \"${CMAKE_CURRENT_BINARY_DIR}\")\nset(EXECUTABLE_OUTPUT_PATH \"../bin\")\nset(LIBRARY_OUTPUT_PATH \"${PROJECT_SOURCE_DIR}/lib\")\n\n# =============================================================================\n# ================================================================== Chapter 01\n\nadd_executable(001_HelloMsg WIN32\n        \"CH01 Getting Started/01 HelloMsg/HelloMsg.c\")\n\n# ================================================================== Chapter 02\n\nadd_executable(002_ScrnSize WIN32\n        \"CH02 An Introduction to Unicode/01 ScrnSize/ScrnSize.c\")\n\n# ================================================================== Chapter 03\n# winmm.lib    - required library\n# HelloWin.wav - to be copied to exe directory\n\nadd_executable(003_HelloWin WIN32\n        \"CH03 Windows and Messages/01 HelloWin/HelloWin.c\"\n        \"CH03 Windows and Messages/01 HelloWin/HelloWin.wav\")\ntarget_link_libraries(003_HelloWin winmm.lib)\nadd_custom_command(\n        OUTPUT \"${EXECUTABLE_OUTPUT_PATH}/HelloWin.wav\"\n        COMMAND ${CMAKE_COMMAND} -E copy \"${CMAKE_CURRENT_SOURCE_DIR}/CH03 Windows and Messages/01 HelloWin/HelloWin.wav\" \"${EXECUTABLE_OUTPUT_PATH}\"\n        COMMENT \"Copying HelloWin.wav to exe directory\"\n        DEPENDS \"CH03 Windows and Messages/01 HelloWin/HelloWin.wav\")\nadd_custom_target(custom_target_hello_win ALL\n        DEPENDS \"${EXECUTABLE_OUTPUT_PATH}/HelloWin.wav\")\nadd_dependencies(003_HelloWin custom_target_hello_win)\n\n# # ================================================================== Chapter 04\n# # -------------------------------------------------------------- 04/01 SysMets1\n\n# add_executable(004_1_SysMets1 WIN32\n#         \"CH04 An Exercise in Text Output/01 SysMets1/SysMets1.c\"\n#         \"CH04 An Exercise in Text Output/01 SysMets1/SysMets.h\")\n# target_include_directories(004_SysMets1 PRIVATE \"CH04 An Exercise in Text Output/01 SysMets1\")\n\n# # -------------------------------------------------------------- 04/02 SysMets2\n# #                                                uses header file from SysMets1\n\n# add_executable(004_2_SysMets2 WIN32\n#         \"CH04 An Exercise in Text Output/02 SysMets2/SysMets2.c\"\n#         \"CH04 An Exercise in Text Output/01 SysMets1/SysMets.h\")\n# target_include_directories(005_SysMets2 PRIVATE \"CH04 An Exercise in Text Output/01 SysMets1\")\n\n# # -------------------------------------------------------------- 04/03 SysMets3\n# #                                                uses header file from SysMets1\n\n# add_executable(004_3_SysMets3 WIN32\n#         \"CH04 An Exercise in Text Output/03 SysMets3/SysMets3.c\"\n#         \"CH04 An Exercise in Text Output/01 SysMets1/SysMets.h\")\n# target_include_directories(006_SysMets3 PRIVATE \"CH04 An Exercise in Text Output/01 SysMets1\")\n\n# # ================================================================== Chapter 05\n\n# add_executable(005_1_DevCaps1 WIN32 \"CH05 Basic Drawing/01 DevCaps1/DevCaps1.c\")\n# add_executable(005_2_SineWave WIN32 \"CH05 Basic Drawing/02 SineWave/SineWave.c\")\n# add_executable(005_3_LineDemo WIN32 \"CH05 Basic Drawing/03 LineDemo/LineDemo.c\")\n# add_executable(005_4_Bezier WIN32 \"CH05 Basic Drawing/04 Bezier/Bezier.c\")\n# add_executable(005_5_AltWind WIN32 \"CH05 Basic Drawing/05 AltWind/AltWind.c\")\n# add_executable(005_6_WhatSize WIN32 \"CH05 Basic Drawing/06 WhatSize/WhatSize.c\")\n# add_executable(005_7_RandRect WIN32 \"CH05 Basic Drawing/07 RandRect/RandRect.c\")\n# add_executable(005_8_Clover WIN32 \"CH05 Basic Drawing/08 Clover/Clover.c\")\n\n# # ================================================================== Chapter 06\n\n# add_executable(005_1_SysMets4 WIN32 \"CH06 The Keyboard/01 SysMets4/SysMets4.c\"\n#         \"CH04 An Exercise in Text Output/01 SysMets1/SysMets.h\")\n# target_include_directories(005_1_SysMets4 PRIVATE \"CH04 An Exercise in Text Output/01 SysMets1\")\n\n# add_executable(005_2_KeyView1 WIN32 \"CH06 The Keyboard/02 KeyView1/KeyView1.c\")\n# add_executable(005_3_StokFont WIN32 \"CH06 The Keyboard/03 StokFont/StokFont.c\")\n# add_executable(005_4_KeyView2 WIN32 \"CH06 The Keyboard/04 KeyView2/KeyView2.c\")\n# add_executable(005_5_Typer WIN32 \"CH06 The Keyboard/05 Typer/Typer.c\")\n\n# # ================================================================== Chapter 07\n\n# add_executable(007_1_Connect WIN32 \"CH07 The Mouse/01 Connect/Connect.c\")\n# add_executable(007_2_Checker1 WIN32 \"CH07 The Mouse/02 Checker1/Checker1.c\")\n# add_executable(007_3_Checker2 WIN32 \"CH07 The Mouse/03 Checker2/Checker2.c\")\n# add_executable(007_4_Checker3 WIN32 \"CH07 The Mouse/04 Checker3/Checker3.c\")\n# add_executable(007_5_Checker4 WIN32 \"CH07 The Mouse/05 Checker4/Checker4.c\")\n# add_executable(007_6_BlokOut1 WIN32 \"CH07 The Mouse/06 BlokOut1/BlokOut1.c\")\n# add_executable(007_7_BlokOut2 WIN32 \"CH07 The Mouse/07 BlockOut2/BlokOut2.c\")\n\n# add_executable(007_8_SysMets WIN32 \"CH07 The Mouse/08 SysMets/SysMets.c\"\n#         \"CH04 An Exercise in Text Output/01 SysMets1/SysMets.h\")\n# target_include_directories(007_8_SysMets PRIVATE \"CH04 An Exercise in Text Output/01 SysMets1\")\n\n# # ================================================================== Chapter 08\n\n# add_executable(008_Beeper1 WIN32 \"CH08 The Timer/Beeper1.c\")\n# add_executable(008_Beeper2 WIN32 \"CH08 The Timer/Beeper2.c\")\n# add_executable(008_Clock WIN32 \"CH08 The Timer/Clock.c\")\n# add_executable(008_DigClock WIN32 \"CH08 The Timer/DigClock.c\")\n# add_executable(008_WhatClr WIN32 \"CH08 The Timer/WhatClr.c\")\n\n# # ================================================================== Chapter 10\n\n# add_executable(009_BtnLook WIN32 \"CH09 Child Window Controls/BtnLook/BtnLook.c\")\n\n# add_executable(009_Colors1 WIN32 \"CH09 Child Window Controls/Colors1/Colors1.c\")\n# target_link_libraries(009_Colors1 Comctl32.lib)\n\n# add_executable(009_Environ WIN32 \"CH09 Child Window Controls/Environ/Environ.c\")\n\n# add_executable(009_Head WIN32 \"CH09 Child Window Controls/Head/Head.c\")\n# target_link_libraries(009_Head Comctl32.lib)\n\n# add_executable(009_OwnDraw WIN32 \"CH09 Child Window Controls/OwnDraw/OwnDraw.c\")\n# add_executable(009_PopPad1 WIN32 \"CH09 Child Window Controls/PopPad1/PopPad1.c\")\n\n# # ================================================================== Chapter 10\n\n# add_executable(010_IconDemo WIN32 \"CH10 Menus and Other Resources/IconDemo/IconDemo.c\"\n#         \"CH10 Menus and Other Resources/IconDemo/Resource.h\"\n#         \"CH10 Menus and Other Resources/IconDemo/IconDemo.rc\"\n#         \"CH10 Menus and Other Resources/IconDemo/IconDemo.ico\")\n\n# add_executable(010_MenuDemo WIN32 \"CH10 Menus and Other Resources/MenuDemo/MenuDemo.c\"\n#         \"CH10 Menus and Other Resources/MenuDemo/Resource.h\"\n#         \"CH10 Menus and Other Resources/MenuDemo/MenuDemo.rc\")\n\n# add_executable(010_NoPopups WIN32 \"CH10 Menus and Other Resources/NoPopups/NoPopups.c\"\n#         \"CH10 Menus and Other Resources/NoPopups/Resource.h\"\n#         \"CH10 Menus and Other Resources/NoPopups/NoPopups.rc\")\n\n# add_executable(010_PopMenu WIN32 \"CH10 Menus and Other Resources/PopMenu/PopMenu.c\"\n#         \"CH10 Menus and Other Resources/PopMenu/Resource.h\"\n#         \"CH10 Menus and Other Resources/PopMenu/PopMenu.rc\")\n\n# add_executable(010_PoePoem WIN32 \"CH10 Menus and Other Resources/PoePoem/PoePoem.c\"\n#         \"CH10 Menus and Other Resources/PoePoem/Resource.h\"\n#         \"CH10 Menus and Other Resources/PoePoem/PoePoem.rc\"\n#         \"CH10 Menus and Other Resources/PoePoem/PoePoem.ico\"\n#         \"CH10 Menus and Other Resources/PoePoem/PoePoem.txt\")\n\n# add_executable(010_PoorMenu WIN32 \"CH10 Menus and Other Resources/PoorMenu/PoorMenu.c\")\n\n# add_executable(010_PopPad2 WIN32 \"CH10 Menus and Other Resources/PopPad2/PopPad2.c\"\n#         \"CH10 Menus and Other Resources/PopPad2/Resource.h\"\n#         \"CH10 Menus and Other Resources/PopPad2/PopPad2.rc\"\n#         \"CH10 Menus and Other Resources/PopPad2/PopPad2.ico\")\n\n# # ================================================================== Chapter 11\n\n# add_executable(011_About1 WIN32 \"CH11 Dialog Boxes/About1/About1.c\"\n#         \"CH11 Dialog Boxes/About1/Resource.h\"\n#         \"CH11 Dialog Boxes/About1/About1.rc\"\n#         \"CH11 Dialog Boxes/About1/About1.ico\")\n\n# add_executable(011_About2 WIN32 \"CH11 Dialog Boxes/About2/About2.c\"\n#         \"CH11 Dialog Boxes/About2/Resource.h\"\n#         \"CH11 Dialog Boxes/About2/About2.rc\"\n#         \"CH11 Dialog Boxes/About2/About2.ico\")\n\n# add_executable(011_About3 WIN32 \"CH11 Dialog Boxes/About3/About3.c\"\n#         \"CH11 Dialog Boxes/About3/Resource.h\"\n#         \"CH11 Dialog Boxes/About3/About3.rc\"\n#         \"CH11 Dialog Boxes/About3/About3.ico\")\n\n# add_executable(011_Colors2 WIN32 \"CH11 Dialog Boxes/Colors2/Colors2.c\"\n#         \"CH11 Dialog Boxes/Colors2/Resource.h\"\n#         \"CH11 Dialog Boxes/Colors2/Colors2.rc\")\n\n# add_executable(011_Colors3 WIN32 \"CH11 Dialog Boxes/Colors3/Colors3.c\"\n#         \"CH11 Dialog Boxes/HexCalc/Resource.h\"\n#         \"CH11 Dialog Boxes/HexCalc/HexCalc.rc\"\n#         \"CH11 Dialog Boxes/HexCalc/HexCalc.dlg\"\n#         \"CH11 Dialog Boxes/HexCalc/HexCalc.ico\")\n\n# add_executable(011_HexCalc WIN32 \"CH11 Dialog Boxes/HexCalc/HexCalc.c\"\n#         \"CH11 Dialog Boxes/HexCalc/Resource.h\"\n#         \"CH11 Dialog Boxes/HexCalc/HexCalc.rc\"\n#         \"CH11 Dialog Boxes/HexCalc/HexCalc.dlg\"\n#         \"CH11 Dialog Boxes/HexCalc/HexCalc.ico\")\n\n# add_executable(011_PopPad3 WIN32 \"CH11 Dialog Boxes/PopPad3/PopPad.c\"\n#         \"CH11 Dialog Boxes/PopPad3/PopFile.c\"\n#         \"CH11 Dialog Boxes/PopPad3/PopFind.c\"\n#         \"CH11 Dialog Boxes/PopPad3/PopFont.c\"\n#         \"CH11 Dialog Boxes/PopPad3/PopPrntNull.c\"\n#         \"CH11 Dialog Boxes/PopPad3/PopPad.h\"\n#         \"CH11 Dialog Boxes/PopPad3/Resource.h\"\n#         \"CH11 Dialog Boxes/PopPad3/PopPad.rc\"\n#         \"CH11 Dialog Boxes/PopPad3/PopPad.ico\")\n\n# # ================================================================== Chapter 13\n\n# add_executable(012_ClipText WIN32 \"CH12 The Clipboard/ClipText/ClipText.c\")\n# add_executable(012_ClipView WIN32 \"CH12 The Clipboard/ClipView/ClipView.c\")\n\n# # ================================================================== Chapter 13\n\n# add_executable(013_DevCaps2 WIN32 \"CH13 Using the Printer/DevCaps2/DevCaps2.c\"\n#         \"CH13 Using the Printer/DevCaps2/Resource.h\"\n#         \"CH13 Using the Printer/DevCaps2/DevCaps2.rc\")\n\n# add_executable(013_FormFeed WIN32 \"CH13 Using the Printer/FormFeed/FormFeed.c\"\n#         \"CH13 Using the Printer/FormFeed/GetPrnDC.c\"\n#         \"CH13 Using the Printer/FormFeed/Print.h\")\n\n# add_executable(013_Print1 WIN32 \"CH13 Using the Printer/Print1/Print1.c\"\n#         \"CH13 Using the Printer/Print1/Print.c\"\n#         \"CH13 Using the Printer/FormFeed/GetPrnDC.c\")\n\n\n# add_executable(013_Print2 WIN32 \"CH13 Using the Printer/Print2/Print2.c\"\n#         \"CH13 Using the Printer/Print1/Print.c\"\n#         \"CH13 Using the Printer/FormFeed/GetPrnDC.c\")\n\n# add_executable(013_Print3 WIN32 \"CH13 Using the Printer/Print3/Print3.c\"\n#         \"CH13 Using the Printer/Print1/Print.c\"\n#         \"CH13 Using the Printer/FormFeed/GetPrnDC.c\"\n#         \"CH13 Using the Printer/Print3/Resource.h\"\n#         \"CH13 Using the Printer/Print3/Print.rc\")\n\n# add_executable(013_PopPrnt WIN32 \"CH13 Using the Printer/PopPrnt/PopPrnt.c\"\n#         \"CH11 Dialog Boxes/PopPad3/PopPad.c\"\n#         \"CH11 Dialog Boxes/PopPad3/PopFile.c\"\n#         \"CH11 Dialog Boxes/PopPad3/PopFind.c\"\n#         \"CH11 Dialog Boxes/PopPad3/PopFont.c\"\n#         \"CH11 Dialog Boxes/PopPad3/PopPad.h\"\n#         \"CH11 Dialog Boxes/PopPad3/Resource.h\"\n#         \"CH11 Dialog Boxes/PopPad3/PopPad.rc\"\n#         \"CH11 Dialog Boxes/PopPad3/PopPad.ico\")\n\n# # ================================================================== Chapter 14\n\n# add_executable(014_BitBlt WIN32 \"CH14 Bitmaps and Bitblts/BitBlt/BitBlt.c\")\n\n# add_executable(014_BitMask WIN32 \"CH14 Bitmaps and Bitblts/BitMask/BitMask.c\"\n#         \"CH14 Bitmaps and Bitblts/BitMask/Resource.h\"\n#         \"CH14 Bitmaps and Bitblts/BitMask/BitMask.rc\"\n#         \"CH14 Bitmaps and Bitblts/BitMask/Matthew.bmp\")\n\n# add_executable(014_Blowup WIN32 \"CH14 Bitmaps and Bitblts/Blowup/Blowup.c\"\n#         \"CH14 Bitmaps and Bitblts/Blowup/Resource.h\"\n#         \"CH14 Bitmaps and Bitblts/Blowup/Blowup.rc\")\n\n# add_executable(014_Bounce1 WIN32 \"CH14 Bitmaps and Bitblts/Bounce1/Bounce1.c\")\n\n# add_executable(014_Bricks1 WIN32 \"CH14 Bitmaps and Bitblts/Bricks1/Bricks1.c\"\n#         \"CH14 Bitmaps and Bitblts/Bricks1/Resource.h\"\n#         \"CH14 Bitmaps and Bitblts/Bricks1/Bricks1.rc\"\n#         \"CH14 Bitmaps and Bitblts/Bricks1/Bricks.bmp\")\n\n# add_executable(014_Bricks2 WIN32 \"CH14 Bitmaps and Bitblts/Bricks2/Bricks2.c\")\n\n# # TODO: The resources for Bricks1 and Bricks3 are identical.\n# add_executable(014_Bricks3 WIN32 \"CH14 Bitmaps and Bitblts/Bricks3/Bricks3.c\"\n#         \"CH14 Bitmaps and Bitblts/Bricks3/Resource.h\"\n#         \"CH14 Bitmaps and Bitblts/Bricks3/Bricks3.rc\"\n#         \"CH14 Bitmaps and Bitblts/Bricks3/Bricks.bmp\")\n\n# add_executable(014_GrafMenu WIN32 \"CH14 Bitmaps and Bitblts/GrafMenu/GrafMenu.c\"\n#         \"CH14 Bitmaps and Bitblts/GrafMenu/Resource.h\"\n#         \"CH14 Bitmaps and Bitblts/GrafMenu/GrafMenu.rc\"\n#         \"CH14 Bitmaps and Bitblts/GrafMenu/BigHelp.bmp\"\n#         \"CH14 Bitmaps and Bitblts/GrafMenu/EditLabl.bmp\"\n#         \"CH14 Bitmaps and Bitblts/GrafMenu/FileLabl.bmp\"\n#         \"CH14 Bitmaps and Bitblts/GrafMenu/FontLabl.bmp\")\n\n# add_executable(014_HelloBit WIN32 \"CH14 Bitmaps and Bitblts/HelloBit/HelloBit.c\"\n#         \"CH14 Bitmaps and Bitblts/HelloBit/Resource.h\"\n#         \"CH14 Bitmaps and Bitblts/HelloBit/HelloBit.rc\")\n\n# add_executable(014_Scramble WIN32 \"CH14 Bitmaps and Bitblts/Scramble/Scramble.c\")\n# add_executable(014_Sketch WIN32 \"CH14 Bitmaps and Bitblts/Sketch/Sketch.c\")\n# add_executable(014_Stretch WIN32 \"CH14 Bitmaps and Bitblts/Stretch/Stretch.c\")\n\n# # ================================================================== Chapter 15\n\n# set(APOLLO_DEPENDENCIES11 \"CH15 The Device Independent Bitmap/Apollo11/Apollo11.bmp\"\n#         \"CH15 The Device Independent Bitmap/Apollo11/ApolloTD.bmp\")\n# add_custom_command(\n#         OUTPUT \"${EXECUTABLE_OUTPUT_PATH}/CH15 The Device Independent Bitmap/Apollo11/Apollo11.bmp\"\n#         \"${EXECUTABLE_OUTPUT_PATH}/CH15 The Device Independent Bitmap/Apollo11/ApolloTD.bmp\"\n#         COMMAND ${CMAKE_COMMAND} -E copy ${APOLLO_DEPENDENCIES11} \"${EXECUTABLE_OUTPUT_PATH}\"\n#         WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}\n#         COMMENT \"Copying Apollo11 bmo files to exe directory\"\n#         DEPENDS ${APOLLO_DEPENDENCIES11})\n# add_custom_target(custom_target_apollo11 ALL DEPENDS \"${APOLLO_DEPENDENCIES11}\")\n\n# add_executable(015_Apollo11 WIN32 \"CH15 The Device Independent Bitmap/Apollo11/Apollo11.c\"\n#         \"CH15 The Device Independent Bitmap/ShowDib1/DibFile.c\"\n#         \"CH15 The Device Independent Bitmap/ShowDib1/DibFile.h\"\n#         \"CH15 The Device Independent Bitmap/ShowDib1/Resource.h\"\n#         \"CH15 The Device Independent Bitmap/ShowDib1/ShowDib1.rc\"\n#         ${APOLLO_DEPENDENCIES11})\n# add_dependencies(Apollo11 custom_target_apollo11)\n\n# add_executable(015_DibConv WIN32 \"CH15 The Device Independent Bitmap/DibConv/DibConv.c\"\n#         \"CH15 The Device Independent Bitmap/DibConv/Resource.h\"\n#         \"CH15 The Device Independent Bitmap/DibConv/DibConv.rc\")\n# add_dependencies(DibConv custom_target_apollo11)\n\n# add_executable(015_DibHeads WIN32 \"CH15 The Device Independent Bitmap/DibHeads/DibHeads.c\"\n#         \"CH15 The Device Independent Bitmap/DibHeads/Resource.h\"\n#         \"CH15 The Device Independent Bitmap/DibHeads/DibHeads.rc\")\n# add_dependencies(DibHeads custom_target_apollo11)\n\n# add_executable(015_DibSect WIN32 \"CH15 The Device Independent Bitmap/DibSect/DibSect.c\"\n#         \"CH15 The Device Independent Bitmap/DibSect/Resource.h\"\n#         \"CH15 The Device Independent Bitmap/DibSect/DibSect.rc\")\n# add_dependencies(DibSect custom_target_apollo11)\n\n# add_executable(015_SeqDisp WIN32 \"CH15 The Device Independent Bitmap/SeqDisp/SeqDisp.c\"\n#         \"CH15 The Device Independent Bitmap/SeqDisp/Resource.h\"\n#         \"CH15 The Device Independent Bitmap/SeqDisp/SeqDisp.rc\")\n# add_dependencies(SeqDisp custom_target_apollo11)\n\n# add_executable(015_ShowDib1 WIN32 \"CH15 The Device Independent Bitmap/ShowDib1/ShowDib1.c\"\n#         \"CH15 The Device Independent Bitmap/ShowDib1/DibFile.c\"\n#         \"CH15 The Device Independent Bitmap/ShowDib1/DibFile.h\"\n#         \"CH15 The Device Independent Bitmap/ShowDib1/Resource.h\"\n#         \"CH15 The Device Independent Bitmap/ShowDib1/ShowDib1.rc\")\n# add_dependencies(ShowDib1 custom_target_apollo11)\n\n# add_executable(015_ShowDib2 WIN32 \"CH15 The Device Independent Bitmap/ShowDib2/Showdib2.c\"\n#         \"CH15 The Device Independent Bitmap/ShowDib1/DibFile.c\"\n#         \"CH15 The Device Independent Bitmap/ShowDib1/DibFile.h\"\n#         \"CH15 The Device Independent Bitmap/ShowDib2/Resource.h\"\n#         \"CH15 The Device Independent Bitmap/ShowDib2/ShowDib2.rc\")\n# add_dependencies(ShowDib2 custom_target_apollo11)\n\n# # ================================================================== Chapter 16\n\n# add_executable(016_Grays1 WIN32 \"CH16 The Palette Manager/Grays1/Grays1.c\")\n# add_executable(016_Grays2 WIN32 \"CH16 The Palette Manager/Grays2/Grays2.c\")\n# add_executable(016_Grays3 WIN32 \"CH16 The Palette Manager/Grays3/Grays3.c\")\n\n# add_executable(016_SysPal1 WIN32 \"CH16 The Palette Manager/SysPal1/SysPal1.c\")\n# add_executable(016_SysPal2 WIN32 \"CH16 The Palette Manager/SysPal2/SysPal2.c\")\n# add_executable(016_SysPal3 WIN32 \"CH16 The Palette Manager/SysPal3/SysPal3.c\")\n\n# add_executable(016_Bounce WIN32 \"CH16 The Palette Manager/Bounce/Bounce.c\"\n#         \"CH16 The Palette Manager/Bounce/PalAnim.c\")\n\n# add_executable(016_Fader WIN32 \"CH16 The Palette Manager/Fader/Fader.c\"\n#         \"CH16 The Palette Manager/Bounce/PalAnim.c\")\n\n# add_executable(016_AllColor WIN32 \"CH16 The Palette Manager/AllColor/AllColor.c\"\n#         \"CH16 The Palette Manager/Bounce/PalAnim.c\")\n\n# add_executable(016_Pipes WIN32 \"CH16 The Palette Manager/Pipes/Pipes.c\"\n#         \"CH16 The Palette Manager/Bounce/PalAnim.c\")\n\n# add_executable(016_Tunnel WIN32 \"CH16 The Palette Manager/Tunnel/Tunnel.c\"\n#         \"CH16 The Palette Manager/Bounce/PalAnim.c\")\n\n# add_executable(016_ShowDib3 WIN32 \"CH16 The Palette Manager/ShowDib3/ShowDib3.c\"\n#         \"CH16 The Palette Manager/ShowDib3/PackeDib.c\"\n#         \"CH16 The Palette Manager/ShowDib3/PackeDib.h\"\n#         \"CH16 The Palette Manager/ShowDib3/Resource.h\"\n#         \"CH16 The Palette Manager/ShowDib3/ShowDib3.rc\")\n# add_dependencies(016_ShowDib3 custom_target_apollo11)\n\n# add_executable(016_ShowDib4 WIN32 \"CH16 The Palette Manager/ShowDib4/ShowDib4.c\"\n#         \"CH16 The Palette Manager/ShowDib3/PackeDib.c\"\n#         \"CH16 The Palette Manager/ShowDib3/PackeDib.h\"\n#         \"CH16 The Palette Manager/ShowDib4/Resource.h\"\n#         \"CH16 The Palette Manager/ShowDib4/ShowDib4.rc\")\n# add_dependencies(016_ShowDib4 custom_target_apollo11)\n\n# add_executable(016_ShowDib5 WIN32 \"CH16 The Palette Manager/ShowDib5/ShowDib5.c\"\n#         \"CH16 The Palette Manager/ShowDib3/PackeDib.c\"\n#         \"CH16 The Palette Manager/ShowDib3/PackeDib.h\"\n#         \"CH16 The Palette Manager/ShowDib5/Resource.h\"\n#         \"CH16 The Palette Manager/ShowDib5/ShowDib5.rc\")\n# add_dependencies(016_ShowDib5 custom_target_apollo11)\n\n# add_executable(016_ShowDib6 WIN32 \"CH16 The Palette Manager/ShowDib6/ShowDib6.c\"\n#         \"CH16 The Palette Manager/ShowDib3/PackeDib.c\"\n#         \"CH16 The Palette Manager/ShowDib3/PackeDib.h\"\n#         \"CH16 The Palette Manager/ShowDib6/Resource.h\"\n#         \"CH16 The Palette Manager/ShowDib6/ShowDib6.rc\")\n# add_dependencies(016_ShowDib6 custom_target_apollo11)\n\n# add_executable(016_ShowDib7 WIN32 \"CH16 The Palette Manager/ShowDib7/ShowDib7.c\"\n#         \"CH16 The Palette Manager/ShowDib3/PackeDib.c\"\n#         \"CH16 The Palette Manager/ShowDib3/PackeDib.h\"\n#         \"CH16 The Palette Manager/ShowDib7/Resource.h\"\n#         \"CH16 The Palette Manager/ShowDib7/ShowDib7.rc\")\n# add_dependencies(016_ShowDib7 custom_target_apollo11)\n\n# add_executable(016_ShowDib8 WIN32 \"CH16 The Palette Manager/ShowDib8/ShowDib8.c\"\n#         \"CH16 The Palette Manager/ShowDib3/PackeDib.c\"\n#         \"CH16 The Palette Manager/ShowDib3/PackeDib.h\"\n#         \"CH16 The Palette Manager/ShowDib8/Resource.h\"\n#         \"CH16 The Palette Manager/ShowDib8/ShowDib8.rc\")\n# add_dependencies(016_ShowDib8 custom_target_apollo11)\n\n# add_executable(016_Dibble WIN32 \"CH16 The Palette Manager/Dibble/Dibble.c\"\n#         \"CH16 The Palette Manager/Dibble/DibConv.c\"\n#         \"CH16 The Palette Manager/Dibble/DibConv.h\"\n#         \"CH16 The Palette Manager/Dibble/DibHelp.c\"\n#         \"CH16 The Palette Manager/Dibble/DibHelp.h\"\n#         \"CH16 The Palette Manager/Dibble/DibPal.c\"\n#         \"CH16 The Palette Manager/Dibble/DibPal.h\"\n#         \"CH16 The Palette Manager/Dibble/Resource.h\"\n#         \"CH16 The Palette Manager/Dibble/Dibble.rc\")\n\n# # ================================================================== Chapter 17\n\n# add_executable(017_PickFont WIN32 \"CH17 Text and Fonts/PickFont/PickFont.c\"\n#         \"CH17 Text and Fonts/PickFont/Resource.h\"\n#         \"CH17 Text and Fonts/PickFont/PickFont.rc\")\n\n# add_executable(017_EZTest WIN32 \"CH17 Text and Fonts/EZTest/EZTest.c\"\n#         \"CH17 Text and Fonts/EZTest/EZFont.c\"\n#         \"CH17 Text and Fonts/EZTest/EZFont.h\"\n#         \"CH17 Text and Fonts/EZTest/FontDemo.c\"\n#         \"CH17 Text and Fonts/EZTest/Resource.h\"\n#         \"CH17 Text and Fonts/EZTest/FontDemo.rc\")\n\n# add_executable(017_FontRot WIN32 \"CH17 Text and Fonts/FontRot/FontRot.c\"\n#         \"CH17 Text and Fonts/EZTest/EZFont.c\"\n#         \"CH17 Text and Fonts/EZTest/EZFont.h\"\n#         \"CH17 Text and Fonts/EZTest/FontDemo.c\"\n#         \"CH17 Text and Fonts/EZTest/Resource.h\"\n#         \"CH17 Text and Fonts/EZTest/FontDemo.rc\")\n\n# add_executable(017_ChosFont WIN32 \"CH17 Text and Fonts/ChosFont/ChosFont.c\"\n#         \"CH17 Text and Fonts/ChosFont/Resource.h\"\n#         \"CH17 Text and Fonts/ChosFont/ChosFont.rc\")\n\n# add_executable(017_Unichars WIN32 \"CH17 Text and Fonts/UniChars/Unichars.c\"\n#         \"CH17 Text and Fonts/UniChars/Resource.h\"\n#         \"CH17 Text and Fonts/UniChars/Unichars.rc\")\n\n# add_executable(017_Justify1 WIN32 \"CH17 Text and Fonts/Justify1/Justify1.c\"\n#         \"CH17 Text and Fonts/Justify1/Resource.h\"\n#         \"CH17 Text and Fonts/Justify1/Justify1.rc\")\n\n# add_executable(017_Justify2 WIN32 \"CH17 Text and Fonts/Justify2/Justify2.c\"\n#         \"CH17 Text and Fonts/Justify2/Resource.h\"\n#         \"CH17 Text and Fonts/Justify2/Justify2.rc\")\n\n# add_executable(017_EndJoin WIN32 \"CH17 Text and Fonts/EndJoin/EndJoin.c\")\n\n# add_executable(017_FontOut1 WIN32 \"CH17 Text and Fonts/FontOut1/FontOut1.c\"\n#         \"CH17 Text and Fonts/EZTest/EZFont.c\"\n#         \"CH17 Text and Fonts/EZTest/EZFont.h\"\n#         \"CH17 Text and Fonts/EZTest/FontDemo.c\"\n#         \"CH17 Text and Fonts/EZTest/Resource.h\"\n#         \"CH17 Text and Fonts/EZTest/FontDemo.rc\")\n\n# add_executable(017_FontOut2 WIN32 \"CH17 Text and Fonts/FontOut2/FontOut2.c\"\n#         \"CH17 Text and Fonts/EZTest/EZFont.c\"\n#         \"CH17 Text and Fonts/EZTest/EZFont.h\"\n#         \"CH17 Text and Fonts/EZTest/FontDemo.c\"\n#         \"CH17 Text and Fonts/EZTest/Resource.h\"\n#         \"CH17 Text and Fonts/EZTest/FontDemo.rc\")\n\n# add_executable(017_FontFill WIN32 \"CH17 Text and Fonts/FontFill/FontFill.c\"\n#         \"CH17 Text and Fonts/EZTest/EZFont.c\"\n#         \"CH17 Text and Fonts/EZTest/EZFont.h\"\n#         \"CH17 Text and Fonts/EZTest/FontDemo.c\"\n#         \"CH17 Text and Fonts/EZTest/Resource.h\"\n#         \"CH17 Text and Fonts/EZTest/FontDemo.rc\")\n\n# add_executable(017_FontClip WIN32 \"CH17 Text and Fonts/FontClip/FontClip.c\"\n#         \"CH17 Text and Fonts/EZTest/EZFont.c\"\n#         \"CH17 Text and Fonts/EZTest/EZFont.h\"\n#         \"CH17 Text and Fonts/EZTest/FontDemo.c\"\n#         \"CH17 Text and Fonts/EZTest/Resource.h\"\n#         \"CH17 Text and Fonts/EZTest/FontDemo.rc\")\n\n# # ================================================================== Chapter 18\n\n# add_executable(018_Emf01 WIN32 \"CH18 Metafiles/Emf01/Emf01.c\")\n\n# add_executable(018_Emf02 WIN32 \"CH18 Metafiles/Emf02/Emf02.c\")\n# add_custom_command(\n#         OUTPUT \"${EXECUTABLE_OUTPUT_PATH}/Emf02.emf\"\n#         COMMAND ${CMAKE_COMMAND} -E copy \"${CMAKE_CURRENT_SOURCE_DIR}/CH18 Metafiles/Emf02/Emf02.emf\" \"${EXECUTABLE_OUTPUT_PATH}\"\n#         COMMENT \"Copying Emf02.emf to exe directory\"\n#         DEPENDS \"CH18 Metafiles/Emf02/Emf02.emf\")\n# add_custom_target(custom_target_emf02 ALL\n#         DEPENDS \"${EXECUTABLE_OUTPUT_PATH}/Emf02.emf\")\n# add_dependencies(018_Emf02 custom_target_emf02)\n\n# add_executable(018_Emf03 WIN32 \"CH18 Metafiles/Emf03/Emf03.c\"\n#         \"CH18 Metafiles/Emf03/Emf03.emf\")\n# add_custom_command(\n#         OUTPUT \"${EXECUTABLE_OUTPUT_PATH}/Emf03.emf\"\n#         COMMAND ${CMAKE_COMMAND} -E copy \"${CMAKE_CURRENT_SOURCE_DIR}/CH18 Metafiles/Emf03/Emf03.emf\" \"${EXECUTABLE_OUTPUT_PATH}\"\n#         COMMENT \"Copying Emf03.emf to exe directory\"\n#         DEPENDS \"CH18 Metafiles/Emf03/Emf03.emf\")\n# add_custom_target(custom_target_emf03 ALL\n#         DEPENDS \"${EXECUTABLE_OUTPUT_PATH}/Emf03.emf\")\n# add_dependencies(018_Emf03 custom_target_emf03)\n\n# add_executable(018_Emf04 WIN32 \"CH18 Metafiles/Emf04/Emf04.c\"\n#         \"CH18 Metafiles/Emf04/Emf04.emf\")\n# add_custom_command(\n#         OUTPUT \"${EXECUTABLE_OUTPUT_PATH}/Emf04.emf\"\n#         COMMAND ${CMAKE_COMMAND} -E copy \"${CMAKE_CURRENT_SOURCE_DIR}/CH18 Metafiles/Emf04/Emf04.emf\" \"${EXECUTABLE_OUTPUT_PATH}\"\n#         COMMENT \"Copying Emf04.emf to exe directory\"\n#         DEPENDS \"CH18 Metafiles/Emf04/Emf04.emf\")\n# add_custom_target(custom_target_emf04 ALL\n#         DEPENDS \"${EXECUTABLE_OUTPUT_PATH}/Emf04.emf\")\n# add_dependencies(018_Emf04 custom_target_emf04)\n\n# add_executable(018_Emf05 WIN32 \"CH18 Metafiles/Emf05/Emf05.c\"\n#         \"CH18 Metafiles/Emf03/Emf03.emf\")\n# add_dependencies(018_Emf05 custom_target_emf03)\n\n# add_executable(018_Emf06 WIN32 \"CH18 Metafiles/Emf06/Emf06.c\"\n#         \"CH18 Metafiles/Emf03/Emf03.emf\")\n# add_dependencies(018_Emf06 custom_target_emf03)\n\n# add_executable(018_Emf07 WIN32 \"CH18 Metafiles/Emf07/Emf07.c\"\n#         \"CH18 Metafiles/Emf07/Emf07.emf\")\n# add_custom_command(\n#         OUTPUT \"${EXECUTABLE_OUTPUT_PATH}/Emf07.emf\"\n#         COMMAND ${CMAKE_COMMAND} -E copy \"${CMAKE_CURRENT_SOURCE_DIR}/CH18 Metafiles/Emf07/Emf07.emf\" \"${EXECUTABLE_OUTPUT_PATH}\"\n#         COMMENT \"Copying Emf07.emf to exe directory\"\n#         DEPENDS \"CH18 Metafiles/Emf07/Emf07.emf\")\n# add_custom_target(custom_target_emf07 ALL\n#         DEPENDS \"${EXECUTABLE_OUTPUT_PATH}/Emf07.emf\")\n# add_dependencies(018_Emf07 custom_target_emf03 custom_target_emf07)\n\n# add_executable(018_Emf08 WIN32 \"CH18 Metafiles/Emf08/Emf08.c\"\n#         \"CH18 Metafiles/Emf08/Emf.c\"\n#         \"CH18 Metafiles/Emf08/Emf.h\"\n#         \"CH18 Metafiles/Emf08/Resource.h\"\n#         \"CH18 Metafiles/Emf08/Emf.rc\"\n#         \"CH18 Metafiles/Emf08/Emf08.emf\")\n# add_custom_command(\n#         OUTPUT \"${EXECUTABLE_OUTPUT_PATH}/Emf08.emf\"\n#         COMMAND ${CMAKE_COMMAND} -E copy \"${CMAKE_CURRENT_SOURCE_DIR}/CH18 Metafiles/Emf08/Emf08.emf\" \"${EXECUTABLE_OUTPUT_PATH}\"\n#         COMMENT \"Copying Emf08.emf to exe directory\"\n#         DEPENDS \"CH18 Metafiles/Emf08/Emf08.emf\")\n# add_custom_target(custom_target_emf08 ALL\n#         DEPENDS \"${EXECUTABLE_OUTPUT_PATH}/Emf08.emf\")\n# add_dependencies(018_Emf08 custom_target_emf08)\n\n# add_executable(018_Emf09 WIN32 \"CH18 Metafiles/Emf09/Emf09.c\"\n#         \"CH18 Metafiles/Emf08/Emf.c\"\n#         \"CH18 Metafiles/Emf08/Emf.h\"\n#         \"CH18 Metafiles/Emf08/Resource.h\"\n#         \"CH18 Metafiles/Emf08/Emf.rc\"\n#         \"CH18 Metafiles/Emf08/Emf08.emf\")\n# add_dependencies(018_Emf09 custom_target_emf08)\n\n# add_executable(018_Emf10 WIN32 \"CH18 Metafiles/Emf10/Emf10.c\"\n#         \"CH18 Metafiles/Emf08/Emf.c\"\n#         \"CH18 Metafiles/Emf08/Emf.h\"\n#         \"CH18 Metafiles/Emf08/Resource.h\"\n#         \"CH18 Metafiles/Emf08/Emf.rc\"\n#         \"CH18 Metafiles/Emf08/Emf08.emf\")\n# add_dependencies(018_Emf10 custom_target_emf08)\n\n# add_executable(018_Emf11 WIN32 \"CH18 Metafiles/Emf11/Emf11.c\"\n#         \"CH18 Metafiles/Emf11/Emf11.emf\"\n#         \"CH18 Metafiles/Emf08/Emf.c\"\n#         \"CH18 Metafiles/Emf08/Emf.h\"\n#         \"CH18 Metafiles/Emf08/Resource.h\"\n#         \"CH18 Metafiles/Emf08/Emf.rc\")\n# add_custom_command(\n#         OUTPUT \"${EXECUTABLE_OUTPUT_PATH}/Emf11.emf\"\n#         COMMAND ${CMAKE_COMMAND} -E copy \"${CMAKE_CURRENT_SOURCE_DIR}/CH18 Metafiles/Emf11/Emf11.emf\" \"${EXECUTABLE_OUTPUT_PATH}\"\n#         COMMENT \"Copying Emf11.emf to exe directory\"\n#         DEPENDS \"CH18 Metafiles/Emf11/Emf11.emf\")\n# add_custom_target(custom_target_emf11 ALL\n#         DEPENDS \"${EXECUTABLE_OUTPUT_PATH}/Emf11.emf\")\n# add_dependencies(018_Emf11 custom_target_emf11)\n\n# add_executable(018_Emf12 WIN32 \"CH18 Metafiles/Emf12/Emf12.c\"\n#         \"CH18 Metafiles/Emf12/Emf12.emf\"\n#         \"CH18 Metafiles/Emf08/Emf.c\"\n#         \"CH18 Metafiles/Emf08/Emf.h\"\n#         \"CH18 Metafiles/Emf08/Resource.h\"\n#         \"CH18 Metafiles/Emf08/Emf.rc\")\n# add_custom_command(\n#         OUTPUT \"${EXECUTABLE_OUTPUT_PATH}/Emf12.emf\"\n#         COMMAND ${CMAKE_COMMAND} -E copy \"${CMAKE_CURRENT_SOURCE_DIR}/CH18 Metafiles/Emf12/Emf12.emf\" \"${EXECUTABLE_OUTPUT_PATH}\"\n#         COMMENT \"Copying Emf12.emf to exe directory\"\n#         DEPENDS \"CH18 Metafiles/Emf12/Emf12.emf\")\n# add_custom_target(custom_target_emf12 ALL\n#         DEPENDS \"${EXECUTABLE_OUTPUT_PATH}/Emf12.emf\")\n# add_dependencies(018_Emf12 custom_target_emf12)\n\n# add_executable(018_Emf13 WIN32 \"CH18 Metafiles/Emf13/Emf13.c\"\n#         \"CH18 Metafiles/Emf08/Emf.c\"\n#         \"CH18 Metafiles/Emf08/Emf.h\"\n#         \"CH18 Metafiles/Emf08/Resource.h\"\n#         \"CH18 Metafiles/Emf08/Emf.rc\")\n# add_dependencies(018_Emf13 custom_target_emf11)\n\n# add_executable(018_EmfView WIN32 \"CH18 Metafiles/EmfView/EmfView.c\"\n#         \"CH18 Metafiles/EmfView/Resource.h\"\n#         \"CH18 Metafiles/EmfView/EmfView.rc\")\n\n# add_executable(018_Metafile WIN32 \"CH18 Metafiles/MetaFile/Metafile.c\")\n\n# # ================================================================== Chapter 19\n\n# add_executable(019_MDIDemo WIN32 \"CH19 The Multiple-Document Interface/MDIDemo/MDIDemo.c\")\n\n# # ================================================================== Chapter 20\n\n# add_executable(020_BigJob1 WIN32 \"CH20 Multitasking and Multithreading/BigJob1/BigJob1.c\")\n# add_executable(020_BigJob2 WIN32 \"CH20 Multitasking and Multithreading/BigJob2/BigJob2.c\")\n\n# add_executable(020_Multi1 WIN32 \"CH20 Multitasking and Multithreading/Multi1/Multi1.c\")\n# add_executable(020_Multi2 WIN32 \"CH20 Multitasking and Multithreading/Multi2/Multi2.c\")\n\n# # ================================================================== Chapter 21\n\n# add_executable(021_RndRctMT WIN32 \"CH20 Multitasking and Multithreading/RndRectMT/RndRctMT.c\")\n# add_executable(021_EdrTest WIN32 \"CH21 Dynamic-Link Libraries/EdrTest/EdrTest.c\"\n#         \"CH21 Dynamic-Link Libraries/EdrTest/EdrLib.c\")\n# add_executable(021_ShowBit WIN32 \"CH21 Dynamic-Link Libraries/ShowBit/ShowBit.c\"\n#         \"CH21 Dynamic-Link Libraries/ShowBit/BitLib.c\")\n# add_executable(021_StrProg WIN32 \"CH21 Dynamic-Link Libraries/StrProg/StrProg.c\"\n#         \"CH21 Dynamic-Link Libraries/StrProg/StrLib.c\")\n\n# ================================================================== Chapter 22\n\nadd_executable(022_AddSynth WIN32 \"CH22 Sound and Music/AddSynth/AddSynth.c\"\n        \"CH22 Sound and Music/AddSynth/AddSynth.h\"\n        \"CH22 Sound and Music/AddSynth/Resource.h\"\n        \"CH22 Sound and Music/AddSynth/AddSynth.rc\")\ntarget_link_libraries(022_AddSynth winmm.lib)\n\nadd_executable(022_BachTocc WIN32 \"CH22 Sound and Music/BachTocc/BachTocc.c\")\ntarget_link_libraries(022_BachTocc winmm.lib)\n\nadd_executable(022_Drum WIN32 \"CH22 Sound and Music/Drum/Drum.c\"\n        \"CH22 Sound and Music/Drum/DrumFile.c\"\n        \"CH22 Sound and Music/Drum/DrumFile.h\"\n        \"CH22 Sound and Music/Drum/DrumTime.c\"\n        \"CH22 Sound and Music/Drum/DrumTime.h\"\n        \"CH22 Sound and Music/Drum/Resource.h\"\n        \"CH22 Sound and Music/Drum/Drum.ico\"\n        \"CH22 Sound and Music/Drum/Drum.rc\")\ntarget_link_libraries(022_Drum winmm.lib)\n\nadd_executable(022_KBMidi WIN32 \"CH22 Sound and Music/KBMidi/KBMidi.c\")\ntarget_link_libraries(022_KBMidi winmm.lib)\n\nadd_executable(022_Record1 WIN32 \"CH22 Sound and Music/Record1/Record1.c\"\n        \"CH22 Sound and Music/Record1/Resource.h\"\n        \"CH22 Sound and Music/Record1/Record.rc\")\ntarget_link_libraries(022_Record1 winmm.lib)\n\nadd_executable(022_Record2 WIN32 \"CH22 Sound and Music/Record2/Record2.c\"\n        \"CH22 Sound and Music/Record1/Resource.h\"\n        \"CH22 Sound and Music/Record1/Record.rc\")\ntarget_link_libraries(022_Record2 winmm.lib)\n\nadd_executable(022_Record3 WIN32 \"CH22 Sound and Music/Record3/Record3.c\"\n        \"CH22 Sound and Music/Record1/Resource.h\"\n        \"CH22 Sound and Music/Record1/Record.rc\")\ntarget_link_libraries(022_Record3 winmm.lib)\n\nadd_executable(022_SineWaveGen WIN32 \"CH22 Sound and Music/SineWaveGen/SineWaveGen.c\"\n        \"CH22 Sound and Music/SineWaveGen/Resource.h\"\n        \"CH22 Sound and Music/SineWaveGen/SineWaveGen.rc\")\ntarget_link_libraries(022_SineWaveGen winmm.lib)\n\nadd_executable(022_TestMci WIN32 \"CH22 Sound and Music/TextMCI/TestMci.c\"\n        \"CH22 Sound and Music/SineWaveGen/Resource.h\"\n        \"CH22 Sound and Music/SineWaveGen/SineWaveGen.rc\")\ntarget_link_libraries(022_TestMci winmm.lib)\n\nadd_executable(022_WakeUp WIN32 \"CH22 Sound and Music/WakeUp/WakeUp.c\")\ntarget_link_libraries(022_WakeUp winmm.lib comctl32.lib)\n\n# ================================================================== Chapter 23\n\nadd_executable(023_NetTime WIN32 \"CH23 A Taste of the Internet/NetTime/NetTime.c\"\n        \"CH23 A Taste of the Internet/NetTime/NetTime.rc\"\n        \"CH23 A Taste of the Internet/NetTime/Resource.h\")\ntarget_link_libraries(023_NetTime Ws2_32.lib)\n\nadd_executable(023_UpdDemo WIN32 \"CH23 A Taste of the Internet/UpdDemo/UpdDemo.c\"\n        \"CH23 A Taste of the Internet/UpdDemo/Resource.h\"\n        \"CH23 A Taste of the Internet/UpdDemo/UpdDemo.rc\")\ntarget_link_libraries(023_UpdDemo Wininet.lib)\n\n# ========================================================================= EOF",
+			"contents": "cmake_minimum_required(VERSION 3.12)\nproject(petzold_pw5e C)\n# set(CMAKE_VERBOSE_MAKEFILE ON)#\n\n# NOTE:\n# Microsft Visual Studio requires MFC to be installed to compile .rc resources.\n#\n#\nset(CMAKE_C_STANDARD 11)\n\nset(CMAKE_C_FLAGS \"${CMAKE_C_FLAGS} -DSTRICT -DCMAKE_GENERATOR_PLATFORM=x64\")\nset(CMAKE_C_FLAGS \"${CMAKE_C_FLAGS} -D_WIN32_WINNT=0x0601 -DWINVER=0x0601\")\n\nif (MSVC)\n    # MSVC Compiler\nelse ()\n    set(CMAKE_C_FLAGS_DEBUG \"${CMAKE_C_FLAGS_DEBUG} -Wall -Wpedantic -Wextra\")\n    set(CMAKE_C_FLAGS_RELEASE \"${CMAKE_C_FLAGS_RELEASE} -Wall -Wpedantic -Wextra\")\nendif ()\n\nset(EXECUTABLE_OUTPUT_PATH \"${CMAKE_CURRENT_BINARY_DIR}\")\nset(EXECUTABLE_OUTPUT_PATH \"${PROJECT_SOURCE_DIR}/bin\")\nset(LIBRARY_OUTPUT_PATH \"${PROJECT_SOURCE_DIR}/bin\")\n\ninclude_directories(\n    \"CH04 An Exercise in Text Output/01 SysMets1\"\n    )\n# target_include_directories(004_SysMets1 PRIVATE \"CH04 An Exercise in Text Output/01 SysMets1\")\n# target_include_directories(004_SysMets2 PRIVATE \"CH04 An Exercise in Text Output/01 SysMets1\")\n# target_include_directories(004_SysMets3 PRIVATE \"CH04 An Exercise in Text Output/01 SysMets1\")\n# target_include_directories(005_1_SysMets4 PRIVATE \"CH04 An Exercise in Text Output/01 SysMets1\")\n# target_include_directories(007_8_SysMets PRIVATE \"CH04 An Exercise in Text Output/01 SysMets1\")\n\nmacro(AddDemo name)\n    message(STATUS \"AddDemo = [${name}]\")\n    add_executable(${name} WIN32 ${ARGN})\nendmacro()\n\nmacro(AddLibrary name)\n    message(STATUS \"AddLibrary = [${name}]\")\n    add_library(${name} SHARED ${ARGN})\nendmacro()\n\n\n# ================================================================== Chapter 01\n\nAddDemo(001_HelloMsg \n        \"CH01 Getting Started/01 HelloMsg/HelloMsg.c\")\n\n# ================================================================== Chapter 02\n\nAddDemo(002_ScrnSize \n        \"CH02 An Introduction to Unicode/01 ScrnSize/ScrnSize.c\")\n\n# ================================================================== Chapter 03\n# winmm.lib    - required library\n# HelloWin.wav - to be copied to exe directory\n\nAddDemo(003_HelloWin \n        \"CH03 Windows and Messages/01 HelloWin/HelloWin.c\"\n        \"CH03 Windows and Messages/01 HelloWin/HelloWin.wav\")\ntarget_link_libraries(003_HelloWin winmm.lib)\nadd_custom_command(\n        OUTPUT \"${EXECUTABLE_OUTPUT_PATH}/HelloWin.wav\"\n        COMMAND ${CMAKE_COMMAND} -E copy \"${CMAKE_CURRENT_SOURCE_DIR}/CH03 Windows and Messages/01 HelloWin/HelloWin.wav\" \"${EXECUTABLE_OUTPUT_PATH}\"\n        COMMENT \"Copying HelloWin.wav to exe directory\"\n        DEPENDS \"CH03 Windows and Messages/01 HelloWin/HelloWin.wav\")\nadd_custom_target(custom_target_hello_win ALL\n        DEPENDS \"${EXECUTABLE_OUTPUT_PATH}/HelloWin.wav\")\nadd_dependencies(003_HelloWin custom_target_hello_win)\n\n# ================================================================== Chapter 04\n# -------------------------------------------------------------- 04/01 SysMets1\n\nAddDemo(004_SysMets1 \n        \"CH04 An Exercise in Text Output/01 SysMets1/SysMets1.c\"\n        \"CH04 An Exercise in Text Output/01 SysMets1/SysMets.h\")\n\n# -------------------------------------------------------------- 04/02 SysMets2\n#                                                uses header file from SysMets1\n\nAddDemo(004_SysMets2 \n        \"CH04 An Exercise in Text Output/02 SysMets2/SysMets2.c\"\n        \"CH04 An Exercise in Text Output/01 SysMets1/SysMets.h\")\n\n# -------------------------------------------------------------- 04/03 SysMets3\n#                                                uses header file from SysMets1\n\nAddDemo(004_SysMets3 \n        \"CH04 An Exercise in Text Output/03 SysMets3/SysMets3.c\"\n        \"CH04 An Exercise in Text Output/01 SysMets1/SysMets.h\")\n\n# ================================================================== Chapter 05\n\nAddDemo(005_1_DevCaps1  \"CH05 Basic Drawing/01 DevCaps1/DevCaps1.c\")\nAddDemo(005_2_SineWave  \"CH05 Basic Drawing/02 SineWave/SineWave.c\")\nAddDemo(005_3_LineDemo  \"CH05 Basic Drawing/03 LineDemo/LineDemo.c\")\nAddDemo(005_4_Bezier  \"CH05 Basic Drawing/04 Bezier/Bezier.c\")\nAddDemo(005_5_AltWind  \"CH05 Basic Drawing/05 AltWind/AltWind.c\")\nAddDemo(005_6_WhatSize  \"CH05 Basic Drawing/06 WhatSize/WhatSize.c\")\nAddDemo(005_7_RandRect  \"CH05 Basic Drawing/07 RandRect/RandRect.c\")\nAddDemo(005_8_Clover  \"CH05 Basic Drawing/08 Clover/Clover.c\")\n\n# ================================================================== Chapter 06\n\nAddDemo(006_1_SysMets4  \"CH06 The Keyboard/01 SysMets4/SysMets4.c\"\n        \"CH04 An Exercise in Text Output/01 SysMets1/SysMets.h\")\n\nAddDemo(006_2_KeyView1  \"CH06 The Keyboard/02 KeyView1/KeyView1.c\")\nAddDemo(006_3_StokFont  \"CH06 The Keyboard/03 StokFont/StokFont.c\")\nAddDemo(006_4_KeyView2  \"CH06 The Keyboard/04 KeyView2/KeyView2.c\")\nAddDemo(006_5_Typer  \"CH06 The Keyboard/05 Typer/Typer.c\")\n\n# ================================================================== Chapter 07\n\nAddDemo(007_1_Connect  \"CH07 The Mouse/01 Connect/Connect.c\")\nAddDemo(007_2_Checker1  \"CH07 The Mouse/02 Checker1/Checker1.c\")\nAddDemo(007_3_Checker2  \"CH07 The Mouse/03 Checker2/Checker2.c\")\nAddDemo(007_4_Checker3  \"CH07 The Mouse/04 Checker3/Checker3.c\")\nAddDemo(007_5_Checker4  \"CH07 The Mouse/05 Checker4/Checker4.c\")\nAddDemo(007_6_BlokOut1  \"CH07 The Mouse/06 BlokOut1/BlokOut1.c\")\nAddDemo(007_7_BlokOut2  \"CH07 The Mouse/07 BlockOut2/BlokOut2.c\")\n\nAddDemo(007_8_SysMets  \"CH07 The Mouse/08 SysMets/SysMets.c\"\n        \"CH04 An Exercise in Text Output/01 SysMets1/SysMets.h\")\n\n# ================================================================== Chapter 08\n\nAddDemo(008_Beeper1  \"CH08 The Timer/Beeper1.c\")\nAddDemo(008_Beeper2  \"CH08 The Timer/Beeper2.c\")\nAddDemo(008_Clock  \"CH08 The Timer/Clock.c\")\nAddDemo(008_DigClock  \"CH08 The Timer/DigClock.c\")\nAddDemo(008_WhatClr  \"CH08 The Timer/WhatClr.c\")\n\n# ================================================================== Chapter 10\n\nAddDemo(009_BtnLook  \"CH09 Child Window Controls/BtnLook/BtnLook.c\")\n\nAddDemo(009_Colors1  \"CH09 Child Window Controls/Colors1/Colors1.c\")\ntarget_link_libraries(009_Colors1 Comctl32.lib)\n\nAddDemo(009_Environ  \"CH09 Child Window Controls/Environ/Environ.c\")\n\nAddDemo(009_Head  \"CH09 Child Window Controls/Head/Head.c\")\ntarget_link_libraries(009_Head Comctl32.lib)\n\nAddDemo(009_OwnDraw  \"CH09 Child Window Controls/OwnDraw/OwnDraw.c\")\nAddDemo(009_PopPad1  \"CH09 Child Window Controls/PopPad1/PopPad1.c\")\n\n# ================================================================== Chapter 10\n\nAddDemo(010_IconDemo  \"CH10 Menus and Other Resources/IconDemo/IconDemo.c\"\n        \"CH10 Menus and Other Resources/IconDemo/Resource.h\"\n        \"CH10 Menus and Other Resources/IconDemo/IconDemo.rc\"\n        \"CH10 Menus and Other Resources/IconDemo/IconDemo.ico\")\n\nAddDemo(010_MenuDemo  \"CH10 Menus and Other Resources/MenuDemo/MenuDemo.c\"\n        \"CH10 Menus and Other Resources/MenuDemo/Resource.h\"\n        \"CH10 Menus and Other Resources/MenuDemo/MenuDemo.rc\")\n\nAddDemo(010_NoPopups  \"CH10 Menus and Other Resources/NoPopups/NoPopups.c\"\n        \"CH10 Menus and Other Resources/NoPopups/Resource.h\"\n        \"CH10 Menus and Other Resources/NoPopups/NoPopups.rc\")\n\nAddDemo(010_PopMenu  \"CH10 Menus and Other Resources/PopMenu/PopMenu.c\"\n        \"CH10 Menus and Other Resources/PopMenu/Resource.h\"\n        \"CH10 Menus and Other Resources/PopMenu/PopMenu.rc\")\n\nAddDemo(010_PoePoem  \"CH10 Menus and Other Resources/PoePoem/PoePoem.c\"\n        \"CH10 Menus and Other Resources/PoePoem/Resource.h\"\n        \"CH10 Menus and Other Resources/PoePoem/PoePoem.rc\"\n        \"CH10 Menus and Other Resources/PoePoem/PoePoem.ico\"\n        \"CH10 Menus and Other Resources/PoePoem/PoePoem.txt\")\n\nAddDemo(010_PoorMenu  \"CH10 Menus and Other Resources/PoorMenu/PoorMenu.c\")\n\nAddDemo(010_PopPad2  \"CH10 Menus and Other Resources/PopPad2/PopPad2.c\"\n        \"CH10 Menus and Other Resources/PopPad2/Resource.h\"\n        \"CH10 Menus and Other Resources/PopPad2/PopPad2.rc\"\n        \"CH10 Menus and Other Resources/PopPad2/PopPad2.ico\")\n\n# ================================================================== Chapter 11\n\nAddDemo(011_About1  \"CH11 Dialog Boxes/About1/About1.c\"\n        \"CH11 Dialog Boxes/About1/Resource.h\"\n        \"CH11 Dialog Boxes/About1/About1.rc\"\n        \"CH11 Dialog Boxes/About1/About1.ico\")\n\nAddDemo(011_About2  \"CH11 Dialog Boxes/About2/About2.c\"\n        \"CH11 Dialog Boxes/About2/Resource.h\"\n        \"CH11 Dialog Boxes/About2/About2.rc\"\n        \"CH11 Dialog Boxes/About2/About2.ico\")\n\nAddDemo(011_About3  \"CH11 Dialog Boxes/About3/About3.c\"\n        \"CH11 Dialog Boxes/About3/Resource.h\"\n        \"CH11 Dialog Boxes/About3/About3.rc\"\n        \"CH11 Dialog Boxes/About3/About3.ico\")\n\nAddDemo(011_Colors2  \"CH11 Dialog Boxes/Colors2/Colors2.c\"\n        \"CH11 Dialog Boxes/Colors2/Resource.h\"\n        \"CH11 Dialog Boxes/Colors2/Colors2.rc\")\n\nAddDemo(011_Colors3  \"CH11 Dialog Boxes/Colors3/Colors3.c\"\n        \"CH11 Dialog Boxes/HexCalc/Resource.h\"\n        \"CH11 Dialog Boxes/HexCalc/HexCalc.rc\"\n        \"CH11 Dialog Boxes/HexCalc/HexCalc.dlg\"\n        \"CH11 Dialog Boxes/HexCalc/HexCalc.ico\")\n\nAddDemo(011_HexCalc  \"CH11 Dialog Boxes/HexCalc/HexCalc.c\"\n        \"CH11 Dialog Boxes/HexCalc/Resource.h\"\n        \"CH11 Dialog Boxes/HexCalc/HexCalc.rc\"\n        \"CH11 Dialog Boxes/HexCalc/HexCalc.dlg\"\n        \"CH11 Dialog Boxes/HexCalc/HexCalc.ico\")\n\nAddDemo(011_PopPad3  \"CH11 Dialog Boxes/PopPad3/PopPad.c\"\n        \"CH11 Dialog Boxes/PopPad3/PopFile.c\"\n        \"CH11 Dialog Boxes/PopPad3/PopFind.c\"\n        \"CH11 Dialog Boxes/PopPad3/PopFont.c\"\n        \"CH11 Dialog Boxes/PopPad3/PopPrntNull.c\"\n        \"CH11 Dialog Boxes/PopPad3/PopPad.h\"\n        \"CH11 Dialog Boxes/PopPad3/Resource.h\"\n        \"CH11 Dialog Boxes/PopPad3/PopPad.rc\"\n        \"CH11 Dialog Boxes/PopPad3/PopPad.ico\")\n\n# ================================================================== Chapter 13\n\nAddDemo(012_ClipText  \"CH12 The Clipboard/ClipText/ClipText.c\")\nAddDemo(012_ClipView  \"CH12 The Clipboard/ClipView/ClipView.c\")\n\n# ================================================================== Chapter 13\n\nAddDemo(013_DevCaps2  \"CH13 Using the Printer/DevCaps2/DevCaps2.c\"\n        \"CH13 Using the Printer/DevCaps2/Resource.h\"\n        \"CH13 Using the Printer/DevCaps2/DevCaps2.rc\")\n\nAddDemo(013_FormFeed  \"CH13 Using the Printer/FormFeed/FormFeed.c\"\n        \"CH13 Using the Printer/FormFeed/GetPrnDC.c\"\n        \"CH13 Using the Printer/FormFeed/Print.h\")\n\nAddDemo(013_Print1  \"CH13 Using the Printer/Print1/Print1.c\"\n        \"CH13 Using the Printer/Print1/Print.c\"\n        \"CH13 Using the Printer/FormFeed/GetPrnDC.c\")\n\n\nAddDemo(013_Print2  \"CH13 Using the Printer/Print2/Print2.c\"\n        \"CH13 Using the Printer/Print1/Print.c\"\n        \"CH13 Using the Printer/FormFeed/GetPrnDC.c\")\n\nAddDemo(013_Print3  \"CH13 Using the Printer/Print3/Print3.c\"\n        \"CH13 Using the Printer/Print1/Print.c\"\n        \"CH13 Using the Printer/FormFeed/GetPrnDC.c\"\n        \"CH13 Using the Printer/Print3/Resource.h\"\n        \"CH13 Using the Printer/Print3/Print.rc\")\n\nAddDemo(013_PopPrnt  \"CH13 Using the Printer/PopPrnt/PopPrnt.c\"\n        \"CH11 Dialog Boxes/PopPad3/PopPad.c\"\n        \"CH11 Dialog Boxes/PopPad3/PopFile.c\"\n        \"CH11 Dialog Boxes/PopPad3/PopFind.c\"\n        \"CH11 Dialog Boxes/PopPad3/PopFont.c\"\n        \"CH11 Dialog Boxes/PopPad3/PopPad.h\"\n        \"CH11 Dialog Boxes/PopPad3/Resource.h\"\n        \"CH11 Dialog Boxes/PopPad3/PopPad.rc\"\n        \"CH11 Dialog Boxes/PopPad3/PopPad.ico\")\n\n# ================================================================== Chapter 14\n\nAddDemo(014_BitBlt  \"CH14 Bitmaps and Bitblts/BitBlt/BitBlt.c\")\n\nAddDemo(014_BitMask  \"CH14 Bitmaps and Bitblts/BitMask/BitMask.c\"\n        \"CH14 Bitmaps and Bitblts/BitMask/Resource.h\"\n        \"CH14 Bitmaps and Bitblts/BitMask/BitMask.rc\"\n        \"CH14 Bitmaps and Bitblts/BitMask/Matthew.bmp\")\n\nAddDemo(014_Blowup  \"CH14 Bitmaps and Bitblts/Blowup/Blowup.c\"\n        \"CH14 Bitmaps and Bitblts/Blowup/Resource.h\"\n        \"CH14 Bitmaps and Bitblts/Blowup/Blowup.rc\")\n\nAddDemo(014_Bounce1  \"CH14 Bitmaps and Bitblts/Bounce1/Bounce1.c\")\n\nAddDemo(014_Bricks1  \"CH14 Bitmaps and Bitblts/Bricks1/Bricks1.c\"\n        \"CH14 Bitmaps and Bitblts/Bricks1/Resource.h\"\n        \"CH14 Bitmaps and Bitblts/Bricks1/Bricks1.rc\"\n        \"CH14 Bitmaps and Bitblts/Bricks1/Bricks.bmp\")\n\nAddDemo(014_Bricks2  \"CH14 Bitmaps and Bitblts/Bricks2/Bricks2.c\")\n\n# TODO: The resources for Bricks1 and Bricks3 are identical.\nAddDemo(014_Bricks3  \"CH14 Bitmaps and Bitblts/Bricks3/Bricks3.c\"\n        \"CH14 Bitmaps and Bitblts/Bricks3/Resource.h\"\n        \"CH14 Bitmaps and Bitblts/Bricks3/Bricks3.rc\"\n        \"CH14 Bitmaps and Bitblts/Bricks3/Bricks.bmp\")\n\nAddDemo(014_GrafMenu  \"CH14 Bitmaps and Bitblts/GrafMenu/GrafMenu.c\"\n        \"CH14 Bitmaps and Bitblts/GrafMenu/Resource.h\"\n        \"CH14 Bitmaps and Bitblts/GrafMenu/GrafMenu.rc\"\n        \"CH14 Bitmaps and Bitblts/GrafMenu/BigHelp.bmp\"\n        \"CH14 Bitmaps and Bitblts/GrafMenu/EditLabl.bmp\"\n        \"CH14 Bitmaps and Bitblts/GrafMenu/FileLabl.bmp\"\n        \"CH14 Bitmaps and Bitblts/GrafMenu/FontLabl.bmp\")\n\nAddDemo(014_HelloBit  \"CH14 Bitmaps and Bitblts/HelloBit/HelloBit.c\"\n        \"CH14 Bitmaps and Bitblts/HelloBit/Resource.h\"\n        \"CH14 Bitmaps and Bitblts/HelloBit/HelloBit.rc\")\n\nAddDemo(014_Scramble  \"CH14 Bitmaps and Bitblts/Scramble/Scramble.c\")\nAddDemo(014_Sketch  \"CH14 Bitmaps and Bitblts/Sketch/Sketch.c\")\nAddDemo(014_Stretch  \"CH14 Bitmaps and Bitblts/Stretch/Stretch.c\")\n\n# ================================================================== Chapter 15\n\nset(APOLLO_DEPENDENCIES11 \"CH15 The Device Independent Bitmap/Apollo11/Apollo11.bmp\"\n        \"CH15 The Device Independent Bitmap/Apollo11/ApolloTD.bmp\")\nadd_custom_command(\n        OUTPUT \"${EXECUTABLE_OUTPUT_PATH}/Apollo11.bmp\"\n        \"${EXECUTABLE_OUTPUT_PATH}/ApolloTD.bmp\"\n        COMMAND ${CMAKE_COMMAND} -E copy ${APOLLO_DEPENDENCIES11} \"${EXECUTABLE_OUTPUT_PATH}\"\n        WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}\n        COMMENT \"Copying Apollo11 bmo files to exe directory\"\n        DEPENDS ${APOLLO_DEPENDENCIES11})\nadd_custom_target(custom_target_apollo11 ALL DEPENDS \"${APOLLO_DEPENDENCIES11}\")\n\nAddDemo(015_Apollo11  \"CH15 The Device Independent Bitmap/Apollo11/Apollo11.c\"\n        \"CH15 The Device Independent Bitmap/ShowDib1/DibFile.c\"\n        \"CH15 The Device Independent Bitmap/ShowDib1/DibFile.h\"\n        \"CH15 The Device Independent Bitmap/ShowDib1/Resource.h\"\n        \"CH15 The Device Independent Bitmap/ShowDib1/ShowDib1.rc\"\n        ${APOLLO_DEPENDENCIES11})\nadd_dependencies(015_Apollo11 custom_target_apollo11)\n\nAddDemo(015_DibConv  \"CH15 The Device Independent Bitmap/DibConv/DibConv.c\"\n        \"CH15 The Device Independent Bitmap/DibConv/Resource.h\"\n        \"CH15 The Device Independent Bitmap/DibConv/DibConv.rc\")\nadd_dependencies(015_DibConv custom_target_apollo11)\n\nAddDemo(015_DibHeads  \"CH15 The Device Independent Bitmap/DibHeads/DibHeads.c\"\n        \"CH15 The Device Independent Bitmap/DibHeads/Resource.h\"\n        \"CH15 The Device Independent Bitmap/DibHeads/DibHeads.rc\")\nadd_dependencies(015_DibHeads custom_target_apollo11)\n\nAddDemo(015_DibSect  \"CH15 The Device Independent Bitmap/DibSect/DibSect.c\"\n        \"CH15 The Device Independent Bitmap/DibSect/Resource.h\"\n        \"CH15 The Device Independent Bitmap/DibSect/DibSect.rc\")\nadd_dependencies(015_DibSect custom_target_apollo11)\n\nAddDemo(015_SeqDisp  \"CH15 The Device Independent Bitmap/SeqDisp/SeqDisp.c\"\n        \"CH15 The Device Independent Bitmap/SeqDisp/Resource.h\"\n        \"CH15 The Device Independent Bitmap/SeqDisp/SeqDisp.rc\")\nadd_dependencies(015_SeqDisp custom_target_apollo11)\n\nAddDemo(015_ShowDib1  \"CH15 The Device Independent Bitmap/ShowDib1/ShowDib1.c\"\n        \"CH15 The Device Independent Bitmap/ShowDib1/DibFile.c\"\n        \"CH15 The Device Independent Bitmap/ShowDib1/DibFile.h\"\n        \"CH15 The Device Independent Bitmap/ShowDib1/Resource.h\"\n        \"CH15 The Device Independent Bitmap/ShowDib1/ShowDib1.rc\")\nadd_dependencies(015_ShowDib1 custom_target_apollo11)\n\nAddDemo(015_ShowDib2  \"CH15 The Device Independent Bitmap/ShowDib2/Showdib2.c\"\n        \"CH15 The Device Independent Bitmap/ShowDib1/DibFile.c\"\n        \"CH15 The Device Independent Bitmap/ShowDib1/DibFile.h\"\n        \"CH15 The Device Independent Bitmap/ShowDib2/Resource.h\"\n        \"CH15 The Device Independent Bitmap/ShowDib2/ShowDib2.rc\")\nadd_dependencies(015_ShowDib2 custom_target_apollo11)\n\n# ================================================================== Chapter 16\n\nAddDemo(016_Grays1  \"CH16 The Palette Manager/Grays1/Grays1.c\")\nAddDemo(016_Grays2  \"CH16 The Palette Manager/Grays2/Grays2.c\")\nAddDemo(016_Grays3  \"CH16 The Palette Manager/Grays3/Grays3.c\")\n\nAddDemo(016_SysPal1  \"CH16 The Palette Manager/SysPal1/SysPal1.c\")\nAddDemo(016_SysPal2  \"CH16 The Palette Manager/SysPal2/SysPal2.c\")\nAddDemo(016_SysPal3  \"CH16 The Palette Manager/SysPal3/SysPal3.c\")\n\nAddDemo(016_Bounce  \"CH16 The Palette Manager/Bounce/Bounce.c\"\n        \"CH16 The Palette Manager/Bounce/PalAnim.c\")\n\nAddDemo(016_Fader  \"CH16 The Palette Manager/Fader/Fader.c\"\n        \"CH16 The Palette Manager/Bounce/PalAnim.c\")\n\nAddDemo(016_AllColor  \"CH16 The Palette Manager/AllColor/AllColor.c\"\n        \"CH16 The Palette Manager/Bounce/PalAnim.c\")\n\nAddDemo(016_Pipes  \"CH16 The Palette Manager/Pipes/Pipes.c\"\n        \"CH16 The Palette Manager/Bounce/PalAnim.c\")\n\nAddDemo(016_Tunnel  \"CH16 The Palette Manager/Tunnel/Tunnel.c\"\n        \"CH16 The Palette Manager/Bounce/PalAnim.c\")\n\nAddDemo(016_ShowDib3  \"CH16 The Palette Manager/ShowDib3/ShowDib3.c\"\n        \"CH16 The Palette Manager/ShowDib3/PackeDib.c\"\n        \"CH16 The Palette Manager/ShowDib3/PackeDib.h\"\n        \"CH16 The Palette Manager/ShowDib3/Resource.h\"\n        \"CH16 The Palette Manager/ShowDib3/ShowDib3.rc\")\nadd_dependencies(016_ShowDib3 custom_target_apollo11)\n\nAddDemo(016_ShowDib4  \"CH16 The Palette Manager/ShowDib4/ShowDib4.c\"\n        \"CH16 The Palette Manager/ShowDib3/PackeDib.c\"\n        \"CH16 The Palette Manager/ShowDib3/PackeDib.h\"\n        \"CH16 The Palette Manager/ShowDib4/Resource.h\"\n        \"CH16 The Palette Manager/ShowDib4/ShowDib4.rc\")\nadd_dependencies(016_ShowDib4 custom_target_apollo11)\n\nAddDemo(016_ShowDib5  \"CH16 The Palette Manager/ShowDib5/ShowDib5.c\"\n        \"CH16 The Palette Manager/ShowDib3/PackeDib.c\"\n        \"CH16 The Palette Manager/ShowDib3/PackeDib.h\"\n        \"CH16 The Palette Manager/ShowDib5/Resource.h\"\n        \"CH16 The Palette Manager/ShowDib5/ShowDib5.rc\")\nadd_dependencies(016_ShowDib5 custom_target_apollo11)\n\nAddDemo(016_ShowDib6  \"CH16 The Palette Manager/ShowDib6/ShowDib6.c\"\n        \"CH16 The Palette Manager/ShowDib3/PackeDib.c\"\n        \"CH16 The Palette Manager/ShowDib3/PackeDib.h\"\n        \"CH16 The Palette Manager/ShowDib6/Resource.h\"\n        \"CH16 The Palette Manager/ShowDib6/ShowDib6.rc\")\nadd_dependencies(016_ShowDib6 custom_target_apollo11)\n\nAddDemo(016_ShowDib7  \"CH16 The Palette Manager/ShowDib7/ShowDib7.c\"\n        \"CH16 The Palette Manager/ShowDib3/PackeDib.c\"\n        \"CH16 The Palette Manager/ShowDib3/PackeDib.h\"\n        \"CH16 The Palette Manager/ShowDib7/Resource.h\"\n        \"CH16 The Palette Manager/ShowDib7/ShowDib7.rc\")\nadd_dependencies(016_ShowDib7 custom_target_apollo11)\n\nAddDemo(016_ShowDib8  \"CH16 The Palette Manager/ShowDib8/ShowDib8.c\"\n        \"CH16 The Palette Manager/ShowDib3/PackeDib.c\"\n        \"CH16 The Palette Manager/ShowDib3/PackeDib.h\"\n        \"CH16 The Palette Manager/ShowDib8/Resource.h\"\n        \"CH16 The Palette Manager/ShowDib8/ShowDib8.rc\")\nadd_dependencies(016_ShowDib8 custom_target_apollo11)\n\nAddDemo(016_Dibble  \"CH16 The Palette Manager/Dibble/Dibble.c\"\n        \"CH16 The Palette Manager/Dibble/DibConv.c\"\n        \"CH16 The Palette Manager/Dibble/DibConv.h\"\n        \"CH16 The Palette Manager/Dibble/DibHelp.c\"\n        \"CH16 The Palette Manager/Dibble/DibHelp.h\"\n        \"CH16 The Palette Manager/Dibble/DibPal.c\"\n        \"CH16 The Palette Manager/Dibble/DibPal.h\"\n        \"CH16 The Palette Manager/Dibble/Resource.h\"\n        \"CH16 The Palette Manager/Dibble/Dibble.rc\")\n\n# ================================================================== Chapter 17\n\nAddDemo(017_PickFont  \"CH17 Text and Fonts/PickFont/PickFont.c\"\n        \"CH17 Text and Fonts/PickFont/Resource.h\"\n        \"CH17 Text and Fonts/PickFont/PickFont.rc\")\n\nAddDemo(017_EZTest  \"CH17 Text and Fonts/EZTest/EZTest.c\"\n        \"CH17 Text and Fonts/EZTest/EZFont.c\"\n        \"CH17 Text and Fonts/EZTest/EZFont.h\"\n        \"CH17 Text and Fonts/EZTest/FontDemo.c\"\n        \"CH17 Text and Fonts/EZTest/Resource.h\"\n        \"CH17 Text and Fonts/EZTest/FontDemo.rc\")\n\nAddDemo(017_FontRot  \"CH17 Text and Fonts/FontRot/FontRot.c\"\n        \"CH17 Text and Fonts/EZTest/EZFont.c\"\n        \"CH17 Text and Fonts/EZTest/EZFont.h\"\n        \"CH17 Text and Fonts/EZTest/FontDemo.c\"\n        \"CH17 Text and Fonts/EZTest/Resource.h\"\n        \"CH17 Text and Fonts/EZTest/FontDemo.rc\")\n\nAddDemo(017_ChosFont  \"CH17 Text and Fonts/ChosFont/ChosFont.c\"\n        \"CH17 Text and Fonts/ChosFont/Resource.h\"\n        \"CH17 Text and Fonts/ChosFont/ChosFont.rc\")\n\nAddDemo(017_Unichars  \"CH17 Text and Fonts/UniChars/Unichars.c\"\n        \"CH17 Text and Fonts/UniChars/Resource.h\"\n        \"CH17 Text and Fonts/UniChars/Unichars.rc\")\n\nAddDemo(017_Justify1  \"CH17 Text and Fonts/Justify1/Justify1.c\"\n        \"CH17 Text and Fonts/Justify1/Resource.h\"\n        \"CH17 Text and Fonts/Justify1/Justify1.rc\")\n\nAddDemo(017_Justify2  \"CH17 Text and Fonts/Justify2/Justify2.c\"\n        \"CH17 Text and Fonts/Justify2/Resource.h\"\n        \"CH17 Text and Fonts/Justify2/Justify2.rc\")\n\nAddDemo(017_EndJoin  \"CH17 Text and Fonts/EndJoin/EndJoin.c\")\n\nAddDemo(017_FontOut1  \"CH17 Text and Fonts/FontOut1/FontOut1.c\"\n        \"CH17 Text and Fonts/EZTest/EZFont.c\"\n        \"CH17 Text and Fonts/EZTest/EZFont.h\"\n        \"CH17 Text and Fonts/EZTest/FontDemo.c\"\n        \"CH17 Text and Fonts/EZTest/Resource.h\"\n        \"CH17 Text and Fonts/EZTest/FontDemo.rc\")\n\nAddDemo(017_FontOut2  \"CH17 Text and Fonts/FontOut2/FontOut2.c\"\n        \"CH17 Text and Fonts/EZTest/EZFont.c\"\n        \"CH17 Text and Fonts/EZTest/EZFont.h\"\n        \"CH17 Text and Fonts/EZTest/FontDemo.c\"\n        \"CH17 Text and Fonts/EZTest/Resource.h\"\n        \"CH17 Text and Fonts/EZTest/FontDemo.rc\")\n\nAddDemo(017_FontFill  \"CH17 Text and Fonts/FontFill/FontFill.c\"\n        \"CH17 Text and Fonts/EZTest/EZFont.c\"\n        \"CH17 Text and Fonts/EZTest/EZFont.h\"\n        \"CH17 Text and Fonts/EZTest/FontDemo.c\"\n        \"CH17 Text and Fonts/EZTest/Resource.h\"\n        \"CH17 Text and Fonts/EZTest/FontDemo.rc\")\n\nAddDemo(017_FontClip  \"CH17 Text and Fonts/FontClip/FontClip.c\"\n        \"CH17 Text and Fonts/EZTest/EZFont.c\"\n        \"CH17 Text and Fonts/EZTest/EZFont.h\"\n        \"CH17 Text and Fonts/EZTest/FontDemo.c\"\n        \"CH17 Text and Fonts/EZTest/Resource.h\"\n        \"CH17 Text and Fonts/EZTest/FontDemo.rc\")\n\n# ================================================================== Chapter 18\n\nAddDemo(018_Emf01  \"CH18 Metafiles/Emf01/Emf01.c\")\n\nAddDemo(018_Emf02  \"CH18 Metafiles/Emf02/Emf02.c\")\nadd_custom_command(\n        OUTPUT \"${EXECUTABLE_OUTPUT_PATH}/Emf02.emf\"\n        COMMAND ${CMAKE_COMMAND} -E copy \"${CMAKE_CURRENT_SOURCE_DIR}/CH18 Metafiles/Emf02/Emf02.emf\" \"${EXECUTABLE_OUTPUT_PATH}\"\n        COMMENT \"Copying Emf02.emf to exe directory\"\n        DEPENDS \"CH18 Metafiles/Emf02/Emf02.emf\")\nadd_custom_target(custom_target_emf02 ALL\n        DEPENDS \"${EXECUTABLE_OUTPUT_PATH}/Emf02.emf\")\nadd_dependencies(018_Emf02 custom_target_emf02)\n\nAddDemo(018_Emf03  \"CH18 Metafiles/Emf03/Emf03.c\"\n        \"CH18 Metafiles/Emf03/Emf03.emf\")\nadd_custom_command(\n        OUTPUT \"${EXECUTABLE_OUTPUT_PATH}/Emf03.emf\"\n        COMMAND ${CMAKE_COMMAND} -E copy \"${CMAKE_CURRENT_SOURCE_DIR}/CH18 Metafiles/Emf03/Emf03.emf\" \"${EXECUTABLE_OUTPUT_PATH}\"\n        COMMENT \"Copying Emf03.emf to exe directory\"\n        DEPENDS \"CH18 Metafiles/Emf03/Emf03.emf\")\nadd_custom_target(custom_target_emf03 ALL\n        DEPENDS \"${EXECUTABLE_OUTPUT_PATH}/Emf03.emf\")\nadd_dependencies(018_Emf03 custom_target_emf03)\n\nAddDemo(018_Emf04  \"CH18 Metafiles/Emf04/Emf04.c\"\n        \"CH18 Metafiles/Emf04/Emf04.emf\")\nadd_custom_command(\n        OUTPUT \"${EXECUTABLE_OUTPUT_PATH}/Emf04.emf\"\n        COMMAND ${CMAKE_COMMAND} -E copy \"${CMAKE_CURRENT_SOURCE_DIR}/CH18 Metafiles/Emf04/Emf04.emf\" \"${EXECUTABLE_OUTPUT_PATH}\"\n        COMMENT \"Copying Emf04.emf to exe directory\"\n        DEPENDS \"CH18 Metafiles/Emf04/Emf04.emf\")\nadd_custom_target(custom_target_emf04 ALL\n        DEPENDS \"${EXECUTABLE_OUTPUT_PATH}/Emf04.emf\")\nadd_dependencies(018_Emf04 custom_target_emf04)\n\nAddDemo(018_Emf05  \"CH18 Metafiles/Emf05/Emf05.c\"\n        \"CH18 Metafiles/Emf03/Emf03.emf\")\nadd_dependencies(018_Emf05 custom_target_emf03)\n\nAddDemo(018_Emf06  \"CH18 Metafiles/Emf06/Emf06.c\"\n        \"CH18 Metafiles/Emf03/Emf03.emf\")\nadd_dependencies(018_Emf06 custom_target_emf03)\n\nAddDemo(018_Emf07  \"CH18 Metafiles/Emf07/Emf07.c\"\n        \"CH18 Metafiles/Emf07/Emf07.emf\")\nadd_custom_command(\n        OUTPUT \"${EXECUTABLE_OUTPUT_PATH}/Emf07.emf\"\n        COMMAND ${CMAKE_COMMAND} -E copy \"${CMAKE_CURRENT_SOURCE_DIR}/CH18 Metafiles/Emf07/Emf07.emf\" \"${EXECUTABLE_OUTPUT_PATH}\"\n        COMMENT \"Copying Emf07.emf to exe directory\"\n        DEPENDS \"CH18 Metafiles/Emf07/Emf07.emf\")\nadd_custom_target(custom_target_emf07 ALL\n        DEPENDS \"${EXECUTABLE_OUTPUT_PATH}/Emf07.emf\")\nadd_dependencies(018_Emf07 custom_target_emf03 custom_target_emf07)\n\nAddDemo(018_Emf08  \"CH18 Metafiles/Emf08/Emf08.c\"\n        \"CH18 Metafiles/Emf08/Emf.c\"\n        \"CH18 Metafiles/Emf08/Emf.h\"\n        \"CH18 Metafiles/Emf08/Resource.h\"\n        \"CH18 Metafiles/Emf08/Emf.rc\"\n        \"CH18 Metafiles/Emf08/Emf08.emf\")\nadd_custom_command(\n        OUTPUT \"${EXECUTABLE_OUTPUT_PATH}/Emf08.emf\"\n        COMMAND ${CMAKE_COMMAND} -E copy \"${CMAKE_CURRENT_SOURCE_DIR}/CH18 Metafiles/Emf08/Emf08.emf\" \"${EXECUTABLE_OUTPUT_PATH}\"\n        COMMENT \"Copying Emf08.emf to exe directory\"\n        DEPENDS \"CH18 Metafiles/Emf08/Emf08.emf\")\nadd_custom_target(custom_target_emf08 ALL\n        DEPENDS \"${EXECUTABLE_OUTPUT_PATH}/Emf08.emf\")\nadd_dependencies(018_Emf08 custom_target_emf08)\n\nAddDemo(018_Emf09  \"CH18 Metafiles/Emf09/Emf09.c\"\n        \"CH18 Metafiles/Emf08/Emf.c\"\n        \"CH18 Metafiles/Emf08/Emf.h\"\n        \"CH18 Metafiles/Emf08/Resource.h\"\n        \"CH18 Metafiles/Emf08/Emf.rc\"\n        \"CH18 Metafiles/Emf08/Emf08.emf\")\nadd_dependencies(018_Emf09 custom_target_emf08)\n\nAddDemo(018_Emf10  \"CH18 Metafiles/Emf10/Emf10.c\"\n        \"CH18 Metafiles/Emf08/Emf.c\"\n        \"CH18 Metafiles/Emf08/Emf.h\"\n        \"CH18 Metafiles/Emf08/Resource.h\"\n        \"CH18 Metafiles/Emf08/Emf.rc\"\n        \"CH18 Metafiles/Emf08/Emf08.emf\")\nadd_dependencies(018_Emf10 custom_target_emf08)\n\nAddDemo(018_Emf11  \"CH18 Metafiles/Emf11/Emf11.c\"\n        \"CH18 Metafiles/Emf11/Emf11.emf\"\n        \"CH18 Metafiles/Emf08/Emf.c\"\n        \"CH18 Metafiles/Emf08/Emf.h\"\n        \"CH18 Metafiles/Emf08/Resource.h\"\n        \"CH18 Metafiles/Emf08/Emf.rc\")\nadd_custom_command(\n        OUTPUT \"${EXECUTABLE_OUTPUT_PATH}/Emf11.emf\"\n        COMMAND ${CMAKE_COMMAND} -E copy \"${CMAKE_CURRENT_SOURCE_DIR}/CH18 Metafiles/Emf11/Emf11.emf\" \"${EXECUTABLE_OUTPUT_PATH}\"\n        COMMENT \"Copying Emf11.emf to exe directory\"\n        DEPENDS \"CH18 Metafiles/Emf11/Emf11.emf\")\nadd_custom_target(custom_target_emf11 ALL\n        DEPENDS \"${EXECUTABLE_OUTPUT_PATH}/Emf11.emf\")\nadd_dependencies(018_Emf11 custom_target_emf11)\n\nAddDemo(018_Emf12  \"CH18 Metafiles/Emf12/Emf12.c\"\n        \"CH18 Metafiles/Emf12/Emf12.emf\"\n        \"CH18 Metafiles/Emf08/Emf.c\"\n        \"CH18 Metafiles/Emf08/Emf.h\"\n        \"CH18 Metafiles/Emf08/Resource.h\"\n        \"CH18 Metafiles/Emf08/Emf.rc\")\nadd_custom_command(\n        OUTPUT \"${EXECUTABLE_OUTPUT_PATH}/Emf12.emf\"\n        COMMAND ${CMAKE_COMMAND} -E copy \"${CMAKE_CURRENT_SOURCE_DIR}/CH18 Metafiles/Emf12/Emf12.emf\" \"${EXECUTABLE_OUTPUT_PATH}\"\n        COMMENT \"Copying Emf12.emf to exe directory\"\n        DEPENDS \"CH18 Metafiles/Emf12/Emf12.emf\")\nadd_custom_target(custom_target_emf12 ALL\n        DEPENDS \"${EXECUTABLE_OUTPUT_PATH}/Emf12.emf\")\nadd_dependencies(018_Emf12 custom_target_emf12)\n\nAddDemo(018_Emf13  \"CH18 Metafiles/Emf13/Emf13.c\"\n        \"CH18 Metafiles/Emf08/Emf.c\"\n        \"CH18 Metafiles/Emf08/Emf.h\"\n        \"CH18 Metafiles/Emf08/Resource.h\"\n        \"CH18 Metafiles/Emf08/Emf.rc\")\nadd_dependencies(018_Emf13 custom_target_emf11)\n\nAddDemo(018_EmfView  \"CH18 Metafiles/EmfView/EmfView.c\"\n        \"CH18 Metafiles/EmfView/Resource.h\"\n        \"CH18 Metafiles/EmfView/EmfView.rc\")\n\nAddDemo(018_Metafile  \"CH18 Metafiles/MetaFile/Metafile.c\")\n\n# ================================================================== Chapter 19\n\nAddDemo(019_MDIDemo  \"CH19 The Multiple-Document Interface/MDIDemo/MDIDemo.c\" \n    \"CH19 The Multiple-Document Interface/MDIDemo/MDIDemo.rc\")\n\n# ================================================================== Chapter 20\n\nAddDemo(020_BigJob1  \"CH20 Multitasking and Multithreading/BigJob1/BigJob1.c\")\nAddDemo(020_BigJob2  \"CH20 Multitasking and Multithreading/BigJob2/BigJob2.c\")\n\nAddDemo(020_Multi1  \"CH20 Multitasking and Multithreading/Multi1/Multi1.c\")\nAddDemo(020_Multi2  \"CH20 Multitasking and Multithreading/Multi2/Multi2.c\")\n\n# ================================================================== Chapter 21\n\nAddDemo(021_RndRctMT  \"CH20 Multitasking and Multithreading/RndRectMT/RndRctMT.c\")\nAddDemo(021_EdrTest  \"CH21 Dynamic-Link Libraries/EdrTest/EdrTest.c\"\n        \"CH21 Dynamic-Link Libraries/EdrTest/EdrLib.c\")\n\n# add_custom_target(BITLIBFILE ALL DEPENDS \"${EXECUTABLE_OUTPUT_PATH}/BITLIB.lib\")\nadd_library(BITLIB SHARED \n    \"CH21 Dynamic-Link Libraries/ShowBit/BitLib.c\"\n    \"CH21 Dynamic-Link Libraries/ShowBit/BitLib.rc\")\nAddDemo(021_ShowBit  \"CH21 Dynamic-Link Libraries/ShowBit/ShowBit.c\")\n# add_dependencies(021_ShowBit BITLIBFILE)\nadd_dependencies(021_ShowBit BITLIB)\n\nAddDemo(021_StrProg  \"CH21 Dynamic-Link Libraries/StrProg/StrProg.c\"\n        \"CH21 Dynamic-Link Libraries/StrProg/StrLib.c\")\n\n# ================================================================== Chapter 22\n\nAddDemo(022_AddSynth  \"CH22 Sound and Music/AddSynth/AddSynth.c\"\n        \"CH22 Sound and Music/AddSynth/AddSynth.h\"\n        \"CH22 Sound and Music/AddSynth/Resource.h\"\n        \"CH22 Sound and Music/AddSynth/AddSynth.rc\")\ntarget_link_libraries(022_AddSynth winmm.lib)\n\nAddDemo(022_BachTocc  \"CH22 Sound and Music/BachTocc/BachTocc.c\")\ntarget_link_libraries(022_BachTocc winmm.lib)\n\nAddDemo(022_Drum  \"CH22 Sound and Music/Drum/Drum.c\"\n        \"CH22 Sound and Music/Drum/DrumFile.c\"\n        \"CH22 Sound and Music/Drum/DrumFile.h\"\n        \"CH22 Sound and Music/Drum/DrumTime.c\"\n        \"CH22 Sound and Music/Drum/DrumTime.h\"\n        \"CH22 Sound and Music/Drum/Resource.h\"\n        \"CH22 Sound and Music/Drum/Drum.ico\"\n        \"CH22 Sound and Music/Drum/Drum.rc\")\ntarget_link_libraries(022_Drum winmm.lib)\n\nAddDemo(022_KBMidi  \"CH22 Sound and Music/KBMidi/KBMidi.c\")\ntarget_link_libraries(022_KBMidi winmm.lib)\n\nAddDemo(022_Record1  \"CH22 Sound and Music/Record1/Record1.c\"\n        \"CH22 Sound and Music/Record1/Resource.h\"\n        \"CH22 Sound and Music/Record1/Record.rc\")\ntarget_link_libraries(022_Record1 winmm.lib)\n\nAddDemo(022_Record2  \"CH22 Sound and Music/Record2/Record2.c\"\n        \"CH22 Sound and Music/Record1/Resource.h\"\n        \"CH22 Sound and Music/Record1/Record.rc\")\ntarget_link_libraries(022_Record2 winmm.lib)\n\nAddDemo(022_Record3  \"CH22 Sound and Music/Record3/Record3.c\"\n        \"CH22 Sound and Music/Record1/Resource.h\"\n        \"CH22 Sound and Music/Record1/Record.rc\")\ntarget_link_libraries(022_Record3 winmm.lib)\n\nAddDemo(022_SineWaveGen  \"CH22 Sound and Music/SineWaveGen/SineWaveGen.c\"\n        \"CH22 Sound and Music/SineWaveGen/Resource.h\"\n        \"CH22 Sound and Music/SineWaveGen/SineWaveGen.rc\")\ntarget_link_libraries(022_SineWaveGen winmm.lib)\n\nAddDemo(022_TestMci  \"CH22 Sound and Music/TextMCI/TestMci.c\"\n        \"CH22 Sound and Music/SineWaveGen/Resource.h\"\n        \"CH22 Sound and Music/SineWaveGen/SineWaveGen.rc\")\ntarget_link_libraries(022_TestMci winmm.lib)\n\nAddDemo(022_WakeUp  \"CH22 Sound and Music/WakeUp/WakeUp.c\")\ntarget_link_libraries(022_WakeUp winmm.lib comctl32.lib)\n\n# ================================================================== Chapter 23\n\nAddDemo(023_NetTime  \"CH23 A Taste of the Internet/NetTime/NetTime.c\"\n        \"CH23 A Taste of the Internet/NetTime/NetTime.rc\"\n        \"CH23 A Taste of the Internet/NetTime/Resource.h\")\ntarget_link_libraries(023_NetTime Ws2_32.lib)\n\nAddDemo(023_UpdDemo  \"CH23 A Taste of the Internet/UpdDemo/UpdDemo.c\"\n        \"CH23 A Taste of the Internet/UpdDemo/Resource.h\"\n        \"CH23 A Taste of the Internet/UpdDemo/UpdDemo.rc\")\ntarget_link_libraries(023_UpdDemo Wininet.lib)\n\n# ========================================================================= EOF",
 			"file": "CMakeLists.txt",
-			"file_size": 35531,
-			"file_write_time": 132406606709859183,
+			"file_size": 33371,
+			"file_write_time": 132406663051204785,
 			"settings":
 			{
-				"buffer_size": 34824,
+				"buffer_size": 32642,
 				"line_ending": "Windows",
 				"scratch": true
 			}
 		},
 		{
-			"file": "CH22 Sound and Music/SineWaveGen/SineWaveGen.c",
+			"file": ".gitignore",
 			"settings":
 			{
-				"buffer_size": 6180,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "CH22 Sound and Music/Drum/DrumTime.c",
-			"settings":
-			{
-				"buffer_size": 3507,
-				"line_ending": "Windows"
+				"buffer_size": 448,
+				"line_ending": "Unix"
 			}
 		},
 		{
@@ -444,7 +448,6 @@
 			"settings":
 			{
 				"buffer_size": 233,
-				"encoding": "Western (Windows 1252)",
 				"line_ending": "Windows",
 				"scratch": true
 			}
@@ -2368,6 +2371,66 @@
 				"☾♬ Ninja - all",
 				""
 			]
+		],
+		[
+			[
+				[
+					"☾♬ Ninja (Windows)",
+					""
+				],
+				[
+					"☾♬ Ninja - all",
+					""
+				],
+				[
+					"☾♬ Ninja - clean",
+					""
+				],
+				[
+					"☾♬ Ninja - edit_cache",
+					""
+				],
+				[
+					"☾♬ Ninja - rebuild_cache",
+					""
+				],
+				[
+					"♬☾ MinGW (Windows)",
+					""
+				],
+				[
+					"♬☾ MinGW (Windows)",
+					"Unix Makefiles"
+				],
+				[
+					"♬☾ MinGW (Windows)",
+					"clean"
+				],
+				[
+					"♬☾ MinGW (Windows)",
+					"clear all"
+				],
+				[
+					"♬☾ MinGW (Windows)",
+					"Make"
+				],
+				[
+					"♬☾ MinGW (Windows)",
+					"Clean & Make"
+				],
+				[
+					"Packages/C++/C Single File.sublime-build",
+					""
+				],
+				[
+					"Packages/C++/C Single File.sublime-build",
+					"Run"
+				]
+			],
+			[
+				"☾♬ Ninja - all",
+				""
+			]
 		]
 	],
 	"build_varint": "",
@@ -2377,6 +2440,46 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"git remote",
+				"Git: Track Remote Branch"
+			],
+			[
+				"push",
+				"Git: Push Current Branch"
+			],
+			[
+				"git comm",
+				"Git: Commit"
+			],
+			[
+				"commi",
+				"Git: Commit"
+			],
+			[
+				"com",
+				"Git: Commit"
+			],
+			[
+				"status",
+				"Git: Status"
+			],
+			[
+				"addal",
+				"Git: Add All"
+			],
+			[
+				"branch",
+				"Git: New Branch"
+			],
+			[
+				"git remo",
+				"Git: Track Remote Branch"
+			],
+			[
+				"init",
+				"Git: Init"
+			],
 			[
 				"edit p",
 				"Project: Edit Project"
@@ -2390,20 +2493,8 @@
 				"Git: Add All"
 			],
 			[
-				"status",
-				"Git: Status"
-			],
-			[
 				"add",
 				"Git: Add All"
-			],
-			[
-				"push",
-				"Git: Push Current Branch"
-			],
-			[
-				"com",
-				"Git: Commit"
 			],
 			[
 				"comm",
@@ -2528,10 +2619,6 @@
 			[
 				"insta",
 				"Package Control: Install Package"
-			],
-			[
-				"git remote",
-				"Git: Track Remote Branch"
 			],
 			[
 				"add aa",
@@ -2680,7 +2767,12 @@
 	"expanded_folders":
 	[
 		"/C/coding/md-code/progwin5th",
-		"/C/coding/md-code/progwin5th/CH04 An Exercise in Text Output",
+		"/C/coding/md-code/progwin5th/CH05 Basic Drawing",
+		"/C/coding/md-code/progwin5th/CH20 Multitasking and Multithreading",
+		"/C/coding/md-code/progwin5th/CH21 Dynamic-Link Libraries",
+		"/C/coding/md-code/progwin5th/CH21 Dynamic-Link Libraries/EdrTest",
+		"/C/coding/md-code/progwin5th/CH21 Dynamic-Link Libraries/ShowBit",
+		"/C/coding/md-code/progwin5th/CH21 Dynamic-Link Libraries/StrProg",
 		"/C/coding/md-code/progwin5th/CH22 Sound and Music",
 		"/C/coding/md-code/progwin5th/CH22 Sound and Music/SineWaveGen",
 		"/C/coding/md-code/progwin5th/CH23 A Taste of the Internet",
@@ -2688,6 +2780,8 @@
 	],
 	"file_history":
 	[
+		"/C/coding/md-code/progwin5th/bin/023_UpdDemo.ilk",
+		"/C/coding/md-code/progwin5th/CH22 Sound and Music/Drum/DrumTime.c",
 		"/C/coding/md-code/progwin5th/Petzold/PetzoldMakefiles/Chap19/MDIDemo/MDIDemo.mak",
 		"/C/coding/md-code/progwin5th/Petzold/Makefile",
 		"/C/coding/md-code/progwin5th/Petzold/PackingList.txt",
@@ -2813,9 +2907,7 @@
 		"/C/coding/md-code/cppDemos/readme.md",
 		"/C/coding/md-code/cppDemos/build/build_folder_required",
 		"/C/coding/md-code/git-demo/readme.md",
-		"/C/coding/md-code/cppDemos/cmake.md",
-		"/C/coding/md-code/cppDemos/C++STL.md",
-		"/C/coding/md-code/cppDemos/sublime.md"
+		"/C/coding/md-code/cppDemos/cmake.md"
 	],
 	"find":
 	{
@@ -2833,6 +2925,25 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"AddDemo(",
+			"CH15 The Device Independent Bitmap/Apollo11/",
+			"CH15 The Device Independent Bitmap",
+			"/",
+			"add_dependencies",
+			"005",
+			"CH05",
+			"AddDemo(",
+			"CH0",
+			"AddDemo(",
+			"# AddDemo(",
+			"add_executable",
+			"   <DIR>",
+			"PRIVATE ",
+			"target_include_directories",
+			"WIN32",
+			"add_executable",
+			"MDIMENUINIT",
+			"custom_target_emf08",
 			"CMAKE_CURRENT_BINARY_DIR",
 			"IDC_TEXTOUT",
 			"CMAKE_CURRENT_BINARY_DIR",
@@ -2871,7 +2982,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -2880,15 +2991,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3717,
+						"buffer_size": 3745,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								605,
-								605
+								915,
+								915
 							]
 						],
 						"settings":
@@ -2897,13 +3008,15 @@
 							"origin_encoding": "ASCII",
 							"remote_loading": false,
 							"synced": false,
-							"syntax": "Packages/JavaScript/JSON.sublime-syntax"
+							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1301.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
@@ -2912,15 +3025,591 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 34824,
+						"buffer_size": 32642,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								727,
-								727
+								1639,
+								1651
+							],
+							[
+								1798,
+								1810
+							],
+							[
+								2049,
+								2061
+							],
+							[
+								2911,
+								2923
+							],
+							[
+								3225,
+								3237
+							],
+							[
+								3539,
+								3551
+							],
+							[
+								3773,
+								3787
+							],
+							[
+								3842,
+								3856
+							],
+							[
+								3911,
+								3925
+							],
+							[
+								3980,
+								3992
+							],
+							[
+								4043,
+								4056
+							],
+							[
+								4109,
+								4123
+							],
+							[
+								4178,
+								4192
+							],
+							[
+								4247,
+								4259
+							],
+							[
+								4392,
+								4406
+							],
+							[
+								4525,
+								4539
+							],
+							[
+								4593,
+								4607
+							],
+							[
+								4661,
+								4675
+							],
+							[
+								4729,
+								4740
+							],
+							[
+								4870,
+								4883
+							],
+							[
+								4932,
+								4946
+							],
+							[
+								4997,
+								5011
+							],
+							[
+								5062,
+								5076
+							],
+							[
+								5127,
+								5141
+							],
+							[
+								5192,
+								5206
+							],
+							[
+								5257,
+								5271
+							],
+							[
+								5324,
+								5337
+							],
+							[
+								5532,
+								5543
+							],
+							[
+								5581,
+								5592
+							],
+							[
+								5630,
+								5639
+							],
+							[
+								5675,
+								5687
+							],
+							[
+								5726,
+								5737
+							],
+							[
+								5857,
+								5868
+							],
+							[
+								5927,
+								5938
+							],
+							[
+								6045,
+								6056
+							],
+							[
+								6115,
+								6123
+							],
+							[
+								6221,
+								6232
+							],
+							[
+								6290,
+								6301
+							],
+							[
+								6441,
+								6453
+							],
+							[
+								6704,
+								6716
+							],
+							[
+								6904,
+								6916
+							],
+							[
+								7104,
+								7115
+							],
+							[
+								7298,
+								7309
+							],
+							[
+								7614,
+								7626
+							],
+							[
+								7691,
+								7702
+							],
+							[
+								8027,
+								8037
+							],
+							[
+								8222,
+								8232
+							],
+							[
+								8417,
+								8427
+							],
+							[
+								8612,
+								8623
+							],
+							[
+								8767,
+								8778
+							],
+							[
+								9018,
+								9029
+							],
+							[
+								9269,
+								9280
+							],
+							[
+								9783,
+								9795
+							],
+							[
+								9847,
+								9859
+							],
+							[
+								9993,
+								10005
+							],
+							[
+								10169,
+								10181
+							],
+							[
+								10341,
+								10351
+							],
+							[
+								10506,
+								10516
+							],
+							[
+								10670,
+								10680
+							],
+							[
+								10934,
+								10945
+							],
+							[
+								11449,
+								11459
+							],
+							[
+								11514,
+								11525
+							],
+							[
+								11745,
+								11755
+							],
+							[
+								11915,
+								11926
+							],
+							[
+								11983,
+								11994
+							],
+							[
+								12213,
+								12224
+							],
+							[
+								12342,
+								12353
+							],
+							[
+								12572,
+								12584
+							],
+							[
+								12981,
+								12993
+							],
+							[
+								13163,
+								13175
+							],
+							[
+								13233,
+								13243
+							],
+							[
+								13297,
+								13308
+							],
+							[
+								14058,
+								14070
+							],
+							[
+								14485,
+								14496
+							],
+							[
+								14744,
+								14756
+							],
+							[
+								15010,
+								15021
+							],
+							[
+								15269,
+								15280
+							],
+							[
+								15528,
+								15540
+							],
+							[
+								15922,
+								15934
+							],
+							[
+								16397,
+								16407
+							],
+							[
+								16461,
+								16471
+							],
+							[
+								16525,
+								16535
+							],
+							[
+								16590,
+								16601
+							],
+							[
+								16657,
+								16668
+							],
+							[
+								16724,
+								16735
+							],
+							[
+								16792,
+								16802
+							],
+							[
+								16909,
+								16918
+							],
+							[
+								17023,
+								17035
+							],
+							[
+								17146,
+								17155
+							],
+							[
+								17260,
+								17270
+							],
+							[
+								17377,
+								17389
+							],
+							[
+								17723,
+								17735
+							],
+							[
+								18069,
+								18081
+							],
+							[
+								18415,
+								18427
+							],
+							[
+								18761,
+								18773
+							],
+							[
+								19107,
+								19119
+							],
+							[
+								19453,
+								19463
+							],
+							[
+								20014,
+								20026
+							],
+							[
+								20181,
+								20191
+							],
+							[
+								20478,
+								20489
+							],
+							[
+								20778,
+								20790
+							],
+							[
+								20945,
+								20957
+							],
+							[
+								21112,
+								21124
+							],
+							[
+								21279,
+								21291
+							],
+							[
+								21446,
+								21457
+							],
+							[
+								21509,
+								21521
+							],
+							[
+								21812,
+								21824
+							],
+							[
+								22115,
+								22127
+							],
+							[
+								22418,
+								22430
+							],
+							[
+								22802,
+								22811
+							],
+							[
+								22854,
+								22863
+							],
+							[
+								23357,
+								23366
+							],
+							[
+								23901,
+								23910
+							],
+							[
+								24445,
+								24454
+							],
+							[
+								24586,
+								24595
+							],
+							[
+								24727,
+								24736
+							],
+							[
+								25291,
+								25300
+							],
+							[
+								25989,
+								25998
+							],
+							[
+								26284,
+								26293
+							],
+							[
+								26579,
+								26588
+							],
+							[
+								27277,
+								27286
+							],
+							[
+								27975,
+								27984
+							],
+							[
+								28229,
+								28240
+							],
+							[
+								28375,
+								28387
+							],
+							[
+								28517,
+								28528
+							],
+							[
+								28741,
+								28752
+							],
+							[
+								28820,
+								28831
+							],
+							[
+								28900,
+								28910
+							],
+							[
+								28976,
+								28986
+							],
+							[
+								29134,
+								29146
+							],
+							[
+								29217,
+								29228
+							],
+							[
+								29557,
+								29568
+							],
+							[
+								29708,
+								29719
+							],
+							[
+								29915,
+								29927
+							],
+							[
+								30182,
+								30194
+							],
+							[
+								30295,
+								30303
+							],
+							[
+								30716,
+								30726
+							],
+							[
+								30821,
+								30832
+							],
+							[
+								31029,
+								31040
+							],
+							[
+								31237,
+								31248
+							],
+							[
+								31445,
+								31460
+							],
+							[
+								31682,
+								31693
+							],
+							[
+								31903,
+								31913
+							],
+							[
+								32102,
+								32113
+							],
+							[
+								32336,
+								32347
 							]
 						],
 						"settings":
@@ -2937,7 +3626,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 302.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
@@ -2945,52 +3634,19 @@
 				},
 				{
 					"buffer": 2,
-					"file": "CH22 Sound and Music/SineWaveGen/SineWaveGen.c",
-					"semi_transient": true,
-					"settings":
-					{
-						"buffer_size": 6180,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1279,
-								2046
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"origin_encoding": "ASCII",
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/C++/C.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 3446.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "CH22 Sound and Music/Drum/DrumTime.c",
+					"file": ".gitignore",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3507,
+						"buffer_size": 448,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								303,
-								303
+								168,
+								168
 							]
 						],
 						"settings":
@@ -2999,18 +3655,17 @@
 							"origin_encoding": "ASCII",
 							"remote_loading": false,
 							"synced": false,
-							"syntax": "Packages/C++/C.sublime-syntax",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/Git Formats/Git Ignore.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 88.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 2,
 					"type": "text"
 				},
 				{
-					"buffer": 4,
+					"buffer": 3,
 					"file": "Readme.txt",
 					"semi_transient": false,
 					"settings":
