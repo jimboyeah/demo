@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<!DOCTYPE beans PUBLIC "-//SPRING/DTD BEAN/EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans> 
+    <bean id="helloBean" class="com.coding.HelloBean">
+        <property name="helloWord">
+            <value>Hello Spring 5.1.0!</value>
+        </property> 
+    </bean>
+    <bean id="messageSourceA" class="org.springframework.context.support.ResourceBundleMessageSource">
+        <property name="basename"> 
+            <value>messages</value> 
+        </property> 
+    </bean>
+    <bean id="messageSource" class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
+        <property name="basename"> 
+            <value>messages</value> 
+        </property> 
+    </bean>
+	<bean id="listener" class="com.coding.HelloListener"/>
+
+</beans>

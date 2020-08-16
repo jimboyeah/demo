@@ -1,0 +1,13 @@
+# application.properties
+hello: JSP Test 1
+spring:
+  hello: JSP Test 2
+  mvc:
+    hello: JSP Test 3
+    view:
+      hello: JSP Test 4
+      # 页面默认前缀目录
+      # prefix: /WEB-INF/jsp/
+      prefix: /
+      # 响应页面默认后缀
+      suffix: .jsp

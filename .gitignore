@@ -1,5 +1,7 @@
 obj
+*.jar
 *.so
+*.class
 build
 target
 java-concurrency

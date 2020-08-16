@@ -8,7 +8,7 @@
 				"PATH": "c:/CodeBlocks/MinGW/bin/;%PATH%"
 			},
 			"file_regex": "^  (.+)\\((\\d+)\\)(): ((?:fatal )?(?:error|warning) \\w+\\d\\d\\d\\d: .*) \\[.*$",
-			"name": "Git Demo",
+			"name": "Demo",
 			"quiet": true,
 			"shell_cmd": "git status",
 			"variants":
@@ -36,6 +36,26 @@
 				{
 					"name": "git show",
 					"shell_cmd": "git show"
+				},
+				{
+					"name": "Java Run",
+					"shell_cmd": "cd ${file_path} && javac -Xlint:unchecked -encoding utf-8 ${file_name} && java -cp . ${file_base_name} 65.5 "
+				},
+				{
+					"name": "Java Decompiler",
+					"shell_cmd": "cd ${file_path} && jad -p -sjava ${file_base_name}.class"
+				},
+				{
+					"name": "Maven package",
+					"shell_cmd": "cd ${file_path} && dir && mvn package "
+				},
+				{
+					"name": "Run jar package",
+					"shell_cmd": " java -jar ${file_path}/${file_base_name} "
+				},
+				{
+					"name": "Run Dev",
+					"shell_cmd": " cd ${file_path} && mvn clean package spring-boot:run "
 				}
 			],
 			"working_dir": "${project_path}"
@@ -53,6 +73,15 @@
 		},
 		{
 			"path": "C:\\coding\\java"
+		},
+		{
+			"path": "C:\\coding\\java\\apache-tomcat-8.5.37\\webapps"
+		},
+		{
+			"path": "C:\\download\\programming\\jdk-8u261-docs-all"
+		},
+		{
+			"path": "Thinking-in-Java-4th"
 		}
 	],
 	"settings":

@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"system",
+				"System"
+			],
+			[
 				"mar",
 				"margin\tproperty"
 			],
@@ -399,30 +403,507 @@
 			"file": "java.sublime-project",
 			"settings":
 			{
-				"buffer_size": 1023,
+				"buffer_size": 1427,
+				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "/C/coding/java/apache-tomcat-8.5.37/bin/shutdown.sh",
+			"file": "maven/SpringBoot_webapp/pom.xml",
 			"settings":
 			{
-				"buffer_size": 1902,
+				"buffer_size": 1853,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "maven/SpringBoot_webapp/target/trucks.jar.original",
+			"settings":
+			{
+				"buffer_size": 8340,
+				"encoding": "Hexadecimal",
 				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "maven/SpringBoot_webapp/src/main/java/com/demos/controller/HelloWorldController.java",
+			"settings":
+			{
+				"buffer_size": 412,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": ".gitignore",
+			"settings":
+			{
+				"buffer_size": 81,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
 			}
 		}
 	],
-	"build_system": "",
+	"build_system": "Git Demo",
 	"build_system_choices":
 	[
+		[
+			[
+				[
+					"Git Demo",
+					""
+				],
+				[
+					"Git Demo",
+					"Git help"
+				],
+				[
+					"Git Demo",
+					"Git Origin attach"
+				],
+				[
+					"Git Demo",
+					"Branch List"
+				],
+				[
+					"Git Demo",
+					"Branch List remote"
+				],
+				[
+					"Git Demo",
+					"git show"
+				]
+			],
+			[
+				"Git Demo",
+				"Git Origin attach"
+			]
+		],
+		[
+			[
+				[
+					"Git Demo",
+					""
+				],
+				[
+					"Git Demo",
+					"Git help"
+				],
+				[
+					"Git Demo",
+					"Git Origin attach"
+				],
+				[
+					"Git Demo",
+					"Git Gitee attach"
+				],
+				[
+					"Git Demo",
+					"Branch List"
+				],
+				[
+					"Git Demo",
+					"Branch List remote"
+				],
+				[
+					"Git Demo",
+					"git show"
+				]
+			],
+			[
+				"Git Demo",
+				"Git Gitee attach"
+			]
+		],
+		[
+			[
+				[
+					"Git Demo",
+					""
+				],
+				[
+					"Git Demo",
+					"Git help"
+				],
+				[
+					"Git Demo",
+					"Git Origin attach"
+				],
+				[
+					"Git Demo",
+					"Git Gitee attach"
+				],
+				[
+					"Git Demo",
+					"Branch List"
+				],
+				[
+					"Git Demo",
+					"Branch List remote"
+				],
+				[
+					"Git Demo",
+					"git show"
+				],
+				[
+					"Git Demo",
+					"Maven package"
+				],
+				[
+					"Git Demo",
+					"Run jar package"
+				],
+				[
+					"Packages/User/C#.sublime-build",
+					""
+				],
+				[
+					"Packages/User/C#.sublime-build",
+					"Build Exe & Run ..."
+				],
+				[
+					"Packages/User/C#.sublime-build",
+					"Build DLL"
+				],
+				[
+					"Packages/User/C#.sublime-build",
+					"Run"
+				],
+				[
+					"Packages/User/C#.sublime-build",
+					".Net New"
+				],
+				[
+					"Packages/User/C#.sublime-build",
+					".Net Run"
+				],
+				[
+					"Packages/User/C#.sublime-build",
+					".Net Watch"
+				],
+				[
+					"Packages/User/C#.sublime-build",
+					".Net Run Project"
+				],
+				[
+					"Packages/User/C#.sublime-build",
+					".Net Watch Project"
+				],
+				[
+					"Packages/User/C#.sublime-build",
+					"Run with Test Arguments"
+				]
+			],
+			[
+				"Git Demo",
+				"Run jar package"
+			]
+		],
+		[
+			[
+				[
+					"Git Demo",
+					""
+				],
+				[
+					"Git Demo",
+					"Git help"
+				],
+				[
+					"Git Demo",
+					"Git Origin attach"
+				],
+				[
+					"Git Demo",
+					"Git Gitee attach"
+				],
+				[
+					"Git Demo",
+					"Branch List"
+				],
+				[
+					"Git Demo",
+					"Branch List remote"
+				],
+				[
+					"Git Demo",
+					"git show"
+				],
+				[
+					"Git Demo",
+					"Maven package"
+				],
+				[
+					"Git Demo",
+					"Run jar package"
+				],
+				[
+					"Packages/User/PlantUML.sublime-build",
+					""
+				],
+				[
+					"Packages/User/PlantUML.sublime-build",
+					" --> ASCII Art"
+				],
+				[
+					"Packages/User/PlantUML.sublime-build",
+					" --> PNG"
+				]
+			],
+			[
+				"Git Demo",
+				"Run jar package"
+			]
+		],
+		[
+			[
+				[
+					"Git Demo",
+					""
+				],
+				[
+					"Git Demo",
+					"Git help"
+				],
+				[
+					"Git Demo",
+					"Git Origin attach"
+				],
+				[
+					"Git Demo",
+					"Git Gitee attach"
+				],
+				[
+					"Git Demo",
+					"Branch List"
+				],
+				[
+					"Git Demo",
+					"Branch List remote"
+				],
+				[
+					"Git Demo",
+					"git show"
+				],
+				[
+					"Git Demo",
+					"Maven package"
+				],
+				[
+					"Packages/User/C#.sublime-build",
+					""
+				],
+				[
+					"Packages/User/C#.sublime-build",
+					"Build Exe & Run ..."
+				],
+				[
+					"Packages/User/C#.sublime-build",
+					"Build DLL"
+				],
+				[
+					"Packages/User/C#.sublime-build",
+					"Run"
+				],
+				[
+					"Packages/User/C#.sublime-build",
+					".Net New"
+				],
+				[
+					"Packages/User/C#.sublime-build",
+					".Net Run"
+				],
+				[
+					"Packages/User/C#.sublime-build",
+					".Net Watch"
+				],
+				[
+					"Packages/User/C#.sublime-build",
+					".Net Run Project"
+				],
+				[
+					"Packages/User/C#.sublime-build",
+					".Net Watch Project"
+				],
+				[
+					"Packages/User/C#.sublime-build",
+					"Run with Test Arguments"
+				]
+			],
+			[
+				"Git Demo",
+				"Maven package"
+			]
+		],
+		[
+			[
+				[
+					"Git Demo",
+					""
+				],
+				[
+					"Git Demo",
+					"Git help"
+				],
+				[
+					"Git Demo",
+					"Git Origin attach"
+				],
+				[
+					"Git Demo",
+					"Git Gitee attach"
+				],
+				[
+					"Git Demo",
+					"Branch List"
+				],
+				[
+					"Git Demo",
+					"Branch List remote"
+				],
+				[
+					"Git Demo",
+					"git show"
+				],
+				[
+					"Packages/Java/Ant.sublime-build",
+					""
+				],
+				[
+					"Packages/Java/JavaC.sublime-build",
+					""
+				],
+				[
+					"Packages/User/java.sublime-build",
+					""
+				],
+				[
+					"Packages/User/java.sublime-build",
+					"编译"
+				],
+				[
+					"Packages/User/java.sublime-build",
+					"运行当前类"
+				],
+				[
+					"Packages/User/java.sublime-build",
+					"cmd中运行"
+				]
+			],
+			[
+				"Packages/User/java.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Git Demo",
+					""
+				],
+				[
+					"Git Demo",
+					"Git help"
+				],
+				[
+					"Git Demo",
+					"Git Origin attach"
+				],
+				[
+					"Git Demo",
+					"Git Gitee attach"
+				],
+				[
+					"Git Demo",
+					"Branch List"
+				],
+				[
+					"Git Demo",
+					"Branch List remote"
+				],
+				[
+					"Git Demo",
+					"git show"
+				],
+				[
+					"Packages/Java/Ant.sublime-build",
+					""
+				],
+				[
+					"Packages/Java/JavaC.sublime-build",
+					""
+				],
+				[
+					"Packages/User/java.sublime-build",
+					""
+				],
+				[
+					"Packages/User/java.sublime-build",
+					"编译运行"
+				],
+				[
+					"Packages/User/java.sublime-build",
+					"运行当前类"
+				],
+				[
+					"Packages/User/java.sublime-build",
+					"cmd中运行"
+				]
+			],
+			[
+				"Packages/User/java.sublime-build",
+				"编译运行"
+			]
+		]
 	],
-	"build_varint": "Branch List",
+	"build_varint": "",
 	"command_palette":
 	{
 		"height": 0.0,
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"com\t",
+				"Git: Commit"
+			],
+			[
+				"stat",
+				"Git: Status"
+			],
+			[
+				"add",
+				"Git: Add All"
+			],
+			[
+				"status",
+				"Git: Status"
+			],
+			[
+				"pus",
+				"Git: Push Current Branch"
+			],
+			[
+				"pu",
+				"Git: Push Current Branch"
+			],
+			[
+				"comm",
+				"Git: Commit"
+			],
+			[
+				"branc",
+				"Git: New Branch"
+			],
+			[
+				"gitshow",
+				"Build With: Git Demo - git show"
+			],
+			[
+				"in",
+				"Git: Init"
+			],
 			[
 				"edit",
 				"Project: Edit Project"
@@ -440,36 +921,12 @@
 				"Git: Push Current Branch"
 			],
 			[
-				"com\t",
-				"Git: Commit"
-			],
-			[
-				"add",
-				"Git: Add All"
-			],
-			[
 				"com",
 				"Git: Commit"
 			],
 			[
-				"pus",
-				"Git: Push Current Branch"
-			],
-			[
-				"comm",
-				"Git: Commit"
-			],
-			[
-				"stat",
-				"Git: Status"
-			],
-			[
 				"adda",
 				"Git: Add All"
-			],
-			[
-				"status",
-				"Git: Status"
 			],
 			[
 				"staus",
@@ -676,10 +1133,6 @@
 				"Package Control: Disable Package"
 			],
 			[
-				"in",
-				"Package Control: Install Package"
-			],
-			[
 				"package",
 				"Package Control: Install Package"
 			],
@@ -808,33 +1261,60 @@
 	"expanded_folders":
 	[
 		"/C/coding/md-code/java",
-		"/C/coding/md-code/java/apk-coding",
-		"/C/coding/md-code/java/java-concurrent-programming-master",
 		"/C/coding/md-code/java/maven",
-		"/C/coding/md-code/java/maven/demo",
-		"/C/coding/md-code/java/maven/demo/src",
-		"/C/coding/md-code/java/maven/demo/src/main",
-		"/C/coding/md-code/java/maven/demo/src/main/java",
-		"/C/coding/md-code/java/maven/demo/src/main/java/com",
-		"/C/coding/md-code/java/maven/demo/src/main/java/com/kittycoder",
-		"/C/coding/md-code/java/maven/demo/src/test",
-		"/C/coding/md-code/java/maven/demo/src/test/java",
-		"/C/coding/md-code/java/maven/demo/src/test/java/com",
-		"/C/coding/md-code/java/maven/demo/src/test/java/com/kittycoder",
-		"/C/coding/md-code/java/maven/demo/target",
-		"/C/coding/md-code/java/maven/demo/target/classes",
-		"/C/coding/md-code/java/maven/demo/target/classes/com",
-		"/C/coding/md-code/java/maven/demo/target/maven-archiver",
-		"/C/coding/md-code/java/maven/demo/target/maven-status",
-		"/C/coding/md-code/java/maven/demo/target/maven-status/maven-compiler-plugin",
-		"/C/coding/md-code/java/maven/demo/target/maven-status/maven-compiler-plugin/compile",
-		"/C/coding/md-code/java/maven/demo/target/maven-status/maven-compiler-plugin/compile/default-compile",
-		"/C/coding/md-code/java/maven/demo/target/surefire-reports",
-		"/C/coding/md-code/java/maven/demo/target/test-classes",
-		"/C/coding/md-code/java/maven/demo/target/test-classes/com"
+		"/C/coding/md-code/java/maven/SpringBoot_webapp",
+		"/C/coding/md-code/java/maven/SpringBoot_webapp/src",
+		"/C/coding/md-code/java/maven/SpringBoot_webapp/src/main",
+		"/C/coding/md-code/java/maven/SpringBoot_webapp/src/main/java",
+		"/C/coding/md-code/java/maven/SpringBoot_webapp/src/main/java/com",
+		"/C/coding/md-code/java/maven/SpringBoot_webapp/src/main/java/com/demos",
+		"/C/coding/md-code/java/maven/SpringBoot_webapp/src/main/java/com/demos/controller",
+		"/C/coding/md-code/java/maven/SpringBoot_webapp/src/main/resources",
+		"/C/coding/md-code/java/maven/SpringBoot_webapp/target",
+		"/C/coding/java"
 	],
 	"file_history":
 	[
+		"/C/coding/java/spring-boot-examples/README.md",
+		"/C/coding/java/spring-boot-examples/README_EN.md",
+		"/C/coding/java/spring-boot-examples/spring-boot-hello/src/main/java/com/neo/HelloApplication.java",
+		"/C/coding/java/spring-boot-examples/spring-boot-helloWorld/src/test/java/com/neo/controller/HelloWorldControlerTests.java",
+		"/C/coding/java/spring-boot-examples/spring-boot-helloWorld/src/test/java/com/neo/controller/HelloTests.java",
+		"/C/coding/java/spring-boot-examples/spring-boot-helloWorld/src/test/java/com/neo/ApplicationTests.java",
+		"/C/coding/md-code/java/maven/SpringBoot_webapp/src/main/resources/application.properties",
+		"/C/coding/java/spring-boot-examples/spring-boot-helloWorld/src/main/resources/application.properties",
+		"/C/coding/java/spring-boot-examples/spring-boot-helloWorld/src/main/java/com/neo/Application.java",
+		"/C/coding/md-code/java/maven/SpringBoot_webapp/src/main/com/demos/controller/HelloWorldController.java",
+		"/C/coding/java/spring-boot-examples/spring-boot-helloWorld/src/main/java/com/neo/controller/HelloWorldController.java",
+		"/C/coding/md-code/java/hot/MonitorHotSwap.java",
+		"/C/coding/md-code/java/hot/HotSwapURLClassLoader.java",
+		"/C/coding/java/apache-tomcat-8.5.37/webapps/docs/developers.html",
+		"/C/coding/md-code/java/hot/Hot.java",
+		"/C/coding/md-code/java/dmeos/PrintfTest.java",
+		"/C/coding/md-code/java/dmeos/SemaphoreDemo.java",
+		"/C/coding/md-code/java/dmeos/二师兄java.util.MissingFormatArgumentException",
+		"/C/coding/md-code/java/dmeos/    at java.lang.Thread.run(Thread.java",
+		"/C/coding/java/h2/src/main/org/h2/util/MathUtils.java",
+		"/C/coding/md-code/java/dmeos/DemoStatic.java",
+		"/C/coding/java/apache-tomcat-8.5.37/bin/shutdown.sh",
+		"/C/coding/md-code/java/maven/protobuf_demo/src/main/java/com/kittycoder/App.java",
+		"/C/coding/md-code/java/maven/protobuf_demo/pom.xml",
+		"/C/coding/md-code/java/maven/spring-boot-demo/mvnw.cmd",
+		"/C/coding/java/Hot.java",
+		"/C/coding/java/HelloListener.java",
+		"/C/coding/java/LearnProject/src/Main.java",
+		"/C/coding/java/HelloBean.java",
+		"/C/coding/md-code/java/SpringDemo/HelloBean.java",
+		"/C/coding/md-code/java/hot/build.bat",
+		"/C/coding/java/beans-config.xml",
+		"/C/coding/java/h2/src/installer/h2.sh",
+		"/C/coding/md-code/java/SpringDemo/build.bat",
+		"/C/coding/md-code/java/SpringDemo/src/com/coding/SpringDemo.java",
+		"/C/coding/java/SpringDemo.java",
+		"/C/coding/java/LearnProject/LearnProject.iml",
+		"/C/coding/java/h2/build.bat",
+		"/C/coding/md-code/java/maven/DemoTest/pom.xml",
+		"/C/coding/java/apache-tomcat-8.5.37/webapps/trucks/index.jsp",
 		"/C/coding/md-code/java/maven/demo/pom.xml",
 		"/C/coding/md-code/java/maven/demo/src/main/java/com/kittycoder/App.java",
 		"/C/coding/java/apache-tomcat-8.5.37/conf/tomcat-users.xml",
@@ -922,47 +1402,7 @@
 		"/C/coding/md-code/hugo/quickstart/layouts/demotype/single-baseof.html",
 		"/C/coding/md-code/hugo/quickstart/layouts/_default/-single.html",
 		"/C/coding/md-code/hugo/quickstart/layouts/page/list.html",
-		"/C/coding/md-code/hugo/quickstart/layouts/page/index-baseof.html",
-		"/C/coding/md-code/hugo/quickstart/layouts/page/single.html",
-		"/C/coding/md-code/hugo/quickstart/layouts/page/single-baseof.html",
-		"/C/coding/md-code/hugo/quickstart/layouts/page/post.html",
-		"/C/coding/md-code/hugo/quickstart/layouts/page/post-baseof.html",
-		"/C/coding/md-code/hugo/quickstart/layouts/page/page.html",
-		"/C/coding/md-code/hugo/quickstart/layouts/page/list-baseof.html",
-		"/C/coding/md-code/hugo/quickstart/layouts/page/baseof.html",
-		"/C/coding/md-code/hugo/quickstart/layouts/page/demolayout-baseof.html",
-		"/C/coding/md-code/hugo/quickstart/themes/gohugo-theme-ananke/layouts/post/list.html",
-		"/C/coding/md-code/hugo/quickstart/layouts/_default/../page/single.html",
-		"/C/coding/md-code/hugo/quickstart/themes/gohugo-theme-ananke/layouts/index.html",
-		"/C/coding/md-code/hugo/quickstart/themes/gohugo-theme-ananke/layouts/partials/menu-contextual.html",
-		"/C/coding/md-code/hugo/quickstart/layouts/post/post-baseof.html",
-		"/C/coding/md-code/hugo/quickstart/layouts/post/single.html",
-		"/C/coding/md-code/hugo/quickstart/layouts/post/post.html",
-		"/C/coding/md-code/hugo/quickstart/layouts/section/-post-baseof.html",
-		"/C/coding/md-code/hugo/quickstart/layouts/_default/-baseof.html",
-		"/C/coding/md-code/hugo/quickstart/layouts/_default/baseof.html",
-		"/C/coding/md-code/hugo/src/hugolib/site.go",
-		"/C/coding/md-code/hugo/quickstart/content/en/contact.md",
-		"/C/coding/md-code/hugo/quickstart/content/en/post/chapter-5.md",
-		"/C/coding/md-code/hugo/quickstart/content/en/post/chapter-2.md",
-		"/C/coding/md-code/hugo/quickstart/content/en/post/chapter-6.md",
-		"/C/coding/md-code/hugo/quickstart/layouts/about/../_default/slideshow.html",
-		"/C/coding/md-code/hugo/quickstart/content/cn/about/../post/slideshow.md",
-		"/C/coding/md-code/hugo/quickstart/content/cn/post/nested/../../slideshow.md",
-		"/C/coding/md-code/hugo/quickstart/static/mermaid/index.html",
-		"/C/coding/md-code/hugo/quickstart/content/cn/tutorials/ch05-Hugo Templates.md",
-		"/C/coding/md-code/hugo/src/docs/data/docs.json",
-		"/C/coding/md-code/hugo/quickstart/layouts/_default/../about/single.html",
-		"/C/coding/md-code/hugo/quickstart/layouts/resume/../single.html",
-		"/C/coding/md-code/hugo/src/docs/content/zh/templates/base.md",
-		"/C/coding/md-code/hugo/src/docs/content/en/functions/render.md",
-		"/C/coding/md-code/hugo/quickstart/themes/gohugo-theme-ananke/layouts/post/summary-with-image.html",
-		"/C/coding/md-code/hugo/quickstart/layouts/_default/../list.html",
-		"/C/coding/md-code/hugo/src/docs/content/en/templates/lists.md",
-		"/C/coding/md-code/hugo/src/docs/content/en/templates/lookup-order.md",
-		"/C/coding/md-code/hugo/quickstart/layouts/about/../list.html",
-		"/C/coding/md-code/hugo/quickstart/php.bat",
-		"/C/coding/md-code/font-awesome-4.7.0/HELP-US-OUT.txt"
+		"/C/coding/md-code/hugo/quickstart/layouts/page/index-baseof.html"
 	],
 	"find":
 	{
@@ -973,6 +1413,7 @@
 		"height": 451.0,
 		"where_history":
 		[
+			"C:\\coding\\java\\spring-boot-examples"
 		]
 	},
 	"find_state":
@@ -980,6 +1421,26 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"*.jsp",
+			"%s ",
+			"剩余",
+			"\" ",
+			"\"  ",
+			"\"",
+			"; //",
+			"\",",
+			",",
+			"        System.out.println(); \n",
+			"；",
+			"println",
+			"NoClassDefFoundError",
+			"throws ClassNotFoundException",
+			"ClassNotFoundException",
+			"NoClassDefFoundError",
+			"findLoadedClass",
+			"coding",
+			";",
+			" ",
 			"IOStudy"
 		],
 		"highlight": false,
@@ -998,7 +1459,7 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 2,
 			"sheets":
 			[
 				{
@@ -1007,20 +1468,21 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1023,
+						"buffer_size": 1427,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								436,
-								436
+								1043,
+								1043
 							]
 						],
 						"settings":
 						{
 							"incomplete_sync": null,
+							"is_init_dirty_state": false,
 							"origin_encoding": "ASCII",
 							"remote_loading": false,
 							"synced": false,
@@ -1028,36 +1490,37 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 56.0,
+						"translation.y": 276.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "/C/coding/java/apache-tomcat-8.5.37/bin/shutdown.sh",
+					"file": "maven/SpringBoot_webapp/pom.xml",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1902,
+						"buffer_size": 1853,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1331,
-								1331
+								865,
+								865
 							]
 						],
 						"settings":
 						{
 							"incomplete_sync": null,
+							"is_init_dirty_state": false,
 							"origin_encoding": "ASCII",
 							"remote_loading": false,
 							"synced": false,
-							"syntax": "Packages/ShellScript/Bash.sublime-syntax",
+							"syntax": "Packages/XML/XML.sublime-syntax",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
@@ -1065,7 +1528,106 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "maven/SpringBoot_webapp/target/trucks.jar.original",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 8340,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1159,
+								1159
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"is_init_dirty_state": false,
+							"origin_encoding": "Hexadecimal",
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
 					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "maven/SpringBoot_webapp/src/main/java/com/demos/controller/HelloWorldController.java",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 412,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								412,
+								412
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"is_init_dirty_state": false,
+							"origin_encoding": "ASCII",
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Java/Java.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": ".gitignore",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 81,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								81,
+								81
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"is_init_dirty_state": false,
+							"origin_encoding": "ASCII",
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Git Formats/Git Ignore.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
 					"type": "text"
 				}
 			]
@@ -1112,7 +1674,7 @@
 	},
 	"output.exec":
 	{
-		"height": 214.0
+		"height": 327.0
 	},
 	"output.find_results":
 	{
@@ -1120,7 +1682,7 @@
 	},
 	"output.git":
 	{
-		"height": 103.0
+		"height": 234.0
 	},
 	"output.sftp":
 	{
@@ -1139,6 +1701,18 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"d",
+				"webapps\\docs\\developers.html"
+			],
+			[
+				"SpringDemo",
+				"Demo Project\\SpringDemo\\src\\com\\coding\\SpringDemo.java"
+			],
+			[
+				"app.java",
+				"Demo Project\\maven\\protobuf_demo\\src\\main\\java\\com\\kittycoder\\App.java"
+			],
 			[
 				"app.jaa",
 				"Demo Project\\maven\\demo\\src\\main\\java\\com\\kittycoder\\App.java"
@@ -1638,18 +2212,6 @@
 			[
 				"stream",
 				"src\\streamfile\\streamfile.cbp"
-			],
-			[
-				"vcpp_reflection_5",
-				"♬☾ CPP Demo Project\\dotnet-clr\\src\\vcpp_reflection_5.cpp"
-			],
-			[
-				"cmakelist.txt",
-				"♬☾ CPP Demo Project\\dotnet-clr\\CMakeLists.txt"
-			],
-			[
-				"cdaystep",
-				"md\\c-daystep\\readme.md"
 			]
 		],
 		"width": 0.0
@@ -1673,10 +2235,14 @@
 	},
 	"select_symbol":
 	{
-		"height": 37.0,
-		"last_filter": "",
+		"height": 133.0,
+		"last_filter": "Semphore",
 		"selected_items":
 		[
+			[
+				"Semphore",
+				"Semaphore"
+			],
 			[
 				"pageState",
 				"pageState"
@@ -1826,7 +2392,7 @@
 				"TryAddSingleton"
 			]
 		],
-		"width": 848.0
+		"width": 682.0
 	},
 	"selected_group": 0,
 	"settings":
@@ -1836,7 +2402,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 347.0,
+	"side_bar_width": 267.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
