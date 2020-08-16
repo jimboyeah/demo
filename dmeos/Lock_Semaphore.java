@@ -1,9 +1,27 @@
-/* Semaphore 
-
-Semaphore里面居然有这么一个大坑！
+/* 
+file:///C:/download/programming/jdk-14.0.2_doc-all/api/java.base/java/util/concurrent/Semaphore.html
+Semaphore 里面居然有这么一个大坑！
 https://www.cnblogs.com/thisiswhy/p/13419807.html
 https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/Semaphore.html
 https://docs.oracle.com/javase/8/docs/api/index.html?java/lang/Thread.html
+
+信号量 Semaphores 机制是一种卓有成效的进程同步工具，由荷兰学者 Dijkstra 提出。
+
+信号量的值仅能由 PV 操作来改变。
+
+- P 操作（wait）申请一个单位资源，然后进程进入。
+- V 操作（signal）释放一个单位资源，然后进程出来。
+
+Semaphore 信号量维护一定数量的特权，当特权有余量，线程通过 acquire 方法可以获取到代码执行特权，用完后使用 release 方法归还这。
+
+Semaphore 可以用于流量控制，特别是对并发数有限制的场景。如数据库同时只允许有 20 个线程访问，就可以使用信号量来实现。
+
+当特权使用完后，线程再执行 acquire 就会进入同步阻塞，等待其它线程归还特权后，再继续获取特权执行同步代码。
+
+    Semaphore​(int permits) 
+    Semaphore​(int permits, boolean fair)   
+
+构造函数可以指定是是使用公平锁，默认是 nonfair fairness。
 
 死锁的四个必要条件：
 
@@ -28,7 +46,7 @@ Output:
 import java.util.concurrent.*;
 import java.lang.*;
 
-public class SemaphoreDemo
+public class Lock_Semaphore
 { 
     static public void main(String args[]) { 
         // ReentrantLock rel = new ReentrantLock();
