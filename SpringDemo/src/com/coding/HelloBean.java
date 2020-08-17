@@ -1,12 +1,15 @@
 package com.coding;
 
 public class HelloBean { 
-    private String helloWord; 
+    private String msg; 
     
-    public void setHelloWord(String helloWord) { 
-        this.helloWord = helloWord; 
+    public void setMsg(String msg) { 
+        this.msg = msg; 
     } 
-    public String getHelloWord() { 
-        return helloWord; 
+    public String getMsg() { 
+        return msg; 
     } 
+    public void afterPropertiesSet() {
+        msg = "向全世界问好！";
+    }
 }

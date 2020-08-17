@@ -42,6 +42,30 @@
 					"shell_cmd": "cd ${file_path} && javac -Xlint:unchecked -encoding utf-8 ${file_name} && java -cp . ${file_base_name} 65.5 "
 				},
 				{
+					"name": "Spring CLI Watch",
+					"shell_cmd": "cd ${file_path} && spring run --watch ${file_name}"
+				},
+				{
+					"name": "Spring CLI Pack",
+					"shell_cmd": "cd ${file_path} && spring jar my-app.jar *.groovy"
+				},
+				{
+					"name": "Spring CLI List",
+					"shell_cmd": "cd ${file_path} && spring init --list"
+				},
+				{
+					"name": "Spring CLI Init",
+					"shell_cmd": "cd ${file_path} && spring init --dependencies=web,mybatis my-project"
+				},
+				{
+					"name": "Spring Boot Run",
+					"shell_cmd": " cd ${file_path} && mvn clean package spring-boot:run "
+				},
+				{
+					"name": "Kill java.exe",
+					"shell_cmd": "taskkill /F /IM java.exe"
+				},
+				{
 					"name": "Java Decompiler",
 					"shell_cmd": "cd ${file_path} && jad -p -sjava ${file_base_name}.class"
 				},
@@ -52,10 +76,6 @@
 				{
 					"name": "Run jar package",
 					"shell_cmd": " java -jar ${file_path}/${file_base_name} "
-				},
-				{
-					"name": "Run Spring Boot",
-					"shell_cmd": " cd ${file_path} && mvn clean package spring-boot:run "
 				}
 			],
 			"working_dir": "${project_path}"
@@ -82,6 +102,9 @@
 		},
 		{
 			"path": "Thinking-in-Java-4th"
+		},
+		{
+			"path": "C:\\coding\\md-code\\Spring-Framework"
 		}
 	],
 	"settings":
