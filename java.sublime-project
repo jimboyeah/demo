@@ -54,7 +54,7 @@
 					"shell_cmd": " java -jar ${file_path}/${file_base_name} "
 				},
 				{
-					"name": "Run Dev",
+					"name": "Run Spring Boot",
 					"shell_cmd": " cd ${file_path} && mvn clean package spring-boot:run "
 				}
 			],
