@@ -19,6 +19,7 @@ java -cp demos LoaderDemo
 
 import java.io.InputStream;
 import java.util.*;
+import java.io.*;
 
 public class LoaderDemo {
 
@@ -43,49 +44,54 @@ public class LoaderDemo {
         String[] forApp = appProperty.split(";");
         Arrays.asList(forApp).forEach(s -> System.out.println(s));
 
-        MyClassLoader ml = new MyClassLoader();
+        LoaderDemo ld = new LoaderDemo();
+        MyClassLoader ml = ld.new MyClassLoader();
         System.out.println("prent ClassLoader: " + ml.getParent());
         Class cl = ml.loadClass("Gum");
         System.out.println("Class loaded: " + cl);
     }
-}
 
-
-/**
- * @Description 自定义ClassLoader
- * @Author apdoer
- * @Date 2019/5/28 15:27
- * @Version 1.0
- */
-class MyClassLoader extends ClassLoader
-{
-    public MyClassLoader(){
-        super(null);
-    }
-
-    @Override
-    public Class<?> loadClass(String name) throws ClassNotFoundException {
-        try {
-            String className = null;
-            if (name != null && !"".equals(name)){
-                if (name.startsWith("java.lang")){
-                    return super.loadClass(name);
-                    // className = new StringBuilder("/").append(name.replace('.','/')).append(".class").toString();
-                }else {
-                    className = new StringBuffer(name.substring(name.lastIndexOf('.')+1)).append(".class").toString();
-                }
-                System.out.println("className: " + className);
-                InputStream is = getClass().getResourceAsStream(className);
-                System.out.println(is + " " + is.available());
-                if (is == null) return super.loadClass(name);
-                byte[] bytes = new byte[is.available()];
-                is.read(bytes);
-                return defineClass(name, bytes, 0, bytes.length);
-            }
-        }catch (Exception e){
-            e.printStackTrace();
-            throw new ClassNotFoundException();
+    /**
+     * @Description 自定义ClassLoader
+     * @Author apdoer
+     * @Date 2019/5/28 15:27
+     * @Version 1.0
+     */
+    public class MyClassLoader extends ClassLoader
+    {
+        public MyClassLoader(){
+            super(null);
         }
-        return super.loadClass(name);
+
+        protected Class<?> findClass(String name) throws ClassNotFoundException {
+            throw new ClassNotFoundException(name);
+        }
+
+        @Override
+        public Class<?> loadClass(String name) throws ClassNotFoundException {
+            try {
+                String className = null;
+                if (name != null && !"".equals(name)){
+                    if (name.startsWith("java.lang") && !name.startsWith("java.lang.MyString")){
+                        return super.loadClass(name);
+                        // className = new StringBuilder("/").append(name.replace('.','/')).append(".class").toString();
+                    }else {
+                        className = new StringBuffer(name.replace('.', File.separatorChar)).append(".class").toString();
+                        // className = new StringBuffer(name.substring(name.lastIndexOf('.')+1)).append(".class").toString();
+                    }
+                    System.out.println("MyClassLoder loadClass: " + className + " -> " + name);
+                    InputStream is = getClass().getResourceAsStream(className);
+                    System.out.println(is + " " + is.available());
+                    if (is == null) return super.loadClass(name);
+                    byte[] bytes = new byte[is.available()];
+                    is.read(bytes);
+                    return defineClass(name, bytes, 0, bytes.length);
+                }
+            }catch (Exception e){
+                e.printStackTrace();
+                throw new ClassNotFoundException();
+            }
+            return super.loadClass(name);
+        }
     }
 }

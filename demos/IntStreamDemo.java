@@ -1,6 +1,7 @@
 /*
 https://docs.oracle.com/javase/8/docs/api/java/util/stream/IntStream.html
 file:///C:/download/programming/jdk-14.0.2_doc-all/api/java.base/java/util/stream/IntStream.html
+Java8的Stream API使用 https://www.cnblogs.com/jimoer/p/10995574.html
 */
 
 import java.util.stream.*;

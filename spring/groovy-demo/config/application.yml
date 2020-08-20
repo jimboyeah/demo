@@ -1,0 +1,11 @@
+server:
+  port: 8088
+spring:
+  profiles:
+    active: dev
+  main:
+    show-banner: false
+  mvc:
+    view:
+      prefix: /templates/
+      suffix: .html

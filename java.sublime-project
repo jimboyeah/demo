@@ -14,56 +14,56 @@
 			"variants":
 			[
 				{
-					"name": "Git help",
+					"name": "🔄 Git help",
 					"shell_cmd": "git --help"
 				},
 				{
-					"name": "Git Origin attach",
+					"name": "🔄 Git Origin attach",
 					"shell_cmd": "git remote add origin https://github.com/jimboyeah/demo.git"
 				},
 				{
-					"name": "Git Gitee attach",
+					"name": "🔄 Git Gitee attach",
 					"shell_cmd": "git remote add gitee https://gitee.com/jimbowhy/demos.git"
 				},
 				{
-					"name": "Branch List",
+					"name": "🔄 Branch List",
 					"shell_cmd": "git branch -a"
 				},
 				{
-					"name": "Branch List remote",
+					"name": "🔄 Branch List remote",
 					"shell_cmd": "git branch -r --list"
 				},
 				{
-					"name": "git show",
+					"name": "🔄 Git Show",
 					"shell_cmd": "git show"
+				},
+				{
+					"name": "Kill java.exe",
+					"shell_cmd": "taskkill /F /IM java.exe"
 				},
 				{
 					"name": "Java Run",
 					"shell_cmd": "cd ${file_path} && javac -Xlint:unchecked -encoding utf-8 ${file_name} && java -cp . ${file_base_name} 65.5 "
 				},
 				{
-					"name": "Spring CLI Watch",
+					"name": "🤍 Spring CLI Watch",
 					"shell_cmd": "cd ${file_path} && spring run --watch ${file_name}"
 				},
 				{
-					"name": "Spring CLI Pack",
+					"name": "🤍 Spring CLI Pack",
 					"shell_cmd": "cd ${file_path} && spring jar my-app.jar *.groovy"
 				},
 				{
-					"name": "Spring CLI List",
+					"name": "🤍 Spring CLI List",
 					"shell_cmd": "cd ${file_path} && spring init --list"
 				},
 				{
-					"name": "Spring CLI Init",
+					"name": "🤍 Spring CLI Init",
 					"shell_cmd": "cd ${file_path} && spring init --dependencies=web,mybatis my-project"
 				},
 				{
-					"name": "Spring Boot Run",
+					"name": "🤍 Spring Boot Run",
 					"shell_cmd": " cd ${file_path} && mvn clean package spring-boot:run "
-				},
-				{
-					"name": "Kill java.exe",
-					"shell_cmd": "taskkill /F /IM java.exe"
 				},
 				{
 					"name": "Java Decompiler",
@@ -98,13 +98,7 @@
 			"path": "C:\\coding\\java\\apache-tomcat-8.5.37\\webapps"
 		},
 		{
-			"path": "C:\\download\\programming\\jdk-8u261-docs-all"
-		},
-		{
 			"path": "Thinking-in-Java-4th"
-		},
-		{
-			"path": "C:\\coding\\md-code\\Spring-Framework"
 		}
 	],
 	"settings":
