@@ -91,6 +91,7 @@ import java.lang.annotation.Annotation;
 import java.lang.annotation.Target;
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
+import java.lang.annotation.Repeatable;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Inherited;
 import java.lang.reflect.Method;
@@ -99,20 +100,29 @@ import java.util.*;
 /**
  * Annotation 示例
  * @MyAnnotation
- * @SuppressWarnings({"a", "b", "c", "..."})
  * @MyAnnotation(value={"a", "b", "..."})
  * 不带参数使用 @MyAnnotation 意味着对应的 MyAnnotation 标注的 value 值是默认值 "unknown"
  */
 @Retention(RetentionPolicy.RUNTIME)
+@Repeatable(value=MyRepeater.class)
 @interface MyAnnotation {
     String[] value() default "unknown";
     String date() default "'2020/08/16'";
     String dt = "2020/08/16";
 }
 
+@Target(ElementType.TYPE)
+@Retention(RetentionPolicy.RUNTIME)
+@interface MyRepeater{
+    MyAnnotation[] value();
+}
+
 /**
  * Person 类使用 MyAnnotation 注解。
  */
+@MyAnnotation("Ann for a class")
+@MyAnnotation("More ann for a class")
+@SuppressWarnings({"a", "b", "c", "..."})
 class Person {
    
     @MyAnnotation
@@ -146,6 +156,10 @@ public class AnnotationsDemo {
         Class<Person> cp = Person.class;
         Method mSomebody = cp.getMethod("somebody", new Class[]{String.class, int.class});
         mSomebody.invoke(person, new Object[]{"lily", 18});
+
+        Annotation[] ans = cp.getDeclaredAnnotations();
+        // Annotation[] ans = cp.getAnnotations();
+        Arrays.asList(ans).forEach(an -> System.out.println(an));
 
         iteratorAnnotations(mSomebody);
        

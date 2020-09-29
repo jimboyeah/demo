@@ -33,7 +33,12 @@ public class EnumTest {
     public static void main(String[] args) {
         System.out.printf("Day.MONDAY.ordinal() -> %d\n", Day.MONDAY.ordinal());
         System.out.printf("Day.SATURDAY.ordinal() -> %d\n", Day.SATURDAY.ordinal());
-        System.out.printf("Day.valueOf(\"MONDAY\") -> %s\n", Day.valueOf("MONDAY"));
+        try{
+            System.out.printf("Day.valueOf(\"MON\") -> %s\n", Day.valueOf("MON"));
+        }catch(IllegalArgumentException ex){
+            System.out.println(ex.getMessage());
+        }
+        System.out.printf("Day.valueOf(\"MONDAY\") is MONDAY -> %s\n", Day.valueOf("MONDAY")==Day.MONDAY);
         
         // foreach Day[]
         for (Day day:Day.values())

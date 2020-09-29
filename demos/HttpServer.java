@@ -8,7 +8,16 @@
 - https://hit-alibaba.github.io/interview/basic/network/HTTP.html#transfer-encoding
 - https://hit-alibaba.github.io/interview/basic/network/HTTP.html#持久连接
 - https://developer.mozilla.org/en-US/docs/Web/HTTP/Connection_management_in_HTTP_1.x
-- https://imququ.com/post/web-proxy.html
+- [HTTP 代理原理及实现](https://imququ.com/post/web-proxy.html)
+- [Netty - asynchronous event-driven network application framework](https://netty.io/)
+- [JAVA 写 HTTP 代理服务器(一)-socket 实现](https://segmentfault.com/a/1190000011810997)
+- [JAVA 写 HTTP 代理服务器(二)-netty 实现](https://segmentfault.com/a/1190000011811082)
+- [JAVA 写 HTTP 代理服务器(三)-https 明文捕获](https://segmentfault.com/a/1190000011811150)
+
+
+传统 Socket 网络开发是 Blocking I/O，是以阻塞方式开发的，而流行的 Netty 则是基于事件驱动的异步 I/O 开发方式即 Non-Blocking I/O，并发性能具有绝对优势。
+
+BIO 方式一个连接一个线程去处理非常消耗 CPU 资源，特别是对于 HTTP 这种短连接协议，就算加入了线程池也不能完美解决 BIO 的缺陷，所以可以用 NIO 进行服务器的优化，NIO 基于 I/O 多路复用实现单线程处理大量连接，但是编写起来比较复杂，可以选择 Netty 实现。
 
 关于 URL 长度限制问题，IE 最长可以传 2083 字节，而 GET 最多只能到 2048 字符。但是 RFC 2616，Hypertext Transfer Protocol -- HTTP/1.1，并没有对 URL 长度做限制。
 
@@ -44,7 +53,6 @@ HTTP 1.1 有多种连接方式：
 
     PNG ... content of chrome.png ...
     ------WebKitFormBoundaryrGKCBY7qhFd3TrwA--
-
 
 ## HTTP Keep-Alive 
 
@@ -118,75 +126,198 @@ import java.io.FileInputStream;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.io.*;
+import java.util.*;
 
-class Request {
-    private InputStream input;
+enum HttpVerb { 
+    GET, POST, DELETE, PUT, HEAD, OPTIONS, TRACE, PATCH, CONNECT, UNKNOWN
+}
+
+class HttpMethodException extends Exception
+{
+    public HttpMethodException(String message)
+    {
+        super(message);
+    }
+}
+
+interface WebHandler
+{
+
+}
+
+class StaticRequestHandler
+{
+
+}
+
+class Request 
+{
+    public InputStream input;
     
-    private String uri;
+    public HttpVerb method = HttpVerb.UNKNOWN;
+    public String path = "";
+    public String script = "";
+    public String query = "";
+    public String uri= "";
+    public byte[] postBody;
 
-    public String[] headers; 
+    public ArrayList<String> headers = new ArrayList<>();
+    public Map<String, String> headerMap = new HashMap<String, String>();
+    public Map<String, String> queryMap = new HashMap<String, String>();
+    public Map<String, String> postMap = new HashMap<String, String>();
     
     public Request(InputStream input){
         this.input = input;
     }
     
-    public void parse() throws IOException
+    public void parse() throws Exception
     {
-        String req = readString(input);
-        System.out.printf("Request[%d]: \n%s", req.length(), req);
-        uri = parseUri(req);
-    }
-    
-    public String parseUri(String requestString){
-        int verb, puri;
-        verb = requestString.indexOf(" ");
-        if(verb != -1){
-            puri = requestString.indexOf(" ", verb+1);
-            if(puri>verb){
-                return requestString.substring(verb+1, puri);
-            }
-        }
-        return null;
-    }
-    
-    public String getUri(){
-        return this.uri;
-    }
-
-    public static String readString(InputStream inputStream) throws IOException
-    {
-        // byte[] bytes = new byte[0];
-        // bytes = new byte[inputStream.available()]; // trap for Connection: Keep-Alive
-        // inputStream.read(bytes);
-        // String str = new String(bytes);
-        // return str;
-
-
-        // ByteArrayOutputStream buf = new ByteArrayOutputStream();
+        // if (input.available()==0) What is this request?
         // byte[] all = inputStream.readAllBytes(); // JDK 9
-        // buf.writeBytes(all);
-        // return buf.toString();
 
-StringBuilder sb = new StringBuilder();
-String line;
-
-BufferedReader br = new BufferedReader(new InputStreamReader(inputStream));
-while ((line = br.readLine()) != null) {
-    sb.append(line);
-    System.out.printf("%s<\n", line);
-}
-String str = sb.toString();
-return str;
-
-        // BufferedInputStream bis = new BufferedInputStream(inputStream);
-        // ByteArrayOutputStream buf = new ByteArrayOutputStream();
-        // int result = bis.read();
-        // while(result != -1) {
-        //     buf.write((byte) result);
-        //     result = bis.read();
+        // String line;
+        // BufferedReader reader = new BufferedReader(new InputStreamReader(input));
+        // while ((line = reader.readLine()) != null) {
+        //     if (line.equals("")) break; // Header seprator test
+        //     headers.add(line);
         // }
-        // String str = buf.toString();
-        // return str;
+
+        while (true) {
+            String line = readLine(input);
+            if(line.equals("")) break;
+            headers.add(line);
+        }
+
+        if (headers.size()>0){
+            parseUri(headers.get(0));
+        }
+        for(String header:headers)
+        {
+            String[] hs = header.split(": ");
+            if (hs.length != 2) continue;
+            headerMap.put(hs[0].toUpperCase(), hs[1]);
+        }
+        queryMap = parseQueryString(query);
+
+        if(method==HttpVerb.POST) {
+            parsePostBody();
+        }
+        printRequest();
+    }
+
+    public String readLine(InputStream inputStream) throws Exception
+    {
+        int off = 0, max = 8192;
+        byte[] bytes = new byte[max];
+        while(true){
+            int len = inputStream.read(bytes, off, 1);
+            if(len==-1) break;
+            if(off >= max) throw new Exception("Line of InputStream is too long.");
+            if(bytes[off]=='\r') continue;
+            if(bytes[off]=='\n') break;
+            off ++;
+        }
+        String str = new String(bytes, 0, off);
+        return str;
+    }
+
+    private void printRequest() throws Exception
+    {
+        System.out.printf("New client [%d]...\n", input.available());
+        System.out.printf("Request Info:\n");
+        System.out.printf("  HTTP METHOD: [%s]\n", method);
+        System.out.printf("  URI: [%s]\n", uri);
+        System.out.printf("  Path: [%s]\n", path);
+        System.out.printf("  Script: [%s]\n", script);
+        System.out.printf("  Query: [%s]\n", queryMap);
+        System.out.printf("  Type: %s\n", getContentType());
+        System.out.printf("  Length: %d\n", getContentLength());
+        System.out.printf("  PostMap: [%s]\n", postMap);
+        if(postBody!=null) System.out.printf("  PostBody: [%s]\n", new String(postBody));
+        System.out.printf("  Headers: %s\n", headers);
+    }
+    
+    public Integer getContentLength(){
+        return getHeaderNumber("CONTENT-LENGTH");
+    }
+
+    public String getContentType(){
+        return getHeaderString("CONTENT-TYPE");
+    }
+
+    public Integer getHeaderNumber(String key){
+        String value = headerMap.get(key);
+        if (value == null) return 0;
+        return Integer.valueOf(value);
+    }
+
+    public String getHeaderString(String key){
+        String value = headerMap.get(key);
+        if (value == null) return "";
+        return value;
+    }
+
+    private String parseUri(String requestString) throws HttpMethodException
+    {
+        int verb, slash, dot, question, puri;
+        verb = requestString.indexOf(" ");
+        puri = requestString.indexOf(" ", verb+1);
+
+        try{
+            method = HttpVerb.valueOf(requestString.substring(0, verb));
+        }catch(IllegalArgumentException ex){
+            method = HttpVerb.UNKNOWN;
+        }
+
+        if ( method == HttpVerb.UNKNOWN ) throw new HttpMethodException(method.toString());
+        uri = requestString.substring(verb+1, puri);
+        question = uri.indexOf("?");
+        if(question>0) query = uri.substring(question+1);
+
+        dot = uri.indexOf(".");
+        if(question==-1 && dot>0){
+            script = uri.substring(0);
+            slash = uri.lastIndexOf('/');
+            path = uri.substring(0, slash+1);
+        }else if(question>0 && question>dot){
+            script = uri.substring(0, question);
+            slash = script.lastIndexOf('/');
+            path = uri.substring(0, slash+1);
+        }else{
+            path = uri;
+        }
+        script = script.replace('/', File.separatorChar);
+        return uri;
+    }
+
+    private void parsePostBody() throws Exception
+    {
+        Integer len = getContentLength();
+        if(len==0) return;
+        postBody = new byte[len];
+        input.read(postBody, 0, len);
+
+        if (getContentType().equals("application/x-www-form-urlencoded")){
+            String[] keypairs = new String(postBody).split("&");
+            for(String it:keypairs){
+                String[] kvs = it.split("=");
+                if(kvs.length!=2) continue;
+                postMap.put(kvs[0], kvs[1]);
+            }
+        }else{
+            System.out.println("Not Support Content-Type: " + getContentType());
+        }
+    }
+
+    private Map<String, String> parseQueryString(String query)
+    {
+        String[] pairs = query.split("&");
+        for( String kv:pairs){
+            String[] kvs = kv.split("=");
+            if (kvs.length!=2) continue;
+            queryMap.put(kvs[0], kvs[1]);
+        }
+        return queryMap;
     }
 }
 
@@ -199,7 +330,8 @@ return str;
  *      Status-Line=Http-Version SP Status-Code SP Reason-Phrase CRLF
  *
  */
-class Response {
+class Response 
+{
     private static final int BUFFER_SIZE=1024;
     Request request;
     OutputStream output;
@@ -216,28 +348,29 @@ class Response {
         byte[] bytes = new byte[BUFFER_SIZE];
         FileInputStream fis = null;
         try {
-            File file = new File(HttpServer.WEB_ROOT, request.getUri());
-            if (!file.isFile() || !file.exists()) throw new FileNotFoundException(HttpServer.WEB_ROOT + request.getUri());
+            File file = new File(HttpServer.WEB_ROOT+request.script);
+            if (!file.isFile() || !file.exists()) throw new FileNotFoundException(HttpServer.WEB_ROOT+request.script);
             output.write(("HTTP/1.1 200 OK\r\n" + 
+                            "Content-type: text/html; charset=UTF-8\r\n" +
                             "Connection: Close\r\n" +
-                            "\r\nOK").getBytes());
+                            "\r\n").getBytes());
 
             fis = new FileInputStream(file);
-            int ch = fis.read(bytes, 0, BUFFER_SIZE);
-            while(ch != -1){
-                output.write(bytes, 0, BUFFER_SIZE);
-                ch = fis.read(bytes, 0, BUFFER_SIZE);
+            while(true){
+                int len = fis.read(bytes, 0, BUFFER_SIZE);
+                if(len==-1) break;
+                output.write(bytes, 0, len);
             }
-        } catch (Exception e) {
-            System.out.printf("sendStaticResource: %s \n", e.toString());
-            e.printStackTrace();
-            //file not found
+        } catch (FileNotFoundException ex){
             String errorMessage = "HTTP/1.1 404 File Not Found\r\n"+
-                "Content-Type:text/html\r\n"+
-                "Content-Length:23\r\n"+
+                "Content-Type: text/html\r\n"+
+                "Content-Length: 23\r\n"+
                 "\r\n"+
                 "<h1>File Not Found</h1>";
             output.write(errorMessage.getBytes());
+        } catch (Exception e) {
+            System.out.printf("sendStaticResource: %s \n", e.toString());
+            // e.printStackTrace();
         }finally{
             if(fis != null){
                 fis.close();
@@ -246,7 +379,8 @@ class Response {
     }
 }
 
-public class HttpServer {
+public class HttpServer 
+{
     /**
      * WEB_ROOT is the directory where our html and other files reside.
      * For this package,WEB_ROOT is the "webroot" directory under the
@@ -264,7 +398,7 @@ public class HttpServer {
     public static void main(String[] args) {
         HttpServer server = new HttpServer();
         System.out.println("Web root: " + WEB_ROOT);
-        start("http://localhost:8080");
+        start("To test: curl -d \"o=one&v=09\" \"localhost:8080/PrintfTest.java?t=a&hash=1\"");
         server.await();
     }
 
@@ -299,26 +433,21 @@ public class HttpServer {
             OutputStream output = null;
             try {
                 socket = serverSocket.accept();
-                input = socket.getInputStream();
+                input  = socket.getInputStream();
                 output = socket.getOutputStream();
-                System.out.printf("new client req[%d]...\n", input.available());
-                if (input.available()==0) continue; // What is this request?
-                // create Request object and parse
                 Request request = new Request(input);
                 request.parse();
-                if (request.getUri()==SHUTDOWN) 
+                if (request.uri.equals(SHUTDOWN)) 
                 {
                     shutdown = true;
+                    System.out.println("Shutdown server...");
                     // serverSocket.close();
                 }
-
-                // create Response object
                 Response response = new Response(output);
                 response.setRequest(request);
                 response.sendStaticResource();
                 output.flush();
                 socket.close();
-                System.out.println("response client...");
             } catch (Exception e) {
                 e.printStackTrace();
                 continue;

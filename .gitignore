@@ -2,8 +2,13 @@ obj
 *.jar
 *.so
 *.class
+*.jar.original
+.gradle
 build
 target
 java-concurrency
 java-concurrent-programming
 uploadFile
+proxyee-master
+rpckids-master
+httpkids-master

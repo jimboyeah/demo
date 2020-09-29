@@ -37,7 +37,7 @@ public class RandomDemo
     static public void main(String args[]) throws InterruptedException
     { 
         log("-----------------------Math.random()-----------------------");
-        IntStream.range(1, 10).forEach(i -> {
+        IntStream.range(1, 25).forEach(i -> {
             // 使用 Lambda 来创建线程
             Thread t1 = new Thread(() -> log( getThreadName() + " -> " + Math.random()), "Math.random()");
             t1.start();

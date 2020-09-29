@@ -61,7 +61,6 @@ public class ForEachMap
         items.put("Quarenden", "大红苹果");
         items.put("Filbert", "榛子");
 
-n
         // JDK foreach & lambada
         items.forEach((k, v)->System.out.println(k + " -> " + v));
 

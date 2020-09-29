@@ -111,11 +111,11 @@ public class HashTableTest
         items.put("Carambola", "杨桃");
         items.put("Quarenden", "大红苹果");
         items.put("Filbert", "榛子");
+
         if (index>items.size() - 1) index = items.size() - 1;
         String key = items.keySet().toArray()[index].toString();
+        map.put(key, items.get(key));
         // log("fill with " + key);
         // System.out.println(String.join(",", items.keySet()));
-
-        map.put(key, items.get(key));
     }
 }

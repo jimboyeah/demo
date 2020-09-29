@@ -1,0 +1,37 @@
+// file: build.gradle
+// gradle -q hello
+
+task hello {
+    doLast {
+    println 'Hello world!'
+    }
+}
+
+// gradle -q intro
+task intro(dependsOn: hello) {
+    doLast {
+    println "I'm Gradle"
+    }
+}
+
+println name
+println project.name  
+
+println hello.name
+println project.hello.name  
+
+println tasks.hello.name
+println tasks['hello'].name  
+
+// outdate syntax
+// task hello << {
+//     println 'Hello world!'
+// }
+
+// times { counter ->
+//     task "task$counter" {
+//         doLast {
+//         println "I'm task number $counter"
+//         }
+//     }
+// }

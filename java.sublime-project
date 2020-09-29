@@ -2,9 +2,10 @@
 	"build_systems":
 	[
 		{
-			"encoding": "gbk",
+			"encoding": "GBK",
 			"env":
 			{
+				"GROOVY": "C:/Users/OCEAN/.m2/repository/org/codehaus/groovy/groovy/2.5.13/groovy-2.5.13.jar",
 				"PATH": "c:/CodeBlocks/MinGW/bin/;%PATH%"
 			},
 			"file_regex": "^  (.+)\\((\\d+)\\)(): ((?:fatal )?(?:error|warning) \\w+\\d\\d\\d\\d: .*) \\[.*$",
@@ -38,19 +39,39 @@
 					"shell_cmd": "git show"
 				},
 				{
-					"name": "Kill java.exe",
-					"shell_cmd": "taskkill /F /IM java.exe"
+					"name": "🧡 Java Run",
+					"shell_cmd": "cd ${file_path} && javac -d . -Xlint:unchecked -encoding utf-8 ${file_name} && java -cp . ${file_base_name} 65.5 "
 				},
 				{
-					"name": "Java Run",
-					"shell_cmd": "cd ${file_path} && javac -Xlint:unchecked -encoding utf-8 ${file_name} && java -cp . ${file_base_name} 65.5 "
+					"name": "🧡 Kill Java",
+					"shell_cmd": "taskkill /F /IM java*"
 				},
 				{
-					"name": "🤍 Spring CLI Watch",
+					"name": "🧡 Groovy Run",
+					"shell_cmd": "cd ${file_path} && java -jar \"%groovy%\" ${file_name}"
+				},
+				{
+					"name": "🧡 Gradle Run",
+					"shell_cmd": "cd ${file_path} && gradle"
+				},
+				{
+					"name": "🧡 Gradle bootRun",
+					"shell_cmd": "cd ${file_path} && gradlew bootRun"
+				},
+				{
+					"name": "🧡 Gradle Build",
+					"shell_cmd": "cd ${file_path} && gradle build"
+				},
+				{
+					"name": "🧡 Gradle Tasklist",
+					"shell_cmd": "cd ${file_path} && gradle -q tasks --all"
+				},
+				{
+					"name": "🤍 Spring CLI Watch Groovy",
 					"shell_cmd": "cd ${file_path} && spring run --watch ${file_name}"
 				},
 				{
-					"name": "🤍 Spring CLI Pack",
+					"name": "🤍 Spring CLI Pack Groovy",
 					"shell_cmd": "cd ${file_path} && spring jar my-app.jar *.groovy"
 				},
 				{
@@ -62,16 +83,24 @@
 					"shell_cmd": "cd ${file_path} && spring init --dependencies=web,mybatis my-project"
 				},
 				{
-					"name": "🤍 Spring Boot Run",
+					"name": "✳ Maven New Webapp",
+					"shell_cmd": "cd ${file_path} && mvn archetype:generate -DgroupId=com.demos -DartifactId=webapp -DarchetypeArtifactId=maven-archetype-webapp -DinteractiveMode=false "
+				},
+				{
+					"name": "✳ Maven New Quickstart",
+					"shell_cmd": "cd ${file_path} && mvn archetype:generate -DgroupId=com.demos -DartifactId=webapp -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false -DarchetypeCatalog=local "
+				},
+				{
+					"name": "✳ Maven Spring Boot Run",
 					"shell_cmd": " cd ${file_path} && mvn clean package spring-boot:run "
+				},
+				{
+					"name": "✳ Maven Pack",
+					"shell_cmd": "cd ${file_path} && dir && mvn package "
 				},
 				{
 					"name": "Java Decompiler",
 					"shell_cmd": "cd ${file_path} && jad -p -sjava ${file_base_name}.class"
-				},
-				{
-					"name": "Maven package",
-					"shell_cmd": "cd ${file_path} && dir && mvn package "
 				},
 				{
 					"name": "Run jar package",
@@ -99,6 +128,9 @@
 		},
 		{
 			"path": "Thinking-in-Java-4th"
+		},
+		{
+			"path": "C:\\download\\programming\\java\\corejava"
 		}
 	],
 	"settings":

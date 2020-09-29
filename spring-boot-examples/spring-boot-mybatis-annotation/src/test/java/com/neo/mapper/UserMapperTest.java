@@ -31,14 +31,14 @@ public class UserMapperTest {
 	@Test
 	public void testQuery() throws Exception {
 		List<UserEntity> users = UserMapper.getAll();
-		System.out.println(users.toString());
+		System.out.println("testQuery: " + users.toString());
 	}
 	
 	
 	@Test
 	public void testUpdate() throws Exception {
 		UserEntity user = UserMapper.getOne(3l);
-		System.out.println(user.toString());
+		System.out.println("testUpdate: " + user.toString());
 		user.setNickName("neo");
 		UserMapper.update(user);
 		Assert.assertTrue(("neo".equals(UserMapper.getOne(3l).getNickName())));
