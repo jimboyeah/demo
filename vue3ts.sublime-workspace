@@ -1,1 +1,1782 @@
-{}
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"ne",
+				"nextPuzzle"
+			],
+			[
+				"max",
+				"max-width\tproperty"
+			],
+			[
+				"word",
+				"wordlist"
+			],
+			[
+				"qml",
+				"main.qml"
+			],
+			[
+				"p",
+				"plugins/"
+			],
+			[
+				"img",
+				"imageMat"
+			],
+			[
+				"lena",
+				"lena_thresh"
+			],
+			[
+				"chapp",
+				"ch_app.erl"
+			],
+			[
+				"wxMen",
+				"wxMenuBar"
+			],
+			[
+				"create",
+				"create_test_menu"
+			],
+			[
+				"ge",
+				"GenerateNames"
+			],
+			[
+				"I",
+				"IsStatic"
+			],
+			[
+				"lo",
+				"localhost.pfx"
+			],
+			[
+				"Hook",
+				"KeyboardHook"
+			],
+			[
+				"Hoo",
+				"HookStop"
+			],
+			[
+				"Ho",
+				"HookStart"
+			],
+			[
+				"int",
+				"Int32"
+			],
+			[
+				"PlaySoun",
+				"PlaySoundFlags"
+			],
+			[
+				"O",
+				"OpenFileDialog"
+			],
+			[
+				"From",
+				"Form1_Load"
+			],
+			[
+				"Form1",
+				"Form1_Load"
+			],
+			[
+				"Do",
+				"DoWorkStatic"
+			],
+			[
+				"S",
+				"Singletons"
+			],
+			[
+				"Test",
+				"TestClass"
+			],
+			[
+				"_",
+				"_count"
+			],
+			[
+				"Con",
+				"Contacts"
+			],
+			[
+				"up",
+				"upperCase"
+			],
+			[
+				"cli",
+				"on_button_clicked"
+			],
+			[
+				"height",
+				"max-height\tproperty"
+			],
+			[
+				"so",
+				"socket.io-client"
+			],
+			[
+				"En",
+				"EncodeToString\tfunc(src []byte) string ·ƒ"
+			],
+			[
+				"st",
+				"StdEncoding\t*base64.Encoding ·ν"
+			],
+			[
+				"Engin",
+				"EngineioMessage\tfunc(text string) ·ƒ"
+			],
+			[
+				"EIO",
+				"EIO_Message\tEngineioPacket ·Ɩ"
+			],
+			[
+				"SIO_Bin",
+				"SIO_Binary_Event\tSocketioPacket ·Ɩ"
+			],
+			[
+				"SIO",
+				"SIO_Event\tSocketioPacket ·Ɩ"
+			],
+			[
+				"U",
+				"Uint16\tfunc(b []byte) uint16 ·ƒ"
+			],
+			[
+				"Error",
+				"ErrorNil\tErrorCode ·Ɩ"
+			],
+			[
+				"Err",
+				"ErrorNil\tErrorCode ·Ɩ"
+			],
+			[
+				"Messa",
+				"MessageType\tbyte ·ʈ"
+			],
+			[
+				"E",
+				"Err\terror ·ν"
+			],
+			[
+				"e",
+				"Err\terror ·ν"
+			],
+			[
+				"b",
+				"brw\t*bufio.ReadWriter ·ν"
+			],
+			[
+				"Mi",
+				"Millisecond\ttime.Duration ·Ɩ"
+			],
+			[
+				"Webs",
+				"github.com/gorilla/websocket\t ·ʂ"
+			],
+			[
+				"Set",
+				"SetReadDeadline\tfunc(t time.Time) error ·ƒ"
+			],
+			[
+				"B",
+				"BrokenMessage\tMessageType ·Ɩ"
+			],
+			[
+				"R",
+				"RemoteAddr\tfunc() net.Addr ·ƒ"
+			],
+			[
+				"P",
+				"parsed\tbool ·ν"
+			],
+			[
+				"utf",
+				"unicode/utf8\t ·ʂ"
+			],
+			[
+				"Mask",
+				"Masking\tbool ·ν"
+			],
+			[
+				"Mess",
+				"MessageType\tbyte ·ʈ"
+			],
+			[
+				"Ma",
+				"Maskingkey\t[4]byte ·ν"
+			],
+			[
+				"Masking",
+				"Masking\tbool ·ν"
+			],
+			[
+				"M",
+				"Maskingkey\t[4]byte ·ν"
+			],
+			[
+				"CloseMe",
+				"CloseMessageCode\tuint ·ʈ"
+			],
+			[
+				"Ti",
+				"PingTimeout\ttime.Duration ·Ɩ"
+			],
+			[
+				"Ping",
+				"PingTimeout\ttime.Duration ·Ɩ"
+			],
+			[
+				"r",
+				"SetReadDeadline\tfunc(t time.Time) error ·ƒ"
+			],
+			[
+				"Read",
+				"ReadWriter\tstruct ·ʈ"
+			],
+			[
+				"StatusIn",
+				"StatusInternalServerError\tuntyped int ·Ɩ"
+			],
+			[
+				"net",
+				"netConn\tnet.Conn ·ν"
+			],
+			[
+				"enc",
+				"encoding/base64\t ·ʂ"
+			],
+			[
+				"Re",
+				"RequestURI\tstring ·ν"
+			],
+			[
+				"Respn",
+				"ResponseWriter\tinterface ·ʈ"
+			],
+			[
+				"Ha",
+				"Handler\tinterface ·ʈ"
+			],
+			[
+				"L",
+				"GetLabel\tfunc() string ·ƒ"
+			],
+			[
+				"test",
+				"test_pb.js"
+			],
+			[
+				"react",
+				"react-quill/"
+			],
+			[
+				"el",
+				"element-ui/"
+			],
+			[
+				"rel",
+				"icedesign-qrcode.rel.js"
+			],
+			[
+				"get",
+				"getCroppedCanvas\twarning"
+			],
+			[
+				"cl",
+				"className"
+			],
+			[
+				"hex",
+				"hex2decimal"
+			],
+			[
+				"flex",
+				"flex-wrap\tproperty"
+			],
+			[
+				"in",
+				"MarshalIndent\tfunc(v interface{}, prefix string, indent string) []byte, error ·ƒ"
+			],
+			[
+				"io",
+				"io/ioutil\t ·ʂ"
+			],
+			[
+				"re",
+				"ReadDir\tfunc(dirname string) []os.FileInfo, error ·ƒ"
+			],
+			[
+				"init",
+				"initQueue"
+			],
+			[
+				"thread",
+				"threadID"
+			],
+			[
+				"exit",
+				"exitFlag"
+			],
+			[
+				"con",
+				"content_encoding"
+			],
+			[
+				"content",
+				"content_length"
+			],
+			[
+				"name",
+				"nameKey"
+			],
+			[
+				"work",
+				"workQueue"
+			],
+			[
+				"en",
+				"enqueue"
+			],
+			[
+				"none",
+				"None"
+			],
+			[
+				"Mo",
+				"ModeExclusive\tos.FileMode ·Ɩ"
+			],
+			[
+				"encod",
+				"encoding/json\t ·ʂ"
+			],
+			[
+				"Cmd",
+				"Command\tfunc(name string, arg ...string) *exec.Cmd ·ƒ"
+			],
+			[
+				"next",
+				"next.min.js"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "vue3ts.sublime-project",
+			"settings":
+			{
+				"buffer_size": 2809,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "Git Demo",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Git Demo",
+					""
+				],
+				[
+					"Git Demo",
+					"Git help"
+				],
+				[
+					"Git Demo",
+					"Git Origin attach"
+				],
+				[
+					"Git Demo",
+					"Branch List"
+				],
+				[
+					"Git Demo",
+					"Branch List remote"
+				],
+				[
+					"Git Demo",
+					"git show"
+				],
+				[
+					"NPM Script",
+					""
+				],
+				[
+					"NPM Script",
+					"Run PHP Server"
+				],
+				[
+					"NPM Script",
+					"NPM run serve"
+				],
+				[
+					"NPM Script",
+					"NPM run build"
+				],
+				[
+					"NPM Script",
+					"NPM run test"
+				]
+			],
+			[
+				"Git Demo",
+				"Branch List"
+			]
+		],
+		[
+			[
+				[
+					"Git Demo",
+					""
+				],
+				[
+					"Git Demo",
+					"Git help"
+				],
+				[
+					"Git Demo",
+					"Git Push"
+				],
+				[
+					"Git Demo",
+					"Git Checkout Vue3TS"
+				],
+				[
+					"Git Demo",
+					"Git Origin attach"
+				],
+				[
+					"Git Demo",
+					"Branch List"
+				],
+				[
+					"Git Demo",
+					"Branch List remote"
+				],
+				[
+					"Git Demo",
+					"git show"
+				],
+				[
+					"NPM Script",
+					""
+				],
+				[
+					"NPM Script",
+					"Run PHP Server"
+				],
+				[
+					"NPM Script",
+					"NPM run serve"
+				],
+				[
+					"NPM Script",
+					"NPM run build"
+				],
+				[
+					"NPM Script",
+					"NPM run test"
+				]
+			],
+			[
+				"Git Demo",
+				"Git Push"
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"push",
+				"Git: Push Current Branch"
+			],
+			[
+				"comm",
+				"Git: Commit"
+			],
+			[
+				"add",
+				"Git: Add All"
+			],
+			[
+				"emmet ",
+				"Emmet: Balance Inward"
+			],
+			[
+				"emmet in",
+				"Emmet: Capture Abbreviation"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"math",
+				"Emmet: Evaluate Math Expression"
+			],
+			[
+				"endable ",
+				"Table Editor: Enable for current syntax"
+			],
+			[
+				" Math  ",
+				"HTMLPrettify: Set `node` Path"
+			],
+			[
+				"ex",
+				"Emmet: Expand Abbreviation"
+			],
+			[
+				"emmet",
+				"Emmet: Evaluate Math Expression"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"add rep",
+				"Package Control: Add Repository"
+			],
+			[
+				"enable p",
+				"Package Control: Enable Package"
+			],
+			[
+				"emm",
+				"Preferences: Emmet Key Bindings"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"enable",
+				"Table Editor: Enable for current view"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"git:lo",
+				"Git: Log All"
+			],
+			[
+				"edit",
+				"Project: Edit Project"
+			],
+			[
+				"mark",
+				"Set Syntax: Markdown"
+			],
+			[
+				"pus",
+				"Git: Push Current Branch"
+			],
+			[
+				"rename",
+				"Rename File"
+			],
+			[
+				"theme",
+				"UI: Select Color Scheme"
+			],
+			[
+				"co",
+				"Git: Commit"
+			],
+			[
+				"disable\t",
+				"Package Control: Disable Package"
+			],
+			[
+				"disable",
+				"Package Control: Disable Package"
+			],
+			[
+				"pu",
+				"Git: Push Current Branch"
+			],
+			[
+				"git",
+				"Git: Add All"
+			],
+			[
+				"key",
+				"Preferences: Key Bindings"
+			],
+			[
+				"selection",
+				"Rot13 Selection"
+			],
+			[
+				"dis",
+				"Package Control: Disable Package"
+			],
+			[
+				"ren",
+				"Rename File"
+			],
+			[
+				"uniq",
+				"Permute Lines: Unique"
+			],
+			[
+				"enab",
+				"Table Editor: Enable for current view"
+			],
+			[
+				"status",
+				"Git: Status"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"reane",
+				"Rename File"
+			],
+			[
+				"com",
+				"Git: Commit"
+			],
+			[
+				"gitadd",
+				"Git: Add All"
+			],
+			[
+				"emmet:",
+				"Emmet: Expand Abbreviation"
+			],
+			[
+				"in",
+				"Package Control: Install Package"
+			],
+			[
+				"en",
+				"Package Control: Enable Package"
+			],
+			[
+				"disable ",
+				"Package Control: Disable Package"
+			],
+			[
+				"ena",
+				"Package Control: Enable Package"
+			],
+			[
+				"disab",
+				"Package Control: Disable Package"
+			],
+			[
+				"disabl",
+				"Package Control: Disable Package"
+			],
+			[
+				"enable cur",
+				"Table Editor: Enable for current view"
+			],
+			[
+				"pushc",
+				"Git: Push Current Branch"
+			],
+			[
+				"stat",
+				"Git: Status"
+			],
+			[
+				"table edit",
+				"Table Editor: Enable for current view"
+			],
+			[
+				"table",
+				"Table Editor: Show demo film in new scratch view"
+			],
+			[
+				"preview",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"previe",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"markown",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"endable",
+				"Package Control: Disable Package"
+			],
+			[
+				"enabl",
+				"Package Control: Enable Package"
+			],
+			[
+				"la",
+				"LaTeXTools: Clear cache"
+			],
+			[
+				"html",
+				"HTMLPrettify"
+			],
+			[
+				"erlang",
+				"Set Syntax: Erlang"
+			],
+			[
+				"diff",
+				"Set Syntax: Diff"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"disa",
+				"Package Control: Disable Package"
+			],
+			[
+				"package",
+				"Package Control: Install Package"
+			],
+			[
+				"utf",
+				"ConvertToUTF8: Reload with Encoding"
+			],
+			[
+				"TypesCript",
+				"TypeScript: Signature Info"
+			],
+			[
+				"markdown",
+				"Set Syntax: MultiMarkdown"
+			],
+			[
+				"debug",
+				"SublimeCodeIntel: Enable Debug Mode"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"them",
+				"UI: Select Theme"
+			],
+			[
+				"new pro",
+				"Project Manager: Add New Project"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 302.0,
+		"history":
+		[
+			"r = os.system(\"cmd /k echo >>c:/coding/md/log.txt\")",
+			"r = os.system(\"cmd /k \\\"echo c:/coding/md/log.txt mkdir c:\\mkdir\\\"\")",
+			"r = os.system(\"cmd /k echo \\\"c:/coding/md/log.txt mkdir c:\\mkdir\\\"\")",
+			"r = os.system(\"cmd /k echo c:/coding/md/log.txt mkdir c:\\mkdir'\")",
+			"r = os.system(\"cmd /k 'echo c:/coding/md/log.txt mkdir c:\\mkdir'\")",
+			"r = os.system(\"cmd -k echo c:/coding/md/log.txt mkdir c:\\mkdir\")",
+			"r = os.system(\"echo c:/coding/md/log.txt mkdir c:\\mkdir\")",
+			"r = os.system(\"echo c:/log.txt mkdir c:\\mkdir\")",
+			"r = os.system(\"echo c:\\\\log.txt mkdir c:\\mkdir\")",
+			"r = os.system(\"mkdir c:\\mkdir\")",
+			"r = os.system(\"cwd .\")",
+			"print(r)",
+			"r = os.system(\"dir .\")",
+			"print(r)",
+			"pring(r)",
+			"r = os.system(\"dir\")",
+			"os.system(\"dir\")",
+			"subprocess.run(\"ls\")",
+			"subprocess.run()",
+			"import subprocess",
+			"subprocess.run()",
+			"import commands",
+			"for i in val.readlines()",
+			"for i in val.readlines(): &  print(i)",
+			"for i in val.readlines()  print(i)",
+			"for i in val.readlines(): print(i)",
+			"for i in val.readlines():",
+			"val = os.popen('ls -al')",
+			"val = os.ppopen('ls -al')",
+			"val = os.Ppopen('ls -al')",
+			"import os",
+			"val = os.Ppopen('ls -al')",
+			"cwd"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/coding/md-code/vue-3.0/demo-ts"
+	],
+	"file_history":
+	[
+		"/C/coding/md-code/vue-3.0/demo-ts/.gitignore",
+		"/C/coding/md/c-daystep/spa.html",
+		"/C/node/ts-node.cmd",
+		"/C/node/node_modules/ts-node/dist/bin.d.ts",
+		"/C/node/node_modules/ts-node/dist/bin.js",
+		"/C/coding/md-code/TypeScript-Handbook/package.json",
+		"/C/Users/OCEAN/AppData/Roaming/Sublime Text 3/Packages/User/TypeScriptReact.sublime-settings",
+		"/C/download/games/smc/stdout.txt",
+		"/C/download/games/smc/stderr.txt",
+		"/C/download/games/smc/快打旋风 (简) (v1.0) (madcell)/使用说明(readme).txt",
+		"/C/download/games/smc/297_龙虎之拳/使用说明(readme).txt",
+		"/C/download/games/virtuanes097cn/Fc Games/094_超级双截龙／正宗双截龙/使用说明(readme).txt",
+		"/C/Users/OCEAN/Documents/WeChat Files/jeangowhy/FileStorage/File/2021-01/JG八原则修正.md",
+		"/C/Users/OCEAN/AppData/Roaming/MetaQuotes/Terminal/1640F6577B1C4EC659BF41EA9F6C38ED/MQL5/Profiles/Templates/taichi-MFI.tpl",
+		"/C/Users/OCEAN/AppData/Roaming/MetaQuotes/Terminal/1640F6577B1C4EC659BF41EA9F6C38ED/MQL5/Profiles/Templates/taichi.tpl",
+		"/C/Users/OCEAN/AppData/Roaming/Sublime Text 3/Packages/Emmet/Default (Windows).sublime-keymap",
+		"/C/coding/md/c-daystep/index.html",
+		"/C/coding/md/pride-and-prejudice.md",
+		"/C/Users/OCEAN/AppData/Roaming/Sublime Text 3/Packages/Emmet/Default (Linux).sublime-keymap",
+		"/C/Users/OCEAN/AppData/Roaming/Sublime Text 3/Packages/HTML-CSS-JS Prettify/HTMLPrettify.sublime-settings",
+		"/C/Users/OCEAN/AppData/Local/Temp/Rar$DIa2188.1068/requirements.txt",
+		"/C/Users/OCEAN/AppData/Roaming/Sublime Text 3/Packages/sublime-text-plugin-2.3.2/main.py",
+		"/C/download/registry.json",
+		"/C/Users/OCEAN/AppData/Roaming/Sublime Text 3/Packages/Emmet/main.py",
+		"/C/Users/OCEAN/AppData/Roaming/Sublime Text 3/Packages/emmet-sublime/README.md",
+		"/C/Users/OCEAN/AppData/Roaming/Sublime Text 3/Packages/sublime-text-plugin-2.3.2/README.md",
+		"/C/Users/OCEAN/AppData/Roaming/Sublime Text 3/Packages/User/Emmet.sublime-settings",
+		"/C/Users/OCEAN/AppData/Roaming/Sublime Text 3/Packages/Emmet/Emmet.sublime-settings",
+		"/C/Users/OCEAN/AppData/Roaming/MetaQuotes/Terminal/DB0F64EEC7A2A5A4E798BF69494A9ACB/profiles/lastprofile.ini",
+		"/C/Users/OCEAN/AppData/Roaming/MetaQuotes/Terminal/DB0F64EEC7A2A5A4E798BF69494A9ACB/profiles/trailingstops.ini",
+		"/C/Users/OCEAN/AppData/Roaming/MetaQuotes/Terminal/DB0F64EEC7A2A5A4E798BF69494A9ACB/templates/taichi-teal.tpl",
+		"/C/Users/OCEAN/AppData/Roaming/MetaQuotes/Terminal/DA3C92B1779898CC0CACD726A655BECB/templates/taichi-teal.tpl",
+		"/C/Users/OCEAN/AppData/Roaming/MetaQuotes/Terminal/DA3C92B1779898CC0CACD726A655BECB/profiles/▓ SPX500/chart06.chr",
+		"/C/Users/OCEAN/AppData/Roaming/MetaQuotes/Terminal/DA3C92B1779898CC0CACD726A655BECB/profiles/▓ SPX500/order.wnd",
+		"/C/games/East India Company/如何开始游戏（重要）.txt",
+		"/C/download/games/yfz/auto.inf",
+		"/C/Program Files (x86)/DOSBox-0.74/DOSBox 0.74 Manual.txt",
+		"/C/coding/md/MD.sublime-project",
+		"/C/download/201-173059.html@play=0-0",
+		"/C/download/数学简史-蔡天新.txt",
+		"/C/coding/md/OpenToonz/Blender.md",
+		"/C/download/programming/Elasticsearch/密码链接说明.txt",
+		"/C/coding/md/OpenToonz/ffmpeg.md",
+		"/C/Users/OCEAN/Videos/Sheldon_2017/combine.bat",
+		"/C/download/index (1).m3u8",
+		"/C/download/Pride and Prejudice.txt",
+		"/C/coding/md/etest.html",
+		"/C/coding/md/readme.md",
+		"/C/coding/md/readme_linux.md",
+		"/C/coding/md/readme_php.md",
+		"/C/coding/md-code/coding/coding.js",
+		"/C/coding/md/c-daystep/readme_vue.md",
+		"/C/coding/md/c-daystep/readme_vue_basic.md",
+		"/C/coding/md/webpack/readme_css.md",
+		"/C/coding/md-code/C-DayStep/spa.html",
+		"/C/coding/md-code/C-DayStep/assets/vue.min.js",
+		"/C/coding/md-code/C-DayStep/assets/vue-router.min.js",
+		"/C/coding/md/cv.md",
+		"/C/coding/md/OpenGL/OpenGL.md",
+		"/C/download/Pride and Prejudice (The Cambridge Edition of the Works of Jane Austen) by Jane Austen (z-lib.org).txt",
+		"/C/Users/OCEAN/Videos/Tsumugi2闪烁风暴/c/!acqier.bat",
+		"/C/coding/md/accme.md",
+		"/C/coding/md/writing/VirtualNes/RSA.md",
+		"/C/coding/md/rsa/readme_rsa.md",
+		"/C/coding/md/readme_sublime.md",
+		"/C/coding/md/writing/hugo.md",
+		"/C/coding/md/socket.io/gRPC_protobuf.md",
+		"/C/coding/md-code/socket.io/src/go-my-websocket/example/protobuf_test.go",
+		"/C/coding/md/socket.io/go-my-websocket.md",
+		"/C/coding/md-code/coding/coding.cpp",
+		"/C/coding/md/markdown.md",
+		"/C/coding/md/vim/readme_vim.md",
+		"/C/coding/md/Erlang.md",
+		"/C/Users/OCEAN/Videos/Tsumugi2闪烁风暴/a/!acqier.bat",
+		"/C/coding/md/readme_java.md",
+		"/C/coding/md/csharp.md",
+		"/C/coding/md/readme_curl.md",
+		"/C/coding/md/readme_git.md",
+		"/C/coding/md/blockchain.md",
+		"/C/coding/md/readme_net.md",
+		"/C/mongodb-win32-x86_64-2008plus-ssl-4.0.10/bin/startmongo.bat",
+		"/C/coding/md/db/MongoDB.md",
+		"/C/coding/md/hadoop.md",
+		"/C/coding/md/webpack/node.md",
+		"/C/coding/md/DDOS.md",
+		"/C/coding/md/echart/echarts.md",
+		"/C/coding/md/db/mysql.md",
+		"/C/mongodb-win32-x86_64-2008plus-ssl-4.0.10/db.conf",
+		"/C/coding/md/k8s.md",
+		"/C/coding/md/anki/anki-card.md",
+		"/C/coding/md/go/golang.md",
+		"/C/coding/md/go/gopl.md",
+		"/C/coding/md/writing/mfc/mfc.md",
+		"/C/coding/md/writing/mfc/mfc.html",
+		"/C/pictures/a/RosimmView/datac.js",
+		"/C/pictures/a/RosimmView/bt.js",
+		"/C/pictures/a/RosimmView/datal.js",
+		"/C/pictures/a/不伦纯爱2011/download.bat",
+		"/C/pictures/a/Tsumugi2闪烁风暴/!acqier.bat",
+		"/C/coding/md/diagram.md",
+		"/C/coding/md/readme_bootstrap.md",
+		"/C/coding/md/readme_hadoop.md",
+		"/C/groovy-3.0.4/bin/grape.bat",
+		"/C/groovy-3.0.4/bin/startGroovy.bat",
+		"/C/coding/md-code/e/regexp.txt",
+		"/C/Users/OCEAN/AppData/Roaming/Sublime Text 3/Packages/User/java.sublime-build",
+		"/C/coding/md/readme_python.md",
+		"/C/coding/md-code/java/HotSwap/gin.go",
+		"/C/coding/md-code/go/iris/index.go",
+		"/C/iceWorks/beego/gin.go",
+		"/C/iceWorks/beego/index.go",
+		"/C/coding/md-code/coding/coding.java",
+		"/C/maven-3.6.3/conf/settings.xml",
+		"/C/coding/md/go/readme_gopl.md",
+		"/C/download/programming/C++/CPP-Concurrency-In-Action-2ed-2019-master/README.md",
+		"/C/coding/md-code/hugo/quickstart/php.bat",
+		"/C/coding/md/Makefile.md",
+		"/C/coding/md-code/hugo/quickstart/static/assets/filelist.txt",
+		"/C/coding/md-code/coding/coding.py",
+		"/C/coding/md/ccpp.md",
+		"/C/coding/md-code/hugo/quickstart/static/revealjs-v3.9.2/plugin/markdown/example.html",
+		"/C/Users/OCEAN/AppData/Local/Temp/Rar$DIa17076.24842/README.md",
+		"/C/coding/md-code/gddo-master/go.mod",
+		"/C/coding/md-code/gddo-master/doc/builder.go",
+		"/C/coding/md-code/gddo-master/README.markdown",
+		"/C/coding/md/go/readme_golang.md",
+		"/C/coding/md-code/coding/main.go",
+		"/C/Users/OCEAN/AppData/Roaming/Sublime Text 3/Packages/sublime_diagram_plugin/samples/network.wsd"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 451.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"ts",
+			"\"cmd\""
+		],
+		"highlight": false,
+		"in_selection": false,
+		"preserve_case": true,
+		"regex": true,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "vue3ts.sublime-project",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2809,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1912,
+								1912
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"origin_encoding": "ASCII",
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 153.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.SFTP":
+	{
+		"height": 0.0
+	},
+	"output.diagnostics":
+	{
+		"height": 0.0
+	},
+	"output.exec":
+	{
+		"height": 158.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.git":
+	{
+		"height": 103.0
+	},
+	"pinned_build_system": "",
+	"project": "vue3ts.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"git.",
+				"md\\readme_git.md"
+			],
+			[
+				"spa",
+				"md\\c-daystep\\spa.html"
+			],
+			[
+				"vue",
+				"md\\c-daystep\\readme_vue.md"
+			],
+			[
+				"ts.",
+				"md\\webpack\\readme_ts.md"
+			],
+			[
+				".ts",
+				"coding\\coding.ts"
+			],
+			[
+				"readme.",
+				"md\\readme.md"
+			],
+			[
+				"index",
+				"md\\c-daystep\\index.html"
+			],
+			[
+				"win",
+				"md\\readme_win.md"
+			],
+			[
+				"java.md",
+				"md\\readme_java.md"
+			],
+			[
+				"bl",
+				"md\\OpenToonz\\Blender.md"
+			],
+			[
+				"mt",
+				"md\\mtd\\mtd.py"
+			],
+			[
+				"ff",
+				"md\\OpenToonz\\ffmpeg.md"
+			],
+			[
+				"css",
+				"md\\webpack\\readme_css.md"
+			],
+			[
+				"re",
+				"md\\readme.md"
+			],
+			[
+				"redis",
+				"md\\db\\redis.md"
+			],
+			[
+				"spring",
+				"md\\SpringBoot.md"
+			],
+			[
+				"coding.js",
+				"coding\\coding.js"
+			],
+			[
+				"opencv",
+				"md\\OpenGL\\OpenCV.md"
+			],
+			[
+				"cv",
+				"md\\cv.md"
+			],
+			[
+				"rsa",
+				"md\\rsa\\readme_rsa.md"
+			],
+			[
+				"accme",
+				"md\\accme.md"
+			],
+			[
+				"linux",
+				"md\\readme_linux.md"
+			],
+			[
+				"php",
+				"md\\readme_php.md"
+			],
+			[
+				"sublime",
+				"md\\readme_sublime.md"
+			],
+			[
+				"read",
+				"md\\readme.md"
+			],
+			[
+				"mysql",
+				"md\\db\\mysql.md"
+			],
+			[
+				"node",
+				"md\\webpack\\node.md"
+			],
+			[
+				"ddos",
+				"md\\DDOS.md"
+			],
+			[
+				"echarts",
+				"md\\echart\\readme_echarts.md"
+			],
+			[
+				"gopl",
+				"md\\go\\readme_gopl.md"
+			],
+			[
+				"liN",
+				"md\\OpenGL\\LinearAlgebra.md"
+			],
+			[
+				"mongo",
+				"md\\db\\readme.MongoDB.md"
+			],
+			[
+				"mfc",
+				"md\\writing\\mfc\\mfc.html"
+			],
+			[
+				"dia",
+				"md\\diagram.md"
+			],
+			[
+				"ffme",
+				"md\\OpenToonz\\ffmpeg.md"
+			],
+			[
+				"readme",
+				"md\\readme.md"
+			],
+			[
+				"csharp",
+				"md\\csharp.md"
+			],
+			[
+				"bootsrap",
+				"md\\readme_bootstrap.md"
+			],
+			[
+				"erlan",
+				"md\\Erlang.md"
+			],
+			[
+				"net.md",
+				"md\\readme_net.md"
+			],
+			[
+				"hugo",
+				"md\\writing\\hugo.md"
+			],
+			[
+				"make",
+				"md\\Makefile.md"
+			],
+			[
+				"ccpp",
+				"md\\ccpp.md"
+			],
+			[
+				"vim",
+				"md\\vim\\readme_vim.md"
+			],
+			[
+				"open",
+				"md\\OpenGL\\OpenGL.md"
+			],
+			[
+				"socket",
+				"md\\socket.io\\go-my-websocket.md"
+			],
+			[
+				"java",
+				"User\\java.sublime-build"
+			],
+			[
+				"curl",
+				"md\\readme_curl.md"
+			],
+			[
+				"",
+				"md\\readme_git.md"
+			],
+			[
+				"m",
+				"md\\writing\\mfc\\mfc.md"
+			],
+			[
+				"rpc",
+				"md\\socket.io\\gRPC_protobuf.md"
+			],
+			[
+				"python",
+				"md\\readme_python.md"
+			],
+			[
+				"linu",
+				"md\\readme_linux.md"
+			],
+			[
+				"proto",
+				"md\\socket.io\\Protocol Buffer.md"
+			],
+			[
+				"go",
+				"md\\socket.io\\go-my-websocket.md"
+			],
+			[
+				"go-",
+				"md\\socket.io\\go-my-websocket.md"
+			],
+			[
+				"block",
+				"md\\blockchain.md"
+			],
+			[
+				"Concurrency",
+				"CPP-Concurrency-In-Action-2ed-2019-master\\README.md"
+			],
+			[
+				"c",
+				"md\\csharp.md"
+			],
+			[
+				"git",
+				"md\\readme_git.md"
+			],
+			[
+				"gop",
+				"md\\go\\readme_gopl.md"
+			],
+			[
+				"ffm",
+				"md\\OpenToonz\\ffmpeg.md"
+			],
+			[
+				"ffmpg",
+				"md\\OpenToonz\\ffmpeg.md"
+			],
+			[
+				"coding.cpp",
+				"coding\\coding.cpp"
+			],
+			[
+				"coding",
+				"coding\\coding.py"
+			],
+			[
+				"css.md",
+				"md\\webpack\\readme_css.md"
+			],
+			[
+				"gol",
+				"md\\go\\readme_golang.md"
+			],
+			[
+				"golang",
+				"md\\go\\readme_golang.md"
+			],
+			[
+				"golan",
+				"md\\go\\readme_golang.md"
+			],
+			[
+				".go",
+				"coding\\main.go"
+			],
+			[
+				"awslib",
+				"sublime_diagram_plugin\\samples\\awslib.wsd"
+			],
+			[
+				"listspr",
+				"sublime_diagram_plugin\\samples\\listsprite.wsd"
+			],
+			[
+				"cv.md",
+				"md\\cv.md"
+			],
+			[
+				"mark",
+				"md\\Markdown Cheatsheet.md"
+			],
+			[
+				"markdown",
+				"md\\readme_markdown.md"
+			],
+			[
+				"ref.wsd",
+				"sublime_diagram_plugin\\samples\\ref.wsd"
+			],
+			[
+				"ming",
+				"User\\C++ MinGW.sublime-build"
+			],
+			[
+				"csbuild",
+				"User\\C#.sublime-build"
+			],
+			[
+				"openl",
+				"md\\OpenGL\\OpenGL.md"
+			],
+			[
+				"subli",
+				"md\\readme_sublime.md"
+			],
+			[
+				"sublim",
+				"md\\readme_sublime.md"
+			],
+			[
+				"writing mfc",
+				"md\\writing\\articals\\howMCF.html"
+			],
+			[
+				"ML.",
+				"md\\ml.md"
+			],
+			[
+				"mfc.",
+				"md\\writing\\mfc\\mfc.md"
+			],
+			[
+				"markdowm",
+				"md\\readme_markdown.md"
+			],
+			[
+				"sub",
+				"md\\readme_sublime.md"
+			],
+			[
+				"win.md",
+				"md\\readme_win.md"
+			],
+			[
+				"mardk",
+				"md\\readme_markdown.md"
+			],
+			[
+				"node.",
+				"User\\Node.sublime-build"
+			],
+			[
+				"es6",
+				"md\\readme_es6.md"
+			],
+			[
+				"blender",
+				"md\\OpenToonz\\Blender.md"
+			],
+			[
+				"Make",
+				"md\\Makefile.md"
+			],
+			[
+				"cmake",
+				"User\\CMake.sublime-settings"
+			],
+			[
+				"dart",
+				"User\\Dart 2.2.sublime-build"
+			],
+			[
+				"Ming",
+				"User\\C++ MinGW.sublime-build"
+			],
+			[
+				"cbuil",
+				"User\\C#.sublime-build"
+			],
+			[
+				"sublime.",
+				"md\\readme_sublime.md"
+			],
+			[
+				"coding.py",
+				"coding\\coding.py"
+			],
+			[
+				"qguiapplication",
+				"Qt\\5.9\\Src\\qtbase\\src\\gui\\kernel\\qguiapplication_p.h"
+			],
+			[
+				"QGuiApplication",
+				"Qt\\5.9\\Src\\qtbase\\include\\QtGui\\qguiapplication.h"
+			],
+			[
+				"simpleqml",
+				"Qt\\Examples\\Qt-5.9\\activeqt\\simpleqml\\simpleqml.pro"
+			],
+			[
+				".qml",
+				"Qt\\Examples\\Qt-5.9\\activeqt\\simpleqml\\main.qml"
+			],
+			[
+				"noepad",
+				"Qt\\5.9\\Src\\qtdoc\\doc\\src\\snippets\\widgets-tutorial\\build\\notepad.creator"
+			],
+			[
+				"notepad",
+				"Qt\\5.9\\Src\\qtdoc\\doc\\src\\snippets\\widgets-tutorial\\build\\notepad.creator"
+			],
+			[
+				"addressbook",
+				"Qt\\5.9\\Src\\qtwebengine\\src\\3rdparty\\chromium\\third_party\\protobuf\\csharp\\src\\AddressBook\\AddressBook.csproj"
+			],
+			[
+				"notepad.",
+				"Qt\\5.9\\Src\\qtdoc\\doc\\src\\snippets\\widgets-tutorial\\notepad\\notepad.cpp"
+			],
+			[
+				"qrc_qml.cpp",
+				"Qt\\n\\build\\release\\qrc_qml.cpp"
+			],
+			[
+				"cpp.md",
+				"md\\ccpp.md"
+			],
+			[
+				"qtbuild",
+				"User\\Qt+MinGW.sublime-build"
+			],
+			[
+				"help",
+				"coding\\help_cv2.py"
+			],
+			[
+				"py",
+				"User\\Python.sublime-build"
+			],
+			[
+				"python.",
+				"md\\readme_python.md"
+			],
+			[
+				"help_cv2",
+				"coding\\help_cv2.py"
+			],
+			[
+				"ffmpeg",
+				"md\\OpenToonz\\ffmpeg.md"
+			],
+			[
+				"core/hal/interface.h",
+				"opencv\\build\\include\\opencv2\\core\\hal\\interface.h"
+			],
+			[
+				"cbuild",
+				"User\\C#.sublime-build"
+			],
+			[
+				"pybuild",
+				"User\\Python.sublime-build"
+			],
+			[
+				"os_mon.app",
+				"otp_src_23.0\\lib\\os_mon\\ebin\\os_mon.app"
+			],
+			[
+				"OtpServerTransport\t",
+				"otp_src_23.0\\lib\\jinterface\\java_src\\com\\ericsson\\otp\\erlang\\OtpServerTransport.java"
+			],
+			[
+				"flipmenu",
+				"otp_src_23.0\\lib\\erl_docgen\\priv\\js\\flipmenu\\flipmenu.js"
+			],
+			[
+				"go.build",
+				"User\\GoLang.sublime-build"
+			],
+			[
+				"coding.go",
+				"coding\\main.go"
+			],
+			[
+				"test.config",
+				"coding\\erlang\\test.config"
+			],
+			[
+				"ch_sup",
+				"otp_src_23.0\\lib\\kernel\\test\\ch_sup.erl"
+			],
+			[
+				"coding.erl",
+				"coding\\erlang\\coding.erl"
+			],
+			[
+				"efficiency_guide",
+				"otp_src_23.0\\system\\doc\\efficiency_guide\\efficiency_guide.erl"
+			],
+			[
+				"wx_object",
+				"otp_src_23.0\\lib\\wx\\src\\wx_object.erl"
+			],
+			[
+				"otp_release_targets",
+				"otp_src_23.0\\make\\otp_release_targets.mk"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"C:\\Users\\OCEAN\\AppData\\Roaming\\Sublime Text 3\\Packages\\User\\Projects\\TypeScript.sublime-project"
+			],
+			[
+				"boo",
+				"C:\\coding\\md-code\\bootstrap-5.0\\bootstrap.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 392.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"createTrackbar",
+				"createTrackbar"
+			],
+			[
+				"addWeighted",
+				"addWeighted"
+			],
+			[
+				"resize",
+				"resize"
+			],
+			[
+				"ApplicationViewer",
+				"QmlApplicationViewer"
+			],
+			[
+				"cuda_GpuMat",
+				"cuda_GpuMat"
+			],
+			[
+				"Function: element",
+				"Function: element"
+			],
+			[
+				"element",
+				"Function: element"
+			],
+			[
+				"spawn",
+				"Function: spawn"
+			],
+			[
+				"start_timer",
+				"Function: start_timer"
+			],
+			[
+				"ethr_atomic_read",
+				"ethr_atomic_read"
+			],
+			[
+				"erts_atomic64_read_nob",
+				"erts_atomic64_read_nob"
+			],
+			[
+				"now_",
+				"now_0"
+			],
+			[
+				"erl_start",
+				"erl_start"
+			],
+			[
+				"process_main",
+				"process_main"
+			],
+			[
+				"bs_init2",
+				"Function: do_bs_init_2"
+			],
+			[
+				"ErlSub",
+				"ErlSubBin"
+			],
+			[
+				"ProcBin",
+				"ProcBin"
+			],
+			[
+				"SMALL",
+				"small"
+			],
+			[
+				"Process",
+				"Process"
+			],
+			[
+				"TAG_PRIMARY_LIST",
+				"TAG_PRIMARY_LIST"
+			],
+			[
+				"ErlDrvEntry",
+				"ErlDrvEntry"
+			],
+			[
+				"driver_entry",
+				"add_driver_entry"
+			],
+			[
+				"driver_select",
+				"driver_select"
+			],
+			[
+				"ready_output",
+				"ready_output"
+			],
+			[
+				"main",
+				"main"
+			],
+			[
+				"AddSingleTon",
+				"TryAddSingleton"
+			]
+		],
+		"width": 1126.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 246.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

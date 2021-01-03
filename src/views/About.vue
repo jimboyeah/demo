@@ -6,7 +6,7 @@
 </template>
 <script lang="ts">
 // declare function greet(greeting: string): void;
-import greet from '@/greet.js';
+// import greet from '@/greet.js';
 
 interface LabelledValue {
   label: string;
@@ -22,6 +22,9 @@ printLabel(myObj);
 const m: {size: number, label: string} = myObj;
 printLabel(m);
 
+const M: LabelledValue = {label: 'Maddd'};
+printLabel(M);
+
 export default {
   name: 'About',
   components: {  },
@@ -29,7 +32,7 @@ export default {
     // arrow function will captures the global value of 'this'.
     test(event: MouseEvent) {
         console.log(event, this);
-        greet('"Hi"');
+        // greet('"Hi"');
     },
   },
 };
