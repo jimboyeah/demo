@@ -1,0 +1,96 @@
+{
+    "build_systems":
+    [
+        {
+            "encoding": "gbk",
+            "env":
+            {
+                "PATH": "%PATH%"
+            },
+            "file_regex": "^  (.+)\\((\\d+)\\)(): ((?:fatal )?(?:error|warning) \\w+\\d\\d\\d\\d: .*) \\[.*$",
+            "quiet": true,
+            "name": "NPM Script",
+            // "cmd": ["npm.cmd", "run", "test"],
+            "working_dir": "${project_path}",
+            "variants": [
+                {
+                    "name": "Run PHP Server",
+                    "shell_cmd": "php -S localhost:80 -t .",
+                },
+                {
+                    "name": "NPM run serve",
+                    "shell_cmd": "npm.cmd run serve",
+                },
+                {
+                    "name": "NPM run build",
+                    "shell_cmd": "npm.cmd run build",
+                },
+                {
+                    "name": "NPM run test",
+                    "shell_cmd": "npm.cmd run test",
+                },
+            ]
+        },
+        {
+            "encoding": "gbk",
+            "env":
+            {
+                "PATH": "c:/CodeBlocks/MinGW/bin/;%PATH%"
+            },
+            "file_regex": "^  (.+)\\((\\d+)\\)(): ((?:fatal )?(?:error|warning) \\w+\\d\\d\\d\\d: .*) \\[.*$",
+            "name": "Git Demo",
+            "quiet": true,
+            "shell_cmd": "git status",
+            "variants":
+            [
+                {
+                    "name": "Git help",
+                    "shell_cmd": "git --help"
+                },
+                {
+                    "name": "Git Push",
+                    "shell_cmd": "git push origin vue3typescript:vue3typescript"
+                },
+                {
+                    "name": "Git Checkout Vue3TS",
+                    "shell_cmd": "git checkout vue3typescript"
+                },
+                {
+                    "name": "Git Origin attach",
+                    "shell_cmd": "git remote add origin https://github.com/jimboyeah/demo.git"
+                },
+                {
+                    "name": "Branch List",
+                    "shell_cmd": "git branch -a"
+                },
+                {
+                    "name": "Branch List remote",
+                    "shell_cmd": "git branch -r --list"
+                },
+                {
+                    "name": "git show",
+                    "shell_cmd": "git show"
+                }
+            ],
+            "working_dir": "${project_path}"
+        }
+    ],
+    "folders":
+    [
+        {
+            "binary_file_patterns":
+            [
+                "*.noting"
+            ],
+            "name": "Demo Project",
+            "path": "."
+        }
+    ],
+    "settings":
+    {
+        "cmake":
+        {
+            "build_folder": "${project_path}"
+        }
+    }
+}
