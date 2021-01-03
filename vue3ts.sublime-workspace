@@ -375,12 +375,28 @@
 			"file": "vue3ts.sublime-project",
 			"settings":
 			{
-				"buffer_size": 2809,
+				"buffer_size": 2843,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/views/About.vue",
+			"settings":
+			{
+				"buffer_size": 809,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/greet.js",
+			"settings":
+			{
+				"buffer_size": 57,
 				"line_ending": "Unix"
 			}
 		}
 	],
-	"build_system": "Git Demo",
+	"build_system": "NPM Script",
 	"build_system_choices":
 	[
 		[
@@ -491,8 +507,8 @@
 				]
 			],
 			[
-				"Git Demo",
-				"Git Push"
+				"NPM Script",
+				"NPM run serve"
 			]
 		]
 	],
@@ -849,10 +865,16 @@
 	},
 	"expanded_folders":
 	[
-		"/C/coding/md-code/vue-3.0/demo-ts"
+		"/C/coding/md-code/vue-3.0/demo-ts",
+		"/C/coding/md-code/vue-3.0/demo-ts/src",
+		"/C/coding/md-code/vue-3.0/demo-ts/src/components",
+		"/C/coding/md-code/vue-3.0/demo-ts/src/store",
+		"/C/coding/md-code/vue-3.0/demo-ts/src/views"
 	],
 	"file_history":
 	[
+		"/C/Users/OCEAN/AppData/Roaming/npm-cache/_logs/2021-01-03T09_54_53_318Z-debug.log",
+		"/C/coding/md-code/vue-3.0/demo-ts/yarn-error.log",
 		"/C/coding/md-code/vue-3.0/demo-ts/.gitignore",
 		"/C/coding/md/c-daystep/spa.html",
 		"/C/node/ts-node.cmd",
@@ -978,9 +1000,7 @@
 		"/C/coding/md-code/gddo-master/go.mod",
 		"/C/coding/md-code/gddo-master/doc/builder.go",
 		"/C/coding/md-code/gddo-master/README.markdown",
-		"/C/coding/md/go/readme_golang.md",
-		"/C/coding/md-code/coding/main.go",
-		"/C/Users/OCEAN/AppData/Roaming/Sublime Text 3/Packages/sublime_diagram_plugin/samples/network.wsd"
+		"/C/coding/md/go/readme_golang.md"
 	],
 	"find":
 	{
@@ -1017,7 +1037,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 2,
 			"sheets":
 			[
 				{
@@ -1026,15 +1046,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2809,
+						"buffer_size": 2843,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1912,
-								1912
+								1053,
+								1053
 							]
 						],
 						"settings":
@@ -1046,6 +1066,79 @@
 							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 84.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "src/views/About.vue",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 809,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								809,
+								809
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"origin_encoding": "ASCII",
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Vuejs Complete Package/vue.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "src/greet.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 57,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								51,
+								51
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"origin_encoding": "ASCII",
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"typescript_plugin_format_options":
+							{
+								"convertTabsToSpaces": true,
+								"indentSize": 4,
+								"tabSize": 4
+							},
+							"use_tab_stops": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -1096,9 +1189,13 @@
 	{
 		"height": 0.0
 	},
+	"output.doc":
+	{
+		"height": 0.0
+	},
 	"output.exec":
 	{
-		"height": 158.0
+		"height": 271.0
 	},
 	"output.find_results":
 	{

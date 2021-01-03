@@ -1,6 +1,7 @@
 <template>
   <div id="app">
-    <h1>Welcome to Your Vue.js + TypeScript App</h1>
+    <h1>Vue.js + TypeScript SPA</h1>
+    <p>{{ $store.state.msg }}</p>
     <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
     <!-- <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/> -->
     <p>

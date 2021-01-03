@@ -1,6 +1,7 @@
 <template>
   <div class="about">
     <h1>This is an about page</h1>
+    <p>{{ $store.state.msg }}</p>
     <button @click="test">Test</button>
   </div>
 </template>
@@ -22,7 +23,7 @@ printLabel(myObj);
 const m: {size: number, label: string} = myObj;
 printLabel(m);
 
-const M: LabelledValue = {label: 'Maddd'};
+const M: LabelledValue = {label: 'Mad...'};
 printLabel(M);
 
 export default {
@@ -32,6 +33,10 @@ export default {
     // arrow function will captures the global value of 'this'.
     test(event: MouseEvent) {
         console.log(event, this);
+        // execute $store.mutaions.done()
+        // this.$store.commit('done'); 
+        // this.$store.commit('setMsg', 'Test!');
+        this.$store.dispatch('setMsg', 'dispatch!');
         // greet('"Hi"');
     },
   },
