@@ -1,0 +1,187 @@
+
+  <!DOCTYPE html>
+  <html>
+      <head>
+          <meta charset="utf-8"/>
+          <title> Hello React! </title>
+          <!-- <script src="https://cdn.staticfile.org/react/16.4.0/umd/react.development.js"> </script> -->
+          <!-- <script src="https://cdn.staticfile.org/react-dom/16.4.0/umd/react-dom.development.js"> </script> -->
+          <!-- <script src="https://cdn.staticfile.org/babel-standalone/6.26.0/babel.min.js"> </script> -->
+          <!-- <script src="https://cdn.staticfile.org/redux/4.0.1/redux.min.js"></script> -->
+          <!-- <script src="https://cdn.staticfile.org/react-redux/6.0.1/react-redux.min.js"></script> -->
+          <!-- <script src="https://cdn.staticfile.org/prop-types/15.7.2/prop-types.js"></script> -->
+          <style>
+            body {
+                background: whitesmoke;
+                padding: 24px;
+                text-align: center;
+                font-family: monospace;
+            }
+            input {
+                text-align: center;
+            }
+            .greeting-component {
+                margin: 24px auto 24px auto;
+                padding: 12px;
+                background: white;
+                max-width: 450px;
+            }
+          </style>
+      </head>
+      <body>
+<!-- https://wow.techbrood.com/fiddle/29866 -->
+<script src="https://wow.techbrood.com/libs/jquery/jquery-1.11.1.min.js"></script>
+<h1>Browser-Level React + Redux</h1>
+
+<p class="leadin">
+    It is easy to forget that if a use case is closer to a traditional website rather than an SPA there is nothing holding us back using Redux as a global state container on the browser level and connecting individual components on the page to the Redux store.
+</p>
+
+<div id="compo0"></div>
+<div id="compo1"></div>
+<div id="compo2"></div>
+
+<script src="https://cdn.staticfile.org/babel-standalone/6.26.0/babel.min.js"> </script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/react/15.3.1/react.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/react/15.3.1/react-dom.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/redux/3.6.0/redux.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/react-redux/4.4.5/react-redux.min.js'></script>
+      </body>
+  </html>
+
+  <script type="text/babel">
+// Browser-Level React + Redux
+
+//
+// Action
+//
+
+function changeGreeting(text) {
+  return {
+    type: 'CHANGE_TODO',
+    text
+  };
+}
+
+
+//
+// Reducer
+//
+
+const initialState = {
+  greeting: 'Hello'
+};
+
+function greeterApp(state, action) {
+
+  if (typeof state === 'undefined') {
+    return initialState;
+  }
+
+  switch (action.type) {
+    case 'CHANGE_TODO':
+      return Object.assign({}, state, {
+        greeting: action.text === ''
+          ? initialState.greeting
+          : action.text
+      });
+  }
+
+  return state
+}
+
+
+//
+// Store
+//
+
+const store = Redux.createStore(greeterApp);
+
+
+//
+// React Components
+//
+
+class Input extends React.Component {
+  
+  handleInputChange = (ev) => {
+    this.props.dispatch(
+      changeGreeting(ev.target.value)
+    );
+  };
+  
+  render() {
+    return (
+      <div>
+        <p>{this.props.greeting}</p>
+      <input 
+        defaultValue={this.props.greeting}
+        placeholder="Change me" 
+        type = "text"
+        onFocus={ev => ev.target.select()}
+        onChange={this.handleInputChange} 
+      />
+      </div>
+    );
+  }
+}
+
+class Greeting extends React.Component {
+  render() {
+    return (
+      <div className="greeting-component">
+        <p>value from Redux store</p>
+        <h1>{this.props.greeting}</h1>
+      </div>
+    );
+  }
+}
+
+//
+// Store Connection
+//
+
+const ConnInput = 
+      ReactRedux.connect(state => state)
+      (Input);
+
+const ConnGreeting = 
+      ReactRedux.connect(state => state)
+      (Greeting);
+
+
+//
+// Rendering to DOM
+//
+
+ReactDOM.render(
+  (
+    <div>
+      <ReactRedux.Provider store={store}>
+        <ConnInput />
+      </ReactRedux.Provider>
+      <ConnInput store={store}/>
+    </div>
+  ),
+  document.getElementById('compo0')
+);
+
+ReactDOM.render(
+  (
+    <ReactRedux.Provider store={store}>
+      <ConnGreeting />
+    </ReactRedux.Provider>
+  ),
+  document.getElementById('compo1')
+);
+
+ReactDOM.render(
+  (
+    <ReactRedux.Provider store={store}>
+      <ConnGreeting />
+    </ReactRedux.Provider>
+  ),
+  document.getElementById('compo2')
+);
+
+  </script>

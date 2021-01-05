@@ -1,0 +1,2436 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"rep",
+				"responseText\tproperty"
+			],
+			[
+				"XML",
+				"XMLHttpRequest\tvar"
+			],
+			[
+				"QApplication",
+				"QGuiApplication/"
+			],
+			[
+				"link",
+				"link_libraries\tcommand"
+			],
+			[
+				"m1",
+				"m1_Iter"
+			],
+			[
+				"find",
+				"find_library\tcommand"
+			],
+			[
+				"qml",
+				"main.qml"
+			],
+			[
+				"p",
+				"plugins/"
+			],
+			[
+				"img",
+				"imageMat"
+			],
+			[
+				"lena",
+				"lena_thresh"
+			],
+			[
+				"chapp",
+				"ch_app.erl"
+			],
+			[
+				"wxMen",
+				"wxMenuBar"
+			],
+			[
+				"create",
+				"create_test_menu"
+			],
+			[
+				"ge",
+				"GenerateNames"
+			],
+			[
+				"I",
+				"IsStatic"
+			],
+			[
+				"lo",
+				"localhost.pfx"
+			],
+			[
+				"Hook",
+				"KeyboardHook"
+			],
+			[
+				"Hoo",
+				"HookStop"
+			],
+			[
+				"Ho",
+				"HookStart"
+			],
+			[
+				"int",
+				"Int32"
+			],
+			[
+				"PlaySoun",
+				"PlaySoundFlags"
+			],
+			[
+				"O",
+				"OpenFileDialog"
+			],
+			[
+				"From",
+				"Form1_Load"
+			],
+			[
+				"Form1",
+				"Form1_Load"
+			],
+			[
+				"Do",
+				"DoWorkStatic"
+			],
+			[
+				"S",
+				"Singletons"
+			],
+			[
+				"Test",
+				"TestClass"
+			],
+			[
+				"_",
+				"_count"
+			],
+			[
+				"Con",
+				"Contacts"
+			],
+			[
+				"up",
+				"upperCase"
+			],
+			[
+				"cli",
+				"on_button_clicked"
+			],
+			[
+				"height",
+				"max-height\tproperty"
+			],
+			[
+				"so",
+				"socket.io-client"
+			],
+			[
+				"En",
+				"EncodeToString\tfunc(src []byte) string ·ƒ"
+			],
+			[
+				"st",
+				"StdEncoding\t*base64.Encoding ·ν"
+			],
+			[
+				"Engin",
+				"EngineioMessage\tfunc(text string) ·ƒ"
+			],
+			[
+				"EIO",
+				"EIO_Message\tEngineioPacket ·Ɩ"
+			],
+			[
+				"SIO_Bin",
+				"SIO_Binary_Event\tSocketioPacket ·Ɩ"
+			],
+			[
+				"SIO",
+				"SIO_Event\tSocketioPacket ·Ɩ"
+			],
+			[
+				"U",
+				"Uint16\tfunc(b []byte) uint16 ·ƒ"
+			],
+			[
+				"Error",
+				"ErrorNil\tErrorCode ·Ɩ"
+			],
+			[
+				"Err",
+				"ErrorNil\tErrorCode ·Ɩ"
+			],
+			[
+				"Messa",
+				"MessageType\tbyte ·ʈ"
+			],
+			[
+				"E",
+				"Err\terror ·ν"
+			],
+			[
+				"e",
+				"Err\terror ·ν"
+			],
+			[
+				"b",
+				"brw\t*bufio.ReadWriter ·ν"
+			],
+			[
+				"Mi",
+				"Millisecond\ttime.Duration ·Ɩ"
+			],
+			[
+				"Webs",
+				"github.com/gorilla/websocket\t ·ʂ"
+			],
+			[
+				"Set",
+				"SetReadDeadline\tfunc(t time.Time) error ·ƒ"
+			],
+			[
+				"B",
+				"BrokenMessage\tMessageType ·Ɩ"
+			],
+			[
+				"R",
+				"RemoteAddr\tfunc() net.Addr ·ƒ"
+			],
+			[
+				"P",
+				"parsed\tbool ·ν"
+			],
+			[
+				"utf",
+				"unicode/utf8\t ·ʂ"
+			],
+			[
+				"Mask",
+				"Masking\tbool ·ν"
+			],
+			[
+				"Mess",
+				"MessageType\tbyte ·ʈ"
+			],
+			[
+				"Ma",
+				"Maskingkey\t[4]byte ·ν"
+			],
+			[
+				"Masking",
+				"Masking\tbool ·ν"
+			],
+			[
+				"M",
+				"Maskingkey\t[4]byte ·ν"
+			],
+			[
+				"CloseMe",
+				"CloseMessageCode\tuint ·ʈ"
+			],
+			[
+				"Ti",
+				"PingTimeout\ttime.Duration ·Ɩ"
+			],
+			[
+				"Ping",
+				"PingTimeout\ttime.Duration ·Ɩ"
+			],
+			[
+				"r",
+				"SetReadDeadline\tfunc(t time.Time) error ·ƒ"
+			],
+			[
+				"Read",
+				"ReadWriter\tstruct ·ʈ"
+			],
+			[
+				"StatusIn",
+				"StatusInternalServerError\tuntyped int ·Ɩ"
+			],
+			[
+				"net",
+				"netConn\tnet.Conn ·ν"
+			],
+			[
+				"enc",
+				"encoding/base64\t ·ʂ"
+			],
+			[
+				"Re",
+				"RequestURI\tstring ·ν"
+			],
+			[
+				"Respn",
+				"ResponseWriter\tinterface ·ʈ"
+			],
+			[
+				"Ha",
+				"Handler\tinterface ·ʈ"
+			],
+			[
+				"L",
+				"GetLabel\tfunc() string ·ƒ"
+			],
+			[
+				"test",
+				"test_pb.js"
+			],
+			[
+				"react",
+				"react-quill/"
+			],
+			[
+				"el",
+				"element-ui/"
+			],
+			[
+				"rel",
+				"icedesign-qrcode.rel.js"
+			],
+			[
+				"get",
+				"getCroppedCanvas\twarning"
+			],
+			[
+				"cl",
+				"className"
+			],
+			[
+				"hex",
+				"hex2decimal"
+			],
+			[
+				"flex",
+				"flex-wrap\tproperty"
+			],
+			[
+				"in",
+				"MarshalIndent\tfunc(v interface{}, prefix string, indent string) []byte, error ·ƒ"
+			],
+			[
+				"io",
+				"io/ioutil\t ·ʂ"
+			],
+			[
+				"re",
+				"ReadDir\tfunc(dirname string) []os.FileInfo, error ·ƒ"
+			],
+			[
+				"init",
+				"initQueue"
+			],
+			[
+				"thread",
+				"threadID"
+			],
+			[
+				"exit",
+				"exitFlag"
+			],
+			[
+				"con",
+				"content_encoding"
+			],
+			[
+				"content",
+				"content_length"
+			],
+			[
+				"name",
+				"nameKey"
+			],
+			[
+				"work",
+				"workQueue"
+			],
+			[
+				"en",
+				"enqueue"
+			],
+			[
+				"none",
+				"None"
+			],
+			[
+				"Mo",
+				"ModeExclusive\tos.FileMode ·Ɩ"
+			],
+			[
+				"encod",
+				"encoding/json\t ·ʂ"
+			],
+			[
+				"Cmd",
+				"Command\tfunc(name string, arg ...string) *exec.Cmd ·ƒ"
+			],
+			[
+				"next",
+				"next.min.js"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/C/coding/md-code/vue-3.0/demo-ts/src/main.ts",
+			"settings":
+			{
+				"buffer_size": 254,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/coding/md-code/vue-3.0/demo-ts/src/App.vue",
+			"settings":
+			{
+				"buffer_size": 1286,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/C/coding/md-code/vue-3.0/demo-ts/src/views/User.vue",
+			"settings":
+			{
+				"buffer_size": 211,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/C/coding/md-code/vue-3.0/demo-ts/vue3ts.sublime-project",
+			"settings":
+			{
+				"buffer_size": 2843,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "react-ts/src/App.tsx",
+			"settings":
+			{
+				"buffer_size": 2023,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "react-ts/src/components/About.tsx",
+			"settings":
+			{
+				"buffer_size": 685,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "react-ts/src/store.tsx",
+			"settings":
+			{
+				"buffer_size": 422,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/coding/md-code/vue-3.0/demo-ts/src/views/About.vue",
+			"settings":
+			{
+				"buffer_size": 1029,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/C/coding/md-code/vue-3.0/demo-ts/src/greet.d.ts",
+			"settings":
+			{
+				"buffer_size": 72,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/coding/md-code/vue-3.0/demo-ts/src/router/index.ts",
+			"settings":
+			{
+				"buffer_size": 766,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/C/coding/md-code/vue-3.0/demo-ts/src/shims-vue.d.ts",
+			"settings":
+			{
+				"buffer_size": 98,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/C/coding/md-code/vue-3.0/demo-ts/src/shims-tsx.d.ts",
+			"settings":
+			{
+				"buffer_size": 331,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "Git Demo",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Git Demo",
+					""
+				],
+				[
+					"Git Demo",
+					"Git help"
+				],
+				[
+					"Git Demo",
+					"Git Origin attach"
+				],
+				[
+					"Git Demo",
+					"Branch List"
+				],
+				[
+					"Git Demo",
+					"Branch List remote"
+				],
+				[
+					"Git Demo",
+					"git show"
+				],
+				[
+					"NPM run build",
+					""
+				],
+				[
+					"NPM run dev",
+					""
+				],
+				[
+					"NPM run start",
+					""
+				],
+				[
+					"NPM run test",
+					""
+				],
+				[
+					"Run PHP Server",
+					""
+				]
+			],
+			[
+				"Git Demo",
+				"Git Origin attach"
+			]
+		],
+		[
+			[
+				[
+					"Git Demo",
+					""
+				],
+				[
+					"Git Demo",
+					"Git help"
+				],
+				[
+					"Git Demo",
+					"Git Origin attach"
+				],
+				[
+					"Git Demo",
+					"Branch List"
+				],
+				[
+					"Git Demo",
+					"Branch List remote"
+				],
+				[
+					"Git Demo",
+					"git show"
+				],
+				[
+					"NPM run build",
+					""
+				],
+				[
+					"NPM run dev",
+					""
+				],
+				[
+					"NPM run start",
+					""
+				],
+				[
+					"NPM run test",
+					""
+				],
+				[
+					"Run PHP Server",
+					""
+				],
+				[
+					"Packages/TypeScript/TypeScript.sublime-build",
+					""
+				],
+				[
+					"Packages/User/Node.sublime-build",
+					""
+				],
+				[
+					"Packages/User/Node.sublime-build",
+					"TypeScript[ts-node]"
+				],
+				[
+					"Packages/User/Node.sublime-build",
+					"TypeScript ES3)"
+				],
+				[
+					"Packages/User/Node.sublime-build",
+					"TypeScript ES5)"
+				],
+				[
+					"Packages/User/Node.sublime-build",
+					"TypeScript ES6)"
+				],
+				[
+					"Packages/User/Node.sublime-build",
+					"ES6(ECMAScript 2015)"
+				],
+				[
+					"Packages/User/Node.sublime-build",
+					"ES5(ECMAScript 2009)"
+				]
+			],
+			[
+				"Packages/User/Node.sublime-build",
+				"TypeScript[ts-node]"
+			]
+		],
+		[
+			[
+				[
+					"Git Demo",
+					""
+				],
+				[
+					"Git Demo",
+					"Git help"
+				],
+				[
+					"Git Demo",
+					"Git Origin attach"
+				],
+				[
+					"Git Demo",
+					"Branch List"
+				],
+				[
+					"Git Demo",
+					"Branch List remote"
+				],
+				[
+					"Git Demo",
+					"git show"
+				],
+				[
+					"TypeScript Run",
+					""
+				]
+			],
+			[
+				"Git Demo",
+				"Git Origin attach"
+			]
+		],
+		[
+			[
+				[
+					"Git Demo",
+					""
+				],
+				[
+					"Git Demo",
+					"Git help"
+				],
+				[
+					"Git Demo",
+					"Git Origin attach"
+				],
+				[
+					"Git Demo",
+					"Branch List"
+				],
+				[
+					"Git Demo",
+					"Branch List remote"
+				],
+				[
+					"Git Demo",
+					"git show"
+				],
+				[
+					"TypeScript Run",
+					""
+				],
+				[
+					"Packages/TypeScript/TypeScript.sublime-build",
+					""
+				],
+				[
+					"Packages/User/Node.sublime-build",
+					""
+				],
+				[
+					"Packages/User/Node.sublime-build",
+					"TypeScript[ts-node]"
+				],
+				[
+					"Packages/User/Node.sublime-build",
+					"TypeScript ES3)"
+				],
+				[
+					"Packages/User/Node.sublime-build",
+					"TypeScript ES5)"
+				],
+				[
+					"Packages/User/Node.sublime-build",
+					"TypeScript ES6)"
+				],
+				[
+					"Packages/User/Node.sublime-build",
+					"ES6(ECMAScript 2015)"
+				],
+				[
+					"Packages/User/Node.sublime-build",
+					"ES5(ECMAScript 2009)"
+				]
+			],
+			[
+				"Git Demo",
+				"Branch List remote"
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"comm",
+				"Git: Commit"
+			],
+			[
+				"add",
+				"Git: Add All"
+			],
+			[
+				"rem",
+				"Package Control: Remove Package"
+			],
+			[
+				"new",
+				"Git: New Branch"
+			],
+			[
+				"in",
+				"Git: Init"
+			],
+			[
+				"push",
+				"Git: Push Current Branch"
+			],
+			[
+				"show",
+				"Git: Show Tags"
+			],
+			[
+				"tag",
+				"Git: New Tag"
+			],
+			[
+				"disable",
+				"Package Control: Disable Package"
+			],
+			[
+				"pucsh",
+				"Git: Push Current Branch"
+			],
+			[
+				"com",
+				"Git: Commit"
+			],
+			[
+				"stats",
+				"Git: Status"
+			],
+			[
+				"co",
+				"Git: Commit"
+			],
+			[
+				"pusch",
+				"Git: Push Current Branch"
+			],
+			[
+				"status",
+				"Git: Status"
+			],
+			[
+				"git pu",
+				"Git: Pull"
+			],
+			[
+				"addall",
+				"Git: Add All"
+			],
+			[
+				"pushc",
+				"Git: Push Current Branch"
+			],
+			[
+				"psuhc",
+				"Git: Push Current Branch"
+			],
+			[
+				"enable",
+				"Package Control: Enable Package"
+			],
+			[
+				"branch",
+				"Git: New Branch"
+			],
+			[
+				"ini",
+				"Git: Init"
+			],
+			[
+				"edit",
+				"Project: Edit Project"
+			],
+			[
+				"chang",
+				"Git: Change Branch"
+			],
+			[
+				"chanag",
+				"Git: Change Branch"
+			],
+			[
+				"change",
+				"Git: Change Branch"
+			],
+			[
+				"pu",
+				"Git: Push Current Branch"
+			],
+			[
+				"com\t",
+				"Git: Commit"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"dis",
+				"Package Control: Disable Package"
+			],
+			[
+				"disb",
+				"Package Control: Disable Package"
+			],
+			[
+				"comm\t",
+				"Git: Commit"
+			],
+			[
+				"aadd",
+				"Package Control: Add Channel"
+			],
+			[
+				"ch",
+				"Git: Change Branch"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"git remote",
+				"Git: Track Remote Branch"
+			],
+			[
+				"add aa",
+				"Git: Add All"
+			],
+			[
+				"git",
+				"Git: Init"
+			],
+			[
+				"la",
+				"LaTeXTools: Clear cache"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"html",
+				"HTMLPrettify"
+			],
+			[
+				"erlang",
+				"Set Syntax: Erlang"
+			],
+			[
+				"diff",
+				"Set Syntax: Diff"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"disa",
+				"Package Control: Disable Package"
+			],
+			[
+				"package",
+				"Package Control: Install Package"
+			],
+			[
+				"utf",
+				"ConvertToUTF8: Reload with Encoding"
+			],
+			[
+				"TypesCript",
+				"TypeScript: Signature Info"
+			],
+			[
+				"preview",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"markdown",
+				"Set Syntax: MultiMarkdown"
+			],
+			[
+				"debug",
+				"SublimeCodeIntel: Enable Debug Mode"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"theme",
+				"UI: Select Color Scheme"
+			],
+			[
+				"them",
+				"UI: Select Theme"
+			],
+			[
+				"new pro",
+				"Project Manager: Add New Project"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 302.0,
+		"history":
+		[
+			"r = os.system(\"cmd /k echo >>c:/coding/md/log.txt\")",
+			"r = os.system(\"cmd /k \\\"echo c:/coding/md/log.txt mkdir c:\\mkdir\\\"\")",
+			"r = os.system(\"cmd /k echo \\\"c:/coding/md/log.txt mkdir c:\\mkdir\\\"\")",
+			"r = os.system(\"cmd /k echo c:/coding/md/log.txt mkdir c:\\mkdir'\")",
+			"r = os.system(\"cmd /k 'echo c:/coding/md/log.txt mkdir c:\\mkdir'\")",
+			"r = os.system(\"cmd -k echo c:/coding/md/log.txt mkdir c:\\mkdir\")",
+			"r = os.system(\"echo c:/coding/md/log.txt mkdir c:\\mkdir\")",
+			"r = os.system(\"echo c:/log.txt mkdir c:\\mkdir\")",
+			"r = os.system(\"echo c:\\\\log.txt mkdir c:\\mkdir\")",
+			"r = os.system(\"mkdir c:\\mkdir\")",
+			"r = os.system(\"cwd .\")",
+			"print(r)",
+			"r = os.system(\"dir .\")",
+			"print(r)",
+			"pring(r)",
+			"r = os.system(\"dir\")",
+			"os.system(\"dir\")",
+			"subprocess.run(\"ls\")",
+			"subprocess.run()",
+			"import subprocess",
+			"subprocess.run()",
+			"import commands",
+			"for i in val.readlines()",
+			"for i in val.readlines(): &  print(i)",
+			"for i in val.readlines()  print(i)",
+			"for i in val.readlines(): print(i)",
+			"for i in val.readlines():",
+			"val = os.popen('ls -al')",
+			"val = os.ppopen('ls -al')",
+			"val = os.Ppopen('ls -al')",
+			"import os",
+			"val = os.Ppopen('ls -al')",
+			"cwd"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/coding/md-code/ts-demos",
+		"/C/coding/md-code/ts-demos/react-ts",
+		"/C/coding/md-code/ts-demos/react-ts/src"
+	],
+	"file_history":
+	[
+		"/C/coding/md-code/ts-demos/react-ts/src/state.tsx",
+		"/C/coding/md-code/vue-3.0/demo-ts/package.json",
+		"/C/coding/md-code/vue-3.0/demo-ts/tslint.json",
+		"/C/coding/md-code/vue-3.0/vue3rd/package.json",
+		"/C/coding/md-code/vue-3.0/demo-ts/src/greet.d.ts",
+		"/C/coding/md-code/vue-3.0/demo-ts/src/@types/greet.d.ts",
+		"/C/coding/md-code/vue-3.0/demo-ts/src/greet.js",
+		"/C/coding/md-code/ts-demos/ts-demos.sublime-project",
+		"/C/coding/md-code/ts-demos/src/01-Numbers-T2365.ts",
+		"/C/coding/md-code/vue-3.0/vue3rd/src/assets/tradelog.md",
+		"/C/coding/md-code/vue-3.0/vue3rd/src/App.vue",
+		"/C/coding/md-code/vue-3.0/vue3rd/src/components/Markdown.vue",
+		"/C/coding/md-code/electron/electron-quick-start/index.html",
+		"/C/coding/md-code/vue-3.0/demo-ts/src/shims-tsx.d.ts",
+		"/C/coding/md-code/electron/electron-quick-start/renderer.js",
+		"/C/coding/md-code/ts-demos/src/01-Numbers-T2365.js",
+		"/C/coding/md-code/jimboyeah.github.io/src/demo.md",
+		"/C/coding/md-code/jimboyeah.github.io/node_modules/marked/lib/marked.esm.js",
+		"/C/coding/md-code/jimboyeah.github.io/src/restartBtn.tsx",
+		"/C/coding/md-code/jimboyeah.github.io/index.html",
+		"/C/coding/md-code/jimboyeah.github.io/markdown.html",
+		"/C/coding/md-code/jimboyeah.github.io/node_modules/marked/bin/marked",
+		"/C/coding/md-code/vue-3.0/vue3rd/dist/js/app.72d0ace8.js",
+		"/C/coding/md-code/vue-3.0/vue3rd/dist/js/chunk-vendors.072b65ce.js",
+		"/C/coding/md-code/vue-3.0/demo/README.md",
+		"/C/coding/md-code/jimboyeah.github.io/webpack.config.js",
+		"/C/coding/md-code/jimboyeah.github.io/.gitignore",
+		"/C/coding/md-code/jimboyeah.github.io/src/constants.ts",
+		"/C/coding/md-code/jimboyeah.github.io/src/board.tsx",
+		"/C/coding/md-code/jimboyeah.github.io/package-lock.json",
+		"/C/iceWorks/TS/webpack/package.json",
+		"/C/iceWorks/TypeScript/README.md",
+		"/C/coding/md-code/jimboyeah.github.io/gitref.bat",
+		"/C/coding/md-code/jimboyeah.github.io/_config.yml",
+		"/C/coding/md-code/NLTK/nltk_data/corpora/brown/ca01",
+		"/C/coding/md-code/NLTK/nltk_data/corpora/brown/ca24",
+		"/C/coding/md-code/NLTK/nltk_data/corpora/brown/cats.txt",
+		"/C/coding/md-code/NLTK/nltk_data/corpora/stopwords/english",
+		"/C/coding/md-code/NLTK/gitref.bat",
+		"/C/coding/md-code/bizcharts/readme_bizCharts.html",
+		"/C/coding/md-code/bizcharts/demo/utils.js",
+		"/C/coding/md-code/bizcharts/demo/Tree.html",
+		"/C/coding/md-code/bizcharts/server.go",
+		"/C/coding/md-code/bizcharts/demo/Arc.html",
+		"/C/coding/md-code/cppDemos/QtDemos/CMakeLists.txt",
+		"/C/coding/md-code/cppDemos/QtDemos/src/process/release/moc_mainwindow.cpp",
+		"/C/coding/md-code/cppDemos/QtDemos/src/qt-process.hpp",
+		"/C/Qt/Examples/Qt-5.9/widgets/mainwindows/application/main.cpp",
+		"/C/Qt/Examples/Qt-5.9/widgets/mainwindows/application/mainwindow.h",
+		"/C/Qt/Examples/Qt-5.9/script/calculator/calculator.pro",
+		"/C/Qt/Examples/Qt-5.9/widgets/mainwindows/application/application.qrc",
+		"/C/Qt/Examples/Qt-5.9/widgets/mainwindows/application/mainwindow.cpp",
+		"/C/Qt/Examples/Qt-5.9/widgets/itemviews/dirview/dirview.pro",
+		"/C/Qt/Examples/Qt-5.9/assistant/simpletextviewer/mainwindow.cpp",
+		"/C/Qt/Examples/Qt-5.9/activeqt/menus/menus.h",
+		"/C/coding/md-code/cppDemos/QtDemos/src/qt-signal-slot.cpp",
+		"/C/coding/md-code/cppDemos/QtDemos/src/qt-demo.cpp",
+		"/C/Qt/Examples/Qt-5.9/charts/charts.pro",
+		"/C/Qt/Examples/Qt-5.9/charts/audio/widget.cpp",
+		"/C/Qt/Examples/Qt-5.9/charts/qmlpiechart/main.cpp",
+		"/C/Qt/Examples/Qt-5.9/charts/audio/widget.h",
+		"/C/coding/md-code/cppDemos/QtDemos/build/CMakeCache.txt",
+		"/C/coding/md-code/cppDemos/.gitignore",
+		"/C/coding/md-code/cppDemos/QtDemos/build/charts/qmlpiechart/release/qml/qmlpiechart/main.qml",
+		"/C/coding/md-code/cppDemos/QtDemos/build/Makefile",
+		"/C/coding/md-code/cppDemos/QtDemos/build/svg/opengl/Makefile",
+		"/C/Qt/Examples/Qt-5.9/svg/svg.pro",
+		"/C/coding/md-code/cppDemos/QtDemos/build/opengl/Makefile",
+		"/C/Windows/Globalization/Sorting/SortDefault.nls",
+		"/C/Qt/5.9/mingw53_32/include/QtCore/qobjectdefs.h",
+		"/C/Qt/Examples/Qt-5.9/svg/opengl/framebufferobject/framebufferobject.pro",
+		"/C/Qt/Examples/Qt-5.9/svg/opengl/opengl.pro",
+		"/C/Qt/Examples/Qt-5.9/charts/areachart/areachart.pro",
+		"/C/Qt/Examples/Qt-5.9/charts/audio/audio.pro",
+		"/C/Qt/Examples/Qt-5.9/examples.pro",
+		"/C/coding/md-code/cppDemos/src/../QtDemos/demo.cpp",
+		"/C/coding/md-code/cppDemos/readme.md",
+		"/C/coding/cpp/rvalue.cpp",
+		"/C/coding/cpp/singleton.cpp",
+		"/C/coding/cpp/multithread/main.c",
+		"/C/coding/md-code/cppDemos/src/macro.cpp",
+		"/C/coding/cpp/multithread/multithread.cbp",
+		"/C/coding/md-code/cppDemos/src/template-class.cpp",
+		"/C/coding/md-code/cppDemos/src/ReadFile.cpp",
+		"/C/MinGW/set_distro_paths.bat",
+		"/C/coding/md-code/cppDemos/src/default-args.cpp",
+		"/C/coding/md-code/cppDemos/src/platform-relialy.c",
+		"/C/coding/md-code/cppDemos/src/file-text.cpp",
+		"/C/coding/md-code/cppDemos/src/template-func.cpp",
+		"/C/coding/md-code/cppDemos/autogit.bat",
+		"/C/coding/md-code/cppDemos/src/string.cpp",
+		"/C/coding/md-code/cppDemos/src/array.cpp",
+		"/C/coding/md-code/cppDemos/src/set.cpp",
+		"/C/coding/md-code/cppDemos/src/reference.cpp",
+		"/C/coding/md-code/cppDemos/src/list.cpp",
+		"/C/coding/md-code/cppDemos/cppDemo.sublime-project",
+		"/C/Users/OCEAN/AppData/Roaming/Sublime Text 3/Packages/User/Default (Windows).sublime-keymap",
+		"/C/Users/OCEAN/AppData/Roaming/Sublime Text 3/Packages/Emmet/Default (Windows).sublime-keymap",
+		"/C/Users/OCEAN/AppData/Roaming/Sublime Text 3/Packages/Emmet/Emmet.sublime-settings",
+		"/C/coding/md-code/cppDemos/build/Testing/Temporary/LastTestsFailed.log",
+		"/C/coding/md-code/cppDemos/build/Testing/Temporary/LastTest.log",
+		"/C/coding/md-code/cppDemos/out.txt",
+		"/C/coding/md-code/git-demo/dogit.bat",
+		"/C/coding/md-code/cppDemos/cppDemo.sublime-workspace",
+		"/C/coding/md/readme_markdown.md",
+		"/C/coding/md/OpenToonz/Blender.md",
+		"/C/coding/md/readme_node.md",
+		"/C/coding/md/c-daystep/readme.html",
+		"/C/Users/OCEAN/AppData/Roaming/Sublime Text 3/Packages/User/Node.sublime-build",
+		"/C/coding/md/readme_es6.md",
+		"/C/coding/md/readme_git.md",
+		"/C/coding/md-code/git-demo/readme.md",
+		"/C/coding/md-code/git-demo/cmake.md",
+		"/C/coding/md-code/git-demo/gnu make.md",
+		"/C/download/ChezScheme-master/examples/edit.ss",
+		"/C/download/ChezScheme-master/examples/compat.ss",
+		"/C/coding/md/readme_golang.md",
+		"/C/coding/md/socket.io/go-my-websocket.md",
+		"/C/coding/md/socket.io/assets/api_flow.txt",
+		"/C/coding/md-code/git-demo/readme.txt",
+		"/C/coding/md-code/dllDemo/test/CmakeLists.txt",
+		"/C/coding/md/readme_sublime.md",
+		"/C/Users/OCEAN/AppData/Local/Temp/Rar$DIa11172.7703/README-win32.txt",
+		"/C/download/OpenCV/glut-3.7.6/Imakefile",
+		"/C/download/Imakefile",
+		"/C/Users/OCEAN/AppData/Roaming/Sublime Text 3/Packages/User/C++ MinGW.sublime-build",
+		"/C/download/OpenCV/OpenCV-MinGW64-GCC810/freetype-2.10.0/include/ft2build.h",
+		"/C/coding/md/Makefile.md"
+	],
+	"find":
+	{
+		"height": 40.0
+	},
+	"find_in_files":
+	{
+		"height": 451.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"Home",
+			"eslintConfig",
+			"上",
+			"HelloWorld",
+			"typescript",
+			"no-console",
+			"gkb"
+		],
+		"highlight": false,
+		"in_selection": false,
+		"preserve_case": true,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 6,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/C/coding/md-code/vue-3.0/demo-ts/src/main.ts",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 254,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								199,
+								193
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"origin_encoding": "ASCII",
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/TypeScript/TypeScript.tmLanguage",
+							"typescript_plugin_format_options":
+							{
+								"convertTabsToSpaces": true,
+								"indentSize": 4,
+								"tabSize": 4
+							},
+							"use_tab_stops": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/C/coding/md-code/vue-3.0/demo-ts/src/App.vue",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1286,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"origin_encoding": "ASCII",
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Vuejs Complete Package/vue.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true,
+							"typescript_plugin_format_options":
+							{
+								"convertTabsToSpaces": true,
+								"indentSize": 4,
+								"tabSize": 4
+							}
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/C/coding/md-code/vue-3.0/demo-ts/src/views/User.vue",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 211,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								211,
+								211
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"origin_encoding": "ASCII",
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Vuejs Complete Package/vue.tmLanguage",
+							"typescript_plugin_format_options":
+							{
+								"convertTabsToSpaces": true,
+								"indentSize": 4,
+								"tabSize": 4
+							}
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/C/coding/md-code/vue-3.0/demo-ts/vue3ts.sublime-project",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2843,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"origin_encoding": "ASCII",
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "react-ts/src/App.tsx",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2023,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								510,
+								510
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"origin_encoding": "ASCII",
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/TypeScript/TypeScriptReact.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true,
+							"typescript_plugin_format_options":
+							{
+								"convertTabsToSpaces": true,
+								"indentSize": 2,
+								"tabSize": 2
+							},
+							"use_tab_stops": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "react-ts/src/components/About.tsx",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 685,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								63,
+								63
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"origin_encoding": "ASCII",
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/TypeScript/TypeScriptReact.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true,
+							"typescript_plugin_format_options":
+							{
+								"convertTabsToSpaces": true,
+								"indentSize": 2,
+								"tabSize": 2
+							},
+							"use_tab_stops": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "react-ts/src/store.tsx",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 422,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								175,
+								175
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"origin_encoding": "ASCII",
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/TypeScript/TypeScriptReact.tmLanguage",
+							"typescript_plugin_format_options":
+							{
+								"convertTabsToSpaces": true,
+								"indentSize": 4,
+								"tabSize": 4
+							},
+							"use_tab_stops": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "/C/coding/md-code/vue-3.0/demo-ts/src/views/About.vue",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1029,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"origin_encoding": "ASCII",
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Vuejs Complete Package/vue.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "/C/coding/md-code/vue-3.0/demo-ts/src/greet.d.ts",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 72,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								72,
+								72
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"origin_encoding": "ASCII",
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/TypeScript/TypeScript.tmLanguage",
+							"typescript_plugin_format_options":
+							{
+								"convertTabsToSpaces": true,
+								"indentSize": 4,
+								"tabSize": 4
+							},
+							"use_tab_stops": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "/C/coding/md-code/vue-3.0/demo-ts/src/router/index.ts",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 766,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								205,
+								205
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"origin_encoding": "ASCII",
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/TypeScript/TypeScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true,
+							"typescript_plugin_format_options":
+							{
+								"convertTabsToSpaces": true,
+								"indentSize": 2,
+								"tabSize": 2
+							},
+							"use_tab_stops": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "/C/coding/md-code/vue-3.0/demo-ts/src/shims-vue.d.ts",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 98,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								98,
+								98
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"origin_encoding": "ASCII",
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/TypeScript/TypeScript.tmLanguage",
+							"typescript_plugin_format_options":
+							{
+								"convertTabsToSpaces": true,
+								"indentSize": 4,
+								"tabSize": 4
+							},
+							"use_tab_stops": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "/C/coding/md-code/vue-3.0/demo-ts/src/shims-tsx.d.ts",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 331,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								324,
+								324
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"origin_encoding": "ASCII",
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/TypeScript/TypeScript.tmLanguage",
+							"typescript_plugin_format_options":
+							{
+								"convertTabsToSpaces": true,
+								"indentSize": 4,
+								"tabSize": 4
+							},
+							"use_tab_stops": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 11,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 153.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.SFTP":
+	{
+		"height": 0.0
+	},
+	"output.diagnostics":
+	{
+		"height": 103.0
+	},
+	"output.doc":
+	{
+		"height": 103.0
+	},
+	"output.exec":
+	{
+		"height": 235.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.git":
+	{
+		"height": 103.0
+	},
+	"output.sftp":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "ts-demos.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"marked",
+				"Git Demo Project\\node_modules\\marked\\bin\\marked"
+			],
+			[
+				"QMainWindow",
+				"Examples\\Qt-5.9\\assistant\\simpletextviewer\\mainwindow.cpp"
+			],
+			[
+				"cmake",
+				"Qt Demo Project\\CMakeLists.txt"
+			],
+			[
+				"caculator",
+				"Examples\\Qt-5.9\\script\\calculator\\calculator.pro"
+			],
+			[
+				"chart",
+				"Examples\\Qt-5.9\\charts\\charts.pro"
+			],
+			[
+				"dirview",
+				"Examples\\Qt-5.9\\widgets\\itemviews\\dirview\\dirview.pro"
+			],
+			[
+				"readme",
+				"CPP Demo Project\\readme.md"
+			],
+			[
+				"la",
+				"CPP Demo Project\\src\\lambda.cpp"
+			],
+			[
+				"reference",
+				"CPP Demo Project\\src\\reference.cpp"
+			],
+			[
+				"coding.cpp",
+				"coding\\coding.cpp"
+			],
+			[
+				"ccpp",
+				"md\\ccpp.md"
+			],
+			[
+				"markdown",
+				"md\\readme_markdown.md"
+			],
+			[
+				"node",
+				"md\\readme_node.md"
+			],
+			[
+				"node.",
+				"User\\Node.sublime-build"
+			],
+			[
+				"es6",
+				"md\\readme_es6.md"
+			],
+			[
+				"blender",
+				"md\\OpenToonz\\Blender.md"
+			],
+			[
+				"git",
+				"md\\readme_git.md"
+			],
+			[
+				"sublime",
+				"md\\readme_sublime.md"
+			],
+			[
+				"ming",
+				"User\\C++ MinGW.sublime-build"
+			],
+			[
+				"Make",
+				"md\\Makefile.md"
+			],
+			[
+				"dart",
+				"User\\Dart 2.2.sublime-build"
+			],
+			[
+				"php",
+				"User\\php.sublime-build"
+			],
+			[
+				"Ming",
+				"User\\C++ MinGW.sublime-build"
+			],
+			[
+				"cbuil",
+				"User\\C#.sublime-build"
+			],
+			[
+				"sublime.",
+				"md\\readme_sublime.md"
+			],
+			[
+				"golang",
+				"User\\GoLang.sublime-build"
+			],
+			[
+				"coding.py",
+				"coding\\coding.py"
+			],
+			[
+				"qguiapplication",
+				"Qt\\5.9\\Src\\qtbase\\src\\gui\\kernel\\qguiapplication_p.h"
+			],
+			[
+				"",
+				"Qt\\n\\qt3d\\main.cpp"
+			],
+			[
+				"QGuiApplication",
+				"Qt\\5.9\\Src\\qtbase\\include\\QtGui\\qguiapplication.h"
+			],
+			[
+				"simpleqml",
+				"Qt\\Examples\\Qt-5.9\\activeqt\\simpleqml\\simpleqml.pro"
+			],
+			[
+				".qml",
+				"Qt\\Examples\\Qt-5.9\\activeqt\\simpleqml\\main.qml"
+			],
+			[
+				"noepad",
+				"Qt\\5.9\\Src\\qtdoc\\doc\\src\\snippets\\widgets-tutorial\\build\\notepad.creator"
+			],
+			[
+				"notepad",
+				"Qt\\5.9\\Src\\qtdoc\\doc\\src\\snippets\\widgets-tutorial\\build\\notepad.creator"
+			],
+			[
+				"addressbook",
+				"Qt\\5.9\\Src\\qtwebengine\\src\\3rdparty\\chromium\\third_party\\protobuf\\csharp\\src\\AddressBook\\AddressBook.csproj"
+			],
+			[
+				"notepad.",
+				"Qt\\5.9\\Src\\qtdoc\\doc\\src\\snippets\\widgets-tutorial\\notepad\\notepad.cpp"
+			],
+			[
+				"qrc_qml.cpp",
+				"Qt\\n\\build\\release\\qrc_qml.cpp"
+			],
+			[
+				"cpp.md",
+				"md\\ccpp.md"
+			],
+			[
+				"qtbuild",
+				"User\\Qt+MinGW.sublime-build"
+			],
+			[
+				"help",
+				"coding\\help_cv2.py"
+			],
+			[
+				"py",
+				"User\\Python.sublime-build"
+			],
+			[
+				"python.",
+				"md\\readme_python.md"
+			],
+			[
+				"help_cv2",
+				"coding\\help_cv2.py"
+			],
+			[
+				"ffmpeg",
+				"md\\OpenToonz\\ffmpeg.md"
+			],
+			[
+				"core/hal/interface.h",
+				"opencv\\build\\include\\opencv2\\core\\hal\\interface.h"
+			],
+			[
+				"python",
+				"md\\readme_python.md"
+			],
+			[
+				"cbuild",
+				"User\\C#.sublime-build"
+			],
+			[
+				"pybuild",
+				"User\\Python.sublime-build"
+			],
+			[
+				"os_mon.app",
+				"otp_src_23.0\\lib\\os_mon\\ebin\\os_mon.app"
+			],
+			[
+				"OtpServerTransport\t",
+				"otp_src_23.0\\lib\\jinterface\\java_src\\com\\ericsson\\otp\\erlang\\OtpServerTransport.java"
+			],
+			[
+				"flipmenu",
+				"otp_src_23.0\\lib\\erl_docgen\\priv\\js\\flipmenu\\flipmenu.js"
+			],
+			[
+				"gol",
+				"md\\readme_golang.md"
+			],
+			[
+				"go.build",
+				"User\\GoLang.sublime-build"
+			],
+			[
+				"coding.go",
+				"coding\\main.go"
+			],
+			[
+				"test.config",
+				"coding\\erlang\\test.config"
+			],
+			[
+				"ch_sup",
+				"otp_src_23.0\\lib\\kernel\\test\\ch_sup.erl"
+			],
+			[
+				"coding.erl",
+				"coding\\erlang\\coding.erl"
+			],
+			[
+				"efficiency_guide",
+				"otp_src_23.0\\system\\doc\\efficiency_guide\\efficiency_guide.erl"
+			],
+			[
+				"wx_object",
+				"otp_src_23.0\\lib\\wx\\src\\wx_object.erl"
+			],
+			[
+				"otp_release_targets",
+				"otp_src_23.0\\make\\otp_release_targets.mk"
+			],
+			[
+				"make/target.mk",
+				"otp_src_23.0\\make\\target.mk"
+			],
+			[
+				"codeLock",
+				"coding\\erlang\\code_lock.erl"
+			],
+			[
+				"bif.c",
+				"otp_src_23.0\\erts\\emulator\\beam\\bif.c"
+			],
+			[
+				"calendar",
+				"otp_src_23.0\\lib\\stdlib\\src\\calendar.erl"
+			],
+			[
+				"erlbuild",
+				"User\\erlang.sublime-build"
+			],
+			[
+				"erl_main",
+				"otp_src_23.0\\erts\\emulator\\sys\\win32\\erl_main.c"
+			],
+			[
+				"start_erl.c",
+				"otp_src_23.0\\erts\\etc\\win32\\start_erl.c"
+			],
+			[
+				"erlexec.c",
+				"otp_src_23.0\\erts\\etc\\common\\erlexec.c"
+			],
+			[
+				"beam_emu",
+				"otp_src_23.0\\erts\\emulator\\beam\\beam_emu.c"
+			],
+			[
+				"ProcBin",
+				"otp_src_23.0\\lib\\observer\\src\\cdv_bin_cb.erl"
+			],
+			[
+				"genop",
+				"otp_src_23.0\\lib\\compiler\\src\\genop.tab"
+			],
+			[
+				"erl_ptab",
+				"otp_src_23.0\\erts\\emulator\\beam\\erl_ptab.h"
+			],
+			[
+				"coding.js",
+				"coding\\coding.js"
+			],
+			[
+				"erl_term",
+				"otp_src_23.0\\erts\\emulator\\beam\\erl_term.h"
+			],
+			[
+				"java",
+				"md\\readme_java.md"
+			],
+			[
+				"port d",
+				"code\\ports\\port_driver.c"
+			],
+			[
+				"run_erl",
+				"otp_src_23.0\\erts\\etc\\unix\\run_erl.c"
+			],
+			[
+				"escript",
+				"otp_src_23.0\\erts\\etc\\common\\escript.c"
+			],
+			[
+				"erlsrv",
+				"otp_src_23.0\\erts\\etc\\win32\\erlsrv\\erlsrv_main.c"
+			],
+			[
+				"erlexec",
+				"otp_src_23.0\\erts\\etc\\common\\erlexec.c"
+			],
+			[
+				"erl_bif_lists.c",
+				"otp_src_23.0\\erts\\emulator\\beam\\erl_bif_lists.c"
+			],
+			[
+				"lists.erl",
+				"otp_src_23.0\\lib\\stdlib\\src\\lists.erl"
+			],
+			[
+				"BeamInstr",
+				"otp_src_23.0\\lib\\hipe\\test\\basic_SUITE_data\\basic_beam_instrs.erl"
+			],
+			[
+				"sys.c",
+				"otp_src_23.0\\erts\\emulator\\sys\\win32\\sys.c"
+			],
+			[
+				"big.c",
+				"otp_src_23.0\\erts\\emulator\\beam\\big.c"
+			],
+			[
+				"erl_term.h",
+				"otp_src_23.0\\erts\\emulator\\beam\\erl_term.h"
+			],
+			[
+				"beamsys",
+				"otp_src_23.0\\erts\\emulator\\beam\\sys.h"
+			],
+			[
+				"bif.tab",
+				"otp_src_23.0\\erts\\emulator\\beam\\bif.tab"
+			],
+			[
+				"erl_process",
+				"otp_src_23.0\\erts\\emulator\\beam\\erl_process.h"
+			],
+			[
+				"sdzmmo client ",
+				"sdzmmo\\test_client\\client.erl"
+			],
+			[
+				"io.erl",
+				"otp_src_23.0\\lib\\stdlib\\src\\io.erl"
+			],
+			[
+				"gen_server",
+				"otp_src_23.0\\lib\\stdlib\\src\\gen_server.erl"
+			],
+			[
+				"acc",
+				"md\\accme.md"
+			],
+			[
+				"win",
+				"md\\readme_win.md"
+			],
+			[
+				"Net",
+				"md\\readme_net.md"
+			],
+			[
+				"Python",
+				"md\\readme_python.md"
+			],
+			[
+				"PastelMatrixPage",
+				"samples\\xamarin-forms-samples-master\\SkiaSharpForms\\Demos\\Demos\\SkiaSharpFormsDemos\\Effects\\PastelMatrixPage.cs"
+			],
+			[
+				"GrayScaleMatrixPage",
+				"samples\\xamarin-forms-samples-master\\SkiaSharpForms\\Demos\\Demos\\SkiaSharpFormsDemos\\Effects\\GrayScaleMatrixPage.cs"
+			],
+			[
+				"SkiaLightExperiment",
+				"samples\\xamarin-forms-samples-master\\SkiaSharpForms\\Demos\\Demos\\SkiaSharpFormsDemos\\Effects\\DistanceLightExperimentPage.xaml.cs"
+			],
+			[
+				"BlueBananaPage",
+				"samples\\xamarin-forms-samples-master\\SkiaSharpForms\\Demos\\Demos\\SkiaSharpFormsDemos\\Effects\\BlueBananaPage.cs"
+			],
+			[
+				"PorterDuffCanvasView",
+				"samples\\xamarin-forms-samples-master\\SkiaSharpForms\\Demos\\Demos\\SkiaSharpFormsDemos\\Effects\\PorterDuffCanvasView.cs"
+			],
+			[
+				"SkiaSharpFormsDemos",
+				"samples\\xamarin-forms-samples-master\\SkiaSharpForms\\Demos\\SkiaSharpFormsDemos.sln"
+			],
+			[
+				"PhotoLibrary",
+				"samples\\xamarin-forms-samples-master\\SkiaSharpForms\\Demos\\Demos\\SkiaSharpFormsDemos.Droid\\PhotoLibrary.cs"
+			],
+			[
+				"IPhotoLibrary",
+				"samples\\xamarin-forms-samples-master\\SkiaSharpForms\\Demos\\Demos\\SkiaSharpFormsDemos\\IPhotoLibrary.cs"
+			],
+			[
+				"ScalingModesPageg",
+				"samples\\xamarin-forms-samples-master\\SkiaSharpForms\\Demos\\Demos\\SkiaSharpFormsDemos\\obj\\Debug\\netstandard2.0\\Bitmaps\\ScalingModesPage.xaml.g.cs"
+			],
+			[
+				"Claim",
+				"source\\Security-master\\src\\Microsoft.AspNetCore.Authentication.OAuth\\Claims\\ClaimAction.cs"
+			],
+			[
+				"Claims",
+				"source\\AspNetCore.Docs-master\\aspnetcore\\security\\authorization\\claims.md"
+			],
+			[
+				"AuthenticationManager",
+				"source\\aspnetcore-master\\src\\Servers\\HttpSys\\src\\AuthenticationManager.cs"
+			],
+			[
+				"net",
+				"md\\readme_net.md"
+			],
+			[
+				"ActionFilter",
+				"source\\aspnetcore-master\\src\\Mvc\\Mvc.Core\\src\\Filters\\ControllerActionFilter.cs"
+			],
+			[
+				"ControllerBase",
+				"source\\Mvc-master\\src\\Microsoft.AspNetCore.Mvc.Core\\ControllerBase.cs"
+			],
+			[
+				"ApiController",
+				"source\\Mvc-master\\test\\Mvc.Api.Analyzers.Test\\ApiControllerFactsTest.cs"
+			],
+			[
+				"mvc ApiController",
+				"source\\Mvc-master\\test\\WebSites\\WebApiCompatShimWebSite\\Controllers\\MvcController.cs"
+			],
+			[
+				"ApiController.cs",
+				"source\\aspnetcore-master\\src\\Mvc\\Mvc.Api.Analyzers\\test\\ApiControllerFactsTest.cs"
+			],
+			[
+				"curl",
+				"md\\readme_curl.md"
+			],
+			[
+				"win.",
+				"md\\readme_win.md"
+			],
+			[
+				"rsa.md",
+				"md\\rsa\\readme_rsa.md"
+			],
+			[
+				"android",
+				"md\\readme_android.md"
+			],
+			[
+				"csproj",
+				"coding\\Console.csproj"
+			],
+			[
+				"server",
+				"coding\\bs-server.cs"
+			],
+			[
+				"bs",
+				"coding\\bs-server.cs"
+			],
+			[
+				"stm32",
+				"md\\STM\\STM32_Nucleo.md"
+			],
+			[
+				"cbui",
+				"User\\C#.sublime-build"
+			],
+			[
+				"PHP.md",
+				"md\\readme_php.md"
+			],
+			[
+				"KeyEventArgs",
+				"source\\aspnetcore-master\\src\\Components\\Web\\src\\Web\\KeyboardEventArgs.cs"
+			],
+			[
+				"TagHelperComponent",
+				"source\\Razor-master\\src\\Microsoft.AspNetCore.Razor\\TagHelpers\\TagHelperComponent.cs"
+			],
+			[
+				"BodyTagHelper",
+				"source\\aspnetcore-master\\src\\Mvc\\Mvc.Razor\\src\\TagHelpers\\BodyTagHelper.cs"
+			],
+			[
+				"HeadTag",
+				"source\\Mvc-master\\src\\Microsoft.AspNetCore.Mvc.Razor\\TagHelpers\\HeadTagHelper.cs"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "8th",
+		"selected_items":
+		[
+			[
+				"8th",
+				"C:\\download\\OpenCV\\oglpg-8th-master\\OGLPG-8th.sublime-project"
+			],
+			[
+				"Qt",
+				"C:\\coding\\md-code\\cppDemos\\QtDemos\\qtDemo.sublime-project"
+			],
+			[
+				"",
+				"C:\\download\\OpenCV\\ogl-master\\OpenGL-tutorial.sublime-project"
+			],
+			[
+				"open",
+				"C:\\coding\\md-code\\opencv\\opencv.sublime-workspace"
+			],
+			[
+				"dll",
+				"C:\\coding\\md-code\\dllDemo\\dllDemo.sublime-project"
+			],
+			[
+				"git",
+				"C:\\coding\\md-code\\git-demo\\git.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 392.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"QString",
+				"QString"
+			],
+			[
+				"QT_CHARTS_USE_NAMESPACE",
+				"QT_CHARTS_USE_NAMESPACE"
+			],
+			[
+				"QT_CHARTS_BEGIN_NAMESPACE",
+				"QT_CHARTS_BEGIN_NAMESPACE"
+			],
+			[
+				"emit",
+				"emit"
+			],
+			[
+				"createTrackbar",
+				"createTrackbar"
+			],
+			[
+				"addWeighted",
+				"addWeighted"
+			],
+			[
+				"resize",
+				"resize"
+			],
+			[
+				"ApplicationViewer",
+				"QmlApplicationViewer"
+			],
+			[
+				"cuda_GpuMat",
+				"cuda_GpuMat"
+			],
+			[
+				"Function: element",
+				"Function: element"
+			],
+			[
+				"element",
+				"Function: element"
+			],
+			[
+				"spawn",
+				"Function: spawn"
+			],
+			[
+				"start_timer",
+				"Function: start_timer"
+			],
+			[
+				"ethr_atomic_read",
+				"ethr_atomic_read"
+			],
+			[
+				"erts_atomic64_read_nob",
+				"erts_atomic64_read_nob"
+			],
+			[
+				"now_",
+				"now_0"
+			],
+			[
+				"erl_start",
+				"erl_start"
+			],
+			[
+				"process_main",
+				"process_main"
+			],
+			[
+				"bs_init2",
+				"Function: do_bs_init_2"
+			],
+			[
+				"ErlSub",
+				"ErlSubBin"
+			],
+			[
+				"ProcBin",
+				"ProcBin"
+			],
+			[
+				"SMALL",
+				"small"
+			],
+			[
+				"Process",
+				"Process"
+			],
+			[
+				"TAG_PRIMARY_LIST",
+				"TAG_PRIMARY_LIST"
+			],
+			[
+				"ErlDrvEntry",
+				"ErlDrvEntry"
+			],
+			[
+				"driver_entry",
+				"add_driver_entry"
+			],
+			[
+				"driver_select",
+				"driver_select"
+			],
+			[
+				"ready_output",
+				"ready_output"
+			],
+			[
+				"main",
+				"main"
+			],
+			[
+				"AddSingleTon",
+				"TryAddSingleton"
+			]
+		],
+		"width": 972.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 274.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

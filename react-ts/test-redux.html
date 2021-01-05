@@ -1,0 +1,100 @@
+
+  <!DOCTYPE html>
+  <html>
+      <head>
+          <meta charset="utf-8"/>
+          <title> Hello React! </title>
+          <script src="https://cdn.staticfile.org/react/16.4.0/umd/react.development.js"> </script>
+          <script src="https://cdn.staticfile.org/react-dom/16.4.0/umd/react-dom.development.js"> </script>
+          <script src="https://cdn.staticfile.org/babel-standalone/6.26.0/babel.min.js"> </script>
+          <script src="https://cdn.staticfile.org/redux/4.0.1/redux.min.js"></script>
+          <script src="https://cdn.staticfile.org/react-redux/6.0.1/react-redux.min.js"></script>
+          <script src="https://cdn.staticfile.org/prop-types/15.7.2/prop-types.js"></script>
+      </head>
+      <body>
+          <div id="example">
+          </div>
+      </body>
+  </html>
+
+  <script type="text/babel">
+
+  // /component/Counter.tsx
+  // import {Component} from 'react';
+  let Component = React.Component;
+
+  class Counter extends Component {
+    render() {
+      const { value, onIncreaseClick } = this.props
+      return (
+        <div>
+          <span>{value}</span>
+          <button onClick={onIncreaseClick}>Increase</button>
+        </div>
+      )
+    }
+  }
+
+  Counter.propTypes = {
+    value: PropTypes.number.isRequired,
+    onIncreaseClick: PropTypes.func.isRequired
+  }
+
+  // /conponent/localStorage.tsx
+  // import { Component } from 'react';
+  // import { connect } from 'react-redux';
+
+  // import Counter from '../components/Counter';
+  // import PropTypes from 'prop-types'
+  // import { increment } from '../actionsCreators';
+  // import { createStore } from 'redux'
+  // import { Provider, connect } from 'react-redux'
+
+  let connect = ReactRedux.connect;
+  let Provider = ReactRedux.Provider;
+  let createStore = Redux.createStore;
+
+  // Action
+  const increaseAction = { type: 'increase' }
+
+  // Reducer
+  function counter(state = { count: 0 }, action) {
+    const count = state.count
+    switch (action.type) {
+      case 'increase':
+        return { count: count + 1 }
+      default:
+        return state
+    }
+  }
+
+  // Store
+  const store = createStore(counter)
+
+  // Map Redux state to component props
+  function mapStateToProps(state) {
+    return {
+      value: state.count
+    }
+  }
+
+  // Map Redux actions to component props
+  function mapDispatchToProps(dispatch) {
+    return {
+      onIncreaseClick: () => dispatch(increaseAction)
+    }
+  }
+
+  // Connected Component
+  const App = connect(
+    mapStateToProps,
+    mapDispatchToProps
+  )(Counter)
+
+  ReactDOM.render(
+    <Provider store={store}>
+      <App />
+    </Provider>,
+    document.getElementById('example')
+  )
+  </script>

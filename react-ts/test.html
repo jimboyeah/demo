@@ -1,0 +1,130 @@
+
+
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta charset="utf-8"/>
+      <title> Demo for React JSX! </title>
+      <!-- <script src="./js/react.development.js"> </script> -->
+      <!-- <script src="./js/react-dom.development.js"> </script> -->
+      <!-- <script src="./js/babel.min.js"> </script> -->
+      <!-- <script src="./js/jquery.min.js"></script> -->
+      
+      <script src="https://cdn.staticfile.org/react/16.4.0/umd/react.development.js"> </script> 
+      <script src="https://cdn.staticfile.org/react-dom/16.4.0/umd/react-dom.development.js"> </script>
+      <script src="https://cdn.staticfile.org/babel-standalone/6.26.0/babel.min.js"> </script>
+     
+      <style>
+        .list { background: transparent; }
+        .item { 
+            border: 1px solid rgba(39, 39, 39, 0.5);
+          margin: 8px;
+          padding: 2px;
+          border-radius: 8px;
+          background: radial-gradient(260% 100% at 50% 50%, white, rgba(0, 0, 0, 0.25));
+        }
+        .item .checked,
+        .item .unchecked,
+        .item .field { display: inline-block; min-width: 180px; }
+        .item .field { display: inline-block; min-width: 180px; }
+        .item .checked { cursor: pointer; min-width: 72px; color: rgba(40, 40, 40, 1.0);; }
+        .item .unchecked { cursor: pointer; min-width: 72px; color: rgba(204, 204, 204, 0.25);; }
+      </style>
+    </head>
+    <body class="half">
+
+      <div id="example"> </div>
+
+    </body>
+  </html>
+
+  <script>
+    // import $ from "jquery";
+    // import React from "react";
+    // import {Component} from 'react';
+    let Component = React.Component;
+    let PureComponent = React.PureComponent;
+    const mountNode = document.getElementById('example')
+  </script>
+
+  <script type="text/babel">
+
+    class ListItem extends PureComponent{
+      render(){
+        let props = this.props;
+        console.log("ListItem render", this)
+        const {children, data} = props
+        return <div {...data} className="item">
+          <span {...data} className={+data.checked?"checked":"unchecked"} title="spin">{children} #{data.id} - </span>
+          <span {...data} className="field">{data.name}</span>
+          <span {...data} className="field">{data.value}PCS</span>
+        </div>
+      }
+    }
+
+    class ListView extends PureComponent{
+      render(){
+        let props = this.props;
+        console.log("ListView render", this)
+        return <div className="list" {...props}>
+          { props.items.map((it,joke)=>{
+            let icons = [["⚫", "⚪"], ["❌", "⭕"], ["👁‍🗨", "👁‍🗨"]][2];
+            let icon = it.checked? icons[0]:icons[1]; 
+            return <ListItem key={joke} data={it}>{icon}</ListItem>
+          })}
+        </div>
+      }
+    }
+
+    class TestSuite extends Component {
+      constructor(props){
+        super(props)
+        this.state = {items: this.mockGenerate()}
+        this.click.bind(this)
+      }
+
+      mockGenerate(){
+        let foods = [
+          "Apple", "Pineapple", "Strawberry", "grape", "Peach",
+          "Pear", "Arbutus", "Blackberry", "Guava", "Honeymelon",
+          "Lemon", "Lichee", "Longan", "Loquat", "Lotus nut",
+          "Mango", "Olive", "Papaya", "Persimmon", "Pomelo",
+          "Raspberry", "Water Caltrop", "Water-chestnut",
+        ];
+        return foods.map((it,joke)=>{
+          return {id: joke, name: it, value: parseInt(Math.random()*100), checked: Math.random()>0.8}; 
+        });
+      }
+      click(evt){
+        let id = evt.target.id;
+        let title = evt.target.title;
+        console.log("TestSuite clicked", this, evt, id,)
+        if(title!=="spin") return;
+        let items = this.state.items;
+
+        let it = Object.assign({}, items[id]); // NOTICE: AN NEW OBJECT
+        it.checked = !it.checked;
+        items[id] = it;
+
+        // let it = items[id]; // NOTICE: NEVER WORKING FOR PureComponent
+        // it.checked = !it.checked;
+        // items[id] = it;
+        
+        this.setState({items});
+      }
+
+      // onClick = (evt)=>this.click(evt)
+
+      render(){
+        console.log("TestSuite render", this)
+        // return <ListView onClick={this.onClick} {...this.state}></ListView>
+        return <ListView onClick={ (evt)=>{this.click(evt);} } {...this.state}></ListView>
+      }
+    }
+    
+    let list = <TestSuite key="list001" />;
+    ReactDOM.render(list, mountNode);
+    console.log(list)
+    
+  </script>
+
