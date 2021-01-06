@@ -62,7 +62,7 @@ export default class Demo extends Component<Props, {}>
         const { msg, onClick } = this.props;
         return (
             <div className="card">
-                [state msg: {msg}]
+                [Parent Component: {msg}]
                 <button onClick={onClick}>Update</button>
                 <Fc {...state} />
                 <Cc msg={msg} />

@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import logo from './logo.svg';
 import './App.css';
+import {MobileRender, NormalRender} from './components/MobileMedia';
 import About from './components/About';
 import User from './components/User';
 // import Msg  from './components/Msg';
@@ -47,7 +48,8 @@ class App extends Component
           <MsgContainer />
           <MsgContainer />
         </Provider>
-
+        <MobileRender><h1>MobileRender</h1></MobileRender>
+        <NormalRender><h3>NormalRender</h3></NormalRender>
       </div>
     );
   }
