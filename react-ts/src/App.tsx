@@ -31,8 +31,8 @@ class App extends Component
             Edit <code>src/App.tsx</code> and save to reload.
           </p>
           <p>
-            <a href="/about">About</a> |&nbsp; 
-            <a href="/user/Jeango/001">User</a> |&nbsp;
+            <a href="/love/about">About</a> |&nbsp; 
+            <a href="/love/user/Jeango/001">User</a> |&nbsp;
             <a
               className="App-link"
               href="https://reactjs.org"
@@ -43,8 +43,8 @@ class App extends Component
             </a>
           </p>
           <Router history={history}>
-            <Route path="/about/:args?" component={About}/>
-            <Route path="/user/:name/:id" component={User}/>
+            <Route path="/love/about/:args?" component={About}/>
+            <Route path="/love/user/:name/:id" component={User}/>
           </Router>
 
           <h1>devicePixelRatio {window.devicePixelRatio}|{window.screen.width}|{window.screen.height}</h1>
