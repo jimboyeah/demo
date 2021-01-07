@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import logo from './logo.svg';
 import './App.css';
-import {MobileRender, NormalRender} from './components/MobileMedia';
+import {MobileRender, NormalRender, Portrait, Lanscape, Orientation} from './components/MobileMedia';
 import About from './components/About';
 import User from './components/User';
 // import Msg  from './components/Msg';
@@ -13,6 +13,7 @@ import { Router, Route } from 'react-router';
 import { createBrowserHistory } from "history";
 
 const history = createBrowserHistory();
+console.log('orientation', window.orientation);
 
 class App extends Component
 {
@@ -29,27 +30,34 @@ class App extends Component
           <p>
             Edit <code>src/App.tsx</code> and save to reload.
           </p>
-          <p><a href="/about">About</a> | <a href="/user/Jeango/001">User</a></p>
+          <p>
+            <a href="/about">About</a> |&nbsp; 
+            <a href="/user/Jeango/001">User</a> |&nbsp;
+            <a
+              className="App-link"
+              href="https://reactjs.org"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Learn React
+            </a>
+          </p>
           <Router history={history}>
             <Route path="/about/:args?" component={About}/>
             <Route path="/user/:name/:id" component={User}/>
           </Router>
-                      
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
+
+          <h1>devicePixelRatio {window.devicePixelRatio}|{window.screen.width}|{window.screen.height}</h1>
+          <MobileRender><h1>MobileRender</h1></MobileRender>
+          <NormalRender><h3>NormalRender</h3></NormalRender>
+          <Lanscape><h3>Lanscape Render</h3></Lanscape>
+          <Portrait><h3>Portrait Render</h3></Portrait>
+          <Orientation><h3>Orientation Render</h3></Orientation>
         </header>
         <Provider store={store}>
           <MsgContainer />
           <MsgContainer />
         </Provider>
-        <MobileRender><h1>MobileRender</h1></MobileRender>
-        <NormalRender><h3>NormalRender</h3></NormalRender>
       </div>
     );
   }

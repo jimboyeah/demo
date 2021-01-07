@@ -423,7 +423,7 @@
 			"file": "react-ts/src/App.tsx",
 			"settings":
 			{
-				"buffer_size": 2023,
+				"buffer_size": 2191,
 				"line_ending": "Unix"
 			}
 		},
@@ -439,8 +439,16 @@
 			"file": "react-ts/src/store.tsx",
 			"settings":
 			{
-				"buffer_size": 422,
+				"buffer_size": 1220,
 				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "react-ts/src/components/MobileMedia.tsx",
+			"settings":
+			{
+				"buffer_size": 3019,
+				"line_ending": "Unix"
 			}
 		},
 		{
@@ -741,6 +749,10 @@
 		"selected_items":
 		[
 			[
+				"",
+				"Bookmarks: Select Next"
+			],
+			[
 				"install",
 				"Package Control: Install Package"
 			],
@@ -1028,10 +1040,12 @@
 	[
 		"/C/coding/md-code/ts-demos",
 		"/C/coding/md-code/ts-demos/react-ts",
-		"/C/coding/md-code/ts-demos/react-ts/src"
+		"/C/coding/md-code/ts-demos/react-ts/src",
+		"/C/coding/md-code/ts-demos/react-ts/src/components"
 	],
 	"file_history":
 	[
+		"/C/coding/md-code/ts-demos/react-ts/node_modules/react-media/cjs/react-media.js",
 		"/C/coding/md-code/ts-demos/react-ts/src/state.tsx",
 		"/C/coding/md-code/vue-3.0/demo-ts/package.json",
 		"/C/coding/md-code/vue-3.0/demo-ts/tslint.json",
@@ -1158,8 +1172,7 @@
 		"/C/download/OpenCV/glut-3.7.6/Imakefile",
 		"/C/download/Imakefile",
 		"/C/Users/OCEAN/AppData/Roaming/Sublime Text 3/Packages/User/C++ MinGW.sublime-build",
-		"/C/download/OpenCV/OpenCV-MinGW64-GCC810/freetype-2.10.0/include/ft2build.h",
-		"/C/coding/md/Makefile.md"
+		"/C/download/OpenCV/OpenCV-MinGW64-GCC810/freetype-2.10.0/include/ft2build.h"
 	],
 	"find":
 	{
@@ -1201,7 +1214,7 @@
 	"groups":
 	[
 		{
-			"selected": 6,
+			"selected": 7,
 			"sheets":
 			[
 				{
@@ -1240,7 +1253,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 10,
+					"stack_index": 11,
 					"type": "text"
 				},
 				{
@@ -1280,7 +1293,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
+					"stack_index": 8,
 					"type": "text"
 				},
 				{
@@ -1318,7 +1331,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
@@ -1352,7 +1365,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
@@ -1361,15 +1374,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2023,
+						"buffer_size": 2191,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								510,
-								510
+								0,
+								0
 							]
 						],
 						"settings":
@@ -1393,7 +1406,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
@@ -1434,7 +1447,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
@@ -1443,15 +1456,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 422,
+						"buffer_size": 1220,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								175,
-								175
+								495,
+								495
 							]
 						],
 						"settings":
@@ -1461,6 +1474,8 @@
 							"remote_loading": false,
 							"synced": false,
 							"syntax": "Packages/TypeScript/TypeScriptReact.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true,
 							"typescript_plugin_format_options":
 							{
 								"convertTabsToSpaces": true,
@@ -1470,6 +1485,48 @@
 							"use_tab_stops": false
 						},
 						"translation.x": 0.0,
+						"translation.y": 126.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "react-ts/src/components/MobileMedia.tsx",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3019,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								905,
+								905
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"origin_encoding": "ASCII",
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/TypeScript/TypeScriptReact.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true,
+							"typescript_plugin_format_options":
+							{
+								"convertTabsToSpaces": true,
+								"indentSize": 4,
+								"tabSize": 4
+							},
+							"use_tab_stops": false,
+							"word_wrap": true
+						},
+						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
@@ -1477,7 +1534,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 7,
+					"buffer": 8,
 					"file": "/C/coding/md-code/vue-3.0/demo-ts/src/views/About.vue",
 					"semi_transient": false,
 					"settings":
@@ -1507,11 +1564,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 6,
 					"type": "text"
 				},
 				{
-					"buffer": 8,
+					"buffer": 9,
 					"file": "/C/coding/md-code/vue-3.0/demo-ts/src/greet.d.ts",
 					"semi_transient": false,
 					"settings":
@@ -1546,11 +1603,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 8,
+					"stack_index": 9,
 					"type": "text"
 				},
 				{
-					"buffer": 9,
+					"buffer": 10,
 					"file": "/C/coding/md-code/vue-3.0/demo-ts/src/router/index.ts",
 					"semi_transient": false,
 					"settings":
@@ -1587,11 +1644,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 7,
 					"type": "text"
 				},
 				{
-					"buffer": 10,
+					"buffer": 11,
 					"file": "/C/coding/md-code/vue-3.0/demo-ts/src/shims-vue.d.ts",
 					"semi_transient": false,
 					"settings":
@@ -1626,11 +1683,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 9,
+					"stack_index": 10,
 					"type": "text"
 				},
 				{
-					"buffer": 11,
+					"buffer": 12,
 					"file": "/C/coding/md-code/vue-3.0/demo-ts/src/shims-tsx.d.ts",
 					"semi_transient": false,
 					"settings":
@@ -1665,7 +1722,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 11,
+					"stack_index": 12,
 					"type": "text"
 				}
 			]
@@ -1743,6 +1800,10 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"react-media",
+				"Demo Project\\react-ts\\node_modules\\react-media\\cjs\\react-media.js"
+			],
 			[
 				"marked",
 				"Git Demo Project\\node_modules\\marked\\bin\\marked"
@@ -2250,10 +2311,6 @@
 			[
 				"BodyTagHelper",
 				"source\\aspnetcore-master\\src\\Mvc\\Mvc.Razor\\src\\TagHelpers\\BodyTagHelper.cs"
-			],
-			[
-				"HeadTag",
-				"source\\Mvc-master\\src\\Microsoft.AspNetCore.Mvc.Razor\\TagHelpers\\HeadTagHelper.cs"
 			]
 		],
 		"width": 0.0
