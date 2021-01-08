@@ -4,6 +4,7 @@ import './App.css';
 import {MobileRender, NormalRender, Portrait, Lanscape, Orientation} from './components/MobileMedia';
 import About from './components/About';
 import User from './components/User';
+import Player from './components/Player';
 // import Msg  from './components/Msg';
 import store, {MsgContainer, Provider} from './store';
 // import { connect, Provider } from 'react-redux';
@@ -13,7 +14,6 @@ import { Router, Route } from 'react-router';
 import { createBrowserHistory } from "history";
 
 const history = createBrowserHistory();
-console.log('orientation', window.orientation);
 
 class App extends Component
 {
@@ -33,6 +33,7 @@ class App extends Component
           <p>
             <a href="/love/about">About</a> |&nbsp; 
             <a href="/love/user/Jeango/001">User</a> |&nbsp;
+            <a href="/love/player">Player</a> |&nbsp;
             <a
               className="App-link"
               href="https://reactjs.org"
@@ -45,6 +46,7 @@ class App extends Component
           <Router history={history}>
             <Route path="/love/about/:args?" component={About}/>
             <Route path="/love/user/:name/:id" component={User}/>
+            <Route path="/love/player" component={Player}/>
           </Router>
 
           <h1>devicePixelRatio {window.devicePixelRatio}|{window.screen.width}|{window.screen.height}</h1>

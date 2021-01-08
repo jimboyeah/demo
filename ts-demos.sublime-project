@@ -63,16 +63,18 @@
 			[
 				"*.noting"
 			],
-			"name": "Demo Project",
+			"name": "React Project",
 			"path": "."
 		},
 		{
 			"path": "C:\\coding\\md-code\\vue-3.0\\vue3rd"
 		},
 		{
+			"name": "Vue demo-js",
 			"path": "C:\\coding\\md-code\\vue-3.0\\demo"
 		},
 		{
+			"name": "Vue demo-ts",
 			"path": "C:\\coding\\md-code\\vue-3.0\\demo-ts"
 		},
 		{
@@ -80,6 +82,9 @@
 		},
 		{
 			"path": "C:\\coding\\md-code\\create-react-app"
+		},
+		{
+			"path": "C:\\coding\\md-code\\angular-master"
 		}
 	],
 	"settings":

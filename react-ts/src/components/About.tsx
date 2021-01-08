@@ -1,18 +1,18 @@
 import React, {Component} from 'react';
-import { BrowserRouter, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
-export default class Demo extends Component 
+export default class About extends Component 
 {
   constructor(props: any){
     super(props);
   }
 
   render(){
-    return About(this.props);
+    return Render(this.props);
   }
 }
 
-function About(props: any) 
+function Render(props: any) 
 {
   console.log("About props:", props);
   let args = props.match.params.args;
