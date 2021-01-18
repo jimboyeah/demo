@@ -419,8 +419,32 @@
 			"file": "mfcDemo.sublime-project",
 			"settings":
 			{
-				"buffer_size": 3299,
+				"buffer_size": 3465,
 				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/C/Program Files (x86)/Windows Kits/10/Include/10.0.18362.0/um/RpcProxy.h",
+			"settings":
+			{
+				"buffer_size": 27984,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "comDemo/rpcgen_test/test.x",
+			"settings":
+			{
+				"buffer_size": 320,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "comDemo/rpcgen_test/test_client.c",
+			"settings":
+			{
+				"buffer_size": 1836,
 				"line_ending": "Unix"
 			}
 		},
@@ -443,11 +467,26 @@
 			}
 		},
 		{
-			"file": "comDemo/COMStepByStep_demo/bin/setup.bat",
+			"file": "/C/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.26.28801/atlmfc/include/afx.h",
 			"settings":
 			{
-				"buffer_size": 95,
-				"encoding": "UTF-8",
+				"buffer_size": 60007,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.26.28801/atlmfc/src/mfc/arccore.cpp",
+			"settings":
+			{
+				"buffer_size": 19386,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.26.28801/atlmfc/include/afx.inl",
+			"settings":
+			{
+				"buffer_size": 15638,
 				"line_ending": "Windows"
 			}
 		},
@@ -456,14 +495,6 @@
 			"settings":
 			{
 				"buffer_size": 3552,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/C/coding/md-code/vcppnet/Ex29b/Ex29bView.cpp",
-			"settings":
-			{
-				"buffer_size": 1163,
 				"line_ending": "Windows"
 			}
 		},
@@ -3157,19 +3188,23 @@
 	[
 		"/C/coding/md-code/cppDemos/mfcDemo",
 		"/C/coding/md-code/cppDemos/mfcDemo/comDemo",
-		"/C/coding/md-code/vcppnet",
-		"/C/coding/md-code/vcppnet/Ex23a-Automation",
-		"/C/coding/md-code/vcppnet/Ex23c",
-		"/C/coding/md-code/vcppnet/Ex24b",
-		"/C/coding/md-code/vcppnet/Ex28a_Web",
-		"/C/coding/md-code/vcppnet/Ex29a-DHTML",
-		"/C/coding/md-code/vcppnet/Ex29b",
-		"/C/coding/md-code/vcppnet/Ex29c",
 		"/C/coding/md-code/winprog5th",
 		"/D/DEVSTUDIO/VC/SAMPLES/MFC"
 	],
 	"file_history":
 	[
+		"/C/coding/md-code/cppDemos/mfcDemo/comDemo/rpcgen_test/test_client.c",
+		"/C/Users/OCEAN/AppData/Local/Packages/CanonicalGroupLimited.UbuntuonWindows_79rhkp1fndgsc/LocalState/rootfs/home/jeango/rpcgen_test/test_client.c",
+		"/C/MinGW/x86_64-w64-mingw32/include/rpcproxy.h",
+		"/C/MinGW/x86_64-w64-mingw32/include/rpc.h",
+		"/C/MinGW/x86_64-w64-mingw32/include/rpcndr.h",
+		"/C/coding/md-code/cppDemos/mfcDemo/comDemo/rpcgen_test/test_clnt.c",
+		"/C/coding/md-code/The-Art-Of-Programming/Readme.md",
+		"/C/Program Files (x86)/Windows Kits/10/Include/10.0.18362.0/um/sphelper.h",
+		"/C/coding/md-code/progwin5th/Petzold/PetzoldMakefiles/Chap19/MDIDemo/afxres.h",
+		"/C/coding/md-code/progwin5th/Petzold/PetzoldMakefiles/Chap19/MDIDemo/MDIDemo.prj",
+		"/C/Program Files (x86)/Windows Kits/10/Include/10.0.18362.0/cppwinrt/winrt/impl/Windows.ApplicationModel.DataTransfer.2.h",
+		"/C/coding/md-code/cppDemos/mfcDemo/comDemo/COMStepByStep_demo/bin/setup.bat",
 		"/C/Program Files (x86)/Windows Kits/10/Include/10.0.18362.0/um/Unknwnbase.h",
 		"/C/coding/md-code/cppDemos/mfcDemo/comDemo/COMStepByStep_demo/bin/Readme.txt",
 		"/C/coding/md-code/cppDemos/mfcDemo/comDemo/AddObj/AddObjGuid.h",
@@ -3285,29 +3320,20 @@
 		"/C/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/Tools/api-ms-win-crt-filesystem-l1-1-0.dll",
 		"/C/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/Tools/api-ms-win-crt-heap-l1-1-0.dll",
 		"/C/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/Tools/VsMSBuildCmd.bat",
-		"/C/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/Tools/api-ms-win-crt-locale-l1-1-0.dll",
-		"/C/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/Tools/api-ms-win-crt-math-l1-1-0.dll",
-		"/C/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/Tools/api-ms-win-crt-multibyte-l1-1-0.dll",
-		"/C/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/Tools/api-ms-win-crt-stdio-l1-1-0.dll",
-		"/C/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/Tools/api-ms-win-crt-string-l1-1-0.dll",
-		"/C/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/Tools/api-ms-win-crt-runtime-l1-1-0.dll",
-		"/C/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/Tools/api-ms-win-crt-time-l1-1-0.dll",
-		"/C/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/Tools/errlook.exe",
-		"/C/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/Tools/errlook.hlp",
-		"/C/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/Tools/guidgen.exe",
-		"/C/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/Tools/LaunchDevCmd.bat",
-		"/C/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/Tools/api-ms-win-crt-utility-l1-1-0.dll",
-		"/C/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/Tools/makehm.exe"
+		"/C/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/Tools/api-ms-win-crt-locale-l1-1-0.dll"
 	],
 	"find":
 	{
-		"height": 40.0
+		"height": 24.0
 	},
 	"find_in_files":
 	{
 		"height": 451.0,
 		"where_history":
 		[
+			"C:\\coding\\md-code\\cppDemos\\mfcDemo\\comDemo\\rpcgen_test",
+			"C:\\coding\\md-code\\cppDemos\\mfcDemo\\comDemo\\",
+			"C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.26.28801",
 			"C:\\coding\\md-code\\cppDemos\\mfcDemo\\comDemo\\AddObj",
 			"C:\\coding\\md-code\\vcppnet",
 			"C:\\coding\\md-code\\winprog5th",
@@ -3330,6 +3356,14 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"test_proc_2",
+			"clnt_create",
+			"RPC_IF",
+			"Is_Storing",
+			"DECLARE_SERIAL",
+			"CArchive::",
+			"IMPLEMENT_RUNTIMECLASS",
+			"DECLARE_SERIAL",
 			"IIServiceComTest_add",
 			"IIServiceComTest",
 			"CIServiceComTest::add",
@@ -3449,15 +3483,7 @@
 			"CTest",
 			"add_executable",
 			"/D DEBUG /D _DEBUG /D WIN32 /D _WINDOWS /D _MBCS ",
-			" /D LIB_EXPORTS",
-			"Use_wprintf_Instead_Of_printf",
-			"printf",
-			"__imp___stdio_common_vfprintf",
-			"cout <<",
-			"add_library",
-			"break",
-			"case",
-			"add_executable"
+			" /D LIB_EXPORTS"
 		],
 		"highlight": false,
 		"in_selection": false,
@@ -3475,7 +3501,7 @@
 	"groups":
 	[
 		{
-			"selected": 5,
+			"selected": 2,
 			"sheets":
 			[
 				{
@@ -3484,15 +3510,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3299,
+						"buffer_size": 3465,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3258,
-								3258
+								694,
+								694
 							]
 						],
 						"settings":
@@ -3506,14 +3532,112 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1213.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 8,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
+					"file": "/C/Program Files (x86)/Windows Kits/10/Include/10.0.18362.0/um/RpcProxy.h",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 27984,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4411,
+								4411
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"origin_encoding": "ASCII",
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/C++/C++.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 9770.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "comDemo/rpcgen_test/test.x",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 320,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								320,
+								320
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"origin_encoding": "ASCII",
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/IDL-Syntax/IDL.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "comDemo/rpcgen_test/test_client.c",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 1836,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								485,
+								470
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"origin_encoding": "ASCII",
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/C++/C.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 345.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
 					"file": "CMakeLists.txt",
 					"semi_transient": false,
 					"settings":
@@ -3525,8 +3649,8 @@
 						"selection":
 						[
 							[
-								3068,
-								3068
+								2973,
+								2973
 							]
 						],
 						"settings":
@@ -3541,14 +3665,14 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 855.0,
+						"translation.y": 848.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 12,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
-					"buffer": 2,
+					"buffer": 5,
 					"file": "comDemo/IAdd.idl",
 					"semi_transient": false,
 					"settings":
@@ -3560,13 +3684,14 @@
 						"selection":
 						[
 							[
-								425,
-								425
+								602,
+								602
 							]
 						],
 						"settings":
 						{
 							"incomplete_sync": null,
+							"is_init_dirty_state": false,
 							"origin_encoding": "ASCII",
 							"remote_loading": false,
 							"synced": false,
@@ -3578,43 +3703,113 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 6,
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "comDemo/COMStepByStep_demo/bin/setup.bat",
+					"buffer": 6,
+					"file": "/C/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.26.28801/atlmfc/include/afx.h",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 95,
+						"buffer_size": 60007,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								50,
-								50
+								51231,
+								51231
 							]
 						],
 						"settings":
 						{
 							"incomplete_sync": null,
+							"is_init_dirty_state": false,
 							"origin_encoding": "ASCII",
 							"remote_loading": false,
 							"synced": false,
-							"syntax": "Packages/Batch File/Batch File.sublime-syntax"
+							"syntax": "Packages/C++/C++.sublime-syntax",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 20349.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 7,
 					"type": "text"
 				},
 				{
-					"buffer": 4,
+					"buffer": 7,
+					"file": "/C/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.26.28801/atlmfc/src/mfc/arccore.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 19386,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								12646,
+								12646
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"is_init_dirty_state": false,
+							"origin_encoding": "ASCII",
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/C++/C++.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 6342.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "/C/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.26.28801/atlmfc/include/afx.inl",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 15638,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								7419,
+								7419
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"is_init_dirty_state": false,
+							"origin_encoding": "ASCII",
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/C++/C++.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 2325.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
 					"file": "/C/coding/md-code/vcppnet/Ex23b/Ex23bAuto.cpp",
 					"semi_transient": false,
 					"settings":
@@ -3633,6 +3828,7 @@
 						"settings":
 						{
 							"incomplete_sync": null,
+							"is_init_dirty_state": false,
 							"origin_encoding": "ASCII",
 							"remote_loading": false,
 							"synced": false,
@@ -3644,44 +3840,11 @@
 						"translation.y": 1243.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 10,
 					"type": "text"
 				},
 				{
-					"buffer": 5,
-					"file": "/C/coding/md-code/vcppnet/Ex29b/Ex29bView.cpp",
-					"semi_transient": true,
-					"settings":
-					{
-						"buffer_size": 1163,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"origin_encoding": "ASCII",
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/C++/C++.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 466.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
+					"buffer": 10,
 					"file": "/C/Program Files (x86)/Windows Kits/10/Include/10.0.18362.0/um/combaseapi.h",
 					"semi_transient": false,
 					"settings":
@@ -3700,6 +3863,7 @@
 						"settings":
 						{
 							"incomplete_sync": null,
+							"is_init_dirty_state": false,
 							"origin_encoding": "ASCII",
 							"remote_loading": false,
 							"synced": false,
@@ -3711,11 +3875,11 @@
 						"translation.y": 16978.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 11,
 					"type": "text"
 				},
 				{
-					"buffer": 7,
+					"buffer": 11,
 					"file": "01-simple/src/ChildView.h",
 					"semi_transient": false,
 					"settings":
@@ -3744,11 +3908,11 @@
 						"translation.y": 491.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 9,
+					"stack_index": 15,
 					"type": "text"
 				},
 				{
-					"buffer": 8,
+					"buffer": 12,
 					"file": "01-simple/src/ChildView.cpp",
 					"semi_transient": false,
 					"settings":
@@ -3779,11 +3943,11 @@
 						"translation.y": 271.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 13,
 					"type": "text"
 				},
 				{
-					"buffer": 9,
+					"buffer": 13,
 					"file": "01-simple/res/resource.h",
 					"semi_transient": false,
 					"settings":
@@ -3816,11 +3980,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 11,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
-					"buffer": 10,
+					"buffer": 14,
 					"file": "01-simple/res/demo.rc",
 					"semi_transient": false,
 					"settings":
@@ -3854,11 +4018,11 @@
 						"translation.y": 1379.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 12,
 					"type": "text"
 				},
 				{
-					"buffer": 11,
+					"buffer": 15,
 					"file": "01-simple/src/demo.cpp",
 					"semi_transient": false,
 					"settings":
@@ -3889,11 +4053,11 @@
 						"translation.y": 874.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 10,
+					"stack_index": 16,
 					"type": "text"
 				},
 				{
-					"buffer": 12,
+					"buffer": 16,
 					"file": "01-simple/src/demo.h",
 					"semi_transient": false,
 					"settings":
@@ -3923,7 +4087,7 @@
 						"translation.y": 19.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
+					"stack_index": 14,
 					"type": "text"
 				}
 			]
@@ -3931,7 +4095,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 23.0
+		"height": 24.0
 	},
 	"input":
 	{
@@ -4016,7 +4180,7 @@
 	"project": "mfcDemo.sublime-project",
 	"replace":
 	{
-		"height": 42.0
+		"height": 44.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -4025,6 +4189,10 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"rpcproxy",
+				"Windows Kits\\10\\Include\\10.0.18362.0\\um\\RpcProxy.h"
+			],
 			[
 				"unknwn.idl",
 				"Windows Kits\\10\\Include\\10.0.18362.0\\um\\Unknwn.Idl"
@@ -4532,10 +4700,6 @@
 			[
 				"erlexec",
 				"otp_src_23.0\\erts\\etc\\common\\erlexec.c"
-			],
-			[
-				"erl_bif_lists.c",
-				"otp_src_23.0\\erts\\emulator\\beam\\erl_bif_lists.c"
 			]
 		],
 		"width": 0.0
@@ -4543,22 +4707,70 @@
 	"select_project":
 	{
 		"height": 500.0,
-		"last_filter": "",
+		"last_filter": "md",
 		"selected_items":
 		[
 			[
+				"md",
+				"C:\\coding\\md\\MD.sublime-project"
+			],
+			[
 				"",
+				"C:\\coding\\md-code\\cppDemos\\cppDotNet.sublime-project"
+			],
+			[
+				"cpps",
 				"C:\\coding\\md-code\\cppDemos\\cppDemo.sublime-project"
+			],
+			[
+				"cppDotnet",
+				"C:\\coding\\md-code\\cppDemos\\dotnet.sublime-workspace"
+			],
+			[
+				"mfc",
+				"C:\\coding\\md-code\\cppDemos\\mfcDemo\\mfcDemo.sublime-project"
 			]
 		],
 		"width": 380.0
 	},
 	"select_symbol":
 	{
-		"height": 325.0,
-		"last_filter": "EnableAutomation",
+		"height": 392.0,
+		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"WAVEFORMATEX",
+				"WaveFormatExPtr"
+			],
+			[
+				"CArchive",
+				"CArchive"
+			],
+			[
+				"CFile",
+				"CFile"
+			],
+			[
+				"IsStoring",
+				"IsStoring"
+			],
+			[
+				"CObject",
+				"CObject"
+			],
+			[
+				"Clipboard",
+				"Clipboard"
+			],
+			[
+				"DeclareDynamic",
+				"DECLARE_DYNAMIC"
+			],
+			[
+				"IMPLEMENT_SERIAL",
+				"IMPLEMENT_SERIAL"
+			],
 			[
 				"EnableAutomation",
 				"EnableAutomation"

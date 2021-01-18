@@ -109,6 +109,7 @@ AddDemo("clr-gui" WIN32
     "../dotnet-clr/clr-gui/AppForm.resx")
 AddDemo("clr-res"
     "../dotnet-clr/clr-res/clrc.cpp" 
+    "../dotnet-clr/clr-res/AssemblyInfo.cpp" 
     "../dotnet-clr/clr-res/stdafx.cpp" 
     "../dotnet-clr/clr-res/app.rc" 
     "../dotnet-clr/clr-res/MyForm.cpp" 

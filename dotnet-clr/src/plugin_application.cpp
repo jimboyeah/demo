@@ -34,7 +34,8 @@ public:
 };
 
 int main(int argc, char ** argv) {
-   String^ plugin = gcnew String(argv[0])+".exe";
+   String^ plugin = gcnew String(argv[0]);
+   if (!plugin->EndsWith(".exe")) plugin += ".exe";
    Console::WriteLine( plugin );
    if (argc==2) plugin = gcnew String(argv[1]);
    Assembly^ a = Assembly::LoadFrom(plugin);

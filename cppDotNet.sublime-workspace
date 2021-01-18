@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"P",
+				"PrintErrorMessage"
+			],
+			[
+				"MathLibrary",
+				"MathLibrary_dll.cpp"
+			],
+			[
 				"PROJ",
 				"PROJECT_SOURCE_DIR\tbuiltin"
 			],
@@ -208,10 +216,6 @@
 				"RemoteAddr\tfunc() net.Addr ·ƒ"
 			],
 			[
-				"P",
-				"parsed\tbool ·ν"
-			],
-			[
 				"utf",
 				"unicode/utf8\t ·ʂ"
 			],
@@ -393,20 +397,50 @@
 			}
 		},
 		{
-			"file": "dotnet-clr/CMakeLists.txt",
+			"file": "/C/coding/md-code/VCSamples/VC2008Samples/ATL/Advanced/DCOM/DrawServ/predraw.h",
 			"settings":
 			{
-				"buffer_size": 3926,
+				"buffer_size": 1556,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/coding/md-code/VCSamples/VC2008Samples/ATL/Advanced/DCOM/DrawServ/DrawServ.cpp",
+			"settings":
+			{
+				"buffer_size": 11159,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "dotnet-clr/src/plugin_assembly_dll.cpp",
+			"file": "dotnet-clr/CMakeLists.txt",
 			"settings":
 			{
-				"buffer_size": 1107,
+				"buffer_size": 4184,
+				"encoding": "UTF-8",
 				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "dotnet-clr/clr-res/clrc.vcxproj",
+			"settings":
+			{
+				"buffer_size": 4860,
+				"encoding": "UTF-8 with BOM",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "#include \"AppForm.h\"\n#include <Windows.h>\n\nusing namespace clr;\n\nint WINAPI WinMain(HINSTANCE h, HINSTANCE p, LPSTR l, int i){\n\n\tApplication::EnableVisualStyles();\n\tApplication::SetCompatibleTextRenderingDefault(false); \n\n\t// 创建主窗口并运行它\n\tApplication::Run(gcnew MyForm());\n\n\treturn 0;\n}\n",
+			"file": "dotnet-clr/clr-gui/MyForm.cpp",
+			"file_size": 309,
+			"file_write_time": 132394137183560185,
+			"settings":
+			{
+				"buffer_size": 285,
+				"line_ending": "Windows",
+				"scratch": true
 			}
 		},
 		{
@@ -415,14 +449,6 @@
 			{
 				"buffer_size": 406,
 				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "dotnet-clr/src/MathLibrary_dll.cpp",
-			"settings":
-			{
-				"buffer_size": 499,
 				"line_ending": "Windows"
 			}
 		},
@@ -448,15 +474,6 @@
 			"settings":
 			{
 				"buffer_size": 1341,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "dotnet-clr/clr-res/clrc.vcxproj",
-			"settings":
-			{
-				"buffer_size": 4860,
-				"encoding": "UTF-8 with BOM",
 				"line_ending": "Windows"
 			}
 		},
@@ -633,20 +650,40 @@
 		"selected_items":
 		[
 			[
-				"insta",
-				"Package Control: Install Package"
+				"project",
+				"Project: Refresh Folders"
 			],
 			[
-				"edit",
-				"Project: Edit Project"
+				"commit",
+				"Git: Commit history"
+			],
+			[
+				"com",
+				"Git: Commit"
+			],
+			[
+				"add",
+				"Git: Add All"
 			],
 			[
 				"statsu",
 				"Git: Status"
 			],
 			[
-				"add",
-				"Git: Add All"
+				"status",
+				"Git: Status"
+			],
+			[
+				"add curr",
+				"Git: Add Current File"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"edit",
+				"Project: Edit Project"
 			],
 			[
 				"ad",
@@ -657,20 +694,12 @@
 				"Table Editor: Enable for current view"
 			],
 			[
-				"com",
-				"Git: Commit"
-			],
-			[
 				"comm",
 				"Git: Commit"
 			],
 			[
 				"pushc",
 				"Git: Push Current Branch"
-			],
-			[
-				"status",
-				"Git: Status"
 			],
 			[
 				"comm\t",
@@ -961,19 +990,29 @@
 	"expanded_folders":
 	[
 		"/C/coding/md-code/cppDemos",
-		"/C/coding/md-code/cppDemos/dotnet-clr",
-		"/C/coding/md-code/cppDemos/dotnet-clr/msbuild",
-		"/C/coding/md-code/cppDemos/dotnet-clr/src",
-		"/C/coding/src",
-		"/C/coding/md-code/vcppnet",
-		"/C/coding/md-code/vcppnet/Ex32a-DotNet-DLL",
-		"/C/coding/md-code/vcppnet/Ex32b-DotNet-Exe",
-		"/C/coding/md-code/vcppnet/Ex34c",
-		"/C/coding/md-code/vcppnet/Ex34d",
-		"/C/coding/md-code/vcppnet/ManagedCWebFormAppWizard"
+		"/C/coding/md-code/cppDemos/boost",
+		"/C/coding/src"
 	],
 	"file_history":
 	[
+		"/C/coding/md-code/hugo/quickstart/php.bat",
+		"/C/coding/md-code/VCSamples/VC2008Samples/ATL/Advanced/CThreadPool/ReadMe.htm",
+		"/C/coding/md-code/cppDemos/dotnet-clr/clr-res/MyForm.h",
+		"/C/coding/md-code/cppDemos/dotnet-clr/clr-res/AssemblyInfo.cpp",
+		"/C/coding/md-code/cppDemos/dotnet-clr/clr-res/clrc.cpp",
+		"/C/pictures/a/情人节 希岛爱理/!acqier.bat",
+		"/C/coding/md-code/cppDemos/dotnet-clr/src/plugin_application.cpp",
+		"/C/coding/md-code/cppDemos/dotnet-clr/clr-res/clrc.vcxproj",
+		"/C/coding/md-code/cppDemos/ninja-msvc/clr.sublime-project",
+		"/C/coding/md-code/cppDemos/dotnet-clr/clr-gui/AppForm.h",
+		"/C/coding/md-code/cppDemos/dotnet-clr/clr-res/stdafx.h",
+		"/C/coding/md-code/dllDemo/dllDemo.sublime-project",
+		"/C/coding/md-code/dllDemo/dllDemo-ninja.sublime-project",
+		"/C/coding/md-code/cppDemos/.gitignore",
+		"/C/coding/md-code/cppDemos/mysql/main.exe",
+		"/C/coding/md-code/cppDemos/dotnet-clr/clr-res/stdafx.cpp",
+		"/C/coding/md-code/cppDemos/dotnet-clr/clr-gui/MyForm.cpp",
+		"/C/coding/md-code/cppDemos/dotnet-clr/src/plugin_assembly_dll.cpp",
 		"/C/coding/md-code/cppDemos/bin-clr/MathClient.exe.manifest",
 		"/C/coding/md-code/cppDemos/dotnet-clr/src/vcpp_reflection_5.cpp",
 		"/C/coding/md-code/cppDemos/dotnet-clr/src/friend_assemblies_dll.cpp",
@@ -1002,8 +1041,6 @@
 		"/C/coding/md-code/cppDemos/dotnet-clr/src/user_defined_attributes.cpp",
 		"/C/coding/md-code/cppDemos/dotnet-clr/src/extending_metadata_e.cpp",
 		"/C/coding/md-code/cppDemos/dotnet-clr/src/extending_metadata_f.cpp",
-		"/C/coding/md-code/cppDemos/dotnet-clr/clr-gui/AppForm.h",
-		"/C/coding/md-code/cppDemos/dotnet-clr/clr-gui/MyForm.cpp",
 		"/C/coding/md-code/vcppnet/Ex32b/Ex32b.vcproj",
 		"/C/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Microsoft/VC/v160/Microsoft.Cpp.props",
 		"/C/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Microsoft/VC/v160/Microsoft.Cpp.targets",
@@ -1085,33 +1122,18 @@
 		"/C/download/不伦纯爱2011/1882b53f96c000000.ts",
 		"/C/download/不伦纯爱2011/1882b53f96c001000.ts",
 		"/C/download/不伦纯爱2011/1882b53f96c001001.ts",
-		"/C/download/不伦纯爱2011/1882b53f96c001003.ts",
-		"/C/download/不伦纯爱2011/1882b53f96c001002.ts",
-		"/C/download/不伦纯爱2011/1882b53f96c001005.ts",
-		"/C/download/不伦纯爱2011/1882b53f96c001004.ts",
-		"/C/download/不伦纯爱2011/1882b53f96c001006.ts",
-		"/C/download/不伦纯爱2011/1882b53f96c001007.ts",
-		"/C/download/不伦纯爱2011/1882b53f96c001008.ts",
-		"/C/download/不伦纯爱2011/1882b53f96c001009.ts",
-		"/C/download/不伦纯爱2011/1882b53f96c001010.ts",
-		"/C/download/不伦纯爱2011/1882b53f96c001011.ts",
-		"/C/download/不伦纯爱2011/1882b53f96c001012.ts",
-		"/C/download/不伦纯爱2011/1882b53f96c001013.ts",
-		"/C/download/不伦纯爱2011/1882b53f96c001014.ts",
-		"/C/download/不伦纯爱2011/1882b53f96c001015.ts",
-		"/C/download/不伦纯爱2011/1882b53f96c001016.ts",
-		"/C/download/不伦纯爱2011/1882b53f96c001017.ts",
-		"/C/download/不伦纯爱2011/1882b53f96c001018.ts"
+		"/C/download/不伦纯爱2011/1882b53f96c001003.ts"
 	],
 	"find":
 	{
-		"height": 40.0
+		"height": 24.0
 	},
 	"find_in_files":
 	{
 		"height": 451.0,
 		"where_history":
 		[
+			"C:\\coding\\md-code\\VCSamples\\VC2008Samples\\ATL\\Advanced\\DCOM\\DrawServ",
 			"C:\\coding\\md-code\\cppDemos\\dotnet-clr\\src"
 		]
 	},
@@ -1120,6 +1142,18 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"buf",
+			"CComModule",
+			"UnregisterServer",
+			"GetLastErr",
+			"CServiceModule",
+			"_tcsicmp",
+			"project_path",
+			"hi",
+			"Form",
+			"    PAUSE>NUL \n",
+			"gui",
+			"dllname",
 			"string",
 			"\\",
 			"MathClient_dll",
@@ -1193,7 +1227,7 @@
 	"groups":
 	[
 		{
-			"selected": 5,
+			"selected": 2,
 			"sheets":
 			[
 				{
@@ -1209,8 +1243,8 @@
 						"selection":
 						[
 							[
-								2529,
-								2529
+								516,
+								516
 							]
 						],
 						"settings":
@@ -1224,62 +1258,27 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1198.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 12,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "dotnet-clr/CMakeLists.txt",
+					"file": "/C/coding/md-code/VCSamples/VC2008Samples/ATL/Advanced/DCOM/DrawServ/predraw.h",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3926,
+						"buffer_size": 1556,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1614,
-								1608
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"is_init_dirty_state": false,
-							"origin_encoding": "ASCII",
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/CMake/CMake.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 878.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "dotnet-clr/src/plugin_assembly_dll.cpp",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1107,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								591,
-								578
+								907,
+								907
 							]
 						],
 						"settings":
@@ -1294,14 +1293,153 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 77.0,
+						"translation.y": 337.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/C/coding/md-code/VCSamples/VC2008Samples/ATL/Advanced/DCOM/DrawServ/DrawServ.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 11159,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								9964,
+								9964
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"is_init_dirty_state": false,
+							"origin_encoding": "ASCII",
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/C++/C++.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 5146.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "dotnet-clr/CMakeLists.txt",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4184,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2008,
+								2008
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"is_init_dirty_state": false,
+							"origin_encoding": "ASCII",
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/CMake/CMake.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 354.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "dotnet-clr/clr-res/clrc.vcxproj",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4860,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4566,
+								4566
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"is_init_dirty_state": false,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/MSBuild/MSBuild.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1191.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 4,
 					"type": "text"
 				},
 				{
-					"buffer": 3,
+					"buffer": 5,
+					"file": "dotnet-clr/clr-gui/MyForm.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 285,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								285,
+								285
+							]
+						],
+						"settings":
+						{
+							"in_converting": true,
+							"incomplete_sync": null,
+							"is_init_dirty_state": false,
+							"origin_content": "#include \"AppForm.h\"\n#include <Windows.h>\n\nusing namespace clr;\n\nint WINAPI WinMain(HINSTANCE h, HINSTANCE p, LPSTR l, int i){\n\n\tApplication::EnableVisualStyles();\n\tApplication::SetCompatibleTextRenderingDefault(false); \n\n\t// 创建主窗口并运行它\n\tApplication::Run(gcnew MyForm());\n\n\treturn 0;\n}\n",
+							"origin_encoding": "GB2312",
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/C++/C++.sublime-syntax",
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
 					"file": "dotnet-clr/src/MathLibrary.h",
 					"semi_transient": false,
 					"settings":
@@ -1325,31 +1463,31 @@
 							"remote_loading": false,
 							"synced": false,
 							"syntax": "Packages/C++/C++.sublime-syntax",
-							"tab_size": 3,
+							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 7,
 					"type": "text"
 				},
 				{
-					"buffer": 4,
-					"file": "dotnet-clr/src/MathLibrary_dll.cpp",
-					"semi_transient": true,
+					"buffer": 7,
+					"file": "/C/coding/md-code/vcppnet/appendb/dyncreat.cpp",
+					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 499,
+						"buffer_size": 2499,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								491,
-								491
+								1405,
+								1405
 							]
 						],
 						"settings":
@@ -1364,48 +1502,14 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 594.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 8,
 					"type": "text"
 				},
 				{
-					"buffer": 5,
-					"file": "/C/coding/md-code/vcppnet/appendb/dyncreat.cpp",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2499,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1360,
-								1360
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"origin_encoding": "ASCII",
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/C++/C++.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 222.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
+					"buffer": 8,
 					"file": "dotnet-clr/src/self_reflection.cpp",
 					"semi_transient": false,
 					"settings":
@@ -1428,17 +1532,19 @@
 							"origin_encoding": "ASCII",
 							"remote_loading": false,
 							"synced": false,
-							"syntax": "Packages/C++/C++.sublime-syntax"
+							"syntax": "Packages/C++/C++.sublime-syntax",
+							"tab_size": 3,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 9,
 					"type": "text"
 				},
 				{
-					"buffer": 7,
+					"buffer": 9,
 					"file": "dotnet-clr/src/vcpp_reflection_6.cpp",
 					"semi_transient": false,
 					"settings":
@@ -1450,8 +1556,8 @@
 						"selection":
 						[
 							[
-								134,
-								134
+								183,
+								183
 							]
 						],
 						"settings":
@@ -1469,48 +1575,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 6,
 					"type": "text"
 				},
 				{
-					"buffer": 8,
-					"file": "dotnet-clr/clr-res/clrc.vcxproj",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 4860,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								4033,
-								4103
-							]
-						],
-						"settings":
-						{
-							"in_converting": true,
-							"incomplete_sync": null,
-							"is_init_dirty_state": false,
-							"origin_content": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<Project DefaultTargets=\"Build\" ToolsVersion=\"4.0\" xmlns=\"http://schemas.microsoft.com/developer/msbuild/2003\">\n  <ItemGroup Label=\"ProjectConfigurations\">\n    <ProjectConfiguration Include=\"Debug|x64\">\n      <Configuration>Debug</Configuration>\n      <Platform>x64</Platform>\n    </ProjectConfiguration>\n    <ProjectConfiguration Include=\"Release|x64\">\n      <Configuration>Release</Configuration>\n      <Platform>x64</Platform>\n    </ProjectConfiguration>\n  </ItemGroup>\n  <PropertyGroup Label=\"Globals\">\n    <ProjectGuid>{C818EED7-BEA8-4A15-A986-70044EA00DF3}</ProjectGuid>\n    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>\n    <Keyword>ManagedCProj</Keyword>\n    <RootNamespace>clrc</RootNamespace>\n  </PropertyGroup>\n  <Import Project=\"$(VCTargetsPath)\\Microsoft.Cpp.Default.props\" />\n  <PropertyGroup Condition=\"'$(Configuration)|$(Platform)'=='Debug|x64'\" Label=\"Configuration\">\n    <ConfigurationType>Application</ConfigurationType>\n    <UseDebugLibraries>true</UseDebugLibraries>\n    <PlatformToolset>v110</PlatformToolset>\n    <CLRSupport>true</CLRSupport>\n    <CharacterSet>Unicode</CharacterSet>\n  </PropertyGroup>\n  <PropertyGroup Condition=\"'$(Configuration)|$(Platform)'=='Release|x64'\" Label=\"Configuration\">\n    <ConfigurationType>Application</ConfigurationType>\n    <UseDebugLibraries>false</UseDebugLibraries>\n    <PlatformToolset>v110</PlatformToolset>\n    <CLRSupport>true</CLRSupport>\n    <CharacterSet>Unicode</CharacterSet>\n  </PropertyGroup>\n  <Import Project=\"$(VCTargetsPath)\\Microsoft.Cpp.props\" />\n  <ImportGroup Label=\"ExtensionSettings\">\n  </ImportGroup>\n  <ImportGroup Label=\"PropertySheets\" Condition=\"'$(Configuration)|$(Platform)'=='Debug|x64'\">\n    <Import Project=\"$(UserRootDir)\\Microsoft.Cpp.$(Platform).user.props\" Condition=\"exists('$(UserRootDir)\\Microsoft.Cpp.$(Platform).user.props')\" Label=\"LocalAppDataPlatform\" />\n  </ImportGroup>\n  <ImportGroup Label=\"PropertySheets\" Condition=\"'$(Configuration)|$(Platform)'=='Release|x64'\">\n    <Import Project=\"$(UserRootDir)\\Microsoft.Cpp.$(Platform).user.props\" Condition=\"exists('$(UserRootDir)\\Microsoft.Cpp.$(Platform).user.props')\" Label=\"LocalAppDataPlatform\" />\n  </ImportGroup>\n  <PropertyGroup Label=\"UserMacros\" />\n  <PropertyGroup Condition=\"'$(Configuration)|$(Platform)'=='Debug|x64'\">\n    <LinkIncremental>true</LinkIncremental>\n  </PropertyGroup>\n  <PropertyGroup Condition=\"'$(Configuration)|$(Platform)'=='Release|x64'\">\n    <LinkIncremental>false</LinkIncremental>\n  </PropertyGroup>\n  <ItemDefinitionGroup Condition=\"'$(Configuration)|$(Platform)'=='Debug|x64'\">\n    <ClCompile>\n      <WarningLevel>Level3</WarningLevel>\n      <Optimization>Disabled</Optimization>\n      <PreprocessorDefinitions>x64;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>\n      <PrecompiledHeader>Use</PrecompiledHeader>\n    </ClCompile>\n    <Link>\n      <GenerateDebugInformation>true</GenerateDebugInformation>\n      <AdditionalDependencies />\n      <SubSystem>Console</SubSystem>\n    </Link>\n  </ItemDefinitionGroup>\n  <ItemDefinitionGroup Condition=\"'$(Configuration)|$(Platform)'=='Release|x64'\">\n    <ClCompile>\n      <WarningLevel>Level3</WarningLevel>\n      <PreprocessorDefinitions>x64;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>\n      <PrecompiledHeader>Use</PrecompiledHeader>\n    </ClCompile>\n    <Link>\n      <GenerateDebugInformation>true</GenerateDebugInformation>\n      <AdditionalDependencies />\n      <SubSystem>Console</SubSystem>\n    </Link>\n  </ItemDefinitionGroup>\n  <ItemGroup>\n    <Reference Include=\"System\" />\n    <Reference Include=\"System.Data\" />\n    <Reference Include=\"System.Drawing\" />\n    <Reference Include=\"System.Windows.Forms\" />\n    <Reference Include=\"System.Xml\" />\n  </ItemGroup>\n  <ItemGroup>\n    <Text Include=\"ReadMe.txt\" />\n  </ItemGroup>\n  <ItemGroup>\n    <ClInclude Include=\"MyForm.h\">\n      <FileType>CppForm</FileType>\n    </ClInclude>\n    <ClInclude Include=\"resource.h\" />\n    <ClInclude Include=\"stdafx.h\" />\n  </ItemGroup>\n  <ItemGroup>\n    <ResourceCompile Include=\"app.rc\" />\n  </ItemGroup>\n  <ItemGroup>\n    <ClCompile Include=\"AssemblyInfo.cpp\" />\n    <ClCompile Include=\"clrc.cpp\" />\n    <ClCompile Include=\"MyForm.cpp\" />\n    <ClCompile Include=\"stdafx.cpp\">\n      <PrecompiledHeader Condition=\"'$(Configuration)|$(Platform)'=='Debug|x64'\">Create</PrecompiledHeader>\n      <PrecompiledHeader Condition=\"'$(Configuration)|$(Platform)'=='Release|x64'\">Create</PrecompiledHeader>\n    </ClCompile>\n  </ItemGroup>\n  <ItemGroup>\n    <Image Include=\"app.ico\" />\n  </ItemGroup>\n  <ItemGroup>\n    <EmbeddedResource Include=\"MyForm.resx\">\n      <DependentUpon>MyForm.h</DependentUpon>\n    </EmbeddedResource>\n  </ItemGroup>\n  <Import Project=\"$(VCTargetsPath)\\Microsoft.Cpp.targets\" />\n  <ImportGroup Label=\"ExtensionTargets\">\n  </ImportGroup>\n</Project>",
-							"origin_encoding": "UTF-8-SIG",
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/XML/XML.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 373.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 8,
-					"type": "text"
-				},
-				{
-					"buffer": 9,
+					"buffer": 10,
 					"file": "dotnet-clr/clr-gui/clr.vcxproj",
 					"semi_transient": false,
 					"settings":
@@ -1595,11 +1664,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
+					"stack_index": 10,
 					"type": "text"
 				},
 				{
-					"buffer": 10,
+					"buffer": 11,
 					"file": "dotnet-clr/msbuild/AssemblyInfo.cpp",
 					"semi_transient": false,
 					"settings":
@@ -1628,11 +1697,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 9,
+					"stack_index": 11,
 					"type": "text"
 				},
 				{
-					"buffer": 11,
+					"buffer": 12,
 					"file": "dotnet-clr/msbuild/helloworld.vcxproj",
 					"semi_transient": false,
 					"settings":
@@ -1663,11 +1732,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 10,
+					"stack_index": 12,
 					"type": "text"
 				},
 				{
-					"buffer": 12,
+					"buffer": 13,
 					"file": "/C/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Microsoft/VC/v160/Microsoft.Cpp.Default.props",
 					"semi_transient": false,
 					"settings":
@@ -1700,7 +1769,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 11,
+					"stack_index": 13,
 					"type": "text"
 				}
 			]
@@ -1708,7 +1777,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 22.0
+		"height": 24.0
 	},
 	"input":
 	{
@@ -1749,6 +1818,10 @@
 	{
 		"height": 0.0
 	},
+	"output.git":
+	{
+		"height": 375.0
+	},
 	"output.sftp":
 	{
 		"height": 0.0
@@ -1757,7 +1830,7 @@
 	"project": "cppDotNet.sublime-project",
 	"replace":
 	{
-		"height": 71.0
+		"height": 44.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -1766,6 +1839,10 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				".git",
+				"♬☾ CPP Demo Project\\.gitignore"
+			],
 			[
 				"plugin_",
 				"♬☾ CPP Demo Project\\dotnet-clr\\src\\plugin_assembly.cpp"
@@ -2273,10 +2350,6 @@
 			[
 				"lists.erl",
 				"otp_src_23.0\\lib\\stdlib\\src\\lists.erl"
-			],
-			[
-				"BeamInstr",
-				"otp_src_23.0\\lib\\hipe\\test\\basic_SUITE_data\\basic_beam_instrs.erl"
 			]
 		],
 		"width": 0.0
@@ -2289,7 +2362,7 @@
 		[
 			[
 				"",
-				"C:\\coding\\md-code\\cppDemos\\mfcDemo\\mfcDemo.sublime-project"
+				"C:\\coding\\md-code\\charp\\csharp.sublime-project"
 			]
 		],
 		"width": 380.0

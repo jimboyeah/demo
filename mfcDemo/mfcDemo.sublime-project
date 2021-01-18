@@ -140,8 +140,11 @@
 			"path": "C:\\coding\\md-code\\winprog5th"
 		},
 		{
-			"name":"VS 97 MFC Sample",
+			"name": "VS 97 MFC Sample",
 			"path": "D:\\DEVSTUDIO\\VC\\SAMPLES\\MFC"
+		},
+		{
+			"path": "C:\\Users\\OCEAN\\AppData\\Local\\Packages\\CanonicalGroupLimited.UbuntuonWindows_79rhkp1fndgsc\\LocalState\\rootfs\\home\\jeango\\rpcgen_test"
 		}
 	]
 }

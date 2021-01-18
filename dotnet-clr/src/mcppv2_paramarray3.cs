@@ -1,12 +1,18 @@
 // mcppv2_paramarray3.cs
-// compile with: csc /r:mcppv2_paramarray2.dll mcppv2_paramarray3.cs
+// compile with: csc /r:mcppv2_paramarray2.dll ..\dotnet-clr\src\mcppv2_paramarray3.cs
 // a C# program
 
+using System;
+
 public class X {
-   public static void Main() {
-      // Visual C# will generate a String array to match the
-      // ParamArray attribute
-      C myc = new C();
-      myc.f("hello", "there", "world");
+    static void Main(string[] args)
+    {
+        // Visual C# will generate a String array to match the
+        // ParamArray attribute
+        String plugin = args.Length > 0? args[0]:"demo";
+        if (!plugin.EndsWith(".exe")) plugin += ".exe";
+        Console.WriteLine("Test:{0}\n", plugin);
+        C myc = new C();
+        myc.f("hello", "there", "world");
    }
 }
