@@ -33,6 +33,8 @@ Pacman 作为经典游戏，其最有特色的部分就是带有 AI 原型的四
     git push origin pacman:pacman
     git push [远程名] [本地分支]:[远程分支]
 
+    git clone -b pacman https://github.com/jimboyeah/demo.git
+
 
 # Getting Started with Create React App
 
