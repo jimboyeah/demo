@@ -16,7 +16,7 @@ Pacman 作为经典游戏，其最有特色的部分就是带有 AI 原型的四
 <a href="https://passer-by.com/pacman/">https://passer-by.com/pacman/</a>
 
 - [Play Online](https://jimboyeah.github.io/pacman/)
-- [Pacman on Github](https://github.com/jimboyeah/demo/tree/packman)
+- [Pacman on Github](https://github.com/jimboyeah/demo/tree/pacman)
 
 
 # Git 命令参考：
