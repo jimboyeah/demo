@@ -11,9 +11,9 @@ Pacman 作为经典游戏，其最有特色的部分就是带有 AI 原型的四
 
 更多参考资源：
 
-<a href="https://www.googlepacman.net/">https://www.googlepacman.net/</a>
-<a href="http://macek.github.io/google_pacman/">http://macek.github.io/google_pacman/</a>
-<a href="https://passer-by.com/pacman/">https://passer-by.com/pacman/</a>
+- [https://www.googlepacman.net/](https://www.googlepacman.net/)
+- [http://macek.github.io/google_pacman/](http://macek.github.io/google_pacman/)
+- [https://passer-by.com/pacman/](https://passer-by.com/pacman/)
 
 - [Play Online](https://jimboyeah.github.io/pacman/)
 - [Pacman on Github](https://github.com/jimboyeah/demo/tree/pacman)
