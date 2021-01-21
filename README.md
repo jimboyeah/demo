@@ -23,7 +23,7 @@ Pacman 作为经典游戏，其最有特色的部分就是带有 AI 原型的四
 
     git init
     git remote remove origin
-    git remote add origin https://github.com/jimboyeah/demos.git
+    git remote add origin https://github.com/jimboyeah/demo.git
     git status
     git branch -a
     git remote show origin
