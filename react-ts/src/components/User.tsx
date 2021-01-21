@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Link } from "react-router-dom";
+import { /* BrowserRouter, */ Link } from "react-router-dom";
 
 function User(props: any) {
   console.log("User props:", props);

@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 
 export default class About extends Component 
 {
-  constructor(props: any){
-    super(props);
-  }
+  // constructor(props: any){
+  //   super(props);
+  // }
 
   render(){
     return Render(this.props);

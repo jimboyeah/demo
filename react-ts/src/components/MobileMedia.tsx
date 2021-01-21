@@ -55,7 +55,7 @@ function Orientation(props: {
     if(ori === 90 || ori === -90) orient = Orient.Lanscape;
     let children = props.children;
     if(typeof children == 'function') return children(orient);
-    if(ori == undefined && (query == undefined || query == Orient.Default)) return children;
+    if(ori === undefined && (query === undefined || query === Orient.Default)) return children;
     return (query == orient)? children:"";
 }
 

@@ -3,16 +3,33 @@
     <title>Basic Transmuxer Test</title>
   </head>
   <body>
+    <link href="http://vjs.zencdn.net/7.8.2/video-js.min.css" rel="stylesheet">
+    <script src="http://vjs.zencdn.net/7.8.2/video.min.js"></script>
+    <video class="video-js">
+      <source src="https://yiqikan.wuyouzuida.com/20201117/7591_d3b7f875/1000k/hls/b156cd55955000037.ts" type="video/ts">
+      <source src="http://vjs.zencdn.net/v/oceans.webm" type="video/webm">
+    </video>
+
+    <!-- <script src="node_modules/mux.js/dist/mux.js"></script> -->
+    <!-- <script SameSite="Lax" src="https://github.com/videojs/mux.js/releases/latest/download/mux.js"></script> -->
+    <!--
     <video controls width="60%"></video>
-    <script src="https://github.com/videojs/mux.js/releases/latest/download/mux.js"></script>
-    <script>
+     <script>
       // Create array of TS files to play
       segments = [
-        "https://yiqikan.wuyouzuida.com/20201117/7591_d3b7f875/1000k/hls/b156cd55955000008.ts",
-        "https://yiqikan.wuyouzuida.com/20201117/7591_d3b7f875/1000k/hls/b156cd55955000010.ts",
-        "https://yiqikan.wuyouzuida.com/20201117/7591_d3b7f875/1000k/hls/b156cd55955000012.ts",
-        "https://yiqikan.wuyouzuida.com/20201117/7591_d3b7f875/1000k/hls/b156cd55955000015.ts",
+        // "https://yiqikan.wuyouzuida.com/20201117/7591_d3b7f875/1000k/hls/b156cd55955000008.ts",
+        // "https://yiqikan.wuyouzuida.com/20201117/7591_d3b7f875/1000k/hls/b156cd55955000010.ts",
+        // "https://yiqikan.wuyouzuida.com/20201117/7591_d3b7f875/1000k/hls/b156cd55955000025.ts",
+        // "https://yiqikan.wuyouzuida.com/20201117/7591_d3b7f875/1000k/hls/b156cd55955000026.ts",
+        "https://yiqikan.wuyouzuida.com/20201117/7591_d3b7f875/1000k/hls/b156cd55955000036.ts",
+        "https://yiqikan.wuyouzuida.com/20201117/7591_d3b7f875/1000k/hls/b156cd55955000037.ts",
       ];
+
+      for(var i=1000; i<1100; i++) {
+        let it = segments[0];
+        it = it.replace("036", i.toString().substring(1));
+        // segments.push(it);
+      }
 
       // Replace this value with your files codec info
       mime = 'video/mp4; codecs="mp4a.40.2,avc1.64001f"';
@@ -71,6 +88,6 @@
           })
         })
       }
-    </script>
+    </script> -->
   </body>
 </html>

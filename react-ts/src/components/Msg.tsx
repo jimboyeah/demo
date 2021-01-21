@@ -19,10 +19,10 @@ function Fc(props: any){
 
 class Cc extends Component<Props, {}>
 {
-    constructor(props: any){
-        super(props);
-        // console.log('Cc', props, this.state);
-    }
+    // constructor(props: any){
+    //     super(props);
+    //     // console.log('Cc', props, this.state);
+    // }
 
     render(){
         // console.log("Cc render");
@@ -52,13 +52,13 @@ export default class Demo extends Component<Props, {}>
         // this.state = props;
     }
 
-    onClick = ()=>{
+    onClick=()=>{
         this.props.dispatch({ type: 'UPDATE' });
     }
 
     render(){
         let state = store.getState();
-        console.log("msg render", state);
+        console.log("msg render", state, this.props);
         const { msg, onClick } = this.props;
         return (
             <div className="card">

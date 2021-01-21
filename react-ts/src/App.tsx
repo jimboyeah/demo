@@ -31,16 +31,16 @@ class App extends Component
             Edit <code>src/App.tsx</code> and save to reload.
           </p>
           <p>
-            <a href="/love/about">About</a> |&nbsp; 
-            <a href="/love/user/Jeango/001">User</a> |&nbsp;
-            <a href="/love/player">Player</a> |&nbsp;
+            <a className="App-link" href="/love/about">About</a> |&nbsp; 
+            <a className="App-link" href="/love/user/Jeango/001">User</a> |&nbsp;
+            <a className="App-link" href="/love/player">Player</a> |&nbsp;
             <a
               className="App-link"
-              href="https://reactjs.org"
+              href="/pacman"
               target="_blank"
               rel="noopener noreferrer"
             >
-              Learn React
+              Pacman
             </a>
           </p>
           <Router history={history}>

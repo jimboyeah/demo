@@ -392,19 +392,23 @@
 			}
 		},
 		{
-			"file": "react-ts/src/App.tsx",
+			"contents": "<?php\n/*\nNOTE: miniProxy IS NO LONGER MAINTAINED AS OF APRIL 26th, 2020.\nIF YOU USE IT, YOU DO SO ENTIRELY AT YOUR OWN RISK.\nMore information is available at <https://github.com/joshdick/miniProxy>.\n*/\n\n/*\nminiProxy - A simple PHP web proxy. <https://github.com/joshdick/miniProxy>\nWritten and maintained by Joshua Dick <http://joshdick.net>.\nminiProxy is licensed under the GNU GPL v3 <https://www.gnu.org/licenses/gpl-3.0.html>.\n*/\n\n/****************************** START CONFIGURATION ******************************/\n\n//NOTE: If a given URL matches a pattern in both $whitelistPatterns and $blacklistPatterns,\n//that URL will be treated as blacklisted.\n\n//To allow proxying any URL, set $whitelistPatterns to an empty array (the default).\n//To only allow proxying of specific URLs (whitelist), add corresponding regular expressions\n//to the $whitelistPatterns array. To prevent possible abuse, enter the narrowest/most-specific patterns possible.\n//You can optionally use the \"getHostnamePattern()\" helper function to build a regular expression that\n//matches all URLs for a given hostname.\n$whitelistPatterns = [\n  //Usage example: To whitelist any URL at example.net, including sub-domains, uncomment the\n  //line below (which is equivalent to [ @^https?://([a-z0-9-]+\\.)*example\\.net@i ]):\n  //getHostnamePattern(\"example.net\")\n];\n\n//To disallow proxying of specific URLs (blacklist), add corresponding regular expressions\n//to the $blacklistPatterns array. To prevent possible abuse, enter the broadest/least-specific patterns possible.\n//You can optionally use the \"getHostnamePattern()\" helper function to build a regular expression that\n//matches all URLs for a given hostname.\n$blacklistPatterns = [\n  //Usage example: To blacklist any URL at example.net, including sub-domains, uncomment the\n  //line below (which is equivalent to [ @^https?://([a-z0-9-]+\\.)*example\\.net@i ]):\n  //getHostnamePattern(\"example.net\")\n];\n\n//To enable CORS (cross-origin resource sharing) for proxied sites, set $forceCORS to true.\n$forceCORS = true;\n\n//Set to false to allow sites on the local network (where miniProxy is running) to be proxied.\n$disallowLocal = true;\n\n//Set to false to report the client machine's IP address to proxied sites via the HTTP `x-forwarded-for` header.\n//Setting to false may improve compatibility with some sites, but also exposes more information about end users to proxied sites.\n$anonymize = true;\n\n//Start/default URL that that will be proxied when miniProxy is first loaded in a browser/accessed directly with no URL to proxy.\n//If empty, miniProxy will show its own landing page.\n$startURL = \"\";\n\n//When no $startURL is configured above, miniProxy will show its own landing page with a URL form field\n//and the configured example URL. The example URL appears in the instructional text on the miniProxy landing page,\n//and is proxied when pressing the 'Proxy It!' button on the landing page if its URL form is left blank.\n$landingExampleURL = \"https://example.net\";\n\n/****************************** END CONFIGURATION ******************************/\n\nob_start(\"ob_gzhandler\");\n\nif (version_compare(PHP_VERSION, \"5.4.7\", \"<\")) {\n  die(\"miniProxy requires PHP version 5.4.7 or later.\");\n}\n\n$requiredExtensions = [\"curl\", \"mbstring\", \"xml\"];\nforeach ($requiredExtensions as $requiredExtension) {\n  if (!extension_loaded($requiredExtension)) {\n    die(\"miniProxy requires PHP's \\\"\" . $requiredExtension . \"\\\" extension. Please install/enable it on your server and try again.\");\n  }\n}\n\n//Helper function for use inside $whitelistPatterns/$blacklistPatterns.\n//Returns a regex that matches all HTTP[S] URLs for a given hostname.\nfunction getHostnamePattern($hostname)\n{\n  $escapedHostname = str_replace(\".\", \"\\.\", $hostname);\n  return \"@^https?://([a-z0-9-]+\\.)*\" . $escapedHostname . \"@i\";\n}\n\n//Helper function that determines whether to allow proxying of a given URL.\nfunction isValidURL($url)\n{\n  //Validates a URL against the whitelist.\n  function passesWhitelist($url)\n  {\n    if (count($GLOBALS['whitelistPatterns']) === 0) return true;\n    foreach ($GLOBALS['whitelistPatterns'] as $pattern) {\n      if (preg_match($pattern, $url)) {\n        return true;\n      }\n    }\n    return false;\n  }\n\n  //Validates a URL against the blacklist.\n  function passesBlacklist($url)\n  {\n    foreach ($GLOBALS['blacklistPatterns'] as $pattern) {\n      if (preg_match($pattern, $url)) {\n        return false;\n      }\n    }\n    return true;\n  }\n\n  function isLocal($url)\n  {\n    //First, generate a list of IP addresses that correspond to the requested URL.\n    $ips = [];\n    $host = parse_url($url, PHP_URL_HOST);\n    if (filter_var($host, FILTER_VALIDATE_IP)) {\n      //The supplied host is already a valid IP address.\n      $ips = [$host];\n    } else {\n      //The host is not a valid IP address; attempt to resolve it to one.\n      $dnsResult = dns_get_record($host, DNS_A + DNS_AAAA);\n      $ips = array_map(function ($dnsRecord) {\n        return $dnsRecord['type'] == 'A' ? $dnsRecord['ip'] : $dnsRecord['ipv6'];\n      }, $dnsResult);\n    }\n    foreach ($ips as $ip) {\n      //Determine whether any of the IPs are in the private or reserved range.\n      if (!filter_var($ip, FILTER_VALIDATE_IP, FILTER_FLAG_NO_PRIV_RANGE | FILTER_FLAG_NO_RES_RANGE)) {\n        return true;\n      }\n    }\n    return false;\n  }\n\n  return passesWhitelist($url) && passesBlacklist($url) && ($GLOBALS['disallowLocal'] ? !isLocal($url) : true);\n}\n\n//Helper function used to removes/unset keys from an associative array using case insensitive matching\nfunction removeKeys(&$assoc, $keys2remove)\n{\n  $keys = array_keys($assoc);\n  $map = [];\n  $removedKeys = [];\n  foreach ($keys as $key) {\n    $map[strtolower($key)] = $key;\n  }\n  foreach ($keys2remove as $key) {\n    $key = strtolower($key);\n    if (isset($map[$key])) {\n      unset($assoc[$map[$key]]);\n      $removedKeys[] = $map[$key];\n    }\n  }\n  return $removedKeys;\n}\n\nif (!function_exists(\"getallheaders\")) {\n  //Adapted from http://www.php.net/manual/en/function.getallheaders.php#99814\n  function getallheaders()\n  {\n    $result = [];\n    foreach ($_SERVER as $key => $value) {\n      if (substr($key, 0, 5) == \"HTTP_\") {\n        $key = str_replace(\" \", \"-\", ucwords(strtolower(str_replace(\"_\", \" \", substr($key, 5)))));\n        $result[$key] = $value;\n      }\n    }\n    return $result;\n  }\n}\n\n$usingDefaultPort = (!isset($_SERVER[\"HTTPS\"]) && $_SERVER[\"SERVER_PORT\"] === 80) || (isset($_SERVER[\"HTTPS\"]) && $_SERVER[\"SERVER_PORT\"] === 443);\n$prefixPort = $usingDefaultPort ? \"\" : \":\" . $_SERVER[\"SERVER_PORT\"];\n//Use HTTP_HOST to support client-configured DNS (instead of SERVER_NAME), but remove the port if one is present\n$prefixHost = $_SERVER[\"HTTP_HOST\"];\n$prefixHost = strpos($prefixHost, \":\") ? implode(\":\", explode(\":\", $_SERVER[\"HTTP_HOST\"], -1)) : $prefixHost;\n\ndefine(\"PROXY_PREFIX\", \"http\" . (isset($_SERVER[\"HTTPS\"]) ? \"s\" : \"\") . \"://\" . $prefixHost . $prefixPort . $_SERVER[\"SCRIPT_NAME\"] . \"?\");\n\n//Makes an HTTP request via cURL, using request data that was passed directly to this script.\nfunction makeRequest($url)\n{\n\n  global $anonymize;\n\n  //Tell cURL to make the request using the brower's user-agent if there is one, or a fallback user-agent otherwise.\n  $user_agent = $_SERVER[\"HTTP_USER_AGENT\"];\n  if (empty($user_agent)) {\n    $user_agent = \"Mozilla/5.0 (compatible; miniProxy)\";\n  }\n  $ch = curl_init();\n  curl_setopt($ch, CURLOPT_USERAGENT, $user_agent);\n\n  //Get ready to proxy the browser's request headers...\n  $browserRequestHeaders = getallheaders();\n\n  //...but let cURL set some headers on its own.\n  $removedHeaders = removeKeys(\n    $browserRequestHeaders,\n    [\n      \"Accept-Encoding\", //Throw away the browser's Accept-Encoding header if any and let cURL make the request using gzip if possible.\n      \"Content-Length\",\n      \"Host\",\n      \"Origin\"\n    ]\n  );\n\n  $removedHeaders = array_map(\"strtolower\", $removedHeaders);\n\n  curl_setopt($ch, CURLOPT_ENCODING, \"\");\n  //Transform the associative array from getallheaders() into an\n  //indexed array of header strings to be passed to cURL.\n  $curlRequestHeaders = [];\n  foreach ($browserRequestHeaders as $name => $value) {\n    $curlRequestHeaders[] = $name . \": \" . $value;\n  }\n  if (!$anonymize) {\n    $curlRequestHeaders[] = \"X-Forwarded-For: \" . $_SERVER[\"REMOTE_ADDR\"];\n  }\n  //Any `origin` header sent by the browser will refer to the proxy itself.\n  //If an `origin` header is present in the request, rewrite it to point to the correct origin.\n  if (in_array(\"origin\", $removedHeaders)) {\n    $urlParts = parse_url($url);\n    $port = @$urlParts[\"port\"];\n    $curlRequestHeaders[] = \"Origin: \" . $urlParts[\"scheme\"] . \"://\" . $urlParts[\"host\"] . (empty($port) ? \"\" : \":\" . $port);\n  };\n  curl_setopt($ch, CURLOPT_HTTPHEADER, $curlRequestHeaders);\n\n  //Proxy any received GET/POST/PUT data.\n  switch ($_SERVER[\"REQUEST_METHOD\"]) {\n    case \"POST\":\n      curl_setopt($ch, CURLOPT_POST, true);\n      //For some reason, $HTTP_RAW_POST_DATA isn't working as documented at\n      //http://php.net/manual/en/reserved.variables.httprawpostdata.php\n      //but the php://input method works. This is likely to be flaky\n      //across different server environments.\n      //More info here: http://stackoverflow.com/questions/8899239/http-raw-post-data-not-being-populated-after-upgrade-to-php-5-3\n      //If the miniProxyFormAction field appears in the POST data, remove it so the destination server doesn't receive it.\n      $postData = [];\n      parse_str(file_get_contents(\"php://input\"), $postData);\n      if (isset($postData[\"miniProxyFormAction\"])) {\n        unset($postData[\"miniProxyFormAction\"]);\n      }\n      curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($postData));\n      break;\n    case \"PUT\":\n      curl_setopt($ch, CURLOPT_PUT, true);\n      curl_setopt($ch, CURLOPT_INFILE, fopen(\"php://input\", \"r\"));\n      break;\n  }\n\n  //Other cURL options.\n  curl_setopt($ch, CURLOPT_HEADER, true);\n  curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);\n  curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);\n\n  //Set the request URL.\n  curl_setopt($ch, CURLOPT_URL, $url);\n\n  //Make the request.\n  $response = curl_exec($ch);\n  $responseInfo = curl_getinfo($ch);\n  $headerSize = curl_getinfo($ch, CURLINFO_HEADER_SIZE);\n  curl_close($ch);\n\n  //Setting CURLOPT_HEADER to true above forces the response headers and body\n  //to be output together--separate them.\n  $responseHeaders = substr($response, 0, $headerSize);\n  $responseBody = substr($response, $headerSize);\n\n  return [\"headers\" => $responseHeaders, \"body\" => $responseBody, \"responseInfo\" => $responseInfo];\n}\n\n//Converts relative URLs to absolute ones, given a base URL.\n//Modified version of code found at http://nashruddin.com/PHP_Script_for_Converting_Relative_to_Absolute_URL\nfunction rel2abs($rel, $base)\n{\n  if (empty($rel)) $rel = \".\";\n  if (parse_url($rel, PHP_URL_SCHEME) != \"\" || strpos($rel, \"//\") === 0) return $rel; //Return if already an absolute URL\n  if ($rel[0] == \"#\" || $rel[0] == \"?\") return $base . $rel; //Queries and anchors\n  extract(parse_url($base)); //Parse base URL and convert to local variables: $scheme, $host, $path\n  $path = isset($path) ? preg_replace(\"#/[^/]*$#\", \"\", $path) : \"/\"; //Remove non-directory element from path\n  if ($rel[0] == \"/\") $path = \"\"; //Destroy path if relative url points to root\n  $port = isset($port) && $port != 80 ? \":\" . $port : \"\";\n  $auth = \"\";\n  if (isset($user)) {\n    $auth = $user;\n    if (isset($pass)) {\n      $auth .= \":\" . $pass;\n    }\n    $auth .= \"@\";\n  }\n  $abs = \"$auth$host$port$path/$rel\"; //Dirty absolute URL\n  for ($n = 1; $n > 0; $abs = preg_replace([\"#(/\\.?/)#\", \"#/(?!\\.\\.)[^/]+/\\.\\./#\"], \"/\", $abs, -1, $n)) { } //Replace '//' or '/./' or '/foo/../' with '/'\n  return $scheme . \"://\" . $abs; //Absolute URL is ready.\n}\n\n//Proxify contents of url() references in blocks of CSS text.\nfunction proxifyCSS($css, $baseURL)\n{\n  //Add a \"url()\" wrapper to any CSS @import rules that only specify a URL without the wrapper,\n  //so that they're proxified when searching for \"url()\" wrappers below.\n  $sourceLines = explode(\"\\n\", $css);\n  $normalizedLines = [];\n  foreach ($sourceLines as $line) {\n    if (preg_match(\"/@import\\s+url/i\", $line)) {\n      $normalizedLines[] = $line;\n    } else {\n      $normalizedLines[] = preg_replace_callback(\n        \"/(@import\\s+)([^;\\s]+)([\\s;])/i\",\n        function ($matches) use ($baseURL) {\n          return $matches[1] . \"url(\" . $matches[2] . \")\" . $matches[3];\n        },\n        $line\n      );\n    }\n  }\n  $normalizedCSS = implode(\"\\n\", $normalizedLines);\n  return preg_replace_callback(\n    \"/url\\((.*?)\\)/i\",\n    function ($matches) use ($baseURL) {\n      $url = $matches[1];\n      //Remove any surrounding single or double quotes from the URL so it can be passed to rel2abs - the quotes are optional in CSS\n      //Assume that if there is a leading quote then there should be a trailing quote, so just use trim() to remove them\n      if (strpos($url, \"'\") === 0) {\n        $url = trim($url, \"'\");\n      }\n      if (strpos($url, \"\\\"\") === 0) {\n        $url = trim($url, \"\\\"\");\n      }\n      if (stripos($url, \"data:\") === 0) return \"url(\" . $url . \")\"; //The URL isn't an HTTP URL but is actual binary data. Don't proxify it.\n      return \"url(\" . PROXY_PREFIX . rel2abs($url, $baseURL) . \")\";\n    },\n    $normalizedCSS\n  );\n}\n\n//Proxify \"srcset\" attributes (normally associated with <img> tags.)\nfunction proxifySrcset($srcset, $baseURL)\n{\n  $sources = array_map(\"trim\", explode(\",\", $srcset)); //Split all contents by comma and trim each value\n  $proxifiedSources = array_map(function ($source) use ($baseURL) {\n    $components = array_map(\"trim\", str_split($source, strrpos($source, \" \"))); //Split by last space and trim\n    $components[0] = PROXY_PREFIX . rel2abs(ltrim($components[0], \"/\"), $baseURL); //First component of the split source string should be an image URL; proxify it\n    return implode($components, \" \"); //Recombine the components into a single source\n  }, $sources);\n  $proxifiedSrcset = implode(\", \", $proxifiedSources); //Recombine the sources into a single \"srcset\"\n  return $proxifiedSrcset;\n}\n\n//Extract and sanitize the requested URL, handling cases where forms have been rewritten to point to the proxy.\nif (isset($_POST[\"miniProxyFormAction\"])) {\n  $url = $_POST[\"miniProxyFormAction\"];\n  unset($_POST[\"miniProxyFormAction\"]);\n} else {\n  $queryParams = [];\n  parse_str($_SERVER[\"QUERY_STRING\"], $queryParams);\n  //If the miniProxyFormAction field appears in the query string, make $url start with its value, and rebuild the the query string without it.\n  if (isset($queryParams[\"miniProxyFormAction\"])) {\n    $formAction = $queryParams[\"miniProxyFormAction\"];\n    unset($queryParams[\"miniProxyFormAction\"]);\n    $url = $formAction . \"?\" . http_build_query($queryParams);\n  } else {\n    $url = substr($_SERVER[\"REQUEST_URI\"], strlen($_SERVER[\"SCRIPT_NAME\"]) + 1);\n  }\n}\n\nif (empty($url)) {\n  if (empty($startURL)) {\n    die(\"<html><head><title>miniProxy</title></head><body><h1>Welcome to miniProxy!</h1>miniProxy can be directly invoked like this: <a href=\\\"\" . PROXY_PREFIX . $landingExampleURL . \"\\\">\" . PROXY_PREFIX . $landingExampleURL . \"</a><br /><br />Or, you can simply enter a URL below:<br /><br /><form onsubmit=\\\"if (document.getElementById('site').value) { window.location.href='\" . PROXY_PREFIX . \"' + document.getElementById('site').value; return false; } else { window.location.href='\" . PROXY_PREFIX . $landingExampleURL . \"'; return false; }\\\" autocomplete=\\\"off\\\"><input id=\\\"site\\\" type=\\\"text\\\" size=\\\"50\\\" /><input type=\\\"submit\\\" value=\\\"Proxy It!\\\" /></form></body></html>\");\n  } else {\n    $url = $startURL;\n  }\n} else if (strpos($url, \":/\") !== strpos($url, \"://\")) {\n  //Work around the fact that some web servers (e.g. IIS 8.5) change double slashes appearing in the URL to a single slash.\n  //See https://github.com/joshdick/miniProxy/pull/14\n  $pos = strpos($url, \":/\");\n  $url = substr_replace($url, \"://\", $pos, strlen(\":/\"));\n}\n\n$scheme = parse_url($url, PHP_URL_SCHEME);\nif (empty($scheme)) {\n  if (strpos($url, \"//\") === 0) {\n    //Assume that any supplied URLs starting with // are HTTP URLs.\n    $url = \"http:\" . $url;\n  } else {\n    //Assume that any supplied URLs without a scheme (just a host) are HTTP URLs.\n    $url = \"http://\" . $url;\n  }\n} else if (!preg_match(\"/^https?$/i\", $scheme)) {\n  die('Error: Detected a \"' . $scheme . '\" URL. miniProxy exclusively supports http[s] URLs.');\n}\n\nif (!isValidURL($url)) {\n  die(\"Error: The requested URL was disallowed by the server administrator.\");\n}\n\n$response = makeRequest($url);\n$rawResponseHeaders = $response[\"headers\"];\n$responseBody = $response[\"body\"];\n$responseInfo = $response[\"responseInfo\"];\n\n//A regex that indicates which server response headers should be stripped out of the proxified response.\n$header_blacklist_pattern = \"/^Content-Length|^Transfer-Encoding|^Content-Encoding.*gzip/i\";\n\n//cURL can make multiple requests internally (for example, if CURLOPT_FOLLOWLOCATION is enabled), and reports\n//headers for every request it makes. Only proxy the last set of received response headers,\n//corresponding to the final request made by cURL for any given call to makeRequest().\n$responseHeaderBlocks = array_filter(explode(\"\\r\\n\\r\\n\", $rawResponseHeaders));\n$lastHeaderBlock = end($responseHeaderBlocks);\n$headerLines = explode(\"\\r\\n\", $lastHeaderBlock);\nforeach ($headerLines as $header) {\n  $header = trim($header);\n  if (!preg_match($header_blacklist_pattern, $header)) {\n    header($header, false);\n  }\n}\n//Prevent robots from indexing proxified pages\nheader(\"X-Robots-Tag: noindex, nofollow\", true);\n\nif ($forceCORS) {\n  //This logic is based on code found at: http://stackoverflow.com/a/9866124/278810\n  //CORS headers sent below may conflict with CORS headers from the original response,\n  //so these headers are sent after the original response headers to ensure their values\n  //are the ones that actually end up getting sent to the browser.\n  //Explicit [ $replace = true ] is used for these headers even though this is PHP's default behavior.\n\n  //Allow access from any origin.\n  header(\"Access-Control-Allow-Origin: *\", true);\n  header(\"Access-Control-Allow-Credentials: true\", true);\n\n  //Handle CORS headers received during OPTIONS requests.\n  if ($_SERVER[\"REQUEST_METHOD\"] == \"OPTIONS\") {\n    if (isset($_SERVER[\"HTTP_ACCESS_CONTROL_REQUEST_METHOD\"])) {\n      header(\"Access-Control-Allow-Methods: GET, POST, OPTIONS\", true);\n    }\n    if (isset($_SERVER[\"HTTP_ACCESS_CONTROL_REQUEST_HEADERS\"])) {\n      header(\"Access-Control-Allow-Headers: {$_SERVER['HTTP_ACCESS_CONTROL_REQUEST_HEADERS']}\", true);\n    }\n    //No further action is needed for OPTIONS requests.\n    exit(0);\n  }\n}\n\n//If CURLOPT_FOLLOWLOCATION landed the proxy at a diferent URL than\n//what was requested, explicitly redirect the proxy there.\n$responseURL = $responseInfo[\"url\"];\nif ($responseURL !== $url) {\n  header(\"Location: \" . PROXY_PREFIX . $responseURL, true);\n  exit(0);\n}\n\n$contentType = \"\";\nif (isset($responseInfo[\"Content-Type\"])) $contentType = $responseInfo[\"Content-Type\"];\n\n//This is presumably a web page, so attempt to proxify the DOM.\nif (stripos($contentType, \"text/html\") !== false) {\n\n  //Attempt to normalize character encoding.\n  $detectedEncoding = mb_detect_encoding($responseBody, \"UTF-8, ISO-8859-1\");\n  if ($detectedEncoding) {\n    $responseBody = mb_convert_encoding($responseBody, \"HTML-ENTITIES\", $detectedEncoding);\n  }\n\n  //Parse the DOM.\n  $doc = new DomDocument();\n  @$doc->loadHTML($responseBody);\n  $xpath = new DOMXPath($doc);\n\n  //Rewrite forms so that their actions point back to the proxy.\n  foreach ($xpath->query(\"//form\") as $form) {\n    $method = $form->getAttribute(\"method\");\n    $action = $form->getAttribute(\"action\");\n    //If the form doesn't have an action, the action is the page itself.\n    //Otherwise, change an existing action to an absolute version.\n    $action = empty($action) ? $url : rel2abs($action, $url);\n    //Rewrite the form action to point back at the proxy.\n    $form->setAttribute(\"action\", rtrim(PROXY_PREFIX, \"?\"));\n    //Add a hidden form field that the proxy can later use to retreive the original form action.\n    $actionInput = $doc->createDocumentFragment();\n    $actionInput->appendXML('<input type=\"hidden\" name=\"miniProxyFormAction\" value=\"' . htmlspecialchars($action) . '\" />');\n    $form->appendChild($actionInput);\n  }\n  //Proxify <meta> tags with an 'http-equiv=\"refresh\"' attribute.\n  foreach ($xpath->query(\"//meta[@http-equiv]\") as $element) {\n    if (strcasecmp($element->getAttribute(\"http-equiv\"), \"refresh\") === 0) {\n      $content = $element->getAttribute(\"content\");\n      if (!empty($content)) {\n        $splitContent = preg_split(\"/=/\", $content);\n        if (isset($splitContent[1])) {\n          $element->setAttribute(\"content\", $splitContent[0] . \"=\" . PROXY_PREFIX . rel2abs($splitContent[1], $url));\n        }\n      }\n    }\n  }\n  //Profixy <style> tags.\n  foreach ($xpath->query(\"//style\") as $style) {\n    $style->nodeValue = proxifyCSS($style->nodeValue, $url);\n  }\n  //Proxify tags with a \"style\" attribute.\n  foreach ($xpath->query(\"//*[@style]\") as $element) {\n    $element->setAttribute(\"style\", proxifyCSS($element->getAttribute(\"style\"), $url));\n  }\n  //Proxify \"srcset\" attributes in <img> tags.\n  foreach ($xpath->query(\"//img[@srcset]\") as $element) {\n    $element->setAttribute(\"srcset\", proxifySrcset($element->getAttribute(\"srcset\"), $url));\n  }\n  //Proxify any of these attributes appearing in any tag.\n  $proxifyAttributes = [\"href\", \"src\"];\n  foreach ($proxifyAttributes as $attrName) {\n    foreach ($xpath->query(\"//*[@\" . $attrName . \"]\") as $element) { //For every element with the given attribute...\n      $attrContent = $element->getAttribute($attrName);\n      if ($attrName == \"href\" && preg_match(\"/^(about|javascript|magnet|mailto):|#/i\", $attrContent)) continue;\n      if ($attrName == \"src\" && preg_match(\"/^(data):/i\", $attrContent)) continue;\n      $attrContent = rel2abs($attrContent, $url);\n      $attrContent = PROXY_PREFIX . $attrContent;\n      $element->setAttribute($attrName, $attrContent);\n    }\n  }\n\n  //Attempt to force AJAX requests to be made through the proxy by\n  //wrapping window.XMLHttpRequest.prototype.open in order to make\n  //all request URLs absolute and point back to the proxy.\n  //The rel2abs() JavaScript function serves the same purpose as the server-side one in this file,\n  //but is used in the browser to ensure all AJAX request URLs are absolute and not relative.\n  //Uses code from these sources:\n  //http://stackoverflow.com/questions/7775767/javascript-overriding-xmlhttprequest-open\n  //https://gist.github.com/1088850\n  //TODO: This is obviously only useful for browsers that use XMLHttpRequest but\n  //it's better than nothing.\n\n  $head = $xpath->query(\"//head\")->item(0);\n  $body = $xpath->query(\"//body\")->item(0);\n  $prependElem = $head != null ? $head : $body;\n\n  //Only bother trying to apply this hack if the DOM has a <head> or <body> element;\n  //insert some JavaScript at the top of whichever is available first.\n  //Protects against cases where the server sends a Content-Type of \"text/html\" when\n  //what's coming back is most likely not actually HTML.\n  //TODO: Do this check before attempting to do any sort of DOM parsing?\n  if ($prependElem != null) {\n\n    $scriptElem = $doc->createElement(\n      \"script\",\n      '(function() {\n        if (window.XMLHttpRequest) {\n          function parseURI(url) {\n            var m = String(url).replace(/^\\s+|\\s+$/g, \"\").match(/^([^:\\/?#]+:)?(\\/\\/(?:[^:@]*(?::[^:@]*)?@)?(([^:\\/?#]*)(?::(\\d*))?))?([^?#]*)(\\?[^#]*)?(#[\\s\\S]*)?/);\n            // authority = \"//\" + user + \":\" + pass \"@\" + hostname + \":\" port\n            return (m ? {\n              href : m[0] || \"\",\n              protocol : m[1] || \"\",\n              authority: m[2] || \"\",\n              host : m[3] || \"\",\n              hostname : m[4] || \"\",\n              port : m[5] || \"\",\n              pathname : m[6] || \"\",\n              search : m[7] || \"\",\n              hash : m[8] || \"\"\n            } : null);\n          }\n          function rel2abs(base, href) { // RFC 3986\n            function removeDotSegments(input) {\n              var output = [];\n              input.replace(/^(\\.\\.?(\\/|$))+/, \"\")\n                .replace(/\\/(\\.(\\/|$))+/g, \"/\")\n                .replace(/\\/\\.\\.$/, \"/../\")\n                .replace(/\\/?[^\\/]*/g, function (p) {\n                  if (p === \"/..\") {\n                    output.pop();\n                  } else {\n                    output.push(p);\n                  }\n                });\n              return output.join(\"\").replace(/^\\//, input.charAt(0) === \"/\" ? \"/\" : \"\");\n            }\n            href = parseURI(href || \"\");\n            base = parseURI(base || \"\");\n            return !href || !base ? null : (href.protocol || base.protocol) +\n            (href.protocol || href.authority ? href.authority : base.authority) +\n            removeDotSegments(href.protocol || href.authority || href.pathname.charAt(0) === \"/\" ? href.pathname : (href.pathname ? ((base.authority && !base.pathname ? \"/\" : \"\") + base.pathname.slice(0, base.pathname.lastIndexOf(\"/\") + 1) + href.pathname) : base.pathname)) +\n            (href.protocol || href.authority || href.pathname ? href.search : (href.search || base.search)) +\n            href.hash;\n          }\n          var proxied = window.XMLHttpRequest.prototype.open;\n          window.XMLHttpRequest.prototype.open = function() {\n              if (arguments[1] !== null && arguments[1] !== undefined) {\n                var url = arguments[1];\n                url = rel2abs(\"' . $url . '\", url);\n                if (url.indexOf(\"' . PROXY_PREFIX . '\") == -1) {\n                  url = \"' . PROXY_PREFIX . '\" + url;\n                }\n                arguments[1] = url;\n              }\n              return proxied.apply(this, [].slice.call(arguments));\n          };\n        }\n      })();'\n    );\n    $scriptElem->setAttribute(\"type\", \"text/javascript\");\n\n    $prependElem->insertBefore($scriptElem, $prependElem->firstChild);\n  }\n\n  echo \"<!-- Proxified page constructed by miniProxy -->\\n\" . $doc->saveHTML();\n} else if (stripos($contentType, \"text/css\") !== false) { //This is CSS, so proxify url() references.\n  echo proxifyCSS($responseBody, $url);\n} else { //This isn't a web page or CSS, so serve unmodified through the proxy with the correct headers (images, JavaScript, etc.)\n  header(\"Content-Length: \" . strlen($responseBody), true);\n  echo $responseBody;\n}\n",
+			"file": "react-ts/miniProxy.php",
+			"file_size": 27181,
+			"file_write_time": 132546998065863122,
 			"settings":
 			{
-				"buffer_size": 2788,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
+				"buffer_size": 26573,
+				"line_ending": "Windows",
+				"scratch": true
 			}
 		},
 		{
-			"file": "react-ts/src/components/MobileMedia.tsx",
+			"file": "react-ts/test-ts.html",
 			"settings":
 			{
-				"buffer_size": 3019,
+				"buffer_size": 3636,
+				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		}
@@ -661,6 +665,34 @@
 		"selected_items":
 		[
 			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"en",
+				"Package Control: Enable Package"
+			],
+			[
+				"package",
+				"Package Control: Install Package"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"package ",
+				"Package Control: List Packages"
+			],
+			[
+				"packge",
+				"Package Control: Enable Package"
+			],
+			[
+				"dis",
+				"Package Control: Disable Package"
+			],
+			[
 				"eidt",
 				"Project: Edit Project"
 			],
@@ -789,14 +821,6 @@
 				"Git: Commit"
 			],
 			[
-				"remove",
-				"Package Control: Remove Package"
-			],
-			[
-				"dis",
-				"Package Control: Disable Package"
-			],
-			[
 				"disb",
 				"Package Control: Disable Package"
 			],
@@ -849,10 +873,6 @@
 				"Set Syntax: Diff"
 			],
 			[
-				"inst",
-				"Package Control: Install Package"
-			],
-			[
 				"remo",
 				"Package Control: Remove Package"
 			],
@@ -863,10 +883,6 @@
 			[
 				"disa",
 				"Package Control: Disable Package"
-			],
-			[
-				"package",
-				"Package Control: Install Package"
 			],
 			[
 				"utf",
@@ -959,12 +975,26 @@
 	"expanded_folders":
 	[
 		"/C/coding/md-code/ts-demos",
-		"/C/coding/md-code/ts-demos/react-ts",
-		"/C/coding/md-code/ts-demos/react-ts/public",
-		"/C/coding/md-code/ts-demos/react-ts/src"
+		"/C/coding/md-code/ts-demos/react-ts"
 	],
 	"file_history":
 	[
+		"/C/coding/md-code/ts-demos/react-ts/src/components/MobileMedia.tsx",
+		"/C/coding/md-code/ts-demos/react-ts/src/App.tsx",
+		"/C/Users/OCEAN/AppData/Roaming/Sublime Text 3/Installed Packages/LSP.sublime/plugin/core/windows.py",
+		"/C/Users/OCEAN/AppData/Roaming/Sublime Text 3/Installed Packages/LSP.sublime-package",
+		"/C/Users/OCEAN/AppData/Roaming/Sublime Text 3/Packages/TypeScript/tsserver/tsc.js",
+		"/C/Users/OCEAN/AppData/Roaming/Sublime Text 3/Local/Auto Save Session.sublime_session",
+		"/C/Users/OCEAN/AppData/Roaming/Sublime Text 3/Packages/User/Projects/list.txt",
+		"/C/Users/OCEAN/AppData/Roaming/Sublime Text 3/Packages/User/Projects/MD.sublime-project",
+		"/C/Users/OCEAN/AppData/Roaming/Sublime Text 3/Packages/TypeScript/README.md",
+		"/C/coding/md-code/ts-demos/react-ts/phpproxy-2.1/readme.txt",
+		"/C/coding/md-code/ts-demos/react-ts/phpproxy-2.1/index.php",
+		"/C/coding/md-code/ts-demos/react-ts/phpproxy-2.1/config.php",
+		"/C/coding/md-code/ts-demos/react-ts/phpproxy-2.1/lang/Chinese.php",
+		"/C/coding/md-code/ts-demos/react-ts/phpproxy-2.1/lang/English.php",
+		"/C/coding/md-code/ts-demos/react-ts/miniProxy.php",
+		"/C/coding/md-code/ts-demos/react-ts/phpproxy-2.1/readme (2).txt",
 		"/C/coding/md-code/vue-3.0/demo-ts/src/greet.d.ts",
 		"/C/coding/md-code/vue-3.0/demo-ts/src/views/About.vue",
 		"/C/coding/md-code/vue-3.0/demo-ts/src/main.ts",
@@ -974,7 +1004,6 @@
 		"/C/coding/md-code/vue-3.0/demo-ts/src/shims-tsx.d.ts",
 		"/C/coding/md-code/vue-3.0/demo-ts/src/shims-vue.d.ts",
 		"/C/coding/md-code/vue-3.0/demo-ts/vue3ts.sublime-project",
-		"/C/coding/md-code/ts-demos/react-ts/src/App.tsx",
 		"/C/coding/md-code/ts-demos/react-ts/src/components/User.tsx",
 		"/C/coding/md-code/ts-demos/react-ts/src/components/About.tsx",
 		"/C/coding/md-code/ts-demos/react-ts/README.md",
@@ -1077,32 +1106,22 @@
 		"/C/coding/md-code/cppDemos/src/reference.cpp",
 		"/C/coding/md-code/cppDemos/src/list.cpp",
 		"/C/coding/md-code/cppDemos/cppDemo.sublime-project",
-		"/C/Users/OCEAN/AppData/Roaming/Sublime Text 3/Packages/User/Default (Windows).sublime-keymap",
-		"/C/Users/OCEAN/AppData/Roaming/Sublime Text 3/Packages/Emmet/Default (Windows).sublime-keymap",
-		"/C/Users/OCEAN/AppData/Roaming/Sublime Text 3/Packages/Emmet/Emmet.sublime-settings",
-		"/C/coding/md-code/cppDemos/build/Testing/Temporary/LastTestsFailed.log",
-		"/C/coding/md-code/cppDemos/build/Testing/Temporary/LastTest.log",
-		"/C/coding/md-code/cppDemos/out.txt",
-		"/C/coding/md-code/git-demo/dogit.bat",
-		"/C/coding/md-code/cppDemos/cppDemo.sublime-workspace",
-		"/C/coding/md/readme_markdown.md",
-		"/C/coding/md/OpenToonz/Blender.md",
-		"/C/coding/md/readme_node.md",
-		"/C/coding/md/c-daystep/readme.html",
-		"/C/Users/OCEAN/AppData/Roaming/Sublime Text 3/Packages/User/Node.sublime-build",
-		"/C/coding/md/readme_es6.md",
-		"/C/coding/md/readme_git.md",
-		"/C/coding/md-code/git-demo/readme.md"
+		"/C/Users/OCEAN/AppData/Roaming/Sublime Text 3/Packages/User/Default (Windows).sublime-keymap"
 	],
 	"find":
 	{
-		"height": 23.0
+		"height": 40.0
 	},
 	"find_in_files":
 	{
 		"height": 451.0,
 		"where_history":
 		[
+			"C:\\Users\\OCEAN\\AppData\\Roaming\\Sublime Text 3\\Installed Packages\\LSP.sublime",
+			"C:\\Program Files\\Sublime Text 3",
+			"C:\\Users\\OCEAN\\AppData\\Roaming\\Sublime Text 3\\",
+			"C:\\Users\\OCEAN\\AppData\\Roaming\\Sublime Text 3\\Packages",
+			"C:\\Users\\OCEAN\\AppData\\Roaming\\Sublime Text 3\\Packages\\TypeScript",
 			"C:\\coding\\md-code\\ts-demos\\angular-ts\\src"
 		]
 	},
@@ -1111,6 +1130,13 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"//",
+			"could not start",
+			"typescript-langserver",
+			"could not start javascript-typescript-langserver",
+			"forceCORS",
+			"Access-Control-Allow-Origin",
+			"parse_url",
 			"play",
 			"snssdk",
 			"http://v26.douyinvod.com/96725c73259af0df00e862d9a59ba4d6/5ff86723/video/tos/cn/tos-cn-ve-15/c2dd660d7be34f79827378888d9b5caf/?a=1128&br=5757&bt=1919&cd=0%7C0%7C0&cr=0&cs=0&cv=1&dr=0&ds=3&er=&l=2021010821060801019806207914232533&lr=&mime_type=video_mp4&qs=0&rc=ajNvdHM6M3M2djMzNmkzM0ApN2k7aGg1aWQ7NzY6PDY3PGdkNS4tNWA1bTFfLS1gLS9zc2M2Ni8yYzNhNi5eLjViMDY6Yw%3D%3D&vl=&vr=",
@@ -1139,7 +1165,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -1155,50 +1181,8 @@
 						"selection":
 						[
 							[
-								495,
-								495
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"is_init_dirty_state": false,
-							"origin_encoding": "ASCII",
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/TypeScript/TypeScriptReact.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true,
-							"typescript_plugin_format_options":
-							{
-								"convertTabsToSpaces": true,
-								"indentSize": 4,
-								"tabSize": 4
-							},
-							"use_tab_stops": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "react-ts/src/App.tsx",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2788,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
+								1220,
+								1220
 							]
 						],
 						"settings":
@@ -1220,27 +1204,70 @@
 							"use_tab_stops": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 144.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "react-ts/src/components/MobileMedia.tsx",
+					"buffer": 1,
+					"file": "react-ts/miniProxy.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3019,
+						"buffer_size": 26573,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								905,
-								905
+								17617,
+								17658
+							]
+						],
+						"settings":
+						{
+							"in_converting": true,
+							"incomplete_sync": null,
+							"is_init_dirty_state": false,
+							"origin_content": "<?php\n/*\nNOTE: miniProxy IS NO LONGER MAINTAINED AS OF APRIL 26th, 2020.\nIF YOU USE IT, YOU DO SO ENTIRELY AT YOUR OWN RISK.\nMore information is available at <https://github.com/joshdick/miniProxy>.\n*/\n\n/*\nminiProxy - A simple PHP web proxy. <https://github.com/joshdick/miniProxy>\nWritten and maintained by Joshua Dick <http://joshdick.net>.\nminiProxy is licensed under the GNU GPL v3 <https://www.gnu.org/licenses/gpl-3.0.html>.\n*/\n\n/****************************** START CONFIGURATION ******************************/\n\n//NOTE: If a given URL matches a pattern in both $whitelistPatterns and $blacklistPatterns,\n//that URL will be treated as blacklisted.\n\n//To allow proxying any URL, set $whitelistPatterns to an empty array (the default).\n//To only allow proxying of specific URLs (whitelist), add corresponding regular expressions\n//to the $whitelistPatterns array. To prevent possible abuse, enter the narrowest/most-specific patterns possible.\n//You can optionally use the \"getHostnamePattern()\" helper function to build a regular expression that\n//matches all URLs for a given hostname.\n$whitelistPatterns = [\n  //Usage example: To whitelist any URL at example.net, including sub-domains, uncomment the\n  //line below (which is equivalent to [ @^https?://([a-z0-9-]+\\.)*example\\.net@i ]):\n  //getHostnamePattern(\"example.net\")\n];\n\n//To disallow proxying of specific URLs (blacklist), add corresponding regular expressions\n//to the $blacklistPatterns array. To prevent possible abuse, enter the broadest/least-specific patterns possible.\n//You can optionally use the \"getHostnamePattern()\" helper function to build a regular expression that\n//matches all URLs for a given hostname.\n$blacklistPatterns = [\n  //Usage example: To blacklist any URL at example.net, including sub-domains, uncomment the\n  //line below (which is equivalent to [ @^https?://([a-z0-9-]+\\.)*example\\.net@i ]):\n  //getHostnamePattern(\"example.net\")\n];\n\n//To enable CORS (cross-origin resource sharing) for proxied sites, set $forceCORS to true.\n$forceCORS = true;\n\n//Set to false to allow sites on the local network (where miniProxy is running) to be proxied.\n$disallowLocal = true;\n\n//Set to false to report the client machine's IP address to proxied sites via the HTTP `x-forwarded-for` header.\n//Setting to false may improve compatibility with some sites, but also exposes more information about end users to proxied sites.\n$anonymize = true;\n\n//Start/default URL that that will be proxied when miniProxy is first loaded in a browser/accessed directly with no URL to proxy.\n//If empty, miniProxy will show its own landing page.\n$startURL = \"\";\n\n//When no $startURL is configured above, miniProxy will show its own landing page with a URL form field\n//and the configured example URL. The example URL appears in the instructional text on the miniProxy landing page,\n//and is proxied when pressing the 'Proxy It!' button on the landing page if its URL form is left blank.\n$landingExampleURL = \"https://example.net\";\n\n/****************************** END CONFIGURATION ******************************/\n\nob_start(\"ob_gzhandler\");\n\nif (version_compare(PHP_VERSION, \"5.4.7\", \"<\")) {\n  die(\"miniProxy requires PHP version 5.4.7 or later.\");\n}\n\n$requiredExtensions = [\"curl\", \"mbstring\", \"xml\"];\nforeach ($requiredExtensions as $requiredExtension) {\n  if (!extension_loaded($requiredExtension)) {\n    die(\"miniProxy requires PHP's \\\"\" . $requiredExtension . \"\\\" extension. Please install/enable it on your server and try again.\");\n  }\n}\n\n//Helper function for use inside $whitelistPatterns/$blacklistPatterns.\n//Returns a regex that matches all HTTP[S] URLs for a given hostname.\nfunction getHostnamePattern($hostname)\n{\n  $escapedHostname = str_replace(\".\", \"\\.\", $hostname);\n  return \"@^https?://([a-z0-9-]+\\.)*\" . $escapedHostname . \"@i\";\n}\n\n//Helper function that determines whether to allow proxying of a given URL.\nfunction isValidURL($url)\n{\n  //Validates a URL against the whitelist.\n  function passesWhitelist($url)\n  {\n    if (count($GLOBALS['whitelistPatterns']) === 0) return true;\n    foreach ($GLOBALS['whitelistPatterns'] as $pattern) {\n      if (preg_match($pattern, $url)) {\n        return true;\n      }\n    }\n    return false;\n  }\n\n  //Validates a URL against the blacklist.\n  function passesBlacklist($url)\n  {\n    foreach ($GLOBALS['blacklistPatterns'] as $pattern) {\n      if (preg_match($pattern, $url)) {\n        return false;\n      }\n    }\n    return true;\n  }\n\n  function isLocal($url)\n  {\n    //First, generate a list of IP addresses that correspond to the requested URL.\n    $ips = [];\n    $host = parse_url($url, PHP_URL_HOST);\n    if (filter_var($host, FILTER_VALIDATE_IP)) {\n      //The supplied host is already a valid IP address.\n      $ips = [$host];\n    } else {\n      //The host is not a valid IP address; attempt to resolve it to one.\n      $dnsResult = dns_get_record($host, DNS_A + DNS_AAAA);\n      $ips = array_map(function ($dnsRecord) {\n        return $dnsRecord['type'] == 'A' ? $dnsRecord['ip'] : $dnsRecord['ipv6'];\n      }, $dnsResult);\n    }\n    foreach ($ips as $ip) {\n      //Determine whether any of the IPs are in the private or reserved range.\n      if (!filter_var($ip, FILTER_VALIDATE_IP, FILTER_FLAG_NO_PRIV_RANGE | FILTER_FLAG_NO_RES_RANGE)) {\n        return true;\n      }\n    }\n    return false;\n  }\n\n  return passesWhitelist($url) && passesBlacklist($url) && ($GLOBALS['disallowLocal'] ? !isLocal($url) : true);\n}\n\n//Helper function used to removes/unset keys from an associative array using case insensitive matching\nfunction removeKeys(&$assoc, $keys2remove)\n{\n  $keys = array_keys($assoc);\n  $map = [];\n  $removedKeys = [];\n  foreach ($keys as $key) {\n    $map[strtolower($key)] = $key;\n  }\n  foreach ($keys2remove as $key) {\n    $key = strtolower($key);\n    if (isset($map[$key])) {\n      unset($assoc[$map[$key]]);\n      $removedKeys[] = $map[$key];\n    }\n  }\n  return $removedKeys;\n}\n\nif (!function_exists(\"getallheaders\")) {\n  //Adapted from http://www.php.net/manual/en/function.getallheaders.php#99814\n  function getallheaders()\n  {\n    $result = [];\n    foreach ($_SERVER as $key => $value) {\n      if (substr($key, 0, 5) == \"HTTP_\") {\n        $key = str_replace(\" \", \"-\", ucwords(strtolower(str_replace(\"_\", \" \", substr($key, 5)))));\n        $result[$key] = $value;\n      }\n    }\n    return $result;\n  }\n}\n\n$usingDefaultPort = (!isset($_SERVER[\"HTTPS\"]) && $_SERVER[\"SERVER_PORT\"] === 80) || (isset($_SERVER[\"HTTPS\"]) && $_SERVER[\"SERVER_PORT\"] === 443);\n$prefixPort = $usingDefaultPort ? \"\" : \":\" . $_SERVER[\"SERVER_PORT\"];\n//Use HTTP_HOST to support client-configured DNS (instead of SERVER_NAME), but remove the port if one is present\n$prefixHost = $_SERVER[\"HTTP_HOST\"];\n$prefixHost = strpos($prefixHost, \":\") ? implode(\":\", explode(\":\", $_SERVER[\"HTTP_HOST\"], -1)) : $prefixHost;\n\ndefine(\"PROXY_PREFIX\", \"http\" . (isset($_SERVER[\"HTTPS\"]) ? \"s\" : \"\") . \"://\" . $prefixHost . $prefixPort . $_SERVER[\"SCRIPT_NAME\"] . \"?\");\n\n//Makes an HTTP request via cURL, using request data that was passed directly to this script.\nfunction makeRequest($url)\n{\n\n  global $anonymize;\n\n  //Tell cURL to make the request using the brower's user-agent if there is one, or a fallback user-agent otherwise.\n  $user_agent = $_SERVER[\"HTTP_USER_AGENT\"];\n  if (empty($user_agent)) {\n    $user_agent = \"Mozilla/5.0 (compatible; miniProxy)\";\n  }\n  $ch = curl_init();\n  curl_setopt($ch, CURLOPT_USERAGENT, $user_agent);\n\n  //Get ready to proxy the browser's request headers...\n  $browserRequestHeaders = getallheaders();\n\n  //...but let cURL set some headers on its own.\n  $removedHeaders = removeKeys(\n    $browserRequestHeaders,\n    [\n      \"Accept-Encoding\", //Throw away the browser's Accept-Encoding header if any and let cURL make the request using gzip if possible.\n      \"Content-Length\",\n      \"Host\",\n      \"Origin\"\n    ]\n  );\n\n  $removedHeaders = array_map(\"strtolower\", $removedHeaders);\n\n  curl_setopt($ch, CURLOPT_ENCODING, \"\");\n  //Transform the associative array from getallheaders() into an\n  //indexed array of header strings to be passed to cURL.\n  $curlRequestHeaders = [];\n  foreach ($browserRequestHeaders as $name => $value) {\n    $curlRequestHeaders[] = $name . \": \" . $value;\n  }\n  if (!$anonymize) {\n    $curlRequestHeaders[] = \"X-Forwarded-For: \" . $_SERVER[\"REMOTE_ADDR\"];\n  }\n  //Any `origin` header sent by the browser will refer to the proxy itself.\n  //If an `origin` header is present in the request, rewrite it to point to the correct origin.\n  if (in_array(\"origin\", $removedHeaders)) {\n    $urlParts = parse_url($url);\n    $port = @$urlParts[\"port\"];\n    $curlRequestHeaders[] = \"Origin: \" . $urlParts[\"scheme\"] . \"://\" . $urlParts[\"host\"] . (empty($port) ? \"\" : \":\" . $port);\n  };\n  curl_setopt($ch, CURLOPT_HTTPHEADER, $curlRequestHeaders);\n\n  //Proxy any received GET/POST/PUT data.\n  switch ($_SERVER[\"REQUEST_METHOD\"]) {\n    case \"POST\":\n      curl_setopt($ch, CURLOPT_POST, true);\n      //For some reason, $HTTP_RAW_POST_DATA isn't working as documented at\n      //http://php.net/manual/en/reserved.variables.httprawpostdata.php\n      //but the php://input method works. This is likely to be flaky\n      //across different server environments.\n      //More info here: http://stackoverflow.com/questions/8899239/http-raw-post-data-not-being-populated-after-upgrade-to-php-5-3\n      //If the miniProxyFormAction field appears in the POST data, remove it so the destination server doesn't receive it.\n      $postData = [];\n      parse_str(file_get_contents(\"php://input\"), $postData);\n      if (isset($postData[\"miniProxyFormAction\"])) {\n        unset($postData[\"miniProxyFormAction\"]);\n      }\n      curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($postData));\n      break;\n    case \"PUT\":\n      curl_setopt($ch, CURLOPT_PUT, true);\n      curl_setopt($ch, CURLOPT_INFILE, fopen(\"php://input\", \"r\"));\n      break;\n  }\n\n  //Other cURL options.\n  curl_setopt($ch, CURLOPT_HEADER, true);\n  curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);\n  curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);\n\n  //Set the request URL.\n  curl_setopt($ch, CURLOPT_URL, $url);\n\n  //Make the request.\n  $response = curl_exec($ch);\n  $responseInfo = curl_getinfo($ch);\n  $headerSize = curl_getinfo($ch, CURLINFO_HEADER_SIZE);\n  curl_close($ch);\n\n  //Setting CURLOPT_HEADER to true above forces the response headers and body\n  //to be output together--separate them.\n  $responseHeaders = substr($response, 0, $headerSize);\n  $responseBody = substr($response, $headerSize);\n\n  return [\"headers\" => $responseHeaders, \"body\" => $responseBody, \"responseInfo\" => $responseInfo];\n}\n\n//Converts relative URLs to absolute ones, given a base URL.\n//Modified version of code found at http://nashruddin.com/PHP_Script_for_Converting_Relative_to_Absolute_URL\nfunction rel2abs($rel, $base)\n{\n  if (empty($rel)) $rel = \".\";\n  if (parse_url($rel, PHP_URL_SCHEME) != \"\" || strpos($rel, \"//\") === 0) return $rel; //Return if already an absolute URL\n  if ($rel[0] == \"#\" || $rel[0] == \"?\") return $base . $rel; //Queries and anchors\n  extract(parse_url($base)); //Parse base URL and convert to local variables: $scheme, $host, $path\n  $path = isset($path) ? preg_replace(\"#/[^/]*$#\", \"\", $path) : \"/\"; //Remove non-directory element from path\n  if ($rel[0] == \"/\") $path = \"\"; //Destroy path if relative url points to root\n  $port = isset($port) && $port != 80 ? \":\" . $port : \"\";\n  $auth = \"\";\n  if (isset($user)) {\n    $auth = $user;\n    if (isset($pass)) {\n      $auth .= \":\" . $pass;\n    }\n    $auth .= \"@\";\n  }\n  $abs = \"$auth$host$port$path/$rel\"; //Dirty absolute URL\n  for ($n = 1; $n > 0; $abs = preg_replace([\"#(/\\.?/)#\", \"#/(?!\\.\\.)[^/]+/\\.\\./#\"], \"/\", $abs, -1, $n)) { } //Replace '//' or '/./' or '/foo/../' with '/'\n  return $scheme . \"://\" . $abs; //Absolute URL is ready.\n}\n\n//Proxify contents of url() references in blocks of CSS text.\nfunction proxifyCSS($css, $baseURL)\n{\n  //Add a \"url()\" wrapper to any CSS @import rules that only specify a URL without the wrapper,\n  //so that they're proxified when searching for \"url()\" wrappers below.\n  $sourceLines = explode(\"\\n\", $css);\n  $normalizedLines = [];\n  foreach ($sourceLines as $line) {\n    if (preg_match(\"/@import\\s+url/i\", $line)) {\n      $normalizedLines[] = $line;\n    } else {\n      $normalizedLines[] = preg_replace_callback(\n        \"/(@import\\s+)([^;\\s]+)([\\s;])/i\",\n        function ($matches) use ($baseURL) {\n          return $matches[1] . \"url(\" . $matches[2] . \")\" . $matches[3];\n        },\n        $line\n      );\n    }\n  }\n  $normalizedCSS = implode(\"\\n\", $normalizedLines);\n  return preg_replace_callback(\n    \"/url\\((.*?)\\)/i\",\n    function ($matches) use ($baseURL) {\n      $url = $matches[1];\n      //Remove any surrounding single or double quotes from the URL so it can be passed to rel2abs - the quotes are optional in CSS\n      //Assume that if there is a leading quote then there should be a trailing quote, so just use trim() to remove them\n      if (strpos($url, \"'\") === 0) {\n        $url = trim($url, \"'\");\n      }\n      if (strpos($url, \"\\\"\") === 0) {\n        $url = trim($url, \"\\\"\");\n      }\n      if (stripos($url, \"data:\") === 0) return \"url(\" . $url . \")\"; //The URL isn't an HTTP URL but is actual binary data. Don't proxify it.\n      return \"url(\" . PROXY_PREFIX . rel2abs($url, $baseURL) . \")\";\n    },\n    $normalizedCSS\n  );\n}\n\n//Proxify \"srcset\" attributes (normally associated with <img> tags.)\nfunction proxifySrcset($srcset, $baseURL)\n{\n  $sources = array_map(\"trim\", explode(\",\", $srcset)); //Split all contents by comma and trim each value\n  $proxifiedSources = array_map(function ($source) use ($baseURL) {\n    $components = array_map(\"trim\", str_split($source, strrpos($source, \" \"))); //Split by last space and trim\n    $components[0] = PROXY_PREFIX . rel2abs(ltrim($components[0], \"/\"), $baseURL); //First component of the split source string should be an image URL; proxify it\n    return implode($components, \" \"); //Recombine the components into a single source\n  }, $sources);\n  $proxifiedSrcset = implode(\", \", $proxifiedSources); //Recombine the sources into a single \"srcset\"\n  return $proxifiedSrcset;\n}\n\n//Extract and sanitize the requested URL, handling cases where forms have been rewritten to point to the proxy.\nif (isset($_POST[\"miniProxyFormAction\"])) {\n  $url = $_POST[\"miniProxyFormAction\"];\n  unset($_POST[\"miniProxyFormAction\"]);\n} else {\n  $queryParams = [];\n  parse_str($_SERVER[\"QUERY_STRING\"], $queryParams);\n  //If the miniProxyFormAction field appears in the query string, make $url start with its value, and rebuild the the query string without it.\n  if (isset($queryParams[\"miniProxyFormAction\"])) {\n    $formAction = $queryParams[\"miniProxyFormAction\"];\n    unset($queryParams[\"miniProxyFormAction\"]);\n    $url = $formAction . \"?\" . http_build_query($queryParams);\n  } else {\n    $url = substr($_SERVER[\"REQUEST_URI\"], strlen($_SERVER[\"SCRIPT_NAME\"]) + 1);\n  }\n}\nif (empty($url)) {\n  if (empty($startURL)) {\n    die(\"<html><head><title>miniProxy</title></head><body><h1>Welcome to miniProxy!</h1>miniProxy can be directly invoked like this: <a href=\\\"\" . PROXY_PREFIX . $landingExampleURL . \"\\\">\" . PROXY_PREFIX . $landingExampleURL . \"</a><br /><br />Or, you can simply enter a URL below:<br /><br /><form onsubmit=\\\"if (document.getElementById('site').value) { window.location.href='\" . PROXY_PREFIX . \"' + document.getElementById('site').value; return false; } else { window.location.href='\" . PROXY_PREFIX . $landingExampleURL . \"'; return false; }\\\" autocomplete=\\\"off\\\"><input id=\\\"site\\\" type=\\\"text\\\" size=\\\"50\\\" /><input type=\\\"submit\\\" value=\\\"Proxy It!\\\" /></form></body></html>\");\n  } else {\n    $url = $startURL;\n  }\n} else if (strpos($url, \":/\") !== strpos($url, \"://\")) {\n  //Work around the fact that some web servers (e.g. IIS 8.5) change double slashes appearing in the URL to a single slash.\n  //See https://github.com/joshdick/miniProxy/pull/14\n  $pos = strpos($url, \":/\");\n  $url = substr_replace($url, \"://\", $pos, strlen(\":/\"));\n}\n$scheme = parse_url($url, PHP_URL_SCHEME);\nif (empty($scheme)) {\n  if (strpos($url, \"//\") === 0) {\n    //Assume that any supplied URLs starting with // are HTTP URLs.\n    $url = \"http:\" . $url;\n  } else {\n    //Assume that any supplied URLs without a scheme (just a host) are HTTP URLs.\n    $url = \"http://\" . $url;\n  }\n} else if (!preg_match(\"/^https?$/i\", $scheme)) {\n  die('Error: Detected a \"' . $scheme . '\" URL. miniProxy exclusively supports http[s] URLs.');\n}\n\nif (!isValidURL($url)) {\n  die(\"Error: The requested URL was disallowed by the server administrator.\");\n}\n\n$response = makeRequest($url);\n$rawResponseHeaders = $response[\"headers\"];\n$responseBody = $response[\"body\"];\n$responseInfo = $response[\"responseInfo\"];\n\n//A regex that indicates which server response headers should be stripped out of the proxified response.\n$header_blacklist_pattern = \"/^Content-Length|^Transfer-Encoding|^Content-Encoding.*gzip/i\";\n\n//cURL can make multiple requests internally (for example, if CURLOPT_FOLLOWLOCATION is enabled), and reports\n//headers for every request it makes. Only proxy the last set of received response headers,\n//corresponding to the final request made by cURL for any given call to makeRequest().\n$responseHeaderBlocks = array_filter(explode(\"\\r\\n\\r\\n\", $rawResponseHeaders));\n$lastHeaderBlock = end($responseHeaderBlocks);\n$headerLines = explode(\"\\r\\n\", $lastHeaderBlock);\nforeach ($headerLines as $header) {\n  $header = trim($header);\n  if (!preg_match($header_blacklist_pattern, $header)) {\n    header($header, false);\n  }\n}\n//Prevent robots from indexing proxified pages\nheader(\"X-Robots-Tag: noindex, nofollow\", true);\n\nif ($forceCORS) {\n  //This logic is based on code found at: http://stackoverflow.com/a/9866124/278810\n  //CORS headers sent below may conflict with CORS headers from the original response,\n  //so these headers are sent after the original response headers to ensure their values\n  //are the ones that actually end up getting sent to the browser.\n  //Explicit [ $replace = true ] is used for these headers even though this is PHP's default behavior.\n\n  //Allow access from any origin.\n  header(\"Access-Control-Allow-Origin: *\", true);\n  header(\"Access-Control-Allow-Credentials: true\", true);\n\n  //Handle CORS headers received during OPTIONS requests.\n  if ($_SERVER[\"REQUEST_METHOD\"] == \"OPTIONS\") {\n    if (isset($_SERVER[\"HTTP_ACCESS_CONTROL_REQUEST_METHOD\"])) {\n      header(\"Access-Control-Allow-Methods: GET, POST, OPTIONS\", true);\n    }\n    if (isset($_SERVER[\"HTTP_ACCESS_CONTROL_REQUEST_HEADERS\"])) {\n      header(\"Access-Control-Allow-Headers: {$_SERVER['HTTP_ACCESS_CONTROL_REQUEST_HEADERS']}\", true);\n    }\n    //No further action is needed for OPTIONS requests.\n    exit(0);\n  }\n}\n\n//If CURLOPT_FOLLOWLOCATION landed the proxy at a diferent URL than\n//what was requested, explicitly redirect the proxy there.\n$responseURL = $responseInfo[\"url\"];\nif ($responseURL !== $url) {\n  header(\"Location: \" . PROXY_PREFIX . $responseURL, true);\n  exit(0);\n}\n\n$contentType = \"video/mp4\";\nif (isset($responseInfo[\"Content-Type\"])) $contentType = $responseInfo[\"Content-Type\"];\n\n//This is presumably a web page, so attempt to proxify the DOM.\nif (stripos($contentType, \"text/html\") !== false) {\n\n  //Attempt to normalize character encoding.\n  $detectedEncoding = mb_detect_encoding($responseBody, \"UTF-8, ISO-8859-1\");\n  if ($detectedEncoding) {\n    $responseBody = mb_convert_encoding($responseBody, \"HTML-ENTITIES\", $detectedEncoding);\n  }\n\n  //Parse the DOM.\n  $doc = new DomDocument();\n  @$doc->loadHTML($responseBody);\n  $xpath = new DOMXPath($doc);\n\n  //Rewrite forms so that their actions point back to the proxy.\n  foreach ($xpath->query(\"//form\") as $form) {\n    $method = $form->getAttribute(\"method\");\n    $action = $form->getAttribute(\"action\");\n    //If the form doesn't have an action, the action is the page itself.\n    //Otherwise, change an existing action to an absolute version.\n    $action = empty($action) ? $url : rel2abs($action, $url);\n    //Rewrite the form action to point back at the proxy.\n    $form->setAttribute(\"action\", rtrim(PROXY_PREFIX, \"?\"));\n    //Add a hidden form field that the proxy can later use to retreive the original form action.\n    $actionInput = $doc->createDocumentFragment();\n    $actionInput->appendXML('<input type=\"hidden\" name=\"miniProxyFormAction\" value=\"' . htmlspecialchars($action) . '\" />');\n    $form->appendChild($actionInput);\n  }\n  //Proxify <meta> tags with an 'http-equiv=\"refresh\"' attribute.\n  foreach ($xpath->query(\"//meta[@http-equiv]\") as $element) {\n    if (strcasecmp($element->getAttribute(\"http-equiv\"), \"refresh\") === 0) {\n      $content = $element->getAttribute(\"content\");\n      if (!empty($content)) {\n        $splitContent = preg_split(\"/=/\", $content);\n        if (isset($splitContent[1])) {\n          $element->setAttribute(\"content\", $splitContent[0] . \"=\" . PROXY_PREFIX . rel2abs($splitContent[1], $url));\n        }\n      }\n    }\n  }\n  //Profixy <style> tags.\n  foreach ($xpath->query(\"//style\") as $style) {\n    $style->nodeValue = proxifyCSS($style->nodeValue, $url);\n  }\n  //Proxify tags with a \"style\" attribute.\n  foreach ($xpath->query(\"//*[@style]\") as $element) {\n    $element->setAttribute(\"style\", proxifyCSS($element->getAttribute(\"style\"), $url));\n  }\n  //Proxify \"srcset\" attributes in <img> tags.\n  foreach ($xpath->query(\"//img[@srcset]\") as $element) {\n    $element->setAttribute(\"srcset\", proxifySrcset($element->getAttribute(\"srcset\"), $url));\n  }\n  //Proxify any of these attributes appearing in any tag.\n  $proxifyAttributes = [\"href\", \"src\"];\n  foreach ($proxifyAttributes as $attrName) {\n    foreach ($xpath->query(\"//*[@\" . $attrName . \"]\") as $element) { //For every element with the given attribute...\n      $attrContent = $element->getAttribute($attrName);\n      if ($attrName == \"href\" && preg_match(\"/^(about|javascript|magnet|mailto):|#/i\", $attrContent)) continue;\n      if ($attrName == \"src\" && preg_match(\"/^(data):/i\", $attrContent)) continue;\n      $attrContent = rel2abs($attrContent, $url);\n      $attrContent = PROXY_PREFIX . $attrContent;\n      $element->setAttribute($attrName, $attrContent);\n    }\n  }\n\n  //Attempt to force AJAX requests to be made through the proxy by\n  //wrapping window.XMLHttpRequest.prototype.open in order to make\n  //all request URLs absolute and point back to the proxy.\n  //The rel2abs() JavaScript function serves the same purpose as the server-side one in this file,\n  //but is used in the browser to ensure all AJAX request URLs are absolute and not relative.\n  //Uses code from these sources:\n  //http://stackoverflow.com/questions/7775767/javascript-overriding-xmlhttprequest-open\n  //https://gist.github.com/1088850\n  //TODO: This is obviously only useful for browsers that use XMLHttpRequest but\n  //it's better than nothing.\n\n  $head = $xpath->query(\"//head\")->item(0);\n  $body = $xpath->query(\"//body\")->item(0);\n  $prependElem = $head != null ? $head : $body;\n\n  //Only bother trying to apply this hack if the DOM has a <head> or <body> element;\n  //insert some JavaScript at the top of whichever is available first.\n  //Protects against cases where the server sends a Content-Type of \"text/html\" when\n  //what's coming back is most likely not actually HTML.\n  //TODO: Do this check before attempting to do any sort of DOM parsing?\n  if ($prependElem != null) {\n\n    $scriptElem = $doc->createElement(\n      \"script\",\n      '(function() {\n        if (window.XMLHttpRequest) {\n          function parseURI(url) {\n            var m = String(url).replace(/^\\s+|\\s+$/g, \"\").match(/^([^:\\/?#]+:)?(\\/\\/(?:[^:@]*(?::[^:@]*)?@)?(([^:\\/?#]*)(?::(\\d*))?))?([^?#]*)(\\?[^#]*)?(#[\\s\\S]*)?/);\n            // authority = \"//\" + user + \":\" + pass \"@\" + hostname + \":\" port\n            return (m ? {\n              href : m[0] || \"\",\n              protocol : m[1] || \"\",\n              authority: m[2] || \"\",\n              host : m[3] || \"\",\n              hostname : m[4] || \"\",\n              port : m[5] || \"\",\n              pathname : m[6] || \"\",\n              search : m[7] || \"\",\n              hash : m[8] || \"\"\n            } : null);\n          }\n          function rel2abs(base, href) { // RFC 3986\n            function removeDotSegments(input) {\n              var output = [];\n              input.replace(/^(\\.\\.?(\\/|$))+/, \"\")\n                .replace(/\\/(\\.(\\/|$))+/g, \"/\")\n                .replace(/\\/\\.\\.$/, \"/../\")\n                .replace(/\\/?[^\\/]*/g, function (p) {\n                  if (p === \"/..\") {\n                    output.pop();\n                  } else {\n                    output.push(p);\n                  }\n                });\n              return output.join(\"\").replace(/^\\//, input.charAt(0) === \"/\" ? \"/\" : \"\");\n            }\n            href = parseURI(href || \"\");\n            base = parseURI(base || \"\");\n            return !href || !base ? null : (href.protocol || base.protocol) +\n            (href.protocol || href.authority ? href.authority : base.authority) +\n            removeDotSegments(href.protocol || href.authority || href.pathname.charAt(0) === \"/\" ? href.pathname : (href.pathname ? ((base.authority && !base.pathname ? \"/\" : \"\") + base.pathname.slice(0, base.pathname.lastIndexOf(\"/\") + 1) + href.pathname) : base.pathname)) +\n            (href.protocol || href.authority || href.pathname ? href.search : (href.search || base.search)) +\n            href.hash;\n          }\n          var proxied = window.XMLHttpRequest.prototype.open;\n          window.XMLHttpRequest.prototype.open = function() {\n              if (arguments[1] !== null && arguments[1] !== undefined) {\n                var url = arguments[1];\n                url = rel2abs(\"' . $url . '\", url);\n                if (url.indexOf(\"' . PROXY_PREFIX . '\") == -1) {\n                  url = \"' . PROXY_PREFIX . '\" + url;\n                }\n                arguments[1] = url;\n              }\n              return proxied.apply(this, [].slice.call(arguments));\n          };\n        }\n      })();'\n    );\n    $scriptElem->setAttribute(\"type\", \"text/javascript\");\n\n    $prependElem->insertBefore($scriptElem, $prependElem->firstChild);\n  }\n\n  echo \"<!-- Proxified page constructed by miniProxy -->\\n\" . $doc->saveHTML();\n} else if (stripos($contentType, \"text/css\") !== false) { //This is CSS, so proxify url() references.\n  echo proxifyCSS($responseBody, $url);\n} else { //This isn't a web page or CSS, so serve unmodified through the proxy with the correct headers (images, JavaScript, etc.)\n  header(\"Content-Length: \" . strlen($responseBody), true);\n  echo $responseBody;\n}\n",
+							"origin_encoding": "GB2312",
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true,
+							"typescript_plugin_format_options":
+							{
+								"convertTabsToSpaces": true,
+								"indentSize": 2,
+								"tabSize": 2
+							}
+						},
+						"translation.x": 0.0,
+						"translation.y": 6014.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "react-ts/test-ts.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3636,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1374,
+								1374
 							]
 						],
 						"settings":
@@ -1250,23 +1277,15 @@
 							"origin_encoding": "ASCII",
 							"remote_loading": false,
 							"synced": false,
-							"syntax": "Packages/TypeScript/TypeScriptReact.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true,
-							"typescript_plugin_format_options":
-							{
-								"convertTabsToSpaces": true,
-								"indentSize": 4,
-								"tabSize": 4
-							},
-							"use_tab_stops": false,
-							"word_wrap": true
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 322.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 1,
 					"type": "text"
 				}
 			]
@@ -1862,9 +1881,13 @@
 	"select_project":
 	{
 		"height": 500.0,
-		"last_filter": "reac",
+		"last_filter": "ele",
 		"selected_items":
 		[
+			[
+				"ele",
+				"C:\\coding\\md-code\\electron\\electron.sublime-project"
+			],
 			[
 				"reac",
 				"C:\\coding\\md-code\\react-router\\react-router.sublime-project"
@@ -2033,7 +2056,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 304.0,
+	"side_bar_width": 225.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
