@@ -26,7 +26,7 @@ export default function tip() {
               <div className="bb-item">
               <a href="./pacman">Play Pacman</a>
               <a href="https://jimboyeah.github.io/pacman/">Play Online</a>
-              <a href="https://github.com/jimboyeah/demo/tree/packman">Github</a>
+              <a href="https://github.com/jimboyeah/demo/tree/pacman">Github</a>
               </div>
             </div>
           </li>
