@@ -1,0 +1,86 @@
+{
+	"build_systems":
+	[
+		{
+			"cmd":
+			[
+				"tsc.cmd",
+				"${file}",
+				"&&",
+				"node",
+				"${file_name}"
+			],
+			"encoding": "gbk",
+			"env":
+			{
+				"PATH": "c:/CodeBlocks/MinGW/bin/;%PATH%"
+			},
+			"file_regex": "^  (.+)\\((\\d+)\\)(): ((?:fatal )?(?:error|warning) \\w+\\d\\d\\d\\d: .*) \\[.*$",
+			"name": "TypeScript Run",
+			"quiet": true,
+			"working_dir": "${project_path}"
+		},
+		{
+			"encoding": "gbk",
+			"env":
+			{
+				"PATH": "c:/CodeBlocks/MinGW/bin/;%PATH%"
+			},
+			"file_regex": "^  (.+)\\((\\d+)\\)(): ((?:fatal )?(?:error|warning) \\w+\\d\\d\\d\\d: .*) \\[.*$",
+			"name": "Git Demo",
+			"quiet": true,
+			"shell_cmd": "git status",
+			"variants":
+			[
+				{
+					"name": "Git help",
+					"shell_cmd": "git --help"
+				},
+				{
+					"name": "Git Origin attach",
+					"shell_cmd": "git remote add origin https://github.com/jimboyeah/demo.git"
+				},
+				{
+					"name": "Branch List",
+					"shell_cmd": "git branch -a"
+				},
+				{
+					"name": "Branch List remote",
+					"shell_cmd": "git branch -r --list"
+				},
+				{
+					"name": "git show",
+					"shell_cmd": "git show"
+				}
+			],
+			"working_dir": "${project_path}"
+		}
+	],
+	"folders":
+	[
+		{
+			"binary_file_patterns":
+			[
+				"*.noting"
+			],
+			"name": "React Project",
+			"path": "."
+		},
+		{
+			"path": "C:\\coding\\md-code\\TypeScript-Handbook"
+		},
+		{
+			"path": "C:\\coding\\md-code\\create-react-app"
+		},
+		{
+			"path": "C:\\Users\\OCEAN\\AppData\\Roaming\\Sublime Text 3\\Packages\\TypeScript"
+		}
+	],
+	"settings":
+	{
+		"cmake":
+		{
+			"build_folder": "${project_path}"
+		}
+	}
+}

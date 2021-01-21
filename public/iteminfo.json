@@ -1,0 +1,189 @@
+{
+  "from": ["https://www.iesdouyin.com/web/api/v2/aweme/iteminfo/?item_ids=6850852785345400064", "https://v.douyin.com/JYNyMo6/"],
+  "item_list": [
+    {
+      "image_infos": null,
+      "author": {
+        "policy_version": null,
+        "uid": "83014696151",
+        "short_id": "174351727",
+        "signature": "谢谢关注，用抖音记录生活",
+        "unique_id": "",
+        "followers_detail": null,
+        "platform_sync_info": null,
+        "geofencing": null,
+        "type_label": null,
+        "nickname": "小萍吖💕",
+        "avatar_larger": {
+          "uri": "2dcae0000feb52eb01c8a",
+          "url_list": [
+            "https://p29-dy.byteimg.com/aweme/1080x1080/2dcae0000feb52eb01c8a.jpeg?from=4010531038",
+            "https://p1-dy-ipv6.byteimg.com/aweme/1080x1080/2dcae0000feb52eb01c8a.jpeg?from=4010531038",
+            "https://p3-dy-ipv6.byteimg.com/aweme/1080x1080/2dcae0000feb52eb01c8a.jpeg?from=4010531038"
+          ]
+        },
+        "avatar_thumb": {
+          "uri": "2dcae0000feb52eb01c8a",
+          "url_list": [
+            "https://p3-dy-ipv6.byteimg.com/aweme/100x100/2dcae0000feb52eb01c8a.jpeg?from=4010531038",
+            "https://p1-dy-ipv6.byteimg.com/aweme/100x100/2dcae0000feb52eb01c8a.jpeg?from=4010531038",
+            "https://p29-dy.byteimg.com/aweme/100x100/2dcae0000feb52eb01c8a.jpeg?from=4010531038"
+          ]
+        },
+        "avatar_medium": {
+          "url_list": [
+            "https://p6-dy-ipv6.byteimg.com/aweme/720x720/2dcae0000feb52eb01c8a.jpeg?from=4010531038",
+            "https://p29-dy.byteimg.com/aweme/720x720/2dcae0000feb52eb01c8a.jpeg?from=4010531038",
+            "https://p3-dy-ipv6.byteimg.com/aweme/720x720/2dcae0000feb52eb01c8a.jpeg?from=4010531038"
+          ],
+          "uri": "2dcae0000feb52eb01c8a"
+        }
+      },
+      "share_info": {
+        "share_weibo_desc": "#在抖音，记录美好生活#谁能告诉我，我要怎么办😂😂#火车上铺",
+        "share_desc": "在抖音，记录美好生活",
+        "share_title": "谁能告诉我，我要怎么办😂😂#火车上铺"
+      },
+      "comment_list": null,
+      "is_live_replay": false,
+      "text_extra": [
+        {
+          "start": 15,
+          "end": 20,
+          "type": 1,
+          "hashtag_name": "火车上铺",
+          "hashtag_id": 1591448598245390
+        }
+      ],
+      "geofencing": null,
+      "cha_list": [
+        {
+          "cid": "1591448598245390",
+          "user_count": 0,
+          "type": 0,
+          "view_count": 0,
+          "is_commerce": false,
+          "cha_name": "火车上铺",
+          "desc": "",
+          "connect_music": null,
+          "hash_tag_profile": ""
+        }
+      ],
+      "risk_infos": { "content": "", "warn": false, "type": 0 },
+      "author_user_id": 83014696151,
+      "video_text": null,
+      "long_video": null,
+      "forward_id": "0",
+      "promotions": null,
+      "aweme_id": "6850852785345400064",
+      "desc": "谁能告诉我，我要怎么办😂😂#火车上铺",
+      "music": {
+        "mid": "6635819768786094852",
+        "cover_medium": {
+          "uri": "26d3700044d4562ab529c",
+          "url_list": [
+            "https://p29-dy.byteimg.com/aweme/720x720/26d3700044d4562ab529c.jpeg?from=4010531038",
+            "https://p26-dy.byteimg.com/aweme/720x720/26d3700044d4562ab529c.jpeg?from=4010531038",
+            "https://p3-dy-ipv6.byteimg.com/aweme/720x720/26d3700044d4562ab529c.jpeg?from=4010531038"
+          ]
+        },
+        "play_url": {
+          "uri": "https://sf3-dycdn-tos.pstatp.com/obj/mosaic-legacy/13fe60002974135b3ac32",
+          "url_list": [
+            "https://sf3-dycdn-tos.pstatp.com/obj/mosaic-legacy/13fe60002974135b3ac32",
+            "https://sf6-dycdn-tos.pstatp.com/obj/mosaic-legacy/13fe60002974135b3ac32"
+          ]
+        },
+        "duration": 15,
+        "cover_thumb": {
+          "uri": "26d3700044d4562ab529c",
+          "url_list": [
+            "https://p26-dy.byteimg.com/img/26d3700044d4562ab529c~c5_168x168.webp?from=4010531038",
+            "https://p9-dy.byteimg.com/img/26d3700044d4562ab529c~c5_168x168.webp?from=4010531038",
+            "https://p29-dy.byteimg.com/img/26d3700044d4562ab529c~c5_168x168.webp?from=4010531038",
+            "https://p26-dy.byteimg.com/img/26d3700044d4562ab529c~c5_168x168.jpeg?from=4010531038"
+          ]
+        },
+        "position": null,
+        "status": 1,
+        "id": 6635819768786095000,
+        "title": "@火哥创作的原声",
+        "author": "火哥",
+        "cover_hd": {
+          "uri": "26d3700044d4562ab529c",
+          "url_list": [
+            "https://p3-dy-ipv6.byteimg.com/aweme/1080x1080/26d3700044d4562ab529c.jpeg?from=4010531038",
+            "https://p29-dy.byteimg.com/aweme/1080x1080/26d3700044d4562ab529c.jpeg?from=4010531038",
+            "https://p1-dy-ipv6.byteimg.com/aweme/1080x1080/26d3700044d4562ab529c.jpeg?from=4010531038"
+          ]
+        },
+        "cover_large": {
+          "uri": "26d3700044d4562ab529c",
+          "url_list": [
+            "https://p3-dy-ipv6.byteimg.com/aweme/1080x1080/26d3700044d4562ab529c.jpeg?from=4010531038",
+            "https://p29-dy.byteimg.com/aweme/1080x1080/26d3700044d4562ab529c.jpeg?from=4010531038",
+            "https://p1-dy-ipv6.byteimg.com/aweme/1080x1080/26d3700044d4562ab529c.jpeg?from=4010531038"
+          ]
+        }
+      },
+      "statistics": {
+        "aweme_id": "6850852785345400064",
+        "comment_count": 26008,
+        "digg_count": 112634,
+        "play_count": 0
+      },
+      "duration": 6417,
+      "create_time": 1595088472,
+      "video_labels": null,
+      "label_top_text": null,
+      "group_id": 6850852785345400000,
+      "video": {
+        "play_addr": {
+          "uri": "v0200f450000bs9hrorlvmvkfef1811g",
+          "url_list": [
+            "https://aweme.snssdk.com/aweme/v1/playwm/?video_id=v0200f450000bs9hrorlvmvkfef1811g&ratio=720p&line=0"
+          ]
+        },
+        "width": 720,
+        "dynamic_cover": {
+          "uri": "tos-cn-p-0015/8e7c8b748a6441cdb47445d800526a73_1595088475",
+          "url_list": [
+            "https://p3-dy-ipv6.byteimg.com/obj/tos-cn-p-0015/8e7c8b748a6441cdb47445d800526a73_1595088475?from=2563711402_large",
+            "https://p6-dy-ipv6.byteimg.com/obj/tos-cn-p-0015/8e7c8b748a6441cdb47445d800526a73_1595088475?from=2563711402_large",
+            "https://p1-dy-ipv6.byteimg.com/obj/tos-cn-p-0015/8e7c8b748a6441cdb47445d800526a73_1595088475?from=2563711402_large"
+          ]
+        },
+        "ratio": "540p",
+        "bit_rate": null,
+        "vid": "v0200f450000bs9hrorlvmvkfef1811g",
+        "cover": {
+          "uri": "tos-cn-p-0015/ecaea3ac50ee4ef3ade7860676fb3c95",
+          "url_list": [
+            "https://p9-dy.byteimg.com/img/tos-cn-p-0015/ecaea3ac50ee4ef3ade7860676fb3c95~c5_300x400.jpeg?from=2563711402_large",
+            "https://p1-dy-ipv6.byteimg.com/img/tos-cn-p-0015/ecaea3ac50ee4ef3ade7860676fb3c95~c5_300x400.jpeg?from=2563711402_large",
+            "https://p3-dy-ipv6.byteimg.com/img/tos-cn-p-0015/ecaea3ac50ee4ef3ade7860676fb3c95~c5_300x400.jpeg?from=2563711402_large"
+          ]
+        },
+        "height": 1280,
+        "origin_cover": {
+          "uri": "tos-cn-p-0015/e3053ae3001942d8a059cbbff0b5483e_1595088473",
+          "url_list": [
+            "https://p3-dy-ipv6.byteimg.com/tos-cn-p-0015/e3053ae3001942d8a059cbbff0b5483e_1595088473~tplv-dy-360p.jpeg?from=2563711402",
+            "https://p29-dy.byteimg.com/tos-cn-p-0015/e3053ae3001942d8a059cbbff0b5483e_1595088473~tplv-dy-360p.jpeg?from=2563711402",
+            "https://p6-dy-ipv6.byteimg.com/tos-cn-p-0015/e3053ae3001942d8a059cbbff0b5483e_1595088473~tplv-dy-360p.jpeg?from=2563711402"
+          ]
+        },
+        "has_watermark": true,
+        "duration": 6417
+      },
+      "share_url": "https://www.iesdouyin.com/share/video/6850852785345400064/?region=&mid=6635819768786094852&u_code=48&titleType=title&did=0&iid=0",
+      "aweme_type": 4,
+      "is_preview": 0
+    }
+  ],
+  "extra": {
+    "now": 1610129217000,
+    "logid": "202101090206570101980650294143C2B0"
+  },
+  "status_code": 0
+}
