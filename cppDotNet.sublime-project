@@ -4,7 +4,7 @@
 		{
 			"cmd":
 			[
-				"C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Auxiliary/Build/vcvars64.bat",
+				"vcvars64.bat",
 				"&&",
 				"cmake",
 				"../dotnet-clr",
@@ -14,80 +14,90 @@
 			"encoding": "utf8",
 			"env":
 			{
-				"PATH": "c:/MinGW/bin/;%PATH%"
+				"PATH": "C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Auxiliary/Build/;c:/MinGW/bin/;%PATH%"
 			},
 			"file_regex": "^  (.+)\\((\\d+)\\)(): ((?:fatal )?(?:error|warning) \\w+\\d\\d\\d\\d: .*) \\[.*$",
 			"name": "Ninja Make(Windows)",
 			"quiet": true,
-			"working_dir": "${project_path}/ninja-msvc"
+			"working_dir": "${project_path}/ninja-msvc",
+			"variants":
+			[
+				{
+					"cmd":
+					[
+						"vcvars64.bat",
+						"&&",
+						"ninja.exe",
+						"-f",
+						"build.ninja",
+						"all"
+					],
+					"name": "Ninja - all",
+				},
+				{
+					"cmd":
+					[
+						"ninja.exe",
+						"-f",
+						"build.ninja",
+						"clean"
+					],
+					"name": "Ninja - clean",
+				},
+				{
+					"cmd":
+					[
+						"ninja.exe",
+						"-f",
+						"build.ninja",
+						"rebuild_cache"
+					],
+					"name": "Ninja - rebuild_cache",
+				},
+				{
+					"cmd":
+					[
+						"ninja.exe",
+						"-f",
+						"build.ninja",
+						"test"
+					],
+					"name": "Ninja - test",
+				},
+				{
+					"cmd":
+					[
+						"ninja.exe",
+						"-f",
+						"build.ninja",
+						"edit_cache"
+					],
+					"name": "Ninja - edit_cache",
+				}
+			]
 		},
 		{
-			"cmd":
-			[
-				"C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Auxiliary/Build/vcvars64.bat",
-				"&&",
-				"C:/MinGW/bin/ninja.exe",
-				"-f",
-				"build.ninja",
-				"all"
-			],
+			// "cmd":
+			// [
+			// 	"cmd",
+			// 	"/c",
+			// 	"vcvars32.bat",
+			// 	"&&",
+			// 	"cl.exe",
+			// 	"${file}",
+			// 	"user32.lib",
+			// 	// "/link",
+			// 	// "/subsystem:console",
+			// ],
+			"shell_cmd": "vcvars32.bat && cl ${file} user32.lib && ${file_base_name}.exe",
+			"env":
+			{
+				"PATH": "${project_path}/bin;C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Auxiliary/Build/;c:/MinGW/bin/;%PATH%"
+			},
+			"name": "Visual C++",
 			"encoding": "gbk",
-			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)",
-			"name": "Ninja - all",
 			"quiet": true,
-			"working_dir": "${project_path}/ninja-msvc"
-		},
-		{
-			"cmd":
-			[
-				"C:/MinGW/bin/ninja.exe",
-				"-f",
-				"build.ninja",
-				"clean"
-			],
-			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)",
-			"name": "Ninja - clean",
-			"quiet": true,
-			"working_dir": "${project_path}/ninja-msvc"
-		},
-		{
-			"cmd":
-			[
-				"C:/MinGW/bin/ninja.exe",
-				"-f",
-				"build.ninja",
-				"rebuild_cache"
-			],
-			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)",
-			"name": "Ninja - rebuild_cache",
-			"quiet": true,
-			"working_dir": "${project_path}/ninja-msvc"
-		},
-		{
-			"cmd":
-			[
-				"C:/MinGW/bin/ninja.exe",
-				"-f",
-				"build.ninja",
-				"test"
-			],
-			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)",
-			"name": "Ninja - test",
-			"quiet": true,
-			"working_dir": "${project_path}/ninja-msvc"
-		},
-		{
-			"cmd":
-			[
-				"C:/MinGW/bin/ninja.exe",
-				"-f",
-				"build.ninja",
-				"edit_cache"
-			],
-			"file_regex": "^(..[^:]*)(?::|\\()([0-9]+)(?::|\\))(?:([0-9]+):)?\\s*(.*)",
-			"name": "Ninja - edit_cache",
-			"quiet": true,
-			"working_dir": "${project_path}/ninja-msvc"
+			"working_dir": "${project_path}/bin"
 		}
 	],
 	"folders":
