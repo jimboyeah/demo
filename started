@@ -1,0 +1,91 @@
+#!/usr/bin/env bash
+JAVA_HOME=C:/JDK1.8.0_202
+JAVA_HOME=C:/JDK1.8u302
+JAVA_HOME=/c/jdk-14.0.2
+JAVA_HOME=/c/jdk-17
+# mkdir AppKt
+# cd AppKt
+# gradle init --type kotlin-application --project-name AppKt
+# gradle run
+
+# gradle tasks --all; read -n1 it; exit
+# gradle projects
+# gradle :app:run
+
+# gradle --stop
+# gradle --no-daemon  :app:run
+
+# gradle :appKt:run
+# gradle :appJava:run
+# gradle :appFX:run
+# gradle  appFX:run; exit
+
+# git remote add origin git@github.com:jimboyeah/demo
+# subl .git/config
+# git help branch
+git add *
+# git rm -rf **/bin
+git status; exit
+git branch hi_javafx
+git checkout hi_javafx
+git branch --all
+
+# tree -fL 6 app/build
+# pandoc -trst -rhtml https://fxdocs.github.io/docs/html5/
+
+# JAVA_HOME=C:/JDK1.8u302
+LIBS=$(find "C:/kotlin/kotlinc/lib" -follow -type f -path "*/*.jar" | sed -n 'p; a ;')
+BUNDLED=C:/jdk1.8.0_202/jre/lib/ext/jfxrt.jar;
+SDK="C:/javafx-sdk-17.0.11/lib/"
+MODULES=javafx.controls,javafx.fxml
+CPBUILD="app/build/classes/kotlin/main/;app/build/classes/java/main/;app/build/resources/main;"
+CPJAR="app/build/libs/appFX.jar"
+CLASSPATH="$CPBUILD;$CPJAR;$USERPROFILE/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.9.20/e58b4816ac517e9cc5df1db051120c63d4cde669/kotlin-stdlib-1.9.20.jar"
+
+# $JAVA_HOME/bin/java -version
+$JAVA_HOME/bin/java --module-path "$SDK" --add-modules $MODULES -cp "$CLASSPATH" hi_javafx.App
+
+# find $USERPROFILE/.gradle/caches | grep /kotlin-stdlib-1.9.20.jar
+
+function findIntrinsics()
+{
+    for it in $(find /c/kotlin/kotlinc/lib/*); do
+        echo $it
+        7z l $it | grep kotlin.jvm.internal.Intrinsics
+    done
+}
+
+
+exit
+
+cd app/build
+# rm *.class
+
+JAVA_HOME=C:/JDK1.8u302
+JAVA_HOME=C:/JDK1.8.0_202
+# $JAVA_HOME/bin/javac -classpath "$SDK" -d tmp BMApp.java
+cd tmp; 
+$JAVA_HOME/bin/java BMApp -classpath "$SDK;tmp"
+
+JAVA_HOME=C:/JDK-17
+# $JAVA_HOME/bin/javac --module-path "$SDK" --add-modules $MODULES BMApp.java
+$JAVA_HOME/bin/java --module-path "$SDK" --add-modules $MODULES BMApp
+
+.
+├── app
+│   ├── build
+│   ├── build.gradle.kts
+│   └── src
+├── gradle
+│   ├── libs.versions.toml
+│   └── wrapper
+├── gradlew
+├── gradlew.bat
+└── settings.gradle.kts
+
+------------------------------------------------------------
+Root project 'AppKt'
+------------------------------------------------------------
+
+Root project 'AppKt'
+\--- Project ':app'
