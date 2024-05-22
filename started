@@ -18,7 +18,7 @@ JAVA_HOME=/c/jdk-17
 # gradle :appKt:run
 # gradle :appJava:run
 # gradle :appFX:run
-# gradle  appFX:run; exit
+gradle  appFX:run; exit
 
 # git remote add origin git@github.com:jimboyeah/demo
 # subl .git/config
@@ -27,9 +27,9 @@ JAVA_HOME=/c/jdk-17
 # git rm -rf **/bin
 # git branch hi_javafx
 # git checkout hi_javafx
-git push origin hi_javafx
-git branch --all
-git status; exit
+# git push origin hi_javafx
+# git branch --all
+# git status; exit
 
 # tree -fL 6 app/build
 # pandoc -trst -rhtml https://fxdocs.github.io/docs/html5/
@@ -90,3 +90,22 @@ Root project 'AppKt'
 
 Root project 'AppKt'
 \--- Project ':app'
+
+
+remote: 
+remote: Create a pull request for 'hi_javafx' on GitHub by visiting:        
+remote:      https://github.com/jimboyeah/demo/pull/new/hi_javafx        
+remote: 
+To github.com:jimboyeah/demo
+ * [new branch]      hi_javafx -> hi_javafx
+* hi_javafx
+  master
+  remotes/origin/hi_javafx
+On branch hi_javafx
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+    modified:   started
+
+no changes added to commit (use "git add" and/or "git commit -a")
+[Finished in 6.6s]

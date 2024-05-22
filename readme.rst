@@ -2,7 +2,7 @@
 JavaFX GUI with Gradle and Kotlin LSP
 *************************************
 
-   本小节涉及以下主题内容：
+   本项目模板配套文档涉及以下主题内容：
 
    * VS Code 中使用 Maven 插件及项目配置；
    * VS Code 中使用 Gradle 插件及项目配置；

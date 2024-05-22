@@ -23,4 +23,3 @@ project(":appKt").projectDir = file("AppKt/app")
 
 include("appFX")
 project(":appFX").projectDir = file("app")
-
