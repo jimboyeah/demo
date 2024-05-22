@@ -23,12 +23,13 @@ JAVA_HOME=/c/jdk-17
 # git remote add origin git@github.com:jimboyeah/demo
 # subl .git/config
 # git help branch
-git add *
+# git add *.*
 # git rm -rf **/bin
-git status; exit
-git branch hi_javafx
-git checkout hi_javafx
+# git branch hi_javafx
+# git checkout hi_javafx
+git push origin hi_javafx
 git branch --all
+git status; exit
 
 # tree -fL 6 app/build
 # pandoc -trst -rhtml https://fxdocs.github.io/docs/html5/
