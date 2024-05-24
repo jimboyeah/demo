@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+echo ==================================================================
 JAVA_HOME=C:/JDK1.8.0_202
 JAVA_HOME=C:/JDK1.8u302
 JAVA_HOME=/c/jdk-14.0.2
@@ -8,8 +9,8 @@ JAVA_HOME=/c/jdk-17
 # gradle init --type kotlin-application --project-name AppKt
 # gradle run
 
-# gradle tasks --all; read -n1 it; exit
-# gradle projects
+# gradle tasks --all; # read -n1 it; exit
+# gradle projects --quiet
 # gradle :app:run
 
 # gradle --stop
@@ -17,8 +18,15 @@ JAVA_HOME=/c/jdk-17
 
 # gradle :appKt:run
 # gradle :appJava:run
-# gradle :appFX:run
-gradle  appFX:run; exit
+
+# tree -f app/build/classes
+rm -rf $(find . -path "*/bin")
+rm -rf $(find . -path "*/build")
+gradle clean --quiet ;
+
+# gradle :appFX:test ; exit
+# gradle :appFX:test --tests 'AppTest*' ; exit
+# gradle :appFX:run --quiet; exit
 
 # git remote add origin git@github.com:jimboyeah/demo
 # subl .git/config
@@ -31,7 +39,6 @@ gradle  appFX:run; exit
 # git branch --all
 # git status; exit
 
-# tree -fL 6 app/build
 # pandoc -trst -rhtml https://fxdocs.github.io/docs/html5/
 
 # JAVA_HOME=C:/JDK1.8u302
@@ -43,6 +50,7 @@ CPBUILD="app/build/classes/kotlin/main/;app/build/classes/java/main/;app/build/r
 CPJAR="app/build/libs/appFX.jar"
 CLASSPATH="$CPBUILD;$CPJAR;$USERPROFILE/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.9.20/e58b4816ac517e9cc5df1db051120c63d4cde669/kotlin-stdlib-1.9.20.jar"
 
+exit
 # $JAVA_HOME/bin/java -version
 $JAVA_HOME/bin/java --module-path "$SDK" --add-modules $MODULES -cp "$CLASSPATH" hi_javafx.App
 

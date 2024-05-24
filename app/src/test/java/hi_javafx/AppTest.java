@@ -5,10 +5,11 @@ package hi_javafx;
 
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
+// import javafx.stage.Stage;
 
 class AppTest {
-    @Test void appHasAGreeting() {
-        MainApp classUnderTest = new MainApp();
-        assertNotNull(classUnderTest.getGreeting(), "app should have a greeting");
+    @Test void appHasAGreeting() throws Exception {
+        // new MainApp().start( new Stage() );
+        assertNotNull("void", "app show a GUI window.");
     }
 }

@@ -1,0 +1,26 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch Java Program",
+            "request": "launch",
+            "mainClass": "org.example.App",
+            "preLaunchTask": "Gradle Build appJava",
+            "vmArgs": "",
+            "classPaths": ["${workspaceFolder}/AppJava/app/build/classes/java/main"]
+        },
+        {
+            "type": "kotlin",
+            "request": "launch",
+            "name": "Kotlin Launch",
+            "projectRoot": "${workspaceFolder}",
+            "mainClass": "hi_javafx.App",
+            "vmArguments": "--module-path C:/javafx-sdk-17.0.11/lib --add-modules javafx.base,javafx.controls,javafx.fxml",
+            "preLaunchTask": "Gradle Build appFX",
+        }, 
+    ]
+}

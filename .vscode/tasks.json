@@ -1,0 +1,34 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Gradle Build appFX",
+            "type": "shell",
+            "command": "gradle appFX:build"
+        },
+        {
+            "label": "Gradle Build appKt",
+            "type": "shell",
+            "command": "gradle appKt:build"
+        },
+        {
+            "label": "Gradle Build appJava",
+            "type": "shell",
+            "command": "gradle appJava:build"
+        },
+        {
+            "label": "Bash Active File",
+            "type": "shell",
+            "command": "bash -c './${fileBasename}'",
+            "problemMatcher": []
+        },
+        {
+            "label": "Bash Started",
+            "type": "shell",
+            "command": "bash -c './started'",
+            "problemMatcher": []
+        }
+    ]
+}

@@ -30,9 +30,10 @@ javafx {
     version = "17"  // Specify JavaFX version
     modules ("javafx.controls", "javafx.fxml", 
              "javafx.web", "javafx.swing" , "javafx.media")
-    
+    sdk = "c:/javafx-sdk-17.0.11" // Set local JavaFX SDK
     //configuration = "implementation" // set dependency scope
-    //configurations("implementation", "testImplementation")
+    //configurations ("implementation", "testImplementation")
+    //configurations.add("testImplementation")
 }
 
 jlink {
