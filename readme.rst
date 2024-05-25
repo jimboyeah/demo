@@ -48,6 +48,9 @@ Getting Started Linux kernel Programming
    五郎八卦棍阿鬼死前说了一句：“能力越大，责任就越大，你避不了。What are you parepared to do?”
    我想到要给这篇 VSCode Insideout 起个中文名《八戒，听说你想学 VSCode？让为师教你啊！》
 
+   如果你还没有自己的数字图书馆，那么请阅读这篇教程，也许可以帮助你在学习道路上借力先进的电子工具：
+   `论 《Intel 80386 CPU 编程手册》与私有电子图书馆建造 <https://github.com/Jeangowhy/opendocs/blob/main/mcu/Intel_80386_manual.md>`__
+
    在编译代码过程中，会遇到各种各样的问题，需要尽可以地利用编译器、调试器来解决问题。比如，字符串，
    如果在代码中引用了标记为弃用的功能，将会收到警告信息，要定位警告来源，就需要利用以上的编译流程，
    通过格检查预处理生成的代码、汇编代码等等来解决问题。
