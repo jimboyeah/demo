@@ -1,0 +1,39 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "(gdb) Launch [Debug]",
+            "type": "cppdbg" ,
+            "request": "launch",
+            "program": "${workspaceFolder}/.build/Debug/${fileBasenameNoExtension}.exe",
+            "cwd": "${fileDirname}",
+            "MIMode": "gdb",
+            "miDebuggerPath": "C:/msys64/usr/bin/gdb.exe",
+            "preLaunchTask": "CMake Build [Debug]",
+        },
+        {
+            "name": "(gdb) Launch [Release]",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/.build/Release/${fileBasenameNoExtension}.exe",
+            "cwd": "${fileDirname}",
+            "MIMode": "gdb",
+            "miDebuggerPath": "C:/msys64/usr/bin/gdb.exe",
+            "preLaunchTask": "CMake Build [Release]",
+        },
+        {
+            "name": "(gdb) Launch raw [Debug]",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceRoot}\\.build\\${fileBasenameNoExtension}.exe",
+            // "program": "c:\\msys64\\usr\\bin\\bash.exe",
+            "args": ["-c", "echo $PWD : ${workspaceRoot} : ${workspaceFolder}; tree -a ."],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}\\",
+            "preLaunchTask": "Build Active File",
+        }
+    ]
+}

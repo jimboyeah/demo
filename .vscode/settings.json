@@ -1,0 +1,16 @@
+{
+    "cmake.sourceDirectory": "C:/dl/pl/hi_cpp",
+    "files.associations": {
+        "*.cjson": "jsonc",
+        "*.wxss": "css",
+        "*.wxs": "javascript",
+        "*.cppm": "cpp",
+        "*.sh": "shellscript",
+        "*.rst": "restructuredtext",
+        "langinfo.h": "c",
+        "errors.h": "c",
+        "error.h": "c",
+        "errno-base.h": "c",
+        "string": "cpp"
+    }
+}

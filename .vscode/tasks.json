@@ -1,0 +1,62 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "CMake Build [Debug]",
+            "type": "shell",
+            "command": "cmake --build .build/Debug --verbose",
+            "problemMatcher": [],
+            "dependsOn": ["CMake Generate [Debug]"],
+            "dependsOrder": "sequence",
+            "group": {
+                "kind": "build",
+            }
+        },
+        {
+            "label": "CMake Build [Release]",
+            "type": "shell",
+            "command": "cmake --build .build/Release --verbose",
+            "problemMatcher": [],
+            "dependsOn": ["CMake Generate [Release]"],
+            "dependsOrder": "sequence",
+            "group": {
+                "kind": "build",
+            }
+        },
+        {
+            "label": "CMake Generate [Release]",
+            "type": "shell",
+            "command": "cmake --version; cmake -S . -B .build/Release -DCMAKE_BUILD_TYPE=Release -G Ninja"
+        },
+        {
+            "label": "CMake Generate [Debug]",
+            "type": "shell",
+            "command": "cmake --version; cmake -S . -B .build/Debug -DCMAKE_BUILD_TYPE=Debug -G Ninja"
+        },
+        {
+            "label": "Build Active File",
+            "type": "shell",
+            "command": "gcc -gdwarf-2 -g3 '${fileBasename}' -o '.build/${fileBasenameNoExtension}.exe'",
+            "problemMatcher": [],
+            "dependsOn": ["Prepare build folder"],
+            "dependsOrder": "sequence",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "Prepare build folder",
+            "type" : "shell",
+            "command": "rm.exe -rf '${workspaceFolder}/.build'; mkdir '${workspaceFolder}/.build'"
+        },
+        {
+            "label": "Variable Reference",
+            "type": "shell",
+            "command": "echo workspaceFolder: ${workspaceFolder} ",
+            "problemMatcher": []
+        }
+    ]
+}
