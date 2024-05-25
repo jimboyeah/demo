@@ -1,7 +1,7 @@
 /**
  * @file X0001-diff-ccpp.cpp
  * @author Jenago (jimbowhy@foxmail.com)
- * @brief  Kernel Programming Tutorials - X0001 - basic structure difference between C and C++
+ * @brief  Kernel Programming Tutorials - basic structure difference between C and C++
  * @version 0.1
  * @date Sat May 25 08:20:55 CST 2024
  * @ref https://en.cppreference.com/w/c/language/basic_concepts
@@ -12,10 +12,11 @@
  */
 
 #include <iostream>
-#include <strstream>
+// #include <strstream> // deprecated
+#include <sstream>      // formal string stream via std::string
 #include <string>
 
-#include <cstdio>  // C++ style for stdio.h
+#include <cstdio>       // C++ style for stdio.h
 
 
 class App

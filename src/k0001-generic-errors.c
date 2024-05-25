@@ -1,7 +1,7 @@
 /**
  * @file k0001-generic-errors.c
  * @author Jenago (jimbowhy@foxmail.com)
- * @brief  Kernel Programming Tutorials - k0001 - Linux generic errors
+ * @brief  Kernel Programming Tutorials - Linux generic errors
  * @version 0.1
  * @date 2024-05-17
  * @ref https://github.dev/torvalds/linux/blob/master/include/uapi/asm-generic/errno-base.h
