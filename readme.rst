@@ -1,6 +1,8 @@
 Getting Started Linux kernel Programming
 ========================================
 
+   `Getting Started Linux kernel Programming <https://www.github.com/jimboyeah/demo/tree/hi_kernel>`__
+
    此代码仓库为 Linux Kernel 学习之用，Kernel 包含的代码经过数十年的积累的庞大代码库，
    学习它不必强求全面，每个人的精力有限，可以挑选此感兴趣的功能部分进行研究。这本身也不是
    简单的事，为了可以顺利进行 Kernel 功能模块的的学习，要求有一定的 C/C++ 语言基础，
@@ -36,6 +38,15 @@ Getting Started Linux kernel Programming
 
    如果对操作系统硬件底层有兴趣，那么法布里斯·贝拉 (Fabrice Bellard)所编写的 `QEMU <https://www.qemu.org>`__
    模拟器将是你的得力助手，底层开发者用过都说离不开它。 
+
+   如果你还没有自己用得顺手的开发工具，那么我建议使用 VS Code，这里有一篇专为你订制的教程：
+   `VSCode Insideout <https://github.com/Jeangowhy/opendocs/blob/main/VSCode_Insideout.rst>`__
+
+   前几天重看了一遍《功夫》，没想到这片已经是二十年前的作品了！最精彩的部分我认为是天残地缺与三大高手
+   对战的桥段，这三大高手在前面一直在铺垫段位关系，并且这种铺垫在整片持续进行，以突出人物的功夫境界。
+   段落高潮在于第三个，通过中国古典音乐将中国传统舞台剧与刀枪棍棒完美融合在一起，全是暴力美感与艺术。
+   五郎八卦棍阿鬼死前说了一句：“能力越大，责任就越大，你避不了。What are you parepared to do?”
+   我想到要给这篇 VSCode Insideout 起个中文名《八戒，听说你想学 VSCode？让为师教你啊！》
 
    在编译代码过程中，会遇到各种各样的问题，需要尽可以地利用编译器、调试器来解决问题。比如，字符串，
    如果在代码中引用了标记为弃用的功能，将会收到警告信息，要定位警告来源，就需要利用以上的编译流程，
