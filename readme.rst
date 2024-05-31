@@ -1,7 +1,8 @@
 Getting Started Linux kernel Programming
 ========================================
 
-   `Getting Started Linux kernel Programming <https://www.github.com/jimboyeah/demo/tree/hi_kernel>`__
+   *  `kernel_started <https://github.com/Jeangowhy/opendocs/blob/main/kernel_started.rst>`__
+   *  `hi_kernel <https://github.com/jimboyeah/demo/tree/hi_kernel>`__
 
    此代码仓库为 Linux Kernel 学习之用，Kernel 包含的代码经过数十年的积累的庞大代码库，
    学习它不必强求全面，每个人的精力有限，可以挑选此感兴趣的功能部分进行研究。这本身也不是
@@ -51,6 +52,50 @@ Getting Started Linux kernel Programming
    如果你还没有自己的数字图书馆，那么请阅读这篇教程，也许可以帮助你在学习道路上借力先进的电子工具：
    `论 《Intel 80386 CPU 编程手册》与私有电子图书馆建造 <https://github.com/Jeangowhy/opendocs/blob/main/mcu/Intel_80386_manual.md>`__
 
+   关于如何学习 Linux 内核的方法，肯定过来人都有自己的方法，有人用苦法，有人用甜法，我用兴趣导向的
+   闭眼摸象法。古人曰盲人摸象，形容不同人对一件宏大事物的偏见。现今 Linux Kernel 无疑就是一头特别
+   巨大的象，很多人想摸透它。在我看来，它不仅仅是头大象，摸透它就可以站在巨人的肩膀，这肩膀的高度
+   是数百万人积累了几十年的高度。
+
+   研究任何一件巨物，起步阶段必然经历“盲人摸象”的困境，认知就像电容两端的电压，不可突变。这个阶段
+   必然是由局部开始，可以是一个兴趣点或者是一个技术点，而我的正式计划研究 Linux Kernel 是在接触
+   到了源代码 Documentation 目录的文档资源，以及在 Windows 使用终端遇到 ioctl 警告问题而致。
+   所以此代码库的首个 k0001 就是为学习源代码的错误码而创建的。这就是开端，错误码的学习就是一个技术点，
+   随着一个个这样非常小型的问题解决，最终会慢慢拓展你对整个 Linux Kernel 的认知水平的全面提升。
+   反而那种一着手就想着吃透 Linux 整个原代码的行动力反而极为脆弱，一遇难题就无法进展下去。反而，
+   怀着一颗敬畏之心，切勿想着几个月、几年就想把整整几百万人几十年的积累啃个透彻，这真的太难了，又不
+   是神人，何来这种壮志雄心！
+
+   这里有一份 `Linux Distributions Timeline <pictures\ldt_v22.10.svg>`__，光是看这
+   几十年 Linux 的版本分叉发展就让人头皮发麻，更何况要吃透拥有 1GB 数据量的源代码仓库的文件。
+
+   学习过程中遇到问题是肯定的，甚至靠个人无法解决的问题也会很多，即使代码仓库已经提供了非常丰富的
+   开发者文档。但是，好在有个好老师：历史。Linux 的发展历史会揭示很多问题的潜在答案，所以在遇到
+   问题的时间，可以花点时间探索一下历史上是如何解决类似问题的，或者是如出于何种考虑引入的技术、或
+   解决方案。
+
+   Linux Kernel 一般学习方法：
+
+   *  形成操作系统整体基础轮廓：进程调度、内存管理、I/O 处理、驱动模型，开始写一些简单的内核模块，
+      比如 Char Drivers 字符驱动等。配合驱动开发相关教材：
+
+      -  Linux Device Drivers Development 《Linux 设备驱动开发》
+      -  Linux Device Drivers 《Linux 设备驱动程序》
+      -  Linux Kernel Development 《Linux 内核设计与实现》
+      -  Understanding the Linux Kernel 《深入理解 Linux 内核》
+
+   *  着手开发具体的系统应用，解决实际工作中的问题，或者实现自己的软件产品。这个过程将会遇到
+      大量棘手问题，而这些问题将在未来直接将你的 Linux Kernel 研究水平推上新的台阶。你遇到
+      的问题可能涉及多个子系统（进程、内存、I/O、驱动），但是不要急躁，慢慢解决问题，逐步解决。
+      即使暂时解决不了也没关系，相信我，你可以去睡大觉，我是认真的，只有在充足的休息后，大脑才
+      能量、才能更专注地研究 Kernel，或者做阅读。尽量拓展阅读量、动手尝试写代码加深对知识的理解。
+
+   阅读必需要大量、高速地进行，不要想着拿着一本书从头读到尾，这是最低效能的读书方式。因为，每个写书
+   的人拥有的知识和阅读者之间是不对等的，而也不可能根据每个读者的基础定制合适难题的文字编排，更糟糕
+   的是写作者有些默会知识，其本人通常不会无意识地讲授，而这些知识的缺失极有可能就是导致你理解困难的
+   关键！正确的方法应该是快速泛读、积极地为每个 Kernel 模块建立初步印象，这个步骤的工作我称之为
+   大脑知识网络索引系统，它会在某一天遇到问题时起作用。
+
    人类大脑的工作模式决定了学习这件事不是轻而易举可以获得，大脑对短时接触到的东西，并不会分配大量的
    大脑皮层工作去作永久的记录，而暂时保管在海马体。在经过频繁、多次数的重复后，海马体中的临时记忆会
    逐渐在皮层发展出记忆神经网络，并随着重复的时间、次数的保持而丰富记忆神经网络。
@@ -87,7 +132,7 @@ Getting Started Linux kernel Programming
    C++ 有两种字符串流（数组 I/O 流）： ``<strstream>`` 和 ``<sstream>``，它们实现的功能上基本一致。
 
       =======================  ======================
-      strstream (char*)        sstream (std::string)
+      strstream (char\*)        sstream (std::string)
       =======================  ======================
       class strstreambuf;      class stringbuf;
       class istrstream;        class istringstream;
@@ -148,6 +193,14 @@ Getting Started Linux kernel Programming
 
    一切事件都在运动，即使是死尸也一样，只不过它在腐败中成为其它物体的养料。新的 C++20（23）规范
    确实是主要的游戏规则改变者，从其引入模块化、协程来看，推进力量不小。还有元编程的便利性，从泛型
-    (Generics)时代进化到元编程 (Metaprogramming)。
+   (Generics)时代进化到元编程 (Metaprogramming)。
+
+   为了编写这件文档，我又翻了一下 Just for Fun 中文版，里面提到：
+
+      看起来比尔.盖茨并不理解这点。可能他现在被他自己在 1976 年所提出的一个令人不愉快的
+      带修辞的问题所困惑：“你所需要做的一件事，就是防止别人写也好的软件。谁能够毫无报
+      酬地做一项专业工作呢？”他在公开源代码程序员们写的一封信中再次提出了这一观点。
+
+   这就是为何，我更喜欢开源的动力。开源，我好喜欢！❤💻👊
 
    What are you parepared to do?

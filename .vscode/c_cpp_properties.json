@@ -7,7 +7,7 @@
             "name": "GCC",
             "cStandard": "c17",
             "cppStandard": "c++17",
-            "includePath": []
+            "compilerPath": "C:/msys64/mingw64/bin/g++.exe"
         }
     ]
 }

@@ -12,6 +12,7 @@
         "error.h": "c",
         "errno-base.h": "c",
         "string": "cpp",
-        "sstream": "cpp"
+        "sstream": "cpp",
+        "iostream": "cpp"
     }
 }

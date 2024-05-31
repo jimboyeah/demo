@@ -8,32 +8,42 @@
             "name": "(gdb) Launch [Debug]",
             "type": "cppdbg" ,
             "request": "launch",
-            "program": "${workspaceFolder}/.build/Debug/${fileBasenameNoExtension}.exe",
+            "program": "${workspaceFolder}/.build/Debug/${input:executable}",
             "cwd": "${fileDirname}",
             "MIMode": "gdb",
-            "miDebuggerPath": "C:/msys64/usr/bin/gdb.exe",
+            "miDebuggerPath": "gdb",
             "preLaunchTask": "CMake Build [Debug]",
+            // "sourceFileMap":{
+            //     "/build/glibc-SzIz7B/glibc-2.31/": "/mnt/c/dl/pl/glibc-2.31/"
+            // },
+            "setupCommands": [
+                // { "ignoreFailures": true, "text": "-gdb-set" }
+            ]
         },
         {
             "name": "(gdb) Launch [Release]",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/.build/Release/${fileBasenameNoExtension}.exe",
+            "program": "${workspaceFolder}/.build/Release/${input:executable}",
             "cwd": "${fileDirname}",
             "MIMode": "gdb",
-            "miDebuggerPath": "C:/msys64/usr/bin/gdb.exe",
+            "miDebuggerPath": "gdb",
             "preLaunchTask": "CMake Build [Release]",
         },
         {
             "name": "(gdb) Launch raw [Debug]",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceRoot}\\.build\\${fileBasenameNoExtension}.exe",
+            "program": "${workspaceRoot}\\.build\\${input:executable}",
             // "program": "c:\\msys64\\usr\\bin\\bash.exe",
             "args": ["-c", "echo $PWD : ${workspaceRoot} : ${workspaceFolder}; tree -a ."],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}\\",
             "preLaunchTask": "Build Active File",
         }
+    ],
+    "inputs": [
+        { "id": "executable", "type":"promptString", "default": "g0001", 
+          "description": "specify an programm name."}
     ]
 }

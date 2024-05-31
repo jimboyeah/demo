@@ -8,10 +8,12 @@
             "type": "shell",
             "command": "cmake --build .build/Debug --verbose",
             "problemMatcher": [],
-            "dependsOn": ["CMake Generate [Debug]"],
+            "dependsOn": [
+                "CMake Generate [Debug]"
+            ],
             "dependsOrder": "sequence",
             "group": {
-                "kind": "build",
+                "kind": "build"
             }
         },
         {
@@ -19,10 +21,12 @@
             "type": "shell",
             "command": "cmake --build .build/Release --verbose",
             "problemMatcher": [],
-            "dependsOn": ["CMake Generate [Release]"],
+            "dependsOn": [
+                "CMake Generate [Release]"
+            ],
             "dependsOrder": "sequence",
             "group": {
-                "kind": "build",
+                "kind": "build"
             }
         },
         {
@@ -40,7 +44,9 @@
             "type": "shell",
             "command": "gcc -gdwarf-2 -g3 '${fileBasename}' -o '.build/${fileBasenameNoExtension}.exe'",
             "problemMatcher": [],
-            "dependsOn": ["Prepare build folder"],
+            "dependsOn": [
+                "Prepare build folder"
+            ],
             "dependsOrder": "sequence",
             "group": {
                 "kind": "build",
@@ -49,7 +55,7 @@
         },
         {
             "label": "Prepare build folder",
-            "type" : "shell",
+            "type": "shell",
             "command": "rm.exe -rf '${workspaceFolder}/.build'; mkdir '${workspaceFolder}/.build'"
         },
         {
@@ -57,6 +63,15 @@
             "type": "shell",
             "command": "echo workspaceFolder: ${workspaceFolder} ",
             "problemMatcher": []
+        },
+        {
+            "label": "Run ...",
+            "type": "shell",
+            "command": "cmake --build .build/Debug --verbose --target '${input:executable}'; $(find . -path '*${input:executable}')",
+            "problemMatcher": [],
         }
+    ],
+    "inputs": [
+        { "id": "executable", "type":"promptString", "default": "x0001", "description": "specify an programm name."}
     ]
 }

@@ -16,7 +16,15 @@
 #include <stdlib.h>
 #include <asm-generic/errno-base.h>
 
+#define	ENOTTY_MOCK		25	/* Not a typewriter */
+
+static const char *const message_table[] = {
+    [EPERM] = "Operation not permitted",
+    [ENOTTY_MOCK] = "Inappropriate ioctl for device",
+};
+
 int main(int argc, char* argv[] )
 {
     printf("Hello Kernel Programming!\n%s\n", argv[0]);
+    printf("A generic errors: %s\n", message_table[ENOTTY_MOCK]);
 }
