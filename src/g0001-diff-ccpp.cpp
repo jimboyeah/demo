@@ -1,5 +1,5 @@
 /**
- * @file X0001-diff-ccpp.cpp
+ * @file g0001-diff-ccpp.cpp
  * @author Jenago (jimbowhy@foxmail.com)
  * @brief  Kernel Programming Tutorials - basic structure difference between C and C++
  * @version 0.1

@@ -6,7 +6,7 @@
         {
             "name": "GCC",
             "cStandard": "c17",
-            "cppStandard": "c++17",
+            "cppStandard": "c++20",
             "compilerPath": "C:/msys64/mingw64/bin/g++.exe"
         }
     ]

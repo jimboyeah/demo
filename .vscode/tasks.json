@@ -32,12 +32,12 @@
         {
             "label": "CMake Generate [Release]",
             "type": "shell",
-            "command": "cmake --version; cmake -S . -B .build/Release -DCMAKE_BUILD_TYPE=Release -G Ninja"
+            "command": "cmake --version; cmake -S . -B .build/Release -DCMAKE_BUILD_TYPE=Release -G 'Ninja'"
         },
         {
             "label": "CMake Generate [Debug]",
             "type": "shell",
-            "command": "cmake --version; cmake -S . -B .build/Debug -DCMAKE_BUILD_TYPE=Debug -G Ninja"
+            "command": "cmake --version; cmake -S . -B .build/Debug -DCMAKE_BUILD_TYPE=Debug -G 'Ninja'"
         },
         {
             "label": "GNU Make",
