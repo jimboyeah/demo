@@ -40,9 +40,15 @@
             "command": "cmake --version; cmake -S . -B .build/Debug -DCMAKE_BUILD_TYPE=Debug -G Ninja"
         },
         {
+            "label": "GNU Make",
+            "type": "shell",
+            "command": "make ${input:executable}",
+            "problemMatcher": [ "$gcc" ]
+        },
+        {
             "label": "Build Active File",
             "type": "shell",
-            "command": "gcc -gdwarf-2 -g3 '${fileBasename}' -o '.build/${fileBasenameNoExtension}.exe'",
+            "command": "g++ -std=c++20 -gdwarf-2 -g3 'src/${fileBasename}' -o '.build/${fileBasenameNoExtension}.exe'",
             "problemMatcher": [],
             "dependsOn": [
                 "Prepare build folder"
@@ -68,10 +74,10 @@
             "label": "Run ...",
             "type": "shell",
             "command": "cmake --build .build/Debug --verbose --target '${input:executable}'; $(find . -path '*${input:executable}')",
-            "problemMatcher": [],
+            "problemMatcher": []
         }
     ],
     "inputs": [
-        { "id": "executable", "type":"promptString", "default": "x0001", "description": "specify an programm name."}
+        { "id": "executable", "type":"promptString", "default": "g0001", "description": "specify an programm name."}
     ]
 }

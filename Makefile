@@ -1,3 +1,6 @@
+CXXFLAGS=-g -std=c++20 -save-temps
+CFLAGS=-g 
+
 all:: ;
 
 help:
@@ -16,18 +19,22 @@ k%: .build/k%
 	@echo "Run Kernel Programming Task k%: $@ ..."
 	@.build/$@
 
-.build/%: src/g%
-	@echo "Compiling sources..." $@ .. $*
-	@g++ -save-temps -o $@ `find src/*$**`
+.build/g%: src/g%*.cpp
+	@echo "Compiling C++ Sources..." $@ .. $*
+	@g++ ${CXXFLAGS} -o $@ `find src/g$**`
 
-src/%::;
+.build/k%: src/k%*.c
+	@echo "Compiling C Sources..." $@ .. $*
+	@gcc ${CFLAGS} -o $@ `find src/k$**`
 
 # To prevent execute: Removing intermediate files...
 # .NOTINTERMEDIATE: 
-.PRECIOUS: .build/%
+.PRECIOUS: .build/g% .build/k%
 	@echo "FEATURES: $(.FEATURES)"
+
+.PHONY: g% k% 
 
 clean:
 	@echo "Clean ..." $^
-	-@if [[ -f .build/g* ]]; then rm .build/g*; fi;
-	-@if [[ -f .build/k* ]]; then rm .build/k*; fi;
+	@fs=$$(ls .build/g* .build/k*); rm $$fs
+# -@for it in .build/g* .build/k*; do rm "$$it"; done;

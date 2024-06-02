@@ -13,6 +13,7 @@
         "errno-base.h": "c",
         "string": "cpp",
         "sstream": "cpp",
-        "iostream": "cpp"
+        "iostream": "cpp",
+        "format": "cpp"
     }
 }

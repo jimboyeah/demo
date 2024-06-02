@@ -1,11 +1,21 @@
 #include <iostream>
 #include <string>
+#include <vector>
+#include <format>
 
 int main(void)
 {
    using namespace std;
-   std::cout << "Press Ctrl+D (Linux) or Ctrl+Z (Windows) to send EOF.\n";
-   std::string val;
+   cout << "Press Ctrl+D (Linux) or Ctrl+Z (Windows) to send EOF.\n";
+   string val;
+
+   vector<string> vs ={"Hello", "C++"};
+   // cout << &((*vs.begin()).empty) << endl;
+
+   int ia = 3, ib = 4;
+   double d = ia/ib;
+   
+   cout << std::format("double d = {}/{} = {}", ia, ib, d ) << endl;
 
    int a[9] = {1,2,3,};
    int *p1 = a, *p2 = &a[1];
@@ -15,6 +25,6 @@ int main(void)
    
    while (std::cin >> val)
    {
-      std::cout << "You type: " << val << std::endl;
+      std::cout << "User type: " << val << std::endl;
    }
 }
