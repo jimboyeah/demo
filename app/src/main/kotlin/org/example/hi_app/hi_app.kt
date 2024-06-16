@@ -19,7 +19,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    GreetingView("Hi!")
+                    GreetingView("> R.string.app_name = ${getString(R.string.app_name)}")
                 }
             }
         }

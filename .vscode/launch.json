@@ -10,6 +10,8 @@
             "name": "Android launch",
             "appSrcRoot": "${workspaceRoot}/app/src/main",
             "apkFile": "${workspaceRoot}/app/build/outputs/apk/debug/app-debug.apk",
+            // "targetDevice": "${command:PickAndroidDevice}",
+            "preLaunchTask": "gradle build",
             "adbPort": 5037
         },
         {
@@ -18,6 +20,7 @@
             "name": "Android attach",
             "appSrcRoot": "${workspaceRoot}/app/src/main",
             "adbPort": 5037,
+            "preLaunchTask": "gradle build",
             "processId": "${command:PickAndroidProcess}"
         }
     ]
