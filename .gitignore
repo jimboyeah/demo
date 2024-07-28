@@ -1,1 +1,8 @@
 .build
+*.o
+*.cmd
+*.mod
+*.ko
+*.order
+*.symvers
+*.code-workspace
